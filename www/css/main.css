@@ -1,0 +1,353 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: #172A3A;
+  font-family: "Montserrat", sans-serif;
+}
+
+button, input, optgroup, select, textarea, label {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.625rem;
+  line-height: 1.2308;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.2084;
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.3125rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 767px) {
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.2223;
+}
+
+@media screen and (max-width: 767px) {
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+.extra-small {
+  font-size: 0.75rem;
+}
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.btn {
+  padding: 0.625rem 2.175rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.667;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
+}
+
+.btn .fas {
+  padding-left: 12px;
+  vertical-align: middle;
+}
+
+.btn .fas.fa-chevron-left {
+  padding-left: 0;
+  padding-right: 12px;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #17B890;
+  border: 3px solid #17B890;
+}
+
+.btn-green:hover:not(.disabled) {
+  color: #fff;
+  background-color: #22D4A2;
+  border-color: #22D4A2;
+  -webkit-box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+          box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+}
+
+.btn-red {
+  color: #fff;
+  background-color: #E84F35;
+  border: 3px solid #E84F35;
+}
+
+.btn-red:hover:not(.disabled) {
+  color: #fff;
+  background-color: #FF6A51;
+  border-color: #FF6A51;
+  -webkit-box-shadow: 0px 9px 20px rgba(238, 22, 22, 0.1);
+          box-shadow: 0px 9px 20px rgba(238, 22, 22, 0.1);
+}
+
+.btn-green:active:not(.disabled), .btn-green.active:not(.disabled), .btn-red:active:not(.disabled), .btn-red.active:not(.disabled) {
+  color: #fff;
+  background-color: #172A3A;
+  border-color: #172A3A;
+  outline: none;
+}
+
+.btn-green.disabled, .btn-red.disabled {
+  color: #7B9AA9;
+  background-color: #E1EDF1;
+  border-color: #E1EDF1;
+}
+
+.btn-outline {
+  color: #7B9AA9;
+  background-color: #fff;
+  border: 3px solid #7B9AA9;
+}
+
+.btn-outline:hover:not(.disabled) {
+  color: #30485B;
+  background-color: #fff;
+  border-color: #30485B;
+}
+
+.btn-outline:active:not(.disabled), .btn-outline.active:not(.disabled) {
+  color: #fff;
+  background-color: #172A3A;
+  border-color: #172A3A;
+  outline: none;
+}
+
+.btn-outline.disabled {
+  color: #E1EDF1;
+  background-color: #fff;
+  border-color: #E1EDF1;
+}
+
+.btn-prev, .btn-next, .btn-download, .btn-cancel {
+  position: relative;
+}
+
+.btn-prev::after, .btn-next::after, .btn-download::after, .btn-cancel::after {
+  position: absolute;
+  font-family: 'Font Awesome 5 Free';
+  height: 17px;
+  line-height: 17px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.btn-prev.disabled::after, .btn-next.disabled::after, .btn-download.disabled::after, .btn-cancel.disabled::after {
+  color: #7B9AA9;
+}
+
+.btn-prev.disabled.btn-outline::after, .btn-next.disabled.btn-outline::after, .btn-download.disabled.btn-outline::after, .btn-cancel.disabled.btn-outline::after {
+  color: #E1EDF1;
+}
+
+.btn-prev.btn-outline:not(.disabled), .btn-next.btn-outline:not(.disabled), .btn-download.btn-outline:not(.disabled), .btn-cancel.btn-outline:not(.disabled) {
+  color: #30485B;
+}
+
+.btn-next, .btn-download, .btn-cancel {
+  padding-right: 3.025rem;
+}
+
+.btn-next::after, .btn-download::after, .btn-cancel::after {
+  right: 24px;
+}
+
+.btn-next::after {
+  content: "\f054";
+}
+
+.btn-download::after {
+  content: "\f019";
+}
+
+.btn-cancel::after {
+  content: "\f00d";
+}
+
+.btn-prev {
+  padding-left: 3.025rem;
+}
+
+.btn-prev::after {
+  content: "\f053";
+  left: 24px;
+}
+
+.checkbox-control {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.checkbox-input {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 1rem;
+  height: 1.203125rem;
+  opacity: 0;
+}
+
+.checkbox-input:checked ~ .checkbox-label::before {
+  color: #fff;
+  border-color: #E84F35;
+  background-color: #E84F35;
+}
+
+.checkbox-input:checked ~ .checkbox-label::after {
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-background-size: 12px 12px;
+          background-size: 12px 12px;
+}
+
+.checkbox-input:disabled ~ .checkbox-label {
+  color: #7B9AA9;
+}
+
+.checkbox-input:disabled ~ .checkbox-label::before {
+  background-color: #fff;
+}
+
+.checkbox-input:disabled:checked ~ .checkbox-label::before {
+  border-color: #FFE7E6;
+  background-color: #FFE7E6;
+}
+
+.checkbox-label {
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top;
+}
+
+.checkbox-label::before {
+  position: absolute;
+  top: 0.203125rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: 2px solid #E1EDF1;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.checkbox-label::after {
+  position: absolute;
+  top: 0.203125rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background: no-repeat 50% / 50% 50%;
+}
+
+.radio-control .checkbox-label::before {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid #7B9AA9;
+}
+
+.radio-control .checkbox-input:checked ~ .checkbox-label::before {
+  border-color: #7B9AA9;
+  background-color: #fff;
+}
+
+.radio-control .checkbox-input:checked ~ .checkbox-label::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23E84F35'/%3e%3c/svg%3e");
+  -webkit-background-size: 10px 10px;
+          background-size: 10px;
+}
+
+.radio-control .checkbox-input:disabled ~ .checkbox-label::before {
+  border-color: #BDD6DC;
+}
+
+.radio-control .checkbox-input:disabled:checked ~ .checkbox-label::before {
+  border-color: #7B9AA9;
+  background-color: #fff;
+}
+
+.radio-control .checkbox-input:disabled:checked ~ .checkbox-label::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FFE7E6'/%3e%3c/svg%3e");
+}
+/*# sourceMappingURL=main.css.map */

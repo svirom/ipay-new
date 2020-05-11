@@ -1,0 +1,154 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+  padding: 0.625rem 2.175rem;
+  font-size: 1.125rem; // 18px
+  font-weight: bold;
+  line-height: 1.667; // 21px
+  border-radius: 0.5rem;
+
+  .fas {
+    padding-left: 12px;
+    vertical-align: middle;
+
+    &.fa-chevron-left {
+      padding-left: 0;
+      padding-right: 12px;
+    }
+  }
+}
+
+.btn-green {
+  color: #fff;
+  background-color: $btn-main;
+  border: 3px solid $btn-main;
+
+  &:hover:not(.disabled) {
+    color: #fff;
+    background-color: #22D4A2;
+    border-color: #22D4A2;
+    box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+  }
+}
+
+.btn-red {
+  color: #fff;
+  background-color: $btn-red;
+  border: 3px solid $btn-red;
+
+  &:hover:not(.disabled) {
+    color: #fff;
+    background-color: #FF6A51;
+    border-color: #FF6A51;
+    box-shadow: 0px 9px 20px rgba(238, 22, 22, 0.1);
+  }
+}
+
+.btn-green, .btn-red {
+  &:active:not(.disabled), &.active:not(.disabled) {
+    color: #fff;
+    background-color: $heading-color;
+    border-color: $heading-color;
+    outline: none;
+  }
+
+  &.disabled {
+    color: $main-blue;
+    background-color: $middle-grey;
+    border-color: $middle-grey;
+  }
+}
+
+.btn-outline {
+  color: $main-blue;
+  background-color: #fff;
+  border: 3px solid $main-blue;
+
+  &:hover:not(.disabled) {
+    color: $text-color;
+    background-color: #fff;
+    border-color: $text-color;
+  }
+
+  &:active:not(.disabled), &.active:not(.disabled) {
+    color: #fff;
+    background-color: $heading-color;
+    border-color: $heading-color;
+    outline: none;
+  }
+
+  &.disabled {
+    color: $middle-grey;
+    background-color: #fff;
+    border-color: $middle-grey;
+  }
+}
+
+// buttons with elements (arrows etc)
+.btn-prev, .btn-next, .btn-download, .btn-cancel {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    height: 17px;
+    line-height: 17px;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  &.disabled {
+    &::after {
+      color: $main-blue;
+    }
+
+    &.btn-outline {
+      &::after {
+        color: $middle-grey;
+      }
+    }
+  }
+
+  &.btn-outline:not(.disabled) {
+    color: $text-color;
+  }
+}
+
+.btn-next, .btn-download, .btn-cancel {
+  padding-right: 3.025rem;
+
+  &::after {
+    right: 24px;
+  }
+}
+
+.btn-next {
+  &::after {
+    content: "\f054";
+  }
+}
+
+.btn-download {
+  &::after {
+    content: "\f019";
+  }
+}
+
+.btn-cancel {
+  &::after {
+    content: "\f00d";
+  }
+}
+
+.btn-prev {
+  padding-left: 3.025rem;
+
+  &::after {
+    content: "\f053";
+    left: 24px;
+  }
+}
+
+

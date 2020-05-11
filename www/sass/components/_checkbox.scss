@@ -1,0 +1,136 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the checkbox and radio component.
+// -----------------------------------------------------------------------------
+
+// checkbox
+.checkbox-control {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.checkbox-input {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 1rem;
+  height: 1.203125rem;
+  opacity: 0;
+
+  &:checked {
+    &~.checkbox-label {
+      &::before {
+        color: #fff;
+        border-color: $btn-red;
+        background-color: $btn-red;
+      }
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 12px 12px;
+      }
+    }
+  }
+
+  &:disabled {
+    &~.checkbox-label {
+      color: $main-blue;
+
+      &::before {
+        background-color: #fff;
+      }
+    }
+
+    &:checked {
+      &~.checkbox-label { 
+        &::before {
+          border-color: #FFE7E6;
+          background-color: #FFE7E6;
+        }
+      }
+    }
+  }
+}
+
+.checkbox-label {
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top;
+
+  &::before {
+    position: absolute;
+    top: 0.203125rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: 2px solid $middle-grey;
+    border-radius: 2px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0.203125rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background: no-repeat 50% / 50% 50%;
+  }
+}
+
+// radio
+.radio-control {
+  .checkbox-label {
+    &::before {
+      border-radius: 50%;
+      border: 1px solid $main-blue;
+    }
+  }
+}
+
+.radio-control {
+  .checkbox-input {
+    &:checked {
+      &~.checkbox-label {
+        &::before {
+          border-color: $main-blue;
+          background-color: #fff;
+        }
+
+        &::after {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23E84F35'/%3e%3c/svg%3e");
+          background-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.radio-control {
+  .checkbox-input {
+    &:disabled {
+      &~.checkbox-label {
+        &::before {
+          border-color: #BDD6DC;
+        }
+      }
+
+      &:checked {
+        &~.checkbox-label {
+          &::before {
+            border-color: $main-blue;
+            background-color: #fff;
+          }
+  
+          &::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FFE7E6'/%3e%3c/svg%3e");
+          }
+        }
+      }
+    }
+  }
+}

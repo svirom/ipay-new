@@ -1,0 +1,65 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $heading-color;
+  font-family: $heading-font;
+}
+
+button, input, optgroup, select, textarea, label {
+  font-family: $text-font;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.625rem; // 26px
+  line-height: 1.2308; // 32px
+
+  @include until($md) {
+    font-size: 1.5rem; // 24px
+  }
+}
+
+h2 {
+  font-size: 1.5rem; // 24px
+  line-height: 1.2084; // 29px
+
+  @include until($md) {
+    font-size: 1.3125rem; // 21px
+  }
+}
+
+h3 {
+  font-size: 1.25rem; // 20px
+  line-height: 1.2; // 24px
+
+  @include until($md) {
+    font-size: 1rem; // 16px
+  }
+}
+
+h4 {
+  font-size: 1.125rem; // 18px
+  line-height: 1.2223; // 22px
+
+  @include until($md) {
+    font-size: 1rem; // 16px
+  }
+}
+
+p {
+  font-family: $text-font;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+small {
+  font-size: 0.875rem; // 14px
+}
+
+.extra-small {
+  font-size: 0.75rem; // 12px
+}

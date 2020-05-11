@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// media query mixin
+@mixin at-least($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content 
+  }
+};
+
+@mixin until($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+    @content 
+  }
+};
+
+// font
+@mixin font($size: 1rem, $weight: 400, $lineHeight: 1.4) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $lineHeight;
+}
+
+// transition
+@mixin transition($object, $time) {
+	-webkit-transition: $object $time ease;
+	-moz-transition: $object $time ease;
+	-o-transition: $object $time ease;
+	transition: $object $time ease;
+}
+
+// transform
+@mixin transform($object) {
+	-webkit-transform: $object;
+	-moz-transform: $object;
+	-ms-transform: $object;
+	transform: $object;
+}
