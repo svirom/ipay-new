@@ -22,14 +22,14 @@
 
 .btn-green {
   color: #fff;
-  background-color: $btn-main;
-  border: 3px solid $btn-main;
+  background-color: $btn-green;
+  border: 3px solid $btn-green;
 
   &:hover:not(.disabled) {
     color: #fff;
-    background-color: #22D4A2;
-    border-color: #22D4A2;
-    box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+    background-color: $btn-green-hover;
+    border-color: $btn-green-hover;
+    box-shadow: 0px 9px 20px $btn-green-shadow;
   }
 }
 
@@ -40,9 +40,9 @@
 
   &:hover:not(.disabled) {
     color: #fff;
-    background-color: #FF6A51;
-    border-color: #FF6A51;
-    box-shadow: 0px 9px 20px rgba(238, 22, 22, 0.1);
+    background-color: $btn-red-hover;
+    border-color: $btn-red-hover;
+    box-shadow: 0px 9px 20px $btn-red-shadow;
   }
 }
 
@@ -62,12 +62,12 @@
 }
 
 .btn-outline {
-  color: $main-blue;
+  color: $heading-color;
   background-color: #fff;
-  border: 3px solid $main-blue;
+  border: 3px solid $middle-grey;
 
   &:hover:not(.disabled) {
-    color: $text-color;
+    color: $heading-color;
     background-color: #fff;
     border-color: $text-color;
   }
@@ -112,7 +112,11 @@
   }
 
   &.btn-outline:not(.disabled) {
-    color: $text-color;
+    color: $heading-color;
+
+    &:active:not(.disabled), &.active:not(.disabled) {
+      color: #fff;
+    }
   }
 }
 
