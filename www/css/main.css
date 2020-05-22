@@ -113,7 +113,8 @@ small {
 .logo-color, .logo-red, .logo-white {
   width: 120px;
   height: 36px;
-  background-size: 100%;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
 }
 
 .logo-color {
@@ -133,7 +134,8 @@ small {
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 1.667;
-  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
 }
 
 .btn .fas {
@@ -212,54 +214,34 @@ small {
   border-color: #DEE7F3;
 }
 
-.btn-prev, .btn-next, .btn-download, .btn-cancel {
+.btn-prev, .btn-next, .btn-download, .btn-cancel, .btn-plus, .btn-mail {
   position: relative;
 }
 
-.btn-prev::after, .btn-next::after, .btn-download::after, .btn-cancel::after {
+.btn-prev::after, .btn-next::after, .btn-download::after, .btn-cancel::after, .btn-plus::after, .btn-mail::after {
   position: absolute;
-  font-family: 'Font Awesome 5 Free';
-  height: 17px;
-  line-height: 17px;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  background-image: url("../img/button-icon.png");
+  background-repeat: no-repeat;
 }
 
-.btn-prev.disabled::after, .btn-next.disabled::after, .btn-download.disabled::after, .btn-cancel.disabled::after {
+.btn-prev.disabled::after, .btn-next.disabled::after, .btn-download.disabled::after, .btn-cancel.disabled::after, .btn-plus.disabled::after, .btn-mail.disabled::after {
   color: #7C9CAC;
 }
 
-.btn-prev.disabled.btn-outline::after, .btn-next.disabled.btn-outline::after, .btn-download.disabled.btn-outline::after, .btn-cancel.disabled.btn-outline::after {
+.btn-prev.disabled.btn-outline::after, .btn-next.disabled.btn-outline::after, .btn-download.disabled.btn-outline::after, .btn-cancel.disabled.btn-outline::after, .btn-plus.disabled.btn-outline::after, .btn-mail.disabled.btn-outline::after {
   color: #DEE7F3;
 }
 
-.btn-prev.btn-outline:not(.disabled), .btn-next.btn-outline:not(.disabled), .btn-download.btn-outline:not(.disabled), .btn-cancel.btn-outline:not(.disabled) {
+.btn-prev.btn-outline:not(.disabled), .btn-next.btn-outline:not(.disabled), .btn-download.btn-outline:not(.disabled), .btn-cancel.btn-outline:not(.disabled), .btn-plus.btn-outline:not(.disabled), .btn-mail.btn-outline:not(.disabled) {
   color: #172A3A;
 }
 
-.btn-prev.btn-outline:not(.disabled):active:not(.disabled), .btn-prev.btn-outline:not(.disabled).active:not(.disabled), .btn-next.btn-outline:not(.disabled):active:not(.disabled), .btn-next.btn-outline:not(.disabled).active:not(.disabled), .btn-download.btn-outline:not(.disabled):active:not(.disabled), .btn-download.btn-outline:not(.disabled).active:not(.disabled), .btn-cancel.btn-outline:not(.disabled):active:not(.disabled), .btn-cancel.btn-outline:not(.disabled).active:not(.disabled) {
+.btn-prev.btn-outline:not(.disabled):active:not(.disabled), .btn-prev.btn-outline:not(.disabled).active:not(.disabled), .btn-next.btn-outline:not(.disabled):active:not(.disabled), .btn-next.btn-outline:not(.disabled).active:not(.disabled), .btn-download.btn-outline:not(.disabled):active:not(.disabled), .btn-download.btn-outline:not(.disabled).active:not(.disabled), .btn-cancel.btn-outline:not(.disabled):active:not(.disabled), .btn-cancel.btn-outline:not(.disabled).active:not(.disabled), .btn-plus.btn-outline:not(.disabled):active:not(.disabled), .btn-plus.btn-outline:not(.disabled).active:not(.disabled), .btn-mail.btn-outline:not(.disabled):active:not(.disabled), .btn-mail.btn-outline:not(.disabled).active:not(.disabled) {
   color: #fff;
-}
-
-.btn-next, .btn-download, .btn-cancel {
-  padding-right: 3.025rem;
-}
-
-.btn-next::after, .btn-download::after, .btn-cancel::after {
-  right: 24px;
-}
-
-.btn-next::after {
-  content: "\f054";
-}
-
-.btn-download::after {
-  content: "\f019";
-}
-
-.btn-cancel::after {
-  content: "\f00d";
 }
 
 .btn-prev {
@@ -267,8 +249,150 @@ small {
 }
 
 .btn-prev::after {
-  content: "\f053";
+  content: '';
   left: 24px;
+  width: 10px;
+  height: 18px;
+  background-position: 0px 0px;
+}
+
+.btn-prev.disabled::after {
+  background-position: 0px -18px;
+}
+
+.btn-prev.disabled.btn-outline::after {
+  background-position: 0px -54px;
+}
+
+.btn-prev.btn-outline:not(.disabled):not(:active):not(.active)::after {
+  background-position: 0px -36px;
+}
+
+.btn-next, .btn-download, .btn-cancel, .btn-plus, .btn-mail {
+  padding-right: 3.025rem;
+}
+
+.btn-next::after, .btn-download::after, .btn-cancel::after, .btn-plus::after, .btn-mail::after {
+  right: 24px;
+}
+
+.btn-next::after {
+  content: '';
+  width: 10px;
+  height: 18px;
+  background-position: 0px -72px;
+}
+
+.btn-next.disabled::after {
+  background-position: -10px 0px;
+}
+
+.btn-next.disabled.btn-outline::after {
+  background-position: -10px -36px;
+}
+
+.btn-next.btn-outline:not(.disabled):not(:active):not(.active)::after {
+  background-position: -10px -18px;
+}
+
+.btn-download::after {
+  content: '';
+  width: 14px;
+  height: 15px;
+  background-position: -85px -24px;
+}
+
+.btn-download.disabled::after {
+  background-position: -85px -39px;
+}
+
+.btn-download.disabled.btn-outline::after {
+  background-position: -85px -69px;
+}
+
+.btn-download.btn-outline:not(.disabled):not(:active):not(.active)::after {
+  background-position: -85px -54px;
+}
+
+.btn-cancel::after {
+  content: '';
+  width: 15px;
+  height: 16px;
+  background-position: -10px -54px;
+}
+
+.btn-cancel.disabled::after {
+  background-position: -10px -70px;
+}
+
+.btn-cancel.disabled.btn-outline::after {
+  background-position: -25px -16px;
+}
+
+.btn-cancel.btn-outline:not(.disabled):not(:active):not(.active)::after {
+  background-position: -25px 0px;
+}
+
+.btn-plus {
+  padding-right: 3.5rem;
+}
+
+.btn-plus::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-position: -55px -22px;
+}
+
+.btn-plus.disabled::after {
+  background-position: -55px -46px;
+}
+
+.btn-plus.disabled.btn-outline::after {
+  background-position: -85px 0px;
+}
+
+.btn-plus.btn-outline:not(.disabled):not(:active):not(.active)::after {
+  background-position: -55px -70px;
+}
+
+.btn-mail {
+  padding-right: 3.5rem;
+}
+
+.btn-mail::after {
+  content: '';
+  width: 30px;
+  height: 22px;
+  background-position: -25px -32px;
+}
+
+.btn-mail.disabled::after {
+  background-position: -25px -54px;
+}
+
+.btn-mail.disabled.btn-outline::after {
+  background-position: -55px 0px;
+}
+
+.btn-mail.btn-outline:not(.disabled):not(:active):not(.active)::after {
+  background-position: -25px -76px;
+}
+
+.btn-empty {
+  min-height: 56px;
+}
+
+.btn-empty.btn {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.btn-empty.btn::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .checkbox-control {
@@ -293,7 +417,8 @@ small {
 
 .checkbox-input:checked ~ .checkbox-label::after {
   background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
-  background-size: 12px 12px;
+  -webkit-background-size: 12px 12px;
+          background-size: 12px 12px;
 }
 
 .checkbox-input:disabled ~ .checkbox-label {
@@ -301,13 +426,25 @@ small {
 }
 
 .checkbox-input:disabled ~ .checkbox-label::before {
-  border-color: #F7F9FB;
-  background-color: #fff;
+  border-color: #DEE7F3;
+  background-color: #DEE7F3;
+}
+
+.checkbox-input:disabled ~ .checkbox-label::after {
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-background-size: 10px 10px;
+          background-size: 10px 10px;
 }
 
 .checkbox-input:disabled:checked ~ .checkbox-label::before {
-  border-color: #FFE7E6;
-  background-color: #FFE7E6;
+  border-color: #DEE7F3;
+  background-color: #DEE7F3;
+}
+
+.checkbox-input:disabled:checked ~ .checkbox-label::after {
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-background-size: 12px 12px;
+          background-size: 12px 12px;
 }
 
 .checkbox-label {
@@ -327,7 +464,8 @@ small {
   content: "";
   background-color: #fff;
   border: 2px solid #DEE7F3;
-  border-radius: 2px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
 }
 
 .checkbox-label::after {
@@ -341,31 +479,73 @@ small {
   background: no-repeat 50% / 50% 50%;
 }
 
+.checkbox-switch .checkbox-label::before {
+  left: -2.25rem;
+  width: 1.75rem;
+  pointer-events: all;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
+  border-color: #7C9CAC;
+  background-color: #7C9CAC;
+}
+
+.checkbox-switch .checkbox-label::after {
+  top: -webkit-calc(0.203125rem + 2px);
+  top: calc(0.203125rem + 2px);
+  left: -webkit-calc(-2.25rem + 2px);
+  left: calc(-2.25rem + 2px);
+  width: -webkit-calc(1rem - 4px);
+  width: calc(1rem - 4px);
+  height: -webkit-calc(1rem - 4px);
+  height: calc(1rem - 4px);
+  background-color: #fff;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.checkbox-switch .checkbox-input:checked ~ .checkbox-label::before {
+  color: #fff;
+  border-color: #E84F35;
+  background-color: #E84F35;
+}
+
+.checkbox-switch .checkbox-input:checked ~ .checkbox-label::after {
+  background-color: #fff;
+  background-image: none;
+  -webkit-transform: translateX(0.75rem);
+  -ms-transform: translateX(0.75rem);
+  transform: translateX(0.75rem);
+}
+
 .radio-control .checkbox-label::before {
-  border-radius: 50%;
-  border: 1px solid #7C9CAC;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 2px solid #DEE7F3;
 }
 
 .radio-control .checkbox-input:checked ~ .checkbox-label::before {
-  border-color: #7C9CAC;
+  border: 4px solid #E84F35;
   background-color: #fff;
 }
 
 .radio-control .checkbox-input:checked ~ .checkbox-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23E84F35'/%3e%3c/svg%3e");
-  background-size: 10px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%fff'/%3e%3c/svg%3e");
+  -webkit-background-size: 10px 10px;
+          background-size: 10px 10px;
 }
 
 .radio-control .checkbox-input:disabled ~ .checkbox-label::before {
-  border-color: #BDD6DC;
+  border-color: #DEE7F3;
 }
 
 .radio-control .checkbox-input:disabled:checked ~ .checkbox-label::before {
-  border-color: #7C9CAC;
-  background-color: #fff;
+  background-color: #DEE7F3;
 }
 
 .radio-control .checkbox-input:disabled:checked ~ .checkbox-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FFE7E6'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'%3E%3C/path%3E%3C/svg%3E");
 }
 /*# sourceMappingURL=main.css.map */

@@ -87,16 +87,15 @@
 }
 
 // buttons with elements (arrows etc)
-.btn-prev, .btn-next, .btn-download, .btn-cancel {
+.btn-prev, .btn-next, .btn-download, .btn-cancel, .btn-plus, .btn-mail {
   position: relative;
 
   &::after {
     position: absolute;
-    font-family: 'Font Awesome 5 Free';
-    height: 17px;
-    line-height: 17px;
     top: 50%;
     @include transform(translateY(-50%));
+    background-image: url('../img/button-icon.png');
+    background-repeat: no-repeat;
   }
 
   &.disabled {
@@ -120,7 +119,37 @@
   }
 }
 
-.btn-next, .btn-download, .btn-cancel {
+.btn-prev {
+  padding-left: 3.025rem;
+
+  &::after {
+    content: '';
+    left: 24px;
+    width: 10px;
+		height: 18px;
+		background-position: 0px 0px;
+  }
+
+  &.disabled {
+    &::after {
+      background-position: 0px -18px;
+    }
+
+    &.btn-outline {
+      &::after {
+        background-position: 0px -54px;
+      }
+    }
+  }
+
+  &.btn-outline:not(.disabled):not(:active):not(.active) {
+    &::after {
+      background-position: 0px -36px;
+    }
+  }
+}
+
+.btn-next, .btn-download, .btn-cancel, .btn-plus, .btn-mail {
   padding-right: 3.025rem;
 
   &::after {
@@ -130,28 +159,154 @@
 
 .btn-next {
   &::after {
-    content: "\f054";
+    content: '';
+    width: 10px;
+    height: 18px;
+    background-position: 0px -72px;
+  }
+
+  &.disabled {
+    &::after {
+      background-position: -10px 0px;
+    }
+
+    &.btn-outline {
+      &::after {
+        background-position: -10px -36px;
+      }
+    }
+  }
+
+  &.btn-outline:not(.disabled):not(:active):not(.active) {
+    &::after {
+      background-position: -10px -18px;
+    }
   }
 }
 
 .btn-download {
   &::after {
-    content: "\f019";
+    content: '';
+    width: 14px;
+    height: 15px;
+    background-position: -85px -24px;
+  }
+
+  &.disabled {
+    &::after {
+      background-position: -85px -39px;
+    }
+
+    &.btn-outline {
+      &::after {
+        background-position: -85px -69px;
+      }
+    }
+  }
+
+  &.btn-outline:not(.disabled):not(:active):not(.active) {
+    &::after {
+      background-position: -85px -54px;
+    }
   }
 }
 
 .btn-cancel {
   &::after {
-    content: "\f00d";
+    content: '';
+    width: 15px;
+		height: 16px;
+		background-position: -10px -54px;
+  }
+
+  &.disabled {
+    &::after {
+      background-position: -10px -70px;
+    }
+
+    &.btn-outline {
+      &::after {
+        background-position: -25px -16px;
+      }
+    }
+  }
+
+  &.btn-outline:not(.disabled):not(:active):not(.active) {
+    &::after {
+      background-position: -25px 0px;
+    }
   }
 }
 
-.btn-prev {
-  padding-left: 3.025rem;
+.btn-plus {
+  padding-right: 3.5rem;
 
   &::after {
-    content: "\f053";
-    left: 24px;
+    content: '';
+    width: 24px;
+		height: 24px;
+		background-position: -55px -22px;
+  }
+
+  &.disabled {
+    &::after {
+      background-position: -55px -46px;
+    }
+
+    &.btn-outline {
+      &::after {
+        background-position: -85px 0px;
+      }
+    }
+  }
+
+  &.btn-outline:not(.disabled):not(:active):not(.active) {
+    &::after {
+      background-position: -55px -70px;
+    }
+  }
+}
+
+.btn-mail {
+  padding-right: 3.5rem;
+
+  &::after {
+    content: '';
+    width: 30px;
+		height: 22px;
+		background-position: -25px -32px;
+  }
+
+  &.disabled {
+    &::after {
+      background-position: -25px -54px;
+    }
+
+    &.btn-outline {
+      &::after {
+        background-position: -55px 0px;
+      }
+    }
+  }
+
+  &.btn-outline:not(.disabled):not(:active):not(.active) {
+    &::after {
+      background-position: -25px -76px;
+    }
+  }
+}
+
+.btn-empty {
+  min-height: 56px;
+
+  &.btn {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &::after {
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+    }
   }
 }
 
