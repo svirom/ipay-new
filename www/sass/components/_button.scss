@@ -310,4 +310,16 @@
   }
 }
 
+.btn-link {
+  padding: 0;
+  color: $main-blue;
+  @include font(1rem, 400, inherit);
+  vertical-align: inherit;
+
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
 

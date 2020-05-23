@@ -6,7 +6,7 @@ body {
   font-family: $heading-font;
 }
 
-button, input, optgroup, select, textarea, label {
+button, input, optgroup, select, textarea, label, a {
   font-family: $text-font;
 }
 
@@ -63,4 +63,9 @@ small {
 
 .extra-small {
   font-size: 0.75rem; // 12px
+}
+
+label {
+  font-family: $text-font;
+  color: $text-color;
 }

@@ -59,6 +59,10 @@
             <div style="height: 50px; border-radius: 8px; color: #ffffff; background: #FFD0CE" class="d-flex justify-content-center align-items-center">#FFD0CE</div>
             <div style="font-size: 80%;">$pink</div>
           </div>
+          <div style="width: 100px;" class="text-center mx-2">
+            <div style="height: 50px; border-radius: 8px; color: #ffffff; background: #FFFCFC" class="d-flex justify-content-center align-items-center">#FFFCFC</div>
+            <div style="font-size: 80%;">$error-box-shadow</div>
+          </div>
         </div>
         <div class="col-12 d-flex flex-wrap mb-4">
           <div style="width: 100px;" class="text-center mx-2">
@@ -151,6 +155,16 @@
           </div>
           <div>
             <code>.logo-white</code>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4">
+            <div class="logo-color">
+              <a href="#"></a>
+            </div>
+          </div>
+          <div>
+            <code>.logo-color > a</code>
           </div>
         </div>
       </div>
@@ -455,6 +469,21 @@
           </div>
         </div>
       </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <h3 class="pl-3 pb-0 mb-0">Text link (.btn-link)</h3>
+        </div>
+        <div class="col-12 d-flex flex-wrap">
+          <div class="p-3">
+            <p class="mb-0">This is a <a href="#" role="button" class="btn btn-link">Text link</a></p>
+            <p class="mb-0"><code>.btn .btn-link</code></p>
+          </div>
+          <div class="p-3">
+            <a href="#" role="button" class="btn btn-link" style="color: #30485B;">Text link</a>
+            <p class="mb-0"><code>:hover</code></p>
+          </div>
+        </div>
+      </div>
 
       <div class="w-100"><hr></div>
 
@@ -532,7 +561,7 @@
 
       <div class="w-100"><hr></div>
 
-      <!-- radiobuttons -->
+      <!-- radio buttons -->
       <div class="row">
         <div class="col-12">
           <h2 class="mt-5"><u>Radiobuttons</u></h2>
@@ -577,6 +606,115 @@
 
       <div class="w-100"><hr></div>
 
+      <!-- inputs -->
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mt-5"><u>Inputs</u></h2>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="form-group" style="max-width: 260px;">
+            <input type="text" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true">
+            <label class="control-label form-label" for="form-name">Имя и фамилия</label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group"><br>
+              &nbsp;&lt;input type="text" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-name">Имя и фамилия&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group required has-success" style="max-width: 260px;">
+            <input type="text" class="form-control form-input" id="form-name-success" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true" value="Василь Васильцев">
+            <label class="control-label form-label" for="form-name-success">Имя и фамилия</label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group required has-success"><br>
+              &nbsp;&lt;input type="text" class="form-control form-input" id="form-name-success" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true" value="Василь Васильцев"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-name-success">Имя и фамилия&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group required has-error" style="max-width: 260px;">
+            <input type="text" class="form-control form-input" id="form-name-error" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true">
+            <label class="control-label form-label" for="form-name-error">Имя и фамилия</label>
+            <div class="help-block extra-small">Введите ваше имя</div>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group required has-error"><br>
+              &nbsp;&lt;input type="text" class="form-control form-input" id="form-name-error" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-name-error">Имя и фамилия&lt;/label><br>
+              &nbsp;&lt;div class="help-block extra-small">Введите ваше имя&lt;/div><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group" style="max-width: 260px;">
+            <input type="text" class="form-control form-input" id="form-name-d" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true" disabled>
+            <label class="control-label form-label" for="form-name-d">Имя и фамилия</label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group"><br>
+              &nbsp;&lt;input type="text" class="form-control form-input" id="form-name-d" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true" disabled><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-name-d">Имя и фамилия&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group" style="max-width: 260px;">
+            <input type="password" class="form-control form-input" id="form-pass" name="pass" autocomplete="off" aria-required="true">
+            <label class="control-label form-label" for="form-pass">Пароль</label>
+            <button class="password-button"></button>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group"><br>
+              &nbsp;&lt;input type="password" class="form-control form-input" id="form-pass" name="pass" autocomplete="off" aria-required="true"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-pass">Пароль&lt;/label><br>
+              &nbsp;&lt;button class="password-button">&lt;/button><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group has-success" style="max-width: 260px;">
+            <input type="password" class="form-control form-input" id="form-pass-success" name="pass" autocomplete="off" aria-required="true" value="New_pass">
+            <label class="control-label form-label" for="form-pass-success">Пароль</label>
+            <button class="password-button"></button>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group has-success"><br>
+              &nbsp;&lt;input type="password" class="form-control form-input" id="form-pass-success" name="pass" autocomplete="off" aria-required="true" value="New_pass"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-pass-success">Пароль&lt;/label><br>
+              &nbsp;&lt;button class="password-button">&lt;/button><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group required has-error" style="max-width: 260px;">
+            <input type="password" class="form-control form-input" id="form-pass-error" name="pass" autocomplete="off" aria-required="true" value="PaSsWoRd">
+            <label class="control-label form-label" for="form-pass-error">Пароль</label>
+            <button class="password-button"></button>
+            <div class="help-block extra-small">Неверный пароль</div>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group has-error"><br>
+              &nbsp;&lt;input type="password" class="form-control form-input" id="form-pass-error" name="pass" autocomplete="off" aria-required="true" value="PaSsWoRd"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-pass-error">Пароль&lt;/label><br>
+              &nbsp;&lt;button class="password-button">&lt;/button><br>
+              &nbsp;&lt;div class="help-block extra-small">Неверный пароль&lt;/div><br>
+              &lt;/div>
+            </code>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100"><hr></div>
+
 
     </div>
     
@@ -588,5 +726,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
   </body>
 </html>

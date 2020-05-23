@@ -34,7 +34,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-button, input, optgroup, select, textarea, label {
+button, input, optgroup, select, textarea, label, a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -101,6 +101,11 @@ small {
   font-size: 0.75rem;
 }
 
+label {
+  font-family: "Roboto", sans-serif;
+  color: #3B566E;
+}
+
 /**
  * Clear inner floats
  */
@@ -115,6 +120,12 @@ small {
   height: 36px;
   -webkit-background-size: 100% 100%;
           background-size: 100%;
+}
+
+.logo-color > a, .logo-red > a, .logo-white > a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .logo-color {
@@ -395,6 +406,246 @@ small {
   transform: translate(-50%, -50%);
 }
 
+.btn-link {
+  padding: 0;
+  color: #7C9CAC;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: inherit;
+  vertical-align: inherit;
+}
+
+.btn-link:hover {
+  color: #3B566E;
+  text-decoration: none;
+}
+
+.help-block {
+  display: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group.has-success .form-input {
+  color: #172A3A;
+  background-repeat: no-repeat;
+  background-position: right 1.1rem center;
+}
+
+.form-group.has-success .form-input ~ .password-button {
+  display: block;
+}
+
+.form-group.has-success .form-input:not([type='password']) {
+  border-color: #DEE7F3;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09277 6.35742L4.91777 10.1824C5.49527 10.7599 6.44027 10.7599 7.01777 10.1824L15.3428 1.85742' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  -webkit-background-size: 18px 18px;
+          background-size: 18px;
+}
+
+.form-group.has-success .form-input:not([type='password']).form-control:focus {
+  border-color: #09BC8A;
+  -webkit-box-shadow: 0 0 0 0.2rem #E9FCF3;
+          box-shadow: 0 0 0 0.2rem #E9FCF3;
+}
+
+.form-group.has-success .form-label {
+  top: 0.45rem;
+  font-size: 0.77777rem;
+  color: #7C9CAC;
+}
+
+.form-group.has-error {
+  margin-bottom: 2.375rem;
+}
+
+.form-group.has-error .form-input {
+  color: #172A3A;
+  border-color: #FFD0CE;
+  -webkit-box-shadow: 0 0 0 0.2rem #FFFCFC;
+          box-shadow: 0 0 0 0.2rem #FFFCFC;
+  background-repeat: no-repeat;
+  background-position: right 1.1rem center;
+}
+
+.form-group.has-error .form-input.form-control:focus {
+  border-color: #FFD0CE;
+  -webkit-box-shadow: 0 0 0 0.2rem #FFFCFC;
+          box-shadow: 0 0 0 0.2rem #FFFCFC;
+}
+
+.form-group.has-error .form-input ~ .password-button {
+  display: block;
+}
+
+.form-group.has-error .form-input:not([type='password']) {
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.07227 1.09082L11.3639 11.3825' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.3639 1.09082L1.07227 11.3825' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  -webkit-background-size: 14px 14px;
+          background-size: 14px;
+}
+
+.form-group.has-error .form-input:not([type='password'])::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.form-group.has-error .form-input:not([type='password'])::-moz-placeholder {
+  opacity: 1;
+}
+
+.form-group.has-error .form-input:not([type='password']):-ms-input-placeholder {
+  opacity: 1;
+}
+
+.form-group.has-error .form-input:not([type='password']):-moz-placeholder {
+  opacity: 1;
+}
+
+.form-group.has-error .form-label {
+  top: 0.45rem;
+  font-size: 0.77777rem;
+  color: #7C9CAC;
+}
+
+.form-group.has-error .help-block {
+  display: block;
+  position: absolute;
+  padding-top: 4px;
+  padding-left: 4px;
+  font-family: "Roboto", sans-serif;
+  color: #E84F35;
+}
+
+.form-control {
+  color: #172A3A;
+}
+
+.form-input {
+  position: relative;
+  padding: 2.026rem 1.0775rem 1.1rem;
+  border: 3px solid #DEE7F3;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
+  color: transparent;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.667;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: #DEE7F3;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.form-input::-moz-placeholder {
+  color: #DEE7F3;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.form-input:-ms-input-placeholder {
+  color: #DEE7F3;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.form-input:-moz-placeholder {
+  color: #DEE7F3;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.form-input:focus {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.form-input:focus::-moz-placeholder {
+  opacity: 1;
+}
+
+.form-input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.form-input:focus:-moz-placeholder {
+  opacity: 1;
+}
+
+.form-input:focus ~ .form-label {
+  top: 0.45rem;
+  font-size: 0.77777rem;
+  color: #7C9CAC;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus ~ .password-button {
+  display: block;
+}
+
+.form-input.form-control:focus {
+  border-color: #7C9CAC;
+  -webkit-box-shadow: 0 0 0 0.2rem #F0F5FA;
+          box-shadow: 0 0 0 0.2rem #F0F5FA;
+}
+
+.form-input.disabled, .form-input:disabled {
+  border-color: #F0F5FA;
+  background-color: #F0F5FA;
+}
+
+.form-label {
+  position: absolute;
+  top: 0.95rem;
+  left: 1.25rem;
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.password-button {
+  display: none;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 1.125rem;
+  top: 50%;
+  margin-top: -10px;
+  padding: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='26' viewBox='0 0 24 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M22.2665 12.8276C22.2665 12.8276 18.3319 18.6456 11.9382 18.6456C5.54447 18.6456 1.60986 12.8276 1.60986 12.8276' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.938 18.6455V20.7611' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.1841 18.1802L15.5775 20.2535' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.8892 16.8999L18.863 18.7405' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.2207 15.1973L21.4798 16.8263' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.69229 18.1802L8.29883 20.2535' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.987 16.8999L5.01318 18.7405' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.65605 15.1973L2.39697 16.8263' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Cpath d='M0.134277 0.133789H23.7419V25.5214H0.134277V0.133789Z' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  -webkit-background-size: 20px 20px;
+          background-size: 20px;
+  background-position: center;
+}
+
+.password-button:focus {
+  outline: none;
+}
+
+.password-button.show-pass {
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='28' viewBox='0 0 25 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.845 17.4088C15.9273 17.4088 18.4259 14.9102 18.4259 11.8279C18.4259 8.74571 15.9273 6.24707 12.845 6.24707C9.7628 6.24707 7.26416 8.74571 7.26416 11.8279C7.26416 14.9102 9.7628 17.4088 12.845 17.4088Z' fill='%23172A3A'/%3E%3Cpath d='M2.34521 12.7471C2.34521 12.7471 6.34521 6.24707 12.8452 6.24707C19.3452 6.24707 23.3452 12.7471 23.3452 12.7471C23.3452 12.7471 19.3452 19.2471 12.8452 19.2471C6.34521 19.2471 2.34521 12.7471 2.34521 12.7471Z' stroke='%23172A3A' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+}
+
 .checkbox-control {
   position: relative;
   padding-left: 1.5rem;
@@ -477,6 +728,10 @@ small {
   height: 1rem;
   content: "";
   background: no-repeat 50% / 50% 50%;
+}
+
+.checkbox-switch {
+  padding-left: 2.25rem;
 }
 
 .checkbox-switch .checkbox-label::before {
