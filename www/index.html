@@ -614,6 +614,7 @@
       </div>
       <div class="row mt-3">
         <div class="col-md-6">
+          <h3 class="pl-3 pb-3 mb-0">Input</h3>
           <div class="form-group" style="max-width: 260px;">
             <input type="text" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="Имя и фамилия" aria-required="true">
             <label class="control-label form-label" for="form-name">Имя и фамилия</label>
@@ -666,6 +667,7 @@
           </div>
         </div>
         <div class="col-md-6">
+          <h3 class="pl-3 pb-3 mb-0">Input type password</h3>
           <div class="form-group" style="max-width: 260px;">
             <input type="password" class="form-control form-input" id="form-pass" name="pass" autocomplete="off" aria-required="true">
             <label class="control-label form-label" for="form-pass">Пароль</label>
@@ -709,6 +711,159 @@
               &nbsp;&lt;div class="help-block extra-small">Неверный пароль&lt;/div><br>
               &lt;/div>
             </code>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <h3 class="pl-3 pb-3 mb-0">Input with left icon</h3>
+          <div class="form-group" style="max-width: 320px;">
+            <input type="email" class="form-control form-input input-icon-left" id="form-icon" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
+            <label class="control-label form-label" for="form-icon">Ваш e-mail</label>
+            <label class="label-icon-left label-mail"></label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group"><br>
+              &nbsp;&lt;input type="email" class="form-control form-input input-icon-left" id="form-icon" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-icon">Ваш e-mail&lt;/label><br>
+              &nbsp;&lt;label class="label-icon-left label-mail">&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group required has-success" style="max-width: 320px;">
+            <input type="email" class="form-control form-input input-icon-left" id="form-icon-success" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true" value="qwerty@gmail.com">
+            <label class="control-label form-label" for="form-icon-success">Ваш e-mail</label>
+            <label class="label-icon-left label-mail"></label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group required has-success"><br>
+              &nbsp;&lt;input type="email" class="form-control form-input input-icon-left" id="form-icon-success" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true" value="qwerty@gmail.com"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-icon-success">Ваш e-mail&lt;/label><br>
+              &nbsp;&lt;label class="label-icon-left label-mail">&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group required has-error" style="max-width: 320px;">
+            <input type="email" class="form-control form-input input-icon-left" id="form-icon-error" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true" value="qwertygmail.com">
+            <label class="control-label form-label" for="form-icon-error">Ваш e-mail</label>
+            <label class="label-icon-left label-mail"></label>
+            <div class="help-block extra-small">e-mail введен неверно</div>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group required has-error"><br>
+              &nbsp;&lt;input type="email" class="form-control form-input input-icon-left" id="form-icon-error" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true" value="qwertygmail.com"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-icon-error">Ваш e-mail&lt;/label><br>
+              &nbsp;&lt;label class="label-icon-left label-mail">&lt;/label><br>
+              &nbsp;&lt;div class="help-block extra-small">e-mail введен неверно&lt;/div><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group" style="max-width: 320px;">
+            <input type="email" class="form-control form-input input-icon-left" id="form-icon-d" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true" disabled>
+            <label class="control-label form-label" for="form-icon-d">Ваш e-mail</label>
+            <label class="label-icon-left label-mail"></label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group"><br>
+              &nbsp;&lt;input type="email" class="form-control form-input input-icon-left" id="form-icon-d" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true" disabled><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-icon-d">Ваш e-mail&lt;/label><br>
+              &nbsp;&lt;label class="label-icon-left label-mail">&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="pl-3 pb-3 mb-0">Input with right icon</h3>
+          <div class="form-group" style="max-width: 260px;">
+            <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+            <label class="control-label form-label" for="form-icon-r">Сумма</label>
+            <label class="label-icon-right label-currency">грн</label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group"><br>
+              &nbsp;&lt;input type="tel" class="form-control form-input input-icon-right" id="form-icon-r" name="name" autocomplete="off" placeholder="0.00" aria-required="true"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-icon-r">Сумма&lt;/label><br>
+              &nbsp;&lt;label class="label-icon-right label-currency">грн&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group has-success" style="max-width: 260px;">
+            <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r-success" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100.00">
+            <label class="control-label form-label" for="form-icon-r-success">Сумма</label>
+            <label class="label-icon-right label-currency">грн</label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group has-success"><br>
+              &nbsp;&lt;input type="tel" class="form-control form-input input-icon-right" id="form-icon-r-success" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100.00"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-icon-r-success">Сумма&lt;/label><br>
+              &nbsp;&lt;label class="label-icon-right label-currency">грн&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group has-error" style="max-width: 260px;">
+            <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r-error" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="001">
+            <label class="control-label form-label" for="form-icon-r-error">Сумма</label>
+            <label class="label-icon-right label-currency">грн</label>
+            <div class="help-block extra-small">Сумма введена неверно</div>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group has-error"><br>
+              &nbsp;&lt;input type="tel" class="form-control form-input input-icon-right" id="form-icon-r-error" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="001"><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-icon-r-error">Сумма&lt;/label><br>
+              &nbsp;&lt;label class="label-icon-right label-currency">грн&lt;/label><br>
+              &nbsp;&lt;div class="help-block extra-small">Сумма введена неверно&lt;/div><br>
+              &lt;/div>
+            </code>
+          </div>
+          <div class="form-group" style="max-width: 260px;">
+            <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r-d" name="name" autocomplete="off" placeholder="0.00" aria-required="true" disabled>
+            <label class="control-label form-label" for="form-icon-r-d">Сумма</label>
+            <label class="label-icon-right label-currency">грн</label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group"><br>
+              &nbsp;&lt;input type="tel" class="form-control form-input input-icon-right" id="form-icon-r-d" name="name" autocomplete="off" placeholder="0.00" aria-required="true" disabled><br>
+              &nbsp;&lt;label class="control-label form-label" for="form-icon-r-d">Сумма&lt;/label><br>
+              &nbsp;&lt;label class="label-icon-right label-currency">грн&lt;/label><br>
+              &lt;/div>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="w-100"><hr></div>
+
+      <!-- textarea -->
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mt-5"><u>Textarea</u></h2>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="form-group" style="max-width: 320px;">
+            <textarea class="form-control form-textarea" id="form-textarea" rows="5" placeholder="Ваш текст"></textarea>
+            <label class="control-label form-label" for="form-textarea">Введите ваш комментарий</label>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;textarea class="form-control form-textarea" id="form-textarea" rows="5" placeholder="Ваш текст">&lt;/textarea><br>
+              &lt;label class="control-label form-label" for="form-textarea">Введите ваш комментарий&lt;/label>
+            </code>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group" style="max-width: 320px;">
+            <textarea class="form-control form-textarea" id="form-textarea" rows="5" placeholder="Ваш текст">Пользуюсь IPay.ua - для приёма платежей как фрилансер с 2012 года. В целом удобно, зачисляют на следующий рабочий день. По безопасности - реально строго, если какая ошибка у клиента при оплате -</textarea>
+            <label class="control-label form-label" for="form-textarea">Введите ваш комментарий</label>
           </div>
         </div>
       </div>

@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the textarea component.
+// -----------------------------------------------------------------------------
+
+.form-textarea {
+  padding: 1.75rem 1rem 0.5rem;
+  border: 2px solid $middle-grey;
+  border-radius: 0.5rem;
+  @include placeholder {
+    color: $middle-grey!important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: $btn-red;
+  }
+  
+
+  &:focus {
+    border-color: $main-blue;
+  }
+
+  &.form-control {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &~.form-label {
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 22px);
+    padding-top: 0.5rem;
+    padding-left: 1.1rem;
+    border-radius: 0.5rem;
+    color: $main-blue;
+    font-size: 0.875rem;
+    background: #fff;
+  }
+}
