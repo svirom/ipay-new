@@ -11,13 +11,13 @@
 
   &.has-success {
     .form-input {
-      color: $heading-color;
-      background-repeat: no-repeat;
-      background-position: right 1.1rem center;
+      // color: $heading-color;
+      // background-repeat: no-repeat;
+      // background-position: right 1.1rem center;
 
-      ~.password-button {
-        display: block;
-      }
+      // ~.password-button {
+      //   display: block;
+      // }
     }
 
     .form-input:not([type='password']):not(.input-icon-right) {
@@ -33,22 +33,22 @@
       }
     }
 
-    .form-label {
+    /* .form-label {
       top: 0.45rem;
       font-size: 0.77777rem;
       color: $main-blue;
-    }
+    } */
   }
 
   &.has-error {
     margin-bottom: 2.375rem;
 
     .form-input {
-      color: $heading-color;
+      // color: $heading-color;
       border-color: $pink;
       box-shadow: 0 0 0 0.2rem $error-box-shadow;
-      background-repeat: no-repeat;
-      background-position: right 1.1rem center;
+      // background-repeat: no-repeat;
+      // background-position: right 1.1rem center;
 
       &.form-control {
         &:focus {
@@ -57,9 +57,9 @@
         }
       }
 
-      ~.password-button {
+      /* ~.password-button {
         display: block;
-      }
+      } */
 
       &:not([type='password']):not(.input-icon-right) {
         background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.07227 1.09082L11.3639 11.3825' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.3639 1.09082L1.07227 11.3825' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -97,7 +97,7 @@
   padding: 2.026rem 1.0775rem 1.1rem;
   border: 3px solid $middle-grey;
   border-radius: 0.5rem;
-  color: transparent;
+  color: $heading-color;
   @include font(1.125rem, 400, 1.667);
   @include placeholder {
     color: $middle-grey;
@@ -105,8 +105,10 @@
     opacity: 0;
   }
   @include transition(all, 0.3s);
+  background-repeat: no-repeat;
+  background-position: right 1.1rem center;
 
-  &:focus {
+  &:focus, &.filled {
     @include placeholder {
       opacity: 1;
     }
