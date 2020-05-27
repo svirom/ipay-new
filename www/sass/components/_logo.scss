@@ -6,11 +6,17 @@
   width: 120px;
   height: 36px;
   background-size: 100%;
+  background-repeat: no-repeat;
 
   & > a {
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  @include until($md) {
+    width: 90px;
+    height: 27px;
   }
 }
 

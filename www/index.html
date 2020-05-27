@@ -899,31 +899,54 @@
     </div>
     <header class="main-header">
       <div class="container">
-        <div class="row main-nav">
-          <div class="col-auto">
+        <div class="row">
+          <div class="col-12 main-nav">
             <div class="main-nav__logo logo-color">
               <a href="#"></a>
             </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item-mobile">
+                  <!-- <a href="#" class="main-nav__opener" role="button" id="dropdown-account-mobile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="nav-opener"><span></span></span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account-mobile">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div> -->
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav class="col">
-            <ul class="main-nav__nav">
-              <li class="main-nav__item">
-                <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
-                  <span>Безопасность </span>
-                  <span>плательщиков</span>
-                </a>
-              </li>
-              <li class="main-nav__item dropdown">
-                <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
-                <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdown-account">
-                  <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                  <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
-                </div>
-              </li>
-            </ul>
-          </nav>
+          <div class="col-auto">
+            
+          </div>
         </div>
       </div>
     </header>
@@ -952,7 +975,18 @@
                   <span>бонусов</span>
                 </span>
               </li>
-              <li class="main-nav__item"><a href="#" class="btn btn-account">Николай</a></li>
+              <li class="main-nav__item">
+                <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Николай</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                  <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                  <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                  <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                  <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                  <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                  <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                  <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                </div>
+              </li>
             </ul>
           </nav>
         </div>
