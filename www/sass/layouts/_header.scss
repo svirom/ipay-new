@@ -25,6 +25,10 @@
   &__item {
     margin-left: 1.86rem;
 
+    &.main-nav__item-mobile {
+      margin-left: 0;
+    }
+
     .dropdown-menu {
       min-width: 19.875rem;
       margin-top: 3.125rem;
@@ -66,6 +70,14 @@
         top: 50%;
         @include transform(translateY(-50%));
       }
+
+      &::after {
+        position: absolute;
+        content: '';
+        right: 1rem;
+        top: 50%;
+        @include transform(translateY(-50%));
+      }
     }
 
     .dropdown-login {
@@ -74,7 +86,7 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -50px -25px no-repeat;
+			  background: url('../img/header-icons.png') -50px 0 no-repeat;
       }
     }
 
@@ -82,7 +94,7 @@
       &::before {
         width: 24px;
 			  height: 24px;
-			  background: url('../img/header-icons.png') 0px 0px no-repeat;
+			  background: url('../img/header-icons.png') -50px -25px no-repeat;
       }
     }
 
@@ -90,7 +102,7 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -74px 0px no-repeat;
+			  background: url('../img/header-icons.png') -25px 0 no-repeat;
       }
     }
 
@@ -98,7 +110,7 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -25px -25px no-repeat;
+			  background: url('../img/header-icons.png') 0 -50px no-repeat;
       }
     }
 
@@ -106,7 +118,7 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') 0px -25px no-repeat;
+			  background: url('../img/header-icons.png') -25px -25px no-repeat;
       }
     }
 
@@ -114,7 +126,7 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -49px 0px no-repeat;
+			  background: url('../img/header-icons.png') 0 -25px no-repeat;
       }
     }
 
@@ -122,7 +134,7 @@
       &::before {
         width: 24px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -25px -50px no-repeat;
+			  background: url('../img/header-icons.png') -50px -50px no-repeat;
       }
     }
 
@@ -132,7 +144,65 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') 0px -50px no-repeat;
+			  background: url('../img/header-icons.png') -25px -50px no-repeat;
+      }
+    }
+
+    .dropdown-catalogue {
+      border-bottom: 1px dashed $middle-grey;
+
+      &::before {
+        width: 25px;
+			  height: 25px;
+			  background: url('../img/header-icons.png') 0px 0px no-repeat;
+      }
+
+      &::after {
+        width: 10px;
+			  height: 18px;
+			  background: url('../img/button-icon.png') -10px -18px no-repeat;
+      }
+    }
+
+    .dropdown-safety {
+      &::before {
+        width: 24px;
+			  height: 28px;
+			  background: url('../img/header-icons.png') 0 -75px no-repeat;
+      }
+    }
+
+    .dropdown-login-mobile {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      padding: 0.688rem 1.345rem;
+      width: calc(100% - 20px);
+      border-radius: 0.5rem;
+      color: $light-grey;
+      background-color: $btn-green;
+
+      &:focus, &:active, &:hover {
+        text-decoration: none;
+        background-color: $heading-color;
+        outline: none;
+      }
+
+      span {
+        &:first-child {
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        width: 29px;
+			  height: 28px;
+			  background: url('../img/header-icons.png') -75px 0px no-repeat;
       }
     }
   }
@@ -158,7 +228,7 @@
         width: 24px;
         height: 28px;
         margin-top: -2px;
-        background:url('../img/header-icons.png') -49px -50px no-repeat;
+        background:url('../img/header-icons.png') 0 -75px no-repeat;
       }
     }
 
@@ -198,9 +268,27 @@
   &__item-account {
     margin-right: 7px;
     text-transform: uppercase;
-    font-size: 0.8125rem;
-    font-weight: 500;
+    @include font(0.8125rem, 500, 1.25);
     color: $main-blue;
+  }
+
+  &__item-mobile {
+    .navbar-collapse {
+      position: absolute;
+      width: 100%;
+      // height: 32rem;
+      // min-height: 32rem;
+      margin-top: 0.75rem;
+      left: 0;
+      background-color: #fff;
+      z-index: 1;
+      box-shadow: 0px 10px 12px rgba(39, 97, 146, 0.15);
+      @include transition(all, 0.3s);
+
+      &__menu {
+        width: 100%;
+      }
+    }
   }
 
   &__opener {
@@ -209,7 +297,18 @@
     width: 44px;
     height: 39px;
     padding: 11px;
+
+    &:focus {
+      outline: none;
+    }
   }
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 32rem;
 }
 
 .btn {
