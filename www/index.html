@@ -927,7 +927,19 @@
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
                   </button>
-                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                    </div>
                     <div class="catalogue">
                       <ul class="catalogue__list">
                         <li><a class="dropdown-item catalogue__back" href="#">Назад</a></li>
@@ -950,19 +962,9 @@
                         <li><a href="#" class="dropdown-item catalogue__banks">Банки и Страхование</a></li>
                         <li><a href="#" class="dropdown-item catalogue__education">Образование</a></li>
                         <li><a href="#" class="dropdown-item catalogue__business">Бизнес-услуги</a></li>
-                        <li><a href="#" class="dropdown-item catalogue__crossboard">Благотворительность</a></li>
+                        <li><a href="#" class="dropdown-item catalogue__charity">Благотворительность</a></li>
                       </ul>
                     </div>
-                    <div class="navbar-collapse__menu">
-                      <a class="dropdown-item dropdown-catalogue" href="#">Каталог</a>
-                      <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                      <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
-                      <a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a>
-                    </div>
-                    <a class="dropdown-item dropdown-login-mobile" href="#">
-                      <span>Войти</span> 
-                      <span>или зарегистрироваться</span>
-                    </a>
                   </div>
                   
                 </li>
@@ -1018,7 +1020,7 @@
       </div>
     </header>
         
-      <div class="w-100 mt-5"></div>
+      <div class="w-100 mt-5" style="height:50rem;"></div>
 
     <!-- <div class="w-100"><hr></div> -->
     

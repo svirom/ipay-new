@@ -5,8 +5,188 @@
 .catalogue {
   position: absolute;
   width: 100%;
-  margin-top: 0.75rem;
+  // margin-top: 0.75rem;
   left: 0;
+  top: 0;
+  @include transform(translateX(100%));
+  // box-shadow: 0px 10px 12px rgba(39, 97, 146, 0.15);
   background-color: #fff;
   z-index: 2;
+  @include transition(all, 0.3s);
+
+  &.active {
+    @include transform(translateX(0));
+    @include transition(all, 0.3s);
+  }
+  
+
+  &__back {
+    border-bottom: 1px dashed $middle-grey;
+
+    &::before {
+      width: 10px;
+			height: 18px;
+			background: url('../img/button-icon.png') 0px -36px no-repeat;
+    }
+  }
+
+  &__crossboard {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -48px -50px no-repeat;
+    }
+  }
+
+  &__p2p {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -122px -50px no-repeat;
+    }
+  }
+
+  &__p2r {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') 0px -100px no-repeat;
+    }
+  }
+
+  &__by-email {
+    &::before {
+      width: 26px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -48px 0px no-repeat;
+    }
+  }
+
+  &__by-phone {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -26px -25px no-repeat;
+    }
+  }
+
+  &__receive {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') 0px -50px no-repeat;
+    }
+  }
+
+  &__mobile {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -72px -75px no-repeat;
+    }
+  }
+
+  &__utility {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -74px -125px no-repeat;
+    }
+  }
+
+  &__kindergarten {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -98px 0px no-repeat;
+    }
+  }
+
+  &__internet {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -24px -75px no-repeat;
+    }
+  }
+
+  &__tv {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -146px -100px no-repeat;
+    }
+  }
+
+  &__phone {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -48px -100px no-repeat;
+    }
+  }
+
+  &__security {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -96px -100px no-repeat;
+    }
+  }
+
+  &__transport {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -146px -50px no-repeat;
+    }
+  }
+
+  &__penalty {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -146px 0px no-repeat;
+    }
+  }
+
+  &__tourism {
+    &::before {
+      width: 25px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') 0px -125px no-repeat;
+    }
+  }
+
+  &__banks {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -122px 0px no-repeat;
+    }
+  }
+
+  &__education {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -98px -50px no-repeat;
+    }
+  }
+
+  &__business {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') 0px 0px no-repeat;
+    }
+  }
+
+  &__charity {
+    &::before {
+      width: 24px;
+			height: 25px;
+			background: url('../img/sprite-catalogue.png') -74px 0px no-repeat;
+    }
+  }
 }

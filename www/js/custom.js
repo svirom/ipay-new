@@ -27,4 +27,28 @@ $(document).ready(function() {
     $(this).val() ? $(this).addClass('filled') : $(this).removeClass('filled');
   }
 
+  // catalogue mobile
+  $('.catalogue-mobile').on('click', catalogueMobile);
+  $('.catalogue__back').on('click', catalogueMobileHide);
+
+  function catalogueMobile(e) {
+    e.preventDefault();
+
+    var catalogueHeight = $('.navbar-collapse').find('.catalogue').height();
+
+    $(this).closest('.navbar-collapse').removeClass('overflow-hidden')
+      .find('.catalogue').addClass('active').end()
+      .css({'height' : catalogueHeight});
+  }
+
+  function catalogueMobileHide(e) {
+    e.preventDefault();
+
+    var mobileMenuHeight = $('.navbar-collapse__menu').height();
+
+    $(this).closest('.navbar-collapse').addClass('overflow-hidden')
+      .find('.catalogue').removeClass('active').end()
+      .css({'height' : mobileMenuHeight});
+  }
+
 })
