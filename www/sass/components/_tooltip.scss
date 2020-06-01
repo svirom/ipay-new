@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the tooltip component.
+// -----------------------------------------------------------------------------
+
+.tooltip-inner {
+  padding: 0.5rem;
+  background-color: $heading-color;
+}
+
+.tooltip {
+  &.bs-tooltip-top {
+    .arrow {
+      &::before {
+        border-top-color: $heading-color;
+      }
+    }
+  }
+
+  &.bs-tooltip-bottom {
+    .arrow {
+      &::before {
+        border-bottom-color: $heading-color;
+      }
+    }
+  }
+
+  &.bs-tooltip-left {
+    .arrow {
+      &::before {
+        border-left-color: $heading-color;
+      }
+    }
+  }
+
+  &.bs-tooltip-right {
+    .arrow {
+      &::before {
+        border-right-color: $heading-color;
+      }
+    }
+  }
+}
+
+/*
+ Generated markup by the plugin
+<div class="tooltip bs-tooltip-top" role="tooltip">
+  <div class="arrow"></div>
+  <div class="tooltip-inner">
+    Some tooltip text!
+  </div>
+</div>
+*/

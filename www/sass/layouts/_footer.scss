@@ -1,3 +1,78 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.main-footer {
+  padding: 1.875rem 0 1.75rem;
+  background-color: $heading-color;
+
+  a, p, li, span {
+    color: $light-grey;
+    line-height: 1.14;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-copyright {
+    margin-bottom: 0.4rem;
+    color: $main-blue;
+
+    &:first-child {
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+.footer-widget {
+  &__list {
+    li {
+      margin-bottom: 1rem; 
+    }
+  }
+}
+
+.footer-lang {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  position: relative;
+  height: 1.5rem;
+  padding-left: 3.5rem;
+
+  &__fb {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: -1px;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M21.4648 0.169678H3.46484C1.81034 0.169678 0.464844 1.51518 0.464844 3.16968V21.1697C0.464844 22.8242 1.81034 24.1697 3.46484 24.1697H12.4648V15.9197H9.46484V12.1697H12.4648V9.16968C12.4648 6.68418 14.4793 4.66968 16.9648 4.66968H19.9648V8.41968H18.4648C17.6368 8.41968 16.9648 8.34168 16.9648 9.16968V12.1697H20.7148L19.2148 15.9197H16.9648V24.1697H21.4648C23.1193 24.1697 24.4648 22.8242 24.4648 21.1697V3.16968C24.4648 1.51518 23.1193 0.169678 21.4648 0.169678Z' fill='%23F0F5FA'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect x='0.464844' y='0.169678' width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px;
+  }
+
+  &__list {
+    display: flex;
+    margin-left: 1.5rem;
+  }
+
+  &__item {
+    margin-right: 1rem;
+    font-weight: bold;
+
+    &--current {
+      a {
+        color: $btn-red;
+      }
+    }
+  }
+}
+
+.footer-hr {
+  hr {
+   border-color: #284359;
+  }
+}

@@ -86,7 +86,9 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -50px 0 no-repeat;
+        // background: url('../img/header-icons.png') -50px 0 no-repeat;
+        background: url('../img/header-icon.png') -73px -25px no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -94,7 +96,9 @@
       &::before {
         width: 24px;
 			  height: 24px;
-			  background: url('../img/header-icons.png') -50px -25px no-repeat;
+        // background: url('../img/header-icons.png') -50px -25px no-repeat;
+        background: url('../img/header-icon.png') 0 0 no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -102,15 +106,19 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -25px 0 no-repeat;
+        // background: url('../img/header-icons.png') -25px 0 no-repeat;
+        background: url('../img/header-icon.png') 0 -25px no-repeat;
+        background-size: 121px;
       }
     }
 
     .dropdown-account {
       &::before {
-        width: 25px;
+        width: 24px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') 0 -50px no-repeat;
+        // background: url('../img/header-icons.png') 0 -50px no-repeat;
+        background: url('../img/header-icon.png') -73px 0 no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -118,7 +126,9 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -25px -25px no-repeat;
+        // background: url('../img/header-icons.png') -25px -25px no-repeat;
+        background: url('../img/header-icon.png') -24px -25px no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -126,7 +136,9 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') 0 -25px no-repeat;
+        // background: url('../img/header-icons.png') 0 -25px no-repeat;
+        background: url('../img/header-icon.png') -49px 0 no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -134,7 +146,9 @@
       &::before {
         width: 24px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -50px -50px no-repeat;
+        // background: url('../img/header-icons.png') -50px -50px no-repeat;
+        background: url('../img/header-icon.png') -48px -24px no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -144,7 +158,9 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') -25px -50px no-repeat;
+        // background: url('../img/header-icons.png') -25px -50px no-repeat;
+        background: url('../img/header-icon.png') -29px -49px no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -154,13 +170,15 @@
       &::before {
         width: 25px;
 			  height: 25px;
-			  background: url('../img/header-icons.png') 0px 0px no-repeat;
+        // background: url('../img/header-icons.png') 0px 0px no-repeat;
+        background: url('../img/header-icon.png') -24px 0px no-repeat;
+        background-size: 121px;
       }
 
       &::after {
         width: 10px;
 			  height: 18px;
-			  background: url('../img/button-icon.png') -10px -18px no-repeat;
+        background: url('../img/button-icon.png') -10px -18px no-repeat;
       }
     }
 
@@ -168,7 +186,9 @@
       &::before {
         width: 24px;
 			  height: 28px;
-			  background: url('../img/header-icons.png') 0 -75px no-repeat;
+        // background: url('../img/header-icons.png') 0 -75px no-repeat;
+        background: url('../img/header-icon.png') -97px 0 no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -202,7 +222,8 @@
       &::after {
         width: 29px;
 			  height: 28px;
-			  background: url('../img/header-icons.png') -75px 0px no-repeat;
+        background: url('../img/header-icon.png') 0 -49px no-repeat;
+        background-size: 121px;
       }
     }
   }
@@ -228,7 +249,8 @@
         width: 24px;
         height: 28px;
         margin-top: -2px;
-        background:url('../img/header-icons.png') 0 -75px no-repeat;
+        background: url('../img/header-icon.png') -97px 0 no-repeat;
+        background-size: 121px;
       }
     }
 
@@ -267,9 +289,23 @@
 
   &__item-account {
     margin-right: 7px;
+    margin-top: 1px;
     text-transform: uppercase;
     @include font(0.8125rem, 500, 1.25);
     color: $main-blue;
+    text-align: right;
+
+    &--registered {
+      font-size: 0.625rem;
+
+      &+span {
+        color: $heading-color;
+      }
+    }
+
+    span {
+      display: block;
+    }
   }
 
   &__item-mobile {

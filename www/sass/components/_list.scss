@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the list component.
+// -----------------------------------------------------------------------------
+
+.list {
+  li {
+    position: relative;
+    padding-left: 1.25rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+  }
+
+  &--circle {
+    li {
+      &::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $btn-red;
+      }
+    }
+  }
+
+  &--minus {
+    li {
+      &::before {
+        width: 14px;
+        height: 2px;
+        background-color: $heading-color;
+      }
+    }
+  }
+}
+
+.list-ordered {
+  counter-reset: ordered-counter;
+
+  li {
+    counter-increment: ordered-counter;
+
+    &::before {
+      content: counter(ordered-counter) ". ";
+      color: $btn-red;
+      font-weight: bold;
+    }
+  }
+}
