@@ -2,40 +2,49 @@
 // This file contains all styles related to the tooltip component.
 // -----------------------------------------------------------------------------
 
-.tooltip-inner {
-  padding: 0.5rem;
-  background-color: $heading-color;
-}
-
 .tooltip {
-  &.bs-tooltip-top {
+  .tooltip-inner {
+    max-width: 17.5rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    background-color: $text-color;
+  }
+
+  &.show {
+    opacity: 1;
+    filter:alpha(opacity=100);
+  }
+
+  &.bs-tooltip-top, &.bs-tooltip-auto[x-placement^="top"] {
     .arrow {
       &::before {
-        border-top-color: $heading-color;
+        border-top-color: $text-color;
       }
     }
   }
 
-  &.bs-tooltip-bottom {
+  &.bs-tooltip-bottom, &.bs-tooltip-auto[x-placement^="bottom"] {
     .arrow {
       &::before {
-        border-bottom-color: $heading-color;
+        border-bottom-color: $text-color;
       }
     }
   }
 
-  &.bs-tooltip-left {
+  &.bs-tooltip-left, &.bs-tooltip-auto[x-placement^="left"] {
     .arrow {
       &::before {
-        border-left-color: $heading-color;
+        border-left-color: $text-color;
       }
     }
   }
 
-  &.bs-tooltip-right {
+  &.bs-tooltip-right, &.bs-tooltip-auto[x-placement^="right"] {
     .arrow {
       &::before {
-        border-right-color: $heading-color;
+        border-right-color: $text-color;
       }
     }
   }

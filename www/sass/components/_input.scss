@@ -10,16 +10,6 @@
   position: relative;
 
   &.has-success {
-    .form-input {
-      // color: $heading-color;
-      // background-repeat: no-repeat;
-      // background-position: right 1.1rem center;
-
-      // ~.password-button {
-      //   display: block;
-      // }
-    }
-
     .form-input:not([type='password']):not(.input-icon-right) {
       border-color: $middle-grey;
       background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09277 6.35742L4.91777 10.1824C5.49527 10.7599 6.44027 10.7599 7.01777 10.1824L15.3428 1.85742' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
