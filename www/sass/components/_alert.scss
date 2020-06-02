@@ -4,20 +4,21 @@
 
 .alert {
   padding: 1.25rem;
+  font-family: $text-font;
   line-height: 1.1875;
   border-radius: 0.5rem;
 
   a {
-    color: $dark-green;
-    font-weight: bold;
     text-decoration: underline;
   }
 
   .close {
     opacity: 1;
+    text-shadow: none;
 
     &:not(:disabled):not(.disabled):focus, &:not(:disabled):not(.disabled):hover {
       opacity: 1;
+      outline: none;
     }
 
     span {
@@ -41,10 +42,16 @@
 
   &.alert-success {
     color: $dark-green;
-    // line-height: 1.1875;
     border-color: $light-green;
-    // border-radius: 0.5rem;
     background-color: $light-green;
+
+    a, p {
+      color: $dark-green;
+    }
+
+    a {
+      font-weight: bold;
+    }
 
     .close {
       span {
@@ -59,20 +66,64 @@
     }
   }
 
+  &.alert-warning {
+    color: $heading-color;
+    border-color: $light-yellow;
+    background-color: $light-yellow;
+
+    a, p {
+      color: $heading-color;
+    }
+
+    .close {
+      span {
+        color: $dark-orange;
+      }
+
+      &:hover {
+        span {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+
+  &.alert-danger {
+    color: $heading-color;
+    border-color: #FFE7E6;
+    background-color: #FFE7E6;
+
+    a, p {
+      color: $heading-color;
+    }
+
+    .close {
+      span {
+        color: $btn-red;
+      }
+
+      &:hover {
+        span {
+          background-color: $pink;
+        }
+      }
+    }
+  }
+
   &.alert-save {
-    padding-top: 2.5rem;
+    padding-top: 3rem;
 
     &::before {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 1rem;
+      left: 1rem;
       content: '';
-      width: 20px;
-      height: 20px;
-      background-image: url("data:image/svg+xml,svg width='19' height='20' viewBox='0 0 19 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.1377 5.28312V16.4531C1.1377 17.5531 2.0377 18.4531 3.1377 18.4531H16.1377C17.2377 18.4531 18.1377 17.5531 18.1377 16.4531V3.45312C18.1377 2.35312 17.2377 1.45312 16.1377 1.45312H4.9677C4.4377 1.45312 3.9277 1.66313 3.5577 2.04313L1.7277 3.86312C1.3477 4.24312 1.1377 4.75312 1.1377 5.28312Z' stroke='%236DCDB2' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.1377 1.45312V6.45312H13.1377V1.45312' stroke='%236DCDB2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.1377 3.45312V4.45312' stroke='%236DCDB2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.1377 18.4531V11.4631C15.1377 10.9031 14.6877 10.4531 14.1277 10.4631L5.1277 10.5331C4.5777 10.5331 4.1377 10.9831 4.1377 11.5331V18.4531' stroke='%236DCDB2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.1377 8.28312V19.4531C4.1377 20.5531 5.0377 21.4531 6.1377 21.4531H19.1377C20.2377 21.4531 21.1377 20.5531 21.1377 19.4531V6.45312C21.1377 5.35312 20.2377 4.45312 19.1377 4.45312H7.9677C7.4377 4.45312 6.9277 4.66313 6.5577 5.04313L4.7277 6.86312C4.3477 7.24312 4.1377 7.75312 4.1377 8.28312Z' stroke='%236DCDB2' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.1377 4.45312V9.45312H16.1377V4.45312' stroke='%236DCDB2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.1377 6.45312V7.45312' stroke='%236DCDB2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.1377 21.4531V14.4631C18.1377 13.9031 17.6877 13.4531 17.1277 13.4631L8.1277 13.5331C7.5777 13.5331 7.1377 13.9831 7.1377 14.5331V21.4531' stroke='%236DCDB2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
-      background-position: left top;
-      background-size: 19px;
+      background-position: center center;
+      background-size: 24px;
     }
   }
 
@@ -89,7 +140,7 @@
     background-image: url("data:image/svg+xml,%3Csvg width='23' height='16' viewBox='0 0 23 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.45996 3.2075V3.7601C4.45996 5.31008 5.67673 6.96115 7.18134 6.96115C8.68595 6.96115 9.90272 5.31008 9.90272 3.7601V3.2075C9.90272 1.65752 9.04575 0.404053 7.18134 0.404053C5.32348 0.404053 4.45996 1.65752 4.45996 3.2075ZM8.60091 3.2075V3.7601C8.60091 4.66313 7.87477 5.61334 7.18134 5.61334C6.49445 5.61334 5.76177 4.65639 5.76177 3.7601V3.2075C5.76832 1.90012 6.5795 1.75186 7.18788 1.75186C7.79627 1.75186 8.60091 1.90012 8.60091 3.2075Z' fill='%230C6858'/%3E%3Cpath d='M0.541992 14.6774C0.541992 15.0414 0.82983 15.3379 1.18309 15.3379H13.2003C13.5536 15.3379 13.8414 15.0414 13.8414 14.6774C13.8414 11.1731 10.8584 8.32252 7.19498 8.32252C3.52504 8.31578 0.541992 11.1664 0.541992 14.6774ZM7.18844 9.66359C9.88365 9.66359 12.1209 11.5505 12.4807 13.9833H1.89614C2.25594 11.5505 4.49323 9.66359 7.18844 9.66359Z' fill='%230C6858'/%3E%3Cpath d='M13.9849 8.51791C13.769 8.57183 13.5989 8.73356 13.5269 8.94921C13.455 9.16486 13.5008 9.40073 13.6381 9.57594C14.8157 11.0518 15.6268 12.8107 15.6268 14.6774C15.6268 15.0413 15.9147 15.3378 16.2679 15.3378H21.8415C22.1948 15.3378 22.4826 15.0413 22.4826 14.6774C22.4826 11.1731 19.4996 8.32248 15.8362 8.32248C15.2736 8.31574 14.5278 8.38313 13.9849 8.51791ZM21.8219 14.6572H16.281C16.2745 12.8039 15.5418 10.9035 14.1615 9.16486C14.6063 9.05704 15.2736 8.98965 15.8296 8.98965C19.1267 8.98965 21.8154 11.5303 21.8219 14.6572Z' fill='%230C6858'/%3E%3Cpath d='M13.1084 3.2075V3.7601C13.1084 5.31008 14.3252 6.96115 15.8298 6.96115C17.3344 6.96115 18.5512 5.31008 18.5512 3.7601V3.2075C18.5512 1.65752 17.6942 0.404053 15.8298 0.404053C13.9654 0.404053 13.1084 1.65752 13.1084 3.2075ZM17.9035 3.2075V3.7601C17.9035 4.90574 16.9811 6.28724 15.8298 6.28724C14.685 6.28724 13.7626 4.90574 13.7626 3.7601V3.2075C13.7626 2.41229 14.0308 1.07796 15.8298 1.07796C17.6288 1.07796 17.9035 2.41229 17.9035 3.2075Z' fill='%230C6858'/%3E%3C/svg%3E%0A");
     background-size: 23px;
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: top left;
     }
   }
 
@@ -125,6 +176,12 @@
     &.alert-success {
       &::before {
         background-color: #C3E7DC;
+      }
+    }
+
+    &.alert-warning {
+      &::before {
+        background-color: $yellow;
       }
     }
   }
