@@ -30,6 +30,7 @@
       line-height: 1.1875;
 
       &:focus, &:hover {
+        color: $heading-color;
         text-decoration: underline;
         background-color: #fff;
       }
@@ -44,6 +45,15 @@
     }
   }
 
+  &.catalogue-dashboard {
+    .catalogue__item {
+      &::before {
+        background-image: url('../img/dashboard-catalogue.png');
+        background-size: 120px;
+      }
+    }
+  }
+
   &__item {
     display: block;
     position: relative;
@@ -51,21 +61,17 @@
     font-size: 1.125rem;
     color: $heading-color;
     line-height: 1.1667;
-
-    &::before {
-      background-image: url('../img/sprite-catalogue.png');
-      background-size: 169px;
-      background-repeat: no-repeat;
-    }
+    border-radius: 0.5rem;
 
     &:hover, &:active, &.active {
-      color: $btn-red;
+      color: $light-grey;
       font-weight: bold;
       text-decoration: none;
+      background-color: $btn-red;
 
       span {
         &:not(.badge) {
-          color: $btn-red;
+          color: $light-grey;
         }
       }
     }
@@ -96,20 +102,25 @@
     &::before {
       position: absolute;
       content: '';
-      left: 0.75rem;
+      left: 0.6875rem;
       top: 50%;
       @include transform(translateY(-50%));
+      background-image: url('../img/menu-catalogue.png');
+      background-size: 169px;
+      background-repeat: no-repeat;
+      z-index: 1;
     }
 
     &::after {
       position: absolute;
       content: '';
-      left: 0;
+      left: -1px;
       top: 0;
       width: 3.125rem;
       height: 100%;
       box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
       border-radius: 8px;
+      background-color: #fff;
     }
   }
 
@@ -270,6 +281,12 @@
 			height: 25px;
       background-position: -145px -100px;
     }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -50px -124px;
+      }
+    }
   }
 
   &__phone {
@@ -277,6 +294,12 @@
       width: 24px;
 			height: 25px;
       background-position: -48px -99px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -72px -99px;
+      }
     }
   }
 
@@ -286,6 +309,12 @@
 			height: 25px;
       background-position: -96px -99px;
     }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -120px -99px;
+      }
+    }
   }
 
   &__transport {
@@ -293,6 +322,12 @@
       width: 24px;
 			height: 25px;
       background-position: -145px -49px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -145px -73px;
+      }
     }
   }
 
@@ -302,6 +337,12 @@
 			height: 25px;
       background-position: -145px 0;
     }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -145px -25px;
+      }
+    }
   }
 
   &__tourism {
@@ -309,6 +350,12 @@
       width: 25px;
 			height: 25px;
       background-position: 0 -123px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -25px -123px;
+      }
     }
   }
 
@@ -318,13 +365,25 @@
 			height: 25px;
       background-position: -121px 0;
     }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -121px -24px;
+      }
+    }
   }
 
   &__education {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -97px -49px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: 0 -74px;
+      }
     }
   }
 
@@ -334,6 +393,12 @@
 			height: 25px;
       background-position: 0 0;
     }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -24px 0;
+      }
+    }
   }
 
   &__charity {
@@ -341,6 +406,97 @@
       width: 24px;
 			height: 25px;
       background-position: -73px 0;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -73px -24px;
+      }
+    }
+  }
+
+  // dashboard catalogue
+  &__dashboard {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -72px 0;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -72px -25px;
+      }
+    }
+  }
+
+  &__archive {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: 0 0;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -24px 0;
+      }
+    }
+  }
+
+  &__templates {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -49px -49px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -96px 0;
+      }
+    }
+  }
+
+  &__cards {
+    &::before {
+      width: 24px;
+			height: 24px;
+      background-position: -24px -25px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -48px -25px;
+      }
+    }
+  }
+
+  &__bonus {
+    &::before {
+      width: 24px;
+			height: 24px;
+      background-position: -48px 0;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: 0 -25px;
+      }
+    }
+  }
+
+  &__settings {
+    &::before {
+      width: 25px;
+			height: 25px;
+      background-position: 0 -49px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -24px -49px;
+      }
     }
   }
 }
