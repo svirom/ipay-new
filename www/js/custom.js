@@ -28,16 +28,16 @@ $(document).ready(function() {
   }
 
   // catalogue mobile
-  $('.catalogue-mobile').on('click', catalogueMobile);
+  $('.catalogue__next').on('click', catalogueMobile);
   $('.catalogue__back').on('click', catalogueMobileHide);
 
   function catalogueMobile(e) {
     e.preventDefault();
 
-    var catalogueHeight = $('.navbar-collapse').find('.catalogue').height();
+    var catalogueHeight = $('.navbar-collapse').find('.catalogue-mobile').height();
 
     $(this).closest('.navbar-collapse').removeClass('overflow-hidden')
-      .find('.catalogue').addClass('active').end()
+      .find('.catalogue-mobile').addClass('active').end()
       .css({'height' : catalogueHeight});
   }
 
@@ -47,21 +47,21 @@ $(document).ready(function() {
     var mobileMenuHeight = $('.navbar-collapse__menu').height();
 
     $(this).closest('.navbar-collapse').addClass('overflow-hidden')
-      .find('.catalogue').removeClass('active').end()
+      .find('.catalogue-mobile').removeClass('active').end()
       .css({'height' : mobileMenuHeight});
   }
 
   // catalogue mobile registered (temporary)
-  $('.catalogue-mobileR').on('click', catalogueMobileR);
+  $('.catalogue__nextR').on('click', catalogueMobileR);
   $('.catalogue__backR').on('click', catalogueMobileHideR);
 
   function catalogueMobileR(e) {
     e.preventDefault();
 
-    var catalogueHeight = $('.navbar-collapse').find('.catalogue__backR').closest('.catalogue').height();
+    var catalogueHeight = $('.navbar-collapse').find('.catalogue__backR').closest('.catalogue-mobile').height();
 
     $(this).closest('.navbar-collapse').removeClass('overflow-hidden')
-      .find('.catalogue').addClass('active').end()
+      .find('.catalogue-mobile').addClass('active').end()
       .css({'height' : catalogueHeight});
   }
 
@@ -71,7 +71,7 @@ $(document).ready(function() {
     var mobileMenuHeight = $('.navbar-collapse__menu').height();
 
     $(this).closest('.navbar-collapse').addClass('overflow-hidden')
-      .find('.catalogue').removeClass('active').end()
+      .find('.catalogue-mobile').removeClass('active').end()
       .css({'height' : mobileMenuHeight});
   }
 

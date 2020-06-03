@@ -55,6 +55,7 @@
     .dropdown-item {
       position: relative;
       padding: 0.938rem 1.5rem 0.938rem 3.65rem;
+      font-size: 1rem;
       color: $heading-color;
       line-height: 1.1875;
 
@@ -209,6 +210,8 @@
       }
 
       span {
+        color: $light-grey;
+
         &:first-child {
           font-size: 1.25rem;
           font-weight: bold;
@@ -261,8 +264,8 @@
         width: 27px;
         height: 27px;
         margin-top: -1px;
-        background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='13.9648' cy='13.3535' r='13' fill='%23FFF0D0'/%3E%3Cpath d='M21.5873 11.1338L16.405 10.6299L14.3463 5.61683C14.2021 5.26574 13.7275 5.26574 13.5833 5.61683L11.5246 10.6295L6.34227 11.1334C5.97958 11.1687 5.83272 11.6421 6.10668 11.8941L10.0168 15.4963L8.87259 20.8207C8.79238 21.1933 9.17638 21.4859 9.48986 21.2908L13.965 18.5045L18.4401 21.2912C18.7536 21.4863 19.1372 21.1937 19.0574 20.8211L17.9131 15.4967L21.8233 11.8945C22.0969 11.6421 21.95 11.1687 21.5873 11.1338Z' fill='%23FFD578'/%3E%3C/svg%3E%0A");
-        background-repeat: no-repeat;
+        // background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='13.9648' cy='13.3535' r='13' fill='%23FFF0D0'/%3E%3Cpath d='M21.5873 11.1338L16.405 10.6299L14.3463 5.61683C14.2021 5.26574 13.7275 5.26574 13.5833 5.61683L11.5246 10.6295L6.34227 11.1334C5.97958 11.1687 5.83272 11.6421 6.10668 11.8941L10.0168 15.4963L8.87259 20.8207C8.79238 21.1933 9.17638 21.4859 9.48986 21.2908L13.965 18.5045L18.4401 21.2912C18.7536 21.4863 19.1372 21.1937 19.0574 20.8211L17.9131 15.4967L21.8233 11.8945C22.0969 11.6421 21.95 11.1687 21.5873 11.1338Z' fill='%23FFD578'/%3E%3C/svg%3E%0A");
+        // background-repeat: no-repeat;
       }
     }
 
@@ -346,13 +349,6 @@
       outline: none;
     }
   }
-}
-
-.navbar-collapse {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 32rem; */
 }
 
 .btn {

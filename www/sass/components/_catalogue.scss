@@ -3,21 +3,115 @@
 // -----------------------------------------------------------------------------
 
 .catalogue, .catalogue-reg {
-  position: absolute;
-  width: 100%;
-  // margin-top: 0.75rem;
-  left: 0;
-  top: 0;
-  @include transform(translateX(100%));
-  // box-shadow: 0px 10px 12px rgba(39, 97, 146, 0.15);
-  background-color: #fff;
-  z-index: 2;
-  @include transition(all, 0.3s);
+  position: relative;
 
-  &.active {
-    @include transform(translateX(0));
+  li:not(.catalogue-mobile) {
+    margin-bottom: 5px;
+  }
+
+  &.catalogue-mobile {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    @include transform(translateX(100%));
+    background-color: #fff;
+    z-index: 2;
     @include transition(all, 0.3s);
-  }  
+  
+    &.active {
+      @include transform(translateX(0));
+      @include transition(all, 0.3s);
+    } 
+
+    .catalogue__item {
+      padding: 0.938rem 1.5rem 0.938rem 3.65rem;
+      font-size: 1rem;
+      line-height: 1.1875;
+
+      &:focus, &:hover {
+        text-decoration: underline;
+        background-color: #fff;
+      }
+
+      &::before {
+        left: 1rem;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    padding: 0.937rem 1.5rem 0.938rem 4.25rem;
+    font-size: 1.125rem;
+    color: $heading-color;
+    line-height: 1.1667;
+
+    &::before {
+      background-image: url('../img/sprite-catalogue.png');
+      background-size: 169px;
+      background-repeat: no-repeat;
+    }
+
+    &:hover, &:active, &.active {
+      color: $btn-red;
+      font-weight: bold;
+      text-decoration: none;
+
+      span {
+        &:not(.badge) {
+          color: $btn-red;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &:not(.badge) {
+        color: $heading-color;
+      }
+
+      &.badge {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        @include transform(translateY(-50%));
+        font-size: 0.75rem;
+
+        &~span {
+          padding-right: 3rem;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0.75rem;
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 3.125rem;
+      height: 100%;
+      box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+      border-radius: 8px;
+    }
+  }
 
   &__back, &__backR {
     border-bottom: 1px dashed $middle-grey;
@@ -26,6 +120,7 @@
       width: 10px;
 			height: 18px;
       background: url('../img/button-icon.png') 0px -36px no-repeat;
+      background-size: auto;
     }
   }
 
@@ -33,8 +128,13 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -48px -49px no-repeat;
-      background-size: 169px;
+      background-position: -48px -49px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -72px -49px;
+      }
     }
   }
 
@@ -42,8 +142,13 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -122px -49px no-repeat;
-      background-size: 169px;
+      background-position: -122px -49px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -122px -74px;
+      }
     }
   }
 
@@ -51,8 +156,13 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') 0px -98px no-repeat;
-      background-size: 169px;
+      background-position: 0 -98px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -24px -98px;
+      }
     }
   }
 
@@ -60,8 +170,13 @@
     &::before {
       width: 26px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -48px -1px no-repeat;
-      background-size: 169px;
+      background-position: -48px -1px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: 0 -25px;
+      }
     }
   }
 
@@ -69,8 +184,13 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -25px -26px no-repeat;
-      background-size: 169px;
+      background-position: -25px -25px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -49px -25px;
+      }
     }
   }
 
@@ -78,8 +198,13 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') 0px -50px no-repeat;
-      background-size: 169px;
+      background-position: 0 -50px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -24px -50px;
+      }
     }
   }
 
@@ -87,8 +212,13 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -72px -75px no-repeat;
-      background-size: 169px;
+      background-position: -72px -74px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -96px -74px;
+      }
     }
   }
 
@@ -96,8 +226,13 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -75px -124px no-repeat;
-      background-size: 169px;
+      background-position: -75px -124px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -99px -124px;
+      }
     }
   }
 
@@ -105,8 +240,13 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -97px -1px no-repeat;
-      background-size: 169px;
+      background-position: -97px -1px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -97px -25px;
+      }
     }
   }
 
@@ -114,8 +254,13 @@
     &::before {
       width: 24px;
 			height: 24px;
-      background: url('../img/sprite-catalogue.png') -24px -74px no-repeat;
-      background-size: 169px;
+      background-position: -24px -74px;
+    }
+
+    &:hover, &:active, &.active {
+      &::before {
+        background-position: -48px -74px;
+      }
     }
   }
 
@@ -123,8 +268,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -145px -100px no-repeat;
-      background-size: 169px;
+      background-position: -145px -100px;
     }
   }
 
@@ -132,8 +276,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -48px -99px no-repeat;
-      background-size: 169px;
+      background-position: -48px -99px;
     }
   }
 
@@ -141,8 +284,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -96px -99px no-repeat;
-      background-size: 169px;
+      background-position: -96px -99px;
     }
   }
 
@@ -150,8 +292,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -145px -49px no-repeat;
-      background-size: 169px;
+      background-position: -145px -49px;
     }
   }
 
@@ -159,8 +300,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -145px 0px no-repeat;
-      background-size: 169px;
+      background-position: -145px 0;
     }
   }
 
@@ -168,8 +308,7 @@
     &::before {
       width: 25px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') 0px -123px no-repeat;
-      background-size: 169px;
+      background-position: 0 -123px;
     }
   }
 
@@ -177,8 +316,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -121px 0px no-repeat;
-      background-size: 169px;
+      background-position: -121px 0;
     }
   }
 
@@ -186,8 +324,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -97px -49px no-repeat;
-      background-size: 169px;
+      background-position: -97px -49px;
     }
   }
 
@@ -195,8 +332,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') 0px 0px no-repeat;
-      background-size: 169px;
+      background-position: 0 0;
     }
   }
 
@@ -204,8 +340,7 @@
     &::before {
       width: 24px;
 			height: 25px;
-      background: url('../img/sprite-catalogue.png') -73px 0px no-repeat;
-      background-size: 169px;
+      background-position: -73px 0;
     }
   }
 }
