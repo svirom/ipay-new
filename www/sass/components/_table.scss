@@ -1,0 +1,327 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the table component.
+// -----------------------------------------------------------------------------
+
+// default table
+.table {
+  font-family: $text-font;
+  @include font(1.125rem, 400, 1.3);
+  color: $heading-color;
+
+  td, th {
+    padding: 1.05rem 0.75rem;
+    vertical-align: middle;
+    border-top: 1px dashed $middle-grey;
+
+    &:first-child {
+      font-size: 1rem;
+      color: $text-color;
+      white-space: nowrap;
+
+      @include until($md) {
+        font-size: 0.875rem;
+        white-space: normal;
+      }
+    }
+  }
+
+  tr {
+    &:first-child {
+      td {
+        border-top: 0;
+      }
+    }
+  }
+
+  .table-summary {
+    td {
+      font-weight: bold;
+      border-top: 3px solid $light-grey;
+
+      &:first-child {
+        font-size: 1.25rem;
+        color: $heading-color;
+        white-space: nowrap;
+
+        @include until($md) {
+          font-size: 1.0625rem;
+        }
+      }
+    }
+  }
+}
+
+// accordion table (archive)
+.archive-card {
+  font-family: $text-font;
+
+  &:last-of-type {
+    .archive-card__row {
+      border-bottom: 1px solid $middle-grey;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.469rem 0.9193rem;
+    cursor: pointer;
+    line-height: 1.1875rem;
+    border-top: 1px solid $middle-grey;
+    background-color: #fff;
+
+    @include until($md) {
+      padding-top: 2rem;
+    }
+
+    &:hover, &[aria-expanded="true"] {
+      box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+      border-radius: 8px;
+      border-color: transparent;
+      z-index: 1;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 3.5rem;
+      height: 100%;
+      top: 0;
+      right: 1rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      @include transition(all, 0.3s);
+      z-index: 1000;
+
+      @include until($md) {
+        right: 1rem;
+        top: auto;
+        bottom: 0.75rem;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        @include transform(rotate(180deg));
+      }
+    }
+  }
+
+  &__time {
+    flex-shrink: 0;
+    flex-basis: 6.75rem;
+    max-width: 6.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include until($md) {
+      flex-direction: row;
+      position: absolute;
+      top: 0.25rem;
+      font-size: 0.9375rem;
+    }
+
+    span {
+      font-weight: 500;
+      line-height: 1.1875rem;
+      color: $heading-color;
+
+      &.archive-card__time--hours {
+        color: $main-blue;
+      }
+    }
+  }
+
+  &__icon {
+    &.catalogue__item {
+      flex-shrink: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+
+      @include until($md) {
+        width: 1.875rem;
+        height: 1.875rem;
+      }
+
+      &.active {
+        background-color: #fff;
+      }
+
+      &::before {
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+
+      &::after {
+        left: 0;
+        width: 2.5rem;
+
+        @include until($md) {
+          width: 1.875rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+    padding-left: 2.8rem;
+
+    @include until($md) {
+      padding-left: 1.2rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  &__bonus {
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+
+    @include until($lg) {
+      text-align: center;
+    }
+
+    @include until($md) {
+      display: none;
+    }
+
+    &.icon-bonus {
+      &::before {
+        left: 0;
+        top: 50%;
+        @include transform(translateY(-50%));
+      } 
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &__amount {
+    flex-basis: 16.25rem;
+    max-width: 16.25rem;
+    padding-left: 4rem;
+
+    @include until($md) {
+      position: absolute;
+      top: 0.25rem;
+      right: 1rem;
+      padding-left: 0;
+    }
+
+    span {
+      font-weight: bold;
+
+      &:first-child {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &__collapse {
+    display: flex;
+    align-items: center;
+    margin-top: -4px;
+    padding: 0.85rem 1rem;
+    background-color: $light-grey;
+
+    @include until($lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__description {
+    flex-grow: 1;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+
+    @include until($lg) {
+      align-self: flex-end;
+    }
+
+    @include until($md) {
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: flex-start;
+    }
+
+    & > a {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+
+      @include until($md) {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .form-inline {
+      flex-wrap: nowrap;
+
+      @include until($md) {
+        align-items: flex-start;
+      }
+
+      .form-group {
+        margin-right: 0.5rem;
+
+        @include until($md) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.archive {
+  &--col-9 {
+    .archive-card {
+      &__bonus {
+        padding-left: 0.75rem;
+        text-align: center;
+
+        span {
+          display: block;
+        }
+
+        &.icon-bonus {
+          &::before {
+            left: 0;
+            top: 0.5rem;
+            @include transform(translateY(0));
+            background-size: 18px;
+          }
+        } 
+      }
+
+      &__collapse {
+        flex-direction: column;
+      }
+
+      &__buttons {
+        align-self: flex-end;
+
+        @include until($md) {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}
