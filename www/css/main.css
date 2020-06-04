@@ -1451,6 +1451,12 @@ label {
   border-bottom: 1px solid #DEE7F3;
 }
 
+@media screen and (max-width: 767px) {
+  .archive-card:last-of-type .archive-card__row {
+    border-bottom: 1px dashed #DEE7F3;
+  }
+}
+
 .archive-card:last-of-type .archive-card__row:hover {
   border-color: transparent;
 }
@@ -1473,6 +1479,8 @@ label {
 @media screen and (max-width: 767px) {
   .archive-card__row {
     padding-top: 2rem;
+    border-top: 0;
+    border-bottom: 1px dashed #DEE7F3;
   }
 }
 
@@ -1547,6 +1555,7 @@ label {
 }
 
 .archive-card__time span {
+  padding-right: 0.25rem;
   font-weight: 500;
   line-height: 1.1875rem;
   color: #172A3A;
@@ -1599,6 +1608,12 @@ label {
   padding-left: 2.8rem;
 }
 
+@media screen and (max-width: 991px) {
+  .archive-card__title {
+    padding-left: 2rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .archive-card__title {
     padding-left: 1.2rem;
@@ -1608,12 +1623,19 @@ label {
 
 .archive-card__bonus {
   position: relative;
+  -ms-flex-preferred-size: 10.5rem;
+      flex-basis: 10.5rem;
+  max-width: 10.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 0.5rem 0.5rem 0.5rem 2.5rem;
 }
 
 @media screen and (max-width: 991px) {
   .archive-card__bonus {
-    text-align: center;
+    -ms-flex-preferred-size: 5.5rem;
+        flex-basis: 5.5rem;
+    max-width: 5.5rem;
   }
 }
 
@@ -1638,7 +1660,18 @@ label {
   -ms-flex-preferred-size: 16.25rem;
       flex-basis: 16.25rem;
   max-width: 16.25rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding-left: 4rem;
+}
+
+@media screen and (max-width: 991px) {
+  .archive-card__amount {
+    -ms-flex-preferred-size: 12rem;
+        flex-basis: 12rem;
+    max-width: 12rem;
+    padding-left: 2rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1741,6 +1774,13 @@ label {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .archive-card__buttons .form-inline {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .archive-card__buttons .form-inline .form-group {
   margin-right: 0.5rem;
 }
@@ -1752,6 +1792,9 @@ label {
 }
 
 .archive--col-9 .archive-card__bonus {
+  -ms-flex-preferred-size: 5.5rem;
+      flex-basis: 5.5rem;
+  max-width: 5.5rem;
   padding-left: 0.75rem;
   text-align: center;
 }

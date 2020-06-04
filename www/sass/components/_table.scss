@@ -58,6 +58,10 @@
   &:last-of-type {
     .archive-card__row {
       border-bottom: 1px solid $middle-grey;
+      
+      @include until($md) {
+        border-bottom: 1px dashed $middle-grey;
+      }
 
       &:hover {
         border-color: transparent;
@@ -77,6 +81,8 @@
 
     @include until($md) {
       padding-top: 2rem;
+      border-top: 0;
+      border-bottom: 1px dashed $middle-grey;
     }
 
     &:hover, &[aria-expanded="true"] {
@@ -133,6 +139,7 @@
     }
 
     span {
+      padding-right: 0.25rem;
       font-weight: 500;
       line-height: 1.1875rem;
       color: $heading-color;
@@ -179,6 +186,10 @@
     flex-grow: 1;
     padding-left: 2.8rem;
 
+    @include until($lg) {
+      padding-left: 2rem;
+    }
+
     @include until($md) {
       padding-left: 1.2rem;
       padding-right: 2.5rem;
@@ -187,10 +198,14 @@
 
   &__bonus {
     position: relative;
+    flex-basis: 10.5rem;
+    max-width: 10.5rem;
+    flex-shrink: 0;
     padding: 0.5rem 0.5rem 0.5rem 2.5rem;
 
     @include until($lg) {
-      text-align: center;
+      flex-basis: 5.5rem;
+      max-width: 5.5rem;
     }
 
     @include until($md) {
@@ -213,7 +228,14 @@
   &__amount {
     flex-basis: 16.25rem;
     max-width: 16.25rem;
+    flex-shrink: 0;
     padding-left: 4rem;
+
+    @include until($lg) {
+      flex-basis: 12rem;
+      max-width: 12rem;
+      padding-left: 2rem;
+    }
 
     @include until($md) {
       position: absolute;
@@ -279,6 +301,10 @@
         align-items: flex-start;
       }
 
+      @include until($sm) {
+        flex-wrap: wrap;
+      }
+
       .form-group {
         margin-right: 0.5rem;
 
@@ -294,6 +320,8 @@
   &--col-9 {
     .archive-card {
       &__bonus {
+        flex-basis: 5.5rem;
+        max-width: 5.5rem;
         padding-left: 0.75rem;
         text-align: center;
 
