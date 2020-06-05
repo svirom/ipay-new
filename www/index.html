@@ -346,6 +346,10 @@
             <div style="height: 50px; border-radius: 8px; color: #ffffff; background: #D5F2EA" class="d-flex justify-content-center align-items-center">#D5F2EA</div>
             <div style="font-size: 80%;">$success</div>
           </div>
+          <div style="width: 100px;" class="text-center mx-2">
+            <div style="height: 50px; border-radius: 8px; color: #ffffff; box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15)" class="d-flex justify-content-center align-items-center">box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15)</div>
+            <div style="font-size: 80%;">$card-shadow</div>
+          </div>
         </div>
       </div> <!-- colors -->
 
@@ -1328,6 +1332,268 @@
       <div class="row">
         <div class="col-12">
           <h2 class="mt-5"><u>Navigation</u></h2>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <h3 class="pl-3 pb-0 mb-0">Pagination</h3>
+        </div>
+        <div class="col-12">
+          <div class="pages-more">
+            <a href="#" class="btn btn-more">Показать еще</a>
+          </div>
+          <div class="pagination-wrapper">
+            <ul class="pagination">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link next-link" href="#">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 mt-4">
+          <div class="pages-more">
+            <a href="#" class="btn btn-more loading">Показать еще</a>
+          </div>
+          <div class="pagination-wrapper">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link prev-link" href="#" tabindex="-1">&laquo;</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link next-link" href="#">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 mt-4">
+          <div class="pagination-wrapper">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">...</a></li>
+              <li class="page-item"><a class="page-link" href="#">9</a></li>
+              <li class="page-item">
+                <a class="page-link next-link" href="#">&raquo;</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 mt-4">
+          <div class="pagination-wrapper">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link prev-link" href="#" tabindex="-1">&laquo;</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item active"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">...</a></li>
+              <li class="page-item">
+                <a class="page-link next-link" href="#">&raquo;</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <h3 class="pl-3 pt-3 mb-0">Progressbar</h3>
+        </div>
+        <div class="col-md-9 mt-3">
+          <div class="progress-payment">
+            <div class="progress">
+              <div class="progress-textline">
+                <span class="progress-text active">Ввод данных плательщика</span>
+                <span class="progress-text">Ввод данных платежа</span>
+                <span class="progress-text">Ввод данных карты</span>
+                <span class="progress-text">Подтверждение платежа</span>
+              </div>
+              <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-steps">
+                <span class="progress-step active"></span>
+                <span class="progress-step"></span>
+                <span class="progress-step"></span>
+                <span class="progress-step"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-5">
+          <div class="progress-payment">
+            <div class="progress">
+              <div class="progress-textline">
+                <span class="progress-text in">Ввод данных плательщика</span>
+                <span class="progress-text active">Ввод данных платежа</span>
+                <span class="progress-text">Ввод данных карты</span>
+                <span class="progress-text">Подтверждение платежа</span>
+              </div>
+              <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-steps">
+                <span class="progress-step in"></span>
+                <span class="progress-step active"></span>
+                <span class="progress-step"></span>
+                <span class="progress-step"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-5">
+          <div class="progress-payment">
+            <div class="progress">
+              <div class="progress-textline">
+                <span class="progress-text in">Ввод данных плательщика</span>
+                <span class="progress-text in">Ввод данных платежа</span>
+                <span class="progress-text active">Ввод данных карты</span>
+                <span class="progress-text">Подтверждение платежа</span>
+              </div>
+              <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-steps">
+                <span class="progress-step in"></span>
+                <span class="progress-step in"></span>
+                <span class="progress-step active"></span>
+                <span class="progress-step"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-5">
+          <div class="progress-payment">
+            <div class="progress">
+              <div class="progress-textline">
+                <span class="progress-text in">Ввод данных плательщика</span>
+                <span class="progress-text in">Ввод данных платежа</span>
+                <span class="progress-text in">Ввод данных карты</span>
+                <span class="progress-text active">Подтверждение платежа</span>
+              </div>
+              <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-steps">
+                <span class="progress-step in"></span>
+                <span class="progress-step in"></span>
+                <span class="progress-step in"></span>
+                <span class="progress-step active"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3 steps -->
+        <div class="col-md-9 mt-5">
+          <div class="progress-payment progress-payment--three">
+            <div class="progress">
+              <div class="progress-textline">
+                <span class="progress-text active">Ввод данных плательщика</span>
+                <span class="progress-text">Ввод данных карты</span>
+                <span class="progress-text">Подтверждение платежа</span>
+              </div>
+              <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-steps">
+                <span class="progress-step active"></span>
+                <span class="progress-step"></span>
+                <span class="progress-step"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-5">
+          <div class="progress-payment progress-payment--three">
+            <div class="progress">
+              <div class="progress-textline">
+                <span class="progress-text in">Ввод данных плательщика</span>
+                <span class="progress-text active">Ввод данных карты</span>
+                <span class="progress-text">Подтверждение платежа</span>
+              </div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;"></div>
+              <div class="progress-steps">
+                <span class="progress-step in"></span>
+                <span class="progress-step active"></span>
+                <span class="progress-step"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-5">
+          <div class="progress-payment progress-payment--three">
+            <div class="progress">
+              <div class="progress-textline">
+                <span class="progress-text in">Ввод данных плательщика</span>
+                <span class="progress-text in">Ввод данных карты</span>
+                <span class="progress-text active">Подтверждение платежа</span>
+              </div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;"></div>
+              <div class="progress-steps">
+                <span class="progress-step in"></span>
+                <span class="progress-step in"></span>
+                <span class="progress-step active"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="pl-3 pt-3 mb-0">Progressbar (mobile)</h3>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12 mt-3">
+              <div class="progress-mobile progress-mobile--one-fourth">
+                <div class="progress-mobile__circle">
+                  <div class="progress-mobile__value">
+                    <div>1/4</div>
+                  </div>
+                </div>
+                <div class="progress-mobile__text">
+                  <span class="progress-mobile__current">Ввод данных плательщика</span>
+                  <span class="progress-mobile__next">Далее: Ввод данных платежа</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <div class="progress-mobile progress-mobile--two-fourth">
+                <div class="progress-mobile__circle">
+                  <div class="progress-mobile__value">
+                    <div>2/4</div>
+                  </div>
+                </div>
+                <div class="progress-mobile__text">
+                  <span class="progress-mobile__current">Ввод данных платежа</span>
+                  <span class="progress-mobile__next">Далее: Ввод данных карты</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <div class="progress-mobile progress-mobile--three-fourth">
+                <div class="progress-mobile__circle">
+                  <div class="progress-mobile__value">
+                    <div>3/4</div>
+                  </div>
+                </div>
+                <div class="progress-mobile__text">
+                  <span class="progress-mobile__current">Ввод данных карты</span>
+                  <span class="progress-mobile__next">Далее: Подтверждение платежа</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mt-3">
+              <div class="progress-mobile progress-mobile--four-fourth">
+                <div class="progress-mobile__circle">
+                  <div class="progress-mobile__value">
+                    <div>4/4</div>
+                  </div>
+                </div>
+                <div class="progress-mobile__text">
+                  <span class="progress-mobile__current">Подтверждение платежа</span>
+                  <span class="progress-mobile__next">Далее: Успех!</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
