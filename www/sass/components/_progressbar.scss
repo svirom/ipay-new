@@ -110,6 +110,7 @@
   }
 }
 
+/* progressbar mobile */
 .progress-mobile {
   display: flex;
   align-items: center;
@@ -120,7 +121,8 @@
     height: 30px;
     background: none;
 
-    &::after {
+    &::before {
+      position: absolute;
       content: "";
       width: 100%;
       height: 100%;
@@ -128,8 +130,18 @@
       left: 0;
       border-radius: 50%;
       border: 3px solid $light-grey;
-      position: absolute;
       @include transform(rotate(45deg));
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 3px solid transparent;
     }
   }
 
@@ -171,7 +183,7 @@
 
   &--one-fourth {
     .progress-mobile__circle {
-      &::after {
+      &::before {
         border-top-color: $btn-red;
       }
     }
@@ -179,7 +191,7 @@
 
   &--two-fourth {
     .progress-mobile__circle {
-      &::after {
+      &::before {
         border-top-color: $btn-red;
         border-right-color: $btn-red;
       }
@@ -188,7 +200,7 @@
 
   &--three-fourth {
     .progress-mobile__circle {
-      &::after {
+      &::before {
         border-top-color: $btn-red;
         border-right-color: $btn-red;
         border-bottom-color: $btn-red;
@@ -198,7 +210,53 @@
 
   &--four-fourth {
     .progress-mobile__circle {
+      &::before {
+        border-top-color: $btn-red;
+        border-right-color: $btn-red;
+        border-bottom-color: $btn-red;
+        border-left-color: $btn-red;
+      }
+    }
+  }
+
+  &--one-third {
+    .progress-mobile__circle {
+      &::before {
+        border-top-color: $btn-red;
+      }
+
       &::after {
+        @include transform(rotate(72deg));
+        border-top-color: $btn-red;
+      }
+    }
+  }
+
+  &--two-third {
+    .progress-mobile__circle {
+      &::before {
+        border-top-color: $btn-red;
+        border-right-color: $btn-red;
+      }
+
+      &::after {
+        @include transform(rotate(108deg));
+        border-top-color: $btn-red;
+        border-right-color: $btn-red;
+      }
+    }
+  }
+
+  &--three-third {
+    .progress-mobile__circle {
+      &::before {
+        border-top-color: $btn-red;
+        border-right-color: $btn-red;
+        border-bottom-color: $btn-red;
+      }
+
+      &::after {
+        @include transform(rotate(108deg));
         border-top-color: $btn-red;
         border-right-color: $btn-red;
         border-bottom-color: $btn-red;
