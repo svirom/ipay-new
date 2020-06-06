@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
@@ -347,7 +347,11 @@
             <div style="font-size: 80%;">$success</div>
           </div>
           <div style="width: 100px;" class="text-center mx-2">
-            <div style="height: 50px; border-radius: 8px; color: #ffffff; box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15)" class="d-flex justify-content-center align-items-center">box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15)</div>
+            <div style="height: 50px; border-radius: 8px; color: #ffffff; box-shadow: 0px 4px 20px rgba(97, 144, 183, 0.15)" class="d-flex justify-content-center align-items-center">rgba(97, 144, 183, 0.15)</div>
+            <div style="font-size: 80%;">$box-shadow</div>
+          </div>
+          <div style="width: 100px;" class="text-center mx-2">
+            <div style="height: 50px; border-radius: 8px; color: #ffffff; box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15)" class="d-flex justify-content-center align-items-center">rgba(39, 97, 146, 0.15)</div>
             <div style="font-size: 80%;">$card-shadow</div>
           </div>
         </div>
@@ -1342,7 +1346,7 @@
           <div class="pages-more">
             <a href="#" class="btn btn-more">Показать еще</a>
           </div>
-          <div class="pagination-wrapper">
+          <div class="pagination-wrapper d-none d-sm-block">
             <ul class="pagination">
               <li class="page-item active"><a class="page-link" href="#">1</a></li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -1358,7 +1362,7 @@
           <div class="pages-more">
             <a href="#" class="btn btn-more loading">Показать еще</a>
           </div>
-          <div class="pagination-wrapper">
+          <div class="pagination-wrapper d-none d-sm-block">
             <ul class="pagination">
               <li class="page-item"><a class="page-link prev-link" href="#" tabindex="-1">&laquo;</a></li>
               <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -1404,7 +1408,7 @@
         <div class="col-12">
           <h3 class="pl-3 pt-3 mb-0">Progressbar</h3>
         </div>
-        <div class="col-md-9 mt-3">
+        <div class="col-md-9 mt-3 d-none d-sm-block">
           <div class="progress-payment">
             <div class="progress">
               <div class="progress-textline">
@@ -1423,7 +1427,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-9 mt-5">
+        <div class="col-md-9 mt-5 d-none d-sm-block">
           <div class="progress-payment">
             <div class="progress">
               <div class="progress-textline">
@@ -1442,7 +1446,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-9 mt-5">
+        <div class="col-md-9 mt-5 d-none d-sm-block">
           <div class="progress-payment">
             <div class="progress">
               <div class="progress-textline">
@@ -1461,7 +1465,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-9 mt-5">
+        <div class="col-md-9 mt-5 d-none d-sm-block">
           <div class="progress-payment">
             <div class="progress">
               <div class="progress-textline">
@@ -1481,7 +1485,7 @@
           </div>
         </div>
         <!-- 3 steps -->
-        <div class="col-md-9 mt-5">
+        <div class="col-md-9 mt-5 d-none d-sm-block">
           <div class="progress-payment progress-payment--three">
             <div class="progress">
               <div class="progress-textline">
@@ -1498,7 +1502,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-9 mt-5">
+        <div class="col-md-9 mt-5 d-none d-sm-block">
           <div class="progress-payment progress-payment--three">
             <div class="progress">
               <div class="progress-textline">
@@ -1515,7 +1519,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-9 mt-5">
+        <div class="col-md-9 mt-5 d-none d-sm-block">
           <div class="progress-payment progress-payment--three">
             <div class="progress">
               <div class="progress-textline">
@@ -1539,7 +1543,7 @@
         </div>
       </div>
       <div class="row mt-3">
-        <div class="col-6">
+        <div class="col-sm-6">
           <div class="row">
             <div class="col-12 mt-3">
               <div class="progress-mobile progress-mobile--one-fourth">
@@ -1595,7 +1599,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-sm-6 mt-3 mt-sm-0">
           <div class="row">
             <div class="col-12 mt-3">
               <div class="progress-mobile progress-mobile--one-third">
@@ -1856,10 +1860,102 @@
 
       <div class="w-100"><hr></div>
 
-      <!-- UI elements -->
+      <!-- UI cards -->
       <div class="row">
         <div class="col-12">
-          <h2 class="mt-5"><u>UI Elements</u></h2>
+          <h2 class="mt-5"><u>UI Cards</u></h2>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <h3 class="pl-3 pb-0 mb-0">Services provider</h3>
+        </div>
+        <div class="col-sm-4">
+          <div class="provider-card">
+            <div class="provider-card__title">
+              <p class="small">Поставщик услуги</p>
+            </div>
+            <div class="provider-card__body">
+              <div class="provider-card__img provider-card__img--kyivgaz"></div>
+              <div class="provider-card__content">
+                <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                <div class="provider-card__tel">+380(342)50-62-00</div>
+                <div class="provider-card__url"><a href="https://tke.if.ua" class="btn btn-link">tke.if.ua</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="pl-3">Bill card (main page)</h3>
+        </div>
+        <div class="col-sm-3">
+          <a href="#" class="main-card">
+            <span class="main-card__img catalogue__p2p catalogue__p2p--red"></span>
+            <span class="main-card__content">Перевод с карты на карту</span>
+          </a>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3">
+          <a href="#" class="main-card">
+            <span class="main-card__img catalogue__crossboard catalogue__crossboard--red"></span>
+            <span class="main-card__content">Международные переводы</span>
+          </a>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="pl-3">Bill card</h3>
+        </div>
+        <div class="col-sm-3">
+          <a href="#" class="bill-card">
+            <span class="bill-card__img catalogue__p2p"></span>
+            <span class="bill-card__content">Перевод с карты на карту</span>
+          </a>
+        </div>
+        <div class="col-sm-3">
+          <a href="#" class="bill-card active">
+            <span class="bill-card__img catalogue__p2p"></span>
+            <span class="bill-card__content">Перевод с карты на карту</span>
+          </a>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="pl-3">Template card</h3>
+        </div>
+        <div class="col-sm-4">
+          <div class="template-card-wrapper dropdown">
+            <a href="#" class="bill-card template-card" id="dropdownBill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="bill-card__img catalogue__security catalogue__security--red"></span>
+              <span class="bill-card__content">
+                <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
+                <span class="template-card__amount">100.00 грн</span>
+              </span>
+              <span class="template-card__button"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownBill">
+              <a href="#" class="dropdown-item">Редактировать</a>
+              <a href="#" class="dropdown-item">Удалить</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="template-card-wrapper dropdown">
+            <a href="#" class="bill-card template-card active" id="dropdownBill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="bill-card__img catalogue__security catalogue__security--red"></span>
+              <span class="bill-card__content">
+                <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
+                <span class="template-card__amount">100.00 грн</span>
+              </span>
+              <span class="template-card__button"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownBill">
+              <a href="#" class="dropdown-item">Редактировать</a>
+              <a href="#" class="dropdown-item">Удалить</a>
+            </div>
+          </div>
         </div>
       </div>
 
