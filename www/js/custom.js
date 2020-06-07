@@ -78,4 +78,19 @@ $(document).ready(function() {
   // initialize tooltips
   $('[data-toggle="tooltip"]').tooltip();
 
+  // cvv popover
+  popoverOptions = {
+    title: 'CVV',
+    content: 'Трехзначный код на оборотной стороне банковской карты',
+    trigger: 'toggle',
+    placement: 'right',
+    template: '<div class="popover popover-cvv" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+  }
+  
+
+  if ($(document).width() < 768) {
+    popoverOptions.placement = 'bottom';
+  }
+  $("#cvv-popover, #cvv-popover2, #cvv-popover3, #cvv-popover4").popover(popoverOptions);
+
 })
