@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  var docWidth = $(document).width();
+
   // show/hide password
   $('.password-button').on('click', togglePassword);
 
@@ -86,11 +88,19 @@ $(document).ready(function() {
     placement: 'right',
     template: '<div class="popover popover-cvv" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
   }
-  
 
-  if ($(document).width() < 768) {
+  if (docWidth < 768) {
     popoverOptions.placement = 'bottom';
   }
   $("#cvv-popover, #cvv-popover2, #cvv-popover3, #cvv-popover4").popover(popoverOptions);
+
+  // search input mobile
+  $('.input-search').on('focus', function() {
+    $(this).closest('.form-search').addClass('focused');
+  })
+
+  $('.input-search').on('blur', function() {
+    $(this).closest('.form-search').removeClass('focused');
+  })
 
 })

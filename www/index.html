@@ -1652,6 +1652,104 @@
           <h2 class="mt-5"><u>Search</u></h2>
         </div>
       </div>
+      <div class="row mt-3">
+        <div class="col-12 mt-4 mb-3">
+          <h3>Search default</h3>
+        </div>
+        <div class="col-12 col-md-9 col-xl-6">
+          <div class="form-search">
+            <h3 class="form-search__title">Поиск</h3>
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+               </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 mt-4 mb-3">
+          <h3>Search focused</h3>
+        </div>
+        <div class="col-12 col-md-9 col-xl-6">
+          <div class="form-search focused">
+            <h3 class="form-search__title">Поиск</h3>
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search filled" id="search-icon2" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true" value="Киев">
+                <label class="control-label form-label" for="search-icon2">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+               </div>
+            </form>
+            <div class="form-search__list">
+              <ul>
+                <li class="form-search__item">
+                  <a href="#" class="form-search__link form-search__link--kyivstar">
+                    <span class="form-search__item-img"></span>
+                    <span class="form-search__item-title">Киевстар</span>
+                  </a>
+                </li>
+                <li class="form-search__item">
+                  <a href="#" class="form-search__link form-search__link--yasno">
+                    <span class="form-search__item-img"></span>
+                    <span class="form-search__item-title">Киевские энергетические услуги (Yasno)</span>
+                  </a>
+                </li>
+                <li class="form-search__item form-search__link--kyivgasenergy">
+                  <a href="#" class="form-search__link">
+                    <span class="form-search__item-img"></span>
+                    <span class="form-search__item-title">КиевГазЭнерджи</span>
+                  </a>
+                </li>
+                <li class="form-search__item form-search__link--kyivgas">
+                  <a href="#" class="form-search__link">
+                    <span class="form-search__item-img"></span>
+                    <span class="form-search__item-title">Киевгаз</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 mt-4 mb-3">
+          <h3>Search didn't find</h3>
+        </div>
+        <div class="col-12 col-md-9 col-xl-6">
+          <div class="form-search focused">
+            <h3 class="form-search__title">Поиск</h3>
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search focused" id="search-icon3" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true" value="Гоща">
+                <label class="control-label form-label" for="search-icon3">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+               </div>
+            </form>
+            <div class="form-search__list">
+              <ul>
+                <li class="form-search__item">
+                  <p class="form-search__not-found">По запросу <span>“Гоща”</span> ничего не найдено</p>
+                </li>
+                <li class="form-search__item form-search__item-pay">
+                  <a href="#" class="form-search__link ">
+                    <span class="form-search__item-img"></span>
+                    <span class="form-search__item-title">
+                      <span>Нет нужной компании?</span>
+                      <span>Оплатите по реквизитам</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="w-100"><hr></div>
 
