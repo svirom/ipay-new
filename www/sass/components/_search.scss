@@ -107,41 +107,22 @@
     &:hover {
       color: $heading-color;
     }
-
-    &--kyivstar {
-      .form-search__item-img {
-        background-image: url("../img/providers/kyivstar.png");
-      }
-    }
-
-    &--yasno {
-      .form-search__item-img {
-        background-image: url("../img/providers/yasno.png");
-      }
-    }
-
-    &--kyivgasenergy {
-      .form-search__item-img {
-        background-image: url("../img/providers/kyivgasenergy.png");
-      }
-    }
-
-    &--kyivgas {
-      .form-search__item-img {
-        background-image: url("../img/providers/kyivgas.png");
-      }
-    }
   }
 
   &__item-img {
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 2.5rem;
     height: 2.5rem;
     border: 3px solid $light-grey;
     border-radius: 0.5rem;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: calc(100% - 6px);
+
+    img {
+      max-width: calc(100% - 6px);
+      max-height: calc(100% - 6px);
+    }
   }
 
   &__item-title {

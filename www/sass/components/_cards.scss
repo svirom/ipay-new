@@ -26,16 +26,17 @@
 
   &__img {
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3.85rem;
     height: 3.75rem;
     border: 2px solid $light-grey;
     border-radius: 0.5rem;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: calc(100% - 10px);
 
-    &--kyivgaz {
-      background-image: url("../img/providers/kyivgaz-img.png");
+    img {
+      max-width: calc(100% - 8px);
+      max-height: calc(100% - 8px);
     }
   }
 

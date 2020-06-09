@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
 
     <title>Style Guide</title>
@@ -353,6 +354,18 @@
           <div style="width: 100px;" class="text-center mx-2">
             <div style="height: 50px; border-radius: 8px; color: #ffffff; box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15)" class="d-flex justify-content-center align-items-center">rgba(39, 97, 146, 0.15)</div>
             <div style="font-size: 80%;">$card-shadow</div>
+          </div>
+          <div style="width: 100px;" class="text-center mx-2">
+            <div style="height: 50px; border-radius: 8px; color: #ffffff; box-shadow: 0px 4px 20px rgba(23, 42, 58, 0.1)" class="d-flex justify-content-center align-items-center">rgba(23, 42, 58, 0.1)</div>
+            <div style="font-size: 80%;">$template-shadow-hover</div>
+          </div>
+          <div style="width: 100px;" class="text-center mx-2">
+            <div style="height: 50px; border-radius: 8px; color: #ffffff; background: #EDF4F8" class="d-flex justify-content-center align-items-center">#EDF4F8</div>
+            <div style="font-size: 80%;">$bill-border</div>
+          </div>
+          <div style="width: 100px;" class="text-center mx-2">
+            <div style="height: 50px; border-radius: 8px; color: #ffffff; background: #FFFCFC" class="d-flex justify-content-center align-items-center">#FFFCFC</div>
+            <div style="font-size: 80%;">$light-pink</div>
           </div>
         </div>
       </div> <!-- colors -->
@@ -1113,6 +1126,27 @@
           <h2 class="mt-5"><u>Select</u></h2>
         </div>
       </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <div class="form-group" style="max-width: 260px;">
+            <select class="select-input form-control form-input" name="month">
+              <option value=""></option>
+              <option value="jan">Январь</option>
+              <option value="feb">Февраль</option>
+              <option value="mar">Март</option>
+              <option value="apr">Апрель</option>
+              <option value="may">Май</option>
+              <option value="jun">Июнь</option>
+              <option value="jul">Июль</option>
+              <option value="aug">Август</option>
+              <option value="sep">Сентябрь</option>
+              <option value="oct">Октябрь</option>
+              <option value="nov">Ноябрь</option>
+              <option value="dec">Декабрь</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
       <div class="w-100"><hr></div>
 
@@ -1688,26 +1722,34 @@
             <div class="form-search__list">
               <ul>
                 <li class="form-search__item">
-                  <a href="#" class="form-search__link form-search__link--kyivstar">
-                    <span class="form-search__item-img"></span>
+                  <a href="#" class="form-search__link">
+                    <span class="form-search__item-img">
+                      <img src="img/providers/kyivstar.png" alt="">
+                    </span>
                     <span class="form-search__item-title">Киевстар</span>
                   </a>
                 </li>
                 <li class="form-search__item">
-                  <a href="#" class="form-search__link form-search__link--yasno">
-                    <span class="form-search__item-img"></span>
+                  <a href="#" class="form-search__link">
+                    <span class="form-search__item-img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
                     <span class="form-search__item-title">Киевские энергетические услуги (Yasno)</span>
                   </a>
                 </li>
-                <li class="form-search__item form-search__link--kyivgasenergy">
+                <li class="form-search__item">
                   <a href="#" class="form-search__link">
-                    <span class="form-search__item-img"></span>
+                    <span class="form-search__item-img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
                     <span class="form-search__item-title">КиевГазЭнерджи</span>
                   </a>
                 </li>
-                <li class="form-search__item form-search__link--kyivgas">
+                <li class="form-search__item">
                   <a href="#" class="form-search__link">
-                    <span class="form-search__item-img"></span>
+                    <span class="form-search__item-img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
                     <span class="form-search__item-title">Киевгаз</span>
                   </a>
                 </li>
@@ -1974,7 +2016,9 @@
               <p class="small">Поставщик услуги</p>
             </div>
             <div class="provider-card__body">
-              <div class="provider-card__img provider-card__img--kyivgaz"></div>
+              <div class="provider-card__img">
+                <img src="img/providers/kyivgaz-img.png" alt="">
+              </div>
               <div class="provider-card__content">
                 <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
                 <div class="provider-card__tel">+380(342)50-62-00</div>
@@ -2203,8 +2247,8 @@
               <div class="bank-card__body">
                 <div class="bank-card__number">
                   <div class="form-group">
-                    <input type="tel" class="form-control form-input" id="card-number" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                    <label class="control-label form-label" for="card-number">Номер карты</label>
+                    <input type="tel" class="form-control form-input" id="card-number5" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                    <label class="control-label form-label" for="card-number5">Номер карты</label>
                     <div class="help-block"></div>
                   </div>
                 </div>
@@ -2221,8 +2265,8 @@
               <div class="bank-card__body">
                 <div class="bank-card__number">
                   <div class="form-group error">
-                    <input type="tel" class="form-control form-input" id="card-number2" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="5678">
-                    <label class="control-label form-label" for="card-number2">Номер карты</label>
+                    <input type="tel" class="form-control form-input" id="card-number6" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="5678">
+                    <label class="control-label form-label" for="card-number6">Номер карты</label>
                     <div class="help-block">Введите номер полностью</div>
                   </div>
                 </div>
@@ -2239,8 +2283,8 @@
               <div class="bank-card__body">
                 <div class="bank-card__number">
                   <div class="form-group has-success">
-                    <input type="tel" class="form-control form-input" id="card-number3" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="1234 5678 8765 4321">
-                    <label class="control-label form-label" for="card-number3">Номер карты</label>
+                    <input type="tel" class="form-control form-input" id="card-number7" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="1234 5678 8765 4321">
+                    <label class="control-label form-label" for="card-number7">Номер карты</label>
                     <div class="help-block"></div>
                   </div>
                 </div>
@@ -2257,8 +2301,8 @@
               <div class="bank-card__body">
                 <div class="bank-card__number">
                   <div class="form-group has-error">
-                    <input type="tel" class="form-control form-input" id="card-number4" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="1234 5678 8765 4321">
-                    <label class="control-label form-label" for="card-number4">Номер карты</label>
+                    <input type="tel" class="form-control form-input" id="card-number8" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="1234 5678 8765 4321">
+                    <label class="control-label form-label" for="card-number8">Номер карты</label>
                     <div class="help-block">Неверный номер карты</div>
                   </div>
                 </div>
@@ -2450,6 +2494,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
   </body>
 </html>
