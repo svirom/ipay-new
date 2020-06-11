@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/main.css">
+
+    <title>Style Guide</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                    </div>
+                    <div class="catalogue catalogue-mobile">
+                      <ul class="catalogue__list">
+                        <li><a class="dropdown-item catalogue__back" href="#">Назад</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__crossboard">Международные переводы</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__p2p">Переводы с карты на карту</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__p2r">Перевод по реквизитам</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__by-email">Переводы с карты на e-mail</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__by-phone">Перевод с карты на телефон</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__receive">Получить перевод</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__mobile">Мобильная связь</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__utility">Коммунальные услуги</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__kindergarten">Детские сады</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__internet">Интернет</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__tv">Телевидение</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__phone">Телефонная связь</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__security">Охрана</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__transport">Транспорт</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__penalty">Оплатить Штраф ГАИ</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__tourism">Туризм</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__banks">Банки и Страхование</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__education">Образование</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__business">Бизнес-услуги</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__charity">Благотворительность</a></li>
+                      </ul>
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- breadcrumb -->
+    <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
+              <li class="breadcrumb-item"><a href="#">Платежи</a></li>
+              <li class="breadcrumb-item"><a href="#">Платежи</a></li>
+              <li class="breadcrumb-item"><a href="#">Платежи</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Платежи</li>
+            </ol>
+          </div>
+        </div>
+      </div> 
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <aside class="col-md-4">
+          <div class="catalogue">
+            <ul class="catalogue__list">
+              <li>
+                <a href="#" class="catalogue__item catalogue__crossboard">
+                  <span>Международные переводы</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__p2p">
+                  <span>Переводы с карты на карту</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__p2r">
+                  <span>Перевод по реквизитам</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__by-email">
+                  <span>Переводы с карты на e-mail</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__by-phone">
+                  <span>Перевод с карты на телефон</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__receive">
+                  <span>Получить перевод</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__mobile">
+                  <span>Мобильная связь</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__utility">
+                  <span>Коммунальные услуги</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__kindergarten">
+                  <span>Детские сады</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__internet">
+                  <span>Интернет</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__tv">
+                  <span>Телевидение</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__phone">
+                  <span>Телефонная связь</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__security">
+                  <span>Охрана</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__transport">
+                  <span>Транспорт</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__penalty">
+                  <span>Оплатить Штраф ГАИ</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__tourism">
+                  <span>Туризм</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__banks">
+                  <span>Банки и Страхование</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__education">
+                  <span>Образование</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__business">
+                  <span>Бизнес-услуги</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="catalogue__item catalogue__charity">
+                  <span>Благотворительность</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <main class="col-md-8">
+          <div class="row">
+            <div class="col-12">
+              <div class="filter-region dropdown">
+                <a href="#" class="filter-region__dropdown" id="dropdownRegion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Область</a>
+                <span class="filter-region__result">Вся Украина</span>
+                <div class="dropdown-menu" aria-labelledby="dropdownRegion">
+                  <a href="#" class="filter-region__item filter-region__item--all active">Вся Украина</a>
+                  <a href="#" class="filter-region__item">
+                    <span>Винницкая </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Волынская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Днепропетровская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Донецкая </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Житомирская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item filter-region__item--bottom filter-region__item--bottom-radius">
+                    <span>Закарпатская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Запорожская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Ивано-Франковская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Киевская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Кировоградская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Луганская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Львовская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item filter-region__item--bottom">
+                    <span>Николаевская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Одесская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Полтавская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Ровенская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Сумская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Тернопольская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item">
+                    <span>Харьковская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item filter-region__item--bottom">
+                    <span>Херсонская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item filter-region__item--right filter-region__item--top-radius">
+                    <span>Хмельницкая </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item filter-region__item--right">
+                    <span>Черкасская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item filter-region__item--right">
+                    <span>Черниговская </span>
+                    <span>область</span>
+                  </a>
+                  <a href="#" class="filter-region__item filter-region__item--right">
+                    <span>Черновицкая </span>
+                    <span>область</span>
+                  </a> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h1>Коммунальные услуги</h1>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>

@@ -2,13 +2,36 @@
 // This file contains all styles related to the category filter component (region and utility).
 // -----------------------------------------------------------------------------
 
+.filter-region, .filter-services {
+  .dropdown-menu {
+    padding: 0;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px $card-shadow;
+    transform: none!important;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-radius: 2px;
+      border-style: solid;
+      border-color: transparent transparent #ffffff transparent;
+      filter: drop-shadow(0px 4px 20px $box-shadow);
+    }
+  }
+}
+
+// region filter
 .filter-region {
   display: flex;
   align-items: center;
 
   &__dropdown {
     display: inline-block;
-    padding: 0.25rem 1.25rem;
+    padding: 0.15rem 1.25rem 0;
     @include font(0.875rem, 400, 1);
     text-transform: uppercase;
     color: $main-blue;
@@ -33,26 +56,12 @@
     column-fill: auto;
     height: 22.75rem;
     left: -2.25rem!important;
-    margin-top: 1rem;
-    padding: 0;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    box-shadow: 0px 4px 20px $card-shadow;
-    transform: none!important;
+    margin-top: 2.75rem;
 
     &::before {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: 0;
       top: -0.875rem;
       left: 5rem;
-      border-radius: 2px;
-      border-style: solid;
       border-width: 0 14px 14px 14px;
-      border-color: transparent transparent #ffffff transparent;
-      filter: drop-shadow(0px 4px 20px $box-shadow);
     }
   }
 
@@ -63,9 +72,8 @@
     width: 100%;
     height: 3.25rem;
     padding: 0 1rem;
-    clear: both;
     @include font(1rem, 400, 1);
-    color: $text-color;
+    color: $heading-color;
     white-space: nowrap;
     border-right: 1px solid $light-grey;
     border-bottom: 1px solid $light-grey;
@@ -92,6 +100,8 @@
     }
 
     span {
+      color: $heading-color;
+
       &:last-child {
         font-size: 0.75rem;
         color: $main-blue;
@@ -104,16 +114,261 @@
       border-bottom: 3px solid $btn-red;
       background-color: $light-grey;
       text-decoration: none;
+
+      span {
+        font-weight: bold;
+      }
     } 
   }
 
   @include until($md) {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+
+    &__dropdown {
+      padding-right: 0;
+    }
 
     .dropdown-menu {
       column-count: 1;
+      width: 100%;
       height: auto;
+      left: 0!important;
+      border-radius: 0;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &__item {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: 2.75rem;
+      border-radius: 0;
+      border-right-color: $light-grey;
+      border-bottom-color: $light-grey;
+
+      span {
+        &:last-child {
+          padding-left: 4px;
+          font-size: 1rem;
+          color: $heading-color;
+        }
+      }
+
+      &:hover, &:active, &.active {
+        color: $heading-color;
+        border-bottom: 1px solid $middle-grey;
+        background-color: $middle-grey;
+      } 
+    }
+  }
+}
+
+// services filter
+.filter-services {
+  text-align: right;
+
+  &__dropdown {
+    display: inline-block;
+    position: relative;
+    padding-left: 3.125rem;
+    width: 11.6875rem;
+
+    span {
+      display: block;
+      @include font(0.875rem, 400, 1.3);
+      color: $main-blue;
+      text-align: left;
+
+      &:last-child {
+        color: $heading-color;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &::before, &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 50%;
+      @include transform(translateY(-50%));
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      left: 0.85rem;
+      background-image: url('../img/sprite-services.png');
+      background-size: 88px;
+    }
+
+    &::after {
+      right: 0.5rem;
+      width: 15px;
+      height: 15px;
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.59106 6.13818L7.994 9.54113' stroke='%234F6E7A' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.9942 9.5415L11.3971 6.13857' stroke='%234F6E7A' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: center;
+      background-size: 15px;
+    }
+
+    @include until($md) {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding-left: 0;
+
+      span {
+        display: none;
+      }
+
+      &::before {
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: 2.75rem;
+    right: 0;
+    left: auto!important;
+
+    &::before {
+      top: -0.825rem;
+      right: 2rem;
+      border-width: 0 13px 13px 13px;
+    }
+
+    @include until($md) {
+      &::before {
+        top: -0.775rem;
+        right: 0.5rem;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 12.5rem;
+    height: 2.625rem;
+    padding: 0 1rem 0 2.6875rem;
+    @include font(0.875rem, 400, 1.15);
+    color: $main-blue;
+    white-space: nowrap;
+
+    &:hover {
+      color: $heading-color;
+      text-decoration: none;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0.85rem;
+      top: 50%;
+      @include transform(translateY(-50%));
+      background-image: url('../img/sprite-services.png');
+      background-repeat: no-repeat;
+      background-size: 88px;
+    }
+
+    &--all { 
+      &::before {
+        width: 22px;
+        height: 23px;
+        background-position: 0 -46px;
+      }
+
+      &:hover, &:active, &.active {
+        color: $btn-red;
+
+        &::before {
+          background-position: -22px -46px;
+        }
+      }
+    }
+
+    &--utility { 
+      &::before {
+        width: 22px;
+        height: 23px;
+        background-position: -66px 0;
+      }
+
+      &:hover, &:active, &.active {
+        &::before {
+          background-position: -66px -23px;
+        }
+      }
+    }
+
+    &--electricity { 
+      &::before {
+        width: 22px;
+        height: 23px;
+        background-position: -44px 0;
+      }
+
+      &:hover, &:active, &.active {
+        &::before {
+          background-position: 0 -23px;
+        }
+      }
+    }
+
+    &--water { 
+      &::before {
+        width: 22px;
+        height: 23px;
+        background-position: -44px -45px;
+      }
+
+      &:hover, &:active, &.active {
+        &::before {
+          background-position: -66px -45px;
+        }
+      }
+    }
+
+    &--gas { 
+      &::before {
+        width: 22px;
+        height: 23px;
+        background-position: 0 0;
+      }
+
+      &:hover, &:active, &.active {
+        &::before {
+          background-position: -22px 0;
+        }
+      }
+    }
+
+    &--heating { 
+      &::before {
+        width: 22px;
+        height: 23px;
+        background-position: -22px -23px;
+      }
+
+      &:hover, &:active, &.active {
+        &::before {
+          background-position: -44px -23px;
+        }
+      }
     }
   }
 }
