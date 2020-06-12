@@ -5,6 +5,10 @@
 .catalogue, .catalogue-reg {
   position: relative;
 
+  &:not(.catalogue-mobile) {
+    border-right: 1px solid $middle-grey;
+  }
+
   li:not(.catalogue-mobile) {
     margin-bottom: 5px;
   }
@@ -62,6 +66,8 @@
     color: $heading-color;
     line-height: 1.1667;
     border-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 
     &:hover, &:active, &.active {
       color: $light-grey;

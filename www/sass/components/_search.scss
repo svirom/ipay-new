@@ -2,6 +2,11 @@
 // This file contains all styles related to the search component.
 // -----------------------------------------------------------------------------
 
+.form-search-mobile {
+  padding: 1rem 15px 0;
+  background-color: $heading-color;
+}
+
 .form-search {
   &__title {
     display: none;
@@ -17,7 +22,7 @@
         font-weight: normal;
       }
 
-      @include until($md) {
+      @include until($lg) {
         padding: 2.026rem 1.1rem 1.0775rem 3.75rem;
       }
 
@@ -30,6 +35,10 @@
         border-color: $light-grey;
         box-shadow: none;
         background-color: $light-grey;
+
+        @include until($lg) {
+          border-color: transparent;
+        }
 
         & ~ .form-label {
           top: 1rem;
@@ -178,11 +187,17 @@
     }
   }
 
-  @include until($md) {
+  @include until($lg) {
     .form-input {
       &.input-search {
         & ~ .form-label {
           top: 0.95rem;
+        }
+
+        &:focus, &.filled {
+          & ~ .form-label {
+            top: 0.45rem;
+          }
         }
       }
     }
@@ -193,14 +208,15 @@
 
       .form-search__title {
         display: block;
+        color: #fff;
       }
 
       .form-input {
         &.input-search {
           &:focus, &.filled {  
-            & ~ .form-label {
+            /* & ~ .form-label {
               top: 0.45rem;
-            }
+            } */
     
             & ~ .form-search__cancel {
               display: block;

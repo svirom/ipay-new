@@ -121,7 +121,7 @@
     } 
   }
 
-  @include until($md) {
+  @include until($lg) {
     flex-direction: column;
     align-items: flex-end;
 
@@ -216,7 +216,7 @@
       background-size: 15px;
     }
 
-    @include until($md) {
+    @include until($lg) {
       width: 2.5rem;
       height: 2.5rem;
       padding-left: 0;
@@ -247,7 +247,7 @@
       border-width: 0 13px 13px 13px;
     }
 
-    @include until($md) {
+    @include until($lg) {
       &::before {
         top: -0.775rem;
         right: 0.5rem;

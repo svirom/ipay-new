@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main content of the site.
+// -----------------------------------------------------------------------------
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include until($lg) {
+    .breadcrumb-wrapper {
+      order: 1;
+    }
+  }
+}
+
+.main-content {
+  padding: 2.25rem 15px;
+
+  @include until($lg) {
+    padding-top: 1rem;
+  }
+}
+
+.category-text {
+  h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: $text-color;
+  }
+}

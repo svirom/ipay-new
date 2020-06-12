@@ -5,20 +5,22 @@
 .list {
   li {
     position: relative;
+    margin-bottom: 0.6875rem;
     padding-left: 1.25rem;
 
     &::before {
       position: absolute;
       content: '';
       left: 0;
-      top: 50%;
-      @include transform(translateY(-50%));
+      // top: 50%;
+      // @include transform(translateY(-50%));
     }
   }
 
   &--circle {
     li {
       &::before {
+        top: 6px;
         width: 8px;
         height: 8px;
         border-radius: 50%;
@@ -30,6 +32,7 @@
   &--minus {
     li {
       &::before {
+        top: 8px;
         width: 14px;
         height: 2px;
         background-color: $heading-color;
@@ -46,6 +49,7 @@
 
     &::before {
       content: counter(ordered-counter) ". ";
+      top: 0;
       color: $btn-red;
       font-weight: bold;
     }
