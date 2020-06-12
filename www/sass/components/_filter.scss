@@ -121,6 +121,16 @@
     } 
   }
 
+  @include until($xl) {
+    .dropdown-menu {
+      left: -6.5rem!important;
+
+      &::before {
+        left: 8.5rem;
+      }
+    }
+  }
+
   @include until($lg) {
     flex-direction: column;
     align-items: flex-end;

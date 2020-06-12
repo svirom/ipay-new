@@ -3795,6 +3795,15 @@ label {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1199px) {
+  .filter-region .dropdown-menu {
+    left: -6.5rem !important;
+  }
+  .filter-region .dropdown-menu::before {
+    left: 8.5rem;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .filter-region {
     -webkit-box-orient: vertical;
