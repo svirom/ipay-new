@@ -216,9 +216,10 @@
 
     .bill-card__content {
       align-self: stretch;
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       padding-left: 0.5rem;
     }
   }
@@ -246,6 +247,7 @@
   }
 
   &__amount {
+    padding-top: 0.5rem;
     font-size: 0.75rem;
     color: $main-blue;
   }

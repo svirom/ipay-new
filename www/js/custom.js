@@ -53,30 +53,6 @@ $(document).ready(function() {
       .css({'height' : mobileMenuHeight});
   }
 
-  // catalogue mobile registered (temporary)
-  $('.catalogue__nextR').on('click', catalogueMobileR);
-  $('.catalogue__backR').on('click', catalogueMobileHideR);
-
-  function catalogueMobileR(e) {
-    e.preventDefault();
-
-    var catalogueHeight = $('.navbar-collapse').find('.catalogue__backR').closest('.catalogue-mobile').height();
-
-    $(this).closest('.navbar-collapse').removeClass('overflow-hidden')
-      .find('.catalogue-mobile').addClass('active').end()
-      .css({'height' : catalogueHeight});
-  }
-
-  function catalogueMobileHideR(e) {
-    e.preventDefault();
-
-    var mobileMenuHeight = $('.navbar-collapse__menu').height();
-
-    $(this).closest('.navbar-collapse').addClass('overflow-hidden')
-      .find('.catalogue-mobile').removeClass('active').end()
-      .css({'height' : mobileMenuHeight});
-  }
-
   // initialize tooltips
   $('[data-toggle="tooltip"]').tooltip();
 
@@ -102,6 +78,16 @@ $(document).ready(function() {
   $('.input-search').on('blur', function() {
     $(this).closest('.form-search').removeClass('focused');
   })
+
+  // search cancel button, hide modal
+  $('.form-search__cancel').on('click', searchCancel);
+  $('#searchModal').on('hidden.bs.modal', searchCancel);
+
+  function searchCancel() {
+    $(this).closest('#searchModal')
+    .find('.form-search').removeClass('focused')
+    .find('.input-search').removeClass('filled').val('');
+  }
 
   // In your Javascript (external .js resource or <script> tag)
   $(document).ready(function() {

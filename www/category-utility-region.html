@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
 
-    <title>Category Utility</title>
+    <title>Category Utility Region</title>
   </head>
   <body>
 
@@ -33,17 +33,30 @@
                     <span>плательщиков</span>
                   </a>
                 </li>
+                <li class="main-nav__item">
+                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
+                    <span class="main-nav__bonus">1543 </span>
+                    <span>бонусов</span>
+                  </span>
+                </li>
                 <li class="main-nav__item dropdown">
-                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
-                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
                   </div>
                 </li>
               </ul>
               <ul class="main-nav__nav-mobile">
-                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item-account">
+                  <span class="main-nav__item-account--registered">Мой кабинет</span>
+                  <span>Альберт</span>
+                </li>
                 <li class="main-nav__item main-nav__item-mobile">
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
@@ -52,14 +65,15 @@
                     <div class="navbar-collapse__menu">
                       <ul>
                         <li><a class="dropdown-item dropdown-catalogue catalogue__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
-                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
+                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
+                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
-                      <a class="dropdown-item dropdown-login-mobile" href="#">
-                        <span>Войти</span> 
-                        <span>или зарегистрироваться</span>
-                      </a>
                     </div>
                     <div class="catalogue catalogue-mobile">
                       <ul class="catalogue__list">
@@ -250,7 +264,7 @@
                   <div class="col">
                     <div class="filter-region dropdown">
                       <a href="#" class="filter-region__dropdown" id="dropdownRegion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Область</a>
-                      <span class="filter-region__result">Вся Украина</span>
+                      <span class="filter-region__result">Ивано-Франковская область</span>
                       <div class="dropdown-menu" aria-labelledby="dropdownRegion">
                         <a href="#" class="filter-region__item filter-region__item--all active">Вся Украина</a>
                         <a href="#" class="filter-region__item">
@@ -357,19 +371,30 @@
 
               <div class="col-12 mt-2 mb-3">
                 <div class="category-title">
-                  <h1>Коммунальные услуги</h1>
+                  <h1>Коммунальные услуги в Ивано-Франковской области</h1>
                   <p>Оплачивайте коммунальные услуги онлайн банковской картой.</p>
                 </div>
               </div>
 
               <div class="col-12 mb-2">
                 <div class="row align-items-center">
-                  <div class="col-auto"></div>
+                  <div class="col-auto">
+                    <div class="filter-city dropdown">
+                      <a href="#" class="filter-city__dropdown" id="dropdownRegionCity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Вся область</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownRegionCity">
+                        <a href="#" class="filter-city__item">Ивано-Франковск</a>
+                        <a href="#" class="filter-city__item">Калуш</a>
+                        <a href="#" class="filter-city__item">Коломыя</a>
+                        <a href="#" class="filter-city__item">Бурштын</a>
+                        <a href="#" class="filter-city__item">Яремче</a>
+                      </div>
+                    </div>
+                  </div>
                   <div class="col">
                     <div class="filter-services dropdown">
-                      <a href="#" class="filter-services__dropdown filter-services__item--all active" id="dropdownUtility" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a href="#" class="filter-services__dropdown filter-services__item--water active" id="dropdownUtility" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="filter-services__type">Тип услуги</span>
-                        <span class="filter-services__result">Все</span>
+                        <span class="filter-services__result">Водоснабжение</span>
                       </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownUtility">
                         <a href="#" class="filter-services__item filter-services__item--all">Все услуги</a>
@@ -384,22 +409,69 @@
                 </div>
               </div>
 
-              <div class="col-12">
-                <div class="alert alert-warning alert-face alert-eyewink alert-dismissible fade show" role="alert">
-                  <strong>Кажется, мы знакомы :-)</strong><br>
-                  <a href="#"><strong>Авторизуйтесь в кабинет</strong></a> и получайте бонусы за оплату
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="col-12">
-                <div class="alert alert-success alert-face alert-smile alert-dismissible fade show" role="alert">
-                  <a href="#">Зарегистрируйтесь</a> в личном кабинете и получайте бонусы за каждую оплату!
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
+              <div class="col-12 mb-3">
+                <div class="category-templates">
+                  <div class="row">
+                    <div class="col-12 category-templates__text">
+                      <p>Мои шаблоны в категории <span>"Коммунальные услуги"</span></p>
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-lg-6 mb-3">
+                          <div class="template-card-wrapper dropdown">
+                            <a href="#" class="bill-card template-card" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="bill-card__img">
+                                <img src="img/providers/yasno.png" alt="">
+                              </span>
+                              <span class="bill-card__content">
+                                <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
+                                <span class="template-card__amount">100.00 грн</span>
+                              </span>
+                              <span class="template-card__button"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
+                              <a href="#" class="dropdown-item">Редактировать</a>
+                              <a href="#" class="dropdown-item">Удалить</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <div class="template-card-wrapper dropdown">
+                            <a href="#" class="bill-card template-card" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="bill-card__img">
+                                <img src="img/providers/kyivgas.png" alt="">
+                              </span>
+                              <span class="bill-card__content">
+                                <span class="template-card__text">Оплата за газ</span>
+                              </span>
+                              <span class="template-card__button"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
+                              <a href="#" class="dropdown-item">Редактировать</a>
+                              <a href="#" class="dropdown-item">Удалить</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <div class="template-card-wrapper dropdown">
+                            <a href="#" class="bill-card template-card" id="dropdownTemplate3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="bill-card__img">
+                                <img src="img/providers/kyivgasenergy.png" alt="">
+                              </span>
+                              <span class="bill-card__content">
+                                <span class="template-card__text">Оплата за воду</span>
+                              </span>
+                              <span class="template-card__button"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownTemplate3">
+                              <a href="#" class="dropdown-item">Редактировать</a>
+                              <a href="#" class="dropdown-item">Удалить</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 

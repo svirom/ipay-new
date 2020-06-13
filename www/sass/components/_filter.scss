@@ -2,7 +2,7 @@
 // This file contains all styles related to the category filter component (region and utility).
 // -----------------------------------------------------------------------------
 
-.filter-region, .filter-services {
+.filter-region, .filter-services, .filter-city {
   .dropdown-menu {
     padding: 0;
     border: none;
@@ -380,6 +380,43 @@
           background-position: -44px -23px;
         }
       }
+    }
+  }
+}
+
+// city filter
+.filter-city {
+  &__dropdown {
+    color: $btn-red;
+    font-weight: bold;
+
+    &:hover {
+      color: $btn-red-hover;
+      text-decoration: none;
+    }
+  }
+
+  .dropdown-menu {
+    top: 2.25rem!important;
+
+    &::before {
+      top: -0.775rem;
+      left: 2rem;
+      border-width: 0 13px 13px 13px;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: auto;
+    padding: 0.5rem 1.5rem;
+    color: $text-color;
+    white-space: nowrap;
+
+    &:hover {
+      color: $btn-red;
+      font-weight: bold;
+      text-decoration: none;
     }
   }
 }

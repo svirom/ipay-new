@@ -236,6 +236,14 @@
       @include transform(translateY(-50%));
     }
 
+    &--search {
+      margin-right: 3rem;
+
+      @include until($lg) {
+        display: none;
+      }
+    }
+
     &--safety {
       color: $text-color;
 
@@ -261,6 +269,20 @@
     span {
       display: block;
       line-height: 1.25;
+    }
+  }
+
+  &__search {
+    padding-left: 2.25rem;
+    color: $heading-color;
+    font-weight: bold;
+    background-image: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3195 23.9626C19.6213 23.9626 24.7299 18.854 24.7299 12.5523C24.7299 6.25053 19.6213 1.14197 13.3195 1.14197C7.01777 1.14197 1.90918 6.25053 1.90918 12.5523C1.90918 18.854 7.01777 23.9626 13.3195 23.9626Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M28.0914 27.3238L21.3945 20.627' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 19px;
+
+    &:hover {
+      color: $heading-color;
     }
   }
 
