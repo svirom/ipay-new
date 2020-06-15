@@ -44,10 +44,18 @@
     outline: none;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     color: $main-blue;
     background-color: $middle-grey;
     border-color: $middle-grey;
+    box-shadow: none;
+
+    &:hover {
+      color: $main-blue;
+      background-color: $middle-grey;
+      border-color: $middle-grey;
+      box-shadow: none;
+    }
   }
 }
 
@@ -69,10 +77,18 @@
     outline: none;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     color: $middle-grey;
     background-color: #fff;
     border-color: $middle-grey;
+    box-shadow: none;
+
+    &:hover {
+      color: $middle-grey;
+      background-color: #fff;
+      border-color: $middle-grey;
+      box-shadow: none;
+    }
   }
 }
 
@@ -88,7 +104,7 @@
     background-repeat: no-repeat;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     &::after {
       color: $main-blue;
     }
@@ -103,7 +119,7 @@
   &.btn-outline:not(.disabled) {
     color: $heading-color;
 
-    &:active:not(.disabled), &.active:not(.disabled) {
+    &:active:not(.disabled) {
       color: #fff;
     }
   }
@@ -120,7 +136,7 @@
     background-position: 0px 0px;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     &::after {
       background-position: 0px -18px;
     }
@@ -155,7 +171,7 @@
     background-position: 0px -72px;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     &::after {
       background-position: -10px 0px;
     }
@@ -182,7 +198,7 @@
     background-position: -85px -24px;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     &::after {
       background-position: -85px -39px;
     }
@@ -209,7 +225,7 @@
 		background-position: -10px -54px;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     &::after {
       background-position: -10px -70px;
     }
@@ -238,7 +254,7 @@
 		background-position: -55px -22px;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     &::after {
       background-position: -55px -46px;
     }
@@ -267,7 +283,7 @@
 		background-position: -25px -32px;
   }
 
-  &.disabled {
+  &.disabled, &:disabled {
     &::after {
       background-position: -25px -54px;
     }

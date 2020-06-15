@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the service provider widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.service-provider {
+  padding: 2.5rem 0.5rem 2rem;
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+
+  &__title {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+  }
+
+  &__rating, &__payments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__rating {
+    padding-bottom: 1.25rem;
+  }
+
+  &__rated {
+    padding-top: 0.25rem;
+    color: $main-blue;
+
+    span {
+      color: $main-blue;
+    }
+  }
+
+  &__payments {
+    padding-top: 1.75rem;
+  }
+
+  &__number {
+    padding: 0.5rem 0 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__last {
+    font-size: 0.9375rem;
+    color: #4F6E7A;
+  }
+}
