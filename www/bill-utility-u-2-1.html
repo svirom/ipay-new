@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/bill-utility.css">
     <link rel="stylesheet" href="/css/service-provider.css">
 
-    <title>Bill Utility Unregistered 1-1</title>
+    <title>Bill Utility Unregistered 2-1</title>
   </head>
   <body>
 
@@ -149,28 +148,19 @@
                 </div>
               </div>
 
-              <div class="col-12">
-                <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
-                  <strong>11 человек</strong> оплачивают услугу прямо сейчас
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-              </div>
-
               <div class="col-12 mt-3 mb-5 d-none d-sm-block">
                 <div class="progress-payment">
                   <div class="progress">
                     <div class="progress-textline">
-                      <span class="progress-text active">Ввод данных плательщика</span>
-                      <span class="progress-text">Ввод данных платежа</span>
+                      <span class="progress-text in">Ввод данных плательщика</span>
+                      <span class="progress-text active">Ввод данных платежа</span>
                       <span class="progress-text">Ввод данных карты</span>
                       <span class="progress-text">Подтверждение платежа</span>
                     </div>
-                    <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     <div class="progress-steps">
+                      <span class="progress-step in"></span>
                       <span class="progress-step active"></span>
-                      <span class="progress-step"></span>
                       <span class="progress-step"></span>
                       <span class="progress-step"></span>
                     </div>
@@ -178,49 +168,123 @@
                 </div>
               </div>
               <div class="col-12 my-3 d-sm-none">
-                <div class="progress-mobile progress-mobile--one-fourth">
+                <div class="progress-mobile progress-mobile--two-fourth">
                   <div class="progress-mobile__circle">
                     <div class="progress-mobile__value">
-                      <div>1/4</div>
+                      <div>2/4</div>
                     </div>
                   </div>
                   <div class="progress-mobile__text">
-                    <span class="progress-mobile__current">Ввод данных плательщика</span>
-                    <span class="progress-mobile__next">Далее: Ввод данных платежа</span>
+                    <span class="progress-mobile__current">Ввод данных платежа</span>
+                    <span class="progress-mobile__next">Далее: Ввод данных карты</span>
                   </div>
                 </div>
               </div>
 
-              <div class="col-12 mt-1 mb-5 mt-lg-3 text-center">
+              <div class="col-12 mt-1 mb-5 mt-lg-3">
+
                 <div class="row">
                   <div class="col-12 pb-3 d-none d-lg-block">
-                    <h2>Ввод данных плательщика</h2>
+                    <h2>Ввод данных платежа</h2>
                   </div>
                 </div>
-                <div class="row justify-content-center">
-                  <div class="col-md-6 text-left">
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                      Кажется мы знакомы :-)<br><br>
-                      <a href="#">Авторизуйтесь в кабинет</a> и получайте бонусы за оплату
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
+
+                <div class="row">
+
+                  <div class="col-12">
+                    <div class="table-responsive">
+                      <table class="table table-bill">
+                        <tbody>
+                          <tr>
+                            <td>Лицевой счет</td>
+                            <td>1234567890</td>
+                          </tr>
+                          <tr>
+                            <td>ФИО</td>
+                            <td>САВЧЕНКО I. В.</td>
+                          </tr>
+                          <tr>
+                            <td>Адрес</td>
+                            <td>Київ, пр-т Оболонский 16/В, кв. 87</td>
+                          </tr>
+                          <tr>
+                            <td>Баланс</td>
+                            <td>16.52 грн.</td>
+                          </tr>
+                          <tr class="table-title">
+                            <td>
+                              <h3 class="mt-4">Оплата за газ</h3>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Насчитано</td>
+                            <td>34.06</td>
+                          </tr>
+                          <tr>
+                            <td>Задолженность</td>
+                            <td>17.64 грн.</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
-                </div>
-                <div class="row justify-content-center">
-                  <div class="col-md-6">
-                    <!-- <div class="bill-utility"> -->
-                      <form action="/" id="utility-form">
-                        <div class="form-group mb-4">
-                          <input type="tel" class="form-control form-input" id="bill-account" name="name" autocomplete="off" placeholder="Лицевой счет" aria-required="true">
-                          <label class="control-label form-label" for="bill-acount">Лицевой счет</label>
-                         </div>
-                         <button type="submit" class="btn btn-block btn-green btn-next" disabled>Далее</button>
-                      </form>
-                    <!-- </div> -->
+
+                  <div class="col-12 my-4">
+                    <h3>Показания счетчиков</h3>
                   </div>
+
+                  <div class="col-12">
+                    <form action="/" id="utility-form" class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                              <input type="number" class="form-control form-input" id="bill-curr" name="curr" autocomplete="off" placeholder="0" aria-required="true" min="0">
+                              <label class="control-label form-label" for="bill-curr">Текущие</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                              <input type="number" class="form-control form-input" id="bill-prev" name="prev" autocomplete="off" placeholder="0" aria-required="true" min="0">
+                              <label class="control-label form-label" for="bill-prev">Предыдущие</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-1 d-none d-xl-block"></div>
+                          <div class="col-sm-4 col-xl-3">
+                            <div class="form-group">
+                              <input type="number" class="form-control form-input" id="bill-prev" name="prev" autocomplete="off" placeholder="0" aria-required="true" min="0" value="0" disabled>
+                              <label class="control-label form-label" for="bill-prev">Разница</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-end">
+                          <div class="col-sm-4 col-xl-3">
+                            <div class="form-group">
+                              <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                              <label class="control-label form-label" for="form-icon-r">Сумма</label>
+                              <label class="label-icon-right label-currency">грн</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-end">
+                          <div class="col-sm-12 col-md-8">
+                            <div class="row">
+                              <div class="col-auto col-sm-5 mb-3">
+                                <button type="button" class="btn btn-outline btn-prev btn-block d-none d-sm-block">Назад</button>
+                                <button type="button" class="btn btn-outline btn-prev btn-empty d-sm-none"></button>
+                              </div>
+                              <div class="col col-sm-7 mb-3">
+                                <button type="submit" class="btn btn-green btn-next btn-block" disabled>Далее</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
                 </div>
+
               </div>
 
               <!-- aside mobile area -->
@@ -273,28 +337,6 @@
                 </div>
               </div><!-- aside mobile area -->
 
-              <div class="col-12 category-text mt-4 mt-lg-5">
-                <h2>Коммунальные услуги</h2>
-                <p>Оплата коммунальных услуг – это ежемесячная обязанность каждого жителя нашей страны. При этом, согласно нововведенным нормативно-правовым требованиям, наказания за несвоевременное или неполное перечисление средств еще более ужесточились. Именно поэтому очень важно знать, как проходит оплата коммунальных услуг в Украине, и как ее лучше осуществить.</p>
-                <h3>Как оплатить коммунальные услуги на iPay.ua?</h3>
-                <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
-                <h3>Какие коммунальных услуги можно оплатить онлайн?</h3>
-                <p>При помощи сервиса iPay.ua можно оплатить коммуналку с максимальным комфортом. Для пользователя потребуется лишь:</p>
-                <ul class="list list--circle">
-                  <li>банковская карточка Visa или MasterCard (подойдет карточка любого финансового учреждения);</li>
-                  <li>компьютер или смартфон с доступом к интернету.</li>
-                </ul>
-                <p>Оплатить можно любые коммунальные услуги, независимо от вашего места жительства.</p>
-                <h4>Газ</h4>
-                <p>Чтобы перевести деньги за газ, необходимо выбрать соответствующее коммунальное предприятие, на счет которого будут зачислены средства. Это можно сделать с помощью наименования или реквизитов компании (вся необходимая информация находится на квитанции). Для самой транзакции нужно просто ввести:</p>
-                <ul class="list list--circle">
-                  <li>номер лицевого счета;</li>
-                  <li>сумму;</li>
-                  <li>данные карты.</li>
-                </ul>
-                <p>Не тратьте свое время – выполняйте оплату коммунальных услуг с iPay.ua!</p>
-              </div>
-
             </div>
           </main><!-- main area -->
           <!-- aside area -->
@@ -342,10 +384,6 @@
                     <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
                   </div>
                 </div>
-              </div>
-
-              <div class="col-12 mb-3">
-                <div class="banner banner-w100"></div>
               </div>
 
             </div>
