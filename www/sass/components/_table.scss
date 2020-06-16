@@ -87,6 +87,7 @@
 
         &.table-summary {
           display: flex;
+          margin-top: -1px;
           
           td {
             padding: 1.05rem 0.75rem;
@@ -472,7 +473,7 @@
     background-color: $light-grey;
 
     .archive-bill__details {
-      padding-left: 0.5rem;
+      padding-left: 0;
     }
 
     @include until($md) {

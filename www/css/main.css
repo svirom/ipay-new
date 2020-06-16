@@ -1498,6 +1498,7 @@ label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: -1px;
   }
   .table.table-bill tr.table-summary td {
     padding: 1.05rem 0.75rem;
@@ -1970,7 +1971,7 @@ label {
 }
 
 .archive-bill__mobile .archive-bill__details {
-  padding-left: 0.5rem;
+  padding-left: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -3166,11 +3167,12 @@ label {
 
 @media screen and (max-width: 575px) {
   .bank-card {
-    width: 20rem;
+    width: 100%;
+    max-width: 20rem;
     height: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 0 0.625rem 2rem;
+    padding: 0 0 2rem;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
