@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/service-provider.css">
     <link rel="stylesheet" href="/css/archive-bill.css">
+    <link rel="stylesheet" href="/css/payment-method.css">
 
-    <title>Bill Utility Unregistered 3-1</title>
+    <title>Bill Utility Registered 3-1</title>
   </head>
   <body>
 
@@ -35,17 +36,30 @@
                     <span>плательщиков</span>
                   </a>
                 </li>
+                <li class="main-nav__item">
+                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
+                    <span class="main-nav__bonus">1543 </span>
+                    <span>бонусов</span>
+                  </span>
+                </li>
                 <li class="main-nav__item dropdown">
-                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
-                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
                   </div>
                 </li>
               </ul>
               <ul class="main-nav__nav-mobile">
-                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item-account">
+                  <span class="main-nav__item-account--registered">Мой кабинет</span>
+                  <span>Альберт</span>
+                </li>
                 <li class="main-nav__item main-nav__item-mobile">
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
@@ -54,14 +68,15 @@
                     <div class="navbar-collapse__menu">
                       <ul>
                         <li><a class="dropdown-item dropdown-catalogue catalogue__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
-                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
+                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
+                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
-                      <a class="dropdown-item dropdown-login-mobile" href="#">
-                        <span>Войти</span> 
-                        <span>или зарегистрироваться</span>
-                      </a>
                     </div>
                     <div class="catalogue catalogue-mobile">
                       <ul class="catalogue__list">
@@ -231,39 +246,118 @@
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row mt-3 mt-md-0">
 
                   <div class="col-12 mt-2 mt-sm-5">
                     <form action="/" id="utility-form" class="row">
-                      <div class="col-12">
-                        <div class="bank-card mx-auto">
-                          <div class="bank-card__header">
-                            <div class="bank-card__bank"></div>
-                            <div class="bank-card__type"></div>
-                          </div>
-                          <div class="bank-card__body">
-                            <div class="bank-card__number">
-                              <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="card-number" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                                <label class="control-label form-label" for="card-number">Номер карты</label>
-                                <div class="help-block"></div>
+
+                      <div class="col-12 col-md-8 offset-md-2">
+                        <div class="form-group">
+                          <div class="payment-method" id="payment-method">
+                            <div class="payment-method__radio mb-4">
+                              
+                              <div class="checkbox-control radio-control mb-2">
+                                <input type="radio" id="customRadio1" name="customRadio" class="checkbox-input" checked>
+                                <label class="checkbox-label" for="customRadio1" data-toggle="collapse" data-target="#radio-1" aria-expanded="true" role="button">Мой Masterpass-кошелек</label> 
+                              </div>
+                              <div id="radio-1" class="collapse show" data-parent="#payment-method">
+                                <div class="dropdown">
+                                  <div class="" id="dropdownCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="payment-card payment-card--active">
+                                      <div class="payment-card__header">
+                                        <div class="payment-card__bank">
+                                          <img src="img/banks/otp.png" alt="">
+                                        </div>
+                                        <div class="payment-card__type">
+                                          <img src="img/banks/mastercard.png" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="payment-card__body">
+                                        <div class="payment-card__number">
+                                          <div class="payment-card__purpose">Зарплатная</div>
+                                          <div class="payment-card__card">5168 **** **** **06</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownCard">
+                                    <div class="payment-card payment-card--active" id="payment-card-1">
+                                      <div class="payment-card__header">
+                                        <div class="payment-card__bank">
+                                          <img src="img/banks/otp.png" alt="">
+                                        </div>
+                                        <div class="payment-card__type">
+                                          <img src="img/banks/mastercard.png" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="payment-card__body">
+                                        <div class="payment-card__number">
+                                          <div class="payment-card__purpose">Зарплатная</div>
+                                          <div class="payment-card__card">5168 **** **** **06</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="payment-card" id="payment-card-2">
+                                      <div class="payment-card__header">
+                                        <div class="payment-card__bank">
+                                          <img src="img/banks/invest-bank.png" alt="">
+                                        </div>
+                                        <div class="payment-card__type">
+                                          <img src="img/banks/visa.png" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="payment-card__body">
+                                        <div class="payment-card__number">
+                                          <div class="payment-card__purpose">Зарплатная</div>
+                                          <div class="payment-card__card">4168 **** **** **22</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                            <div class="bank-card__card-data">
-                              <div class="form-group bank-card__expires">
-                                <input type="text" class="form-control form-input" id="card-expires" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
-                                <label class="control-label form-label" for="card-expires">Срок действия</label>
-                                <div class="help-block"></div>
+
+                            <div class="payment-method__radio">
+                              <div class="checkbox-control radio-control mb-2">
+                                <input type="radio" id="customRadio2" name="customRadio" class="checkbox-input">
+                                <label class="checkbox-label collapsed" for="customRadio2" data-toggle="collapse" data-target="#radio-2" aria-expanded="false" role="button">Другая карта</label>
                               </div>
-                              <div class="form-group bank-card__cvv">
-                                <input type="password" class="form-control form-input" id="card-cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
-                                <label class="control-label form-label" for="card-cvv">CVV</label>
-                                <button class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-original-title="" title=""></button>
-                                <div class="help-block"></div>
+                              <div id="radio-2" class="collapse" data-parent="#payment-method">
+                                <div class="bank-card ml-sm-5">
+                                  <div class="bank-card__header">
+                                    <div class="bank-card__bank"></div>
+                                    <div class="bank-card__type"></div>
+                                  </div>
+                                  <div class="bank-card__body">
+                                    <div class="bank-card__number">
+                                      <div class="form-group">
+                                        <input type="tel" class="form-control form-input" id="card-number" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                        <label class="control-label form-label" for="card-number">Номер карты</label>
+                                        <div class="help-block"></div>
+                                      </div>
+                                    </div>
+                                    <div class="bank-card__card-data">
+                                      <div class="form-group bank-card__expires">
+                                        <input type="text" class="form-control form-input" id="card-expires" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                                        <label class="control-label form-label" for="card-expires">Срок действия</label>
+                                        <div class="help-block"></div>
+                                      </div>
+                                      <div class="form-group bank-card__cvv">
+                                        <input type="password" class="form-control form-input" id="card-cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                                        <label class="control-label form-label" for="card-cvv">CVV</label>
+                                        <button class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-original-title="" title=""></button>
+                                        <div class="help-block"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
+
                           </div>
                         </div>
+
                       </div>
 
                       <div class="col-12 mt-0 mt-sm-5">  
@@ -284,6 +378,7 @@
                           </div>
                         </div>
                       </div>
+                      
                     </form>
                   </div>
 
