@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the bill messages.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+// utility message {
+.bill-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+
+  &__button {
+    flex-shrink: 0;
+  }
+
+  @include until($md) {
+    flex-direction: column;
+
+    &__content {
+      text-align: center;
+    }
+
+    &__button {
+      width: 100%;
+
+      .btn {
+        display: block;
+        padding: 0.625rem 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// bonus message
+.bonus-message {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  padding: 2.25rem 2.625rem;
+  border-radius: 0.5rem;
+  background-color: $bill-message;
+
+  p {
+    margin-bottom: 0;
+    color: #fff;
+  }
+
+  &__left {
+    font-size: 1.125rem;
+
+    @include until($md) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__center {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+
+    @include until($md) {
+      margin-bottom: 0.75rem;
+      text-align: left;
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  // &__left, &__center, &__button {
+  //   display: flex;
+  //   align-items: center;
+  // }
+}

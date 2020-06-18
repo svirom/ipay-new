@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/bill-result.css">
+
+    <title>Bill Utility Unsuccess</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги для оплаты</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                    </div>
+                    <div class="catalogue catalogue-mobile">
+                      <ul class="catalogue__list">
+                        <li><a class="dropdown-item catalogue__back" href="#">Назад</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__crossboard">Международные переводы</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__p2p">Переводы с карты на карту</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__p2r">Перевод по реквизитам</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__by-email">Переводы с карты на e-mail</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__by-phone">Перевод с карты на телефон</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__receive">Получить перевод</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__mobile">Мобильная связь</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__utility">Коммунальные услуги</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__kindergarten">Детские сады</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__internet">Интернет</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__tv">Телевидение</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__phone">Телефонная связь</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__security">Охрана</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__transport">Транспорт</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__penalty">Оплатить Штраф ГАИ</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__tourism">Туризм</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__banks">Банки и Страхование</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__education">Образование</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__business">Бизнес-услуги</a></li>
+                        <li><a href="#" class="catalogue__item catalogue__charity">Благотворительность</a></li>
+                      </ul>
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="form-search">
+          <h3 class="form-search__title">Поиск</h3>
+          <form action="">
+            <div class="form-group">
+              <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+              <label class="control-label form-label" for="search-icon">Поиск услуги</label>
+              <a href="#" class="form-search__search"></a>
+              <a href="#" class="form-search__cancel"></a>
+             </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- breadcrumb -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
+                <li class="breadcrumb-item"><a href="#">Услуги</a></li>
+                <li class="breadcrumb-item"><a href="#">Коммунальные услуги</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Оплата коммунальных услуг</li>
+              </ol>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- main area -->
+          <main class="col-lg-8">
+            <div class="row">
+
+              <div class="col-12 mt-2 mb-3 d-lg-none">
+                <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="bill-title">
+                  <h1>Оплата Коммунальной услуги по всем городам Украины </h1>
+                </div>
+              </div>
+
+              <div class="col-12 mt-1 mt-lg-3">
+
+                <div class="row">
+                  <div class="col-12 mt-4">
+                    <div class="bill-result icon-unsuccess">
+                      <div class="bill-result__row">
+                        <div class="bill-result__header">
+                          <h3>Платеж не удался!</h3>
+                          <p>Платеж №37473537</p>
+                        </div>
+                        <div class="bill-result__footer">
+                          <div class="alert alert-danger fade show" role="alert">
+                            <h3>Причина</h3>
+                            <ul class="list list--circle">
+                              <li class="mb-3">Платеж был отклонен вашим банком</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="archive-1" class="collapse">
+                        <div class="bill-result__collapse">
+                          <div class="table-responsive">
+                            <table class="table table-bill">
+                              <tbody>
+                                <tr>
+                                  <td>Назначение</td>
+                                  <td>Оплата коммунальной услуги</td>
+                                </tr>
+                                <tr>
+                                  <td>Сумма пополнения</td>
+                                  <td>75.00 грн.</td>
+                                </tr>
+                                <tr>
+                                  <td>Комиссия</td>
+                                  <td>2.00 грн.</td>
+                                </tr>
+                                <tr class="table-summary">
+                                  <td>К оплате</td>
+                                  <td>77.00 грн.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>                          
+                        </div>
+                      </div>
+                      <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Информация о платеже</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
+                <a href="#" class="btn btn-green btn-again">Попробовать снова</a>
+              </div>
+
+              <!-- aside mobile area -->
+              <div class="col-12 d-lg-none">
+                <div class="row">
+
+                  <div class="col-12 mb-3">
+                    <div class="alert alert-warning fade show" role="alert">
+                      <h3>Рекомендации</h3><br>
+                      <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
+                      <p>2. Попробуйте повторить платеж оплатив другой картой</p>
+                      <p>3. Попробовать оплаить через 24 часа.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div><!-- aside mobile area -->
+
+            </div>
+          </main><!-- main area -->
+          <!-- aside area -->
+          <aside class="col-lg-4 d-none d-lg-block mt-5">
+            <div class="row mt-5">
+
+              <div class="col-12 mt-4 mb-3">
+                <div class="alert alert-warning fade show" role="alert">
+                  <h3>Рекомендации</h3><br>
+                  <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
+                  <p>2. Попробуйте повторить платеж оплатив другой картой</p>
+                  <p>3. Попробовать оплаить через 24 часа.</p>
+                </div>
+              </div>
+
+            </div>
+          </aside><!-- aside area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>
