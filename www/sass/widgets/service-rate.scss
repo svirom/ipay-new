@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the service rate widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.service-rate {
+  &__rating {
+    overflow: auto;
+
+    .rating-input {
+      input {
+        width: 2.625rem;
+        height: 2.625rem;
+      }
+
+      label {
+        width: 2.625rem;
+        height: 2.625rem;
+        background-size: 2.625rem;
+
+        &:first-of-type {
+          margin-right: 0.5rem;
+        }
+
+        &:last-of-type {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    text-align: right;
+  }
+}
