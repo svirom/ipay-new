@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
   // catalogue mobile registered (temporary)
-  $('.catalogue__nextR').on('click', catalogueMobileR);
-  $('.catalogue__backR').on('click', catalogueMobileHideR);
+  $('.catalogue-mobile__nextR').on('click', catalogueMobileR);
+  $('.catalogue-mobile__backR').on('click', catalogueMobileHideR);
 
   function catalogueMobileR(e) {
     e.preventDefault();
 
-    var catalogueHeight = $('.navbar-collapse').find('.catalogue__backR').closest('.catalogue-mobile').height();
+    var catalogueHeight = $('.navbar-collapse').find('.catalogue-mobile__backR').closest('.catalogue-mobile').height();
 
     $(this).closest('.navbar-collapse').removeClass('overflow-hidden')
       .find('.catalogue-mobile').addClass('active').end()

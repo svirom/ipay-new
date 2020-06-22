@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/bill-message.css">
+    <link rel="stylesheet" href="/css/utility-main.css">
+    <link rel="stylesheet" href="/css/category-text.css">
 
     <title>Category Utility</title>
   </head>
@@ -114,8 +118,8 @@
         </div>
       </div>
 
-      <!-- breadcrumb -->
-      <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -127,14 +131,15 @@
             </div>
           </div>
         </div> 
-      </nav><!-- breadcrumb -->
+      </nav><!-- breadcrumb widget -->
 
       <!-- main content -->
       <div class="container main-content">
         <div class="row">
           <!-- aside area -->
           <aside class="col-lg-4 d-none d-lg-block">
-            <div class="catalogue">
+            <!-- catalogue widget -->
+            <div class="catalogue" id="catalogue-widget">
               <ul class="catalogue__list">
                 <li>
                   <a href="#" class="catalogue__item catalogue__crossboard">
@@ -237,337 +242,351 @@
                   </a>
                 </li>
               </ul>
-            </div>
+            </div><!-- catalogue widget -->
           </aside><!-- aside area -->
           <!-- main area -->
           <main class="col-lg-8">
+
             <div class="row">
 
-              <div class="col-12 mt-2 mb-3">
-                <div class="row align-items-center">
-                  <div class="col-auto d-lg-none">
-                    <a href="#" class="btn btn-link btn-back">Главная</a>
-                  </div>
-                  <div class="col">
-                    <div class="filter-region dropdown">
-                      <a href="#" class="filter-region__dropdown" id="dropdownRegion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Область</a>
-                      <span class="filter-region__result">Вся Украина</span>
-                      <div class="dropdown-menu" aria-labelledby="dropdownRegion">
-                        <a href="#" class="filter-region__item filter-region__item--all active">Вся Украина</a>
-                        <a href="#" class="filter-region__item">
-                          <span>Винницкая </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Волынская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Днепропетровская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Донецкая </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Житомирская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item filter-region__item--bottom filter-region__item--bottom-radius">
-                          <span>Закарпатская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Запорожская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Ивано-Франковская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Киевская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Кировоградская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Луганская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Львовская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item filter-region__item--bottom">
-                          <span>Николаевская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Одесская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Полтавская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Ровенская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Сумская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Тернопольская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item">
-                          <span>Харьковская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item filter-region__item--bottom">
-                          <span>Херсонская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item filter-region__item--right filter-region__item--top-radius">
-                          <span>Хмельницкая </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item filter-region__item--right">
-                          <span>Черкасская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item filter-region__item--right">
-                          <span>Черниговская </span>
-                          <span>область</span>
-                        </a>
-                        <a href="#" class="filter-region__item filter-region__item--right">
-                          <span>Черновицкая </span>
-                          <span>область</span>
-                        </a> 
+              <div class="col-12">
+                <!-- utility main widget -->
+                <div class="utility-main" id="utility-main-widget">
+                  <div class="row">
+
+                    <div class="col-12 mt-2 mb-3">
+                      <div class="row align-items-center">
+                        <div class="col-auto d-lg-none">
+                          <a href="#" class="btn btn-link btn-back">Главная</a>
+                        </div>
+                        <div class="col">
+                          <div class="filter-region dropdown">
+                            <a href="#" class="filter-region__dropdown" id="dropdownRegion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Область</a>
+                            <span class="filter-region__result">Вся Украина</span>
+                            <div class="dropdown-menu" aria-labelledby="dropdownRegion">
+                              <a href="#" class="filter-region__item filter-region__item--all active">Вся Украина</a>
+                              <a href="#" class="filter-region__item">
+                                <span>Винницкая </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Волынская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Днепропетровская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Донецкая </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Житомирская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item filter-region__item--bottom filter-region__item--bottom-radius">
+                                <span>Закарпатская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Запорожская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Ивано-Франковская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Киевская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Кировоградская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Луганская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Львовская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item filter-region__item--bottom">
+                                <span>Николаевская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Одесская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Полтавская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Ровенская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Сумская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Тернопольская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item">
+                                <span>Харьковская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item filter-region__item--bottom">
+                                <span>Херсонская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item filter-region__item--right filter-region__item--top-radius">
+                                <span>Хмельницкая </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item filter-region__item--right">
+                                <span>Черкасская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item filter-region__item--right">
+                                <span>Черниговская </span>
+                                <span>область</span>
+                              </a>
+                              <a href="#" class="filter-region__item filter-region__item--right">
+                                <span>Черновицкая </span>
+                                <span>область</span>
+                              </a> 
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 mt-2 mb-3">
-                <div class="category-title">
-                  <h1>Коммунальные услуги</h1>
-                  <p>Оплачивайте коммунальные услуги онлайн банковской картой.</p>
-                </div>
-              </div>
-
-              <div class="col-12 mb-2">
-                <div class="row align-items-center">
-                  <div class="col-auto"></div>
-                  <div class="col">
-                    <div class="filter-services dropdown">
-                      <a href="#" class="filter-services__dropdown filter-services__item--all active" id="dropdownUtility" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="filter-services__type">Тип услуги</span>
-                        <span class="filter-services__result">Все</span>
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownUtility">
-                        <a href="#" class="filter-services__item filter-services__item--all">Все услуги</a>
-                        <a href="#" class="filter-services__item filter-services__item--utility">Коммунальные</a>
-                        <a href="#" class="filter-services__item filter-services__item--electricity">Электричество</a>
-                        <a href="#" class="filter-services__item filter-services__item--water">Водоснабжение</a>
-                        <a href="#" class="filter-services__item filter-services__item--gas">Газ</a>
-                        <a href="#" class="filter-services__item filter-services__item--heating">Отопление</a>
+      
+                    <div class="col-12 mt-2 mb-3">
+                      <div class="category-title">
+                        <h1>Коммунальные услуги</h1>
+                        <p>Оплачивайте коммунальные услуги онлайн банковской картой.</p>
                       </div>
                     </div>
+      
+                    <div class="col-12 mb-2">
+                      <div class="row align-items-center">
+                        <div class="col-auto"></div>
+                        <div class="col">
+                          <div class="filter-services dropdown">
+                            <a href="#" class="filter-services__dropdown filter-services__item--all active" id="dropdownUtility" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="filter-services__type">Тип услуги</span>
+                              <span class="filter-services__result">Все</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownUtility">
+                              <a href="#" class="filter-services__item filter-services__item--all">Все услуги</a>
+                              <a href="#" class="filter-services__item filter-services__item--utility">Коммунальные</a>
+                              <a href="#" class="filter-services__item filter-services__item--electricity">Электричество</a>
+                              <a href="#" class="filter-services__item filter-services__item--water">Водоснабжение</a>
+                              <a href="#" class="filter-services__item filter-services__item--gas">Газ</a>
+                              <a href="#" class="filter-services__item filter-services__item--heating">Отопление</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="col-12">
+                      <div class="alert alert-warning alert-face alert-eyewink alert-dismissible fade show" role="alert">
+                        <strong>Кажется, мы знакомы :-)</strong><br>
+                        <a href="#"><strong>Авторизуйтесь в кабинет</strong></a> и получайте бонусы за оплату
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                    </div>
+      
+                    <div class="col-12">
+                      <div class="alert alert-success alert-face alert-smile alert-dismissible fade show" role="alert">
+                        <a href="#">Зарегистрируйтесь</a> в личном кабинете и получайте бонусы за каждую оплату!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                    </div>
+      
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київські енергетичні послуги Yasno</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgasenergy.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київводоканал</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київські енергетичні послуги Yasno</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgasenergy.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київводоканал</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <div class="banner banner-w100"></div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="col-12 text-center mt-2 mb-5">
+                      <div class="pages-more mb-3">
+                        <a href="#" class="btn btn-more">Показать еще</a>
+                      </div>
+                      <div class="pagination-wrapper">
+                        <ul class="pagination justify-content-center d-none d-lg-flex">
+                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                          <li class="page-item"><a class="page-link" href="#">6</a></li>
+                          <li class="page-item"><a class="page-link next-link" href="#">»</a></li>
+                        </ul>
+                        <ul class="pagination justify-content-center d-flex d-lg-none">
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">...</a></li>
+                          <li class="page-item"><a class="page-link" href="#">9</a></li>
+                          <li class="page-item">
+                            <a class="page-link next-link" href="#">»</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
                   </div>
-                </div>
+                </div><!-- utility main widget -->
               </div>
 
+            </div>
+
+            <div class="row">
               <div class="col-12">
-                <div class="alert alert-warning alert-face alert-eyewink alert-dismissible fade show" role="alert">
-                  <strong>Кажется, мы знакомы :-)</strong><br>
-                  <a href="#"><strong>Авторизуйтесь в кабинет</strong></a> и получайте бонусы за оплату
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="col-12">
-                <div class="alert alert-success alert-face alert-smile alert-dismissible fade show" role="alert">
-                  <a href="#">Зарегистрируйтесь</a> в личном кабинете и получайте бонусы за каждую оплату!
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="col-12">
-                <div class="row services-widget">
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/yasno.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київські енергетичні послуги Yasno</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgasenergy.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київводоканал</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/yasno.png" alt="">
-                      </span>
-                      <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgas.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київгаз</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgas.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київгаз</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/yasno.png" alt="">
-                      </span>
-                      <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgas.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київгаз</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/yasno.png" alt="">
-                      </span>
-                      <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/yasno.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київські енергетичні послуги Yasno</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgasenergy.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київводоканал</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/yasno.png" alt="">
-                      </span>
-                      <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgas.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київгаз</span>
-                    </a>
-                  </div>
-                  <div class="col-12 mb-3">
-                    <div class="banner banner-w100"></div>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgas.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київгаз</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/yasno.png" alt="">
-                      </span>
-                      <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgas.png" alt="">
-                      </span>
-                      <span class="bill-card__content">Київгаз</span>
-                    </a>
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <a href="#" class="bill-card">
-                      <span class="bill-card__img">
-                        <img src="img/providers/yasno.png" alt="">
-                      </span>
-                      <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 text-center mt-2 mb-5">
-                <div class="pages-more mb-3">
-                  <a href="#" class="btn btn-more">Показать еще</a>
-                </div>
-                <div class="pagination-wrapper">
-                  <ul class="pagination justify-content-center d-none d-lg-flex">
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link" href="#">6</a></li>
-                    <li class="page-item"><a class="page-link next-link" href="#">»</a></li>
-                  </ul>
-                  <ul class="pagination justify-content-center d-flex d-lg-none">
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">...</a></li>
-                    <li class="page-item"><a class="page-link" href="#">9</a></li>
-                    <li class="page-item">
-                      <a class="page-link next-link" href="#">»</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-12">
-                <div class="bill-message">
+                <!-- bill message widget -->
+                <div class="bill-message" id="bill-message-widget">
                   <div class="bill-message__content">
                     <h4>Не можете найти нужную услугу?</h4>
                     <p>Оплачивайте по банковским реквизитам организации любой счет</p>
@@ -575,55 +594,60 @@
                   <div class="bill-message__button">
                     <a href="#" class="btn btn-green">Оплатить по реквизитам</a>
                   </div>
-                </div>
+                </div><!-- bill message widget -->
               </div>
-
-              <div class="col-12 category-text mt-5">
-                <h2>Коммунальные услуги</h2>
-                <p>Оплата коммунальных услуг – это ежемесячная обязанность каждого жителя нашей страны. При этом, согласно нововведенным нормативно-правовым требованиям, наказания за несвоевременное или неполное перечисление средств еще более ужесточились. Именно поэтому очень важно знать, как проходит оплата коммунальных услуг в Украине, и как ее лучше осуществить.</p>
-                <h3>Как оплатить коммунальные услуги на iPay.ua?</h3>
-                <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
-                <h3>Какие коммунальных услуги можно оплатить онлайн?</h3>
-                <p>При помощи сервиса iPay.ua можно оплатить коммуналку с максимальным комфортом. Для пользователя потребуется лишь:</p>
-                <ul class="list list--circle">
-                  <li>банковская карточка Visa или MasterCard (подойдет карточка любого финансового учреждения);</li>
-                  <li>компьютер или смартфон с доступом к интернету.</li>
-                </ul>
-                <p>Оплатить можно любые коммунальные услуги, независимо от вашего места жительства.</p>
-                <h4>Газ</h4>
-                <p>Чтобы перевести деньги за газ, необходимо выбрать соответствующее коммунальное предприятие, на счет которого будут зачислены средства. Это можно сделать с помощью наименования или реквизитов компании (вся необходимая информация находится на квитанции). Для самой транзакции нужно просто ввести:</p>
-                <ul class="list list--circle">
-                  <li>номер лицевого счета;</li>
-                  <li>сумму;</li>
-                  <li>данные карты.</li>
-                </ul>
-                <p>Оплата счетов за другие коммунальные услуги осуществляется аналогично.</p>
-                <h4>Вода</h4>
-                <p>Стоит отметить, что деньги будут зачислены практически мгновенно. Если вы решите рассчитаться за воду онлайн, то вся операция практически не отнимет времени, а средства будут на указанном счету в течение 1-2 минут.</p>
-                <h4>Электроэнергия</h4>
-                <p>Очень важно своевременно перевести деньги на счет коммунального предприятия, ведь после 20 числа могут начисляться штрафные санкции. Чтобы не пропустить платеж и выполнить все с максимальным удобством, можно создать соответствующий шаблон. Так транзакция будет проведена в один клик.</p>
-                <h4>Отопление</h4>
-                <p>С наступлением отопительного сезона такие платежи больше всего беспокоят жителей Украины. Чтобы не переплачивать на и так огромных счетах, следует воспользоваться iPay – интернет-ресурс никакие дополнительные комиссии не взимаются, что поможет несколько сэкономить.</p>
-                <h4>Оплата всех коммунальных услуг за раз</h4>
-                <p>Стоит отметить, что если вы не знаете, как оплатить коммунальные услуги через интернет, то при помощи сервиса iPay все будет выполнено максимально просто и удобно. Для транзакции клиенту требуется минимум сведений (все необходимое есть на карточке и квитанции). При этом можно оплатить все коммунальные услуги за один раз – нужно лишь зарегистрироваться в личном кабинете и составить соответствующий шаблон. Так вы еще более сэкономите свое свободное время!</p>
-                <h3>В каких регионах можно оплатить за квартиру на iPay?</h3>
-                <p>На данный момент наш ресурс дает возможность оплатить коммунальные платежи для жителей всей Украины. Деньги будут зачислены на счет коммунальных служб в течение нескольких минут, независимо от того, в каком регионе вы проживаете.</p>
-                <h3>Можно ли оплатить коммуналку без комиссии?</h3>
-                <p>Но оперативность – не единственное преимущество iPay. Кроме того, следует также выделить и отсутствие дополнительных издержек на такие операции. Размер комиссии зависит исключительно от компании, которой вы перечисляете средства, в большинстве случаев она составляет 0 %. Таким образом, вы еще и экономите.</p>
-                <h3>Могу ли я получить квитанция после оплаты?</h3>
-                <p>После завершения операции на вашу электронную почту придет письмо с квитанцией. Она служит подтверждением тому, что транзакция была проведена. Документ можно хранить в электронном варианте, кроме того, при необходимости, его всегда можно будет распечатать. В личном кабинете можно получить доступ ко всем платежам, которые пользователь совершил через iPay.</p>
-                <p>Кроме того, используются новейшие технологии защиты конфиденциальной информации пользователей. Применение современных протоколов – это гарантия сохранности конфиденциальной информации. Как результат, можно выполнять платежи без страха перед злоумышленниками.</p>
-                <h3>iPay – лучший сервис для оплаты коммунальных услуг</h3>
-                <p>Если вы не знаете, где оплатить коммунальные услуги, интернет-ресурс iPay станет лучшим решением данной проблемы. Прежде всего, пользователи могут выполнить все необходимые транзакции в любом удобном месте, никуда идти не нужно. Кроме того, есть также и ряд других преимуществ:</p>
-                <ul class="list list--circle">
-                  <li>минимальные комиссии или их полное отсутствие;</li>
-                  <li>мгновенное зачисление средств;</li>
-                  <li>максимальная простота выполнения транзакций.</li>
-                </ul>
-                <p>Не тратьте свое время – выполняйте оплату коммунальных услуг с iPay.ua!</p>
-              </div>
-
             </div>
+
+            <div class="row">
+              <div class="col-12 mt-5">
+                <!-- category text widget -->
+                <div class="category-text" id="category-text-widget">
+                  <h2>Коммунальные услуги</h2>
+                  <p>Оплата коммунальных услуг – это ежемесячная обязанность каждого жителя нашей страны. При этом, согласно нововведенным нормативно-правовым требованиям, наказания за несвоевременное или неполное перечисление средств еще более ужесточились. Именно поэтому очень важно знать, как проходит оплата коммунальных услуг в Украине, и как ее лучше осуществить.</p>
+                  <h3>Как оплатить коммунальные услуги на iPay.ua?</h3>
+                  <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                  <h3>Какие коммунальных услуги можно оплатить онлайн?</h3>
+                  <p>При помощи сервиса iPay.ua можно оплатить коммуналку с максимальным комфортом. Для пользователя потребуется лишь:</p>
+                  <ul class="list list--circle">
+                    <li>банковская карточка Visa или MasterCard (подойдет карточка любого финансового учреждения);</li>
+                    <li>компьютер или смартфон с доступом к интернету.</li>
+                  </ul>
+                  <p>Оплатить можно любые коммунальные услуги, независимо от вашего места жительства.</p>
+                  <h4>Газ</h4>
+                  <p>Чтобы перевести деньги за газ, необходимо выбрать соответствующее коммунальное предприятие, на счет которого будут зачислены средства. Это можно сделать с помощью наименования или реквизитов компании (вся необходимая информация находится на квитанции). Для самой транзакции нужно просто ввести:</p>
+                  <ul class="list list--circle">
+                    <li>номер лицевого счета;</li>
+                    <li>сумму;</li>
+                    <li>данные карты.</li>
+                  </ul>
+                  <p>Оплата счетов за другие коммунальные услуги осуществляется аналогично.</p>
+                  <h4>Вода</h4>
+                  <p>Стоит отметить, что деньги будут зачислены практически мгновенно. Если вы решите рассчитаться за воду онлайн, то вся операция практически не отнимет времени, а средства будут на указанном счету в течение 1-2 минут.</p>
+                  <h4>Электроэнергия</h4>
+                  <p>Очень важно своевременно перевести деньги на счет коммунального предприятия, ведь после 20 числа могут начисляться штрафные санкции. Чтобы не пропустить платеж и выполнить все с максимальным удобством, можно создать соответствующий шаблон. Так транзакция будет проведена в один клик.</p>
+                  <h4>Отопление</h4>
+                  <p>С наступлением отопительного сезона такие платежи больше всего беспокоят жителей Украины. Чтобы не переплачивать на и так огромных счетах, следует воспользоваться iPay – интернет-ресурс никакие дополнительные комиссии не взимаются, что поможет несколько сэкономить.</p>
+                  <h4>Оплата всех коммунальных услуг за раз</h4>
+                  <p>Стоит отметить, что если вы не знаете, как оплатить коммунальные услуги через интернет, то при помощи сервиса iPay все будет выполнено максимально просто и удобно. Для транзакции клиенту требуется минимум сведений (все необходимое есть на карточке и квитанции). При этом можно оплатить все коммунальные услуги за один раз – нужно лишь зарегистрироваться в личном кабинете и составить соответствующий шаблон. Так вы еще более сэкономите свое свободное время!</p>
+                  <h3>В каких регионах можно оплатить за квартиру на iPay?</h3>
+                  <p>На данный момент наш ресурс дает возможность оплатить коммунальные платежи для жителей всей Украины. Деньги будут зачислены на счет коммунальных служб в течение нескольких минут, независимо от того, в каком регионе вы проживаете.</p>
+                  <h3>Можно ли оплатить коммуналку без комиссии?</h3>
+                  <p>Но оперативность – не единственное преимущество iPay. Кроме того, следует также выделить и отсутствие дополнительных издержек на такие операции. Размер комиссии зависит исключительно от компании, которой вы перечисляете средства, в большинстве случаев она составляет 0 %. Таким образом, вы еще и экономите.</p>
+                  <h3>Могу ли я получить квитанция после оплаты?</h3>
+                  <p>После завершения операции на вашу электронную почту придет письмо с квитанцией. Она служит подтверждением тому, что транзакция была проведена. Документ можно хранить в электронном варианте, кроме того, при необходимости, его всегда можно будет распечатать. В личном кабинете можно получить доступ ко всем платежам, которые пользователь совершил через iPay.</p>
+                  <p>Кроме того, используются новейшие технологии защиты конфиденциальной информации пользователей. Применение современных протоколов – это гарантия сохранности конфиденциальной информации. Как результат, можно выполнять платежи без страха перед злоумышленниками.</p>
+                  <h3>iPay – лучший сервис для оплаты коммунальных услуг</h3>
+                  <p>Если вы не знаете, где оплатить коммунальные услуги, интернет-ресурс iPay станет лучшим решением данной проблемы. Прежде всего, пользователи могут выполнить все необходимые транзакции в любом удобном месте, никуда идти не нужно. Кроме того, есть также и ряд других преимуществ:</p>
+                  <ul class="list list--circle">
+                    <li>минимальные комиссии или их полное отсутствие;</li>
+                    <li>мгновенное зачисление средств;</li>
+                    <li>максимальная простота выполнения транзакций.</li>
+                  </ul>
+                  <p>Не тратьте свое время – выполняйте оплату коммунальных услуг с iPay.ua!</p>
+                </div><!-- category text widget -->
+              </div>
+            </div>
+
           </main><!-- main area -->
         </div>
       </div><!-- main content -->

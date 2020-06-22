@@ -331,6 +331,7 @@
       z-index: 10;
       box-shadow: 0px 10px 12px $card-shadow;
       overflow-x: hidden;
+      background-color: #fff;
 
       &__menu {
         width: 100%;
@@ -419,6 +420,7 @@
     top: 14px;
   }
 }
+
 .main-nav__opener[aria-expanded="true"] {
   .nav-opener {
     span {
@@ -435,6 +437,368 @@
       top: 7px;
       @include transform(rotate(-45deg));
       background: $btn-red;
+    }
+  }
+}
+
+/* catalogue mobile */
+.catalogue-mobile {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  @include transform(translateX(100%));
+  background-color: #fff;
+  z-index: 2;
+  @include transition(all, 0.3s);
+
+  &.active {
+    @include transform(translateX(0));
+    @include transition(all, 0.3s);
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    padding: 0.938rem 1.5rem 0.938rem 3.65rem;
+    font-size: 1rem;
+    color: $heading-color;
+    line-height: 1.1875;
+
+    &:hover, &:active, &.active {
+      color: $heading-color;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #fff;
+
+      span {
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+
+    span {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $heading-color;
+      line-height: 1.1875;
+
+      &.badge {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        @include transform(translateY(-50%));
+        font-size: 0.75rem;
+
+        &~span {
+          padding-right: 3rem;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 1rem;
+      top: 50%;
+      @include transform(translateY(-50%));
+      background-image: url('../img/menu-catalogue.png');
+      background-size: 169px;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+  }
+
+  &__back {
+    border-bottom: 1px dashed $middle-grey;
+
+    &::before {
+      width: 10px;
+			height: 18px;
+      background: url('../img/button-icon.png') 0px -36px no-repeat;
+      background-size: auto;
+    }
+  }
+
+  &__crossboard {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -48px -49px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -72px -49px;
+      }
+    }
+  }
+
+  &__p2p {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -122px -49px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -122px -74px;
+      }
+    }
+  }
+
+  &__p2r {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: 0 -98px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -24px -98px;
+      }
+    }
+  }
+
+  &__by-email {
+    &::before {
+      width: 26px;
+			height: 25px;
+      background-position: -48px -1px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: 0 -25px;
+      }
+    }
+  }
+
+  &__by-phone {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -25px -25px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -49px -25px;
+      }
+    }
+  }
+
+  &__receive {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: 0 -50px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -24px -50px;
+      }
+    }
+  }
+
+  &__mobile {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -72px -74px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -96px -74px;
+      }
+    }
+  }
+
+  &__utility {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -75px -124px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -99px -124px;
+      }
+    }
+  }
+
+  &__kindergarten {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -97px -1px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -97px -25px;
+      }
+    }
+  }
+
+  &__internet {
+    &::before {
+      width: 24px;
+			height: 24px;
+      background-position: -24px -74px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -48px -74px;
+      }
+    }
+  }
+
+  &__tv {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -145px -100px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -50px -124px;
+      }
+    }
+  }
+
+  &__phone {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -48px -99px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -72px -99px;
+      }
+    }
+  }
+
+  &__security {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -96px -99px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -120px -99px;
+      }
+    }
+  }
+
+  &__transport {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -145px -49px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -145px -73px;
+      }
+    }
+  }
+
+  &__penalty {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -145px 0;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -145px -25px;
+      }
+    }
+  }
+
+  &__tourism {
+    &::before {
+      width: 25px;
+			height: 25px;
+      background-position: 0 -123px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -25px -123px;
+      }
+    }
+  }
+
+  &__banks {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -121px 0;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -121px -24px;
+      }
+    }
+  }
+
+  &__education {
+    &::before {
+      width: 24px;
+			height: 24px;
+      background-position: -97px -49px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: 0 -74px;
+      }
+    }
+  }
+
+  &__business {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: 0 0;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -24px 0;
+      }
+    }
+  }
+
+  &__charity {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -73px 0;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -73px -24px;
+      }
     }
   }
 }

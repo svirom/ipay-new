@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the catalogue templates widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.category-templates {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+
+  &__text, p, span {
+    color: $main-blue;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

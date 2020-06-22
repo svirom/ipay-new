@@ -1,0 +1,173 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the dashboard catalogue of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.catalogue-dashboard {
+  position: relative;
+  border-right: 1px solid $middle-grey;
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    padding: 0.937rem 1.5rem 0.938rem 4.25rem;
+    font-size: 1.125rem;
+    color: $heading-color;
+    line-height: 1.1667;
+    border-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:hover, &:active, &.active {
+      color: $light-grey;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: $btn-red;
+
+      span {
+        &:not(.badge) {
+          color: $light-grey;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &:not(.badge) {
+        color: $heading-color;
+      }
+
+      &.badge {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        @include transform(translateY(-50%));
+        font-size: 0.75rem;
+
+        &~span {
+          padding-right: 3rem;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0.625rem;
+      top: 50%;
+      @include transform(translateY(-50%));
+      background-image: url('../img/dashboard-catalogue.png');
+      background-size: 120px;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: -2px;
+      top: 0;
+      width: 3.125rem;
+      height: 100%;
+      box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+      border-radius: 8px;
+      background-color: #fff;
+    }
+  }
+
+  &__dashboard {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -72px 0;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -72px -25px;
+      }
+    }
+  }
+
+  &__archive {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: 0 0;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -24px 0;
+      }
+    }
+  }
+
+  &__templates {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: -49px -49px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -96px 0;
+      }
+    }
+  }
+
+  &__cards {
+    &::before {
+      width: 24px;
+			height: 24px;
+      background-position: -24px -25px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -48px -25px;
+      }
+    }
+  }
+
+  &__bonus {
+    &::before {
+      width: 24px;
+			height: 24px;
+      background-position: -48px 0;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: 0 -25px;
+      }
+    }
+  }
+
+  &__settings {
+    &::before {
+      width: 25px;
+			height: 25px;
+      background-position: 0 -49px;
+    }
+
+    &:hover, &:active, &.active, &--red {
+      &::before {
+        background-position: -24px -49px;
+      }
+    }
+  }
+}

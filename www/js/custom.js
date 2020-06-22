@@ -30,8 +30,8 @@ $(document).ready(function() {
   }
 
   // catalogue mobile
-  $('.catalogue__next').on('click', catalogueMobile);
-  $('.catalogue__back').on('click', catalogueMobileHide);
+  $('.catalogue-mobile__next').on('click', catalogueMobile);
+  $('.catalogue-mobile__back').on('click', catalogueMobileHide);
 
   function catalogueMobile(e) {
     e.preventDefault();
