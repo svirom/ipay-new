@@ -26,9 +26,13 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 
-    &:hover, &:active, &.active {
+    &:hover {
+      text-decoration: none;
+      background-color: $light-grey;
+    }
+
+    &:active, &.active {
       color: $light-grey;
-      font-weight: bold;
       text-decoration: none;
       background-color: $btn-red;
 
@@ -94,7 +98,7 @@
       background-position: -48px -49px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -72px -49px;
       }
@@ -108,7 +112,7 @@
       background-position: -122px -49px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -122px -74px;
       }
@@ -122,7 +126,7 @@
       background-position: 0 -98px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -24px -98px;
       }
@@ -136,7 +140,7 @@
       background-position: -48px -1px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: 0 -25px;
       }
@@ -150,7 +154,7 @@
       background-position: -25px -25px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -49px -25px;
       }
@@ -164,7 +168,7 @@
       background-position: 0 -50px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -24px -50px;
       }
@@ -178,7 +182,7 @@
       background-position: -72px -74px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -96px -74px;
       }
@@ -192,7 +196,7 @@
       background-position: -75px -124px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -99px -124px;
       }
@@ -206,7 +210,7 @@
       background-position: -97px -1px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -97px -25px;
       }
@@ -220,7 +224,7 @@
       background-position: -24px -74px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -48px -74px;
       }
@@ -234,7 +238,7 @@
       background-position: -145px -100px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -50px -124px;
       }
@@ -248,7 +252,7 @@
       background-position: -48px -99px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -72px -99px;
       }
@@ -262,7 +266,7 @@
       background-position: -96px -99px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -120px -99px;
       }
@@ -276,7 +280,7 @@
       background-position: -145px -49px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -145px -73px;
       }
@@ -290,7 +294,7 @@
       background-position: -145px 0;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -145px -25px;
       }
@@ -304,7 +308,7 @@
       background-position: 0 -123px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -25px -123px;
       }
@@ -318,7 +322,7 @@
       background-position: -121px 0;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -121px -24px;
       }
@@ -332,7 +336,7 @@
       background-position: -97px -49px;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: 0 -74px;
       }
@@ -346,7 +350,7 @@
       background-position: 0 0;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -24px 0;
       }
@@ -360,7 +364,7 @@
       background-position: -73px 0;
     }
 
-    &:hover, &:active, &.active, &--red {
+    &:active, &.active, &--red {
       &::before {
         background-position: -73px -24px;
       }

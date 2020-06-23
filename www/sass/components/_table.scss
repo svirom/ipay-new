@@ -60,46 +60,44 @@
     }
   }
 
-  &.table-bill {
-    @include until($sm) {
-      tr {
+  @include until($sm) {
+    tr {
+      td {
+        display: block;
+        padding: 0.5rem 0 0.25rem;
+
+        &:first-child {
+          padding-bottom: 0;
+          color: $main-blue;
+        }
+
+        &:last-child {
+          padding-top: 0.25rem;
+        }
+      }
+
+      &.table-title {
         td {
-          display: block;
-          padding: 0.5rem 0 0.25rem;
+          color: $heading-color;
+        }
+      }
+
+      &.table-summary {
+        display: flex;
+        margin-top: -1px;
+        
+        td {
+          padding: 1.05rem 0.75rem;
 
           &:first-child {
-            padding-bottom: 0;
-            color: $main-blue;
+            flex-grow: 1;
+            padding-left: 0;
+            color: $heading-color;
           }
 
           &:last-child {
-            padding-top: 0.25rem;
-          }
-        }
-
-        &.table-title {
-          td {
-            color: $heading-color;
-          }
-        }
-
-        &.table-summary {
-          display: flex;
-          margin-top: -1px;
-          
-          td {
-            padding: 1.05rem 0.75rem;
-
-            &:first-child {
-              flex-grow: 1;
-              padding-left: 0;
-              color: $heading-color;
-            }
-
-            &:last-child {
-              padding-right: 0;
-              text-align: right;
-            }
+            padding-right: 0;
+            text-align: right;
           }
         }
       }
