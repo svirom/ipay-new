@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/bill-result.css">
 
     <title>Bill Utility Unsuccess</title>
@@ -52,7 +52,7 @@
                   <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
                     <div class="navbar-collapse__menu">
                       <ul>
-                        <li><a class="dropdown-item dropdown-catalogue catalogue__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
                         <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
@@ -62,29 +62,109 @@
                         <span>или зарегистрироваться</span>
                       </a>
                     </div>
-                    <div class="catalogue catalogue-mobile">
-                      <ul class="catalogue__list">
-                        <li><a class="dropdown-item catalogue__back" href="#">Назад</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__crossboard">Международные переводы</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__p2p">Переводы с карты на карту</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__p2r">Перевод по реквизитам</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__by-email">Переводы с карты на e-mail</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__by-phone">Перевод с карты на телефон</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__receive">Получить перевод</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__mobile">Мобильная связь</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__utility">Коммунальные услуги</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__kindergarten">Детские сады</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__internet">Интернет</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__tv">Телевидение</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__phone">Телефонная связь</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__security">Охрана</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__transport">Транспорт</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__penalty">Оплатить Штраф ГАИ</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__tourism">Туризм</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__banks">Банки и Страхование</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__education">Образование</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__business">Бизнес-услуги</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__charity">Благотворительность</a></li>
+                    <div class="catalogue-mobile">
+                      <ul class="catalogue-mobile__list">
+                        <li><a class="dropdown-item catalogue-mobile__back" href="#">Назад</a></li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__crossboard">
+                            <span>Международные переводы</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2p">
+                            <span>Переводы с карты на карту</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2r">
+                            <span>Перевод по реквизитам</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-email">
+                            <span>Переводы с карты на e-mail</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-phone">
+                            <span>Перевод с карты на телефон</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__receive">
+                            <span>Получить перевод</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__mobile">
+                            <span>Мобильная связь</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__utility">
+                            <span>Коммунальные услуги</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__kindergarten">
+                            <span>Детские сады</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__internet">
+                            <span>Интернет</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tv">
+                            <span>Телевидение</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__phone">
+                            <span>Телефонная связь</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__security">
+                            <span>Охрана</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__transport">
+                            <span>Транспорт</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__penalty">
+                            <span>Оплатить Штраф ГАИ</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tourism">
+                            <span>Туризм</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__banks">
+                            <span>Банки и Страхование</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__education">
+                            <span>Образование</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__business">
+                            <span>Бизнес-услуги</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__charity">
+                            <span>Благотворительность</span>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>      
@@ -114,8 +194,8 @@
         </div>
       </div>
 
-      <!-- breadcrumb -->
-      <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -128,7 +208,7 @@
             </div>
           </div>
         </div> 
-      </nav><!-- breadcrumb -->
+      </nav><!-- breadcrumb widget -->
 
       <!-- main content -->
       <div class="container main-content">
@@ -137,101 +217,117 @@
           <main class="col-lg-8">
             <div class="row">
 
-              <div class="col-12 mt-2 mb-3 d-lg-none">
-                <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
-              </div>
+              <div class="col-12">
+                <!-- bill main widget -->
+                <div class="bill-main" id="bill-main-widget">
+                  <div class="row">
 
-              <div class="col-12 mb-3">
-                <div class="bill-title">
-                  <h1>Оплата Коммунальной услуги по всем городам Украины </h1>
-                </div>
-              </div>
-
-              <div class="col-12 mt-1 mt-lg-3">
-
-                <div class="row">
-                  <div class="col-12 mt-4">
-                    <div class="bill-result icon-unsuccess">
-                      <div class="bill-result__row">
-                        <div class="bill-result__header">
-                          <h3>Платеж не удался!</h3>
-                          <p>Платеж №37473537</p>
-                        </div>
-                        <div class="bill-result__footer">
-                          <div class="alert alert-danger fade show" role="alert">
-                            <h3>Причина</h3>
-                            <ul class="list list--circle">
-                              <li class="mb-3">Платеж был отклонен вашим банком</li>
-                            </ul>
-                          </div>
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
+                    </div>
+      
+                    <div class="col-12 mb-3">
+                      <div class="bill-title">
+                        <h1>Оплата Коммунальной услуги по всем городам Украины </h1>
+                      </div>
+                    </div>
+      
+                    <div class="col-12 mt-1 mt-lg-3">
+      
+                      <div class="row">
+                        <div class="col-12 mt-4">
+                          <!-- bill result widget -->
+                          <div class="bill-result icon-unsuccess" id="bill-result-widget">
+                            <div class="bill-result__row">
+                              <div class="bill-result__header">
+                                <h3>Платеж не удался!</h3>
+                                <p>Платеж №37473537</p>
+                              </div>
+                              <div class="bill-result__footer">
+                                <div class="alert alert-danger fade show" role="alert">
+                                  <h3>Причина</h3>
+                                  <ul class="list list--circle">
+                                    <li class="mb-3">Платеж был отклонен вашим банком</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="archive-1" class="collapse">
+                              <div class="bill-result__collapse">
+                                <div class="table-responsive">
+                                  <table class="table">
+                                    <tbody>
+                                      <tr>
+                                        <td>Назначение</td>
+                                        <td>Оплата коммунальной услуги</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Сумма пополнения</td>
+                                        <td>75.00 грн.</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Комиссия</td>
+                                        <td>2.00 грн.</td>
+                                      </tr>
+                                      <tr class="table-summary">
+                                        <td>К оплате</td>
+                                        <td>77.00 грн.</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>                          
+                              </div>
+                            </div>
+                            <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Информация о платеже</div>
+                          </div><!-- bill result widget -->
                         </div>
                       </div>
-                      <div id="archive-1" class="collapse">
-                        <div class="bill-result__collapse">
-                          <div class="table-responsive">
-                            <table class="table table-bill">
-                              <tbody>
-                                <tr>
-                                  <td>Назначение</td>
-                                  <td>Оплата коммунальной услуги</td>
-                                </tr>
-                                <tr>
-                                  <td>Сумма пополнения</td>
-                                  <td>75.00 грн.</td>
-                                </tr>
-                                <tr>
-                                  <td>Комиссия</td>
-                                  <td>2.00 грн.</td>
-                                </tr>
-                                <tr class="table-summary">
-                                  <td>К оплате</td>
-                                  <td>77.00 грн.</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>                          
-                        </div>
-                      </div>
-                      <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Информация о платеже</div>
+      
                     </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
-                <a href="#" class="btn btn-green btn-again">Попробовать снова</a>
-              </div>
-
-              <!-- aside mobile area -->
-              <div class="col-12 d-lg-none">
-                <div class="row">
-
-                  <div class="col-12 mb-3">
-                    <div class="alert alert-warning fade show" role="alert">
-                      <h3>Рекомендации</h3><br>
-                      <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
-                      <p>2. Попробуйте повторить платеж оплатив другой картой</p>
-                      <p>3. Попробовать оплаить через 24 часа.</p>
+      
+                    <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
+                      <a href="#" class="btn btn-green btn-again">Попробовать снова</a>
                     </div>
-                  </div>
 
-                </div>
-              </div><!-- aside mobile area -->
+                  </div>
+                </div><!-- bill main widget -->
+              </div>
 
             </div>
+
+            <!-- aside mobile area -->
+            <div class="row d-lg-none">
+
+              <div class="col-12 mb-3">
+                <!-- warning message widget -->
+                <div id="warning-message-widget">
+                  <div class="alert alert-warning fade show" role="alert">
+                    <h3>Рекомендации</h3><br>
+                    <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
+                    <p>2. Попробуйте повторить платеж оплатив другой картой</p>
+                    <p>3. Попробовать оплаить через 24 часа.</p>
+                  </div>
+                </div><!-- warning message widget -->
+              </div>
+
+            </div><!-- aside mobile area -->
+
           </main><!-- main area -->
+
           <!-- aside area -->
           <aside class="col-lg-4 d-none d-lg-block mt-5">
             <div class="row mt-5">
 
               <div class="col-12 mt-4 mb-3">
-                <div class="alert alert-warning fade show" role="alert">
-                  <h3>Рекомендации</h3><br>
-                  <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
-                  <p>2. Попробуйте повторить платеж оплатив другой картой</p>
-                  <p>3. Попробовать оплаить через 24 часа.</p>
-                </div>
+                <!-- warning message widget -->
+                <div id="warning-message-widget">
+                  <div class="alert alert-warning fade show" role="alert">
+                    <h3>Рекомендации</h3><br>
+                    <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
+                    <p>2. Попробуйте повторить платеж оплатив другой картой</p>
+                    <p>3. Попробовать оплаить через 24 часа.</p>
+                  </div>
+                </div><!-- warning message widget -->
               </div>
 
             </div>

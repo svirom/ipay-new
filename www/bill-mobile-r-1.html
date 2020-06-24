@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/bill-utility.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/progressbar.css">
     <link rel="stylesheet" href="/css/service-provider.css">
     <link rel="stylesheet" href="/css/lightslider.min.css">
     <link rel="stylesheet" href="/css/templates-carousel.css">
@@ -68,7 +68,7 @@
                   <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
                     <div class="navbar-collapse__menu">
                       <ul>
-                        <li><a class="dropdown-item dropdown-catalogue catalogue__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
                         <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
                         <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
@@ -79,29 +79,109 @@
                         <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
                     </div>
-                    <div class="catalogue catalogue-mobile">
-                      <ul class="catalogue__list">
-                        <li><a class="dropdown-item catalogue__back" href="#">Назад</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__crossboard">Международные переводы</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__p2p">Переводы с карты на карту</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__p2r">Перевод по реквизитам</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__by-email">Переводы с карты на e-mail</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__by-phone">Перевод с карты на телефон</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__receive">Получить перевод</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__mobile">Мобильная связь</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__utility">Коммунальные услуги</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__kindergarten">Детские сады</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__internet">Интернет</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__tv">Телевидение</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__phone">Телефонная связь</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__security">Охрана</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__transport">Транспорт</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__penalty">Оплатить Штраф ГАИ</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__tourism">Туризм</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__banks">Банки и Страхование</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__education">Образование</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__business">Бизнес-услуги</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__charity">Благотворительность</a></li>
+                    <div class="catalogue-mobile">
+                      <ul class="catalogue-mobile__list">
+                        <li><a class="dropdown-item catalogue-mobile__back" href="#">Назад</a></li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__crossboard">
+                            <span>Международные переводы</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2p">
+                            <span>Переводы с карты на карту</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2r">
+                            <span>Перевод по реквизитам</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-email">
+                            <span>Переводы с карты на e-mail</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-phone">
+                            <span>Перевод с карты на телефон</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__receive">
+                            <span>Получить перевод</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__mobile">
+                            <span>Мобильная связь</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__utility">
+                            <span>Коммунальные услуги</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__kindergarten">
+                            <span>Детские сады</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__internet">
+                            <span>Интернет</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tv">
+                            <span>Телевидение</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__phone">
+                            <span>Телефонная связь</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__security">
+                            <span>Охрана</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__transport">
+                            <span>Транспорт</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__penalty">
+                            <span>Оплатить Штраф ГАИ</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tourism">
+                            <span>Туризм</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__banks">
+                            <span>Банки и Страхование</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__education">
+                            <span>Образование</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__business">
+                            <span>Бизнес-услуги</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__charity">
+                            <span>Благотворительность</span>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>      
@@ -131,8 +211,8 @@
         </div>
       </div>
 
-      <!-- breadcrumb -->
-      <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -145,323 +225,180 @@
             </div>
           </div>
         </div> 
-      </nav><!-- breadcrumb -->
+      </nav><!-- breadcrumb widget -->
 
       <!-- main content -->
       <div class="container main-content">
         <div class="row">
           <!-- main area -->
           <main class="col-lg-8">
+
             <div class="row">
 
-              <div class="col-12 mt-2 mb-3 d-lg-none">
-                <a href="#" class="btn btn-link btn-back">Пополнение телефона</a>
-              </div>
-
-              <div class="col-12 mb-3">
-                <div class="bill-title">
-                  <h1>Пополнение счета "Киевстар"</h1>
-                  <p>Пополнить счет Киевстар можно с помощью кредитной или дебетовой карты (Visa, MasterCard или ПРОСТІР).</p>
-                </div>
-              </div>
-
               <div class="col-12">
-                <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
-                  <strong>11 человек</strong> оплачивают услугу прямо сейчас
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-              </div>
+                <!-- bill main widget -->
+                <div class="bill-main" id="bill-main-widget">
+                  <div class="row">
 
-              <div class="col-12 mt-3 mb-5 d-none d-sm-block">
-                <div class="progress-payment progress-payment--three">
-                  <div class="progress">
-                    <div class="progress-textline">
-                      <span class="progress-text active">Ввод данных плательщика</span>
-                      <span class="progress-text">Ввод данных карты</span>
-                      <span class="progress-text">Подтверждение платежа</span>
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Пополнение телефона</a>
                     </div>
-                    <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-steps">
-                      <span class="progress-step active"></span>
-                      <span class="progress-step"></span>
-                      <span class="progress-step"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 my-3 d-sm-none">
-                <div class="progress-mobile progress-mobile--one-third">
-                  <div class="progress-mobile__circle">
-                    <div class="progress-mobile__value">
-                      <div>1/3</div>
-                    </div>
-                  </div>
-                  <div class="progress-mobile__text">
-                    <span class="progress-mobile__current">Ввод данных плательщика</span>
-                    <span class="progress-mobile__next">Далее: Ввод данных карты</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 mt-1 mb-5 mt-lg-3 text-center">
-
-                <div class="row">
-                  <div class="col-12 pb-3 d-none d-lg-block">
-                    <h2>Ввод данных плательщика</h2>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-12 text-left">
-                    <div class="templates-carousel">
-
-                      <div class="templates-slider">
-                        <div class="templates-slide">
-                          <div class="template-card-wrapper dropdown">
-                            <div class="bill-card template-card">
-                              <span class="bill-card__img catalogue__security catalogue__security--red"></span>
-                              <span class="bill-card__content">
-                                <span class="template-card__text">Мой Киевстар</span>
-                                <span class="template-card__amount">100.00 грн</span>
-                              </span>
-                              <a href="#" class="template-card__button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                              <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Редактировать</a>
-                                <a href="#" class="dropdown-item">Удалить</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="templates-slide">
-                          <div class="template-card-wrapper dropdown">
-                            <div href="#" class="bill-card template-card">
-                              <span class="bill-card__img catalogue__security catalogue__security--red"></span>
-                              <span class="bill-card__content">
-                                <span class="template-card__text">Киевстар жены</span>
-                                <span class="template-card__amount">100.00 грн</span>
-                              </span>
-                              <a href="#" class="template-card__button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                              <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Редактировать</a>
-                                <a href="#" class="dropdown-item">Удалить</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="templates-slide">
-                          <div class="template-card-wrapper dropdown">
-                            <div class="bill-card template-card">
-                              <span class="bill-card__img catalogue__security catalogue__security--red"></span>
-                              <span class="bill-card__content">
-                                <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
-                                <span class="template-card__amount">100.00 грн</span>
-                              </span>
-                              <a href="#" class="template-card__button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                              <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Редактировать</a>
-                                <a href="#" class="dropdown-item">Удалить</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+      
+                    <div class="col-12 mb-3">
+                      <div class="bill-title">
+                        <h1>Пополнение счета "Киевстар"</h1>
+                        <p>Пополнить счет Киевстар можно с помощью кредитной или дебетовой карты (Visa, MasterCard или ПРОСТІР).</p>
                       </div>
+                    </div>
+      
+                    <div class="col-12">
+                      <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
+                        <strong>11 человек</strong> оплачивают услугу прямо сейчас
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                    </div>
 
-                      <!-- <div id="templates-carousel" class="carousel slide w-100">
-                        <div class="carousel-inner w-100" role="listbox">
+                    <div class="col-12">
+                      <!-- progressbar widget -->
+                      <div id="progressbar-widget">
+                        <div class="row">
 
-                          <div class="carousel-item active">
-                            <div class="col-lg-6">
-                              <div class="template-card-wrapper dropdown">
-                                <a href="#" class="bill-card template-card" id="dropdownBill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <span class="bill-card__img catalogue__security catalogue__security--red"></span>
-                                  <span class="bill-card__content">
-                                    <span class="template-card__text">Мой Киевстар</span>
-                                    <span class="template-card__amount">100.00 грн</span>
-                                  </span>
-                                  <span class="template-card__button"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownBill">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
+                          <div class="col-12 mt-3 mb-5 d-none d-sm-block">
+                            <div class="progress-payment progress-payment--three">
+                              <div class="progress">
+                                <div class="progress-textline">
+                                  <span class="progress-text active">Ввод данных плательщика</span>
+                                  <span class="progress-text">Ввод данных карты</span>
+                                  <span class="progress-text">Подтверждение платежа</span>
+                                </div>
+                                <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-steps">
+                                  <span class="progress-step active"></span>
+                                  <span class="progress-step"></span>
+                                  <span class="progress-step"></span>
                                 </div>
                               </div>
                             </div>
                           </div>
-
-                          <div class="carousel-item">
-                            <div class="col-lg-6">
-                              <div class="template-card-wrapper dropdown">
-                                <a href="#" class="bill-card template-card" id="dropdownBill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <span class="bill-card__img catalogue__security catalogue__security--red"></span>
-                                  <span class="bill-card__content">
-                                    <span class="template-card__text">Телефон моей жены</span>
-                                    <span class="template-card__amount">100.00 грн</span>
-                                  </span>
-                                  <span class="template-card__button"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownBill">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
+                          <div class="col-12 my-3 d-sm-none">
+                            <div class="progress-mobile progress-mobile--one-third">
+                              <div class="progress-mobile__circle">
+                                <div class="progress-mobile__value">
+                                  <div>1/3</div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-
-                          <div class="carousel-item">
-                            <div class="col-lg-6">
-                              <div class="template-card-wrapper dropdown">
-                                <a href="#" class="bill-card template-card" id="dropdownBill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <span class="bill-card__img catalogue__security catalogue__security--red"></span>
-                                  <span class="bill-card__content">
-                                    <span class="template-card__text">Мой Киевстар 2</span>
-                                    <span class="template-card__amount">100.00 грн</span>
-                                  </span>
-                                  <span class="template-card__button"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownBill">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="carousel-item">
-                            <div class="col-lg-6">
-                              <div class="template-card-wrapper dropdown">
-                                <a href="#" class="bill-card template-card" id="dropdownBill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <span class="bill-card__img catalogue__security catalogue__security--red"></span>
-                                  <span class="bill-card__content">
-                                    <span class="template-card__text">Мой Киевстар 3</span>
-                                    <span class="template-card__amount">100.00 грн</span>
-                                  </span>
-                                  <span class="template-card__button"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownBill">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
-                                </div>
+                              <div class="progress-mobile__text">
+                                <span class="progress-mobile__current">Ввод данных плательщика</span>
+                                <span class="progress-mobile__next">Далее: Ввод данных карты</span>
                               </div>
                             </div>
                           </div>
 
                         </div>
-                        <a class="carousel-control-prev bg-dark w-auto" href="#templates-carousel" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next bg-dark w-auto" href="#templates-carousel" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </div> -->
-
+                      </div><!-- progressbar widget -->
                     </div>
-                  </div>
-                </div>
-
-                <div class="row justify-content-center">
-                  <div class="col-md-6">
-                    <div class="bill-utility">
-                      <form action="/" id="utility-form">
-                        <div class="form-group mb-4 has-success">
-                          <input type="tel" class="form-control form-input" id="bill-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380(67)759-32-08">
-                          <label class="control-label form-label" for="bill-phone">Номер телефона</label>
-                         </div>
-                         <div class="form-group mb-4 has-success">
-                          <input type="tel" class="form-control form-input input-icon-right" id="bill-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100.00">
-                          <label class="control-label form-label" for="bill-amount">Сумма</label>
-                          <label class="label-icon-right label-currency">грн</label>
-                         </div>
-                         <button type="submit" class="btn btn-block btn-green btn-next">Далее</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- aside mobile area -->
-              <div class="col-12 d-lg-none">
-                <div class="row">
-
-                  <div class="col-12 mb-3">
-                    <div class="service-provider">
-                      <div class="service-provider__rating">
-                        <p class="service-provider__title">Рейтинг услуги</p>
-                        <div class="rating-input">
-                          <span class="rating-input__star active"></span>
-                          <span class="rating-input__star active"></span>
-                          <span class="rating-input__star active"></span>
-                          <span class="rating-input__star active"></span>
-                          <span class="rating-input__star active-half"></span>
-                          <span class="rating-input__result small">
-                            <span>4.4</span>
-                            <span> / </span>
-                            <span>5</span>
-                          </span>
-                        </div>
-                        <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
-                      </div>
-                      <div class="service-provider__card">
-                        <div class="provider-card">
-                          <div class="provider-card__title">
-                            <p class="small">Поставщик услуги</p>
-                          </div>
-                          <div class="provider-card__body">
-                            <div class="provider-card__img">
-                              <img src="img/providers/kyivgaz-img.png" alt="">
-                            </div>
-                            <div class="provider-card__content">
-                              <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
-                              <div class="provider-card__tel">+380(342)50-62-00</div>
-                              <div class="provider-card__url"><a href="https://tke.if.ua" class="btn btn-link">tke.if.ua</a></div>
-                            </div>
-                          </div>
+      
+                    <div class="col-12 mt-1 mb-5 mt-lg-3 text-center">
+      
+                      <div class="row">
+                        <div class="col-12 pb-3 d-none d-lg-block">
+                          <h2>Ввод данных плательщика</h2>
                         </div>
                       </div>
-                      <div class="service-provider__payments">
-                        <p class="service-provider__title">Успешных оплат КиевГазЭнерджи</p>
-                        <span class="service-provider__number">2 334 721</span>
-                        <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+      
+                      <div class="row">
+                        <div class="col-12 text-left">
+                          <!-- templates carousel widget -->
+                          <div class="templates-carousel" id="templates-carousel-widget">
+      
+                            <div class="templates-slider">
+                              <div class="templates-slide">
+                                <div class="template-card-wrapper dropdown">
+                                  <div class="bill-card template-card">
+                                    <span class="bill-card__img catalogue__security catalogue__security--red"></span>
+                                    <span class="bill-card__content">
+                                      <span class="template-card__text">Мой Киевстар</span>
+                                      <span class="template-card__amount">100.00 грн</span>
+                                    </span>
+                                    <a href="#" class="template-card__button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                    <div class="dropdown-menu">
+                                      <a href="#" class="dropdown-item">Редактировать</a>
+                                      <a href="#" class="dropdown-item">Удалить</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="templates-slide">
+                                <div class="template-card-wrapper dropdown">
+                                  <div href="#" class="bill-card template-card">
+                                    <span class="bill-card__img catalogue__security catalogue__security--red"></span>
+                                    <span class="bill-card__content">
+                                      <span class="template-card__text">Киевстар жены</span>
+                                      <span class="template-card__amount">100.00 грн</span>
+                                    </span>
+                                    <a href="#" class="template-card__button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                    <div class="dropdown-menu">
+                                      <a href="#" class="dropdown-item">Редактировать</a>
+                                      <a href="#" class="dropdown-item">Удалить</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="templates-slide">
+                                <div class="template-card-wrapper dropdown">
+                                  <div class="bill-card template-card">
+                                    <span class="bill-card__img catalogue__security catalogue__security--red"></span>
+                                    <span class="bill-card__content">
+                                      <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
+                                      <span class="template-card__amount">100.00 грн</span>
+                                    </span>
+                                    <a href="#" class="template-card__button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                    <div class="dropdown-menu">
+                                      <a href="#" class="dropdown-item">Редактировать</a>
+                                      <a href="#" class="dropdown-item">Удалить</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+      
+                          </div><!-- templates carousel widget -->
+                        </div>
                       </div>
+      
+                      <div class="row justify-content-center">
+                        <div class="col-md-6">
+                          <form action="/" id="utility-form">
+                            <div class="form-group mb-4 has-success">
+                              <input type="tel" class="form-control form-input" id="bill-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380(67)759-32-08">
+                              <label class="control-label form-label" for="bill-phone">Номер телефона</label>
+                            </div>
+                            <div class="form-group mb-4 has-success">
+                              <input type="tel" class="form-control form-input input-icon-right" id="bill-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100.00">
+                              <label class="control-label form-label" for="bill-amount">Сумма</label>
+                              <label class="label-icon-right label-currency">грн</label>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-green btn-next">Далее</button>
+                          </form>
+                        </div>
+                      </div>
+      
                     </div>
+                    
                   </div>
-
-                </div>
-              </div><!-- aside mobile area -->
-
-              <div class="col-12 category-text mt-4 mt-lg-5">
-                <p>В современном мире без мобильного телефона не обойтись. Но бывает так, что деньги на счету заканчиваются в самый неподходящий момент. Для решения такой проблемы идеально подойдет сервис iPay.ua – с нашей помощью пополнение мобильного отнимет всего пару минут!</p>
-                <h3>Как пополнить мобильный с карты?</h3>
-                <p>Для выполнения такой операции необходимо обладать кредитной или дебетовой банковской карточкой Visa или MasterCard – при этом неважно, кем она была выдана. Все можно выполнить с помощью мобильного телефона или компьютера, требуется только доступ к интернету.</p>                
-                <p>Никогда еще оплата мобильной связи не была столь простой, пользователям iPay.ua нужно лишь:</p>
-                <ul class="list list--circle">
-                  <li>выбрать оператора мобильной связи из списка;</li>
-                  <li>ввести номер телефона и сумму;</li>
-                  <li>указать данные с карточки (номер, срок действия и CVV-код).</li>
-                </ul>
-                <p>После этого нужно нажать на кнопку «оплатить». Вся операция длится не более нескольких минут, а оперативность зачисления средств – главное достоинство нашего ресурса. Наш ресурс отлично подойдет для тех ситуаций, когда деньги на телефоне нужны уже сейчас.</p>
-                <h3>Какие операторы доступны к оплате?</h3>
-                <p>Наш интернет-ресурс дает возможность пополнить счет через карту для пользователей всех популярных в Украине мобильных операторов, включая:</p>
-                <ul class="list list--circle">
-                  <li>полное и своевременное зачисление средств;</li>
-                  <li>мгновенное выполнение транзакций;</li>
-                  <li>максимальную защиту персональных данных.</li>
-                </ul>
-                <p>iPay.ua – ваш лучший выбор, когда нужно пополнить счет на мобильном телефоне!</p>
+                </div><!-- bill main widget -->
               </div>
 
             </div>
-          </main><!-- main area -->
-          <!-- aside area -->
-          <aside class="col-lg-4 d-none d-lg-block">
-            <div class="row">
+
+            <!-- aside mobile area -->
+            <div class="row d-lg-none">
 
               <div class="col-12 mb-3">
-                <div class="service-provider">
+                <!-- service provider widget -->
+                <div class="service-provider" id="service-provider-widget">
                   <div class="service-provider__rating">
                     <p class="service-provider__title">Рейтинг услуги</p>
                     <div class="rating-input">
@@ -500,7 +437,85 @@
                     <span class="service-provider__number">2 334 721</span>
                     <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
                   </div>
-                </div>
+                </div><!-- service provider widget -->
+              </div>
+
+            </div><!-- aside mobile area -->
+
+            <div class="row">
+              <div class="col-12 mt-4 mt-lg-5">
+                <!-- category text widget -->
+                <div class="category-text" id="category-text-widget">
+                  <p>В современном мире без мобильного телефона не обойтись. Но бывает так, что деньги на счету заканчиваются в самый неподходящий момент. Для решения такой проблемы идеально подойдет сервис iPay.ua – с нашей помощью пополнение мобильного отнимет всего пару минут!</p>
+                  <h3>Как пополнить мобильный с карты?</h3>
+                  <p>Для выполнения такой операции необходимо обладать кредитной или дебетовой банковской карточкой Visa или MasterCard – при этом неважно, кем она была выдана. Все можно выполнить с помощью мобильного телефона или компьютера, требуется только доступ к интернету.</p>                
+                  <p>Никогда еще оплата мобильной связи не была столь простой, пользователям iPay.ua нужно лишь:</p>
+                  <ul class="list list--circle">
+                    <li>выбрать оператора мобильной связи из списка;</li>
+                    <li>ввести номер телефона и сумму;</li>
+                    <li>указать данные с карточки (номер, срок действия и CVV-код).</li>
+                  </ul>
+                  <p>После этого нужно нажать на кнопку «оплатить». Вся операция длится не более нескольких минут, а оперативность зачисления средств – главное достоинство нашего ресурса. Наш ресурс отлично подойдет для тех ситуаций, когда деньги на телефоне нужны уже сейчас.</p>
+                  <h3>Какие операторы доступны к оплате?</h3>
+                  <p>Наш интернет-ресурс дает возможность пополнить счет через карту для пользователей всех популярных в Украине мобильных операторов, включая:</p>
+                  <ul class="list list--circle">
+                    <li>полное и своевременное зачисление средств;</li>
+                    <li>мгновенное выполнение транзакций;</li>
+                    <li>максимальную защиту персональных данных.</li>
+                  </ul>
+                  <p>iPay.ua – ваш лучший выбор, когда нужно пополнить счет на мобильном телефоне!</p>
+                </div><!-- category text widget -->
+              </div>
+            </div>
+
+          </main><!-- main area -->
+          
+          <!-- aside area -->
+          <aside class="col-lg-4 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-3">
+                <!-- service-provider-widget -->
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__rating">
+                    <p class="service-provider__title">Рейтинг услуги</p>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result small">
+                        <span>4.4</span>
+                        <span> / </span>
+                        <span>5</span>
+                      </span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__title">
+                        <p class="small">Поставщик услуги</p>
+                      </div>
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__url"><a href="https://tke.if.ua" class="btn btn-link">tke.if.ua</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат КиевГазЭнерджи</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                </div><!-- service-provider-widget -->
               </div>
 
               <div class="col-12 mb-3">

@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/bill-result.css">
     <link rel="stylesheet" href="/css/bill-message.css">
     <link rel="stylesheet" href="/css/service-rate.css">
@@ -67,7 +67,7 @@
                   <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
                     <div class="navbar-collapse__menu">
                       <ul>
-                        <li><a class="dropdown-item dropdown-catalogue catalogue__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
                         <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
                         <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
@@ -78,29 +78,109 @@
                         <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
                     </div>
-                    <div class="catalogue catalogue-mobile">
-                      <ul class="catalogue__list">
-                        <li><a class="dropdown-item catalogue__back" href="#">Назад</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__crossboard">Международные переводы</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__p2p">Переводы с карты на карту</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__p2r">Перевод по реквизитам</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__by-email">Переводы с карты на e-mail</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__by-phone">Перевод с карты на телефон</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__receive">Получить перевод</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__mobile">Мобильная связь</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__utility">Коммунальные услуги</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__kindergarten">Детские сады</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__internet">Интернет</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__tv">Телевидение</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__phone">Телефонная связь</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__security">Охрана</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__transport">Транспорт</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__penalty">Оплатить Штраф ГАИ</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__tourism">Туризм</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__banks">Банки и Страхование</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__education">Образование</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__business">Бизнес-услуги</a></li>
-                        <li><a href="#" class="catalogue__item catalogue__charity">Благотворительность</a></li>
+                    <div class="catalogue-mobile">
+                      <ul class="catalogue-mobile__list">
+                        <li><a class="dropdown-item catalogue-mobile__back" href="#">Назад</a></li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__crossboard">
+                            <span>Международные переводы</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2p">
+                            <span>Переводы с карты на карту</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2r">
+                            <span>Перевод по реквизитам</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-email">
+                            <span>Переводы с карты на e-mail</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-phone">
+                            <span>Перевод с карты на телефон</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__receive">
+                            <span>Получить перевод</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__mobile">
+                            <span>Мобильная связь</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__utility">
+                            <span>Коммунальные услуги</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__kindergarten">
+                            <span>Детские сады</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__internet">
+                            <span>Интернет</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tv">
+                            <span>Телевидение</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__phone">
+                            <span>Телефонная связь</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__security">
+                            <span>Охрана</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__transport">
+                            <span>Транспорт</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__penalty">
+                            <span>Оплатить Штраф ГАИ</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tourism">
+                            <span>Туризм</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__banks">
+                            <span>Банки и Страхование</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__education">
+                            <span>Образование</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__business">
+                            <span>Бизнес-услуги</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__charity">
+                            <span>Благотворительность</span>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>      
@@ -130,8 +210,8 @@
         </div>
       </div>
 
-      <!-- breadcrumb -->
-      <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -144,7 +224,7 @@
             </div>
           </div>
         </div> 
-      </nav><!-- breadcrumb -->
+      </nav><!-- breadcrumb widget -->
 
       <!-- main content -->
       <div class="container main-content">
@@ -153,321 +233,345 @@
           <main class="col-lg-8">
             <div class="row">
 
-              <div class="col-12 mt-2 mb-3 d-lg-none">
-                <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
-              </div>
+              <div class="col-12">
+                <!-- bill main widget -->
+                <div class="bill-main" id="bill-main-widget">
+                  <div class="row">
 
-              <div class="col-12 mb-3">
-                <div class="bill-title">
-                  <h1>Оплата Коммунальной услуги по всем городам Украины </h1>
-                </div>
-              </div>
-
-              <div class="col-12 mt-1 mt-lg-3">
-
-                <div class="row">
-                  <div class="col-12 mt-4">
-                    <div class="bill-result icon-success">
-                      <div class="bill-result__row">
-                        <div class="bill-result__header">
-                          <h3>Платеж успешен!</h3>
-                          <p>Платеж №37473537</p>
-                        </div>
-                        <div class="bill-result__footer">
-                          <h4 class="text-center mt-3">Квитанция</h4>
-                          <div class="bill-result__buttons">
-                            <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
-                            <form>
-                              <div class="form-group has-success">
-                                <input type="email" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="qwerty@email.com" aria-required="true" value="your@email.com">
-                                <label class="control-label form-label" for="form-name">Отправить на e-mail</label>
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
+                    </div>
+      
+                    <div class="col-12 mb-3">
+                      <div class="bill-title">
+                        <h1>Оплата Коммунальной услуги по всем городам Украины </h1>
+                      </div>
+                    </div>
+      
+                    <div class="col-12 mt-1 mt-lg-3">
+      
+                      <div class="row">
+                        <div class="col-12 mt-4">
+                          <!-- bill result widget -->
+                          <div class="bill-result icon-success" id="bill-result-widget">
+                            <div class="bill-result__row">
+                              <div class="bill-result__header">
+                                <h3>Платеж успешен!</h3>
+                                <p>Платеж №37473537</p>
                               </div>
-                              <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
-                            </form>
-                            <div class="bill-result__success-message">Квитанция отправлена на указанный e-mail</div>
-                          </div>
-                          <div class="template-add-wrapper">
-                            <h4>Повысьте эффективность</h4>
-                            <div class="template-add">
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <div class="template-add__template">
-                                    <a href="#" class="template-add__link">
-                                      <span class="template-add__add">Добавьте платеж в шаблон</span>
-                                      <span class="template-add__plus"></span>
-                                      </a>
-                                  </div>
+                              <div class="bill-result__footer">
+                                <h4 class="text-center mt-3">Квитанция</h4>
+                                <div class="bill-result__buttons">
+                                  <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
+                                  <form>
+                                    <div class="form-group has-success">
+                                      <input type="email" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="qwerty@email.com" aria-required="true" value="your@email.com">
+                                      <label class="control-label form-label" for="form-name">Отправить на e-mail</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                  </form>
+                                  <div class="bill-result__success-message">Квитанция отправлена на указанный e-mail</div>
                                 </div>
-                                <div class="col-md-6">
-                                  <div class="template-add__template">
-                                    <a href="#" class="template-add__link">
-                                      <span class="template-add__card">Добавьте карту в свой аккаунт</span>
-                                      <span class="template-add__plus"></span>
-                                    </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="template-add__template">
-                                    <a href="#" class="template-add__link">
-                                      <span class="template-add__info">Добавьте информацию о себе</span>
-                                      <span class="template-add__plus"></span>
-                                    </a>
+                                <div class="template-add-wrapper">
+                                  <h4>Повысьте эффективность</h4>
+                                  <div class="template-add">
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <div class="template-add__template">
+                                          <a href="#" class="template-add__link">
+                                            <span class="template-add__add">Добавьте платеж в шаблон</span>
+                                            <span class="template-add__plus"></span>
+                                            </a>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="template-add__template">
+                                          <a href="#" class="template-add__link">
+                                            <span class="template-add__card">Добавьте карту в свой аккаунт</span>
+                                            <span class="template-add__plus"></span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="template-add__template">
+                                          <a href="#" class="template-add__link">
+                                            <span class="template-add__info">Добавьте информацию о себе</span>
+                                            <span class="template-add__plus"></span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
+                            <div id="archive-1" class="collapse">
+                              <div class="bill-result__collapse">
+                                <div class="table-responsive">
+                                  <table class="table">
+                                    <tbody>
+                                      <tr>
+                                        <td>Назначение</td>
+                                        <td>Оплата коммунальной услуги</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Сумма пополнения</td>
+                                        <td>75.00 грн.</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Комиссия</td>
+                                        <td>2.00 грн.</td>
+                                      </tr>
+                                      <tr class="table-summary">
+                                        <td>К оплате</td>
+                                        <td>77.00 грн.</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>                          
+                              </div>
+                            </div>
+                            <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Информация о платеже</div>
+                          </div><!-- bill result widget -->
+                        </div>
+                      </div>
+      
+                    </div>
+      
+                    <div class="col-12 mt-4">
+                      <!-- bill message widget -->
+                      <div class="bonus-message" id="bill-message-widget">
+                        <div class="row align-items-center">
+                          <div class="col-md-3 bonus-message__left">
+                            <p>За этот платеж Вам начислено</p>
+                          </div>
+                          <div class="col-md-4 bonus-message__center">
+                            <p>12 бонусов Добра</p>
+                          </div>
+                          <div class="col-md-5 bonus-message__button">
+                            <a href="#" class="btn btn-default btn-block">Получить бонусы</a>
                           </div>
                         </div>
-                      </div>
-                      <div id="archive-1" class="collapse">
-                        <div class="bill-result__collapse">
-                          <div class="table-responsive">
-                            <table class="table table-bill">
-                              <tbody>
-                                <tr>
-                                  <td>Назначение</td>
-                                  <td>Оплата коммунальной услуги</td>
-                                </tr>
-                                <tr>
-                                  <td>Сумма пополнения</td>
-                                  <td>75.00 грн.</td>
-                                </tr>
-                                <tr>
-                                  <td>Комиссия</td>
-                                  <td>2.00 грн.</td>
-                                </tr>
-                                <tr class="table-summary">
-                                  <td>К оплате</td>
-                                  <td>77.00 грн.</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>                          
-                        </div>
-                      </div>
-                      <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Информация о платеже</div>
+                      </div><!-- bill message widget -->
                     </div>
+      
+                    <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
+                      <a href="#" class="btn btn-green btn-again">Оплатить еще эту услугу</a>
+                    </div>
+      
+                    <div class="col-12 mb-5 mb-lg-3">
+                      <!-- service rate widget -->
+                      <div class="service-rate" id="service-rate-widget">
+                        <h3>Оцените качество услуги</h3>
+                        <form action="/">
+                          <div class="form-group service-rate__rating">
+                            <div class="rating-input">
+                              <input id="star-4" type="radio" name="rating-input">
+                              <label for="star-4"></label>
+                      
+                              <input id="star-3" type="radio" name="rating-input">
+                              <label for="star-3"></label>
+                          
+                              <input id="star-2" type="radio" name="rating-input">
+                              <label for="star-2"></label>
+                          
+                              <input id="star-1" type="radio" name="rating-input">
+                              <label for="star-1"></label>
+                          
+                              <input id="star-0" type="radio" name="rating-input">
+                              <label for="star-0"></label>
+                            </div>
+                          </div>
+                          <div class="form-group service-rate__textarea">
+                            <textarea class="form-control form-textarea" id="form-textarea" rows="3" placeholder="Ваш текст"></textarea>
+                            <label class="control-label form-label" for="form-textarea">Введите ваш комментарий</label>
+                          </div>
+                          <div class="service-rate__submit row justify-content-end">
+                            <div class="col-md-5">
+                              <button type="submit" class="btn btn-green btn-block">Оценить</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div><!-- service rate widget -->
+                    </div>
+
                   </div>
-                </div>
-
+                </div><!-- bill main widget -->
               </div>
+            
+            </div>
 
-              <div class="col-12 mt-4">
-                <div class="bonus-message">
-                  <div class="row align-items-center">
-                    <div class="col-md-3 bonus-message__left">
-                      <p>За этот платеж Вам начислено</p>
-                    </div>
-                    <div class="col-md-4 bonus-message__center">
-                      <p>12 бонусов Добра</p>
-                    </div>
-                    <div class="col-md-5 bonus-message__button">
-                      <a href="#" class="btn btn-default btn-block">Получить бонусы</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- aside mobile area -->
+            <div class="row d-lg-none">
 
-              <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
-                <a href="#" class="btn btn-green btn-again">Оплатить еще эту услугу</a>
-              </div>
-
-              <div class="col-12 mb-5 mb-lg-3">
-                <div class="service-rate">
-                  <h3>Оцените качество услуги</h3>
-                  <form action="/">
-                    <div class="form-group service-rate__rating">
-                      <div class="rating-input">
-                        <input id="star-4" type="radio" name="rating-input">
-                        <label for="star-4"></label>
-                
-                        <input id="star-3" type="radio" name="rating-input">
-                        <label for="star-3"></label>
-                    
-                        <input id="star-2" type="radio" name="rating-input">
-                        <label for="star-2"></label>
-                    
-                        <input id="star-1" type="radio" name="rating-input">
-                        <label for="star-1"></label>
-                    
-                        <input id="star-0" type="radio" name="rating-input">
-                        <label for="star-0"></label>
-                      </div>
-                    </div>
-                    <div class="form-group service-rate__textarea">
-                      <textarea class="form-control form-textarea" id="form-textarea" rows="3" placeholder="Ваш текст"></textarea>
-                      <label class="control-label form-label" for="form-textarea">Введите ваш комментарий</label>
-                    </div>
-                    <div class="service-rate__submit row justify-content-end">
-                      <div class="col-md-5">
-                        <button type="submit" class="btn btn-green btn-block">Оценить</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-              <!-- aside mobile area -->
-              <div class="col-12 d-lg-none">
-                <div class="row">
-
-                  <div class="col-12 mb-3">
-                    <h3 class="mb-3">Мои шаблоны</h3>
-                    <div class="template-card-wrapper dropdown mb-3">
-                      <div class="bill-card template-card">
-                        <span class="bill-card__img">
-                          <img src="img/providers/yasno.png" alt="">
-                        </span>
-                        <span class="bill-card__content">
-                          <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
-                          <span class="template-card__amount">100.00 грн</span>
-                        </span>
-                        <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
-                          <a href="#" class="dropdown-item">Редактировать</a>
-                          <a href="#" class="dropdown-item">Удалить</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="template-card-wrapper dropdown mb-3">
-                      <div class="bill-card template-card">
-                        <span class="bill-card__img">
-                          <img src="img/providers/kyivgas.png" alt="">
-                        </span>
-                        <span class="bill-card__content">
-                          <span class="template-card__text">Оплата за газ</span>
-                        </span>
-                        <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
-                          <a href="#" class="dropdown-item">Редактировать</a>
-                          <a href="#" class="dropdown-item">Удалить</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="template-card-wrapper dropdown mb-3">
-                      <div class="bill-card template-card">
-                        <span class="bill-card__img">
-                          <img src="img/providers/kyivgasenergy.png" alt="">
-                        </span>
-                        <span class="bill-card__content">
-                          <span class="template-card__text">Оплата за воду</span>
-                        </span>
-                        <a href="#" class="template-card__button" id="dropdownTemplate3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownTemplate3">
-                          <a href="#" class="dropdown-item">Редактировать</a>
-                          <a href="#" class="dropdown-item">Удалить</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 mb-3">
-                    <h4 class="mb-3">Также могут заинтересовать</h4>
-                    <a href="#" class="bill-card mb-2">
+              <div class="col-12 mb-3">
+                <!-- templates aside widget -->
+                <div id="templates-aside-widget">
+                  <h3 class="mb-3">Мои шаблоны</h3>
+                  <div class="template-card-wrapper dropdown mb-3">
+                    <div class="bill-card template-card">
                       <span class="bill-card__img">
                         <img src="img/providers/yasno.png" alt="">
                       </span>
-                      <span class="bill-card__content">Перевод с карты на карту</span>
-                    </a>
-                    <a href="#" class="bill-card mb-2">
-                      <span class="bill-card__img">
-                        <img src="img/providers/kyivgasenergy.png" alt="">
+                      <span class="bill-card__content">
+                        <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
+                        <span class="template-card__amount">100.00 грн</span>
                       </span>
-                      <span class="bill-card__content">Київводоканал</span>
-                    </a>
-                    <a href="#" class="bill-card mb-2">
+                      <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
+                        <a href="#" class="dropdown-item">Редактировать</a>
+                        <a href="#" class="dropdown-item">Удалить</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="template-card-wrapper dropdown mb-3">
+                    <div class="bill-card template-card">
                       <span class="bill-card__img">
                         <img src="img/providers/kyivgas.png" alt="">
                       </span>
-                      <span class="bill-card__content">Київгаз</span>
-                    </a>
-                    <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                      <span class="bill-card__content">
+                        <span class="template-card__text">Оплата за газ</span>
+                      </span>
+                      <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
+                        <a href="#" class="dropdown-item">Редактировать</a>
+                        <a href="#" class="dropdown-item">Удалить</a>
+                      </div>
+                    </div>
                   </div>
-
-                  <div class="col-12 mb-3">
-                    <div class="banner banner-w100"></div>
+                  <div class="template-card-wrapper dropdown mb-3">
+                    <div class="bill-card template-card">
+                      <span class="bill-card__img">
+                        <img src="img/providers/kyivgasenergy.png" alt="">
+                      </span>
+                      <span class="bill-card__content">
+                        <span class="template-card__text">Оплата за воду</span>
+                      </span>
+                      <a href="#" class="template-card__button" id="dropdownTemplate3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownTemplate3">
+                        <a href="#" class="dropdown-item">Редактировать</a>
+                        <a href="#" class="dropdown-item">Удалить</a>
+                      </div>
+                    </div>
                   </div>
+                </div><!-- templates aside widget -->
+              </div>
 
-                </div>
-              </div><!-- aside mobile area -->
+              <div class="col-12 mb-3">
+                <!-- services more widget -->
+                <div id="services-more-widget">
+                  <h4 class="mb-3">Также могут заинтересовать</h4>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Перевод с карты на карту</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київводоканал</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київгаз</span>
+                  </a>
+                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                </div><!-- services more widget -->
+              </div>
 
-            </div>
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
+              </div>
+
+            </div><!-- aside mobile area -->
+
           </main><!-- main area -->
+
           <!-- aside area -->
           <aside class="col-lg-4 d-none d-lg-block">
             <div class="row">
 
               <div class="col-12 mb-3">
-                <h3 class="mb-3">Мои шаблоны</h3>
-                <div class="template-card-wrapper dropdown mb-3">
-                  <div class="bill-card template-card">
-                    <span class="bill-card__img">
-                      <img src="img/providers/yasno.png" alt="">
-                    </span>
-                    <span class="bill-card__content">
-                      <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
-                      <span class="template-card__amount">100.00 грн</span>
-                    </span>
-                    <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
-                      <a href="#" class="dropdown-item">Редактировать</a>
-                      <a href="#" class="dropdown-item">Удалить</a>
+                <!-- templates aside widget -->
+                <div id="templates-aside-widget">
+                  <h3 class="mb-3">Мои шаблоны</h3>
+                  <div class="template-card-wrapper dropdown mb-3">
+                    <div class="bill-card template-card">
+                      <span class="bill-card__img">
+                        <img src="img/providers/yasno.png" alt="">
+                      </span>
+                      <span class="bill-card__content">
+                        <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
+                        <span class="template-card__amount">100.00 грн</span>
+                      </span>
+                      <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
+                        <a href="#" class="dropdown-item">Редактировать</a>
+                        <a href="#" class="dropdown-item">Удалить</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="template-card-wrapper dropdown mb-3">
-                  <div class="bill-card template-card">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgas.png" alt="">
-                    </span>
-                    <span class="bill-card__content">
-                      <span class="template-card__text">Оплата за газ</span>
-                    </span>
-                    <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
-                      <a href="#" class="dropdown-item">Редактировать</a>
-                      <a href="#" class="dropdown-item">Удалить</a>
+                  <div class="template-card-wrapper dropdown mb-3">
+                    <div class="bill-card template-card">
+                      <span class="bill-card__img">
+                        <img src="img/providers/kyivgas.png" alt="">
+                      </span>
+                      <span class="bill-card__content">
+                        <span class="template-card__text">Оплата за газ</span>
+                      </span>
+                      <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
+                        <a href="#" class="dropdown-item">Редактировать</a>
+                        <a href="#" class="dropdown-item">Удалить</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="template-card-wrapper dropdown mb-3">
-                  <div class="bill-card template-card">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgasenergy.png" alt="">
-                    </span>
-                    <span class="bill-card__content">
-                      <span class="template-card__text">Оплата за воду</span>
-                    </span>
-                    <a href="#" class="template-card__button" id="dropdownTemplate3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownTemplate3">
-                      <a href="#" class="dropdown-item">Редактировать</a>
-                      <a href="#" class="dropdown-item">Удалить</a>
+                  <div class="template-card-wrapper dropdown mb-3">
+                    <div class="bill-card template-card">
+                      <span class="bill-card__img">
+                        <img src="img/providers/kyivgasenergy.png" alt="">
+                      </span>
+                      <span class="bill-card__content">
+                        <span class="template-card__text">Оплата за воду</span>
+                      </span>
+                      <a href="#" class="template-card__button" id="dropdownTemplate3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownTemplate3">
+                        <a href="#" class="dropdown-item">Редактировать</a>
+                        <a href="#" class="dropdown-item">Удалить</a>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </div><!-- templates aside widget -->
               </div>
 
               <div class="col-12 mb-3">
-                <h4 class="mb-3">Также могут заинтересовать</h4>
-                <a href="#" class="bill-card mb-2">
-                  <span class="bill-card__img">
-                    <img src="img/providers/yasno.png" alt="">
-                  </span>
-                  <span class="bill-card__content">Перевод с карты на карту</span>
-                </a>
-                <a href="#" class="bill-card mb-2">
-                  <span class="bill-card__img">
-                    <img src="img/providers/kyivgasenergy.png" alt="">
-                  </span>
-                  <span class="bill-card__content">Київводоканал</span>
-                </a>
-                <a href="#" class="bill-card mb-2">
-                  <span class="bill-card__img">
-                    <img src="img/providers/kyivgas.png" alt="">
-                  </span>
-                  <span class="bill-card__content">Київгаз</span>
-                </a>
-                <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                <!-- services more widget -->
+                <div id="services-more-widget">
+                  <h4 class="mb-3">Также могут заинтересовать</h4>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Перевод с карты на карту</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київводоканал</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київгаз</span>
+                  </a>
+                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                </div><!-- services more widget -->
               </div>
 
               <div class="col-12 mb-3">
