@@ -1,9 +1,70 @@
-.templates-carousel .lSSlideOuter {
-  padding: 0 4rem;
+.templates-carousel {
+  position: relative;
+  padding: 1rem 1rem 0;
+  border: 2px solid #F0F5FA;
+  border-radius: 0.5rem;
 }
 
-/* medium - display 2  */
-.templates-slide {
-  padding: 1rem 16px 7.5rem;
+.templates-carousel .lSAction {
+  display: none;
+}
+
+.templates-carousel .prev-slide, .templates-carousel .next-slide {
+  position: absolute;
+  top: 4.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 991px) {
+  .templates-carousel .prev-slide, .templates-carousel .next-slide {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.templates-carousel .prev-slide {
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.7422 12.7861L17.0749 24.4534' stroke='%234F6E7A' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.0762 24.4531L28.7434 36.1203' stroke='%234F6E7A' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.templates-carousel .next-slide {
+  right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.2578 36.1201L30.9251 24.4529' stroke='%234F6E7A' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M30.9238 24.4531L19.2566 12.7859' stroke='%234F6E7A' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.templates-carousel .lSSlideOuter {
+  padding: 0 3rem;
+}
+
+.templates-carousel .lSSlideOuter .lSPager.lSpg {
+  margin-bottom: 0.5rem;
+}
+
+.templates-carousel .lSSlideOuter .lSPager.lSpg > li a {
+  background-color: #F0F5FA;
+}
+
+.templates-carousel .lSSlideOuter .lSPager.lSpg > li.active a {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  background-color: #E84F35;
+}
+
+@media screen and (max-width: 991px) {
+  .templates-carousel .lSSlideOuter {
+    padding: 0;
+  }
+}
+
+.templates-carousel__text {
+  font-family: "Roboto", sans-serif;
+  color: #3B566E;
+}
+
+.templates-carousel__slide {
+  padding: 1rem 20px 7.5rem;
 }
 /*# sourceMappingURL=templates-carousel.css.map */

@@ -278,6 +278,15 @@
       background-position: center;
       background-size: 5px;
     }
+
+    &:hover, &:active, &[aria-expanded="true"] {
+      background-color: $light-grey;
+      outline: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 

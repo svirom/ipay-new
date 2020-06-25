@@ -2298,6 +2298,15 @@ label {
   background-size: 5px;
 }
 
+.template-card__button:hover, .template-card__button:active, .template-card__button[aria-expanded="true"] {
+  background-color: #F0F5FA;
+  outline: none;
+}
+
+.template-card__button:focus {
+  outline: none;
+}
+
 .template-card-wrapper .dropdown-menu {
   position: relative;
   padding: 0;

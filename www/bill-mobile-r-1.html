@@ -309,20 +309,24 @@
                       </div>
       
                       <div class="row">
-                        <div class="col-12 text-left">
+                        <div class="col-12 text-left mb-3">
                           <!-- templates carousel widget -->
                           <div class="templates-carousel" id="templates-carousel-widget">
+
+                            <div class="templates-carousel__text">У вас есть 3 шаблона по этой услуге</div>
       
-                            <div class="templates-slider">
-                              <div class="templates-slide">
+                            <div class="templates-carousel__slider">
+                              <div class="templates-carousel__slide">
                                 <div class="template-card-wrapper dropdown">
                                   <div class="bill-card template-card">
-                                    <span class="bill-card__img catalogue__security catalogue__security--red"></span>
+                                    <span class="bill-card__img">
+                                      <img src="img/providers/kyivstar.png" alt="">
+                                    </span>
                                     <span class="bill-card__content">
                                       <span class="template-card__text">Мой Киевстар</span>
                                       <span class="template-card__amount">100.00 грн</span>
                                     </span>
-                                    <a href="#" class="template-card__button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                    <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                                     <div class="dropdown-menu">
                                       <a href="#" class="dropdown-item">Редактировать</a>
                                       <a href="#" class="dropdown-item">Удалить</a>
@@ -330,10 +334,12 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="templates-slide">
+                              <div class="templates-carousel__slide">
                                 <div class="template-card-wrapper dropdown">
                                   <div href="#" class="bill-card template-card">
-                                    <span class="bill-card__img catalogue__security catalogue__security--red"></span>
+                                    <span class="bill-card__img">
+                                      <img src="img/providers/kyivstar.png" alt="">
+                                    </span>
                                     <span class="bill-card__content">
                                       <span class="template-card__text">Киевстар жены</span>
                                       <span class="template-card__amount">100.00 грн</span>
@@ -346,10 +352,12 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="templates-slide">
+                              <div class="templates-carousel__slide">
                                 <div class="template-card-wrapper dropdown">
                                   <div class="bill-card template-card">
-                                    <span class="bill-card__img catalogue__security catalogue__security--red"></span>
+                                    <span class="bill-card__img">
+                                      <img src="img/providers/yasno.png" alt="">
+                                    </span>
                                     <span class="bill-card__content">
                                       <span class="template-card__text">Услуги охраны в моем  офисе на Шулявской</span>
                                       <span class="template-card__amount">100.00 грн</span>
@@ -363,6 +371,9 @@
                                 </div>
                               </div>
                             </div>
+
+                            <a href="#" class="prev-slide"></a>
+                            <a href="#" class="next-slide"></a>
       
                           </div><!-- templates carousel widget -->
                         </div>

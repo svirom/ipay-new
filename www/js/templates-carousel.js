@@ -1,28 +1,6 @@
 $(document).ready(function() {
 
-	/* $('#templates-carousel').carousel({
-		interval: false,
-	});
-	
-	$('.carousel .carousel-item').each(function() {
-		var minPerSlide = 1;
-		var next = $(this).next();
-		if (!next.length) {
-			next = $(this).siblings(':first');
-		}
-		next.children(':first-child').clone().appendTo($(this));
-	
-		for (var i = 0; i < minPerSlide; i++) {
-			next = next.next();
-			if (!next.length) {
-				next = $(this).siblings(':first');
-			}
-	
-			next.children(':first-child').clone().appendTo($(this));
-		}
-	}); */
-
-	$(".templates-slider").lightSlider({
+	var slider = $(".templates-carousel__slider").lightSlider({
 		item: 2,
 		loop: true,
 		slideMove: 1,
@@ -30,16 +8,35 @@ $(document).ready(function() {
 		useCSS: true,
 		slideMargin: 0,
 		galleryMargin: 20,
+		controls: false,
+		pager: false,
 		responsive : [
 			{
 				breakpoint: 992,
 				settings: {
+					pager: true
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
 					item: 1,
 					slideMove: 1,
 					slideMargin: 6,
+					pager: true
 				}
 			}
 		]
-	}); 
+	})
+
+	$('.prev-slide').on('click', function(e) {
+		e.preventDefault();
+		slider.goToPrevSlide();
+	})
+
+	$('.next-slide').on('click', function(e) {
+		e.preventDefault();
+		slider.goToNextSlide();
+	})
 
 });
