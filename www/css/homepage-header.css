@@ -1,0 +1,51 @@
+.homepage-header {
+  padding: 5.2rem 0 2rem;
+  background: url("../img/homepage/homepage-header-bkgr.png") center no-repeat;
+  background-size: cover;
+}
+
+/* bill card (main page) */
+.main-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.8175rem 0.9rem;
+  height: 8.75rem;
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.main-card:hover {
+  text-decoration: none;
+}
+
+.main-card span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #172A3A;
+}
+
+.main-card__img {
+  position: relative;
+}
+
+.main-card__img::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  background-image: url("../img/menu-catalogue.png");
+  background-size: 169px;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=homepage-header.css.map */
