@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/homepage-header.css">
+    <link rel="stylesheet" href="/css/homepage-awards.css">
+    <link rel="stylesheet" href="/css/last-payments.css">
     <link rel="stylesheet" href="/css/category-text.css">
 
     <title>Homepage</title>
@@ -121,44 +123,62 @@
         </div>
         <div class="homepage-services" id="homepage-services-widget">
           <div class="row pt-3 mb-4">
-            <div class="col-lg-6"></div>
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <div class="homepage-services-form">
+                <span class="homepage-services-form__content">Быстрое пополнение мобильного</span>
+                <form>
+                  <div class="form-group homepage-services-form__tel has-success">
+                    <input type="tel" class="form-control form-input filled" id="bill-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380(67)759-32-08">
+                    <label class="control-label form-label" for="bill-phone">Номер телефона</label>
+                  </div>
+                  <div class="form-group homepage-services-form__amount ml-0 ml-sm-3 mr-3 mt-3 mt-sm-0">
+                    <input type="tel" class="form-control form-input filled" id="bill-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100.00">
+                    <label class="control-label form-label" for="bill-amount">Сумма</label>
+                  </div>
+                  <button type="submit" class="btn btn-red btn-pay btn-empty mt-3 mt-sm-0"></button>
+                </form>
+              </div>
+            </div>
             <div class="col-lg-6">
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-6 mb-4 mb-sm-0">
                   <a href="#" class="main-card">
                     <span class="main-card__img main-card__img--p2p"></span>
                     <span class="main-card__content">Перевод с карты на карту</span>
                   </a>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-6">
                   <a href="#" class="main-card main-card-account">
                     <span class="main-card__img main-card__img--account"></span>
-                    <span class="main-card__content">Мой кабинет<br> Войти</span>
+                    <span class="main-card__content">
+                      <span>Мой кабинет</span>
+                      <span>Войти</span>
+                    </span>
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
               <a href="#" class="main-card">
                 <span class="main-card__img main-card__img--p2r"></span>
                 <span class="main-card__content">Перевод по реквизитам</span>
               </a>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
               <a href="#" class="main-card">
                 <span class="main-card__img main-card__img--utility"></span>
                 <span class="main-card__content">Коммунальные услуги</span>
               </a>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-4 mb-sm-0">
               <a href="#" class="main-card">
                 <span class="main-card__img main-card__img--c2p"></span>
                 <span class="main-card__content">Перевод наличных на карту</span>
               </a>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-6 col-lg-3 mb-4 mb-sm-0">
               <a href="#" class="main-card">
                 <span class="main-card__img main-card__img--all"></span>
                 <span class="main-card__content">Все услуги</span>
@@ -171,8 +191,52 @@
 
     <!-- homepage main -->
     <div class="container homepage-main">
+
       <div class="row">
+        <div class="col-12 mt-5 pb-4">
+
+          <!-- homepage awards widget -->
+          <div class="homepage-awards" id="homepage-awards-widget">
+            <div class="row">
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <article class="awards-article">
+                  <div class="awards-article__img">
+                    <img src="img/homepage/Mastercard-award-2019-logo-1.png" alt="Image">
+                  </div>
+                  <div class="awards-article__content">
+                    <h3>iPay.ua — лучший партнер Mastercard 2019</h3>
+                    <p>Сервис онлайн-платежей iPay.ua признан лучшим партнером международной платежной системы Mastercard среди провайдеров платежных услуг в Украине в 2019 году.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-lg-6 mb-2 mb-lg-0">
+                <article class="awards-article">
+                  <div class="awards-article__img">
+                    <img src="img/homepage/top-1x1.png" alt="Image">
+                  </div>
+                  <div class="awards-article__content">
+                    <h3>iPay.ua – лучший сервис онлайн платежей по мнению читателей издания PaySpace Magazine и экспертов рынка!</h3>
+                    <p>По результатам ежегодного конкурса среди игроков сферы электронной коммерции и FinTech Украины PaySpace Magazine Awards компания iPay.ua стала серебряным призёром в номинации «Лучший сервис онлайн платежей» в 2018 году.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div><!-- homepage awards widget -->
+
+        </div>
       </div>
+
+      <div class="row">
+        <div class="col-12 mt-5">
+
+          <!-- last payments widget -->
+          <div class="last-payments" id="last-payments-widget">
+
+          </div><!-- last payments widget -->
+
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-12 mt-5">
 

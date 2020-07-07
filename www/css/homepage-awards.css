@@ -1,0 +1,47 @@
+.awards-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.awards-article h3 {
+  margin-bottom: 1rem;
+}
+
+.awards-article__img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-width: 10.9375rem;
+  text-align: center;
+}
+
+.awards-article__img img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .awards-article__img {
+    margin-bottom: 2.25rem;
+  }
+}
+
+.awards-article__content {
+  padding-left: 1.1875rem;
+}
+
+@media screen and (max-width: 767px) {
+  .awards-article__content {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .awards-article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=homepage-awards.css.map */

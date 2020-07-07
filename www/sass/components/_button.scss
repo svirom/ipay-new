@@ -302,6 +302,22 @@
   }
 }
 
+.btn-pay {
+  position: relative;
+  
+  &::after {
+    position: absolute;
+    top: 50%;
+    content: '';
+    width: 32px;
+    height: 30px;
+    @include transform(translateY(-50%));
+    left: 24px;
+    background: url("data:image/svg+xml,%3Csvg width='32' height='30' viewBox='0 0 32 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.6526 15L9.18886 15' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.1943 21.25L22.9443 15L15.1943 8.75' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+    background-size: 32px;
+  }
+}
+
 .btn-empty {
   min-height: 56px;
 

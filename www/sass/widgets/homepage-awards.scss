@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the homepage awards articles of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.awards-article {
+  display: flex;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    min-width: 10.9375rem;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @include until($md) {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  &__content {
+    padding-left: 1.1875rem;
+
+    @include until($md) {
+      padding-left: 0;
+    }
+  }
+
+  @include until($md) {
+    flex-direction: column;
+  }
+}
