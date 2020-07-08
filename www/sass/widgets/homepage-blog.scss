@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the homepage blog grid of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.homepage-blog {
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid $light-grey; 
+
+  @include until($md) {
+    border-bottom: none;
+  }
+}
+
+.homepage-article {
+  display: block;
+
+  @include until($md) {
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid $light-grey;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  p {
+    color: $heading-color;
+  }
+
+  span {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: $heading-color;
+
+    &.homepage-article__category {
+      color: $btn-red;
+    }
+  }
+
+  &__img {
+    margin-bottom: 1.25rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__time {
+    margin-right: 1.45rem;
+  }
+}

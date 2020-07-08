@@ -9,6 +9,13 @@
 
 .awards-article {
   display: flex;
+  font-family: $heading-font;
+  color: $heading-color;
+
+  &:hover {
+    color: $heading-color;
+    text-decoration: none;
+  }
 
   h3 {
     margin-bottom: 1rem;

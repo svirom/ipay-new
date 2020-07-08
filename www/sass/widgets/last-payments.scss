@@ -6,3 +6,186 @@
 // 1. Configuration and helpers
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
+
+.last-payments-wrapper {
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+}
+
+.find-payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15.65rem;
+  border-radius: 0.5rem;
+  background-color: $heading-color;
+
+  @include until($lg) {
+    height: auto;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.25rem 0;
+
+    p {
+      @include font(1.25rem, 400, 1.15);
+      color: #fff;
+      text-transform: capitalize;
+
+      &:first-child {
+        margin-bottom: 1.25rem;
+      }
+
+      &:last-child {
+        @include font(2.5rem, 500, 1.175);
+      }
+    }
+
+    @include until($sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        &:first-child {
+          flex-basis: 33%;
+          font-size: 1.125rem;
+        }
+
+        &:last-child {
+          font-size: 1.625rem;
+        }
+      }
+    }
+  }
+
+  &__button {
+    padding: 0 1.25rem 1.25rem;
+
+    @include until($lg) {
+      display: none;
+    }
+  }
+
+  &__last-payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.25rem 0.5rem;
+    border-top: 1px solid $text-color;
+
+    span {
+      @include font(0.875rem, 400, 1.3);
+      color: #fff;
+
+      &:first-child {
+        flex-basis: 33%;
+      }
+
+      &.find-payment__time {
+        margin-right: 6px;
+        @include font(1.625rem, 500, 1.15);
+      }
+    }
+
+    @include at-least($lg) {
+      display: none;
+    }
+  }
+}
+
+.payments-timeline {
+  position: relative;
+  height: 100%;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    @include transform(translateY(-50%));
+    background-color: $middle-grey;
+  }
+}
+
+.payment-box {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 16.5rem;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  box-shadow: 0px 4px 20px $card-shadow;
+  background-color: #fff;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
+    border-radius: 2px;
+    border-style: solid;
+    -webkit-filter: drop-shadow(0px 4px 20px $card-shadow);
+    filter: drop-shadow(0px 4px 20px $card-shadow);
+  }
+
+  &--top {
+    bottom: calc(50% + 12px);
+
+    &::before {
+      bottom: -6px;
+      border-width: 6px 6px 0 6px;
+      border-color: #ffffff transparent transparent transparent;
+    }
+  }
+
+  &--bottom {
+    top: calc(50% + 12px);
+    
+    &::before {
+      top: -6px;
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent #ffffff transparent;
+    }
+  }
+
+  &__left {
+    flex-shrink: 0;
+    flex-basis: 30%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+  }
+
+  &__time {
+    font-size: 0.875rem;
+  }
+
+  &__amount {
+    font-weight: bold;
+  }
+
+  &__title {
+    @include font(0.75rem, 400, 1.167);
+    color: $main-blue;
+  }
+
+  &__description {
+    @include font(0.75rem, 400, 1.3);
+  }
+}

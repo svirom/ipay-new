@@ -90,13 +90,13 @@ $(document).ready(function() {
   }
 
   // In your Javascript (external .js resource or <script> tag)
-  $(document).ready(function() {
+  /* $(document).ready(function() {
     $('.select-input').select2({
       placeholder: "Выберите из списка",
       allowClear: true,
       dropdownCssClass: 'select-dropdown',
       selectionCssClass: 'cldjfhf'
     });
-  });
+  }); */
 
 })
