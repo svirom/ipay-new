@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account main widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-title {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 56px;
+    height: 56px;
+    background-image: url('../img/account-sprite.png');
+    background-size: 112px;
+    background-repeat: no-repeat;
+
+    &--day {
+      background-position: 0 0;
+    }
+
+    &--morning {
+      background-position: -56px 0;
+    }
+
+    &--night {
+      background-position: 0 -56px;
+    }
+  
+    &--sunset {
+      background-position: -56px -56px; 
+    }
+  }
+
+  h1 {
+    padding-left: 0.75rem;
+    margin-bottom: 0;
+    font-family: $text-font;
+    @include font(1.875rem, 400, 1.167);
+    color: $text-color;
+  }
+}
+
+.account-subtitle {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  color: $main-blue;
+}

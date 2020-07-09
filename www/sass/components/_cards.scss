@@ -314,6 +314,41 @@
   }
 }
 
+.template-add {
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 5rem;
+    height: 5rem;
+    border: 2px dashed $middle-grey;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.667;
+    color: $main-blue;
+    background-color: #fff;
+
+    span {
+      padding-right: 0.625rem;
+      font-size: 1.375rem;
+      font-weight: bold;
+      line-height: 1.667;
+      color: $main-blue;
+    }
+  
+    &:hover {
+      color: $heading-color;
+      text-decoration: none;
+  
+      span {
+        color: $heading-color;
+      }
+    }
+  }
+}
+
 /* bank's card */
 .bank-card {
   display: flex;

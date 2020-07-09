@@ -1,0 +1,49 @@
+.account-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account-title__img {
+  width: 56px;
+  height: 56px;
+  background-image: url("../img/account-sprite.png");
+  background-size: 112px;
+  background-repeat: no-repeat;
+}
+
+.account-title__img--day {
+  background-position: 0 0;
+}
+
+.account-title__img--morning {
+  background-position: -56px 0;
+}
+
+.account-title__img--night {
+  background-position: 0 -56px;
+}
+
+.account-title__img--sunset {
+  background-position: -56px -56px;
+}
+
+.account-title h1 {
+  padding-left: 0.75rem;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 1.167;
+  color: #3B566E;
+}
+
+.account-subtitle {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  color: #7C9CAC;
+}
+/*# sourceMappingURL=account-main.css.map */

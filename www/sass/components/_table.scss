@@ -205,34 +205,24 @@
   }
 
   &__icon {
-    &.catalogue__item {
-      flex-shrink: 0;
-      width: 2.5rem;
-      height: 2.5rem;
-      padding: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    box-shadow: 0px 3px 10px $template-shadow-hover;
+    border-radius: 0.5rem;
 
-      @include until($md) {
-        width: 1.875rem;
-        height: 1.875rem;
-      }
+    img {
+      max-width: calc(100% - 6px);
+      max-height: calc(100% - 6px);
+    }
 
-      &.active {
-        background-color: #fff;
-      }
-
-      &::before {
-        left: 50%;
-        @include transform(translate(-50%, -50%));
-      }
-
-      &::after {
-        left: 0;
-        width: 2.5rem;
-
-        @include until($md) {
-          width: 1.875rem;
-        }
-      }
+    @include until($md) {
+      width: 1.875rem;
+      height: 1.875rem;
     }
   }
 
@@ -283,7 +273,7 @@
     flex-basis: 16.25rem;
     max-width: 16.25rem;
     flex-shrink: 0;
-    padding-left: 4rem;
+    padding-left: 5.5rem;
 
     @include until($lg) {
       flex-basis: 12rem;
@@ -415,6 +405,57 @@
           align-self: flex-start;
         }
       }
+    }
+  }
+}
+
+.archive-title {
+  display: flex;
+  padding: 0.469rem 0.9193rem;
+  font-size: 0.875rem;
+
+  @include until($md) {
+    display: none;
+  }
+
+  span {
+    color: $main-blue;
+  }
+
+  &__time {
+    flex-shrink: 0;
+    flex-basis: 6.75rem;
+    max-width: 6.75rem;
+  }
+
+  &__purpose {
+    flex-grow: 1;
+    padding-left: 5.3rem;
+
+    @include until($lg) {
+      padding-left: 4.5rem;
+    }
+  }
+
+  &__bonus {
+    flex-basis: 10rem;
+    max-width: 10rem;
+    padding-left: 0.5rem;
+
+    @include until($lg) {
+      flex-basis: 5.5rem;
+      max-width: 5.5rem;
+    }
+  }
+
+  &__amount {
+    flex-basis: 12rem;
+    max-width: 12rem;
+    flex-shrink: 0;
+    padding-left: 1.25rem;
+
+    @include until($lg) {
+      padding-left: 2rem;
     }
   }
 }
