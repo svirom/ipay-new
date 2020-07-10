@@ -7,6 +7,20 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
+.account-main {
+  .form-search {
+    &.focused {
+      .form-search__title {
+        color: $heading-color;
+
+        @include until($md) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
 .account-title {
   display: flex;
   align-items: center;
@@ -41,6 +55,10 @@
     font-family: $text-font;
     @include font(1.875rem, 400, 1.167);
     color: $text-color;
+
+    @include until($md) {
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -48,4 +66,8 @@
   margin-bottom: 0;
   font-size: 1.25rem;
   color: $main-blue;
+
+  @include until($md) {
+    font-size: 1rem;
+  }
 }

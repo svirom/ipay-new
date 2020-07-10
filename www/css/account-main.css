@@ -1,3 +1,13 @@
+.account-main .form-search.focused .form-search__title {
+  color: #172A3A;
+}
+
+@media screen and (max-width: 767px) {
+  .account-main .form-search.focused .form-search__title {
+    font-size: 1.25rem;
+  }
+}
+
 .account-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,9 +51,21 @@
   color: #3B566E;
 }
 
+@media screen and (max-width: 767px) {
+  .account-title h1 {
+    font-size: 1.25rem;
+  }
+}
+
 .account-subtitle {
   margin-bottom: 0;
   font-size: 1.25rem;
   color: #7C9CAC;
+}
+
+@media screen and (max-width: 767px) {
+  .account-subtitle {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=account-main.css.map */

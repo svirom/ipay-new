@@ -1,0 +1,86 @@
+.popover-account {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18.75rem;
+  padding: 0.625rem;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #3B566E;
+  z-index: 1000;
+}
+
+.popover-account::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  left: 0;
+  border-style: solid;
+}
+
+.popover-account--left::before {
+  left: -6px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-width: 6px 6px 6px 0;
+  border-color: transparent #3B566E transparent #3B566E;
+}
+
+.popover-account--top::before {
+  left: 2rem;
+  top: -6px;
+  border-width: 0 6px 6px 6px;
+  border-color: #3B566E transparent #3B566E transparent;
+}
+
+.popover-account p {
+  margin: 0.625rem;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+.popover-account .btn {
+  padding: 0.188rem 2.175rem;
+}
+
+#popover-account-1 {
+  left: 0;
+  top: calc(100% + 12px);
+}
+
+#popover-account-2 {
+  left: calc(100% + 20px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#popover-account-3 {
+  left: calc(100% + 20px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#popover-account-4 {
+  left: calc(100% + 5px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.popover-account {
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+.popover-account.active {
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+  z-index: 1001;
+}
+/*# sourceMappingURL=account-fill.css.map */

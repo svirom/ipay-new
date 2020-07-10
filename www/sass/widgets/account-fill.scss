@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account fill of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.popover-account {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18.75rem;
+  // height: 7.5rem;
+  padding: 0.625rem;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: $text-color;
+  z-index: 1000;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    left: 0;
+    border-style: solid;
+  }
+
+  &--left {
+    &::before {
+      left: -6px;
+      top: 50%;
+      @include transform(translateY(-50%));
+      border-width: 6px 6px 6px 0;
+      border-color: transparent $text-color transparent $text-color;
+    }
+  }
+
+  &--top {
+    &::before {
+      left: 2rem;
+      top: -6px;
+      border-width: 0 6px 6px 6px;
+      border-color: $text-color transparent $text-color transparent;
+    }
+  }
+
+  p {
+    margin: 0.625rem;
+    font-size: 0.875rem;
+    color: #fff;
+  }
+
+  .btn {
+    padding: 0.188rem 2.175rem;
+  }
+}
+
+#popover-account-1 {
+  left: 0;
+  top: calc(100% + 12px);
+}
+
+#popover-account-2 {
+  left: calc(100% + 20px);
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+#popover-account-3 {
+  left: calc(100% + 20px);
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+#popover-account-4 {
+  left: calc(100% + 5px);
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+.popover-account {
+  opacity: 0;
+  @include transition(opacity, 0.8s);
+
+  &.active {
+    opacity: 1;
+    @include transition(opacity, 0.8s);
+    z-index: 1001;
+  }
+}
