@@ -1,0 +1,143 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the select component (using select2 plugin).
+// -----------------------------------------------------------------------------
+
+.select-input-wrapper {
+
+  .select2-container {
+
+    .select2-selection {
+      height: auto;
+      padding: 0.6875rem 1.0775rem;
+      border: 3px solid $middle-grey;
+      border-radius: 0.5rem;
+      color: $heading-color;
+      @include font(1.125rem, 400, 1.667);
+      outline: none;
+
+      &__rendered {
+        padding-left: 0;
+      }
+
+      &__placeholder {
+        color: $heading-color;
+      }
+
+      &__arrow {
+        height: 100%;
+        width: 18px;
+        top: 0;
+        right: 1rem;
+
+        b {
+          width: 18px;
+          height: 100%;
+          left: auto;
+          top: 0;
+          margin: 0;
+          border: none;
+          background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 16px;
+          @include transition(all, 0.3s);
+        }
+      }
+    }
+
+    .select2-dropdown {
+      color: $heading-color;
+      @include font(1.125rem, 400, 1.667);
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    .select2-results {
+      max-height: 248px;
+
+      &__option {
+        padding: 1.032rem 1rem;
+        color: $heading-color;
+
+        &:focus {
+          outline: none;
+          background-color: $btn-red;
+        }
+      }
+
+      > .select2-results__options {
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+        
+        &::-webkit-scrollbar {
+          width: 6px;
+          background-color: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          border-radius: 3px;
+          background-color: $btn-red;
+        }
+      }
+
+      &__option--highlighted.select2-results__option--selectable {
+        color: $heading-color;
+        background-color: $light-grey;
+      }
+    }
+
+    &--open {
+
+      .select2-selection {
+        border-color: transparent; 
+        box-shadow: 0px 4px 20px $card-shadow;
+
+        &__arrow {
+          b {
+            @include transform(rotate(180deg));
+          }
+        }
+      }
+
+      .select2-dropdown {
+
+        &--below {
+          border-top: 1px dashed $middle-grey;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          box-shadow: 0px 6px 12px $card-shadow;
+
+          .select2-results {
+
+            li {
+              &:last-child {
+                border-bottom-left-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+              }
+            }
+          }
+        }
+
+        &--above {
+          border-bottom: 1px dashed $middle-grey;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          box-shadow: 0px -6px 12px $card-shadow;
+
+          .select2-results {
+            
+            li {
+              &:last-child {
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

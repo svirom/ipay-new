@@ -89,14 +89,4 @@ $(document).ready(function() {
     .find('.input-search').removeClass('filled').val('');
   }
 
-  // In your Javascript (external .js resource or <script> tag)
-  /* $(document).ready(function() {
-    $('.select-input').select2({
-      placeholder: "Выберите из списка",
-      allowClear: true,
-      dropdownCssClass: 'select-dropdown',
-      selectionCssClass: 'cldjfhf'
-    });
-  }); */
-
 })
