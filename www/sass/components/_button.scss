@@ -8,12 +8,22 @@
   font-weight: bold;
   line-height: 1.667; // 21px
   border-radius: 0.5rem;
+
+  span {
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.667;
+  }
 }
 
 .btn-green {
   color: #fff;
   background-color: $btn-green;
   border: 3px solid $btn-green;
+
+  span {
+    color: #fff;
+  }
 
   &:hover:not(.disabled) {
     color: #fff;
@@ -27,6 +37,10 @@
   color: #fff;
   background-color: $btn-red;
   border: 3px solid $btn-red;
+
+  span {
+    color: #fff;
+  }
 
   &:hover:not(.disabled) {
     color: #fff;
@@ -64,6 +78,10 @@
   background-color: #fff;
   border: 3px solid $middle-grey;
 
+  span {
+    color: $heading-color;
+  }
+
   &:hover:not(.disabled) {
     color: $heading-color;
     background-color: #fff;
@@ -75,6 +93,10 @@
     background-color: $heading-color;
     border-color: $heading-color;
     outline: none;
+
+    span {
+      color: #fff;
+    }
   }
 
   &.disabled, &:disabled {

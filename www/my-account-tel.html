@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="/css/account-main.css">
     <link rel="stylesheet" href="/css/account-templates.css">
     <link rel="stylesheet" href="/css/account-payments.css">
+    <link rel="stylesheet" href="/css/archive-table.css">
 
-    <title>Мой кабинет</title>
+    <title>Мой кабинет телефон</title>
   </head>
   <body>
 
@@ -283,11 +284,11 @@
 
                     <div class="col-12 mt-2 mb-3">
                       <div class="account-title mb-2">
-                        <span class="account-title__img account-title__img--morning"></span>
+                        <!-- <span class="account-title__img account-title__img--morning"></span> -->
                         <!-- <span class="account-title__img account-title__img--day"></span> -->
-                        <!-- <span class="account-title__img account-title__img--night"></span> -->
+                        <span class="account-title__img account-title__img--night"></span>
                         <!-- <span class="account-title__img account-title__img--sunset"></span> -->
-                        <h1>Доброе утро, <strong>Альберт!</strong></h1>
+                        <h1>Добрый вечер, <strong>Альберт!</strong></h1>
                       </div>
                       <p class="account-subtitle">Что сегодня будем оплачивать?</p>
                     </div>
@@ -309,8 +310,21 @@
                   </div>
                 </div><!-- account main widget -->
               </div>
+
+              <div class="col-12 mt-4">
+                <!-- message widget -->
+                <div class="message-widget" id="message-widget">
+                  <div class="alert alert-warning alert-face alert-tel alert-dismissible fade show" role="alert">
+                    <strong>Добавьте телефон</strong><br><br>
+                    Повысьте безопастность своего кабинета. Добавьте телефон для надежной авторизации<br> <a href="#">Добавить телефон</a>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                </div><!-- message widget -->
+              </div>
       
-              <div class="col-12 mt-5">
+              <div class="col-12 mt-4">
                 <!-- account templates widget -->
                 <div class="account-templates" id="account-templates-widget">
 
@@ -683,24 +697,6 @@
         </div>
       </div>
     </div><!-- footer -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="form-search">
-            <form action="">
-              <div class="form-group">
-                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
-                <a href="#" class="form-search__search"></a>
-                <a href="#" class="form-search__cancel"></a>
-                </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
     <!-- Optional JavaScript -->

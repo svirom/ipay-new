@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the archive main widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.archive-main {
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .form-group {
+    &.select-input-wrapper {
+      margin-bottom: 0;
+    }
+  }
+
+  &__empty {
+    color: $main-blue;
+  }
+
+  &__period-img {
+    max-width: 12rem;
+    margin-top: 1rem;
+  }
+
+  &__empty-img {
+    max-width: 8.75rem;
+    margin-top: 1rem;
+  }
+
+  @include until($md) {
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
