@@ -8,6 +8,7 @@
 @import '../abstracts/mixins';
 
 .account-main {
+
   .form-search {
     &.focused {
       .form-search__title {
@@ -16,6 +17,60 @@
         @include until($md) {
           font-size: 1.25rem;
         }
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .form-group {
+    &.select-input-wrapper {
+      margin-bottom: 0;
+    }
+  }
+
+  &__empty {
+    color: $main-blue;
+  }
+
+  &__period-img {
+    max-width: 12rem;
+    margin-top: 1rem;
+  }
+
+  &__empty-img {
+    max-width: 8.75rem;
+    margin-top: 1rem;
+  }
+
+  &__templates-img {
+    max-width: 8.75rem;
+  }
+
+  &__templates-text {
+    p {
+      padding-left: 0.75rem;
+
+      &:first-child {
+        font-weight: bold;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include until($md) {
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    &__templates-text {
+      p {
+        padding-left: 0;
       }
     }
   }
@@ -45,7 +100,7 @@
     }
   
     &--sunset {
-      background-position: -56px -56px; 
+      background-position: -56px -56px;
     }
   }
 

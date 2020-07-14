@@ -10,7 +10,7 @@
       height: auto;
       padding: 0.6875rem 1.0775rem;
       border: 3px solid $middle-grey;
-      border-radius: 0.5rem;
+      border-radius: $border-radius;
       color: $heading-color;
       @include font(1.125rem, 400, 1.667);
       outline: none;
@@ -49,7 +49,7 @@
       color: $heading-color;
       @include font(1.125rem, 400, 1.667);
       border: none;
-      border-radius: 0.5rem;
+      border-radius: $border-radius;
     }
 
     .select2-results {
@@ -113,8 +113,8 @@
 
             li {
               &:last-child {
-                border-bottom-left-radius: 0.5rem;
-                border-bottom-right-radius: 0.5rem;
+                border-bottom-left-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
               }
             }
           }
@@ -130,8 +130,8 @@
             
             li {
               &:last-child {
-                border-top-left-radius: 0.5rem;
-                border-top-right-radius: 0.5rem;
+                border-top-left-radius: $border-radius;
+                border-top-right-radius: $border-radius;
               }
             }
           }

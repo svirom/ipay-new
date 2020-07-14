@@ -34,7 +34,7 @@
       margin-top: 1.75rem;
       padding: 0;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: $border-radius;
       box-shadow: 0px 4px 20px $box-shadow;
 
       &::before {
@@ -58,7 +58,7 @@
       font-size: 1rem;
       color: $heading-color;
       line-height: 1.1875;
-      border-radius: 0.5rem;
+      border-radius: $border-radius;
 
       &:focus, &:hover {
         text-decoration: underline;
@@ -190,7 +190,7 @@
       margin: 10px;
       padding: 0.688rem 1.345rem;
       width: calc(100% - 20px);
-      border-radius: 0.5rem;
+      border-radius: $border-radius;
       color: $light-grey;
       background-color: $btn-green;
 
@@ -394,7 +394,7 @@
   height: 17px;
   top: 11px;
   left: 11px;
-  border-radius: 0px;
+  border-radius: 0;
   background: transparent;
 
   &:before,
@@ -405,7 +405,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    border-radius: 0px;
+    border-radius: 0;
     background: $heading-color;
     @include transition(all, 0.3s);
   }

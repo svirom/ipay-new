@@ -7,19 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue-account.css">
     <link rel="stylesheet" href="/css/account-main.css">
-    <link rel="stylesheet" href="/css/account-templates.css">
-    <link rel="stylesheet" href="/css/account-payments.css">
-    <link rel="stylesheet" href="/css/account-fill.css">
 
-    <title>Мой кабинет заполнение</title>
+    <title>Добавить шаблон</title>
   </head>
   <body>
 
-    <!-- header -->
     <header class="main-header">
       <div class="container">
         <div class="row">
@@ -29,6 +26,9 @@
             </div>
             <nav class="">
               <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги для оплаты</a>
+                </li>
                 <li class="main-nav__item">
                   <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
                     <span>Безопасность </span>
@@ -194,6 +194,21 @@
     <!-- main wrapper -->
     <div class="main-wrapper">
 
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="form-search">
+          <h3 class="form-search__title">Поиск</h3>
+          <form action="">
+            <div class="form-group">
+              <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+              <label class="control-label form-label" for="search-icon">Поиск услуги</label>
+              <a href="#" class="form-search__search"></a>
+              <a href="#" class="form-search__cancel"></a>
+             </div>
+          </form>
+        </div>
+      </div>
+
       <!-- breadcrumb widget -->
       <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
@@ -201,7 +216,8 @@
             <div class="col-12">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Мой кабинет</li>
+                <li class="breadcrumb-item"><a href="#">Мой кабинет</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Мои шаблоны</li>
               </ol>
             </div>
           </div>
@@ -211,83 +227,25 @@
       <!-- main content -->
       <div class="container main-content">
         <div class="row">
-          <!-- aside area -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="row">
-
-              <div class="col-12 mb-5">
-                <!-- account catalogue widget -->
-                <div class="catalogue-account" id="catalogue-account-widget">
-                  <ul class="catalogue-account__list">
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__account active">
-                        <span>Мой кабинет</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__archive">
-                        <span>Архив платежей</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__templates">
-                        <span>Мои шаблоны</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__cards">
-                        <span>Мои карты</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
-                        <span>Мои бонусы</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__settings">
-                        <span>Мой профиль</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div><!-- account catalogue widget -->
-              </div>
-
-              <div class="col-12 mb-2">
-                <div class="banner banner-w100"></div>
-              </div>
-
-            </div>
-            
-          </aside><!-- aside area -->
           <!-- main area -->
-          <main class="col-lg-9">
+          <main class="col-lg-6 offset-lg-3">
 
             <div class="row">
-
               <div class="col-12">
-                <!-- account main widget -->
-                <div class="account-main" id="account-main-widget">
-                  <div class="row">
+                <!-- add template widget -->
+                <div class="template-add" id="template-add-widget">
+                  <div class="row text-center">
 
-                    <div class="col-12 mt-2 mb-3">
-                      <div class="account-title mb-2">
-                        <!-- <span class="account-title__img account-title__img--morning"></span> -->
-                        <span class="account-title__img account-title__img--day"></span>
-                        <!-- <span class="account-title__img account-title__img--night"></span> -->
-                        <!-- <span class="account-title__img account-title__img--sunset"></span> -->
-                        <h1>Добрый день, <strong>Альберт!</strong></h1>
-                      </div>
-                      <p class="account-subtitle">Что сегодня будем оплачивать?</p>
+                    <div class="col-12">
+                      <h1>Добавить шаблон</h1>
                     </div>
 
                     <div class="col-12">
                       <div class="form-search">
-                        <h3 class="form-search__title">Поиск</h3>
                         <form action="">
                           <div class="form-group">
-                            <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-                            <label class="control-label form-label" for="search-icon">Найдите сервис по названию</label>
+                            <input type="text" class="form-control form-input input-search" id="search-template" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                            <label class="control-label form-label" for="search-template">Найдите сервис по названию</label>
                             <a href="#" class="form-search__search"></a>
                             <a href="#" class="form-search__cancel"></a>
                            </div>
@@ -296,74 +254,16 @@
                     </div>
 
                   </div>
-                </div><!-- account main widget -->
+
+                </div><!-- add template widget -->
               </div>
-      
-              <div class="col-12 mt-5">
-                <!-- account templates widget -->
-                <div class="account-templates" id="account-templates-widget">
-
-                  <div class="row justify-content-between mb-3">
-                    <div class="col col-md-auto">
-                      <h3>Мои шаблоны</h3>
-                    </div>
-                    <div class="col-auto d-none d-md-block">
-                      <a href="#" class="btn btn-link btn-forward">Все шаблоны</a>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-12">
-                      <p>У вас еще нет шаблонов. Создайте первый!</p>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-6 col-xl-4 mb-4">
-                      <div class="template-add">
-                        <a href="#" class="template-add__button"><span>+</span> Новый шаблон</a>
-                      </div>
-                    </div>
-                    <div class="col-12 d-md-none">
-                      <a href="#" class="btn btn-green btn-block">Все шаблоны</a>
-                    </div>
-                  </div>
-
-                </div><!-- account templates widget -->
-              </div>
-
-              <div class="col-12 mt-5 mb-5">
-                <!-- account payments widget -->
-                <div class="account-payments" id="account-payments-widget">
-
-                  <div class="row justify-content-between mb-3">
-                    <div class="col col-md-auto">
-                      <h3>Последние платежи</h3>
-                    </div>
-                    <div class="col-auto d-none d-md-block">
-                      <a href="#" class="btn btn-link btn-forward">Все платежи</a>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="mb-0">У вас еще нет платежей.</p>
-                      <p>Создайте шаблон или воспользуйтесь поиском</p>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-12 d-md-none mt-3">
-                      <a href="#" class="btn btn-outline btn-block">Все платежи</a>
-                    </div>
-                  </div>
-                  
-                </div><!-- account payments widget -->
-              </div>
-
             </div>
 
           </main><!-- main area -->
+          <!-- side area -->
+          <aside class="col-lg-3">
+
+          </aside><!-- side area -->
         </div>
       </div><!-- main content -->
 
@@ -448,13 +348,32 @@
       </div>
     </div><!-- footer -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
-    <script src="/js/account-fill.js"></script>
+    <script src="/js/select2-style.js"></script>
   </body>
 </html>

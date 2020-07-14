@@ -7,7 +7,7 @@
   padding: 1.5rem 0.7rem;
   font-family: $text-font;
   line-height: 1.1875;
-  border-radius: 0.5rem;
+  border-radius: $border-radius;
   box-shadow: 0 9px 20px $box-shadow;
   background-color: #fff;
 
@@ -32,7 +32,7 @@
     width: 3.85rem;
     height: 3.75rem;
     border: 2px solid $light-grey;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
 
     img {
       max-width: calc(100% - 8px);
@@ -99,7 +99,7 @@
   height: 5rem;
   padding: 0.75rem 1rem;
   border: 3px solid $bill-border;
-  border-radius: 0.5rem;
+  border-radius: $border-radius;
   background-color: #fff;
 
   &:hover {
@@ -173,7 +173,7 @@
       width: 2.5rem;
       height: 2.5rem;
       border: 2px solid $light-grey;
-      border-radius: 0.5rem;
+      border-radius: $border-radius;
     }
 
     .bill-card__content {
@@ -227,7 +227,7 @@
     flex-shrink: 0;
     width: 2.5rem;
     height: 2.5rem;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
 
     &::before {
       display: block;
@@ -260,7 +260,7 @@
     position: relative;
     padding: 0;
     border: 2px solid $middle-grey;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     box-shadow: 0px 4px 20px $card-shadow;
 
     .dropdown-item {
@@ -323,18 +323,14 @@
     min-height: 5rem;
     height: 5rem;
     border: 2px dashed $middle-grey;
-    border-radius: 0.5rem;
-    font-size: 1.125rem;
-    font-weight: bold;
-    line-height: 1.667;
+    border-radius: $border-radius;
+    @include font(1.125rem, bold, 1.667);
     color: $main-blue;
     background-color: #fff;
 
     span {
       padding-right: 0.625rem;
-      font-size: 1.375rem;
-      font-weight: bold;
-      line-height: 1.667;
+      @include font(1.375rem, bold, 1.667);
       color: $main-blue;
     }
   
@@ -519,7 +515,7 @@
       width: 2.75rem;
       height: 2.75rem;
       border: 2px solid $btn-red;
-      border-radius: 0.5rem;
+      border-radius: $border-radius;
       background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23E84F35'/%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
       background-position: center;
@@ -575,7 +571,7 @@
     width: 2.75rem;
     height: 2.75rem;
     border: 2px solid $btn-red;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23E84F35'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center;
@@ -601,7 +597,7 @@
       width: 18.75rem;
       height: auto;
       padding: 0.5rem 0;
-      border-radius: 0.5rem;
+      border-radius: $border-radius;
     }
 
     &:hover {
@@ -626,7 +622,7 @@
   &.popover-cvv {
     font-size: 0.75rem;
     border: 0;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     background-color: $text-color;
 
     &.bs-popover-auto[x-placement^=right], &.bs-popover-right {
@@ -685,8 +681,8 @@
       padding: 1rem 1rem 0.5rem;
       color: #fff;
       border-bottom: 0;
-      border-top-left-radius: 0.5rem;
-      border-top-right-radius: 0.5rem;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
       background-color: $text-color;
       background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59668 1.72266L14.5967 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5967 1.72266L1.59668 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;

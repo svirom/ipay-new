@@ -21,7 +21,7 @@
   &__row {
     position: relative;
     line-height: 1.1875rem;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     box-shadow: 0px 4px 20px $card-shadow;
     background-color: #fff;
     z-index: 2;
@@ -103,7 +103,7 @@
     font-size: 1rem;
     font-weight: 400;
     color: $btn-green;
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     background-color: $light-green;
     background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09277 6.35742L4.91777 10.1824C5.49527 10.7599 6.44027 10.7599 7.01777 10.1824L15.3428 1.85742' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -119,8 +119,8 @@
   &__collapse {
     margin-top: -4px;
     padding: 0.85rem 1rem;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
     background-color: $light-grey;
 
     .table {
@@ -139,8 +139,8 @@
     font-weight: normal;
     text-align: center;
     cursor: pointer;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
     background-color: $light-grey;
 
     &::after {
@@ -173,7 +173,7 @@
 .template-add {
   padding: 0.875rem 0.4375rem 0.25rem;
   font-weight: 400;
-  border-radius: 0.5rem;
+  border-radius: $border-radius;
   background-color: $light-grey;
 
   &__template {
