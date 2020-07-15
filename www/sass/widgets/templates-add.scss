@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the templates add widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.templates-add {
+  min-height: 60vh;
+
+  &__search {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__or {
+    position: relative;
+
+    span {
+      padding: 0 4px;
+      color: $main-blue;
+      background-color: #fff;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+      width: 100%;
+      height: 1px;
+      background-color: $middle-grey;
+      z-index: -1;
+    }
+  }
+
+  &__search-link {
+    padding: 1.094rem 1rem 1.094rem 2.5rem;
+    @include font(1rem, 400, 1.1875);
+    color: $text-color;
+    text-align: left;
+    box-shadow: 0px 5px 20px $box-shadow;
+    background: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3195 23.9626C19.6213 23.9626 24.7299 18.854 24.7299 12.5523C24.7299 6.25053 19.6213 1.14197 13.3195 1.14197C7.01777 1.14197 1.90918 6.25053 1.90918 12.5523C1.90918 18.854 7.01777 23.9626 13.3195 23.9626Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M28.0914 27.3238L21.3945 20.627' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E") left 10px center no-repeat;
+    background-size: 20px;
+
+    &:hover {
+      box-shadow: 0px 4px 5px $template-shadow-hover;
+    }
+  }
+
+  &__search-address {
+    padding: 0.625rem 1rem;
+    color: $main-blue;
+  }
+
+  &__cancel-btn {
+    padding-left: 2rem;
+    padding-right: 0;
+    @include font(1.125rem, bold, 1.167);
+    background: url("data:image/svg+xml,%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.35449 8.72754L23.8999 23.273' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.8999 8.72754L9.35449 23.273' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center no-repeat;
+    background-size: 32px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__search-buttons {
+    @include until($md) {
+      .btn {
+        padding: 0.625rem 1rem;
+      }
+    }
+  }
+
+  .form-search {
+    .form-group {
+      margin-bottom: 1.75rem;
+    }
+
+    @include until($md) {
+      .form-input.input-search:focus ~ .form-search__cancel, 
+      .form-input.input-search.filled ~ .form-search__cancel {
+        display: none;
+      }
+    }
+  }
+}

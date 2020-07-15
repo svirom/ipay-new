@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue-account.css">
-    <link rel="stylesheet" href="/css/account-main.css">
-    <link rel="stylesheet" href="/css/archive-table.css">
+    <link rel="stylesheet" href="/css/templates-add.css">
 
-    <title>Архив платежей период</title>
+    <title>Добавить шаблон по поиску</title>
   </head>
   <body>
 
@@ -199,7 +198,8 @@
             <div class="col-12">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Мой кабинет</li>
+                <li class="breadcrumb-item"><a href="#">Мой кабинет</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Мои шаблоны</li>
               </ol>
             </div>
           </div>
@@ -208,102 +208,47 @@
 
       <!-- main content -->
       <div class="container main-content">
-        <div class="row">
-          <!-- aside area -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="row">
-
-              <div class="col-12 mb-5">
-                <!-- account catalogue widget -->
-                <div class="catalogue-account" id="catalogue-account-widget">
-                  <ul class="catalogue-account__list">
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__account">
-                        <span>Мой кабинет</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__archive active">
-                        <span>Архив платежей</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__templates">
-                        <span>Мои шаблоны</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__cards">
-                        <span>Мои карты</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
-                        <span>Мои бонусы</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__settings">
-                        <span>Мой профиль</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div><!-- account catalogue widget -->
-              </div>
-
-              <div class="col-12 mb-2">
-                <div class="banner banner-w100"></div>
-              </div>
-
-            </div>
-            
-          </aside><!-- aside area -->
+        <div class="row justify-content-center">
           <!-- main area -->
-          <main class="col-lg-9">
+          <main class="col-lg-8 col-xl-7">
 
             <div class="row">
+              <div class="col-12 mt-3">
+                <!-- add templates widget -->
+                <div class="templates-add" id="templates-add-widget">
+                  <div class="row text-center">
 
-              <div class="col-12">
-                <!-- account main widget -->
-                <div class="account-main" id="account-main-widget">
-
-                  <div class="row">
-                    <div class="col-12 mt-2 mb-3 d-lg-none">
-                      <a href="#" class="btn btn-link btn-back">Мой кабинет</a>
+                    <div class="col-12 mb-2">
+                      <h1>Добавить шаблон</h1>
                     </div>
+
+                    <div class="col-12 mt-4">
+                      <div class="form-search">
+                        <form action="">
+                          <div class="form-group">
+                            <input type="text" class="form-control form-input input-search" id="search-template" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                            <label class="control-label form-label" for="search-template">Найдите сервис по названию</label>
+                            <a href="#" class="form-search__search"></a>
+                            <a href="#" class="form-search__cancel"></a>
+                           </div>
+                           <div class="form-group templates-add__search-buttons">
+                            <div class="row justify-content-center">
+                              <div class="col-12 col-md-auto mb-3 mb-md-0">
+                                <a href="#" class="btn btn-outline btn-prev d-block">В мои шаблоны</a>
+                              </div>
+                              <div class="col">
+                                <button type="submit" class="btn btn-outline btn-block">Подобрать сервис по адресу</button>
+                              </div>
+                            </div>
+                           </div>
+                        </form>
+                      </div>
+                    </div>
+
                   </div>
 
-                  <div class="row justify-content-between align-items-center mb-2">
-                    <div class="col-12 col-md-auto">
-                      <h2>Архив платежей</h2>
-                    </div>
-                    <div class="col-12 col-md-auto">
-                      <form action="">
-                        <div class="form-group select-input-wrapper">
-                          <select class="select-input form-control form-input" name="select">
-                            <option value="2">Вчера</option>
-                            <option value="1">Сегодня</option>
-                            <option value="3">Последние 7 дней</option>
-                            <option value="4">Последние 30 дней</option>
-                            <option value="5">Текущий месяц</option>
-                            <option value="6">Предыдущий месяц</option>
-                            <option value="7">Текущий год</option>
-                          </select>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-12 text-center mt-4">
-                      <p class="account-main__empty">В этот период не было платежей</p>
-                      <img src="img/account/archive-period.png" alt="" class="account-main__period-img img-fluid">
-                    </div>
-                  </div>
-                  
-                </div><!-- account main widget -->
+                </div><!-- add templates widget -->
               </div>
-
             </div>
 
           </main><!-- main area -->

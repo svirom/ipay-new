@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the templates add aside widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.templates-add-aside {
+  padding: 2.5rem 1.625rem;
+  border-radius: $border-radius;
+  background-color: $light-grey;
+
+  &__img {
+    max-width: 8.75rem;
+  }
+
+  p {
+    color: $main-blue;
+
+    &:first-of-type {
+      font-weight: bold;
+    }
+  }
+}

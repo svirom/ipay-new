@@ -2833,6 +2833,13 @@ label {
     top: 0.45rem;
     font-size: 0.77777rem;
   }
+  .form-search .form-input.input-search:focus ~ .form-search__cancel, .form-search .form-input.input-search.filled ~ .form-search__cancel {
+    display: block;
+    top: -2.625rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-size: 20px;
+  }
   .form-search.focused {
     padding: 1rem 0.5rem;
   }

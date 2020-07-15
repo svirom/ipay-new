@@ -84,8 +84,8 @@ $(document).ready(function() {
   $('#searchModal').on('hidden.bs.modal', searchCancel);
 
   function searchCancel() {
-    $(this).closest('#searchModal')
-    .find('.form-search').removeClass('focused')
+    $(this).closest('.form-search')
+    .removeClass('focused')
     .find('.input-search').removeClass('filled').val('');
   }
 

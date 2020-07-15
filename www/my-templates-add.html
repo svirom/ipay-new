@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue-account.css">
-    <link rel="stylesheet" href="/css/account-main.css">
+    <link rel="stylesheet" href="/css/templates-add.css">
+    <link rel="stylesheet" href="/css/templates-add-aside.css">
 
     <title>Добавить шаблон</title>
   </head>
@@ -26,9 +27,6 @@
             </div>
             <nav class="">
               <ul class="main-nav__nav">
-                <li class="main-nav__item main-nav__icon--search">
-                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги для оплаты</a>
-                </li>
                 <li class="main-nav__item">
                   <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
                     <span>Безопасность </span>
@@ -194,21 +192,6 @@
     <!-- main wrapper -->
     <div class="main-wrapper">
 
-      <!-- search form mobile -->
-      <div class="d-lg-none form-search-mobile">
-        <div class="form-search">
-          <h3 class="form-search__title">Поиск</h3>
-          <form action="">
-            <div class="form-group">
-              <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-              <label class="control-label form-label" for="search-icon">Поиск услуги</label>
-              <a href="#" class="form-search__search"></a>
-              <a href="#" class="form-search__cancel"></a>
-             </div>
-          </form>
-        </div>
-      </div>
-
       <!-- breadcrumb widget -->
       <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
@@ -231,9 +214,9 @@
           <main class="col-lg-6 offset-lg-3">
 
             <div class="row">
-              <div class="col-12">
-                <!-- add template widget -->
-                <div class="template-add" id="template-add-widget">
+              <div class="col-12 mt-3">
+                <!-- add templates widget -->
+                <div class="templates-add" id="templates-add-widget">
                   <div class="row text-center">
 
                     <div class="col-12">
@@ -241,29 +224,42 @@
                     </div>
 
                     <div class="col-12">
-                      <div class="form-search">
-                        <form action="">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input input-search" id="search-template" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-                            <label class="control-label form-label" for="search-template">Найдите сервис по названию</label>
-                            <a href="#" class="form-search__search"></a>
-                            <a href="#" class="form-search__cancel"></a>
-                           </div>
-                        </form>
+                      <div class="templates-add__search mb-4">
+                        <a href="#" class="btn btn-block templates-add__search-link">Найдите сервис по названию</a>
+                      </div>
+                      <div class="templates-add__or">
+                        <span>или</span>
+                      </div>
+                      <div class="templates-add__search mt-4">
+                        <a href="#" class="btn btn-outline btn-block templates-add__search-address">Подобрать сервис по адресу</a>
+                      </div>
+                      <div class="templates-add__cancel">
+                        <a href="#" class="btn templates-add__cancel-btn">Отмена</a>
                       </div>
                     </div>
 
                   </div>
 
-                </div><!-- add template widget -->
+                </div><!-- add templates widget -->
               </div>
             </div>
 
           </main><!-- main area -->
-          <!-- side area -->
-          <aside class="col-lg-3">
-
-          </aside><!-- side area -->
+          <!-- aside area -->
+          <aside class="col-lg-3 d-none d-lg-block">
+            <div class="row">
+              <div class="col-12">
+                <!-- templates add aside widget -->
+                <div class="templates-add-aside" id="templates-add-aside-widget">
+                  <div class="text-center mb-4">
+                    <img src="img/account/templates-aside.png" alt="" class="templates-add-aside__img img-fluid">
+                  </div>
+                  <p>Шаблоны - ваш помощник по быстрой оплате</p>
+                  <p>Создавайте шаблоны ваших платежей и платите быстрее, без поиска поставщика и ввода данных об услуге</p>
+                </div><!-- templates add aside widget -->
+              </div>
+            </div>
+          </aside><!-- aside area -->
         </div>
       </div><!-- main content -->
 
@@ -347,24 +343,6 @@
         </div>
       </div>
     </div><!-- footer -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="form-search">
-            <form action="">
-              <div class="form-group">
-                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
-                <a href="#" class="form-search__search"></a>
-                <a href="#" class="form-search__cancel"></a>
-                </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
     <!-- Optional JavaScript -->
