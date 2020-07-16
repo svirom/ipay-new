@@ -81,10 +81,78 @@
       margin-bottom: 1.75rem;
     }
 
-    @include until($md) {
+    /* @include until($md) {
       .form-input.input-search:focus ~ .form-search__cancel, 
       .form-input.input-search.filled ~ .form-search__cancel {
         display: none;
+      }
+    } */
+
+    &__list {
+      position: static;
+      text-align: left;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 9px;
+
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $light-grey;
+      }
+
+      &:last-of-type {
+        &::after {
+          height: 0;
+        }
+      }
+    }
+
+    &__link {
+      flex-grow: 1;
+      padding-right: 0.25rem;
+    }
+
+    &__add {
+      flex-shrink: 0;
+      margin-right: 0.25rem;
+      width: 1.3125rem;
+      height: 1.3125rem;
+      border-radius: 50%;
+      border: 2px solid $middle-grey;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1.0498V10.9498' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.9508 6H1.05078' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px;
+
+      &:hover {
+        border-color: $heading-color;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1.0498V10.9498' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.9508 6H1.05078' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  &__img-success {
+    max-width: 15rem;
+  }
+
+  @include until($lg) {
+    .form-search {
+      &.focused {
+        padding: 0;
+      }
+
+      &__item-title {
+        font-size: 1rem;
       }
     }
   }

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/catalogue-account.css">
     <link rel="stylesheet" href="/css/templates-add.css">
 
-    <title>Добавить шаблон по поиску 1</title>
+    <title>Добавить шаблон по поиску 3</title>
   </head>
   <body>
 
@@ -210,7 +210,7 @@
       <div class="container main-content">
         <div class="row justify-content-center">
           <!-- main area -->
-          <main class="col-lg-8 col-xl-7">
+          <main class="col-md-7 col-lg-6 col-xl-5">
 
             <div class="row">
               <div class="col-12 mt-3">
@@ -222,24 +222,46 @@
                       <h1>Добавить шаблон</h1>
                     </div>
 
-                    <div class="col-12 mt-4">
+                    <div class="col-12">
                       <div class="form-search">
                         <form action="">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input input-search" id="search-template" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-                            <label class="control-label form-label" for="search-template">Найдите сервис по названию</label>
-                            <a href="#" class="form-search__search"></a>
-                           </div>
-                           <div class="form-group templates-add__search-buttons">
+                          <div class="form-group mb-3">
+                            <div class="form-search__list">
+                              <ul>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/kyivstar.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">Киевстар Домашний интернет</span>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="form-group mb-4 has-success">
+                            <input type="tel" class="form-control form-input" id="template-name" name="name" autocomplete="off" placeholder="Название шаблона" aria-required="true" value="За интернет">
+                            <label class="control-label form-label" for="template-name">Название шаблона</label>
+                          </div>
+                          <div class="form-group mb-4 has-success">
+                            <input type="tel" class="form-control form-input" id="contract-number" name="name" autocomplete="off" placeholder="Номер договора" aria-required="true" value="12345678">
+                            <label class="control-label form-label" for="contract-number">Номер договора</label>
+                          </div>
+                          <div class="form-group has-success">
+                            <input type="tel" class="form-control form-input input-icon-right" id="template-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100.00">
+                            <label class="control-label form-label" for="template-amount">Сумма</label>
+                            <label class="label-icon-right label-currency">грн</label>
+                          </div>
+                          <div class="form-group templates-add__search-buttons">
                             <div class="row justify-content-center">
                               <div class="col-12 col-md-auto mb-3 mb-md-0">
-                                <a href="#" class="btn btn-outline btn-prev d-block">В мои шаблоны</a>
+                                <a href="#" class="btn btn-outline btn-prev d-block">Назад</a>
                               </div>
                               <div class="col">
-                                <button type="submit" class="btn btn-outline btn-block">Подобрать сервис по адресу</button>
+                                <button type="submit" class="btn btn-green btn-block">Создать шаблон</button>
                               </div>
                             </div>
-                           </div>
+                          </div>
                         </form>
                       </div>
                     </div>

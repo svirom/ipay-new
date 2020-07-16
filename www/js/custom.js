@@ -76,7 +76,8 @@ $(document).ready(function() {
   })
 
   $('.input-search').on('blur', function() {
-    $(this).closest('.form-search').removeClass('focused');
+    $(this).hasClass('filled') ? '' : $(this).closest('.form-search').removeClass('focused');
+    //$(this).closest('.form-search').removeClass('focused');
   })
 
   // search cancel button, hide modal

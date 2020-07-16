@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/catalogue-account.css">
     <link rel="stylesheet" href="/css/templates-add.css">
 
-    <title>Добавить шаблон по поиску 1</title>
+    <title>Добавить шаблон по адресу 1</title>
   </head>
   <body>
 
@@ -210,36 +210,48 @@
       <div class="container main-content">
         <div class="row justify-content-center">
           <!-- main area -->
-          <main class="col-lg-8 col-xl-7">
+          <main class="col-md-7 col-lg-6 col-xl-5">
 
             <div class="row">
               <div class="col-12 mt-3">
                 <!-- add templates widget -->
                 <div class="templates-add" id="templates-add-widget">
-                  <div class="row text-center">
+                  <div class="row">
 
-                    <div class="col-12 mb-2">
-                      <h1>Добавить шаблон</h1>
+                    <div class="col-12 text-center mb-2">
+                      <h1>Укажите ваш адрес</h1>
                     </div>
 
-                    <div class="col-12 mt-4">
+                    <div class="col-12 mb-2">
+                      <p>Мы предложим вам услуги релевантные вашему месту проживания</p>
+                    </div>
+
+                    <div class="col-12">
                       <div class="form-search">
                         <form action="">
+                          <div class="form-group mb-4">
+                            <input type="tel" class="form-control form-input" id="template-city" name="name" autocomplete="off" placeholder="Город" aria-required="true">
+                            <label class="control-label form-label" for="template-city">Город</label>
+                          </div>
+                          <div class="form-group mb-4">
+                            <input type="tel" class="form-control form-input" id="template-street" name="name" autocomplete="off" placeholder="Улица" aria-required="true">
+                            <label class="control-label form-label" for="template-street">Улица</label>
+                          </div>
                           <div class="form-group">
-                            <input type="text" class="form-control form-input input-search" id="search-template" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-                            <label class="control-label form-label" for="search-template">Найдите сервис по названию</label>
-                            <a href="#" class="form-search__search"></a>
-                           </div>
-                           <div class="form-group templates-add__search-buttons">
+                            <input type="tel" class="form-control form-input input-icon-right" id="template-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                            <label class="control-label form-label" for="template-amount">Сумма</label>
+                            <label class="label-icon-right label-currency">грн</label>
+                          </div>
+                          <div class="form-group templates-add__search-buttons">
                             <div class="row justify-content-center">
                               <div class="col-12 col-md-auto mb-3 mb-md-0">
-                                <a href="#" class="btn btn-outline btn-prev d-block">В мои шаблоны</a>
+                                <a href="#" class="btn btn-outline btn-prev d-block">Назад</a>
                               </div>
                               <div class="col">
-                                <button type="submit" class="btn btn-outline btn-block">Подобрать сервис по адресу</button>
+                                <button type="submit" class="btn btn-green btn-next btn-block" disabled>Далее</button>
                               </div>
                             </div>
-                           </div>
+                          </div>
                         </form>
                       </div>
                     </div>

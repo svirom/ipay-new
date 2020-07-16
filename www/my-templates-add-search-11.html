@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/catalogue-account.css">
     <link rel="stylesheet" href="/css/templates-add.css">
 
-    <title>Добавить шаблон по поиску 1</title>
+    <title>Добавить шаблон по поиску 11</title>
   </head>
   <body>
 
@@ -223,12 +223,52 @@
                     </div>
 
                     <div class="col-12 mt-4">
-                      <div class="form-search">
+                      <div class="form-search focused">
                         <form action="">
                           <div class="form-group">
-                            <input type="text" class="form-control form-input input-search" id="search-template" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                            <input type="text" class="form-control form-input input-search filled" id="search-template" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true" value="Киев">
                             <label class="control-label form-label" for="search-template">Найдите сервис по названию</label>
                             <a href="#" class="form-search__search"></a>
+                            <div class="form-search__list">
+                              <ul>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/kyivstar.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">Киевстар</span>
+                                  </span>
+                                  <a href="#" class="form-search__add"></a>
+                                </li>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/yasno.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">Киевские энергетические услуги (Yasno)</span>
+                                  </span>
+                                  <a href="#" class="form-search__add"></a>
+                                </li>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/kyivgasenergy.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">КиевГазЭнерджи</span>
+                                  </span>
+                                  <a href="#" class="form-search__add"></a>
+                                </li>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/kyivgas.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">Киевгаз</span>
+                                  </span>
+                                  <a href="#" class="form-search__add"></a>
+                                </li>
+                              </ul>
+                            </div>
                            </div>
                            <div class="form-group templates-add__search-buttons">
                             <div class="row justify-content-center">
