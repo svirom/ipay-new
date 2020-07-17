@@ -155,8 +155,8 @@
     align-items: center;
     width: 2.5rem;
     height: 2.5rem;
-    border: 3px solid $light-grey;
-    border-radius: $border-radius;
+    border: 2px solid $light-grey;
+    border-radius: $border-radius / 2;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: calc(100% - 6px);
@@ -170,7 +170,7 @@
   &__item-title {
     flex-grow: 1;
     padding-left: 1.4375rem;
-    @include font(1.125rem, 400, 1.667);
+    @include font(1.125rem, 400, 1.2);
     color: $heading-color;
   }
 

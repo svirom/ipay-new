@@ -10,7 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
-    <link rel="stylesheet" href="/css/catalogue-account.css">
     <link rel="stylesheet" href="/css/templates-add.css">
 
     <title>Добавить шаблон по адресу 1</title>
@@ -229,6 +228,17 @@
                     <div class="col-12">
                       <div class="form-search">
                         <form action="">
+                          <div class="form-group mb-4 select-input-wrapper">
+                            <select class="select-address form-control form-input" name="select">
+                              <option value=""></option>
+                              <option value="1">г. Киев</option>
+                              <option value="2">Волынская</option>
+                              <option value="3">Житомирская</option>
+                              <option value="4">Киевская</option>
+                              <option value="5">Хмельницкая</option>
+                              <option value="6">Черкасская</option>
+                            </select>
+                          </div>
                           <div class="form-group mb-4">
                             <input type="tel" class="form-control form-input" id="template-city" name="name" autocomplete="off" placeholder="Город" aria-required="true">
                             <label class="control-label form-label" for="template-city">Город</label>
@@ -237,10 +247,19 @@
                             <input type="tel" class="form-control form-input" id="template-street" name="name" autocomplete="off" placeholder="Улица" aria-required="true">
                             <label class="control-label form-label" for="template-street">Улица</label>
                           </div>
-                          <div class="form-group">
-                            <input type="tel" class="form-control form-input input-icon-right" id="template-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
-                            <label class="control-label form-label" for="template-amount">Сумма</label>
-                            <label class="label-icon-right label-currency">грн</label>
+                          <div class="row">
+                            <div class="col-12 col-md">
+                              <div class="form-group mb-4">
+                                <input type="tel" class="form-control form-input" id="template-house" name="name" autocomplete="off" placeholder="0" aria-required="true">
+                                <label class="control-label form-label" for="template-house">Дом</label>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group mb-4">
+                                <input type="tel" class="form-control form-input" id="template-app" name="name" autocomplete="off" placeholder="0" aria-required="true">
+                                <label class="control-label form-label" for="template-app">Квартира</label>
+                              </div>
+                            </div>
                           </div>
                           <div class="form-group templates-add__search-buttons">
                             <div class="row justify-content-center">

@@ -7,13 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
-    <link rel="stylesheet" href="/css/catalogue-account.css">
-    <link rel="stylesheet" href="/css/account-main.css">
+    <link rel="stylesheet" href="/css/templates-add.css">
 
-    <title>Архив платежей пустой</title>
+    <title>Добавить шаблон по адресу 2</title>
   </head>
   <body>
 
@@ -198,7 +196,8 @@
             <div class="col-12">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Мой кабинет</li>
+                <li class="breadcrumb-item"><a href="#">Мой кабинет</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Мои шаблоны</li>
               </ol>
             </div>
           </div>
@@ -207,103 +206,89 @@
 
       <!-- main content -->
       <div class="container main-content">
-        <div class="row">
-          <!-- aside area -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="row">
-
-              <div class="col-12 mb-5">
-                <!-- account catalogue widget -->
-                <div class="catalogue-account" id="catalogue-account-widget">
-                  <ul class="catalogue-account__list">
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__account">
-                        <span>Мой кабинет</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__archive active">
-                        <span>Архив платежей</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__templates">
-                        <span>Мои шаблоны</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__cards">
-                        <span>Мои карты</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
-                        <span>Мои бонусы</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__settings">
-                        <span>Мой профиль</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div><!-- account catalogue widget -->
-              </div>
-
-              <div class="col-12 mb-2">
-                <div class="banner banner-w100"></div>
-              </div>
-
-            </div>
-            
-          </aside><!-- aside area -->
+        <div class="row justify-content-center">
           <!-- main area -->
-          <main class="col-lg-9">
+          <main class="col-lg-8 col-xl-7">
 
             <div class="row">
-
-              <div class="col-12">
-                <!-- account main widget -->
-                <div class="account-main" id="account-main-widget">
-
+              <div class="col-12 mt-3">
+                <!-- add templates widget -->
+                <div class="templates-add" id="templates-add-widget">
                   <div class="row">
-                    <div class="col-12 mt-2 mb-3 d-lg-none">
-                      <a href="#" class="btn btn-link btn-back">Мой кабинет</a>
+
+                    <div class="col-12 text-center mb-2">
+                      <h1>Добавить шаблон</h1>
                     </div>
+
+                    <div class="col-12 templates-add__address-text">
+                      <p>Ва вашему адресу <span class="templates-add__address-input">г. Киев, ул. Шулявская, 123</span></p> 
+                      <p>найдены следующие поставщики услуг</p>
+                      <p class="extra-small mt-2">Нажмите “+” для добавления в шаблоны</p>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-search">
+                        <form action="">
+                          <div class="form-group">
+                            <div class="form-search__list">
+                              <ul>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/kyivstar.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">Киевстар</span>
+                                  </span>
+                                  <a href="#" class="form-search__add"></a>
+                                </li>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/yasno.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">Киевские энергетические услуги (Yasno)</span>
+                                  </span>
+                                  <a href="#" class="form-search__add"></a>
+                                </li>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/kyivgasenergy.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">КиевГазЭнерджи</span>
+                                  </span>
+                                  <a href="#" class="form-search__add"></a>
+                                </li>
+                                <li class="form-search__item">
+                                  <span class="form-search__link">
+                                    <span class="form-search__item-img">
+                                      <img src="img/providers/kyivgas.png" alt="">
+                                    </span>
+                                    <span class="form-search__item-title">Киевгаз</span>
+                                  </span>
+                                  <a href="#" class="form-search__add"></a>
+                                </li>
+                              </ul>
+                            </div>
+                           </div>
+                           <div class="form-group templates-add__search-buttons">
+                            <div class="row justify-content-center">
+                              <div class="col-12 col-md-auto mb-3 mb-md-0">
+                                <a href="#" class="btn btn-outline btn-prev d-block">В мои шаблоны</a>
+                              </div>
+                              <div class="col">
+                                <button type="submit" class="btn btn-outline btn-block">Найти сервис по названию</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
                   </div>
 
-                  <div class="row justify-content-between align-items-center mb-2">
-                    <div class="col-12 col-md-auto">
-                      <h2>Архив платежей</h2>
-                    </div>
-                    <div class="col-12 col-md-auto">
-                      <form action="">
-                        <div class="form-group select-input-wrapper">
-                          <select class="select-period form-control form-input" name="select">
-                            <option value=""></option>
-                            <option value="1">Сегодня</option>
-                            <option value="2">Вчера</option>
-                            <option value="3">Последние 7 дней</option>
-                            <option value="4">Последние 30 дней</option>
-                            <option value="5">Текущий месяц</option>
-                            <option value="6">Предыдущий месяц</option>
-                            <option value="7">Текущий год</option>
-                          </select>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-12 text-center mt-5">
-                      <p class="account-main__empty">Вы еще совершали ни одного платежа</p>
-                      <img src="img/account/archive-empty.png" alt="" class="account-main__empty-img img-fluid">
-                    </div>
-                  </div>
-                  
-                </div><!-- account main widget -->
+                </div><!-- add templates widget -->
               </div>
-
             </div>
 
           </main><!-- main area -->
@@ -397,8 +382,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
-    <script src="/js/select2-style.js"></script>
   </body>
 </html>
