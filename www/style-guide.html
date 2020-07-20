@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
@@ -18,6 +17,7 @@
     <link rel="stylesheet" href="/css/homepage-header.css">
     <link rel="stylesheet" href="/css/account-main.css">
     <link rel="stylesheet" href="/css/archive-table.css">
+    <link rel="stylesheet" href="/css/account-cards.css">
 
     <style>
       .catalogue-mobile__backR {
@@ -2809,26 +2809,54 @@
       </div>
       <div class="row mt-5">
         <div class="col-md-6 mt-3">
-          <h3 class="pl-3 pb-0 mb-0">Card in profile</h3>
+          <h3 class="pl-3 pb-0 mb-0">Card in profile (widget)</h3>
           <div class="mt-3">
-            <div class="bank-card bank-profile">
-              <div class="bank-card__header">
-                <div class="bank-card__bank">
+            <div class="account-card">
+              <div class="account-card__header">
+                <div class="account-card__bank">
                   <img src="img/banks/otp.png" alt="">
                 </div>
-                <div class="bank-card__type">
+                <div class="account-card__type">
                   <img src="img/banks/mastercard.png" alt="">
                 </div>
               </div>
-              <div class="bank-card__body">
-                <div class="bank-profile__number">
-                  <div class="bank-profile__purpose">Зарплатная</div>
-                  <div class="bank-profile__card">5168 **** **** **06</div>
+              <div class="account-card__body">
+                <div class="account-card__number">
+                  <div class="account-card__purpose">Зарплатная</div>
+                  <div class="account-card__card">5168 **** **** **06</div>
                 </div>
-                <div class="bank-profile__delete">
-                  <a href="#" class="bank-profile__delete-button"></a>
+                <div class="account-card__delete">
+                  <a href="#" class="account-card__delete-button"></a>
                 </div>
               </div>
+
+              <!-- Modal desktop -->
+              <div class="account-card__confirm">
+                <h4>Удалить карту?</h4>
+                <a href="#" class="account-card__confirm-cancel"></a>
+                <div class="account-card__confirm-purpose">Зарплатная</div>
+                <div class="account-card__confirm-card">5168 **** **** **06</div>
+                <div class="account-card__confirm-delete">
+                  <a href="#" class="btn account-card__confirm-btn">Да, удалить</a>
+                </div>
+              </div><!-- Modal desktop -->
+
+              <!-- Modal mobile -->
+              <div class="account-card__mobile">
+                <div class="account-card__mobile-wrapper">
+                  <div class="account-card__mobile-title">
+                    <h4>Удалить карту</h4>
+                  </div>
+                  <div class="account-card__mobile-text">
+                    <span>Вы уверены что хотите удалить карту</span> 
+                    <span>“Зарплатная”?</span></div>
+                  <div class="account-card__mobile-delete">
+                    <a href="#" class="btn account-card__mobile-btn">Удалить</a>
+                    <a href="#" class="btn account-card__mobile-cancel">Отмена</a>
+                  </div>
+                </div>
+              </div><!-- mobile -->
+              
             </div>
           </div>
         </div>
@@ -3112,12 +3140,13 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
     <script src="/js/style-guide.js"></script>
     <script src="/js/select2-style.js"></script>
+    <script src="/js/account-cards.js"></script>
   </body>
 </html>

@@ -121,10 +121,6 @@ label {
   display: table;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .card-pay-help {
   font-size: 0.75rem;
   color: #7C9CAC;
@@ -2145,12 +2141,12 @@ label {
 }
 
 .template-add__button:hover {
-  color: #172A3A;
+  color: #3B566E;
   text-decoration: none;
 }
 
 .template-add__button:hover span {
-  color: #172A3A;
+  color: #3B566E;
 }
 
 /* bank's card */
@@ -2327,121 +2323,6 @@ label {
 
 .bank-card__cvv-button:focus {
   outline: none;
-}
-
-.bank-card.bank-profile {
-  height: 14.75rem;
-  padding: 2rem 1.25rem 1.25rem;
-}
-
-@media screen and (max-width: 575px) {
-  .bank-card.bank-profile {
-    padding-top: 1.25rem;
-    width: 18.75rem;
-    height: auto;
-  }
-}
-
-.bank-card.bank-profile .bank-card__bank, .bank-card.bank-profile .bank-card__type {
-  background-size: auto 2.5rem;
-}
-
-@media screen and (max-width: 575px) {
-  .bank-card.bank-profile .bank-card__bank, .bank-card.bank-profile .bank-card__type {
-    background-size: auto 1.875rem;
-  }
-}
-
-.bank-card.bank-profile__delete {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.bank-card.bank-profile__delete-button {
-  display: block;
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 2px solid #E84F35;
-  border-radius: 0.5rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23E84F35'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 17px;
-}
-
-@media screen and (max-width: 575px) {
-  .bank-profile {
-    -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.15);
-            box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.15);
-  }
-  .bank-profile .bank-card__body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.bank-profile__number {
-  padding-bottom: 0.375rem;
-  font-family: "Roboto", sans-serif;
-}
-
-.bank-profile__purpose {
-  margin-bottom: 0.25rem;
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.1667;
-  color: #3B566E;
-}
-
-@media screen and (max-width: 575px) {
-  .bank-profile__purpose {
-    font-size: 0.875rem;
-  }
-}
-
-.bank-profile__card {
-  font-size: 1.875rem;
-  font-weight: 400;
-  line-height: 1.1667;
-}
-
-@media screen and (max-width: 575px) {
-  .bank-profile__card {
-    font-size: 1.25rem;
-  }
-}
-
-.bank-profile__delete {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-@media screen and (max-width: 575px) {
-  .bank-profile__delete {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-}
-
-.bank-profile__delete-button {
-  display: block;
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 2px solid #E84F35;
-  border-radius: 0.5rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23E84F35'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 17px;
 }
 
 .new-card__add {

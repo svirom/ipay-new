@@ -1,0 +1,254 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account cards widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-cards {
+  &__text {
+    color: $main-blue;
+  }
+}
+
+.account-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 22.5rem;
+  height: 8.125rem;
+  padding: 1.375rem 1.25rem 1.175rem;
+  font-family: $text-font;
+  border-radius: 1.25rem;
+  box-shadow: 0px 5px 20px $box-shadow;
+
+  &__header {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bank, &__type {
+    display: flex;
+    align-items: center;
+    height: 1.875rem;
+    background-repeat: no-repeat;
+    background-size: auto 1.875rem;
+
+    img {
+      max-height: 1.875rem;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  &__bank {
+    flex-grow: 1;
+    background-position: left center;
+  }
+
+  &__type {
+    flex-shrink: 0;
+    flex-basis: 33%;
+    justify-content: flex-end;
+    background-position: right center;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.125rem;
+    padding-bottom: 0.375rem;
+  }
+
+  &__purpose {
+    margin-bottom: 0.25rem;
+    @include font(0.85rem, 400, 1.15);
+    color: $main-blue;
+  }
+
+  &__card {
+    @include font(1.25rem, 400, 1.15);
+  }
+
+  &__delete {
+    align-self: flex-end;
+  }
+
+  &__delete-button {
+    display: block;
+    width: 1.875rem;
+    height: 1.875rem;
+    border: 2px solid $btn-red;
+    border-radius: $border-radius;
+    background: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23E84F35'/%3E%3C/svg%3E%0A") center no-repeat;
+    background-size: 12px;
+  }
+
+  &__confirm {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.9375rem 0.75rem;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border-radius: 1.25rem;
+    background-color: $btn-red;
+
+    h4 {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__confirm-delete {
+    margin-top: 0.45rem;
+  }
+
+  &__confirm-cancel {
+    display: block;
+    position: absolute;
+    right: 0.85rem;
+    top: 0.85rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.54492 1.54541L12.454 12.4545' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.454 1.54541L1.54492 12.4545' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+    background-size: 14px;
+  }
+
+  &__confirm-purpose {
+    font-size: 0.85rem;
+  }
+
+  &__confirm-btn {
+    padding: 0 0 0 1.5rem;
+    @include font(1rem, 400, 1);
+    color: #fff;
+    text-decoration: underline;
+    background: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23ffffff'/%3E%3C/svg%3E%0A") left center no-repeat;
+    background-size: 16px;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  &__mobile-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+    border-radius: 0;
+    overflow: hidden;
+    z-index: 1001;
+    color: #fff;
+    
+    background-color: $btn-red;
+
+    h4 {
+      font-size: 1.3125rem;
+    }
+  }
+
+  &__mobile-title {
+    padding-top: 4.5rem;
+    background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11H41' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M31 21V33M24 20.76V33V20.76ZM17 21V33V21Z' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29 11H19V7C19 5.9 19.9 5 21 5H27C28.1 5 29 5.9 29 7V11Z' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M37 11V39C37 41.2 35.2 43 33 43H15C12.8 43 11 41.2 11 39V11' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center top no-repeat;
+    background-size: 48px;
+  }
+
+  &__mobile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    span {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      color: #fff;
+    }
+  }
+
+  &__mobile-delete {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  &__mobile-btn {
+    padding: 1.125rem 4.491rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: $heading-color;
+    text-decoration: none;
+    background: #fff;
+
+    &:hover, &:active, &:focus {
+      color: $heading-color;
+    }
+  }
+
+  &__mobile-cancel {
+    position: static;
+    width: auto;
+    height: auto;
+    margin-top: 0.5rem;
+    padding: 1.125rem 4.491rem;
+    font-weight: bold;
+    color: #fff;
+    background: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.card-add__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8.125rem;
+  max-width: 22.5rem;
+  border: 2px dashed #DEE7F3;
+  border-radius: 1.25rem;
+  @include font(1.125rem, bold, 1.667);
+  color: $main-blue;
+  background-color: #fff;
+
+  span {
+    padding-right: 0.625rem;
+    @include font(1.375rem, bold, 1.667);
+    color: $main-blue;
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+
+    span {
+      color: $text-color;
+    }
+  }
+
+  @include until($md) {
+    height: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: $border-radius;
+  }
+}

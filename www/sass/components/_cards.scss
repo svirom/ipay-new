@@ -335,11 +335,11 @@
     }
   
     &:hover {
-      color: $heading-color;
+      color: $text-color;
       text-decoration: none;
   
       span {
-        color: $heading-color;
+        color: $text-color;
       }
     }
   }
@@ -356,7 +356,7 @@
   box-shadow: 0px 5px 20px $box-shadow;
 
   @include until($sm) {
-    width:100%;
+    width: 100%;
     max-width: 20rem;
     height: auto;
     margin-top: 1rem;
@@ -486,96 +486,6 @@
     &:focus {
       outline: none;
     }
-  }
-
-  &.bank-profile {
-    height: 14.75rem;
-    padding: 2rem 1.25rem 1.25rem;
-
-    @include until($sm) {
-      padding-top: 1.25rem;
-      width: 18.75rem;
-      height: auto;
-    }
-
-    .bank-card__bank, .bank-card__type {
-      background-size: auto 2.5rem;
-
-      @include until($sm) {
-        background-size: auto 1.875rem;
-      }
-    }
-
-    &__delete {
-      align-self: flex-end;
-    }
-
-    &__delete-button {
-      display: block;
-      width: 2.75rem;
-      height: 2.75rem;
-      border: 2px solid $btn-red;
-      border-radius: $border-radius;
-      background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23E84F35'/%3E%3C/svg%3E%0A");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 17px;
-    }
-  }
-}
-
-.bank-profile {
-  @include until($sm) {
-    box-shadow: 0px 5px 20px $box-shadow;
-
-    .bank-card__body {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
-  &__number {
-    padding-bottom: 0.375rem;
-    font-family: $text-font;
-  }
-
-  &__purpose {
-    margin-bottom: 0.25rem;
-    @include font(1.125rem, 400, 1.1667);
-    color: $text-color;
-
-    @include until($sm) {
-      font-size: 0.875rem;
-    }
-  }
-
-  &__card {
-    @include font(1.875rem, 400, 1.1667);
-
-    @include until($sm) {
-      font-size: 1.25rem;
-    }
-  }
-
-  &__delete {
-    align-self: flex-end;
-
-    @include until($sm) {
-      align-self: center;
-    }
-  }
-
-  &__delete-button {
-    display: block;
-    width: 2.75rem;
-    height: 2.75rem;
-    border: 2px solid $btn-red;
-    border-radius: $border-radius;
-    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23E84F35'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 17px;
   }
 }
 
