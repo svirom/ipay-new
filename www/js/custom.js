@@ -68,7 +68,7 @@ $(document).ready(function() {
   if (docWidth < 768) {
     popoverOptions.placement = 'bottom';
   }
-  $("#cvv-popover, #cvv-popover2, #cvv-popover3, #cvv-popover4").popover(popoverOptions);
+  $("#cvv-popover").popover(popoverOptions);
 
   // search input mobile
   $('.input-search').on('focus', function() {

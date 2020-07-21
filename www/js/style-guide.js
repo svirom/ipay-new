@@ -24,4 +24,6 @@ $(document).ready(function() {
       .css({'height' : mobileMenuHeight});
   }
 
+  $("#cvv-popover2, #cvv-popover3, #cvv-popover4").popover(popoverOptions);
+
 })
