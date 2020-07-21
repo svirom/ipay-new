@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the cards add widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.cards-add {
+  min-height: 60vh;
+
+  .alert {
+    padding: 0.625rem;
+    color: $text-color;
+  }
+
+  &__repeat {
+    .btn-link {
+      color: $ipay-links;
+    }
+  }
+
+  &__result {
+    width: 7.4375rem;
+    height: 7.4375rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: $light-grey;
+    overflow: hidden;
+  }
+
+  &__result-buttons {
+    .btn {
+      padding: 0.625rem;
+    }
+  }
+
+  &__masterpass {
+    max-width: 8.75rem;
+  }
+
+  @include until($sm) {
+    &__expires {
+      .form-input {
+        padding-left: 0.5rem;
+      }
+
+      .form-label {
+        left: 0.75rem;
+      }
+    }
+  }
+}

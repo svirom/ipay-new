@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
-    <link rel="stylesheet" href="/css/catalogue-account.css">
-    <link rel="stylesheet" href="/css/account-main.css">
-    <link rel="stylesheet" href="/css/account-templates.css">
+    <link rel="stylesheet" href="/css/cards-add.css">
 
-    <title>Мои шаблоны</title>
+    <title>Добавить карту успех</title>
   </head>
   <body>
 
@@ -197,7 +195,8 @@
             <div class="col-12">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Мой кабинет</li>
+                <li class="breadcrumb-item"><a href="#">Мой кабинет</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Мои карты</li>
               </ol>
             </div>
           </div>
@@ -206,195 +205,57 @@
 
       <!-- main content -->
       <div class="container main-content">
-        <div class="row">
-          <!-- aside area -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="row">
-
-              <div class="col-12 mb-5">
-                <!-- account catalogue widget -->
-                <div class="catalogue-account" id="catalogue-account-widget">
-                  <ul class="catalogue-account__list">
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__account">
-                        <span>Мой кабинет</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__archive">
-                        <span>Архив платежей</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__templates active">
-                        <span>Мои шаблоны</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__cards">
-                        <span>Мои карты</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
-                        <span>Мои бонусы</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__settings">
-                        <span>Мой профиль</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div><!-- account catalogue widget -->
-              </div>
-
-              <div class="col-12 mb-2">
-                <div class="banner banner-w100"></div>
-              </div>
-
-            </div>
-            
-          </aside><!-- aside area -->
+        <div class="row justify-content-center">
           <!-- main area -->
-          <main class="col-lg-9">
+          <main class="col-lg-8 col-xl-6">
 
             <div class="row">
-
-              <div class="col-12">
-                <!-- account main widget -->
-                <div class="account-main" id="account-main-widget">
+              <div class="col-12 mt-3">
+                <!-- add cards widget -->
+                <div class="cards-add" id="cards-add-widget">
 
                   <div class="row">
                     <div class="col-12 mt-2 mb-3 d-lg-none">
                       <a href="#" class="btn btn-link btn-back">Мой кабинет</a>
                     </div>
                   </div>
+                  
+                  <div class="row text-center">
 
-                  <div class="row justify-content-between align-items-center mb-2">
-                    <div class="col-12 col-md-auto">
-                      <h1>Мои шаблоны</h1>
+                    <div class="col-12 mb-3">
+                      <h1>Карта добавлена!</h1>
                     </div>
-                    <div class="col-12 d-md-none">
-                      <p>Создавайте шаблоны платежей для моментальной оплаты любимых услуг</p>
-                    </div>
-                    <div class="col-12 col-md-auto">
-                      <a href="" class="btn btn-green btn-plus btn-block">Новый шаблон</a>
-                    </div>
-                  </div>
 
-                  <div class="row">
-                    <div class="col-12 mt-3 mt-md-4">
-                      <!-- account templates widget -->
-                      <div class="account-templates" id="account-templates-widget">
-      
-                        <div class="row">
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <div class="bill-card template-card">
-                                <span class="bill-card__img">
-                                  <img src="img/providers/yasno.png" alt="">
-                                </span>
-                                <span class="bill-card__content">
-                                  <span class="template-card__text">Оплата электроэнергии Yasno</span>
-                                  <span class="template-card__amount">100.00 грн</span>
-                                </span>
-                                <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
-                                </div>
-                              </div>
-                            </div>
+                    <div class="col-12 text-center mb-4">
+                      <div class="cards-add__result"></div>
+                    </div>
+
+                    <div class="col-12 mb-4 text-center">
+                      <p>Вы успешно привязали карту в кошелек Masterpass!</p> 
+                      <p>Теперь вы можете оплачивать быстрее выбирая свою карту</p>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-group  cards-add__result-buttons">
+                        <div class="row justify-content-center">
+                          <div class="col-12 col-md mb-2 mb-md-0">
+                            <button type="submit" class="btn btn-green btn-block">Добавить еще карту</button>
                           </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <div class="bill-card template-card">
-                                <span class="bill-card__img">
-                                  <img src="img/providers/kyivgas.png" alt="">
-                                </span>
-                                <span class="bill-card__content">
-                                  <span class="template-card__text">Оплата за газ</span>
-                                </span>
-                                <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <div class="bill-card template-card">
-                                <span class="bill-card__img">
-                                  <img src="img/providers/kyivgasenergy.png" alt="">
-                                </span>
-                                <span class="bill-card__content">
-                                  <span class="template-card__text">Оплата за воду</span>
-                                </span>
-                                <a href="#" class="template-card__button" id="dropdownTemplate3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownTemplate3">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <div class="bill-card template-card">
-                                <span class="bill-card__img">
-                                  <img src="img/providers/yasno.png" alt="">
-                                </span>
-                                <span class="bill-card__content">
-                                  <span class="template-card__text">Оплата детсад малому</span>
-                                  <span class="template-card__amount">100.00 грн</span>
-                                </span>
-                                <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <div class="bill-card template-card">
-                                <span class="bill-card__img">
-                                  <img src="img/providers/kyivgas.png" alt="">
-                                </span>
-                                <span class="bill-card__content">
-                                  <span class="template-card__text">Оплата за газ</span>
-                                </span>
-                                <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
-                                  <a href="#" class="dropdown-item">Редактировать</a>
-                                  <a href="#" class="dropdown-item">Удалить</a>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="col-12 col-md">
+                            <a href="#" class="btn btn-outline btn-block">В мой кабинет</a>
                           </div>
                         </div>
-      
-                      </div><!-- account templates widget -->
+                      </div>
                     </div>
+
+                    <div class="col-12 text-center">
+                      <img src="img/banks/masterpass-logo.png" alt="Masterpass" class="img-fluid cards-add__masterpass">
+                    </div>
+
                   </div>
 
-                  <div class="row align-items-center mt-3 mt-md-5">
-                    <div class="col-md-auto text-center">
-                      <img src="img/account/templates-advice.png" alt="" class="account-main__templates-img img-fluid">
-                    </div>
-                    <div class="col-md account-main__templates-text mt-3 mt-md-0">
-                      <p>Шаблоны - ваш помощник по быстрой оплате</p>
-                      <p>Создавайте шаблоны ваших платежей и платите быстрее, без поиска поставщика и ввода данных об услуге</p>
-                    </div>
-                  </div>
-                  
-                </div><!-- account main widget -->
+                </div><!-- add cards widget -->
               </div>
-
             </div>
 
           </main><!-- main area -->

@@ -11,6 +11,16 @@
   &__text {
     color: $main-blue;
   }
+
+  &__masterpass {
+    max-width: 6.6875rem;
+  }
+
+  @include until($md) {
+    &__masterpass {
+      max-width: 8.75rem;
+    }
+  }
 }
 
 .account-card {

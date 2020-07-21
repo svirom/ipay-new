@@ -175,8 +175,14 @@
     }
   }
 
-  &__img-success {
-    max-width: 15rem;
+  &__result {
+    width: 12rem;
+    height: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: $light-grey;
+    overflow: hidden;
   }
 
   @include until($lg) {
