@@ -63,6 +63,35 @@
     }
   }
 
+  &__masterpass {
+    max-width: 6.6875rem;
+  }
+
+  &__masterpass-add {
+    max-width: 13.125rem;
+  }
+
+  &__masterpass-alert {
+    display: flex;
+    align-items: center;
+  }
+
+  &__alert-img {
+    flex: 0 0 2.5rem;
+    max-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: $light-yellow;
+  }
+
+  &__alert-text {
+    margin-bottom: 0;
+    padding-left: 0.8125rem;
+    font-family: $heading-font;
+    @include font(1.3125rem, bold, 1.24);
+  }
+
   @include until($md) {
     h1 {
       margin-bottom: 1rem;
@@ -72,6 +101,10 @@
       p {
         padding-left: 0;
       }
+    }
+
+    &__masterpass, &__masterpass-add {
+      max-width: 8.75rem;
     }
   }
 }
