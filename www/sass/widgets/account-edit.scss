@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account edit widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-edit {
+  &__repeat {
+    .btn-link {
+      color: $ipay-links;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__delete {
+    padding-top: 1.6875rem;
+    border-top: 2px solid $middle-grey;
+  }
+
+  &__delete-btn {
+    padding-left: 2rem;
+    padding-right: 0;
+    @include font(1.125rem, 400, 1);
+    color: $btn-red;
+    text-align: left;
+    background: url("data:image/svg+xml,%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79297 7.33301H27.4596' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.7923 13.9998V21.9998M16.1257 13.8398V21.9998V13.8398ZM11.459 13.9998V21.9998V13.9998Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.4596 7.33301H12.793V4.66634C12.793 3.93301 13.393 3.33301 14.1263 3.33301H18.1263C18.8596 3.33301 19.4596 3.93301 19.4596 4.66634V7.33301Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24.7923 7.33301V25.9997C24.7923 27.4663 23.5923 28.6663 22.1257 28.6663H10.1257C8.65898 28.6663 7.45898 27.4663 7.45898 25.9997V7.33301' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")  left center no-repeat;
+    background-size: 26px;
+
+    &:hover {
+      color: $btn-red;
+      text-decoration: underline;
+    }
+  }
+
+  .help-list {
+    column-count: 2;
+    column-fill: auto;
+    height: 4.5rem;
+  }
+
+  @include until($md) {
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  @include until($sm) {
+    .help-list {
+      height: auto;
+    }
+  }
+}

@@ -1131,35 +1131,35 @@
           <div class="form-group" style="max-width: 260px;">
             <input type="password" class="form-control form-input" id="form-pass" name="pass" autocomplete="off" aria-required="true">
             <label class="control-label form-label" for="form-pass">Пароль</label>
-            <button class="password-button"></button>
+            <button type="button" class="password-button"></button>
           </div>
           <div class="mb-4">
             <code>
               &lt;div class="form-group"><br>
               &nbsp;&lt;input type="password" class="form-control form-input" id="form-pass" name="pass" autocomplete="off" aria-required="true"><br>
               &nbsp;&lt;label class="control-label form-label" for="form-pass">Пароль&lt;/label><br>
-              &nbsp;&lt;button class="password-button">&lt;/button><br>
+              &nbsp;&lt;button type="button" class="password-button">&lt;/button><br>
               &lt;/div>
             </code>
           </div>
           <div class="form-group has-success" style="max-width: 260px;">
             <input type="password" class="form-control form-input" id="form-pass-success" name="pass" autocomplete="off" aria-required="true" value="New_pass">
             <label class="control-label form-label" for="form-pass-success">Пароль</label>
-            <button class="password-button"></button>
+            <button type="button" class="password-button"></button>
           </div>
           <div class="mb-4">
             <code>
               &lt;div class="form-group has-success"><br>
               &nbsp;&lt;input type="password" class="form-control form-input" id="form-pass-success" name="pass" autocomplete="off" aria-required="true" value="New_pass"><br>
               &nbsp;&lt;label class="control-label form-label" for="form-pass-success">Пароль&lt;/label><br>
-              &nbsp;&lt;button class="password-button">&lt;/button><br>
+              &nbsp;&lt;button type="button" class="password-button">&lt;/button><br>
               &lt;/div>
             </code>
           </div>
           <div class="form-group required has-error" style="max-width: 260px;">
             <input type="password" class="form-control form-input" id="form-pass-error" name="pass" autocomplete="off" aria-required="true" value="PaSsWoRd">
             <label class="control-label form-label" for="form-pass-error">Пароль</label>
-            <button class="password-button"></button>
+            <button type="button" class="password-button"></button>
             <div class="help-block">Неверный пароль</div>
           </div>
           <div class="mb-4">
@@ -1167,7 +1167,7 @@
               &lt;div class="form-group has-error"><br>
               &nbsp;&lt;input type="password" class="form-control form-input" id="form-pass-error" name="pass" autocomplete="off" aria-required="true" value="PaSsWoRd"><br>
               &nbsp;&lt;label class="control-label form-label" for="form-pass-error">Пароль&lt;/label><br>
-              &nbsp;&lt;button class="password-button">&lt;/button><br>
+              &nbsp;&lt;button type="button" class="password-button">&lt;/button><br>
               &nbsp;&lt;div class="help-block">Неверный пароль&lt;/div><br>
               &lt;/div>
             </code>
@@ -1481,6 +1481,27 @@
             <li>Приветствуем</li>
             <li>Приветствуем</li>
           </ol>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-4 mt-3">
+          <ul class="help-list">
+            <li>не менее 8 символов</li>
+            <li>1 цифру</li>
+            <li>1 заглавною букву</li>
+            <li>1 строчную букву</li>
+            <li>не содержать кириллицу</li>
+          </ul>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-md-4 mt-3">
+          <ul class="help-list list-2-columns">
+            <li class="checked">не менее 8 символов</li>
+            <li class="checked">1 цифру</li>
+            <li class="unchecked">1 заглавною букву</li>
+            <li class="unchecked">1 строчную букву</li>
+            <li class="unchecked">не содержать кириллицу</li>
+          </ul>
         </div>
       </div>
 
