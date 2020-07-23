@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue-account.css">
     <link rel="stylesheet" href="/css/account-main.css">
-    <link rel="stylesheet" href="/css/account-edit.css">
+    <link rel="stylesheet" href="/css/account-settings.css">
 
-    <title>Изменение пароля</title>
+    <title>Мой профиль пустой</title>
   </head>
   <body>
 
@@ -261,75 +261,203 @@
           <!-- main area -->
           <main class="col-lg-9">
 
-            <div class="row justify-content-center">
+            <div class="row">
 
-              <div class="col-md-9 col-lg-12">
+              <div class="col-12">
                 <!-- account main widget -->
                 <div class="account-main" id="account-main-widget">
 
                   <div class="row">
-                    <div class="col-lg-7 offset-lg-3 mt-2 mb-3">
-                      <a href="#" class="btn btn-link btn-back">В мой профиль</a>
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Мой кабинет</a>
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-lg-7 offset-lg-3 mb-md-4">
-                      <h1>Изменение пароля</h1>
+                  <div class="row mb-3">
+                    <div class="col-12 mb-2 mb-md-4">
+                      <h1>Мой профиль</h1>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-12">
-                      <!-- account edit widget -->
-                      <div class="account-edit" id="account-edit-widget">
+                      <!-- account settings widget -->
+                      <div class="account-settings" id="account-settings-widget">
+                        <form action="">
 
-                        <div class="row mb-3 mb-lg-5">
-                          <div class="col-lg-6 offset-lg-3">
-                            <form action="">
-                              <div class="form-group mb-1">
-                                <input type="password" class="form-control form-input" id="account-pass-old" name="form-pass-old" autocomplete="off" aria-required="true">
-                                <label class="control-label form-label" for="account-pass-old">Старый пароль</label>
-                                <button type="button" class="password-button"></button>
-                                <div class="help-block">Неверный пароль</div>
-                              </div>
-                              <div class="form-group text-right account-edit__repeat mb-1">
-                                <a href="#" class="btn btn-link">Напомнить пароль</a>
-                              </div>
-                              <div class="form-group">
-                                <input type="password" class="form-control form-input" id="account-pass-new" name="form-pass-new" autocomplete="off" aria-required="true">
-                                <label class="control-label form-label" for="account-pass-new">Новый пароль</label>
-                                <button type="button" class="password-button"></button>
-                              </div>
-                              <div class="form-group">
-                                <p class="mb-1 small">Пароль должен содержать:</p>
-                                <ul class="help-list">
-                                  <li>не менее 8 символов</li>
-                                  <li>1 цифру</li>
-                                  <li>1 заглавною букву</li>
-                                  <li>1 строчную букву</li>
-                                  <li>не содержать кириллицу</li>
-                                </ul>
-                              </div>
-                              <div class="form-group">
-                                <button type="submit" class="btn btn-green btn-block" disabled>Изменить пароль</a>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-
-                        <div class="account-edit__delete mb-0 mb-lg-3">
                           <div class="row">
-                            <div class="col-lg-3 text-center text-lg-justify">
-                              <a href="#" class="btn account-edit__delete-btn">Удалить аккаунт</a>
+
+                            <div class="col-lg-5">
+
+                              <div class="row mb-3 mb-md-5">
+
+                                <div class="col-12 mb-2 mb-md-3">
+                                  <h3>Личные данные</h3>
+                                </div>
+                                <div class="col-12">
+                                  <div class="alert alert-warning alert-face alert-handshake fade show" role="alert">
+                                    Давайте станем ближе!)<br>
+                                    Укажите ваше имя чтобы мы знали как к вам обращаться
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group mb-4">
+                                    <input type="text" class="form-control form-input" id="form-name" name="first-name" autocomplete="off" placeholder="Имя" aria-required="true">
+                                    <label class="control-label form-label" for="form-name">Имя</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group mb-4">
+                                    <input type="text" class="form-control form-input" id="form-surname" name="last-name" autocomplete="off" placeholder="Фамилия" aria-required="true">
+                                    <label class="control-label form-label" for="form-surname">Фамилия</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-6">
+                                        <div class="radio-control">
+                                          <input type="radio" id="sex-male" name="sex-radio" class="checkbox-input">
+                                          <label class="btn btn-label btn-male btn-block" for="sex-male">
+                                            <span>Мужчина</span>
+                                          </label> 
+                                        </div>
+                                      </div>
+                                      <div class="col-6">
+                                        <div class="radio-control">
+                                          <input type="radio" id="sex-female" name="sex-radio" class="checkbox-input">
+                                          <label class="btn btn-label btn-female btn-block" for="sex-female">
+                                            <span>Женщина</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <div class="row mb-3 mb-md-5">
+
+                                <div class="col-12 mb-2 mb-md-3">
+                                  <h3>Мой адрес</h3>
+                                </div>
+                                <div class="col-12">
+                                  <div class="alert alert-warning alert-face alert-address fade show" role="alert">
+                                    Укажите ваш адрес и сможем предлагать вам релевантные услуги!
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group mb-4 select-input-wrapper">
+                                    <select class="select-address form-control form-input" name="select-address">
+                                      <option value=""></option>
+                                      <option value="1">г. Киев</option>
+                                      <option value="2">Волынская</option>
+                                      <option value="3">Житомирская</option>
+                                      <option value="4">Киевская</option>
+                                      <option value="5">Хмельницкая</option>
+                                      <option value="6">Черкасская</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group mb-4">
+                                    <input type="text" class="form-control form-input" id="account-city" name="form-city" autocomplete="off" placeholder="Город" aria-required="true">
+                                    <label class="control-label form-label" for="account-city">Город</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group mb-4">
+                                    <input type="text" class="form-control form-input" id="account-street" name="form-street" autocomplete="off" placeholder="Улица" aria-required="true">
+                                    <label class="control-label form-label" for="account-street">Улица</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="row">
+                                    <div class="col-12 col-md">
+                                      <div class="form-group mb-4">
+                                        <input type="text" class="form-control form-input" id="account-house" name="form-house" autocomplete="off" placeholder="0" aria-required="true">
+                                        <label class="control-label form-label" for="account-house">Дом</label>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="form-group mb-4">
+                                        <input type="tel" class="form-control form-input" id="account-appartment" name="form-appartment" autocomplete="off" placeholder="0" aria-required="true">
+                                        <label class="control-label form-label" for="account-appartment">Квартира</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+
                             </div>
-                            <div class="col-lg-9 pt-2">
-                              <p>Удаление аккаунта необратимо. Все ваши данные будут удалены немедленно, и вы не сможете их восстановить. Потребуется ввести пароль.</p>
+
+                            <div class="col-lg-7">
+
+                              <div class="row mb-0 mb-md-1">
+
+                                <div class="col-12 mb-2 mb-md-3">
+                                  <h3>Мои уведомления</h3>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group mb-4">
+                                    <input type="tel" class="form-control form-input filled" id="account-phone" name="form-phone" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380(67)999-88-77" disabled>
+                                    <label class="control-label form-label" for="account-phone">Номер телефона</label>
+                                  </div>
+                                </div>
+                                <div class="col-12 mb-4">
+                                  <div class="form-group mb-3 has-success">
+                                    <input type="email" class="form-control form-input" id="account-email" name="form-email" autocomplete="off" placeholder="your@email.com" aria-required="true" value="qwerty@gmail.com">
+                                    <label class="control-label form-label" for="account-email">Ваш e-mail</label>
+                                   </div>
+                                </div>
+
+                              </div>
+
+                              <div class="row mb-5">
+
+                                <div class="col-12 mb-2 mb-md-3">
+                                  <h3>Настройки уведомлений</h3>
+                                </div>
+                                <div class="col-12 mb-2">
+                                  <div class="checkbox-control">
+                                    <input class="checkbox-input" type="checkbox" id="account-checkbox-1">
+                                    <label class="checkbox-label" for="account-checkbox-1">Получать новости от iPay.ua</label>
+                                  </div>
+                                </div>
+                                <div class="col-12 mb-2">
+                                  <div class="checkbox-control">
+                                    <input class="checkbox-input" type="checkbox" id="account-checkbox-2" checked>
+                                    <label class="checkbox-label" for="account-checkbox-2">Получать уведомления о приближении срока оплаты</label>
+                                  </div>
+                                </div>
+                                <div class="col-12 mb-2">
+                                  <div class="checkbox-control">
+                                    <input class="checkbox-input" type="checkbox" id="account-checkbox-3">
+                                    <label class="checkbox-label" for="account-checkbox-3">Подписаться на рассылку новостей</label>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                            </div>
+                            
+                          </div>
+
+                          <div class="account-settings__edit-buttons mb-3">
+                            <div class="row justify-content-between align-items-center">
+                              <div class="col-12 col-sm-auto text-center mb-3 mb-sm-0">
+                                <a href="#" class="btn btn-link account-settings__edit-pass">Изменение пароля</a>
+                              </div>
+                              <div class="col-12 col-sm-auto text-center">
+                                <a href="#" class="btn btn-green">Сохранить изменения</a>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        
-                      </div><!-- account edit widget -->
+
+                        </form>
+                      </div><!-- account settings widget -->
                     </div>
                   </div>
                   
