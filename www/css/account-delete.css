@@ -1,0 +1,83 @@
+.account-delete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1001;
+  color: #fff;
+  background-color: #E84F35;
+}
+
+.account-delete__body-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #E84F35;
+  z-index: -1;
+}
+
+.account-delete p {
+  color: #fff;
+}
+
+.account-delete__mobile-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 1rem 1rem;
+}
+
+.account-delete__mobile-title {
+  padding-top: 4.5rem;
+  background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 42.9999V42.2599C5 39.0599 6.9 36.1799 9.84 34.9199L19 30.9999V28.9999L17.76 27.7599C16 25.9999 15 23.5999 15 21.0799V11.9599C15 9.83994 16.12 7.85994 17.96 6.79994C19.56 5.85994 22 6.99994 21 4.99994C19.96 2.91994 28.44 5.85994 30.04 6.79994C31.88 7.87994 33 9.83994 33 11.9599V21.0999C33 23.5999 32 25.9999 30.24 27.7799L29 28.9999V30.9999L38.16 34.9199C41.1 36.1799 43 39.0599 43 42.2599V42.9999' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center top no-repeat;
+  background-size: 48px;
+}
+
+.account-delete__mobile-form {
+  width: 100%;
+}
+
+.account-delete__mobile-delete {
+  width: 100%;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #172A3A;
+  text-decoration: none;
+  background: #fff;
+}
+
+.account-delete__mobile-delete:hover, .account-delete__mobile-delete:active, .account-delete__mobile-delete:focus {
+  color: #172A3A;
+}
+
+.account-delete__mobile-delete:disabled, .account-delete__mobile-delete.disabled {
+  background-color: #FFD0CE;
+}
+
+.account-delete__mobile-cancel {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-weight: bold;
+  color: #fff;
+  background: none;
+}
+
+.account-delete__mobile-cancel:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=account-delete.css.map */
