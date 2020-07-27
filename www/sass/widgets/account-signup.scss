@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account signup widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-signup {
+  min-height: 60vh;
+
+  .help-list {
+    column-count: 2;
+    column-fill: auto;
+    height: 4.5rem;
+  }
+
+  @include until($sm) {
+    .help-list {
+      height: 5.5rem;
+    }
+  }
+
+  @include until($md) {
+    &__login-btn {
+      border: none;
+      color: $text-color;
+      @include font(1rem, 400, 1.3);
+      text-decoration: underline;
+
+      &:hover:not(.disabled), &:active:not(.disabled) {
+        color: $text-color;
+        text-decoration: underline;
+        background-color: #fff;
+      }
+    }
+  }
+}
