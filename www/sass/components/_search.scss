@@ -272,3 +272,49 @@
     }
   }
 }
+
+// input search list
+.input-search {
+  position: relative;
+
+  &__list {
+    position: absolute;
+    top: 3.5rem;
+    width: 100%;
+    box-shadow: 0 4px 20px $card-shadow;
+    border-radius: $border-radius;
+    z-index: 10;
+    max-height: 11rem;
+    overflow-y: auto;
+    background-color: #fff;
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: $btn-red;
+    }
+  }
+
+  &__item {
+    padding: 1rem 1.2875rem;
+    font-family: $text-font;
+    font-size: 1.125rem;
+    color: #000;
+    border-bottom: 1px solid $light-grey;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}

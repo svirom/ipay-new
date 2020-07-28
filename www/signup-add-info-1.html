@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/account-signup.css">
 
-    <title>Регистрация</title>
+    <title>Регистрация дополнительная информация 1</title>
   </head>
   <body>
 
@@ -203,35 +203,48 @@
                   <div class="row">
 
                     <div class="col-12 mb-3">
-                      <h1>Создать кабинет</h1>
+                      <h1 class="text-color">Расскажите немного о себе</h1>
                     </div>
 
                     <div class="col-12">
                       <form action="">
-                        <div class="form-group mb-4">
-                          <input type="tel" class="form-control form-input" id="account-phone" name="form-phone" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true">
-                          <label class="control-label form-label" for="account-phone">Номер телефона</label>
+                        <div class="form-group mb-4 has-success">
+                          <input type="text" class="form-control form-input" id="form-name" name="first-name" autocomplete="off" placeholder="" aria-required="true" value="Василь">
+                          <label class="control-label form-label" for="form-name">Меня зовут</label>
+                        </div>
+                        <div class="form-group mb-4 has-success">
+                          <input type="text" class="form-control form-input" id="form-surname" name="last-name" autocomplete="off" placeholder="" aria-required="true"value="Васильцев">
+                        <label class="control-label form-label" for="form-surname">Моя фамилия</label>
+                        </div>
+                        <div class="form-group mb-4 has-success">
+                          <input type="email" class="form-control form-input" id="account-email" name="form-email" autocomplete="off" placeholder="" aria-required="true" value="qwerty@gmail.com">
+                        <label class="control-label form-label" for="account-email">Мой e-mail</label>
                         </div>
                         <div class="form-group mb-4">
-                          <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
-                          <label class="control-label form-label" for="account-pass">Пароль</label>
-                          <button type="button" class="password-button"></button>
-                        </div>
-                        <div class="form-group mb-3 pt-1">
-                          <p class="mb-1 small">Пароль должен содержать:</p>
-                          <ul class="help-list">
-                            <li>не менее 8 символов</li>
-                            <li>1 цифру</li>
-                            <li>1 заглавною букву</li>
-                            <li>1 строчную букву</li>
-                            <li>не содержать кириллицу</li>
-                          </ul>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="radio-control">
+                                <input type="radio" id="sex-male" name="sex-radio" class="checkbox-input" checked>
+                                <label class="btn btn-label btn-male btn-block" for="sex-male">
+                                  <span>Мужчина</span>
+                                </label> 
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="radio-control">
+                                <input type="radio" id="sex-female" name="sex-radio" class="checkbox-input">
+                                <label class="btn btn-label btn-female btn-block" for="sex-female">
+                                  <span>Женщина</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div class="form-group mb-5 mb-md-3">
-                          <button type="submit" class="btn btn-green btn-block" disabled>Создать кабинет</button>
+                          <button type="submit" class="btn btn-green btn-next btn-block account-signup__continue">Сохранить и продолжить</button>
                         </div>
-                        <div class="form-group mb-4 mb-md-5">
-                          <button type="button" class="btn btn-outline btn-block account-signup__login-btn">У меня есть аккаунт</button>
+                        <div class="form-group mb-4 mb-md-5 text-center">
+                          <a href="#" class="btn account-signup__skip">Пропустить</a>
                         </div>
                       </form>
                     </div>

@@ -10,9 +10,55 @@
   height: 4.5rem;
 }
 
+.account-signup__success-title {
+  position: relative;
+  padding-top: 4.5rem;
+}
+
+.account-signup__success-title::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #F0F5FA url("../img/authentication/signup-success.png") center no-repeat;
+}
+
+.account-signup__success-line {
+  position: relative;
+}
+
+.account-signup__success-line::after {
+  display: block;
+  position: absolute;
+  content: '';
+  bottom: 2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 7.9375rem;
+  height: 3px;
+  background-color: #F0F5FA;
+}
+
+.account-signup__skip {
+  padding: 0 2.1rem 0 0;
+  color: #3B566E;
+  background: url("data:image/svg+xml,%3Csvg width='31' height='30' viewBox='0 0 31 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8691 15L8.80747 15' stroke='%23DEE7F3' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.6191 21.25L22.1191 15L14.6191 8.75' stroke='%23DEE7F3' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") right center no-repeat;
+  background-size: 33px;
+}
+
 @media screen and (max-width: 575px) {
   .account-signup .help-list {
     height: 5.5rem;
+  }
+  .account-signup__continue {
+    padding-left: 1.175rem;
   }
 }
 
