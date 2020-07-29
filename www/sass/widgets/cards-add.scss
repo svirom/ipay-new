@@ -19,6 +19,14 @@
     .btn-link {
       color: $ipay-links;
     }
+
+    &--sm-red {
+      @include at-least($sm) {
+        .btn-link {
+          color: $btn-red;
+        }
+      }
+    }
   }
 
   &__result {
@@ -39,6 +47,14 @@
 
   &__masterpass {
     max-width: 8.75rem;
+  }
+
+  &__masterpass-title {
+    font-size: 1.625rem;
+  }
+
+  &__masterpass-text {
+    font-size: 0.875rem;
   }
 
   @include until($sm) {

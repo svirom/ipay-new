@@ -104,15 +104,6 @@
   background-size: 33px;
 }
 
-.templates-add .form-search {
-  /* @include until($md) {
-      .form-input.input-search:focus ~ .form-search__cancel, 
-      .form-input.input-search.filled ~ .form-search__cancel {
-        display: none;
-      }
-    } */
-}
-
 .templates-add .form-search .form-group {
   margin-bottom: 1.75rem;
 }
@@ -195,9 +186,16 @@
   overflow: hidden;
 }
 
+.templates-add__add-card {
+  max-width: 11.875rem;
+}
+
 @media screen and (max-width: 991px) {
   .templates-add .form-search.focused {
     padding: 0;
+  }
+  .templates-add .form-search__list {
+    margin-top: 0;
   }
   .templates-add .form-search__item-title {
     font-size: 1rem;

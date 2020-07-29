@@ -112,13 +112,6 @@
       margin-bottom: 1.75rem;
     }
 
-    /* @include until($md) {
-      .form-input.input-search:focus ~ .form-search__cancel, 
-      .form-input.input-search.filled ~ .form-search__cancel {
-        display: none;
-      }
-    } */
-
     &__list {
       position: static;
       text-align: left;
@@ -192,10 +185,18 @@
     overflow: hidden;
   }
 
+  &__add-card {
+    max-width: 11.875rem;
+  }
+
   @include until($lg) {
     .form-search {
       &.focused {
         padding: 0;
+      }
+
+      &__list {
+        margin-top: 0;
       }
 
       &__item-title {

@@ -6,11 +6,10 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/account-signup.css">
+    <link rel="stylesheet" href="/css/cards-add.css">
 
-    <title>Регистрация адрес город поиск</title>
+    <title>Добавить шаблон (кошелек) 9</title>
   </head>
   <body>
 
@@ -192,77 +191,39 @@
       <div class="container main-content">
         <div class="row justify-content-center">
           <!-- main area -->
-          <main class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+          <main class="col-md-8 col-lg-7 col-xl-6">
 
             <div class="row">
               <div class="col-12 mt-3">
-                <!-- account signup widget -->
-                <div class="account-signup" id="account-signup-widget">
+                <!-- add cards widget -->
+                <div class="cards-add" id="cards-add-widget">
                   
                   <div class="row">
-
-                    <div class="col-12 mb-2">
-                      <h1 class="text-color">Укажите ваш адрес</h1>
+                    <div class="col-12 mb-4">
+                      <h1 class="text-color">Подключение Masterpass-кошелька</h1>
                     </div>
-
-                    <div class="col-12 mb-2">
-                      <p>Мы предложи вам услуги релевантные вашему месту проживания</p>
-                    </div>
-
-                    <div class="col-12">
-                      <form action="">
-                        <div class="form-group mb-4 select-input-wrapper">
-                          <select class="select-address form-control form-input" name="select-address">
-                            <option value=""></option>
-                            <option value="1">г. Киев</option>
-                            <option value="2">Волынская</option>
-                            <option value="3">Житомирская</option>
-                            <option value="4">Киевская</option>
-                            <option value="5">Хмельницкая</option>
-                            <option value="6">Черкасская</option>
-                          </select>
-                        </div>
-                        <div class="form-group mb-4 input-search">
-                          <input type="text" class="form-control form-input" id="account-city" name="form-city" autocomplete="off" placeholder="Город" aria-required="true" value="Ки">
-                          <label class="control-label form-label" for="account-city">Город</label>
-                          <div class="input-search__list">
-                            <ul>
-                              <li class="input-search__item">Киев</li>
-                              <li class="input-search__item">Кишлак</li>
-                              <li class="input-search__item">Киркук</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="form-group mb-4">
-                          <input type="text" class="form-control form-input" id="account-street" name="form-street" autocomplete="off" placeholder="Улица" aria-required="true">
-                          <label class="control-label form-label" for="account-street">Улица</label>
-                        </div>
-                        <div class="row">
-                          <div class="col-12 col-md">
-                            <div class="form-group mb-4">
-                              <input type="text" class="form-control form-input" id="account-house" name="form-house" autocomplete="off" placeholder="0" aria-required="true">
-                              <label class="control-label form-label" for="account-house">Дом</label>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-group mb-4">
-                              <input type="tel" class="form-control form-input" id="account-appartment" name="form-appartment" autocomplete="off" placeholder="0" aria-required="true">
-                              <label class="control-label form-label" for="account-appartment">Квартира</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group mb-5 mb-md-3">
-                          <button type="submit" class="btn btn-green btn-next btn-block account-signup__continue" disabled>Сохранить и продолжить</button>
-                        </div>
-                        <div class="form-group mb-4 mb-md-5 text-center">
-                          <a href="#" class="btn account-signup__skip">Пропустить</a>
-                        </div>
-                      </form>
-                    </div>
-
                   </div>
 
-                </div><!-- account signup widget -->
+                  <div class="row">
+                    <div class="col-12 d-lg-none text-center">
+                      <p class="cards-add__masterpass-title">Готово</p>
+                    </div>
+                    <div class="col-lg-auto text-center mb-4 mb-lg-0">
+                      <img src="img/authentication/signup-add-card.png" alt="Image" class="cards-add__masterpass">
+                    </div>
+                    <div class="col-lg pl-lg-5">
+                      <p class="mb-0 d-none d-lg-block"><strong>Готово!</strong></p>
+                      <p class="text-center text-lg-left cards-add__masterpass-text">Ваш Masterpass-кошелек успешно подключен.</p>
+                      <div class="mt-4 mt-lg-0 mb-3 mb-lg-5">
+                        <a href="#" class="btn btn-green btn-block">Добавить карту</a>
+                      </div>
+                      <div class="text-center text-lg-left">
+                        <img src="img/banks/masterpass-logo.png" alt="Masterpass" class="img-fluid cards-add__masterpass">
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!-- add cards widget -->
               </div>
             </div>
 
@@ -357,8 +318,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
-    <script src="/js/select2-style.js"></script>
   </body>
 </html>

@@ -11,6 +11,12 @@
   color: #337AB7;
 }
 
+@media screen and (min-width: 576px) {
+  .cards-add__repeat--sm-red .btn-link {
+    color: #E84F35;
+  }
+}
+
 .cards-add__result {
   width: 7.4375rem;
   height: 7.4375rem;
@@ -27,6 +33,14 @@
 
 .cards-add__masterpass {
   max-width: 8.75rem;
+}
+
+.cards-add__masterpass-title {
+  font-size: 1.625rem;
+}
+
+.cards-add__masterpass-text {
+  font-size: 0.875rem;
 }
 
 @media screen and (max-width: 575px) {
