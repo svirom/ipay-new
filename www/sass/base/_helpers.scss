@@ -11,3 +11,40 @@
 .text-color {
   color: $text-color;
 }
+
+/* remind password help link */
+.remind-link {
+  // remind link
+  &.btn-link {
+    color: $ipay-links;
+
+    &:hover {
+      color: $ipay-links;
+      text-decoration: underline;
+    }
+
+    // remind red link
+    &.red-link {
+      color: $btn-red;
+  
+      &:hover {
+        color: $btn-red;
+        text-decoration: underline;
+      }
+    }
+
+    // remind text link
+    &.text-link {
+      color: $text-color;
+  
+      &:hover {
+        color: $text-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.small {
+    font-size: 0.875rem;
+  }
+}

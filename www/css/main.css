@@ -110,6 +110,38 @@ label {
   color: #3B566E;
 }
 
+/* remind password help link */
+.remind-link.btn-link {
+  color: #337AB7;
+}
+
+.remind-link.btn-link:hover {
+  color: #337AB7;
+  text-decoration: underline;
+}
+
+.remind-link.btn-link.red-link {
+  color: #E84F35;
+}
+
+.remind-link.btn-link.red-link:hover {
+  color: #E84F35;
+  text-decoration: underline;
+}
+
+.remind-link.btn-link.text-link {
+  color: #3B566E;
+}
+
+.remind-link.btn-link.text-link:hover {
+  color: #3B566E;
+  text-decoration: underline;
+}
+
+.remind-link.small {
+  font-size: 0.875rem;
+}
+
 .logo-color, .logo-red, .logo-white {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -592,10 +624,10 @@ label {
 .form-group.has-error .help-block {
   display: block;
   position: absolute;
-  padding-top: 4px;
+  padding-top: 5px;
   padding-left: 4px;
   font-family: "Roboto", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #E84F35;
   text-align: right;
   line-height: 1.2;

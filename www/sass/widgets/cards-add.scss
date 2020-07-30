@@ -15,20 +15,6 @@
     color: $text-color;
   }
 
-  &__repeat {
-    .btn-link {
-      color: $ipay-links;
-    }
-
-    &--sm-red {
-      @include at-least($sm) {
-        .btn-link {
-          color: $btn-red;
-        }
-      }
-    }
-  }
-
   &__result {
     width: 7.4375rem;
     height: 7.4375rem;

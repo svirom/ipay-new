@@ -7,10 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/cards-add.css">
-    <link rel="stylesheet" href="/css/templates-add-aside.css">
+    <link rel="stylesheet" href="/css/account-signin.css">
 
-    <title>Добавить шаблон (кошелек) 7</title>
+    <title>Авторизация 1</title>
   </head>
   <body>
 
@@ -190,70 +189,54 @@
 
       <!-- main content -->
       <div class="container main-content">
-        <div class="row">
+        <div class="row justify-content-center">
           <!-- main area -->
-          <main class="col-lg-6 offset-lg-3">
+          <main class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
 
             <div class="row">
               <div class="col-12 mt-3">
-                <!-- add cards widget -->
-                <div class="cards-add" id="cards-add-widget">
+                <!-- account signin widget -->
+                <div class="account-signin" id="account-signin-widget">
                   
                   <div class="row">
 
                     <div class="col-12 mb-3">
-                      <h1 class="text-color">Подключение Masterpass-кошелька</h1>
-                    </div>
-
-                    <div class="col-12 mb-3">
-                      <p>Введите код подтверждения, чтобы подключить Masterpass - кошелек</p> 
-                      <p class="small">Чтобы убедится, что кошелек подключаете именно вы, мы временно заблокируем 1 гривну на вашей карте. Также  вы получите SMS из своего банка  с кодом (VCODE) на телефон, который вы указали в банке при оформлении карты</p>
+                      <h1>Вход в кабинет</h1>
                     </div>
 
                     <div class="col-12">
                       <form action="">
-                        <div class="row">
-                          <div class="col-12 col-sm">
-                            <div class="form-group mb-3 mb-sm-2">
-                              <input type="tel" class="form-control form-input" id="sms-number" name="name" autocomplete="off" placeholder="0000" aria-required="true">
-                              <label class="control-label form-label" for="sms-number">Код из SMS</label>
-                              <div class="help-block"></div>
-                            </div>
-                            <div class="form-group mb-3 mb-sm-2 text-center text-sm-left">
-                              <a href="#" class="btn btn-link remind-link red-link">Отправить повторно</a>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-auto">
-                            <div class="form-group">
-                              <button type="submit" class="btn btn-green btn-next btn-block" disabled="">Далее</button>
-                            </div>
-                          </div>
+                        <div class="form-group mb-4 has-success">
+                          <input type="text" class="form-control form-input" id="account-login" name="form-login" autocomplete="off" placeholder="" aria-required="true" value="0679998877">
+                          <label class="control-label form-label" for="account-login">Телефон или email</label>
+                        </div>
+                        <div class="form-group mb-0">
+                          <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
+                          <label class="control-label form-label" for="account-pass">Пароль</label>
+                          <button type="button" class="password-button"></button>
+                        </div>
+                        <div class="form-group text-right mb-3">
+                          <a href="#" class="btn btn-link remind-link small">Напомнить пароль</a>
+                        </div>
+                        <div class="form-group mb-5 mb-md-3">
+                          <button type="submit" class="btn btn-green btn-block">Войти</button>
+                        </div>
+                        <div class="form-group text-left mb-0">
+                          <a href="#" class="btn btn-link remind-link text-link">Нет аккаунта?</a>
+                        </div>
+                        <div class="form-group mb-4 mb-md-5">
+                          <button type="button" class="btn btn-outline btn-block">Создать кабинет</button>
                         </div>
                       </form>
                     </div>
 
                   </div>
 
-                </div><!-- add cards widget -->
+                </div><!-- account signin widget -->
               </div>
             </div>
 
           </main><!-- main area -->
-          <!-- aside area -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="row">
-              <div class="col-12">
-                <!-- templates add aside widget -->
-                <div class="templates-add-aside" id="templates-add-aside-widget">
-                  <div class="text-center mb-4">
-                    <img src="img/account/templates-aside.png" alt="" class="templates-add-aside__img img-fluid">
-                  </div>
-                  <p>Кошелек Masterpass - хранилище ваших карт</p>
-                  <p>Добавляйте карты в кошелек Masterpass и забудьте про ручной ввод данных карты</p>
-                </div><!-- templates add aside widget -->
-              </div>
-            </div>
-          </aside><!-- aside area -->
         </div>
       </div><!-- main content -->
 
