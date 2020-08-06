@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account password recovery widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-recovery {
+  min-height: 60vh;
+
+  &__email {
+    p {
+      color: #000;
+    }
+  }
+
+  .help-list {
+    column-count: 2;
+    column-fill: auto;
+    height: 4.5rem;
+  }
+
+  @include until($md) {
+    &__email {
+      padding: 1.36125rem 1.7rem 0.36125rem;
+      border-radius: $border-radius;
+      background-color: $light-grey;
+    }
+
+    &__back {
+      .remind-link.btn-link, 
+      .remind-link.btn-link.text-link {
+        color: $btn-red;
+      }
+    }
+  }
+
+  @include until($sm) {
+    .help-list {
+      height: 5.5rem;
+    }
+  }
+}
