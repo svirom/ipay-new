@@ -53,3 +53,12 @@
     font-size: 0.875rem;
   }
 }
+
+/* 2 columns desktop - 1 column mobile */
+.columns-2 {
+  column-count: 2;
+
+  @include until($md) {
+    column-count: 1;
+  }
+}

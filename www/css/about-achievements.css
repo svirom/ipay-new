@@ -1,0 +1,45 @@
+.achievements-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 11.25rem;
+  padding: 0.875rem 0.875rem 0.875rem 1.5rem;
+  border: 2px solid #F6F8F9;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.achievements-card p {
+  margin-bottom: 0;
+}
+
+.achievements-card__img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #DEE7F3;
+}
+
+.achievements-card__content {
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 575px) {
+  .achievements-card {
+    height: auto;
+    min-height: 8rem;
+    padding-left: 0.875rem;
+  }
+  .achievements-card__img {
+    display: none;
+  }
+  .achievements-card__content {
+    padding-left: 0;
+  }
+}
+/*# sourceMappingURL=about-achievements.css.map */

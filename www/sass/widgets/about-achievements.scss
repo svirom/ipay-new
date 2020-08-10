@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the about achievements widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+
+// achievements card
+.achievements-card {
+  display: flex;
+  align-items: center;
+  height: 11.25rem;
+  padding: 0.875rem 0.875rem 0.875rem 1.5rem;
+  border: 2px solid $about-border;
+  border-radius: $border-radius;
+  background-color: #fff;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: $middle-grey;
+  }
+
+  &__content {
+    padding-left: 2rem;
+  }
+
+  @include until($sm) {
+    height: auto;
+    min-height: 8rem;
+    padding-left: 0.875rem;
+
+    &__img {
+      display: none;
+    }
+
+    &__content {
+      padding-left: 0;
+    }
+  }
+}

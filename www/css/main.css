@@ -147,6 +147,19 @@ label {
   font-size: 0.875rem;
 }
 
+/* 2 columns desktop - 1 column mobile */
+.columns-2 {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+@media screen and (max-width: 767px) {
+  .columns-2 {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+
 .logo-color, .logo-red, .logo-white {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -1232,6 +1245,10 @@ label {
   height: 8px;
   border-radius: 50%;
   background-color: #E84F35;
+}
+
+.list--circle.list--grey li::before {
+  background-color: #3B566E;
 }
 
 .list--minus li::before {
@@ -3841,7 +3858,8 @@ label {
 }
 
 .main-content {
-  padding: 2.25rem 15px;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
 }
 
 @media screen and (max-width: 991px) {

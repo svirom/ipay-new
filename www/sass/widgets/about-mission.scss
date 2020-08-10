@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the about mission widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.about-mission {
+  padding-top: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: $border-radius;
+  background-color: $light-grey;
+}
+
+// mission card
+.mission-card {
+  &__img {
+    margin-bottom: 0.5rem;
+    width: 6.125rem;
+    height: 6.125rem;
+    border-radius: 50%;
+    background-color: $middle-grey;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @include until($md) {
+    text-align: center;
+
+    &__img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
