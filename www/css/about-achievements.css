@@ -19,10 +19,22 @@
 .achievements-card__img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
-  background-color: #DEE7F3;
+}
+
+.achievements-card__img img {
+  max-width: 100%;
+  height: auto;
 }
 
 .achievements-card__content {

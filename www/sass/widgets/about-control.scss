@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the about achievements widget of the site.
+// This file contains all styles related to the about control widget of the site.
 // -----------------------------------------------------------------------------
 @charset 'UTF-8';
 
@@ -7,28 +7,23 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
+.about-control {
+  padding-top: 1.25rem;
+  padding-bottom: 1.75rem;
+  background-color: $light-grey;
+}
 
-// achievements card
-.achievements-card {
+.control-card {
   display: flex;
-  align-items: center;
-  height: 11.25rem;
-  padding: 0.875rem 0.875rem 0.875rem 1.5rem;
-  border: 2px solid $about-border;
-  border-radius: $border-radius;
-  background-color: #fff;
-
-  p {
-    margin-bottom: 0;
-  }
+  align-items: flex-start;
 
   &__img {
     flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 4.25rem;
+    height: 4.25rem;
 
     img {
       max-width: 100%;
@@ -37,16 +32,18 @@
   }
 
   &__content {
-    padding-left: 2rem;
+    padding-left: 1.8125rem;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
-  @include until($sm) {
-    height: auto;
-    min-height: 8rem;
-    padding-left: 0.875rem;
+  @include until($lg) {
+    flex-direction: column;
 
     &__img {
-      display: none;
+      margin-bottom: 0.5rem;
     }
 
     &__content {

@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the about promo widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.about-promo {
+  &__img {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    &--top {
+      align-items: flex-start;
+    }
+
+    &--center {
+      align-items: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

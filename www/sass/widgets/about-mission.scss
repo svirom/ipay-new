@@ -10,18 +10,18 @@
 .about-mission {
   padding-top: 1.75rem;
   padding-bottom: 0.75rem;
-  border-radius: $border-radius;
   background-color: $light-grey;
 }
 
 // mission card
 .mission-card {
   &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 0.5rem;
     width: 6.125rem;
     height: 6.125rem;
-    border-radius: 50%;
-    background-color: $middle-grey;
 
     img {
       max-width: 100%;
