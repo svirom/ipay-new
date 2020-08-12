@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the about mission widget of the site.
+// This file contains all styles related to the about protection widget of the site.
 // -----------------------------------------------------------------------------
 @charset 'UTF-8';
 
@@ -7,14 +7,13 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-.about-mission {
-  padding-top: 1.75rem;
+.about-protection {
+  padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  background-color: $light-grey;
 }
 
-// mission card
-.mission-card {
+// protection card
+.protection-card {
   &__img {
     display: flex;
     justify-content: center;
@@ -30,11 +29,7 @@
   }
 
   @include until($md) {
-    text-align: center;
-
     &__img {
-      margin-left: auto;
-      margin-right: auto;
       width: 5rem;
       height: 5rem;
     }

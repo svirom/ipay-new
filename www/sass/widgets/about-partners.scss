@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the about partners widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+
+// partners card
+.partners-card {
+  display: flex;
+  align-items: center;
+  height: 6.25rem;
+  padding: 0.8125rem 0.5rem;
+  border: 4px solid $light-grey;
+  border-radius: $border-radius;
+  background-color: #fff;
+
+  p {
+    margin-bottom: 0;
+    color: #000;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.875rem;
+    height: 2.875rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    padding-left: 0.5rem;
+  }
+
+  &:hover, &:active {
+    text-decoration: none;
+    border-color: $middle-grey;
+  }
+}

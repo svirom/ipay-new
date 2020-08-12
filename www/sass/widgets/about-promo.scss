@@ -8,6 +8,20 @@
 @import '../abstracts/mixins';
 
 .about-promo {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &--top {
+      justify-content: flex-start;
+    }
+
+    &--center {
+      justify-content: center;
+    }
+  }
+
   &__img {
     display: flex;
     justify-content: center;
