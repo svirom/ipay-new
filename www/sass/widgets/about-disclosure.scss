@@ -26,6 +26,14 @@
     flex-direction: column;
     min-height: 5.625rem;
     height: 100%;
+
+    &--short {
+      min-height: 4.7rem;
+    }
+
+    &--long {
+      min-height: 7.5rem;
+    }
   }
 
   &__bottom {
@@ -35,15 +43,48 @@
     min-height: 4.875rem;
     height: 100%;
     padding-top: 1.5rem;
+
+    &--empty {
+      min-height: auto;
+    }
+  }
+
+  @include until($xl) {
+    &__top {
+      &--short {
+        min-height: 6.6rem;
+      }
+    }
+  }
+
+  @include until($lg) {
+    &__top {
+      min-height: 9.375rem;
+
+      &--short {
+        min-height: 8.5rem;
+      }
+    }
   }
 
   @include until($md) {
+    &__item {
+      padding-top: 0.75rem;
+      border-bottom: 2px dashed $middle-grey;
+
+      &--last {
+        border-bottom: none;
+      }
+    }
+
     &__top {
       justify-content: center;
+      min-height: auto;
     }
 
     &__bottom {
       padding-top: 0;
+      min-height: auto;
     }
   }
 }

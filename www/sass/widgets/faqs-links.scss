@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the faqs links widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+// faqs card
+.faqs-card {
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @include until($md) {
+
+  }
+}
