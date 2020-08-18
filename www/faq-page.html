@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
-    <link rel="stylesheet" href="/css/faqs-links.css">
+    <link rel="stylesheet" href="/css/faqs-catalogue.css">
 
     <title>Вопрос-ответ</title>
   </head>
@@ -198,7 +198,8 @@
             <div class="col-12">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Вопрос-ответ</li>
+                <li class="breadcrumb-item"><a href="#">Вопрос-ответ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Что такое iPay.ua</li>
               </ol>
             </div>
           </div>
@@ -215,12 +216,12 @@
 
             <div class="row">
               <div class="col-12 mt-2 mb-3 d-lg-none">
-                <a href="#" class="btn btn-link btn-back">Главная</a>
+                <a href="#" class="btn btn-link btn-back">Вопрос-ответ</a>
               </div>
             </div>
             
             <div class="row">
-              <div class="col-12 mb-3 mb-md-4">
+              <div class="col-12 mb-3 mb-md-4 d-none d-lg-block">
                 <h1>Вопрос-ответ</h1>
               </div>
             </div>
@@ -234,166 +235,187 @@
 
               <div class="row">
 
-                <div class="col-md-4 mb-4">
-                  <div class="faqs-section">
-                    <div class="faqs-section__img">
-                      <img src="img/account/archive-period.png" alt="">
-                    </div>
-                    <div class="faqs-section__content">
-                      <h3>О сервисе iPay.ua</h3>
-                      <ul class="pt-2 pt-md-4">
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Что такое iPay.ua</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Какие услуги, сервисы можно оплатить на iPay.ua</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Безопасность платежей</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Тарифы</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Преимущества iPay.ua</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                <div class="col-lg-8 order-lg-1 mb-4">
+                  <h2 class="mb-4">Что такое iPay.ua</h2>
+                  <p>Всеукраинский сервис приёма платежей в интернете. На сайте iPay.ua владельцы банковских карт Visa и MasterCard могут оплатить услуги более 500 поставщиков товаров и услуг, предоставляющие свои услуги по всей территории Украины.</p>
+                  <p>Сервис iPay.ua сертифицирован по международному стандарту безопасность PCI DSS.</p>
                 </div>
 
-                <div class="col-md-4 mb-4">
-                  <div class="faqs-section">
-                    <div class="faqs-section__img">
-                      <img src="img/account/archive-empty.png" alt="">
-                    </div>
-                    <div class="faqs-section__content">
-                      <h3>Как совершать оплаты</h3>
-                      <ul class="pt-2 pt-md-4">
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Как платить банковской картой</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Какие карты принимаются к оплате</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Как быстро дойдет оплата до поставщика услуг</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Как узнать сумму комиссии за предоставление услуги?</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <div class="col-lg-4 mb-4">
 
-                <div class="col-md-4 mb-4">
-                  <div class="faqs-section">
-                    <div class="faqs-section__img">
-                      <img src="img/account/account-cards.png" alt="">
-                    </div>
-                    <div class="faqs-section__content">
-                      <h3>Личный кабинет</h3>
-                      <ul class="pt-2 pt-md-4">
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Добро пожаловать</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Регистрация платежной карты</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Оплата услуг</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Архив платежей</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Регулярные платежи</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Профиль пользователя</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                  <!-- faqs catalogue widget -->
+                  <div class="faqs-catalogue" id="faqs-catalogue-widget">
 
-              </div>
+                    <div class="faqs-card">
+                      <div class="faqs-card__header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="faqs-card__img">
+                          <img src="img/account/archive-period.png" alt="Image">
+                        </div>
+                        <h5 class="mb-0">О сервисе iPay.ua</h5>
+                      </div>
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                        <div class="faqs-card__body">
+                          <ul>
+                            <li>
+                              <a href="#" class="btn btn-link text-color active">Что такое iPay.ua</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Какие услуги, сервисы можно оплатить на iPay.ua</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Безопасность платежей</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Тарифы</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Преимущества iPay.ua</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
 
-              <div class="row">
-                  
-                <div class="col-md-4 mb-4">
-                  <div class="faqs-section">
-                    <div class="faqs-section__img">
-                      <img src="img/account/account-cards.png" alt="">
+                    <div class="faqs-card">
+                      <div class="faqs-card__header collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <div class="faqs-card__img">
+                          <img src="img/account/archive-empty.png" alt="Image">
+                        </div>
+                        <h5 class="mb-0">Как совершать оплаты</h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                        <div class="faqs-card__body">
+                          <ul>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Как платить банковской картой</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Какие карты принимаются к оплате</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Как быстро дойдет оплата до поставщика услуг</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Как узнать сумму комиссии за предоставление услуги?</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div class="faqs-section__content">
-                      <h3>Перевод с карты на карту</h3>
-                      <ul class="pt-2 pt-md-4">
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Перевод с карты на карту</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Особенности перевода с карты на карту с помощью iPay.ua</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Как осуществить перевод</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Тарифы «Перевод с карты на карту»</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Лимиты и ограничения</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="col-md-8 mb-4">
-                  <div class="faqs-section">
-                    <div class="faqs-section__img">
-                      <img src="img/account/archive-period.png" alt="">
+                    <div class="faqs-card">
+                      <div class="faqs-card__header collapsed" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <div class="faqs-card__img">
+                          <img src="img/account/account-cards.png" alt="Image">
+                        </div>
+                        <h5 class="mb-0">Личный кабинет</h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                        <div class="faqs-card__body">
+                          <ul>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Добро пожаловать</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Регистрация платежной карты</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Оплата услуг</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Архив платежей</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Регулярные платежи</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Профиль пользователя</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div class="faqs-section__content">
-                      <h3>Часто задаваемые вопросы</h3>
-                      <ul class="pt-2 pt-md-4">
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Что такое «Верификация карты»?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Существует ли абонентская плата на сайте?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Какие именно карточки принимаются к оплате?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Что такое CVV2/CVС2 код?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Что происходит в случае, если на платежной карте недостаточно средств для осуществления оплаты?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Какие причины неуспешной оплаты?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Каким образом можно получить квитанцию после совершения оплаты?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Оплаченная услуга не получена. Что делать?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Не могу оплатить заказ со своей банковской карты, почему и что делать?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Деньги для оплаты услуги снялись дважды. Как это возможно и где мои деньги?</a>
-                        </li>
-                        <li>
-                          <a href="#" class="btn btn-link text-color">Существуют ли на сервисе ограничения по размеру платежа?</a>
-                        </li>
-                      </ul>
+
+                    <div class="faqs-card">
+                      <div class="faqs-card__header collapsed" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <div class="faqs-card__img">
+                          <img src="img/account/archive-period.png" alt="Image">
+                        </div>
+                        <h5 class="mb-0">Перевод с карты на карту</h5>
+                      </div>
+                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
+                        <div class="faqs-card__body">
+                          <ul>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Перевод с карты на карту</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Особенности перевода с карты на карту с помощью iPay.ua</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Как осуществить перевод</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Тарифы «Перевод с карты на карту»</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Лимиты и ограничения</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+
+                    <div class="faqs-card">
+                      <div class="faqs-card__header collapsed" id="headingFive" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <div class="faqs-card__img">
+                          <img src="img/account/archive-period.png" alt="Image">
+                        </div>
+                        <h5 class="mb-0">Часто задаваемые вопросы</h5>
+                      </div>
+                      <div id="collapseFive" class="collapse" aria-labelledby="headingFive">
+                        <div class="faqs-card__body">
+                          <ul>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Что такое «Верификация карты»?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Существует ли абонентская плата на сайте?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Какие именно карточки принимаются к оплате?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Что такое CVV2/CVС2 код?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Что происходит в случае, если на платежной карте недостаточно средств для осуществления оплаты?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Какие причины неуспешной оплаты?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Каким образом можно получить квитанцию после совершения оплаты?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Оплаченная услуга не получена. Что делать?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Не могу оплатить заказ со своей банковской карты, почему и что делать?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Деньги для оплаты услуги снялись дважды. Как это возможно и где мои деньги?</a>
+                            </li>
+                            <li>
+                              <a href="#" class="btn btn-link text-color">Существуют ли на сервисе ограничения по размеру платежа?</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div><!-- faqs catalogue widget -->
+
                 </div>
 
               </div>

@@ -1,4 +1,4 @@
-.faqs-card__img {
+.faqs-section__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,13 +8,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.625rem;
   width: 3.75rem;
   height: 3.75rem;
 }
 
-.faqs-card__img img {
+.faqs-section__img img {
   max-width: 100%;
   height: auto;
+}
+
+.faqs-section__content li {
+  margin-bottom: 1.375rem;
+}
+
+@media screen and (max-width: 767px) {
+  .faqs-section__content li {
+    margin-bottom: 1rem;
+  }
 }
 /*# sourceMappingURL=faqs-links.css.map */

@@ -10,7 +10,7 @@ button, input, optgroup, select, textarea, label, a {
   font-family: $text-font;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
@@ -48,6 +48,11 @@ h4 {
   @include until($md) {
     font-size: 1rem; // 16px
   }
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
 p, span, li {

@@ -32,7 +32,7 @@ button, input, optgroup, select, textarea, label, a {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
@@ -78,6 +78,11 @@ h4 {
   h4 {
     font-size: 1rem;
   }
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
 p, span, li {
@@ -529,6 +534,7 @@ label {
   font-weight: 400;
   line-height: inherit;
   vertical-align: inherit;
+  text-align: initial;
 }
 
 .btn-link:hover {

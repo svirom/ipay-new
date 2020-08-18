@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the faqs links widget of the site.
+// This file contains all styles related to the faqs catalogue widget of the site.
 // -----------------------------------------------------------------------------
 @charset 'UTF-8';
 
@@ -7,15 +7,22 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-// faqs section
-.faqs-section {
+// faqs card
+.faqs-card {
+  &__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
   &__img {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.625rem;
-    width: 3.75rem;
-    height: 3.75rem;
+    margin-right: 0.605rem;
+    width: 2.5rem;
+    height: 2.5rem;
 
     img {
       max-width: 100%;
@@ -23,14 +30,26 @@
     }
   }
 
-  &__content {
+  &__body {
+    padding-left: 3.105rem;
+    padding-top: 0.75rem;
+
     li {
       margin-bottom: 1.375rem;
+
+      .active {
+        color: $btn-red;
+        font-weight: bold;
+
+        &:hover {
+          color: $btn-red;
+        }
+      }
     }
   }
 
   @include until($md) {
-    &__content {
+    &__body {
       li {
         margin-bottom: 1rem;
       }

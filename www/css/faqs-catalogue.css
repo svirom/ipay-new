@@ -1,0 +1,56 @@
+.faqs-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.faqs-card__img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0.605rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.faqs-card__img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.faqs-card__body {
+  padding-left: 3.105rem;
+  padding-top: 0.75rem;
+}
+
+.faqs-card__body li {
+  margin-bottom: 1.375rem;
+}
+
+.faqs-card__body li .active {
+  color: #E84F35;
+  font-weight: bold;
+}
+
+.faqs-card__body li .active:hover {
+  color: #E84F35;
+}
+
+@media screen and (max-width: 767px) {
+  .faqs-card__body li {
+    margin-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=faqs-catalogue.css.map */
