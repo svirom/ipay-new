@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the select component (using air datepicker plugin).
+// -----------------------------------------------------------------------------
+
+.datepicker-wrapper {
+  &.datepicker {
+    font-family: $text-font;
+    @include font(1rem, 400, 1.3);
+    color: $heading-color;
+
+    .datepicker {
+      &--content {
+        padding: 0;
+      }
+
+      &--day-name {
+        font-family: $text-font;
+        @include font(1rem, 400, 1.3);
+        color: $heading-color;
+      }
+  
+      &--cell {
+        border-radius: 0;
+        border-top:2px solid $datepicker-cell;
+        border-bottom:2px solid $datepicker-cell;
+  
+        &-day {
+          width: calc(14.28571% - 2px);
+          margin: 1px;
+          background-color: $datepicker-cell;
+        }
+  
+        &.-current-, &:hover {
+          color: $text-color;
+          border-bottom-color: $btn-red;
+          background-color: $light-grey;
+        }
+      }
+    }
+  }
+}
