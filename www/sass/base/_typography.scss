@@ -63,9 +63,11 @@ p, span, li {
 }
 
 a[download] {
-  word-break: break-word;
-  color: $btn-red;
-  text-decoration: underline;
+  &:not(.btn) {
+    word-break: break-word;
+    color: $btn-red;
+    text-decoration: underline;
+  }
 }
 
 small, .small {
