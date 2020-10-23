@@ -235,6 +235,12 @@
   background-color: #F0F5FA;
 }
 
+.mobile-card-wrapper .dropdown .mobile-charge__card {
+  position: relative;
+  border-radius: 1.25rem;
+  background-color: #fff;
+}
+
 .mobile-card-wrapper .dropdown-menu {
   width: 100%;
   top: auto !important;
@@ -249,7 +255,6 @@
 }
 
 .mobile-card-wrapper .dropdown-menu .mobile-card {
-  border-bottom: 1px solid #DEE7F3;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -261,16 +266,18 @@
   border-top-right-radius: 0.5rem;
 }
 
-.mobile-card-wrapper .dropdown-menu .mobile-card:last-of-type {
-  border-bottom: 0;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+.mobile-card-wrapper .dropdown-menu .mobile-card:hover {
+  background-color: #F0F5FA;
 }
 
 @media screen and (max-width: 575px) {
   .mobile-card-wrapper .dropdown {
     width: 100%;
     max-width: 20rem;
+    margin-bottom: 1.5rem;
+  }
+  .mobile-card-wrapper .dropdown .mobile-charge__card + .mobile-card__dropdown {
+    padding-top: 1rem;
   }
 }
 
@@ -441,10 +448,7 @@
           order: 0;
 }
 
-.mobile-card--checked .mobile-card__bank img {
-  max-height: 2rem;
-}
-
+.mobile-card--checked .mobile-card__bank img,
 .mobile-card--checked .mobile-card__type img {
   max-height: 2rem;
 }
@@ -475,7 +479,7 @@
     background-color: transparent;
   }
   .mobile-card__bank img, .mobile-card__type img {
-    max-height: 2rem;
+    max-height: 1.5rem;
   }
   .mobile-card__bank {
     -webkit-box-align: center;
@@ -514,6 +518,32 @@
   }
   .mobile-card--checked .mobile-card__body {
     padding-left: 0;
+  }
+}
+
+.mobile-choose-card {
+  padding: 1.875rem 0;
+  text-align: center;
+  border-top: 1px solid #DEE7F3;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.mobile-choose-card span {
+  font-size: 1.1875rem;
+  font-weight: 400;
+  line-height: 1.17;
+  color: #172A3A;
+}
+
+.mobile-choose-card:hover {
+  background-color: #F0F5FA;
+}
+
+@media screen and (max-width: 575px) {
+  .mobile-choose-card span {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=mobile-charge.css.map */

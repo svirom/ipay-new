@@ -231,11 +231,16 @@
         }
       }
     }
+
+    .mobile-charge__card {
+      position: relative;
+      border-radius: 1.25rem;
+      background-color: #fff;
+    }
   }
 
   .dropdown-menu {
     width: 100%;
-    // top: auto !important;
     top: auto !important;
     margin-top: -3rem;
     @include transform(none !important);
@@ -245,7 +250,6 @@
     box-shadow: 0 4px 20px $card-shadow;
 
     .mobile-card {
-      border-bottom: 1px solid $middle-grey;
       border-radius: 0;
       box-shadow: none;
       cursor: pointer;
@@ -255,10 +259,8 @@
         border-top-right-radius: $border-radius;
       }
 
-      &:last-of-type {
-        border-bottom: 0;
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
+      &:hover {
+        background-color: $light-grey;
       }
     }
   }
@@ -267,6 +269,13 @@
     .dropdown {
       width: 100%;
       max-width: 20rem;
+      margin-bottom: 1.5rem;
+
+      .mobile-charge__card {
+        & + .mobile-card__dropdown {
+          padding-top: 1rem;
+        }
+      }
     }
   }
 }
@@ -388,12 +397,9 @@
 
     .mobile-card__bank {
       order: 0;
-
-      img {
-        max-height: 2rem;
-      }
     }
 
+    .mobile-card__bank,
     .mobile-card__type {
       img {
         max-height: 2rem;
@@ -422,7 +428,7 @@
 
     &__bank, &__type {
       img {
-        max-height: 2rem;
+        max-height: 1.5rem;
       }
     }
 
@@ -440,7 +446,6 @@
     &__body {
       flex-direction: row;
       justify-content: space-between;
-      // align-items: center;
       width: 100%;
       padding-left: 0;
       padding-top: 1rem;
@@ -453,6 +458,30 @@
       .mobile-card__body {
         padding-left: 0;
       }
+    }
+  }
+}
+
+.mobile-choose-card {
+  padding: 1.875rem 0;
+  text-align: center;
+  border-top: 1px solid $middle-grey;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  cursor: pointer;
+
+  span {
+    @include font(1.1875rem, 400, 1.17);
+    color: $heading-color;
+  }
+
+  &:hover {
+    background-color: $light-grey;
+  }
+
+  @include until($sm) {
+    span {
+      font-size: 1rem;
     }
   }
 }

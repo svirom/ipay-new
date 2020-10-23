@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/category-text.css">
     <link rel="stylesheet" href="/css/mobile-charge.css">
 
-    <title>Category Mobile</title>
+    <title>Category Mobile Cards 2-2 (Another Card)</title>
   </head>
   <body>
 
@@ -376,63 +376,140 @@
                           </div>
 
                           <div class="mobile-charge__input">
-                            <div class="form-group mobile-charge__phone">
-                              <input type="tel" class="form-control form-input" id="mobile-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true">
+                            <div class="form-group mobile-charge__phone has-success">
+                              <input type="tel" class="form-control form-input filled" id="mobile-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380677593208">
                               <label class="control-label form-label" for="mobile-phone">Номер телефона</label>
                             </div>
-                            <div class="form-group mobile-charge__amount">
-                              <div class="mobile-charge__number">
-                                <input type="tel" class="form-control form-input input-icon-right" id="mobile-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                            <div class="mobile-charge__amount">
+                              <div class="form-group mobile-charge__number has-success">
+                                <input type="tel" class="form-control form-input input-icon-right filled" id="mobile-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="75.00">
                                 <label class="control-label form-label" for="mobile-amount">Сумма</label>
                                 <label class="label-icon-right label-currency">грн</label>
                               </div>
-                              <div class="mobile-charge__buttons">
-                                <button type="button" class="btn btn-mobile-amount">75</button>
+                              <div class="form-group mobile-charge__buttons">
+                                <button type="button" class="btn btn-mobile-amount active">75</button>
                                 <button type="button" class="btn btn-mobile-amount">100</button>
                                 <button type="button" class="btn btn-mobile-amount">150</button>
                               </div>
                             </div>
                           </div>
 
-                          <div class="mobile-charge__continue">
-                            <span class="mobile-charge__safety">Безопасное соединение</span>
-                            <button type="button" class="btn btn-green mobile-charge__btn-continue btn-block mt-3 mt-md-0" disabled>Продолжить</button>
+                          <div class="alert alert-success fade show text-center" role="alert">
+                            Николай, Вам будет начислено <span>5 бонусов Добра</span>
                           </div>
 
-                          <!-- <div class="mobile-charge__payment-wrapper mt-3">
-                            <h4>Введите данные карты</h4>
+                          <div class="mobile-charge__continue">
+                            <span class="mobile-charge__safety">Безопасное соединение</span>
+                            <button type="button" class="btn btn-green mobile-charge__btn-continue btn-block mt-3 mt-md-0" disabled style="display: none;">Продолжить</button>
+                          </div>
 
+                          <div class="mobile-charge__payment-wrapper mt-3">
+                            
                             <div class="mobile-charge__payment pt-3">
 
-                              <div class="mobile-charge__card">
-                                <div class="bank-card">
-                                  <div class="bank-card__header">
-                                    <div class="bank-card__bank"></div>
-                                    <div class="bank-card__type"></div>
-                                  </div>
-                                  <div class="bank-card__body">
-                                    <div class="bank-card__number">
-                                      <div class="form-group">
-                                        <input type="tel" class="form-control form-input" id="card-number" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                                        <label class="control-label form-label" for="card-number">Номер карты</label>
-                                        <div class="help-block"></div>
+                              <div class="mobile-card-wrapper">
+
+                                <div class="dropdown">
+
+                                  <!-- <div class="mobile-card mobile-card--checked">
+                                    <div class="mobile-card__header">
+                                      <div class="mobile-card__bank">
+                                        <img src="img/banks/otp.png" alt="">
+                                      </div>
+                                      <div class="mobile-card__type">
+                                        <img src="img/banks/mastercard.png" alt="">
                                       </div>
                                     </div>
-                                    <div class="bank-card__card-data">
-                                      <div class="form-group bank-card__expires">
-                                        <input type="text" class="form-control form-input" id="card-expires" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
-                                        <label class="control-label form-label" for="card-expires">Срок действия</label>
-                                        <div class="help-block"></div>
+                                    <div class="mobile-card__body">
+                                      <div class="mobile-card__number">
+                                        <div class="mobile-card__purpose">Зарплатная</div>
+                                        <div class="mobile-card__card">5168 **** **** **06</div>
                                       </div>
-                                      <div class="form-group bank-card__cvv">
-                                        <input type="password" class="form-control form-input" id="card-cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
-                                        <label class="control-label form-label" for="card-cvv">CVV</label>
-                                        <button type="button" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-original-title="" title=""></button>
-                                        <div class="help-block"></div>
+                                    </div>
+                                  </div> -->
+                                  <div class="mobile-charge__card">
+                                    <div class="bank-card">
+                                      <div class="bank-card__header">
+                                        <div class="bank-card__bank">
+                                          <img src="img/banks/otp.png" alt="">
+                                        </div>
+                                        <div class="bank-card__type">
+                                          <img src="img/banks/mastercard.png" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="bank-card__body">
+                                        <div class="bank-card__number">
+                                          <div class="form-group has-success">
+                                            <input type="tel" class="form-control form-input filled" id="card-number" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="1234 5678 8765 4321">
+                                            <label class="control-label form-label" for="card-number">Номер карты</label>
+                                            <div class="help-block"></div>
+                                          </div>
+                                        </div>
+                                        <div class="bank-card__card-data">
+                                          <div class="form-group bank-card__expires has-success">
+                                            <input type="text" class="form-control form-input filled" id="card-expires" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true" value="04 / 22">
+                                            <label class="control-label form-label" for="card-expires">Срок действия</label>
+                                            <div class="help-block"></div>
+                                          </div>
+                                          <div class="form-group bank-card__cvv has-success">
+                                            <input type="password" class="form-control form-input filled" id="card-cvv" name="name" autocomplete="off" placeholder="***" aria-required="true" value="123">
+                                            <label class="control-label form-label" for="card-cvv">CVV</label>
+                                            <button type="button" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-original-title="" title=""></button>
+                                            <div class="help-block"></div>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
+
+                                  <div class="mobile-card__dropdown" id="dropdownCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <p>Выбрать другую карту</p>
+                                  </div>
+
+                                  <div class="dropdown-menu" aria-labelledby="dropdownCard">
+
+                                    <div class="mobile-card" id="payment-card-1">
+                                      <div class="mobile-card__header">
+                                        <div class="mobile-card__bank">
+                                          <img src="img/banks/otp.png" alt="">
+                                        </div>
+                                        <div class="mobile-card__type">
+                                          <img src="img/banks/mastercard.png" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="mobile-card__body">
+                                        <div class="mobile-card__number">
+                                          <div class="mobile-card__purpose">Зарплатная</div>
+                                          <div class="mobile-card__card">5168 **** **** **06</div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="mobile-card" id="payment-card-2">
+                                      <div class="mobile-card__header">
+                                        <div class="mobile-card__bank">
+                                          <img src="img/banks/invest-bank.png" alt="">
+                                        </div>
+                                        <div class="mobile-card__type">
+                                          <img src="img/banks/visa.png" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="mobile-card__body">
+                                        <div class="mobile-card__number">
+                                          <div class="mobile-card__purpose">Зарплатная</div>
+                                          <div class="mobile-card__card">4168 **** **** **22</div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="mobile-choose-card">
+                                      <span>Другая карта</span>
+                                    </div>
+                                    
+                                  </div>
+                                  
                                 </div>
+
                               </div>
 
                               <div class="mobile-charge__info">
@@ -455,19 +532,19 @@
                                   </table>
                                 </div>
                                 <div class="mobile-charge__submit">
-                                  <button type="submit" class="btn btn-green btn-block" disabled="">Пополнить</button>
+                                  <button type="submit" class="btn btn-green btn-block">Пополнить</button>
                                 </div>
                               </div>
 
                             </div>
 
-                          </div> -->
+                          </div>
 
                         </form>
                       </div><!-- mobile charge widget -->
                     </div>
       
-                    <div class="col-12">
+                    <div class="col-12 mt-3">
                       <div class="row">
                         <div class="col-12 mb-2">
                           <h3>Все операторы</h3>
