@@ -34,7 +34,7 @@
 
   &__input {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__phone {
@@ -142,6 +142,7 @@
     &__input {
       flex-direction: column;
       align-items: flex-start;
+      padding-bottom: 0.5rem;
     }
 
     &__phone {

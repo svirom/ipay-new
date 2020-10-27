@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/utility-main.css">
+    <link rel="stylesheet" href="/css/category-text.css">
+    <link rel="stylesheet" href="/css/mobile-charge.css">
+
+    <title>Category Mobile 1-0</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги для оплаты</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <ul class="catalogue-mobile__list">
+                        <li><a class="dropdown-item catalogue-mobile__back" href="#">Назад</a></li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__crossboard">
+                            <span>Международные переводы</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2p">
+                            <span>Переводы с карты на карту</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2r">
+                            <span>Перевод по реквизитам</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-email">
+                            <span>Переводы с карты на e-mail</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-phone">
+                            <span>Перевод с карты на телефон</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__receive">
+                            <span>Получить перевод</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__mobile">
+                            <span>Мобильная связь</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__utility">
+                            <span>Коммунальные услуги</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__kindergarten">
+                            <span>Детские сады</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__internet">
+                            <span>Интернет</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tv">
+                            <span>Телевидение</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__phone">
+                            <span>Телефонная связь</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__security">
+                            <span>Охрана</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__transport">
+                            <span>Транспорт</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__penalty">
+                            <span>Оплатить Штраф ГАИ</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tourism">
+                            <span>Туризм</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__banks">
+                            <span>Банки и Страхование</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__education">
+                            <span>Образование</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__business">
+                            <span>Бизнес-услуги</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="catalogue-mobile__item catalogue-mobile__charity">
+                            <span>Благотворительность</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="form-search">
+          <h3 class="form-search__title">Поиск</h3>
+          <form action="">
+            <div class="form-group">
+              <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+              <label class="control-label form-label" for="search-icon">Поиск услуги</label>
+              <a href="#" class="form-search__search"></a>
+              <a href="#" class="form-search__cancel"></a>
+             </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
+                <li class="breadcrumb-item"><a href="#">Платежи</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Мобильная связь</li>
+              </ol>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- aside area -->
+          <aside class="col-lg-4 d-none d-lg-block">
+            <!-- catalogue widget -->
+            <div class="catalogue" id="catalogue-widget">
+              <ul class="catalogue__list">
+                <li>
+                  <a href="#" class="catalogue__item catalogue__crossboard">
+                    <span>Международные переводы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__p2p">
+                    <span>Переводы с карты на карту</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__p2r">
+                    <span>Перевод по реквизитам</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__by-email">
+                    <span>Переводы с карты на e-mail</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__by-phone">
+                    <span>Перевод с карты на телефон</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__receive">
+                    <span>Получить перевод</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__mobile active">
+                    <span>Мобильная связь</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__utility">
+                    <span>Коммунальные услуги</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__kindergarten">
+                    <span>Детские сады</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__internet">
+                    <span>Интернет</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__tv">
+                    <span>Телевидение</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__phone">
+                    <span>Телефонная связь</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__security">
+                    <span>Охрана</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__transport">
+                    <span>Транспорт</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__penalty">
+                    <span>Оплатить Штраф ГАИ</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__tourism">
+                    <span>Туризм</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__banks">
+                    <span>Банки и Страхование</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__education">
+                    <span>Образование</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__business">
+                    <span>Бизнес-услуги</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item catalogue__charity">
+                    <span>Благотворительность</span>
+                  </a>
+                </li>
+              </ul>
+            </div><!-- catalogue widget -->
+          </aside><!-- aside area -->
+          <!-- main area -->
+          <main class="col-lg-8">
+
+            <div class="row">
+
+              <div class="col-12">
+                <!-- utility main widget -->
+                <div class="utility-main" id="utility-main-widget">
+                  <div class="row">
+
+                    <div class="col-12">
+                      <div class="row align-items-center">
+                        <div class="col-auto d-lg-none">
+                          <a href="#" class="btn btn-link btn-back">Главная</a>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="col-12 mt-2 mb-3">
+                      <h1>Пополнение мобильного телефона</h1>
+                      <p>Пополняйте мобильный за считанные минуты, не выходя из дома! Пополнить счет можно с помощью кредитной или дебетовой карты (Visa или MasterCard).</p>
+                    </div>
+
+                    <div class="col-12 mb-4">
+                      <!-- mobile charge widget -->
+                      <div class="mobile-charge-widget" id="mobile-charge-widget">
+                        <h3 class="mb-3">Быстрое пополнение мобильного</h3>
+                        <form action="/" class="mobile-charge" id="mobile-charge-form">
+
+                          <div class="mobile-charge__icons">
+                            <span class="mobile-charge__icon mobile-charge__icon--vodafone">
+                              <svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.36968 0.00204324C9.37384 0.0634681 9.42577 0.0409481 9.45486 0.0429956C10.2962 0.122848 11.1064 0.33169 11.8854 0.655194C11.9166 0.667479 11.9456 0.683859 11.9726 0.718666C11.8667 0.718666 11.7587 0.716619 11.6527 0.718666C9.47355 0.782138 7.57898 1.52129 6.03964 3.05896C4.99471 4.10318 4.34449 5.35829 4.12637 6.81406C3.92901 8.13469 4.11182 9.39799 4.81606 10.5569C5.52445 11.7199 6.53821 12.4938 7.91136 12.7129C9.34476 12.9422 10.639 12.5778 11.7254 11.6195C12.8535 10.6265 13.3105 9.36114 13.1671 7.87875C13.0882 7.0618 12.8223 6.31447 12.2946 5.67155C11.7171 4.96722 10.961 4.5352 10.0926 4.28131C9.91811 4.23012 9.74154 4.19122 9.56496 4.15232C9.50887 4.14003 9.48186 4.1257 9.48394 4.06018C9.54211 2.52046 10.5455 1.21212 11.9249 0.864043C12.1181 0.814903 12.2801 0.821043 12.4629 0.919323C14.7792 2.17239 16.2562 4.05608 16.7735 6.61545C17.5899 10.6593 15.2362 14.6293 11.2746 15.9541C8.41616 16.9102 5.19622 16.2305 2.99211 14.2076C1.62935 12.9545 0.746462 11.4312 0.449396 9.61708C-0.0221706 6.7424 0.808783 4.26288 2.93187 2.23382C4.16168 1.05856 5.65324 0.366502 7.34423 0.0962325C7.51666 0.069615 7.68908 0.0532336 7.8615 0.0307112C7.86566 0.0307112 7.86773 0.0266164 7.86981 0.0245689C7.88643 0.012284 7.86773 0.00818997 7.86358 0C8.37046 0.00204749 8.86903 0.00204324 9.36968 0.00204324Z" fill="#F81600"></path>
+                              </svg>
+                            </span>
+                            <span class="mobile-charge__icon mobile-charge__icon--kyivstar">
+                              <svg width="21" height="20" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.65798 7.63058C6.65091 8.32448 5.99399 8.85825 5.31586 8.65866C3.97844 8.26414 2.65279 7.83481 1.33185 7.39387C0.769101 7.20589 0.505411 6.60946 0.682007 6.05945C0.856248 5.51872 1.43076 5.17757 1.99587 5.34698C3.33093 5.75079 4.65659 6.17548 5.97988 6.61642C6.43196 6.76727 6.66268 7.16412 6.65798 7.63058Z" fill="#269FFB"></path>
+                                <path d="M11.6993 7.59343C11.704 7.12696 11.9701 6.74172 12.4504 6.58623C13.7384 6.16618 15.0311 5.75077 16.3284 5.35625C16.9147 5.17755 17.4916 5.50013 17.6776 6.06407C17.8566 6.60944 17.5929 7.20587 17.0278 7.39385C15.7068 7.83711 14.3812 8.26644 13.0438 8.66096C12.3539 8.86287 11.6922 8.30589 11.6993 7.59343Z" fill="#269FFB"></path>
+                                <path d="M7.05597 10.7149C7.79532 10.7172 8.36043 11.6316 7.8848 12.3255C7.08894 13.4835 6.23892 14.6045 5.37714 15.7138C5.02395 16.1686 4.37644 16.1965 3.91729 15.86C3.4605 15.5258 3.30744 14.9038 3.63944 14.4374C4.44707 13.3025 5.28296 12.1863 6.1212 11.0746C6.31428 10.817 6.61566 10.7079 7.05597 10.7149Z" fill="#269FFB"></path>
+                                <path d="M14.8849 14.9943C14.8849 15.4585 14.6 15.8553 14.1503 16.0155C13.7005 16.1756 13.2202 16.0456 12.907 15.6418C12.4714 15.0825 12.057 14.5047 11.6355 13.9361C11.2729 13.4464 10.908 12.9591 10.5524 12.4624C10.171 11.9287 10.2675 11.2696 10.7667 10.9145C11.2659 10.5594 11.9393 10.6662 12.3325 11.1883C13.1095 12.2234 13.8748 13.2677 14.6447 14.3074C14.7978 14.5093 14.8896 14.7344 14.8849 14.9943Z" fill="#269FFB"></path>
+                                <path d="M8.08015 3.04713C8.08015 2.40196 8.07544 1.75912 8.08251 1.11396C8.08957 0.461834 8.55577 -0.00231207 9.18916 8.66373e-06C9.80371 0.00232939 10.2723 0.459513 10.277 1.09307C10.2864 2.395 10.2864 3.69461 10.277 4.99654C10.2723 5.65331 9.80373 6.11745 9.17269 6.11049C8.54166 6.10585 8.08722 5.63938 8.08251 4.98029C8.07544 4.33745 8.08015 3.69229 8.08015 3.04713Z" fill="#269FFB"></path>
+                              </svg>
+                            </span>
+                            <span class="mobile-charge__icon mobile-charge__icon--lifecell">
+                              <svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.00721155 8.53762C-0.0343361 7.61829 0.104846 6.71944 0.393602 5.84926C1.08953 3.74443 2.41283 2.12896 4.37804 1.05198C6.01709 0.155179 7.77663 -0.170369 9.64212 0.0835204C11.4972 0.335362 13.0927 1.10931 14.4305 2.39104C15.6084 3.51921 16.404 4.87875 16.753 6.46146C17.3783 9.29519 16.7322 11.8341 14.7587 13.9942C13.0199 15.8984 10.8013 16.7767 8.2108 16.7337C7.41724 16.7214 6.63823 16.5781 5.87998 16.3324C5.8966 16.2792 5.91945 16.228 5.92984 16.1727C6.21236 14.6658 6.83142 13.3021 7.75171 12.0736C8.7073 10.796 9.86855 9.75383 11.3393 9.06997C11.5242 8.98397 11.6385 8.98193 11.8026 9.12935C12.2368 9.52451 12.7665 9.67398 13.3482 9.57161C14.3308 9.39962 14.9685 8.57038 14.8979 7.58144C14.8335 6.68054 14.0524 5.93935 13.1238 5.90249C12.1329 5.86359 11.3123 6.53312 11.1794 7.51592C11.1545 7.70224 11.0963 7.78414 10.9156 7.83942C9.5611 8.24687 8.31051 8.86931 7.15756 9.67807C5.31492 10.97 3.87115 12.5978 2.90932 14.6269C2.31935 14.2174 1.88725 13.6666 1.49047 13.0851C1.5237 12.7063 1.52994 12.3214 1.59226 11.9487C2.03682 9.29724 3.36842 7.1617 5.48319 5.4848C5.60368 5.38857 5.66809 5.38448 5.77819 5.50119C6.10434 5.85336 6.52396 6.03763 7.00176 6.06834C8.04876 6.13591 8.93581 5.34762 8.99398 4.31569C9.05214 3.29194 8.26274 2.43814 7.19497 2.37262C6.19575 2.31119 5.31286 3.09743 5.26092 4.11708C5.25054 4.31159 5.17159 4.38735 5.0054 4.45287C4.25131 4.75385 3.545 5.14287 2.87608 5.60151C1.72313 6.39184 0.782076 7.38488 0.00721155 8.53762Z" fill="#FDCA09"></path>
+                                <path d="M2.90723 14.6268C3.86906 12.5977 5.31284 10.97 7.15548 9.67799C8.30843 8.86923 9.55693 8.24679 10.9135 7.83934C11.0963 7.78405 11.1524 7.7042 11.1773 7.51584C11.3102 6.53304 12.1308 5.86146 13.1217 5.90241C14.0503 5.93926 14.8335 6.68046 14.8958 7.58136C14.9664 8.57234 14.3287 9.39953 13.3461 9.57152C12.7623 9.6739 12.2326 9.52443 11.8005 9.12926C11.6364 8.97979 11.5221 8.98389 11.3373 9.06988C9.86647 9.75375 8.7052 10.7959 7.74961 12.0736C6.82933 13.3041 6.21026 14.6657 5.92774 16.1726C5.91735 16.2259 5.8945 16.2791 5.87788 16.3323C4.81634 16.0088 3.86905 15.4826 3.0194 14.7803C2.97162 14.7394 2.92177 14.6964 2.90723 14.6268Z" fill="#FFFFFF"></path>
+                                <path d="M0.00714943 8.53761C0.779936 7.38487 1.72099 6.39183 2.87602 5.59945C3.54493 5.14081 4.24917 4.74974 5.00533 4.45081C5.17153 4.38529 5.25047 4.30953 5.26086 4.11502C5.3128 3.09537 6.19568 2.30913 7.19491 2.37056C8.2606 2.43812 9.05 3.28988 8.99392 4.31363C8.93575 5.34556 8.0487 6.13385 7.0017 6.06628C6.5239 6.03557 6.10428 5.85129 5.77813 5.49913C5.6701 5.38242 5.6057 5.38652 5.48313 5.48275C3.36628 7.15965 2.03675 9.29518 1.59219 11.9467C1.52987 12.3214 1.52157 12.7043 1.4904 13.083C0.856803 12.2395 0.466257 11.2894 0.221126 10.2739C0.0840187 9.70673 -0.0011601 9.12728 0.00714943 8.53761Z" fill="#FFFFFF"></path>
+                              </svg>
+                            </span>
+                          </div>
+
+                          <div class="mobile-charge__input">
+                            <div class="form-group mobile-charge__phone has-error">
+                              <input type="tel" class="form-control form-input filled" id="mobile-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true">
+                              <label class="control-label form-label" for="mobile-phone">Номер телефона</label>
+                              <div class="help-block">Необходимо заполнить номер телефона</div>
+                            </div>
+                            <div class="form-group mobile-charge__amount has-error">
+                              <div class="mobile-charge__number">
+                                <input type="tel" class="form-control form-input input-icon-right filled" id="mobile-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="1">
+                                <label class="control-label form-label" for="mobile-amount">Сумма</label>
+                                <label class="label-icon-right label-currency">грн</label>
+                                <div class="help-block">Сумма должна быть больше 1</div>
+                              </div>
+                              <div class="mobile-charge__buttons">
+                                <button type="button" class="btn btn-mobile-amount">75</button>
+                                <button type="button" class="btn btn-mobile-amount">100</button>
+                                <button type="button" class="btn btn-mobile-amount">150</button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="mobile-charge__continue">
+                            <span class="mobile-charge__safety">Безопасное соединение</span>
+                            <button type="button" class="btn btn-green mobile-charge__btn-continue btn-block mt-3 mt-md-0" disabled>Продолжить</button>
+                          </div>
+
+                          <!-- <div class="mobile-charge__payment-wrapper mt-3">
+                            <h4>Введите данные карты</h4>
+
+                            <div class="mobile-charge__payment pt-3">
+
+                              <div class="mobile-charge__card">
+                                <div class="bank-card">
+                                  <div class="bank-card__header">
+                                    <div class="bank-card__bank"></div>
+                                    <div class="bank-card__type"></div>
+                                  </div>
+                                  <div class="bank-card__body">
+                                    <div class="bank-card__number">
+                                      <div class="form-group">
+                                        <input type="tel" class="form-control form-input" id="card-number" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                        <label class="control-label form-label" for="card-number">Номер карты</label>
+                                        <div class="help-block"></div>
+                                      </div>
+                                    </div>
+                                    <div class="bank-card__card-data">
+                                      <div class="form-group bank-card__expires">
+                                        <input type="text" class="form-control form-input" id="card-expires" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                                        <label class="control-label form-label" for="card-expires">Срок действия</label>
+                                        <div class="help-block"></div>
+                                      </div>
+                                      <div class="form-group bank-card__cvv">
+                                        <input type="password" class="form-control form-input" id="card-cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                                        <label class="control-label form-label" for="card-cvv">CVV</label>
+                                        <button type="button" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-original-title="" title=""></button>
+                                        <div class="help-block"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="mobile-charge__info">
+                                <div class="table-responsive">
+                                  <table class="table">
+                                    <tbody>
+                                      <tr>
+                                        <td>Сумма пополнения</td>
+                                        <td>75.00 грн</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Комиссия</td>
+                                        <td>3.00 грн</td>
+                                      </tr>
+                                      <tr class="table-summary">
+                                        <td>К оплате</td>
+                                        <td>78.00 грн</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <div class="mobile-charge__submit">
+                                  <button type="submit" class="btn btn-green btn-block" disabled="">Пополнить</button>
+                                </div>
+                              </div>
+
+                            </div>
+
+                          </div> -->
+
+                        </form>
+                      </div><!-- mobile charge widget -->
+                    </div>
+      
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 mb-2">
+                          <h3>Все операторы</h3>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київські енергетичні послуги Yasno</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgasenergy.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київводоканал</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київські енергетичні послуги Yasno</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgasenergy.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київводоканал</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/kyivgas.png" alt="">
+                            </span>
+                            <span class="bill-card__content">Київгаз</span>
+                          </a>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <a href="#" class="bill-card">
+                            <span class="bill-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="bill-card__content">ООО "Станиславская теплоэнергетическая компания"</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div><!-- utility main widget -->
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-12 mt-4">
+                <!-- category text widget -->
+                <div class="category-text" id="category-text-widget">
+                  <p>В современном мире без мобильного телефона не обойтись. Но бывает так, что деньги на счету заканчиваются в самый неподходящий момент. Для решения такой проблемы идеально подойдет сервис iPay.ua – с нашей помощью пополнение мобильного отнимет всего пару минут!</p>
+                  <h2>Как пополнить мобильный с карты?</h2>
+                  <p>Для выполнения такой операции необходимо обладать кредитной или дебетовой банковской карточкой Visa или MasterCard – при этом неважно, кем она была выдана. Все можно выполнить с помощью мобильного телефона или компьютера, требуется только доступ к интернету.</p>
+                  <p>Никогда еще оплата мобильной связи не была столь простой, пользователям iPay.ua нужно лишь:</p>
+                  <ul class="list list--circle">
+                    <li>выбрать оператора мобильной связи из списка;</li>
+                    <li>ввести номер телефона и сумму;</li>
+                    <li>указать данные с карточки (номер, срок действия и CVV-код).</li>
+                  </ul>
+                  <p>После этого нужно нажать на кнопку «оплатить». Вся операция длится не более нескольких минут, а оперативность зачисления средств – главное достоинство нашего ресурса. Наш ресурс отлично подойдет для тех ситуаций, когда деньги на телефоне нужны уже сейчас.</p>
+                  <p>Какие операторы доступны к оплате?</p>
+                  <p>Наш интернет-ресурс дает возможность пополнить счет через карту для пользователей всех популярных в Украине мобильных операторов, включая:</p>
+                  <ul class="list list--circle">
+                    <li>Vodafone;</li>
+                    <li>Киевстар;</li>
+                    <li>Lifecell;</li>
+                    <li>Интертелеком;</li>
+                    <li>ТриМоб;</li>
+                    <li>TravelSim;</li>
+                    <li>PeopleNet;</li>
+                    <li>TezGSM;</li>
+                    <li>Goodline;</li>
+                    <li>Global SIM;</li>
+                    <li>Yezzz!</li>
+                  </ul>
+                  <p>Также мы поможем пополнить счет в Viber и Skype. Независимо от выбранного оператора, деньги зачисляются практически мгновенно.</p>
+                  <h3>Какими картами можно пополнить мобильный?</h3>
+                  <p>Чтобы пополнить счет на телефоне, необходимо обладать любой кредитной или дебетовой банковской картой. При этом платежная система (Visa или MasterCard), как и эмитент (банк, который выдал карточку) роли не играют.</p>
+                  <p>В любом случае, вы можете рассчитывать на максимальную безопасность транзакции. Мы используем протоколы защиты и антифрод системы, разработанные ведущими мировыми платежными системами. Любые действия злоумышленников сразу же пресекаются, мошенники ни в коем случае не смогут получить доступ к персональным данным пользователей iPay.ua.</p>
+                  <h3>Какая комиссия?</h3>
+                  <p>Мы предлагаем клиентам самые прозрачные расценки и тарифы на выполнение онлайн-транзакций. Стоимость услуг зависит от:</p>
+                  <ul class="list list--circle">
+                    <li>суммы;</li>
+                    <li>выбранного оператора мобильной связи.</li>
+                  </ul>
+                  <p>Тарифы могут составлять от 0 процентов!</p>
+                  <h3>Почему удобней всего зарегистрироваться на iPay.ua</h3>
+                  <p>Пополнить счет банковской картой могут как зарегистрированные, так и незарегистрированные пользователи. В то же время, есть несколько причин, почему следует авторизоваться на iPay.ua:</p>
+                  <p>возможность принимать участие в программе лояльности. За каждый платеж мы начисляем определенное количество бонусов, которые в дальнейшем можно будет обменять на ценные призы и подарки;</p>
+                  <p>экономия времени. После авторизации многие поля будут заполняться автоматически. Также есть возможность создания шаблонов, которые помогут вам проводить операции с помощью нескольких кликов;</p>
+                  <p>частые акции. Наш ресурс постоянно проводит различные розыгрыши, что делает партнерство с iPay еще более выгодным решением.</p>
+                  <h3>Особенности пополнения мобильного телефона с iPay</h3>
+                  <p>Теперь нет нужды отправляться к терминалу, чтобы пополнить счет мобильного телефона – все можно сделать через смартфон или компьютер с помощью нашего интернет-ресурса. Для своих пользователей мы гарантируем:</p>
+                  <ul class="list list--circle">
+                    <li>полное и своевременное зачисление средств;</li>
+                    <li>мгновенное выполнение транзакций;</li>
+                    <li>максимальную защиту персональных данных.</li>
+                  </ul>
+                  <p>iPay.ua – ваш лучший выбор, когда нужно пополнить счет на мобильном телефоне!</p>
+                </div><!-- category text widget -->
+              </div>
+            </div>
+
+          </main><!-- main area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>
