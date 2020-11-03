@@ -1,0 +1,153 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the p2p main content widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.main-nav {
+  > nav {
+    flex-grow: 1;
+  }
+
+  &__icon {
+    &--search {
+      margin-right: 1rem;
+      margin-left: 3.75rem;
+    }
+  }
+
+  &__item {
+    &--p2p {
+      margin-right: auto;
+      margin-left: 1rem;
+
+      .dropdown-menu {
+        &::before {
+          display: none;
+        }
+
+        &.show {
+          left: -1rem !important;
+        }
+      }
+
+      .dropdown-item {
+        &::before {
+          background-image: url('../img/menu-catalogue.png');
+          background-size: 169px;
+          background-repeat: no-repeat;
+          z-index: 1;
+        }
+      }
+
+      > .dropdown-item {
+        padding: 0 0 0 2.25rem;
+
+        &::before {
+          left: 0;
+        }
+
+        span {
+          display: block;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+
+      @include until($xl) {
+        max-width: 10.25rem;
+      }
+    }
+
+    .dropdown-p2p {
+      &::before {
+        width: 24px;
+        height: 24px;
+        background-position: -122px -49px;
+      }
+
+      &.active {
+        color: $btn-red;
+        font-weight: 700;
+        background-color: #ffffff;
+
+        &::before {
+          background-position: -122px -74px;
+        }
+
+        span {
+          color: $btn-red;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .dropdown-p2p-tel {
+      &::before {
+        width: 24px;
+        height: 24px;
+        background-position: -25px -25px;
+      }
+
+      &.active {
+        &::before {
+          background-position: -49px -25px;
+        }
+      }
+    }
+
+    .dropdown-p2p-email {
+      &::before {
+        width: 26px;
+        height: 24px;
+        background-position: -48px 0;
+      }
+
+      &.active {
+        &::before {
+          background-position: 0 -25px;
+        }
+      }
+    }
+
+    .dropdown-p2p-crossboard {
+      &::before {
+        width: 24px;
+        height: 24px;
+        background-position: -48px -49px;
+      }
+
+      &.active {
+        &::before {
+          background-position: -72px -49px;
+        }
+      }
+    }
+  }
+
+  @include until($xl) {
+    &__icon {
+      &--safety {
+        min-height: 1.75rem;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  &.btn-account {
+    max-width: 13.75rem;
+    padding: 0.438rem 2.998rem 0.438rem 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

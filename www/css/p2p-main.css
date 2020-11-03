@@ -1,0 +1,120 @@
+.main-nav > nav {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main-nav__icon--search {
+  margin-right: 1rem;
+  margin-left: 3.75rem;
+}
+
+.main-nav__item--p2p {
+  margin-right: auto;
+  margin-left: 1rem;
+}
+
+.main-nav__item--p2p .dropdown-menu::before {
+  display: none;
+}
+
+.main-nav__item--p2p .dropdown-menu.show {
+  left: -1rem !important;
+}
+
+.main-nav__item--p2p .dropdown-item::before {
+  background-image: url("../img/menu-catalogue.png");
+  background-size: 169px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.main-nav__item--p2p > .dropdown-item {
+  padding: 0 0 0 2.25rem;
+}
+
+.main-nav__item--p2p > .dropdown-item::before {
+  left: 0;
+}
+
+.main-nav__item--p2p > .dropdown-item span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1199px) {
+  .main-nav__item--p2p {
+    max-width: 10.25rem;
+  }
+}
+
+.main-nav__item .dropdown-p2p::before {
+  width: 24px;
+  height: 24px;
+  background-position: -122px -49px;
+}
+
+.main-nav__item .dropdown-p2p.active {
+  color: #E84F35;
+  font-weight: 700;
+  background-color: #ffffff;
+}
+
+.main-nav__item .dropdown-p2p.active::before {
+  background-position: -122px -74px;
+}
+
+.main-nav__item .dropdown-p2p.active span {
+  color: #E84F35;
+  font-weight: 700;
+}
+
+.main-nav__item .dropdown-p2p-tel::before {
+  width: 24px;
+  height: 24px;
+  background-position: -25px -25px;
+}
+
+.main-nav__item .dropdown-p2p-tel.active::before {
+  background-position: -49px -25px;
+}
+
+.main-nav__item .dropdown-p2p-email::before {
+  width: 26px;
+  height: 24px;
+  background-position: -48px 0;
+}
+
+.main-nav__item .dropdown-p2p-email.active::before {
+  background-position: 0 -25px;
+}
+
+.main-nav__item .dropdown-p2p-crossboard::before {
+  width: 24px;
+  height: 24px;
+  background-position: -48px -49px;
+}
+
+.main-nav__item .dropdown-p2p-crossboard.active::before {
+  background-position: -72px -49px;
+}
+
+@media screen and (max-width: 1199px) {
+  .main-nav__icon--safety {
+    min-height: 1.75rem;
+  }
+  .main-nav__icon--safety span {
+    display: none;
+  }
+}
+
+.btn.btn-account {
+  max-width: 13.75rem;
+  padding: 0.438rem 2.998rem 0.438rem 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*# sourceMappingURL=p2p-main.css.map */
