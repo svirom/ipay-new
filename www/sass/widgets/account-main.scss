@@ -92,6 +92,23 @@
     @include font(1.3125rem, bold, 1.24);
   }
 
+  &__archive-btn {
+    padding-top: 1rem;
+    text-align: center;
+
+    p {
+      padding-top: 0.625rem;
+      color: $heading-color;
+      font-weight: bold;
+
+      .btn-link {
+        color: $btn-red;
+        font-weight: 400;
+        text-decoration: underline;
+      }
+    }
+  }
+
   @include until($md) {
     h1 {
       margin-bottom: 1rem;

@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the archive payment widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.archive-payment {
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.15rem 0;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 0px 3px 10px $template-shadow-hover;
+    border-radius: $border-radius;
+
+    img {
+      max-width: calc(100% - 6px);
+      max-height: calc(100% - 6px);
+    }
+  }
+
+  &__bill {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+  }
+
+  &__title {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+  }
+
+  &__id {
+    color: $main-blue;
+  }
+
+  &__table {
+    margin-bottom: 2rem;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px dashed $middle-grey;
+
+    &--top {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .archive-payment__cell {
+        &:last-child {
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  &__cell {
+    font-family: $text-font;
+
+    &:first-child {
+      font-size: 0.875rem;
+      color: $main-blue;
+    }
+
+    &:last-child {
+      color: $heading-color;
+    }
+  }
+
+  &__email {
+    margin-top: 1rem;
+    
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .form-group {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}

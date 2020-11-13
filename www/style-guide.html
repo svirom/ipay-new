@@ -662,6 +662,41 @@
           <p class="extra-small"><strong>Сервіс iPay.ua (.extra-small)</strong></p>
         </div>
       </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <h3 class="pl-3 pb-0 mb-0">Text colors</h3>
+        </div>
+        <div class="col-12 d-flex flex-wrap">
+          <div class="p-3">
+            <p class="mb-0 text-color">Text color</p>
+            <p class="mb-0"><code>.text-color</code></p>
+          </div>
+          <div class="p-3">
+            <p class="mb-0 heading-color">Heading color</p>
+            <p class="mb-0"><code>.heading-color</code></p>
+          </div>
+          <div class="p-3">
+            <p class="mb-0 red-color">Red color</p>
+            <p class="mb-0"><code>.red-color</code></p>
+          </div>
+          <div class="p-3">
+            <p class="mb-0 main-blue-color">Main blue color</p>
+            <p class="mb-0"><code>.main-blue-color</code></p>
+          </div>
+          <div class="p-3">
+            <p class="mb-0"><a href="#" class="red-link">Red link</a></p>
+            <p class="mb-0"><code>.red-link</code></p>
+          </div>
+          <div class="p-3">
+            <p class="mb-0 card-pay-help">Card pay help</p>
+            <p class="mb-0"><code>.card-pay-help</code></p>
+          </div>
+          <div class="p-3">
+            <p class="mb-0 about-help-text">About help text</p>
+            <p class="mb-0"><code>.about-help-text</code></p>
+          </div>
+        </div>
+      </div>
 
       <div class="w-100"><hr></div>
 
@@ -1595,6 +1630,9 @@
             <li>Приветствуем</li>
             <li>Приветствуем</li>
           </ul>
+          <div class="mt-3 mb-3">
+            <code>&lt;ul class="list list--circle">&lt;/ul></code>
+          </div>
         </div>
         <div class="col-md-4 mt-3">
           <ul class="list list--circle list--grey">
@@ -1602,6 +1640,9 @@
             <li>Приветствуем</li>
             <li>Приветствуем</li>
           </ul>
+          <div class="mt-3 mb-3">
+            <code>&lt;ul class="list list--circle list--grey">&lt;/ul></code>
+          </div>
         </div>
         <div class="col-md-4 mt-3">
           <ul class="list list--minus">
@@ -1609,6 +1650,9 @@
             <li>Приветствуем</li>
             <li>Приветствуем</li>
           </ul>
+          <div class="mt-3 mb-3">
+            <code>&lt;ul class="list list--minus">&lt;/ul></code>
+          </div>
         </div>
         <div class="col-md-4 mt-3">
           <ol class="list list-ordered">
@@ -1616,6 +1660,9 @@
             <li>Приветствуем</li>
             <li>Приветствуем</li>
           </ol>
+          <div class="mt-3 mb-3">
+            <code>&lt;ol class="list list-ordered">&lt;/ol></code>
+          </div>
         </div>
       </div>
       <div class="row mt-3">
@@ -1627,16 +1674,26 @@
             <li>1 строчную букву</li>
             <li>не содержать кириллицу</li>
           </ul>
+          <div class="mt-3 mb-3">
+            <code>&lt;ul class="help-list">&lt;/ul></code>
+          </div>
         </div>
-        <div class="w-100"></div>
         <div class="col-md-4 mt-3">
-          <ul class="help-list list-2-columns">
+          <ul class="help-list">
             <li class="checked">не менее 8 символов</li>
             <li class="checked">1 цифру</li>
             <li class="unchecked">1 заглавною букву</li>
             <li class="unchecked">1 строчную букву</li>
             <li class="unchecked">не содержать кириллицу</li>
           </ul>
+          <div class="mt-3 mb-3">
+            <code>
+              &lt;ul class="help-list"><br>
+              &nbsp;&lt;li class="checked">не менее 8 символов&lt;/li><br>
+              &nbsp;&lt;li class="unchecked">1 заглавною букву&lt;/li><br>
+              &lt;/ul>
+            </code>
+          </div>
         </div>
       </div>
 
@@ -1682,6 +1739,7 @@
           <h3 class="pl-3 pb-0 mb-0">Collapsible (Accordion) (archive table widget)</h3>
         </div>
         <div class="col-12 mt-4">
+          <!-- archive table desktop -->
           <div class="archive">
             <div class="archive-card">
               <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">
@@ -1748,10 +1806,69 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div><!-- archive table desktop -->
+          <!-- archive table mobile -->
+          <div class="archive-mobile">
+
+            <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
+              <div class="archive-mobile__row archive-mobile__row--top">
+                <div class="archive-mobile__time">
+                  <span class="archive-mobile__date">20/02/20</span>
+                  <span class="archive-mobile__hours">18:01</span>
+                </div>
+                <div class="archive-mobile__amount">
+                  <span>20.00</span><span class="extra-small"> грн</span>
+                </div>
+              </div>
+              <div class="archive-mobile__row archive-mobile__row--main">
+                <div class="archive-mobile__icon">
+                  <img src="img/providers/kyivgas.png" alt="">
+                </div>
+                <div class="archive-mobile__title">Оплата интернета LocalNet</div>
+              </div>
+            </a>
+
+            <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
+              <div class="archive-mobile__row archive-mobile__row--top">
+                <div class="archive-mobile__time">
+                  <span class="archive-mobile__date">20/02/20</span>
+                  <span class="archive-mobile__hours">18:01</span>
+                </div>
+                <div class="archive-mobile__amount">
+                  <span>20.00</span><span class="extra-small"> грн</span>
+                </div>
+              </div>
+              <div class="archive-mobile__row archive-mobile__row--main">
+                <div class="archive-mobile__icon">
+                  <img src="img/providers/kyivgas.png" alt="">
+                </div>
+                <div class="archive-mobile__title">Оплата интернета LocalNet</div>
+              </div>
+            </a>
+
+            <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
+              <div class="archive-mobile__row archive-mobile__row--top">
+                <div class="archive-mobile__time">
+                  <span class="archive-mobile__date">20/02/20</span>
+                  <span class="archive-mobile__hours">18:01</span>
+                </div>
+                <div class="archive-mobile__amount">
+                  <span>20.00</span><span class="extra-small"> грн</span>
+                </div>
+              </div>
+              <div class="archive-mobile__row archive-mobile__row--main">
+                <div class="archive-mobile__icon">
+                  <img src="img/providers/kyivgas.png" alt="">
+                </div>
+                <div class="archive-mobile__title">Оплата интернета LocalNet</div>
+              </div>
+            </a>
+
+          </div><!-- archive table mobile -->
         </div>
 
         <div class="col-md-12 col-lg-9 mt-4">
+          <!-- archive table desktop -->
           <div class="archive archive--col-9">
             <div class="archive-title">
               <span class="archive-title__time">Дата</span>
@@ -1825,7 +1942,65 @@
               </div>
             </div>
             
-          </div>
+          </div><!-- archive table desktop -->
+          <!-- archive table mobile -->
+          <div class="archive-mobile">
+
+            <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
+              <div class="archive-mobile__row archive-mobile__row--top">
+                <div class="archive-mobile__time">
+                  <span class="archive-mobile__date">20/02/20</span>
+                  <span class="archive-mobile__hours">18:01</span>
+                </div>
+                <div class="archive-mobile__amount">
+                  <span>20.00</span><span class="extra-small"> грн</span>
+                </div>
+              </div>
+              <div class="archive-mobile__row archive-mobile__row--main">
+                <div class="archive-mobile__icon">
+                  <img src="img/providers/kyivgas.png" alt="">
+                </div>
+                <div class="archive-mobile__title">Оплата интернета LocalNet</div>
+              </div>
+            </a>
+
+            <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
+              <div class="archive-mobile__row archive-mobile__row--top">
+                <div class="archive-mobile__time">
+                  <span class="archive-mobile__date">20/02/20</span>
+                  <span class="archive-mobile__hours">18:01</span>
+                </div>
+                <div class="archive-mobile__amount">
+                  <span>20.00</span><span class="extra-small"> грн</span>
+                </div>
+              </div>
+              <div class="archive-mobile__row archive-mobile__row--main">
+                <div class="archive-mobile__icon">
+                  <img src="img/providers/kyivgas.png" alt="">
+                </div>
+                <div class="archive-mobile__title">Оплата интернета LocalNet</div>
+              </div>
+            </a>
+
+            <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
+              <div class="archive-mobile__row archive-mobile__row--top">
+                <div class="archive-mobile__time">
+                  <span class="archive-mobile__date">20/02/20</span>
+                  <span class="archive-mobile__hours">18:01</span>
+                </div>
+                <div class="archive-mobile__amount">
+                  <span>20.00</span><span class="extra-small"> грн</span>
+                </div>
+              </div>
+              <div class="archive-mobile__row archive-mobile__row--main">
+                <div class="archive-mobile__icon">
+                  <img src="img/providers/kyivgas.png" alt="">
+                </div>
+                <div class="archive-mobile__title">Оплата интернета LocalNet</div>
+              </div>
+            </a>
+
+          </div><!-- archive table mobile -->
         </div>
 
       </div>

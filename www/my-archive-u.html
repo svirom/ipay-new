@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
-    <link rel="stylesheet" href="/css/catalogue-account.css">
     <link rel="stylesheet" href="/css/account-main.css">
-    <link rel="stylesheet" href="/css/account-templates.css">
-    <link rel="stylesheet" href="/css/account-payments.css">
     <link rel="stylesheet" href="/css/archive-table.css">
+    <link rel="stylesheet" href="/css/archive-message.css">
+    <link rel="stylesheet" href="/css/archive-capabilities.css">
 
-    <title>Мой кабинет</title>
+    <title>Архив платежей Unregistered</title>
   </head>
   <body>
 
-    <!-- header -->
     <header class="main-header">
       <div class="container">
         <div class="row">
@@ -28,36 +26,26 @@
             </div>
             <nav class="">
               <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги для оплаты</a>
+                </li>
                 <li class="main-nav__item">
                   <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
                     <span>Безопасность </span>
                     <span>плательщиков</span>
                   </a>
                 </li>
-                <li class="main-nav__item">
-                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
-                    <span class="main-nav__bonus">1543 </span>
-                    <span>бонусов</span>
-                  </span>
-                </li>
                 <li class="main-nav__item dropdown">
-                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
-                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
-                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
-                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
-                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
-                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
                   </div>
                 </li>
               </ul>
               <ul class="main-nav__nav-mobile">
-                <li class="main-nav__item-account">
-                  <span class="main-nav__item-account--registered">Мой кабинет</span>
-                  <span>Альберт</span>
-                </li>
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
                 <li class="main-nav__item main-nav__item-mobile">
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
@@ -66,15 +54,14 @@
                     <div class="navbar-collapse__menu">
                       <ul>
                         <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
-                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
-                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
-                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
-                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
-                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
-                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
                     </div>
                     <div class="catalogue-mobile">
                       <ul class="catalogue-mobile__list">
@@ -193,6 +180,21 @@
     <!-- main wrapper -->
     <div class="main-wrapper">
 
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="form-search">
+          <h3 class="form-search__title">Поиск</h3>
+          <form action="">
+            <div class="form-group">
+              <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+              <label class="control-label form-label" for="search-icon">Поиск услуги</label>
+              <a href="#" class="form-search__search"></a>
+              <a href="#" class="form-search__cancel"></a>
+             </div>
+          </form>
+        </div>
+      </div>
+
       <!-- breadcrumb widget -->
       <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
@@ -200,7 +202,7 @@
             <div class="col-12">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Мой кабинет</li>
+                <li class="breadcrumb-item active" aria-current="page">Архив платежей</li>
               </ol>
             </div>
           </div>
@@ -210,249 +212,37 @@
       <!-- main content -->
       <div class="container main-content">
         <div class="row">
-          <!-- aside area -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="row">
-
-              <div class="col-12 mb-5">
-                <!-- account catalogue widget -->
-                <div class="catalogue-account" id="catalogue-account-widget">
-                  <ul class="catalogue-account__list">
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__account active">
-                        <span>Мой кабинет</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__archive">
-                        <span>Архив платежей</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__templates">
-                        <span>Мои шаблоны</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__cards">
-                        <span>Мои карты</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
-                        <span>Мои бонусы</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__settings">
-                        <span>Мой профиль</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div><!-- account catalogue widget -->
-              </div>
-
-              <div class="col-12 mb-2">
-                <!-- aside message widget -->
-                <div id="aside-message-widget">
-                  <div class="alert alert-secondary alert-dismissible fade show" role="alert">
-                    Альберт, в этом месяце вы вополнили рекордное количество оплат. Благодарим вас за использование нашего сервиса и дарим вам <strong>500 бонусов!</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                </div><!-- aside message widget -->
-              </div>
-
-              <div class="col-12 mb-2">
-                <div class="banner banner-w100"></div>
-              </div>
-
-            </div>
-            
-          </aside><!-- aside area -->
+          
           <!-- main area -->
-          <main class="col-lg-9">
+          <main class="col-12">
 
             <div class="row">
 
               <div class="col-12">
                 <!-- account main widget -->
                 <div class="account-main" id="account-main-widget">
+
                   <div class="row">
-
-                    <div class="col-12 mt-2 mb-3">
-                      <div class="account-title mb-2">
-                        <span class="account-title__img account-title__img--morning"></span>
-                        <!-- <span class="account-title__img account-title__img--day"></span> -->
-                        <!-- <span class="account-title__img account-title__img--night"></span> -->
-                        <!-- <span class="account-title__img account-title__img--sunset"></span> -->
-                        <h1>Доброе утро, <strong>Альберт!</strong></h1>
-                      </div>
-                      <p class="account-subtitle">Что сегодня будем оплачивать?</p>
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Архив платежей</a>
                     </div>
+                  </div>
 
+                  <div class="row mb-2">
                     <div class="col-12">
-                      <div class="form-search">
-                        <h3 class="form-search__title">Поиск</h3>
-                        <form action="">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-                            <label class="control-label form-label" for="search-icon">Найдите сервис по названию</label>
-                            <a href="#" class="form-search__search"></a>
-                            <a href="#" class="form-search__cancel"></a>
-                           </div>
-                        </form>
-                      </div>
-                    </div>
-
-                  </div>
-                </div><!-- account main widget -->
-              </div>
-      
-              <div class="col-12 mt-5">
-                <!-- account templates widget -->
-                <div class="account-templates" id="account-templates-widget">
-
-                  <div class="row justify-content-between mb-3">
-                    <div class="col col-md-auto">
-                      <h3>Мои шаблоны</h3>
-                    </div>
-                    <div class="col-auto d-none d-md-block">
-                      <a href="#" class="btn btn-link btn-forward">Все шаблоны</a>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-6 col-xl-4 mb-4">
-                      <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/yasno.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата электроэнергии Yasno</span>
-                            <span class="template-card__amount">100.00 грн</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 mb-4">
-                      <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/kyivgas.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата за газ</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 mb-4">
-                      <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/kyivgasenergy.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата за воду</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate3">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 mb-4">
-                      <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/yasno.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата детсад малому</span>
-                            <span class="template-card__amount">100.00 грн</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 mb-4">
-                      <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/kyivgas.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата за газ</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 mb-4">
-                      <div class="template-add">
-                        <a href="#" class="template-add__button"><span>+</span> Новый шаблон</a>
-                      </div>
-                    </div>
-                    <div class="col-12 d-md-none">
-                      <a href="#" class="btn btn-green btn-block">Все шаблоны</a>
-                    </div>
-                  </div>
-
-                </div><!-- account templates widget -->
-              </div>
-
-              <div class="col-12 mt-5 mb-5">
-                <!-- account payments widget -->
-                <div class="account-payments" id="account-payments-widget">
-
-                  <div class="row justify-content-between mb-3">
-                    <div class="col col-md-auto">
-                      <h3>Последние платежи</h3>
-                    </div>
-                    <div class="col-auto d-none d-md-block">
-                      <a href="#" class="btn btn-link btn-forward">Все платежи</a>
+                      <h1>Последние платежи</h1>
                     </div>
                   </div>
 
                   <div class="row">
 
-                    <div class="col-12">
+                    <div class="col-12 mt-0 mt-md-3">
 
                       <!-- archive table widget -->
                       <div id="archive-table-widget">
 
                         <!-- archive table desktop -->
-                        <div class="archive archive--col-9">
-
-                          <div class="archive-title">
-                            <span class="archive-title__time">Дата</span>
-                            <span class="archive-title__purpose">Назначение</span>
-                            <span class="archive-title__bonus">Бонусов начислено</span>
-                            <span class="archive-title__amount">Сумма</span>
-                          </div>
+                        <div class="archive">
 
                           <div class="archive-card">
                             <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">
@@ -479,14 +269,14 @@
                                       <input type="email" class="form-control form-input" id="form-archive1" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
                                       <label class="control-label form-label" for="form-archive1">Отправить на e-mail</label>
                                       <label class="label-icon-left label-mail"></label>
-                                    </div>
-                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                     </div>
+                                     <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
                                   </form>
                                 </div>
                               </div>
                             </div>
                           </div>
-
+  
                           <div class="archive-card">
                             <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-2" aria-expanded="false">
                               <div class="archive-card__time">
@@ -512,14 +302,14 @@
                                       <input type="email" class="form-control form-input" id="form-archive2" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
                                       <label class="control-label form-label" for="form-archive2">Отправить на e-mail</label>
                                       <label class="label-icon-left label-mail"></label>
-                                    </div>
-                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                     </div>
+                                     <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
                                   </form>
                                 </div>
                               </div>
                             </div>
                           </div>
-
+  
                           <div class="archive-card">
                             <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
                               <div class="archive-card__time">
@@ -545,47 +335,14 @@
                                       <input type="email" class="form-control form-input" id="form-archive3" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
                                       <label class="control-label form-label" for="form-archive3">Отправить на e-mail</label>
                                       <label class="label-icon-left label-mail"></label>
-                                    </div>
-                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                     </div>
+                                     <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
                                   </form>
                                 </div>
                               </div>
                             </div>
                           </div>
-
-                          <div class="archive-card">
-                            <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-4" aria-expanded="false">
-                              <div class="archive-card__time">
-                                <span class="archive-card__time--date">16/04/20</span>
-                                <span class="archive-card__time--hours">15:35</span>
-                              </div>
-                              <div class="archive-card__icon">
-                                <img src="img/providers/yasno.png" alt="">
-                              </div>
-                              <div class="archive-card__title">Пополнение карты</div>
-                              <div class="archive-card__bonus icon-bonus"><span>23</span> бонусов</div>
-                              <div class="archive-card__amount"><span>2000.00</span><span class="extra-small"> грн</span></div>
-                            </div>
-                            <div id="archive-4" class="collapse">
-                              <div class="archive-card__collapse">
-                                <div class="archive-card__description">
-                                  Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
-                                </div>
-                                <div class="archive-card__buttons">
-                                  <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
-                                  <form class="form-inline">
-                                    <div class="form-group">
-                                      <input type="email" class="form-control form-input" id="form-archive4" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
-                                      <label class="control-label form-label" for="form-archive4">Отправить на e-mail</label>
-                                      <label class="label-icon-left label-mail"></label>
-                                    </div>
-                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
-                                  </form>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
+  
                         </div><!-- archive table desktop -->
 
                         <!-- archive table mobile -->
@@ -654,12 +411,109 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-12 d-md-none mt-3">
-                      <a href="#" class="btn btn-outline btn-block">Все платежи</a>
+                    <div class="col-12">
+                      <!-- archive message widget -->
+                      <div class="archive-message-wrapper" id="archive-message-widget">
+                        <div class="archive-message">
+      
+                          <div class="archive-message__section archive-message__content">
+                            <p>Зарегистрируйте кабинет и получите больше возможностей от использования iPay.ua!</p>
+                          </div>
+      
+                          <div class="archive-message__section archive-message__button">
+                            <a href="#" class="btn btn-green">Зарегистрироваться</a>
+                            <p>Есть аккаунт? <a href="#" class="btn btn-link">Войти</a></p>
+                          </div>
+      
+                          <div class="archive-message__section archive-message__img-wrapper">
+                            <div class="archive-message__img">
+                              <img src="img/archive/archive-message-img.png" srcset="img/archive/archive-message-img.png 1x, img/archive/archive-message-img@2x.png 2x" alt="Image">
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- archive message widget -->
+                    </div>
+                  </div>
+      
+                  <div class="row">
+                    <div class="col-12">
+      
+                      <!-- archive capabilities widget -->
+                      <div class="archive-capabilities" id="archive-capabilities-widget">
+      
+                        <div class="row">
+                          <div class="col-12">
+                            <h2>Возможности кабинета iPay.ua</h2>
+                          </div>
+                        </div>
+      
+                        <div class="row capabilities-card-wrapper">
+      
+                          <div class="col-md-6 col-lg-3 mb-3">
+                            <div class="capabilities-card">
+                              <div class="capabilities-card__img">
+                                <img src="img/archive/capability-archive@2x.png" alt="">
+                              </div>
+                              <div class="capabilities-card__content">
+                                <h3>Архив платежей</h3>
+                                <p>Сохраняйте все платежи с квитанциями в надежном архиве iPay.ua</p>
+                              </div>
+                            </div>
+                          </div>
+      
+                          <div class="col-md-6 col-lg-3 mb-3">
+                            <div class="capabilities-card">
+                              <div class="capabilities-card__img">
+                                <img src="img/archive/capability-template@2x.png" alt="">
+                              </div>
+                              <div class="capabilities-card__content">
+                                <h3>Шаблоны платежей</h3>
+                                <p>Создавайте шаблоны платежей и забудьте про поиск своих поставщиков услуг</p>
+                              </div>
+                            </div>
+                          </div>
+      
+                          <div class="col-md-6 col-lg-3 mb-3">
+                            <div class="capabilities-card">
+                              <div class="capabilities-card__img">
+                                <img src="img/archive/capability-cards@2x.png" alt="">
+                              </div>
+                              <div class="capabilities-card__content">
+                                <h3>Карта в вашем аккаунте</h3>
+                                <p>Привязывайте банковсккие карты с помощью Masterpass и оплачивайте услуги без ручного ввода данных карты</p>
+                              </div>
+                            </div>
+                          </div>
+      
+                          <div class="col-md-6 col-lg-3 mb-3">
+                            <div class="capabilities-card">
+                              <div class="capabilities-card__img">
+                                <img src="img/archive/capability-gift@2x.png" alt="">
+                              </div>
+                              <div class="capabilities-card__content">
+                                <h3>Бонусы и подарки</h3>
+                                <p>Участвуйте в привилигированных программах и получайте бонусы за каждую оплату</p>
+                              </div>
+                            </div>
+                          </div>
+      
+                        </div>
+      
+                      </div><!-- archive capabilities widget -->
+      
+                    </div>
+                  </div>
+
+                  <div class="row justify-content-center">
+                    <div class="col-sm-8 col-md-6 col-lg-4">
+                      <div class="account-main__archive-btn">
+                        <a href="#" class="btn btn-green btn-block">Зарегистрироваться</a>
+                        <p>Есть аккаунт? <a href="#" class="btn btn-link">Войти</a></p>
+                      </div>
                     </div>
                   </div>
                   
-                </div><!-- account payments widget -->
+                </div><!-- account main widget -->
               </div>
 
             </div>
@@ -748,7 +602,25 @@
         </div>
       </div>
     </div><!-- footer -->
-    
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

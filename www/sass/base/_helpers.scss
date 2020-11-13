@@ -27,6 +27,18 @@
   color: $main-blue;
 }
 
+/* $btn-red */
+.red-color, .red-link {
+  color: $btn-red;
+}
+
+.red-link {
+  &:hover {
+    color: $btn-red;
+    text-decoration: underline;
+  }
+}
+
 /* remind password help link */
 .remind-link {
   // remind link

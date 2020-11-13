@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the archive capabilities widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.archive-capabilities {
+  margin-top: 2rem;
+}
+
+.capabilities-card-wrapper {
+  margin-top: 2.55rem;
+
+  @include until($md) {
+    margin-top: 1rem;
+  }
+}
+
+.capabilities-card {
+  &__img {
+    margin-bottom: 1.9rem;
+
+    img {
+      width: 8.75rem;
+    }
+  }
+}

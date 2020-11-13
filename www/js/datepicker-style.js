@@ -8,8 +8,23 @@ $(document).ready(function() {
       classes: 'datepicker-wrapper',
       autoClose: true,
       onSelect: function onSelect() {
-        $this.val() ? $this.addClass('filled') : $this.removeClass('filled');
+        $(this).addClass('filled');
       }
+    })
+
+    var datepicker = $this.datepicker().data('datepicker');
+
+    $this.on('focus', function() {
+      $(this).addClass('filled');
+    })
+
+    $this.on('blur', function() {  
+      thisBlur = $(this);
+
+      setTimeout(function() {
+        !datepicker._prevOnSelectValue ? thisBlur.removeClass('filled') : '';
+      }, 200);
+        
     })
   })
 

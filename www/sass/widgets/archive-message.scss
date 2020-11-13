@@ -1,0 +1,92 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the archive message widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.archive-message-wrapper {
+  margin-top: 5.5625rem;
+
+  @include until($lg) {
+    margin-top: 3.25rem;
+  }
+}
+
+.archive-message {
+  display: flex;
+  align-items: center;
+  padding: 0 1.9375rem;
+  border-radius: $border-radius;
+  background-color: $light-grey;
+
+  &__section {
+    flex-basis: 33.3%;
+    max-width: 33.3%;
+    
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    padding-right: 1.5rem;
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__button {
+    padding-top: 0.75rem;
+    text-align: center;
+
+    p {
+      padding-top: 0.625rem;
+      color: $heading-color;
+
+      .btn-link {
+        color: $btn-red;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__img {
+    margin-top: -3.5rem;
+    text-align: center;
+
+    img {
+      width: 13.8125rem;
+    }
+  }
+
+  @include until($lg) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0.9375rem;
+
+    &__section {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+
+    &__content {
+      padding-right: 0;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &__button {
+      text-align: left;
+    }
+
+    &__img-wrapper {
+      display: none;
+    }
+  }
+}

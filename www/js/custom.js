@@ -20,14 +20,18 @@ $(document).ready(function() {
 
   // add class filled to inputs with values
   $('input.form-input').each(function() {
-    $(this).val() ? $(this).addClass('filled') : $(this).removeClass('filled');
+    if (!$(this).hasClass('datepicker-input')) {
+      $(this).val() ? $(this).addClass('filled') : $(this).removeClass('filled');
+    } 
   })
 
   // input with filled value
   $('input.form-input').on('change', inputFilled);
 
   function inputFilled() {
-    $(this).val() ? $(this).addClass('filled') : $(this).removeClass('filled');
+    if (!$(this).hasClass('datepicker-input')) {
+      $(this).val() ? $(this).addClass('filled') : $(this).removeClass('filled');
+    }
   }
 
   // catalogue mobile

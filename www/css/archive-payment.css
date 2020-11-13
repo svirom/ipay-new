@@ -1,0 +1,120 @@
+.archive-payment__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.15rem 0;
+}
+
+.archive-payment__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  border-radius: 0.5rem;
+}
+
+.archive-payment__icon img {
+  max-width: calc(100% - 6px);
+  max-height: calc(100% - 6px);
+}
+
+.archive-payment__bill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 2rem;
+}
+
+.archive-payment__title {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.archive-payment__id {
+  color: #7C9CAC;
+}
+
+.archive-payment__table {
+  margin-bottom: 2rem;
+}
+
+.archive-payment__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #DEE7F3;
+}
+
+.archive-payment__row--top {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.archive-payment__row--top .archive-payment__cell:last-child {
+  line-height: 1;
+}
+
+.archive-payment__cell {
+  font-family: "Roboto", sans-serif;
+}
+
+.archive-payment__cell:first-child {
+  font-size: 0.875rem;
+  color: #7C9CAC;
+}
+
+.archive-payment__cell:last-child {
+  color: #172A3A;
+}
+
+.archive-payment__email {
+  margin-top: 1rem;
+}
+
+.archive-payment__email form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.archive-payment__email form .form-group {
+  margin-right: 0.75rem;
+}
+/*# sourceMappingURL=archive-payment.css.map */
