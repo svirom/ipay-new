@@ -65,6 +65,11 @@
           outline: none;
           background-color: $btn-red;
         }
+
+        &--highlighted {
+          color: $heading-color;
+          background-color: $light-grey;
+        }
       }
 
       > .select2-results__options {
@@ -82,11 +87,6 @@
           border-radius: 3px;
           background-color: $btn-red;
         }
-      }
-
-      &__option--highlighted.select2-results__option--selectable {
-        color: $heading-color;
-        background-color: $light-grey;
       }
     }
 
