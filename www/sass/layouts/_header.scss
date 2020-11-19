@@ -303,22 +303,23 @@
 
   &__item-account {
     margin-right: 7px;
-    margin-top: 1px;
-    text-transform: uppercase;
-    @include font(0.8125rem, 500, 1.25);
-    color: $main-blue;
+    margin-top: 3px;
+    font-size: 0.875rem;
     text-align: right;
+    text-transform: uppercase;
 
     &--registered {
       font-size: 0.625rem;
-
-      &+span {
-        color: $heading-color;
-      }
     }
 
     span {
       display: block;
+      font-weight: 500;
+      color: $main-blue;
+
+      &+span {
+        color: $heading-color;
+      }
     }
   }
 

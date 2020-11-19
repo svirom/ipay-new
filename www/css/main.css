@@ -2088,6 +2088,7 @@ label {
   font-size: 0.875rem;
   line-height: 1.15;
   color: #7C9CAC;
+  word-break: break-word;
 }
 
 .provider-card__tel, .provider-card__url {
@@ -2124,6 +2125,7 @@ label {
 
 .provider-card__url .btn-link {
   color: #172A3A;
+  word-break: break-word;
 }
 
 /* bill card */
@@ -3426,25 +3428,24 @@ label {
 
 .main-nav__item-account {
   margin-right: 7px;
-  margin-top: 1px;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  line-height: 1.25;
-  color: #7C9CAC;
+  margin-top: 3px;
+  font-size: 0.875rem;
   text-align: right;
+  text-transform: uppercase;
 }
 
 .main-nav__item-account--registered {
   font-size: 0.625rem;
 }
 
-.main-nav__item-account--registered + span {
-  color: #172A3A;
-}
-
 .main-nav__item-account span {
   display: block;
+  font-weight: 500;
+  color: #7C9CAC;
+}
+
+.main-nav__item-account span + span {
+  color: #172A3A;
 }
 
 .main-nav__item-mobile .navbar-collapse {
