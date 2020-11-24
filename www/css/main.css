@@ -2143,7 +2143,6 @@ label {
   border: 3px solid #EDF4F8;
   border-radius: 0.5rem;
   background-color: #fff;
-  /* template card */
 }
 
 .bill-card:hover {
@@ -3212,7 +3211,7 @@ label {
 
 .main-nav__item .dropdown-login::before {
   width: 25px;
-  height: 25px;
+  height: 26px;
   background: url("../img/header-icon.png") -73px -25px no-repeat;
   background-size: 121px;
 }
@@ -3226,35 +3225,35 @@ label {
 
 .main-nav__item .dropdown-bonus::before {
   width: 25px;
-  height: 25px;
+  height: 26px;
   background: url("../img/header-icon.png") 0 -25px no-repeat;
   background-size: 121px;
 }
 
 .main-nav__item .dropdown-account::before {
   width: 24px;
-  height: 25px;
+  height: 26px;
   background: url("../img/header-icon.png") -73px 0 no-repeat;
   background-size: 121px;
 }
 
 .main-nav__item .dropdown-templates::before {
   width: 25px;
-  height: 25px;
+  height: 24px;
   background: url("../img/header-icon.png") -24px -25px no-repeat;
   background-size: 121px;
 }
 
 .main-nav__item .dropdown-cards::before {
   width: 25px;
-  height: 25px;
+  height: 24px;
   background: url("../img/header-icon.png") -49px 0 no-repeat;
   background-size: 121px;
 }
 
 .main-nav__item .dropdown-profile::before {
   width: 24px;
-  height: 25px;
+  height: 24px;
   background: url("../img/header-icon.png") -48px -24px no-repeat;
   background-size: 121px;
 }
@@ -3265,7 +3264,7 @@ label {
 
 .main-nav__item .dropdown-logout::before {
   width: 25px;
-  height: 25px;
+  height: 26px;
   background: url("../img/header-icon.png") -29px -49px no-repeat;
   background-size: 121px;
 }
@@ -3276,7 +3275,7 @@ label {
 
 .main-nav__item .dropdown-catalogue::before {
   width: 25px;
-  height: 25px;
+  height: 24px;
   background: url("../img/header-icon.png") -24px 0px no-repeat;
   background-size: 121px;
 }
@@ -3570,294 +3569,6 @@ label {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   background: #E84F35;
-}
-
-/* catalogue mobile */
-.catalogue-mobile {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  background-color: #fff;
-  z-index: 2;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.catalogue-mobile.active {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.catalogue-mobile__item {
-  display: block;
-  position: relative;
-  padding: 0.938rem 1.5rem 0.938rem 3.65rem;
-  font-size: 1rem;
-  color: #172A3A;
-  line-height: 1.1875;
-}
-
-.catalogue-mobile__item:hover, .catalogue-mobile__item:active, .catalogue-mobile__item.active {
-  color: #172A3A;
-  font-weight: bold;
-  text-decoration: none;
-  background-color: #fff;
-}
-
-.catalogue-mobile__item:hover span, .catalogue-mobile__item:active span, .catalogue-mobile__item.active span {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.catalogue-mobile__item span {
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  color: #172A3A;
-  line-height: 1.1875;
-}
-
-.catalogue-mobile__item span.badge {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  font-size: 0.75rem;
-}
-
-.catalogue-mobile__item span.badge ~ span {
-  padding-right: 3rem;
-}
-
-.catalogue-mobile__item::before {
-  position: absolute;
-  content: '';
-  left: 1rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background-image: url("../img/menu-catalogue.png");
-  background-size: 169px;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-.catalogue-mobile__back {
-  border-bottom: 1px dashed #DEE7F3;
-}
-
-.catalogue-mobile__back::before {
-  width: 10px;
-  height: 18px;
-  background: url("../img/button-icon.png") 0px -36px no-repeat;
-  background-size: auto;
-}
-
-.catalogue-mobile__crossboard::before {
-  width: 24px;
-  height: 25px;
-  background-position: -48px -49px;
-}
-
-.catalogue-mobile__crossboard:hover::before, .catalogue-mobile__crossboard:active::before, .catalogue-mobile__crossboard.active::before, .catalogue-mobile__crossboard--red::before {
-  background-position: -72px -49px;
-}
-
-.catalogue-mobile__p2p::before {
-  width: 24px;
-  height: 25px;
-  background-position: -122px -49px;
-}
-
-.catalogue-mobile__p2p:hover::before, .catalogue-mobile__p2p:active::before, .catalogue-mobile__p2p.active::before, .catalogue-mobile__p2p--red::before {
-  background-position: -122px -74px;
-}
-
-.catalogue-mobile__p2r::before {
-  width: 24px;
-  height: 25px;
-  background-position: 0 -98px;
-}
-
-.catalogue-mobile__p2r:hover::before, .catalogue-mobile__p2r:active::before, .catalogue-mobile__p2r.active::before, .catalogue-mobile__p2r--red::before {
-  background-position: -24px -98px;
-}
-
-.catalogue-mobile__by-email::before {
-  width: 26px;
-  height: 25px;
-  background-position: -48px -1px;
-}
-
-.catalogue-mobile__by-email:hover::before, .catalogue-mobile__by-email:active::before, .catalogue-mobile__by-email.active::before, .catalogue-mobile__by-email--red::before {
-  background-position: 0 -25px;
-}
-
-.catalogue-mobile__by-phone::before {
-  width: 24px;
-  height: 25px;
-  background-position: -25px -25px;
-}
-
-.catalogue-mobile__by-phone:hover::before, .catalogue-mobile__by-phone:active::before, .catalogue-mobile__by-phone.active::before, .catalogue-mobile__by-phone--red::before {
-  background-position: -49px -25px;
-}
-
-.catalogue-mobile__receive::before {
-  width: 24px;
-  height: 25px;
-  background-position: 0 -50px;
-}
-
-.catalogue-mobile__receive:hover::before, .catalogue-mobile__receive:active::before, .catalogue-mobile__receive.active::before, .catalogue-mobile__receive--red::before {
-  background-position: -24px -50px;
-}
-
-.catalogue-mobile__mobile::before {
-  width: 24px;
-  height: 25px;
-  background-position: -72px -74px;
-}
-
-.catalogue-mobile__mobile:hover::before, .catalogue-mobile__mobile:active::before, .catalogue-mobile__mobile.active::before, .catalogue-mobile__mobile--red::before {
-  background-position: -96px -74px;
-}
-
-.catalogue-mobile__utility::before {
-  width: 24px;
-  height: 25px;
-  background-position: -75px -124px;
-}
-
-.catalogue-mobile__utility:hover::before, .catalogue-mobile__utility:active::before, .catalogue-mobile__utility.active::before, .catalogue-mobile__utility--red::before {
-  background-position: -99px -124px;
-}
-
-.catalogue-mobile__kindergarten::before {
-  width: 24px;
-  height: 25px;
-  background-position: -97px -1px;
-}
-
-.catalogue-mobile__kindergarten:hover::before, .catalogue-mobile__kindergarten:active::before, .catalogue-mobile__kindergarten.active::before, .catalogue-mobile__kindergarten--red::before {
-  background-position: -97px -25px;
-}
-
-.catalogue-mobile__internet::before {
-  width: 24px;
-  height: 24px;
-  background-position: -24px -74px;
-}
-
-.catalogue-mobile__internet:hover::before, .catalogue-mobile__internet:active::before, .catalogue-mobile__internet.active::before, .catalogue-mobile__internet--red::before {
-  background-position: -48px -74px;
-}
-
-.catalogue-mobile__tv::before {
-  width: 24px;
-  height: 25px;
-  background-position: -145px -100px;
-}
-
-.catalogue-mobile__tv:hover::before, .catalogue-mobile__tv:active::before, .catalogue-mobile__tv.active::before, .catalogue-mobile__tv--red::before {
-  background-position: -50px -124px;
-}
-
-.catalogue-mobile__phone::before {
-  width: 24px;
-  height: 25px;
-  background-position: -48px -99px;
-}
-
-.catalogue-mobile__phone:hover::before, .catalogue-mobile__phone:active::before, .catalogue-mobile__phone.active::before, .catalogue-mobile__phone--red::before {
-  background-position: -72px -99px;
-}
-
-.catalogue-mobile__security::before {
-  width: 24px;
-  height: 25px;
-  background-position: -96px -99px;
-}
-
-.catalogue-mobile__security:hover::before, .catalogue-mobile__security:active::before, .catalogue-mobile__security.active::before, .catalogue-mobile__security--red::before {
-  background-position: -120px -99px;
-}
-
-.catalogue-mobile__transport::before {
-  width: 24px;
-  height: 25px;
-  background-position: -145px -49px;
-}
-
-.catalogue-mobile__transport:hover::before, .catalogue-mobile__transport:active::before, .catalogue-mobile__transport.active::before, .catalogue-mobile__transport--red::before {
-  background-position: -145px -73px;
-}
-
-.catalogue-mobile__penalty::before {
-  width: 24px;
-  height: 25px;
-  background-position: -145px 0;
-}
-
-.catalogue-mobile__penalty:hover::before, .catalogue-mobile__penalty:active::before, .catalogue-mobile__penalty.active::before, .catalogue-mobile__penalty--red::before {
-  background-position: -145px -25px;
-}
-
-.catalogue-mobile__tourism::before {
-  width: 25px;
-  height: 25px;
-  background-position: 0 -123px;
-}
-
-.catalogue-mobile__tourism:hover::before, .catalogue-mobile__tourism:active::before, .catalogue-mobile__tourism.active::before, .catalogue-mobile__tourism--red::before {
-  background-position: -25px -123px;
-}
-
-.catalogue-mobile__banks::before {
-  width: 24px;
-  height: 25px;
-  background-position: -121px 0;
-}
-
-.catalogue-mobile__banks:hover::before, .catalogue-mobile__banks:active::before, .catalogue-mobile__banks.active::before, .catalogue-mobile__banks--red::before {
-  background-position: -121px -24px;
-}
-
-.catalogue-mobile__education::before {
-  width: 24px;
-  height: 24px;
-  background-position: -97px -49px;
-}
-
-.catalogue-mobile__education:hover::before, .catalogue-mobile__education:active::before, .catalogue-mobile__education.active::before, .catalogue-mobile__education--red::before {
-  background-position: 0 -74px;
-}
-
-.catalogue-mobile__business::before {
-  width: 24px;
-  height: 25px;
-  background-position: 0 0;
-}
-
-.catalogue-mobile__business:hover::before, .catalogue-mobile__business:active::before, .catalogue-mobile__business.active::before, .catalogue-mobile__business--red::before {
-  background-position: -24px 0;
-}
-
-.catalogue-mobile__charity::before {
-  width: 24px;
-  height: 25px;
-  background-position: -73px 0;
-}
-
-.catalogue-mobile__charity:hover::before, .catalogue-mobile__charity:active::before, .catalogue-mobile__charity.active::before, .catalogue-mobile__charity--red::before {
-  background-position: -73px -24px;
 }
 
 .main-footer {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/cards-add.css">
 
     <title>Добавить карту неуспех</title>
@@ -72,109 +73,112 @@
                       </ul>
                     </div>
                     <div class="catalogue-mobile">
-                      <ul class="catalogue-mobile__list">
-                        <li><a class="dropdown-item catalogue-mobile__back" href="#">Назад</a></li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__crossboard">
-                            <span>Международные переводы</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2p">
-                            <span>Переводы с карты на карту</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__p2r">
-                            <span>Перевод по реквизитам</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-email">
-                            <span>Переводы с карты на e-mail</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__by-phone">
-                            <span>Перевод с карты на телефон</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__receive">
-                            <span>Получить перевод</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__mobile">
-                            <span>Мобильная связь</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__utility">
-                            <span>Коммунальные услуги</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__kindergarten">
-                            <span>Детские сады</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__internet">
-                            <span>Интернет</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tv">
-                            <span>Телевидение</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__phone">
-                            <span>Телефонная связь</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__security">
-                            <span>Охрана</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__transport">
-                            <span>Транспорт</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__penalty">
-                            <span>Оплатить Штраф ГАИ</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__tourism">
-                            <span>Туризм</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__banks">
-                            <span>Банки и Страхование</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__education">
-                            <span>Образование</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__business">
-                            <span>Бизнес-услуги</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="catalogue-mobile__item catalogue-mobile__charity">
-                            <span>Благотворительность</span>
-                          </a>
-                        </li>
-                      </ul>
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
                     </div>
                   </div>      
                 </li>

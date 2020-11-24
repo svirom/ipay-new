@@ -94,7 +94,7 @@
   &__crossboard {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -48px -49px;
     }
 
@@ -108,7 +108,7 @@
   &__p2p {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -122px -49px;
     }
 
@@ -122,7 +122,7 @@
   &__p2r {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: 0 -98px;
     }
 
@@ -136,7 +136,7 @@
   &__by-email {
     &::before {
       width: 26px;
-			height: 25px;
+			height: 24px;
       background-position: -48px -1px;
     }
 
@@ -150,7 +150,7 @@
   &__by-phone {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -25px -25px;
     }
 
@@ -164,7 +164,7 @@
   &__receive {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: 0 -50px;
     }
 
@@ -178,7 +178,7 @@
   &__mobile {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -72px -74px;
     }
 
@@ -192,7 +192,7 @@
   &__utility {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -75px -124px;
     }
 
@@ -206,7 +206,7 @@
   &__kindergarten {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -97px -1px;
     }
 
@@ -234,7 +234,7 @@
   &__tv {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -145px -100px;
     }
 
@@ -248,7 +248,7 @@
   &__phone {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -48px -99px;
     }
 
@@ -262,7 +262,7 @@
   &__security {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -96px -99px;
     }
 
@@ -276,7 +276,7 @@
   &__transport {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -145px -49px;
     }
 
@@ -290,7 +290,7 @@
   &__penalty {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -145px 0;
     }
 
@@ -304,7 +304,7 @@
   &__tourism {
     &::before {
       width: 25px;
-			height: 25px;
+			height: 24px;
       background-position: 0 -123px;
     }
 
@@ -318,7 +318,7 @@
   &__banks {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -121px 0;
     }
 
@@ -346,7 +346,7 @@
   &__business {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: 0 0;
     }
 
@@ -360,7 +360,7 @@
   &__charity {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -73px 0;
     }
 
@@ -368,6 +368,72 @@
       &::before {
         background-position: -73px -24px;
       }
+    }
+  }
+}
+
+/* catalogue mobile */
+.catalogue-mobile {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  @include transform(translateX(100%));
+  background-color: #fff;
+  z-index: 2;
+  @include transition(all, 0.3s);
+
+  &.active {
+    @include transform(translateX(0));
+    @include transition(all, 0.3s);
+  }
+
+  &__back {
+    border-bottom: 1px dashed $middle-grey;
+
+    &::before {
+      width: 10px;
+			height: 18px;
+      background: url('../img/button-icon.png') 0px -36px no-repeat;
+      background-size: auto;
+    }
+  }
+
+  .catalogue {
+    border-right: 0;
+
+    &__item { 
+      padding: 0.938rem 1.5rem 0.938rem 3.65rem;
+      font-size: 1rem;
+      border-radius: 0;
+      
+      &::before {
+        left: 1rem;
+      }
+  
+      &::after {
+        display: none;
+      }
+
+      &:active, &.active {
+        color: $heading-color;
+        background-color: #ffffff;
+  
+        span {
+          &:not(.badge) {
+            color: $heading-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    li {
+      margin-bottom: 0;
+    }
+
+    span {
+      line-height: 1.1875;
     }
   }
 }
