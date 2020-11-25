@@ -251,7 +251,7 @@
       <main class="main-content">
 
         <!-- p2p main widget -->
-        <div class="p2p-main" id="p2p-main-widget">
+        <div class="p2p" id="p2p-widget">
           <!-- p2p main section -->
           <div class="container">
 
@@ -267,14 +267,23 @@
 
               <div class="col-12 mt-2 mt-lg-0 mb-3">
 
-                <div class="row mb-2">
-                  <div class="col-12">
-                    <span class="p2p-main__connection" data-toggle="tooltip" title="На странице используется ассиметричное 256-битное шифрование - один из самых безопасных в мире методов шифрований">Безопасное соединение</span>
+                <div class="row mb-2 align-items-center">
+                  <div class="col">
+                    <span class="p2p__connection" data-toggle="tooltip" title="На странице используется ассиметричное 256-битное шифрование - один из самых безопасных в мире методов шифрований">Безопасное соединение</span>
+                  </div>
+                  <div class="col-auto p2p__alert d-lg-none">
+                    <div class="alert alert-success alert-people fade show" role="alert">
+                      <strong>11</strong>
+                    </div>
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-5 order-lg-1 p2p-main__alert">
+                  <div class="col-lg">
+                    <h1>Перевод денег с карты на карту</h1>
+                    <p>Мгновенные переводы с карты на карту любого банка Украины</p>
+                  </div>
+                  <div class="col-lg-5 p2p__alert d-none d-lg-block">
                     <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
                       <strong>11 человек</strong> оплачивают услугу прямо сейчас
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -282,23 +291,19 @@
                       </button>
                     </div>
                   </div>
-                  <div class="col-lg">
-                    <h1>Перевод денег с карты на карту</h1>
-                    <p>Мгновенные переводы с карты на карту любого банка Украины</p>
-                  </div>
                 </div>
 
                 <form action="/">
 
                   <div class="row justify-content-between">
 
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 mt-3 mt-lg-0">
 
-                      <div class="p2p-main__card-wrapper">
+                      <div class="p2p__card-wrapper">
 
-                        <div class="p2p-main__card-title">С карты</div>
+                        <div class="p2p__card-title">С карты</div>
 
-                        <div class="p2p-main__card p2p-main__card--sender">
+                        <div class="p2p__card p2p__card--sender">
                           <div class="bank-card">
                             <div class="bank-card__header">
                               <div class="bank-card__bank"></div>
@@ -329,7 +334,7 @@
                           </div>
                         </div>
 
-                        <div class="p2p-main__phone">
+                        <div class="p2p__sender-phone">
                           <div class="form-group required">
                             <input type="tel" class="form-control form-input" id="p2pform-sender_phone" name="P2pForm[sender_phone]" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
                             <label class="control-label form-label" for="p2pform-sender_phone">Номер телефона*</label>
@@ -338,9 +343,9 @@
                           <p>Для возможности обратной связи</p>
                         </div>
 
-                        <div class="p2p-main__security" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
-                          <span class="p2p-main__security-title">Безопасность переводов</span>
-                          <div class="p2p-main__security-img">
+                        <div class="p2p__security d-none d-lg-flex" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
+                          <span class="p2p__security-title">Безопасность переводов</span>
+                          <div class="p2p__security-img">
                             <a rel="nofollow" href="https://www.mastercard.ua/uk-ua/consumers/features-benefits/safety-and-security/securecode.html" target="_blank">
                               <img src="/img/p2p/mastercard-security-icon.png" alt="Mastercard">
                             </a>
@@ -357,15 +362,24 @@
 
                     </div>
 
-                    <div class="col-lg"></div>
+                    <div class="col-lg">
+                      <div class="p2p-arrow">
+                        <svg width="54" height="44" viewBox="0 0 54 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.6758 32.6377L28.3136 21.9999" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M28.3135 22L17.6757 11.3622" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M27.6758 32.6377L38.3136 21.9999" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M38.3135 22L27.6757 11.3622" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </div>
+                    </div>
 
                     <div class="col-lg-5">
 
-                      <div class="p2p-main__card-wrapper p2p-main__card-wrapper--receiver">
+                      <div class="p2p__card-wrapper p2p__card-wrapper--receiver">
 
-                        <div class="p2p-main__card-title">На карту</div>
+                        <div class="p2p__card-title">На карту</div>
 
-                        <div class="p2p-main__card p2p-main__card--receiver">
+                        <div class="p2p__card p2p__card--receiver">
                           <div class="bank-card">
                             <div class="bank-card__header">
                               <div class="bank-card__bank"></div>
@@ -404,19 +418,19 @@
                           </div>
                         </div>
 
-                        <div class="p2p-main__bonuses">
-                          <span class="p2p-main__bonuses-title">За этот платеж вы получите не менее</span>
-                          <div class="p2p-main__bonuses-amount">
-                            <div class="p2p-main__bonuses-count">
-                              <button type="button" class="p2p-main__bonuses-minus" disabled>
+                        <div class="p2p__bonuses">
+                          <span class="p2p__bonuses-title">За этот платеж вы получите не менее</span>
+                          <div class="p2p__bonuses-amount">
+                            <div class="p2p__bonuses-count">
+                              <button type="button" class="p2p__bonuses-minus" disabled>
                                 <span>
                                   <svg width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.7826 6.05225H1.44922" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                   </svg>
                                 </span>
                               </button>
-                              <span>10</span>
-                              <button type="button" class="p2p-main__bonuses-plus">
+                              <span class="p2p__bonuses-number bonus-value">9999</span>
+                              <button type="button" class="p2p__bonuses-plus">
                                 <span>
                                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7.11572 1.38574V12.7191" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -425,7 +439,57 @@
                                 </span>
                               </button>
                             </div>
-                            <span class="p2p-main__bonuses-text">бонусов добра <button type="button" class="bonus-tooltip" id="bonus-tooltip" data-toggle="popover"></button></span>
+                            <span class="p2p__bonuses-text"><span class="bonus-i18n" data-i18n-zero="бонусов" data-i18n-one="бонус" data-i18n-many="бонуса">бонусов</span> добра <button type="button" class="bonus-tooltip" id="bonus-tooltip" data-toggle="popover"></button></span>
+                          </div>
+                        </div>
+
+                        <div class="p2p__notification">
+                          <div class="p2p__notification-row" role="button" data-toggle="collapse" data-target="#p2p__notification-form" aria-expanded="false">
+                            <div class="p2p__notification-img">
+                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.27964 1.5493C4.2953 2.30047 3.50485 3.23944 2.90828 4.3662C2.31171 5.49296 1.98359 6.69797 1.92394 7.98122H0C0.059657 6.41628 0.43997 4.94523 1.14094 3.56808C1.84191 2.19092 2.77405 1.04851 3.93736 0.140845L5.27964 1.5493ZM18.0761 7.98122C18.0164 6.69797 17.6808 5.49296 17.0694 4.3662C16.4579 3.23944 15.66 2.30047 14.6756 1.5493L16.0626 0.140845C17.226 1.04851 18.1506 2.19092 18.8367 3.56808C19.5227 4.94523 19.9105 6.41628 20 7.98122H18.0761ZM16.1969 8.49765V13.9906L18.1208 16.0094V16.9953H1.87919V16.0094L3.80313 13.9906V8.49765C3.80313 6.96401 4.25056 5.61033 5.14541 4.43662C6.04027 3.26291 7.17375 2.50391 8.54586 2.15962V1.50235C8.54586 1.06416 8.68755 0.704225 8.97092 0.422535C9.25429 0.140845 9.59732 0 10 0C10.4027 0 10.7383 0.140845 11.0067 0.422535C11.2752 0.704225 11.4094 1.06416 11.4094 1.50235V2.15962C12.8113 2.50391 13.9597 3.26291 14.8546 4.43662C15.7494 5.61033 16.1969 6.96401 16.1969 8.49765ZM9.97763 20C9.47054 20 9.03057 19.8044 8.65772 19.4131C8.28486 19.0219 8.09843 18.5603 8.09843 18.0282H11.9016C11.9016 18.2786 11.8568 18.529 11.7673 18.7793C11.4989 19.4366 11.0365 19.8279 10.3803 19.9531C10.261 19.9844 10.1268 20 9.97763 20Z" fill="#E94F35"/>
+                                </svg>
+                            </div>
+                            <div class="p2p__notification-title">
+                              <span>Сообщите получателю, что деньги уже переведены на его карту</span>
+                            </div>
+                          </div>
+                          <div class="p2p__notification-form collapse" id="p2p__notification-form" class="collapse">
+                            <div class="form-group required">
+                              <input type="tel" class="form-control form-input phone-mask" id="p2pform-notification_phone" name="P2pForm[notification_phone]" maxlength="19" autocomplete="section-target-tel" minlength="12" placeholder="+380 (00) 000 00 00" pattern="(\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}|\d{12})" aria-invalid="false" placeholder="+380 (00) 000 00 00">
+                              <label class="control-label form-label" for="p2pform-notification_phone">Номер телефона</label>
+                              <div class="help-block"></div>
+                            </div>
+                            <div class="form-group">
+                              <textarea class="form-control form-textarea note" id="p2pform-notification_text" name="P2pForm[notification_text]" rows="3" data-text="На вашу карту **** {c} зачислено {a} грн с помощью сервиса мгновенных онлайн-переводов и платежей iPay.ua">На вашу карту _____ зачислено _____ грн с помощью сервиса мгновенных онлайн-переводов и платежей iPay.ua</textarea>
+                              <label class="control-label form-label" for="form-textarea">Сообщение</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="p2p__payment">
+                          <span class="p2p__payment-text">К оплате:</span>
+                          <span class="p2p__payment-amount" id="amount">0.00 грн</span>
+                        </div>
+
+                        <div class="p2p__submit">
+                            <button type="submit" class="btn btn-green btn-block button-transfer go-to-pay" disabled>Перевести</button>
+                            <div class="p2p-progress progress-0"></div>
+                            <span>Перевести</span>
+                        </div>
+
+                        <div class="p2p__security mt-4 d-lg-none" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
+                          <span class="p2p__security-title">Безопасность переводов</span>
+                          <div class="p2p__security-img">
+                            <a rel="nofollow" href="https://www.mastercard.ua/uk-ua/consumers/features-benefits/safety-and-security/securecode.html" target="_blank">
+                              <img src="/img/p2p/mastercard-security-icon.png" alt="Mastercard">
+                            </a>
+                            <a rel="nofollow" href="https://www.visa.com.ua/uk_UA/pay-with-visa/featured-technologies/verified-by-visa.html" target="_blank">
+                              <img src="/img/p2p/visa-security-icon.png" alt="Visa">
+                            </a>
+                            <a href="https://www.ipay.ua/ru/pci-dss-ipay-ua" target="_blank">
+                              <img src="/img/p2p/pci-dss-security-icon.png" alt="PCI DSS">
+                            </a>
                           </div>
                         </div>
 
@@ -451,20 +515,31 @@
                 <div class="launch-header-wrapper">
           
                   <div class="row">
-                  
-                    <!-- <div class="launch-container launch-flex"> -->
-          
-                      <div class="col-md-6 launch-header-left">
-                        <h2>Как iPay.ua первым в Украине запустил сервис перевода с карты на карту</h2>
-                      </div>
-          
-                      <div class="col-md-6 launch-header-right">
-                        <div class="launch-header-img">
-                          <!-- <img src="/v4/p2p/web/source/default_IPAY-13912/img/launch-header-img.png" srcset="/v4/p2p/web/source/default_IPAY-13912/img/launch-header-img.png 1x, /v4/p2p/web/source/default_IPAY-13912/img/launch-header-img@2x.png 2x" alt="Image"> -->
-                          <img src="/img/p2p/launch-header-img.png" srcset="/img/p2p/launch-header-img.png 1x, /img/p2p/launch-header-img@2x.png 2x" alt="Image">
+
+                    <div class="col-12">
+
+
+                      <div class="launch-container">
+
+                        <div class="row">
+                          <div class="col-md-6 launch-header-left">
+                            <h2>Как iPay.ua первым в Украине запустил сервис перевода с карты на карту</h2>
+                          </div>
+              
+                          <div class="col-md-6 launch-header-right">
+                            <div class="launch-header-img">
+                              <!-- <img src="/v4/p2p/web/source/default_IPAY-13912/img/launch-header-img.png" srcset="/v4/p2p/web/source/default_IPAY-13912/img/launch-header-img.png 1x, /v4/p2p/web/source/default_IPAY-13912/img/launch-header-img@2x.png 2x" alt="Image"> -->
+                              <img src="/img/p2p/launch-header-img.png" srcset="/img/p2p/launch-header-img.png 1x, /img/p2p/launch-header-img@2x.png 2x" alt="Image">
+                            </div>
+                          </div>
                         </div>
+          
+                        
                       </div>
-                    <!-- </div> -->
+
+                    </div>
+                  
+                    
                   
                   </div>
           
