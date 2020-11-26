@@ -309,18 +309,6 @@
       }
     }
 
-    > span {
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      left: 50%;
-      color: #7C9CAC;
-      font-size: 1.125rem;
-      color: #ffffff;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
     .p2p-progress {
       position: absolute;
       height: 100%;
@@ -329,6 +317,8 @@
       border-top-left-radius: $border-radius;
       border-bottom-left-radius: $border-radius;
       background-color: $main-blue;
+      cursor: pointer;
+      overflow: hidden;
 
       &.progress-0, &.progress-7 {
         width: 0;
@@ -356,6 +346,17 @@
 
       &.progress-6 {
         width: 90%;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 210px;
+        left: 13.125rem;
+        @include transform(translate(-50%, -50%));
+        font-size: 1.125rem;
+        font-weight: bold;
+        color:#ffffff;
       }
     }
   }
@@ -423,6 +424,15 @@
         padding-left: 0.5rem;
       }
     }
+
+    &__submit {
+      .p2p-progress {
+        span {
+          left: 185px;
+          left: 11.5625rem;
+        }
+      }
+    }
   }
 
   @include until($lg) {
@@ -486,6 +496,15 @@
       }
     }
 
+    &__submit {
+      .p2p-progress {
+        span {
+          left: 180px;
+          left: 11.25rem;
+        }
+      }
+    }
+
     &-arrow {
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
@@ -538,6 +557,19 @@
 
       &-text {
         max-width: none;
+      }
+    }
+
+    &__submit {
+      width: 18.125rem;
+      margin-left: auto;
+      margin-right: auto;
+  
+      .p2p-progress {
+        span {
+          left: 145px;
+          left: 9.0625rem;
+        }
       }
     }
   }
@@ -651,127 +683,244 @@
   }
 }
 
+/* promo cards section */
+.p2p-promo {
+  padding-top: 6.875rem;
+  padding-bottom: 6.875rem;
 
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    &--last {
+      .p2p-promo__content {
+        max-width: 10rem;
+      }
+    }
+  }
+
+  &__img {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 50%;
+    box-shadow: 0px 4px 20px $card-shadow;
+  }
+
+  &__content {
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  @include until($lg) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  @include until($md) {
+    &__card {
+      flex-direction: row;
+      margin-bottom: 1.375rem;
+
+      &--last {
+        margin-bottom: 0;
+      }
+    }
+
+    &__img {
+      margin-bottom: 0;
+    }
+
+    &__content {
+      margin-left: 0.75rem;
+      text-align: left;
+    }
+  }
+}
+
+/* limitations section */
+.p2p-limitations {
+  padding-top: 2.75rem;
+  padding-bottom: 2.125rem;
+  background-color: $light-grey;
+
+  &__title {
+    margin-bottom: 2.3125rem;
+  }
+
+  .launch-card {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.75rem;
+    padding-top: 1.125rem;
+
+    &__amount {
+      padding-bottom: 0.5rem;
+      padding-right: 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  @include until($lg) {
+    .launch-card {
+      &__text {
+        text-align: left;
+      }
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1.5rem;
+    padding-bottom: 0.25rem;
+
+    &__title {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+/* protection section */
+.p2p-protection {
+  padding-top: 3rem;
+  padding-bottom: 3.875rem;
+
+  &__title {
+    margin-bottom: 2.75rem;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+
+      img {
+        height: 51px;
+      }
+    }
+  }
+
+  @include until($sm) {
+    padding-bottom: 0.25rem;
+    
+    &__title {
+      margin-bottom: 1.25rem;
+    }
+
+    &__card {
+      flex-direction: column;
+
+      a {
+        margin-bottom: 2.25rem;
+      }
+    }
+  }
+}
 
 /* 
 launch history styles 
 */
 
-.launch-history p {
-  margin-bottom: 16px;
-  font-size: 16px;
-  /* color: #3B566E; */
-}
-
-/* launch header */
-.launch-header {
-  margin-top: 100px;
-}
-
-.launch-header-wrapper {
-  border-radius: 8px;
-  background-color: #DEE7F3;
-}
-
 .launch-container {
-  max-width: 970px;
+  max-width: 57.5rem;
   margin: 0 auto;
-}
 
-.launch-container::after {
-  display: table;
-  content: ' ';
-  clear: both;
-}
-
-// .launch-flex {
-//   display: -ms-flexbox;
-//   display: flex;
-// }
-
-.launch-header h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-right: 108px;
-}
-
-.launch-header .launch-header-left {
-  -ms-flex-item-align: center;
-           align-self: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.launch-header-img {
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-     -ms-flex-pack: start;
-   justify-content: flex-start;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-  margin-top: -27px;
-  border-bottom-right-radius: 0.5rem;
-}
-
-.launch-header-img img {
-  width: 493px;
-}
-
-@media (max-width: 1199px) {
-  .launch-header h2 {
-    padding-left: 20px;
-    padding-right: 0;
-  }
-
-  .launch-header-img {
-    overflow-x: hidden;
+  @include until($xl) {
+    max-width: none;
   }
 }
 
-@media (max-width: 767px) {
-  .launch-header {
-    margin-top: 50px;
+.launch-header {
+  margin-top: 2.75rem;
+
+  &__wrapper {
+    border-radius: $border-radius;
+    background-color: $middle-grey;
   }
 
-  .launch-header > .container {
-    padding-left: 0;
-    padding-right: 0;
+  h2 {
+    width: 267px;
+    margin: 0 auto;
   }
 
-  .launch-header > .container .row {
-    margin-left: auto;
-    margin-right: auto;
+  &__left {
+    align-self: center;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
   }
 
-  .launch-header-wrapper {
-    border-radius: 0;
+  &__img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -27px;
+    border-bottom-right-radius: $border-radius;
+
+    img {
+      width: 493px;
+    }
   }
 
-  .launch-flex {
-     -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-     -ms-flex-direction: column;
-         flex-direction: column;
+  @include until($xl) {
+    &__img {
+      overflow-x: hidden;
+    }
   }
 
-  .launch-header h2 {
-    padding-left: 0;
-    font-size: 22px;
-  }
-
-  .launch-header .launch-header-right {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .launch-header-img {
-    -webkit-box-pack: center;
-       -ms-flex-pack: center;
-     justify-content: center;
+  @include until($md) {
     margin-top: 0;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      .row {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  
+    &__wrapper {
+      & > .row {
+        & > .col-12 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  
+    h2 {
+      width: auto;
+    }
+  
+    &__right {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    &__img {
+      justify-content: center;
+      margin-top: 0;
+    }
+  }
+
+  @include until($sm) {
+    &__wrapper {
+      border-radius: 0;
+    }
+
+    &__img {
+      border-bottom-right-radius: 0;
+    }
   }
 }
 
@@ -779,270 +928,286 @@ launch history styles
 .launch-promo {
   padding-top: 42px;
   padding-bottom: 50px;
+
+  blockquote {
+    position: relative;
+    padding: 3.75rem 0.625rem 3.75rem 2.375rem;
+    font-family: $text-font;
+    @include font(1.1875rem, 400, 1.3);
+    color: $text-color;
+    quotes: "„" "“" "‚" "‘";
+
+    &::before, &::after {
+      position: absolute;
+      font-family: sans-serif;
+      @include font(8.75rem, 700, 1.75rem);
+      font-style: italic;
+      opacity: 0.1;
+    }
+
+    &::before {
+      content: open-quote;
+      left: 0.625rem;
+      bottom: 4.5rem;
+      color: $main-blue;
+    }
+    
+    &::after {
+      content: close-quote;
+      right: 0.625rem;
+      top: 4.5rem;
+      color: #242222;
+    }
+
+    span {
+      position: absolute;
+      height: 100%;
+      width: 6px;
+      top: 0;
+      left: 0;
+      border-radius: 6px;
+      background-color: $btn-red;
+    }
+  }
+
+  @include until($md) {
+    blockquote {
+      padding: 2.375rem 0 2.375rem 2rem;
+
+      &::before {
+        bottom: 4.875rem;
+      }
+    
+      &::after {
+        top: 4rem;
+      }
+
+      span {
+        width: 3px;
+      }
+    }
+  }
 }
 
-.launch-promo blockquote {
-  position: relative;
-  padding: 42px 10px 42px 90px;
-  font-size: 19px;
-  border-left: 5px solid #E84F35;
-  quotes: "„" "“" "‚" "‘";
-}
-
-.launch-promo blockquote::before,
-.launch-promo blockquote::after {
-  position: absolute;
-  font-size: 10rem;
-  font-weight: 700;
-  line-height: 2rem;
-  opacity: 0.1;
-}
-
-.launch-promo blockquote::before {
-  content: open-quote;
-  left: 40px;
-  bottom: 72px;
-  color: #7C9CAC;
-}
-
-.launch-promo blockquote::after {
-  content: close-quote;
-  right: 10px;
-  top: 60px;
-  color: #242222;
-}
 
 .launch-cards {
-  padding-top: 34px;
+  padding-top: 2.125rem;
+
+  @include until($md) {
+    padding-top: 1.5rem;
+  }
 }
 
 .launch-card {
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-  height: 124px;
-  padding: 20px 30px 20px 20px;
-  font-size: 16px;
-  line-height: 1.3;
-  border-radius: 8px;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  align-items: center;
+  height: 7.75rem;
+  padding: 1.25rem 1.875rem 1.25rem 1.25rem;
+  border-radius: $border-radius;
+  box-shadow: 0px 4px 20px $card-shadow;
   background-color: #ffffff;
-}
 
-.launch-card-amount {
-  padding-right: 32px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #E94F35;
-}
+  &__amount {
+    padding-right: 2rem;
+    font-family: $heading-font;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $btn-red;
+  }
 
-@media (max-width: 991px) {
-  .launch-card {
-     -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-     -ms-flex-direction: column;
-         flex-direction: column;
-    padding: 16px;
+  @include until($lg) {
+    flex-direction: column;
+    padding: 1rem;
     text-align: center;
+
+    &__amount {
+      padding-right: 0;
+      padding-bottom: 0.625rem;
+    }
   }
 
-  .launch-card-amount {
-    padding-right: 0;
-    padding-bottom: 10px;
-  }
-}
-
-@media (max-width: 767px) {
-  .launch-cards {
-    padding-top: 24px;
-  }
-
-  .launch-promo blockquote {
-    padding: 22px 0 22px 28px;
-    font-size: 19px;
-    border-left-width: 2px;
-  }
-
-  .launch-promo blockquote::before {
-    left: 10px;
-    bottom: 52px;
-  }
-
-  .launch-promo blockquote::after {
-    top: 40px;
-  }
-
-  .launch-card {
-    margin-bottom: 16px;
+  @include until($md) {
+    margin-bottom: 1rem;
   }
 }
 
 /* launch p2p */
 .launch-p2p {
-  padding-top: 44px;
-  padding-bottom: 12px;
-  background-color: #F0F5FA;
-}
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  background-color: $light-grey;
 
-.launch-p2p-cards {
-  padding-top: 70px;
-}
+  &__cards {
+    padding-top: 4.5rem;
+  }
+  
+  &__card {
+    display: flex;
+    margin-bottom: 2.75rem;
+  }
+  
+  &__img {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #E7EFFF;
 
-.launch-p2p-card {
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 44px;
-}
+    &--main {
+      background-color:  #CFE6F9;
+    }
 
-.launch-p2p-img {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-     -ms-flex-pack: center;
-   justify-content: center;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-  width: 48px;
-  height: 48px;
-  margin-right: 24px;
-  padding: 8px;
-  border-radius: 50%;
-  background-color: #E7EFFF;
-}
-
-.launch-p2p-img.launch-p2p-imgMain {
-  background-color:  #CFE6F9;
-}
-
-.launch-p2p-img img {
-  max-width: 100%;
-}
-
-.launch-p2p-content h4 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-@media (max-width: 991px) {
-  .launch-p2p-card {
-       -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-       -ms-flex-direction: column;
-           flex-direction: column;
+    img {
+      max-width: 100%;
+    }
   }
 
-  .launch-p2p-img {
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 767px) {
-  .launch-p2p {
-    padding-top: 10px;
+  &__content {
+    h4 {
+      margin-bottom: 0.75rem;
+      font-weight: bold;
+    }
   }
 
-  .launch-p2p h3 {
-    text-align: left;
+  @include until($lg) {
+    &__card {
+      flex-direction: column;
+    }
+  
+    &__img {
+      margin-bottom: 1.5rem;
+    }
   }
+  
+  @include until($md) {
+    padding-top: 1.25rem;
+    padding-bottom: 0.625rem;
+  
+    h3 {
+      text-align: left;
+    }
+  
+    &__cards {
+      padding-top: 1.125rem;
+    }
+  
+    &__card {
+      margin-bottom: 14px;
+    }
 
-  .launch-p2p-cards {
-    padding-top: 20px;
-  }
-
-  .launch-p2p-card {
-    margin-bottom: 14px;
+    &__img {
+      margin-bottom: 1rem;
+    }
   }
 }
 
 /* launch footer */
 .launch-footer {
-  padding-top: 100px;
-}
+  padding-top: 6.25rem;
 
-.launch-footer-wrapper {
-  border-radius: 3px;
-  background-color: #345467;
-}
-
-.launch-footer-right {
-  display: -ms-flexbox;
-  display: flex;
-     -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-     -ms-flex-direction: column;
-         flex-direction: column;
-  -webkit-box-pack: end;
-     -ms-flex-pack: end;
-   justify-content: flex-end;
-  padding-bottom: 16px;
-}
-
-.launch-footer-img {
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-     -ms-flex-pack: end;
-   justify-content: flex-end;
-  -webkit-box-align: center;
-     -ms-flex-align: center;
-        align-items: center;
-  margin-top: -34px;
-  padding-right: 30px;
-}
-
-.launch-footer-img img {
-  width: 246px;
-}
-
-.launch-footer-content {
-  padding-right: 30px;
-}
-
-.launch-footer-content p {
-  font-size: 20px;
-  line-height: 1.3;
-  color: #F4FAFF;
-}
-
-.launch-footer-sign p {
-  margin-bottom: 0;
-  color: #EEF7FF;
-}
-
-.launch-footer-sign p em {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-@media (max-width: 991px) {
-  .launch-footer {
-    padding-top: 40px;
+  &__wrapper {
+    border-radius: 3px;
+    background-color: #345467;
   }
   
-  .launch-footer > .container {
-    padding-left: 0;
-    padding-right: 0;
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+  }
+  
+  &__img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -34px;
+    padding-right: 1.875rem;
+  }
+  
+  &__img {
+    img {
+      width: 246px;
+    }
+  }
+  
+  &__content {
+    padding-right: 1.875rem;
+
+    p {
+      font-size: 1.25rem;
+      color: #F4FAFF;
+    }
+  }
+  
+  &__sign {
+    p {
+      margin-bottom: 0;
+      color: #EEF7FF;
+
+      em {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
   }
 
-  .launch-footer > .container .row {
-    margin-left: auto;
-    margin-right: auto;
+  @include until($lg) {
+    padding-top: 2.5rem;
+
+    > .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      .row {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  
+    &__right {
+      padding-top: 1.125rem;
+    }
+  
+    &__content {
+      padding-right: 0;
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+/* additional info */
+.p2p-info {
+  &__title {
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
   }
 
-  .launch-footer-right {
-    padding-top: 18px;
+  &__content {
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      text-decoration: underline;
+    }
   }
 
-  .launch-footer-content {
-    padding-right: 0;
-  }
+  @include until($md) {
+    h3 {
+      font-size: 1.25rem;
+    }
 
-  .launch-footer-content p {
-    font-size: 18px;
+    &__title {
+      padding-top: 2.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
 }
