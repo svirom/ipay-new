@@ -8,6 +8,8 @@
 @import '../abstracts/mixins';
 
 .p2p {
+  padding-bottom: 2rem;
+
   &__connection {
     padding: 2px 0 2px 1.3625rem;
     @include font(0.75rem, 400, 1.17);
@@ -452,7 +454,7 @@
 
     &__card-wrapper, .bank-card, &__sender-phone, &__bonuses {
       width: auto;
-      max-width: 22.5rem;
+      max-width: 26.25rem;
     }
 
     &__card-wrapper {
@@ -460,15 +462,30 @@
       margin-right: auto;
     }
 
-    .bank-card {
-      padding-left: 0.875rem;
-      padding-right: 0.875rem;
-    }
-
     &__sender-phone {
       margin-bottom: 0;
     }
 
+    &__submit {
+      .p2p-progress {
+        span {
+          left: 210px;
+          left: 13.125rem;
+        }
+      }
+    }
+
+    &-arrow {
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+
+      svg {
+        @include transform(rotate(90deg));
+      }
+    }
+  }
+
+  @include until($md) {
     &__security {
       flex-direction: column;
       padding: 0.5rem 0.75rem;
@@ -495,24 +512,6 @@
         }
       }
     }
-
-    &__submit {
-      .p2p-progress {
-        span {
-          left: 180px;
-          left: 11.25rem;
-        }
-      }
-    }
-
-    &-arrow {
-      margin-top: 0.5rem;
-      margin-bottom: 1.5rem;
-
-      svg {
-        @include transform(rotate(90deg));
-      }
-    }
   }
 
   @include until($sm) {
@@ -523,10 +522,27 @@
     &__card {
       .bank-card {
         height: 16rem;
-        margin-left: -15px;
-        margin-right: -15px;
-        margin-bottom: 0;
+        margin: 1rem -15px 0;
+        padding: 0.75rem 0.875rem 0;
         box-shadow: 0px 5px 20px $box-shadow;
+
+        &__number {
+          padding-bottom: 0.5rem;
+        }
+
+        &__descr {
+          p {
+            line-height: 1.17;
+
+            &:first-child {
+              white-space: normal;
+            }
+
+            &.bank-card__commission {
+              font-size: 1.125rem;
+            }
+          }
+        }
       }
 
       &--receiver {
@@ -560,6 +576,19 @@
       }
     }
 
+    &__notification {
+      &-row {
+        &::after {
+          right: 0.25rem;
+        }
+      }
+
+      &-title {
+        padding-right: 2rem;
+        padding-left: 0.5rem;
+      }
+    }
+
     &__submit {
       width: 18.125rem;
       margin-left: auto;
@@ -582,6 +611,48 @@
 
   to {
       @include transform(rotate(-25deg));
+  }
+}
+
+/* p2p mobile progressbar */
+.p2p-progressbar {
+  position: relative;
+  height: 4px;
+  
+  background-color: $middle-grey;
+
+  .p2p-progress {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $btn-green;
+
+    &.progress-0 {
+      width: 0.75rem;
+    }
+
+    &.progress-1 {
+      width: 15%;
+    }
+    &.progress-2 {
+      width: 30%;
+    }
+    &.progress-3 {
+      width: 45%;
+    }
+    &.progress-4 {
+      width: 60%;
+    }
+    &.progress-5 {
+      width: 75%;
+    }
+    &.progress-6 {
+      width: 90%;
+    }
+    &.progress-7 {
+      width: 100%;
+    }
   }
 }
 
@@ -720,6 +791,10 @@
   @include until($lg) {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+
+    &__card {
+      margin-bottom: 0.75rem;
+    }
   }
 
   @include until($md) {
@@ -764,11 +839,25 @@
       padding-right: 0;
       font-size: 1.5rem;
     }
+
+    &__text {
+      padding-right: 3.75rem;
+    }
   }
 
   @include until($lg) {
+    padding-top: 2.125rem;
+    padding-bottom: 0;
+
+    &__title {
+      margin-bottom: 0;
+    }
+
     .launch-card {
+      padding: 0.9375rem;
+
       &__text {
+        padding-right: 0;
         text-align: left;
       }
     }
@@ -776,7 +865,12 @@
 
   @include until($md) {
     padding-top: 1.5rem;
-    padding-bottom: 0.25rem;
+    padding-bottom: 1rem;
+
+    .launch-card {
+      height: 7rem;
+      margin-bottom: 1rem;
+    }
 
     &__title {
       margin-bottom: 0.5rem;
@@ -806,6 +900,14 @@
       img {
         height: 51px;
       }
+    }
+  }
+
+  @include until($lg) {
+    padding-top: 2.5rem;
+
+    &__title {
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -926,8 +1028,8 @@ launch history styles
 
 /* launch promo */
 .launch-promo {
-  padding-top: 42px;
-  padding-bottom: 50px;
+  padding-top: 2.625rem;
+  padding-bottom: 3.125rem;
 
   blockquote {
     position: relative;
@@ -967,6 +1069,12 @@ launch history styles
       left: 0;
       border-radius: 6px;
       background-color: $btn-red;
+    }
+  }
+
+  @include until($lg) {
+    blockquote {
+      padding: 2.875rem 0.625rem 2.875rem 2.375rem;
     }
   }
 
@@ -1016,6 +1124,15 @@ launch history styles
   }
 
   @include until($lg) {
+    padding: 0.5rem;
+
+    &__amount {
+      padding-right: 1rem;
+    }
+  }
+
+  @include until($md) {
+    margin-bottom: 1rem;
     flex-direction: column;
     padding: 1rem;
     text-align: center;
@@ -1024,10 +1141,6 @@ launch history styles
       padding-right: 0;
       padding-bottom: 0.625rem;
     }
-  }
-
-  @include until($md) {
-    margin-bottom: 1rem;
   }
 }
 
@@ -1075,8 +1188,15 @@ launch history styles
   }
 
   @include until($lg) {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+
+    &__cards {
+      padding-top: 1.75rem;
+    }
+    
     &__card {
-      flex-direction: column;
+      margin-bottom: 1rem;
     }
   
     &__img {
@@ -1097,7 +1217,8 @@ launch history styles
     }
   
     &__card {
-      margin-bottom: 14px;
+      flex-direction: column;
+      margin-bottom: 0.875rem;
     }
 
     &__img {
@@ -1170,7 +1291,13 @@ launch history styles
     }
   
     &__right {
+      justify-content: center;
       padding-top: 1.125rem;
+      padding-right: 2.5rem;
+    }
+
+    &__img {
+      margin-top: 0.5rem;
     }
   
     &__content {
