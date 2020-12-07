@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/p2p-main.css">
     <link rel="stylesheet" href="/css/category-text.css">
 
-    <title>Category Contactid Phone</title>
+    <title>Category Contactid Email</title>
   </head>
   <body>
 
@@ -277,8 +277,8 @@
 
               <div class="row">
                 <div class="col-lg">
-                  <h1>Перевод денег с карты по номеру телефона</h1>
-                  <p>Мгновенные переводы с карты на карту по номеру телефона любого украинского оператора</p>
+                  <h1>Перевод денег с карты по e-mail</h1>
+                  <p>Мгновенные переводы с карты на карту по e-mail получателя</p>
                 </div>
                 <div class="col-lg-5 p2p__alert d-none d-lg-block">
                   <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
@@ -374,7 +374,7 @@
 
                     <div class="p2p__card-wrapper p2p__card-wrapper--receiver">
 
-                      <div class="p2p__card-title">По номеру телефона</div>
+                      <div class="p2p__card-title">По e-mail</div>
 
                       <div class="p2p__card p2p__card--receiver mb-3">
                         <div class="bank-card">
@@ -385,14 +385,14 @@
                           <div class="bank-card__body">
                             <div class="bank-card__number">
                               <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="contactidform-target_phone" name="ContactidForm[target_phone]" autocomplete="off" placeholder="+380 (00) 000 00 00" cp_pattern="([\+380])\s\((67|96|97|98|39|68|50|66|95|99|63|93|73|91|92|94)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="true">
-                                <label class="control-label form-label" for="contactidform-target_phone">Номер телефона получателя</label>
+                                <input type="email" class="form-control form-input" id="contactidform-target_email" name="ContactidForm[target_email]" autocomplete="off" placeholder="email@gmail.com" aria-required="true" aria-invalid="true">
+                                <label class="control-label form-label" for="contactidform-target_email">E-mail получателя</label>
                                 <div class="help-block"></div>
                               </div>
                             </div>
                             <div class="bank-card__invoice">
                               <div class="form-group bank-card__amount required">
-                                <input type="tel" class="form-control form-input input-icon-right" id="p2pform-invoice" name="P2pForm[invoice]" min="5" max="25000" minlength="1" pattern="[0-9+-]{1,}" autocomplete="off" placeholder="0.00" aria-required="true">
+                                <input type="tel" class="form-control form-input input-icon-right" id="p2pform-invoice" name="P2pForm[invoice]" tabindex="7" min="5" max="25000" minlength="1" pattern="[0-9+-]{1,}" autocomplete="off" placeholder="0.00" aria-required="true">
                                 <label class="control-label form-label" for="p2pform-invoice">Сумма</label>
                                 <label class="label-icon-right label-currency">грн</label>
                                 <button type="button" class="bank-card__cvv-button" id="invoice-popover" data-toggle="popover"></button>
