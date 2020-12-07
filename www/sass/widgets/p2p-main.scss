@@ -78,6 +78,11 @@
       .bank-card__cvv-button {
         right: 4.25rem;
       }
+
+      .help-block {
+        padding-top: 1px;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -327,27 +332,32 @@
       }
 
       &.progress-1 {
-        width: 15%;
+        width: 16%;
       }
 
       &.progress-2 {
-        width: 30%;
+        // width: 30%;
+        width: 32%;
       }
 
       &.progress-3 {
-        width: 45%;
+        // width: 45%;
+        width: 48%;
       }
 
       &.progress-4 {
-        width: 60%;
+        // width: 60%;
+        width: 64%;
       }
 
       &.progress-5 {
-        width: 75%;
+        // width: 75%;
+        width: 80%;
       }
 
       &.progress-6 {
-        width: 90%;
+        // width: 90%;
+        width: 0;
       }
 
       span {
@@ -633,26 +643,52 @@
     }
 
     &.progress-1 {
-      width: 15%;
+      // width: 15%;
+      width: 16%;
     }
+
     &.progress-2 {
-      width: 30%;
+      // width: 30%;
+      width: 32%;
     }
+
     &.progress-3 {
-      width: 45%;
+      // width: 45%;
+      width: 48%;
     }
+
     &.progress-4 {
-      width: 60%;
+      // width: 60%;
+      width: 64%;
     }
+
     &.progress-5 {
-      width: 75%;
+      // width: 75%;
+      width: 80%;
     }
+
     &.progress-6 {
-      width: 90%;
+      // width: 90%;
+      width: 100%;
     }
+
     &.progress-7 {
       width: 100%;
     }
+  }
+}
+
+.target-text-info {
+  display: none;
+  position: absolute;
+  margin-bottom: 0;
+  padding-top: 4px;
+  @include font(0.875rem, 400, 1.14);
+  color: $dark-green;
+  white-space: nowrap;
+
+  @include until($sm) {
+    font-size: 0.75rem;
   }
 }
 

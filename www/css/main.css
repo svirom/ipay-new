@@ -1327,6 +1327,12 @@ label {
   background: #fff;
 }
 
+.form-group.has-success .form-textarea ~ .form-label {
+  top: 2px;
+  color: #7C9CAC;
+  font-size: 0.875rem;
+}
+
 .list li {
   position: relative;
   margin-bottom: 0.6875rem;
@@ -2562,6 +2568,10 @@ label {
 
 .bank-card__expires {
   width: 11rem;
+}
+
+.bank-card__cvv {
+  height: 3.5rem;
 }
 
 .bank-card__cvv input {

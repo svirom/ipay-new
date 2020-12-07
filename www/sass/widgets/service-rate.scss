@@ -36,4 +36,24 @@
   &__submit {
     text-align: right;
   }
+
+  .form-textarea {
+    border-width: 3px;
+
+    & ~ .form-label {
+      top: 3px;
+      left: 3px;
+    }
+  }
+
+  .form-group {
+    &.has-success {
+      .form-textarea {
+        &~ .form-label {
+          top: 3px;
+          left: 3px;
+        }
+      }
+    }
+  }
 }

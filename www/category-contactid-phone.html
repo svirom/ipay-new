@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/p2p-main.css">
     <link rel="stylesheet" href="/css/category-text.css">
 
-    <title>Category P2P</title>
+    <title>Category Contactid Phone</title>
   </head>
   <body>
 
@@ -239,7 +239,7 @@
             <div class="col-12">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Перевод денег с карты на карту</li>
+                <li class="breadcrumb-item active" aria-current="page">Перевод денег с карты по e-mail</li>
               </ol>
             </div>
           </div>
@@ -250,12 +250,6 @@
       <main class="p2p" id="p2p-widget">
 
         <!-- p2p main section -->
-
-        <!-- progressbar mobile section -->
-        <div class="p2p-progressbar d-lg-none">
-          <div class="p2p-progress progress-0"></div>
-        </div>
-
         <div class="container pt-3">
 
           <div class="row">
@@ -283,8 +277,8 @@
 
               <div class="row">
                 <div class="col-lg">
-                  <h1>Перевод денег с карты на карту</h1>
-                  <p>Мгновенные переводы с карты на карту любого банка Украины</p>
+                  <h1>Перевод денег с карты по номеру телефона</h1>
+                  <p>Мгновенные переводы с карты на карту по номеру телефона любого украинского оператора</p>
                 </div>
                 <div class="col-lg-5 p2p__alert d-none d-lg-block">
                   <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
@@ -380,7 +374,7 @@
 
                     <div class="p2p__card-wrapper p2p__card-wrapper--receiver">
 
-                      <div class="p2p__card-title">На карту</div>
+                      <div class="p2p__card-title">По номеру телефона</div>
 
                       <div class="p2p__card p2p__card--receiver">
                         <div class="bank-card">
@@ -391,10 +385,10 @@
                           <div class="bank-card__body">
                             <div class="bank-card__number">
                               <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="p2pform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                                <label class="control-label form-label" for="p2pform-target_card_pan">Номер карты</label>
+                                <input type="tel" class="form-control form-input" id="contactidform-target_phone" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                <input type="tel" id="contactidform-target_phone" class="text-center form-control" name="ContactidForm[target_phone]" maxlength="19" tabindex="7" minlength="12" autocomplete="off" required="required" placeholder="+380 (00) 000 00 00" cp_pattern="([\+380])\s\((67|96|97|98|39|68|50|66|95|99|63|93|73|91|92|94)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="true">
+                                <label class="control-label form-label" for="contactidform-target_phone">Номер карты</label>
                                 <div class="help-block"></div>
-                                <p class="target-text-info">Эта карта может принимать переводы <strong>мгновенно</strong></p>
                               </div>
                             </div>
                             <div class="bank-card__invoice">
@@ -410,63 +404,6 @@
                                 <p class="bank-card__commission" id="commission" data-text="грн">0.00 грн</p>
                               </div>
                             </div>
-                            <div class="bank-card__checkbox">
-                              <div class="form-group">
-                                <div class="checkbox-control">
-                                  <input class="checkbox-input" type="checkbox" id="checkbox-inp">
-                                  <label class="checkbox-label" for="checkbox-inp">Комиссия за счет получателя</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="p2p__bonuses">
-                        <span class="p2p__bonuses-title">За этот платеж вы получите не менее</span>
-                        <div class="p2p__bonuses-amount">
-                          <div class="p2p__bonuses-count">
-                            <button type="button" class="p2p__bonuses-minus" disabled>
-                              <span>
-                                <svg width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.7826 6.05225H1.44922" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                              </span>
-                            </button>
-                            <span class="p2p__bonuses-number bonus-value">9999</span>
-                            <button type="button" class="p2p__bonuses-plus">
-                              <span>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.11572 1.38574V12.7191" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M12.7826 7.05225H1.44922" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                  </svg>
-                              </span>
-                            </button>
-                          </div>
-                          <span class="p2p__bonuses-text"><span class="bonus-i18n" data-i18n-zero="бонусов" data-i18n-one="бонус" data-i18n-many="бонуса">бонусов</span> добра <button type="button" class="bonus-tooltip" id="bonus-tooltip" data-toggle="popover"></button></span>
-                        </div>
-                      </div>
-
-                      <div class="p2p__notification">
-                        <div class="p2p__notification-row" role="button" data-toggle="collapse" data-target="#p2p__notification-form" aria-expanded="false">
-                          <div class="p2p__notification-img">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5.27964 1.5493C4.2953 2.30047 3.50485 3.23944 2.90828 4.3662C2.31171 5.49296 1.98359 6.69797 1.92394 7.98122H0C0.059657 6.41628 0.43997 4.94523 1.14094 3.56808C1.84191 2.19092 2.77405 1.04851 3.93736 0.140845L5.27964 1.5493ZM18.0761 7.98122C18.0164 6.69797 17.6808 5.49296 17.0694 4.3662C16.4579 3.23944 15.66 2.30047 14.6756 1.5493L16.0626 0.140845C17.226 1.04851 18.1506 2.19092 18.8367 3.56808C19.5227 4.94523 19.9105 6.41628 20 7.98122H18.0761ZM16.1969 8.49765V13.9906L18.1208 16.0094V16.9953H1.87919V16.0094L3.80313 13.9906V8.49765C3.80313 6.96401 4.25056 5.61033 5.14541 4.43662C6.04027 3.26291 7.17375 2.50391 8.54586 2.15962V1.50235C8.54586 1.06416 8.68755 0.704225 8.97092 0.422535C9.25429 0.140845 9.59732 0 10 0C10.4027 0 10.7383 0.140845 11.0067 0.422535C11.2752 0.704225 11.4094 1.06416 11.4094 1.50235V2.15962C12.8113 2.50391 13.9597 3.26291 14.8546 4.43662C15.7494 5.61033 16.1969 6.96401 16.1969 8.49765ZM9.97763 20C9.47054 20 9.03057 19.8044 8.65772 19.4131C8.28486 19.0219 8.09843 18.5603 8.09843 18.0282H11.9016C11.9016 18.2786 11.8568 18.529 11.7673 18.7793C11.4989 19.4366 11.0365 19.8279 10.3803 19.9531C10.261 19.9844 10.1268 20 9.97763 20Z" fill="#E94F35"/>
-                              </svg>
-                          </div>
-                          <div class="p2p__notification-title">
-                            <span>Сообщите получателю, что деньги уже переведены на его карту</span>
-                          </div>
-                        </div>
-                        <div class="p2p__notification-form collapse" id="p2p__notification-form" class="collapse">
-                          <div class="form-group required">
-                            <input type="tel" class="form-control form-input phone-mask" id="p2pform-notification_phone" name="P2pForm[notification_phone]" maxlength="19" autocomplete="section-target-tel" minlength="12" placeholder="+380 (00) 000 00 00" pattern="(\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}|\d{12})" aria-invalid="false" placeholder="+380 (00) 000 00 00">
-                            <label class="control-label form-label" for="p2pform-notification_phone">Номер телефона</label>
-                            <div class="help-block"></div>
-                          </div>
-                          <div class="form-group">
-                            <textarea class="form-control form-textarea note" id="p2pform-notification_text" name="P2pForm[notification_text]" rows="3" data-text="На вашу карту **** {c} зачислено {a} грн с помощью сервиса мгновенных онлайн-переводов и платежей iPay.ua">На вашу карту _____ зачислено _____ грн с помощью сервиса мгновенных онлайн-переводов и платежей iPay.ua</textarea>
-                            <label class="control-label form-label" for="form-textarea">Сообщение</label>
                           </div>
                         </div>
                       </div>
@@ -478,7 +415,6 @@
 
                       <div class="p2p__submit">
                           <button type="submit" class="btn btn-green btn-block button-transfer go-to-pay" disabled>Перевести</button>
-                          <div class="p2p-progress progress-0"><span>Перевести</span></div>
                       </div>
 
                       <div class="p2p__security mt-4 d-lg-none" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">

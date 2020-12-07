@@ -78,6 +78,11 @@
   right: 4.25rem;
 }
 
+.p2p .bank-card__amount .help-block {
+  padding-top: 1px;
+  white-space: nowrap;
+}
+
 .p2p__sender-phone {
   width: 26.25rem;
   margin-bottom: 2.0625rem;
@@ -378,27 +383,27 @@
 }
 
 .p2p__submit .p2p-progress.progress-1 {
-  width: 15%;
+  width: 16%;
 }
 
 .p2p__submit .p2p-progress.progress-2 {
-  width: 30%;
+  width: 32%;
 }
 
 .p2p__submit .p2p-progress.progress-3 {
-  width: 45%;
+  width: 48%;
 }
 
 .p2p__submit .p2p-progress.progress-4 {
-  width: 60%;
+  width: 64%;
 }
 
 .p2p__submit .p2p-progress.progress-5 {
-  width: 75%;
+  width: 80%;
 }
 
 .p2p__submit .p2p-progress.progress-6 {
-  width: 90%;
+  width: 0;
 }
 
 .p2p__submit .p2p-progress span {
@@ -651,31 +656,49 @@
 }
 
 .p2p-progressbar .p2p-progress.progress-1 {
-  width: 15%;
+  width: 16%;
 }
 
 .p2p-progressbar .p2p-progress.progress-2 {
-  width: 30%;
+  width: 32%;
 }
 
 .p2p-progressbar .p2p-progress.progress-3 {
-  width: 45%;
+  width: 48%;
 }
 
 .p2p-progressbar .p2p-progress.progress-4 {
-  width: 60%;
+  width: 64%;
 }
 
 .p2p-progressbar .p2p-progress.progress-5 {
-  width: 75%;
+  width: 80%;
 }
 
 .p2p-progressbar .p2p-progress.progress-6 {
-  width: 90%;
+  width: 100%;
 }
 
 .p2p-progressbar .p2p-progress.progress-7 {
   width: 100%;
+}
+
+.target-text-info {
+  display: none;
+  position: absolute;
+  margin-bottom: 0;
+  padding-top: 4px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.14;
+  color: #0C6858;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 575px) {
+  .target-text-info {
+    font-size: 0.75rem;
+  }
 }
 
 .bonus-tooltip {

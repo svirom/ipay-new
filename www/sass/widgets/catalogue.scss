@@ -389,7 +389,9 @@
   }
 
   &__back {
-    border-bottom: 1px dashed $middle-grey;
+    &.dropdown-item {
+      border-bottom: 1px dashed $middle-grey;
+    }
 
     &::before {
       width: 10px;

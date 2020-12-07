@@ -35,7 +35,7 @@
     }
   }
 
-  &~.form-label {
+  &~ .form-label {
     top: 2px;
     left: 2px;
     width: calc(100% - 22px);
@@ -45,5 +45,17 @@
     color: $main-blue;
     font-size: 0.875rem;
     background: #fff;
+  }
+}
+
+.form-group {
+  &.has-success {
+    .form-textarea {
+      &~ .form-label {
+        top: 2px;
+        color: $main-blue;
+        font-size: 0.875rem;
+      }
+    }
   }
 }
