@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the 404 page and maintenance widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.page-404 {
+  .logo-color {
+    margin-bottom: 1.875rem;
+  }
+
+  &__title {
+    margin-top: 3.125rem;
+    font-size: 1.5rem;
+  }
+
+  &__subtitle {
+    @include font(2rem, 700, 1.25);
+  }
+
+  &__support {
+    a {
+      font-weight: 500;
+    }
+  }
+
+  @include until($lg) {
+    &__title {
+      margin-top: 0.125rem;
+    }
+
+    &__support {
+      padding-top: 3.125rem;
+    }
+  }
+
+  @include until($md) {
+    .logo-color {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__title {
+      font-size: 0.75rem;
+    }
+
+    &__subtitle {
+      font-size: 1.125rem;
+    }
+
+    &__support {
+      text-align: center;
+    }
+  }
+}
+
+.page-maintenance {
+  &__img {
+    padding-top: 8.125rem;
+  }
+
+  @include until($lg) {
+    &__img {
+      padding-top: 5.25rem;
+    }
+  }
+}
