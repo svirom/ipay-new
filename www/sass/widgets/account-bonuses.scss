@@ -1,0 +1,397 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account-bonuses widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-bonuses {
+  p, span, a {
+    line-height: 1.17;
+  }
+
+  .bonuses-header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: $border-radius;
+    background-color: $heading-color;
+  
+    p, span {
+      margin-bottom: 0;
+      color: #ffffff;
+    }
+  
+    &__amount {
+      padding: 1.5rem;
+  
+      .user_bonuses {
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+    }
+  
+    &__nav {
+      align-self: flex-end;
+      padding: 1.5rem 1.5rem 0;
+
+      .nav {
+        align-items: flex-end;
+
+        li {
+          margin-left: 1.5rem;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      height: 2.625rem;
+      padding-bottom: 0.9375rem;
+      color: $middle-grey;
+
+      svg {
+        margin-right: 0.375rem;
+      }
+
+      &--yapomoga {
+        border-bottom: 4px solid transparent;
+
+        svg {
+          fill: $middle-grey;
+        }
+
+        &.active {
+          border-bottom-color: #2DAAF6;
+
+          svg {
+            fill: #ffffff;
+          }
+        }
+      }
+
+      &--gift {
+        border-bottom: 4px solid transparent;
+
+        svg {
+          stroke: $middle-grey;
+        }
+
+        &.active {
+          border-bottom-color: $btn-red;
+          svg {
+            stroke: #ffffff;
+          }
+        }
+      }
+
+      &.active {
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    @include until($md) {
+      flex-direction: column;
+      align-items: center;
+
+      &__amount {
+        padding-bottom: 0;
+        text-align: center;
+
+        .user_bonuses {
+          display: block;
+        }
+      }
+
+      &__nav {
+        align-self: center;
+        padding: 1.5rem 1rem 0;
+      }
+    }
+
+    @include until($sm) {
+      &__link {
+        font-size: 0.875rem;
+      }
+    }
+
+    @media screen and (max-width: 359px) {
+      &__link {
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .btn {
+    &.btn-bonuses-more {
+      padding: 1.032rem 2.55rem;
+      font-weight: 500;
+      color: #ffffff;
+      background-color: $blue;
+    }
+
+    &.btn-bonuses-link {
+      padding: 0 1.125rem 0 0;
+      color: $blue;
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: inherit;
+      vertical-align: inherit;
+      text-align: initial;
+      background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.22144 13.3752L11.5967 9.00003' stroke='%2364B3F7' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.5967 9L7.22148 4.62479' stroke='%2364B3F7' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center no-repeat;
+    }
+  }
+
+  .bonuses-howto {
+    padding: 1.5rem;
+    border-radius: $border-radius;
+    background-color: $light-grey;
+
+    &__card {
+      display: flex;
+      align-items: center;
+    }
+
+    &__text {
+      margin-left: 1rem;
+
+      p {
+        margin-bottom: 0;
+
+        &:first-child {
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.bonuses-card {
+  position: relative;
+  max-width: 17.1875rem;
+  margin: 0 auto 3.3125rem;
+  padding: 2.375rem 1rem 1.5rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px $card-shadow;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  &__title {
+    height: 2.25rem;
+
+    h4 {
+      font-size: 1rem;
+      line-height: 1.17;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11.25rem;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__text {
+    p {
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+
+  &__hand {
+    img {
+      width: 5.75rem;
+    }
+  }
+
+  &__amount {
+    font-size: 1.125rem;;
+  }
+
+  &__btn {
+    position: absolute;
+    width: 100%;
+    bottom: -1.375rem;
+    left: 0;
+  }
+
+  .btn {
+    &.btn-bonuses {
+      padding: 0.75rem 1.635rem;
+      font-size: 1rem;
+      color: #ffffff;
+      border-radius: 1.5625rem;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &--blue {
+    background-image: url('/img/bonuses/bg-blue.png');
+
+    .bonuses-card__amount {
+      span {
+        color: #1597EB;
+      }
+    }
+
+    .btn {
+      &.btn-bonuses {
+        background-color: #1597EB;
+      }
+    }
+  }
+
+  &--sky-blue {
+    background-image: url('/img/bonuses/bg-sky-blue.png');
+
+    .bonuses-card__amount {
+      span {
+        color: #7DDDF3;
+      }
+    }
+
+    .btn {
+      &.btn-bonuses {
+        background-color: #7DDDF3;
+      }
+    }
+  }
+
+  &--red {
+    background-image: url('/img/bonuses/bg-red.png');
+
+    .bonuses-card__amount {
+      span {
+        color: #ff998a;
+      }
+    }
+
+    .btn {
+      &.btn-bonuses {
+        background-color: #ff998a;
+      }
+    }
+  }
+}
+
+.bonus-tooltip {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 50%;
+  background: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 0C6.01664 0 4.56659 0.439867 3.33323 1.26398C2.09986 2.08809 1.13856 3.25943 0.570907 4.62987C0.00324965 6.00032 -0.145275 7.50832 0.144114 8.96318C0.433503 10.418 1.14781 11.7544 2.1967 12.8033C3.2456 13.8522 4.58197 14.5665 6.03683 14.8559C7.49168 15.1453 8.99968 14.9968 10.3701 14.4291C11.7406 13.8614 12.9119 12.9001 13.736 11.6668C14.5601 10.4334 15 8.98336 15 7.5C15 6.51508 14.806 5.53981 14.4291 4.62987C14.0522 3.71993 13.4997 2.89314 12.8033 2.1967C12.1069 1.50026 11.2801 0.947814 10.3701 0.570903C9.46019 0.193993 8.48492 0 7.5 0ZM8.25 12.75H6.75V11.25H8.25V12.75ZM9.8025 6.9375L9.1275 7.6275C8.82542 7.888 8.58867 8.21573 8.43626 8.58436C8.28386 8.95299 8.22007 9.35223 8.25 9.75H6.75V9.375C6.75142 8.57952 7.06677 7.81675 7.6275 7.2525L8.5575 6.3075C8.6985 6.16999 8.81036 6.00548 8.88638 5.82378C8.96241 5.6421 9.00105 5.44695 9 5.25C9 4.85217 8.84197 4.47064 8.56066 4.18934C8.27936 3.90803 7.89783 3.75 7.5 3.75C7.10218 3.75 6.72065 3.90803 6.43934 4.18934C6.15804 4.47064 6 4.85217 6 5.25H4.5C4.5 4.45435 4.81607 3.69129 5.37868 3.12868C5.94129 2.56607 6.70435 2.25 7.5 2.25C8.29565 2.25 9.05871 2.56607 9.62132 3.12868C10.1839 3.69129 10.5 4.45435 10.5 5.25C10.5004 5.88272 10.2495 6.4897 9.8025 6.9375Z' fill='%23DEE7F3'/%3E%3C/svg%3E") center no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* popover bonuses */
+.popover {
+  &.popover-bonuses {
+    font-size: 0.75rem;
+    border: 0;
+    border-radius: $border-radius;
+    background-color: $text-color;
+
+    &.bs-popover-auto[x-placement^=right], &.bs-popover-right {
+      margin-left: 1rem;
+
+      & > .arrow {
+        &::after {
+          border-right-color: $text-color;
+        }
+      }
+    }
+
+    &.bs-popover-auto[x-placement^=bottom], &.bs-popover-bottom {
+      margin-top: 1rem;
+
+      & > .arrow {
+        &::after {
+          border-bottom-color: $text-color;
+        }
+      }
+
+      .popover-header {
+        &::before {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    &.bs-popover-auto[x-placement^=left], &.bs-popover-left {
+      margin-right: 1rem;
+
+      & > .arrow {
+        &::after {
+          border-left-color: $text-color;
+        }
+      }
+    }
+
+    &.bs-popover-auto[x-placement^=top], &.bs-popover-top {
+      margin-bottom: 1rem;
+
+      & > .arrow {
+        &::after {
+          border-top-color: $text-color;
+        }
+      }
+
+      .popover-header {
+        &::before {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .popover-header {
+      padding: 1rem 1rem 0.5rem;
+      color: #fff;
+      border-bottom: 0;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      background: $text-color url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59668 1.72266L14.5967 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5967 1.72266L1.59668 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") right 0.75rem top 0.75rem no-repeat;
+    }
+
+    .popover-body {
+      padding: 0 1rem 1.5rem 1rem;
+      color: #fff;
+
+      a {
+        font-size: 0.875rem;
+        font-weight: bold;
+        color:#ffffff;
+        text-decoration: underline;
+      }
+    }
+  }
+}

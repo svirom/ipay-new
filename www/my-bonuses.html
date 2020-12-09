@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/catalogue-account.css">
     <link rel="stylesheet" href="/css/account-main.css">
+    <link rel="stylesheet" href="/css/account-bonuses.css">
 
     <title>Мои бонусы</title>
   </head>
@@ -276,10 +277,201 @@
                   </div>
 
                   <div class="row mb-3">
-                    <div class="col-12 mb-2 mb-md-4">
+                    <div class="col-12 mb-2">
                       <h1>Мои бонусы</h1>
                     </div>
                   </div>
+
+                  <div class="account-bonuses">
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="bonuses-header">
+                          <div class="bonuses-header__amount">
+                            <p>У вас на счету</p>
+                            <p><span class="user_bonuses">1456</span> Бонусов Добра <button type="button" class="bonus-tooltip" id="bonus-tooltip" data-toggle="popover" data-title="Что такое Бонусы Добра?" data-content="Это бонусы, которые Вы накапливаете в личном кабинете на сервисе iPay.ua при совершении платежей или переводе денег с карты на карту.<br><br> <a href='https://ipay-v4.romaniuk.office.udc.ua/ru/yapomoga' target='_blank'>Подробнее</a>" data-original-title="" title=""></button></p>
+                          </div>
+                          <div class="bonuses-header__nav">
+                            <ul class="nav" role="tablist">
+                              <li>
+                                <a class="bonuses-header__link bonuses-header__link--yapomoga active" id="bonuses-yapomoga-tab" data-toggle="pill" href="#bonuses-yapomoga" role="tab" aria-controls="bonuses-yapomoga" aria-selected="true">
+                                  <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1563 11.9213C18.6399 9.55604 20.3944 8.40506 21.6873 8.20567C22.0899 8.15292 22.4999 8.1276 22.9351 8.20567C24.02 8.50212 24.1997 8.96103 23.816 9.52017C22.9992 10.4507 22.2392 11.4339 21.6011 12.529C21.1901 13.2274 20.8338 14.1916 20.6834 16.1518C20.6277 18.1699 19.7079 19.7471 18.1563 21.0046V11.9213ZM15.069 22.5565C13.7371 22.8667 12.4799 22.7686 11.2941 22.2991L13.9242 18.2712H15.069V22.5565ZM8.75755 20.6438L10.8042 17.6561C10.0495 17.3154 9.46395 16.8354 9.05398 16.2172C8.64402 15.6011 8.43798 14.8014 8.43798 13.8234C8.43798 13.1662 8.57674 12.5912 8.85636 12.0996C9.13387 11.608 9.48918 11.2081 9.91912 10.8938C10.2955 10.6247 10.7506 10.4232 11.2899 10.2924C11.8271 10.1616 12.4431 10.0972 13.139 10.0972H16.0802C16.034 9.78919 15.993 9.47059 15.9457 9.15726C15.6219 7.03043 14.9659 4.4584 14.4919 1.2671C14.186 -0.333302 11.9353 -0.543243 11.9585 1.36521C11.9679 2.15328 12.154 2.92868 12.2517 3.71148C12.4378 4.90993 12.4325 6.17273 12.3253 7.4693C11.9984 8.85554 10.4731 6.00077 10.3175 5.73175C9.34937 4.05645 8.62194 2.05516 7.55287 1.43906C6.68142 1.0561 5.60078 1.74817 5.8762 2.96244C5.92876 3.43824 6.83384 4.94791 7.76941 6.7266C8.23825 7.61805 8.65032 8.64982 9.09498 9.50751C9.28209 10.0709 9.05924 10.1236 8.69132 9.99913C6.90322 8.9315 5.46728 7.33743 3.55094 5.68744C2.63429 4.89832 1.03331 6.39006 1.86166 7.46824C3.27342 9.30601 5.07203 10.5562 6.63412 12.0004C7.47403 12.7769 7.07983 13.4331 5.83836 13.1799C4.28678 12.8623 2.85084 12.0795 1.29821 11.3622C1.09112 11.2662 0.824119 11.2503 0.612828 11.3379C-0.00317694 11.5921 -0.0935804 12.2209 0.074612 12.9225C0.1955 13.4289 0.557114 13.796 1.07851 14.0028C2.18122 14.4416 3.19563 14.8193 4.24789 15.4154C5.02578 15.8553 6.07803 16.7552 6.53635 17.5158C7.12398 18.4906 7.57284 19.4348 8.24981 20.1438C8.41695 20.3189 8.5862 20.4845 8.75755 20.6438ZM15.069 15.9439H14.0913C13.6246 15.9439 13.2514 15.9228 12.9666 15.8817C12.6806 15.8437 12.4347 15.7361 12.2234 15.562C12.0373 15.4112 11.8901 15.2181 11.785 14.9849C11.6799 14.7507 11.6263 14.4849 11.6263 14.1916C11.6263 13.9068 11.6767 13.6462 11.7766 13.413C11.8754 13.1788 12.0194 12.99 12.2065 12.8444C12.4525 12.6524 12.7038 12.5427 12.9645 12.51C13.2241 12.4773 13.5952 12.4625 14.0756 12.4625H15.0711V15.9439H15.069Z"/>
+                                  </svg>
+                                  Доброе дело</a>
+                              </li>
+                              <li>
+                                <a class="bonuses-header__link bonuses-header__link--gift" id="bonuses-gift-tab" data-toggle="pill" href="#bonuses-gift" role="tab" aria-controls="bonuses-gift" aria-selected="false">
+                                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.9995 9.5V19.5C20.9995 20.6 20.0995 21.5 18.9995 21.5H5.99951C4.89951 21.5 3.99951 20.6 3.99951 19.5V9.5" stroke-width="1.16667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M20.9995 9.49988H3.99951C3.44951 9.49988 2.99951 9.04988 2.99951 8.49988V6.49988C2.99951 5.94988 3.44951 5.49988 3.99951 5.49988H20.9995C21.5495 5.49988 21.9995 5.94988 21.9995 6.49988V8.49988C21.9995 9.04988 21.5495 9.49988 20.9995 9.49988Z" stroke-width="1.16667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.4995 5.5V21.5" stroke-width="0.583333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.9976 5.5C11.9976 5.5 10.9176 1.5 7.67763 1.5C4.43763 1.5 6.46763 5.5 8.75763 5.5" stroke-width="1.16667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.9995 5.5C12.9995 5.5 14.0795 1.5 17.3195 1.5C20.5595 1.5 18.5295 5.5 16.2395 5.5" stroke-width="1.16667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                  Получить подарок</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-content mt-4" id="pills-tabContent">
+
+                      <!-- bonuses section -->
+                      <div class="tab-pane fade show active" id="bonuses-yapomoga" role="tabpanel" aria-labelledby="bonuses-yapomoga-tab">
+
+                        <div class="row">
+                          <div class="col-12">
+                            <h3>Потратить Бонусы на Доброе Дело</h3>
+                          </div>
+                        </div>
+
+                        <div class="row mt-3">
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            <div class="bonuses-card bonuses-card--blue">
+                              <div class="bonuses-card__title">
+                                <h4>Будки для собак</h4>
+                              </div>
+                              <div class="bonuses-card__img">
+                                <img src="img/bonuses/card-images/batutu-keis.png" alt="Icon">
+                              </div>
+                              <div class="bonuses-card__text">
+                                <p>Собрано</p>
+                              </div>
+                              <div class="bonuses-card__hand">
+                                <img src="img/bonuses/two_hand/hand-026.png" alt="">
+                              </div>
+                              <div class="bonuses-card__amount">
+                                <span>26%</span>
+                              </div>
+                              <div class="bonuses-card__btn">
+                                <a target="_blank" href="#" class="btn btn-bonuses">Подарить Добро</a>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <div class="col-12 col-md-6 col-lg-4">
+                            <div class="bonuses-card bonuses-card--sky-blue">
+                              <div class="bonuses-card__title">
+                                <h4>Будки для собак</h4>
+                              </div>
+                              <div class="bonuses-card__img">
+                                <img src="img/bonuses/card-images/case_school.png" alt="Icon">
+                              </div>
+                              <div class="bonuses-card__text">
+                                <p>Собрано</p>
+                              </div>
+                              <div class="bonuses-card__hand">
+                                <img src="img/bonuses/one_hand/hand-052.png" alt="">
+                              </div>
+                              <div class="bonuses-card__amount">
+                                <span>52%</span>
+                              </div>
+                              <div class="bonuses-card__btn">
+                                <a target="_blank" href="#" class="btn btn-bonuses">Подарить Добро</a>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <div class="col-12 col-md-6 col-lg-4">
+                            <div class="bonuses-card bonuses-card--red">
+                              <div class="bonuses-card__title">
+                                <h4>Продукты для пожилых на время карантина</h4>
+                              </div>
+                              <div class="bonuses-card__img">
+                                <img src="img/bonuses/card-images/case_pets.png" alt="Icon">
+                              </div>
+                              <div class="bonuses-card__text">
+                                <p>Собрано</p>
+                              </div>
+                              <div class="bonuses-card__hand">
+                                <img src="img/bonuses/three_hand/hand-078.png" alt="">
+                              </div>
+                              <div class="bonuses-card__amount">
+                                <span>78%</span>
+                              </div>
+                              <div class="bonuses-card__btn">
+                                <a target="_blank" href="#" class="btn btn-bonuses">Подарить Добро</a>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="row mt-2 pb-2">
+                          <div class="col-12 text-center">
+                            <a href="#" class="btn btn-bonuses-more">Больше добрых дел</a>
+                          </div>
+                        </div>
+
+                        <div class="row mt-4">
+                          <div class="col">
+                            <h3>Как подарить Добро за Бонусы?</h3>
+                          </div>
+                          <div class="col-auto">
+                            <a href="#" class="btn btn-bonuses-link">О программе</a>
+                          </div>
+                        </div>
+
+                        <div class="row mt-2">
+
+                          <div class="col-12">
+                            <div class="bonuses-howto">
+
+                              <div class="row">
+
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                  <div class="bonuses-howto__card">
+                                    <div class="bonuses-howto__img">
+                                      <img src="img/bonuses/yapomoga-step1.png" alt="Icon">
+                                    </div>
+                                    <div class="bonuses-howto__text">
+                                      <p>Шаг 1</p>
+                                      <p>Выберите Доброе Дело</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <div class="bonuses-howto__card">
+                                    <div class="bonuses-howto__img">
+                                      <img src="img/bonuses/yapomoga-step2.png" alt="Icon">
+                                    </div>
+                                    <div class="bonuses-howto__text">
+                                      <p>Шаг 2</p>
+                                      <p>Нажмите на кнопку "Подарить Добро"</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div><!-- bonuses section -->
+
+                      <!-- gift section -->
+                      <div class="tab-pane fade" id="bonuses-gift" role="tabpanel" aria-labelledby="bonuses-gift-tab">
+
+                        <div class="row">
+                          <div class="col-12">
+                            <h3>Потратить Бонусы на Подарки</h3>
+                          </div>
+                        </div>
+
+                        <div class="row mt-3">
+
+                        </div>
+
+                      </div><!-- gift section -->
+
+                    </div>
+
+                  </div>                  
                   
                 </div><!-- account main widget -->
               </div>
@@ -378,5 +570,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
+    <script src="/js/account-bonuses.js"></script>
   </body>
 </html>
