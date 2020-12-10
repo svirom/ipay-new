@@ -21,6 +21,18 @@
     .alert {
       width: 26.25rem;
       margin-left: auto;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+
+      &.alert-people {
+        &::before{ 
+          top: 0.75rem;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -79,7 +91,9 @@
         right: 4.25rem;
       }
 
-      .help-block {
+      .help-block,
+      &.form-group.has-error .help-block,
+      &.form-group.has-success .help-block {
         padding-top: 1px;
         white-space: nowrap;
       }
@@ -274,13 +288,18 @@
       line-height: 1.3;
     }
   
-    &-form {  
+    &-form {
       .form-textarea {
         border-width: 3px;
-  
+      }
+
+      .form-textarea,
+      .form-group.has-error .form-textarea,
+      .form-group.has-success .form-textarea {
         & ~ .form-label {
           top: 3px;
           left: 3px;
+          font-size: 0.875rem;
         }
       }
     }
@@ -319,6 +338,7 @@
     .p2p-progress {
       position: absolute;
       height: 100%;
+      width: 0;
       top: 0;
       left: 0;
       border-top-left-radius: $border-radius;
@@ -326,38 +346,31 @@
       background-color: $main-blue;
       cursor: pointer;
       overflow: hidden;
+      @include transition(all, 1.2s);
 
-      &.progress-0, &.progress-7 {
-        width: 0;
-      }
 
       &.progress-1 {
         width: 16%;
       }
 
       &.progress-2 {
-        // width: 30%;
         width: 32%;
       }
 
       &.progress-3 {
-        // width: 45%;
         width: 48%;
       }
 
       &.progress-4 {
-        // width: 60%;
         width: 64%;
       }
 
       &.progress-5 {
-        // width: 75%;
         width: 80%;
       }
 
       &.progress-6 {
-        // width: 90%;
-        width: 0;
+        display: none;
       }
 
       span {
@@ -634,45 +647,33 @@
   .p2p-progress {
     position: absolute;
     height: 100%;
+    width: 0.75rem;
     top: 0;
     left: 0;
     background-color: $btn-green;
-
-    &.progress-0 {
-      width: 0.75rem;
-    }
+    @include transition(width, 0.8s);
 
     &.progress-1 {
-      // width: 15%;
       width: 16%;
     }
 
     &.progress-2 {
-      // width: 30%;
       width: 32%;
     }
 
     &.progress-3 {
-      // width: 45%;
       width: 48%;
     }
 
     &.progress-4 {
-      // width: 60%;
       width: 64%;
     }
 
     &.progress-5 {
-      // width: 75%;
       width: 80%;
     }
 
     &.progress-6 {
-      // width: 90%;
-      width: 100%;
-    }
-
-    &.progress-7 {
       width: 100%;
     }
   }
@@ -1373,4 +1374,9 @@ launch history styles
       padding-bottom: 0.5rem;
     }
   }
+}
+
+.field-p2pform-target_card_guid,
+.field-p2pform-invoice_currency {
+  display: none;
 }

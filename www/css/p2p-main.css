@@ -15,6 +15,16 @@
 .p2p__alert .alert {
   width: 26.25rem;
   margin-left: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.p2p__alert .alert.alert-people::before {
+  top: 0.75rem;
+}
+
+.p2p__alert .alert p {
+  margin-bottom: 0;
 }
 
 .p2p__card-wrapper {
@@ -78,7 +88,9 @@
   right: 4.25rem;
 }
 
-.p2p .bank-card__amount .help-block {
+.p2p .bank-card__amount .help-block,
+.p2p .bank-card__amount.form-group.has-error .help-block,
+.p2p .bank-card__amount.form-group.has-success .help-block {
   padding-top: 1px;
   white-space: nowrap;
 }
@@ -326,9 +338,12 @@
   border-width: 3px;
 }
 
-.p2p__notification-form .form-textarea ~ .form-label {
+.p2p__notification-form .form-textarea ~ .form-label,
+.p2p__notification-form .form-group.has-error .form-textarea ~ .form-label,
+.p2p__notification-form .form-group.has-success .form-textarea ~ .form-label {
   top: 3px;
   left: 3px;
+  font-size: 0.875rem;
 }
 
 .p2p__payment {
@@ -369,6 +384,7 @@
 .p2p__submit .p2p-progress {
   position: absolute;
   height: 100%;
+  width: 0;
   top: 0;
   left: 0;
   border-top-left-radius: 0.5rem;
@@ -376,10 +392,8 @@
   background-color: #7C9CAC;
   cursor: pointer;
   overflow: hidden;
-}
-
-.p2p__submit .p2p-progress.progress-0, .p2p__submit .p2p-progress.progress-7 {
-  width: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
 }
 
 .p2p__submit .p2p-progress.progress-1 {
@@ -403,7 +417,7 @@
 }
 
 .p2p__submit .p2p-progress.progress-6 {
-  width: 0;
+  display: none;
 }
 
 .p2p__submit .p2p-progress span {
@@ -646,13 +660,12 @@
 .p2p-progressbar .p2p-progress {
   position: absolute;
   height: 100%;
+  width: 0.75rem;
   top: 0;
   left: 0;
   background-color: #09BC8A;
-}
-
-.p2p-progressbar .p2p-progress.progress-0 {
-  width: 0.75rem;
+  -webkit-transition: width 0.8s ease;
+  transition: width 0.8s ease;
 }
 
 .p2p-progressbar .p2p-progress.progress-1 {
@@ -676,10 +689,6 @@
 }
 
 .p2p-progressbar .p2p-progress.progress-6 {
-  width: 100%;
-}
-
-.p2p-progressbar .p2p-progress.progress-7 {
   width: 100%;
 }
 
@@ -1415,5 +1424,10 @@ launch history styles
     padding-top: 2.5rem;
     padding-bottom: 0.5rem;
   }
+}
+
+.field-p2pform-target_card_guid,
+.field-p2pform-invoice_currency {
+  display: none;
 }
 /*# sourceMappingURL=p2p-main.css.map */
