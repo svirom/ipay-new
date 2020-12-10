@@ -332,7 +332,7 @@
                               <div class="form-group bank-card__cvv required">
                                 <input type="password" class="form-control form-input filled" id="p2pform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true" value="123">
                                 <label class="control-label form-label" for="p2pform-sender_card_cvv">CVV</label>
-                                <button type="button" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-original-title="" title=""></button>
+                                <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты"></a>
                                 <div class="help-block"></div>
                               </div>
                             </div>
@@ -405,7 +405,7 @@
                                 <input type="tel" class="form-control form-input input-icon-right" id="p2pform-invoice" name="P2pForm[invoice]" tabindex="7" required="required" min="5" max="25000" minlength="1" pattern="[0-9+-]{1,}" autocomplete="off" placeholder="0.00" aria-required="true">
                                 <label class="control-label form-label" for="p2pform-invoice">Сумма</label>
                                 <label class="label-icon-right label-currency">грн</label>
-                                <button type="button" class="bank-card__cvv-button" id="invoice-popover" data-toggle="popover"></button>
+                                <a role="button" tabindex="0" class="bank-card__cvv-button" id="invoice-popover" data-toggle="popover" data-content="Вы можете посчитать сумму перевода прямо в поле. Например, 700+450-150"></a>
                                 <div class="help-block">Сумма перевода должна быть больше 5</div>
                               </div>
                               <div class="form-group bank-card__descr">
@@ -446,7 +446,7 @@
                               </span>
                             </button>
                           </div>
-                          <span class="p2p__bonuses-text"><span class="bonus-i18n" data-i18n-zero="бонусов" data-i18n-one="бонус" data-i18n-many="бонуса">бонусов</span> добра <button type="button" class="bonus-tooltip" id="bonus-tooltip" data-toggle="popover"></button></span>
+                          <span class="p2p__bonuses-text"><span class="bonus-i18n" data-i18n-zero="бонусов" data-i18n-one="бонус" data-i18n-many="бонуса">бонусов</span> добра <a role="button" tabindex="0" class="bonus-tooltip" id="bonus-tooltip" data-toggle="popover" data-title="Что такое Бонусы Добра?" data-content='Это бонусы, которые Вы накапливаете в личном кабинете на сервисе iPay.ua при совершении платежей или переводе денег с карты на карту.<br><br> <a href="https://ipay-v4.romaniuk.office.udc.ua/ru/yapomoga" target="_blank">Подробнее</a>'></a></span>
                         </div>
                       </div>
 

@@ -854,7 +854,10 @@ label {
   content: '';
   width: 1px;
   height: 50%;
+  top: 50%;
   right: 3.75rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   background-color: #F0F5FA;
 }
 
@@ -2580,6 +2583,7 @@ label {
 
 .bank-card__cvv-button {
   position: absolute;
+  display: inline-block;
   width: 16px;
   height: 16px;
   right: 1.125rem;
@@ -2595,6 +2599,7 @@ label {
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
+  cursor: pointer;
 }
 
 .bank-card__cvv-button:focus {

@@ -182,7 +182,9 @@
           content: '';
           width: 1px;
           height: 50%;
+          top: 50%;
           right: 3.75rem;
+          @include transform(translateY(-50%));
           background-color: $light-grey;
         }
       }
