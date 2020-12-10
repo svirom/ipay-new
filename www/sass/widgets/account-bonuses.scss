@@ -141,6 +141,10 @@
       font-weight: 500;
       color: #ffffff;
       background-color: $blue;
+
+      &.btn-bonuses-gift {
+        background-color: $btn-red;
+      }
     }
 
     &.btn-bonuses-link {
@@ -162,7 +166,14 @@
 
     &__card {
       display: flex;
+      height: 100%;
       align-items: center;
+    }
+
+    &__img {
+      flex-shrink: 0;
+      width: 2.625rem;
+      text-align: center;
     }
 
     &__text {
@@ -296,6 +307,87 @@
       &.btn-bonuses {
         background-color: #ff998a;
       }
+    }
+  }
+}
+
+.gift-card {
+  display: flex;
+  flex-direction: column;
+  height: 17.8125rem;
+  padding: 1.5rem 1.25rem;
+  border: 3px solid $middle-grey;
+  border-radius: $border-radius;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10.5rem;
+    margin-bottom: 0.5rem;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  p {
+    &.gift-card__amount, span {
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: $btn-red;
+    }
+
+    &.gift-card__description {
+      margin-bottom: 0.5rem;
+      color: $heading-color;
+    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__description {
+    max-height: 2.375rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  @include until($md) {
+    flex-direction: row;
+    height: auto;
+    padding: 1.5rem;
+
+    &__img {
+      margin-bottom: 0;
+      height: 5rem;
+      width: 5rem;
+      flex-basis: 5rem;
+    }
+
+    &__text {
+      padding-left: 1rem;
+      text-align: left;
+    }
+
+    &__description {
+      max-height: none;
+      -webkit-line-clamp: initial;
+      line-clamp: initial;
     }
   }
 }
