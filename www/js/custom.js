@@ -76,23 +76,16 @@ $(document).ready(function() {
   $("#cvv-popover").popover(popoverOptions);
 
   // search input mobile
-  $('.input-search').on('focus', function() {
-    $(this).closest('.form-search').addClass('focused');
-  })
-
-  $('.input-search').on('blur', function() {
-    $(this).hasClass('filled') ? '' : $(this).closest('.form-search').removeClass('focused');
-    //$(this).closest('.form-search').removeClass('focused');
-  })
+  if (docWidth < 992) {
+    $('.modal .input-search').addClass('filled');
+  }
 
   // search cancel button, hide modal
   $('.form-search__cancel').on('click', searchCancel);
   $('#searchModal').on('hidden.bs.modal', searchCancel);
 
   function searchCancel() {
-    $(this).closest('.form-search')
-    .removeClass('focused')
-    .find('.input-search').removeClass('filled').val('');
+    $(this).closest('.form-search').find('.input-search').removeClass('filled').val('');
   }
 
 })

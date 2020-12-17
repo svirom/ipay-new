@@ -2,21 +2,8 @@
 // This file contains all styles related to the search component.
 // -----------------------------------------------------------------------------
 
-.modal-content {
-  border-color: transparent;
-}
-
-.form-search-mobile {
-  padding: 1rem 15px;
-  background-color: $heading-color;
-}
-
 .form-search {
   position: relative;
-
-  &__title {
-    display: none;
-  }
 
   .form-group {
     margin-bottom: 0;
@@ -58,16 +45,6 @@
           display: block;
         }
       }
-      // class for style guide
-      &.focused {
-        @include placeholder {
-          opacity: 1;
-        }
-
-        & ~ .form-label {
-          font-size: 0.77777rem;
-        }
-      }
     }
   }
 
@@ -104,7 +81,7 @@
     }
   }
 
-  // search result list
+  /* search result list */
   &__list {
     position: absolute;
     top: 4.5rem;
@@ -242,38 +219,92 @@
         }
       }
     }
-    
-    &.focused {
-      padding: 1rem 0.5rem;
-      // box-shadow: 0px 5px 20px $box-shadow;
+  }
+}
 
-      .form-search__title {
-        display: block;
-        color: #fff;
+#searchModal {
+  .modal-content {
+    border-color: transparent;
+  }
+
+  .modal-header {
+    display: none;
+    position: relative;
+  }
+
+  form {
+    position: relative;
+  }
+
+  @include until($lg) {
+    background-color: #ffffff;
+
+    .modal-dialog {
+      margin: 0 auto;
+    }
+
+    .modal-header {
+      display: block;
+      padding: 0.6rem 1rem;
+      border-bottom: 0;
+
+      h5 {
+        font-family: $text-font;
+        @include font(1.25rem, 700, 1.465);
       }
 
-      .form-input {
-        &.input-search {
-          &:focus, &.filled {  
-            & ~ .form-search__cancel {
-              display: block;
-              top: -2.625rem;
-              height: 2.5rem;
-              width: 2.5rem;
-              background-size: 20px;
-            }
-          }
-    
-          .form-search__search {
-            background-size: 22px;
-          }
-        }
+      .close {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        @include transform(translateY(-50%));
+        margin: 0;
+        opacity: 1;
+        padding: 0;
+        font-size: 2.375rem;
+        font-weight: 300;
+        color: $heading-color;
+        background-image: none;
+        outline: none;
+      }
+    }
+
+    .form-search {
+      padding: 0 1rem 1rem;
+
+      &__cancel {
+        display: none;
+      }
+    }
+  }
+  
+}
+
+.form-search-mobile {
+  padding: 1rem 15px;
+  padding: 0.5rem 0;
+  background-color: $heading-color;
+
+  .form-search {
+    &__search {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0.563rem 2.625rem;
+      color: $main-blue;
+      border-radius: $border-radius;
+      box-shadow: 0 4px 20px $card-shadow;
+      background-color: #ffffff;
+      background-position: left 0.6rem center;
+
+      &:hover {
+        text-decoration: none;
       }
     }
   }
 }
 
-// input search list
+/* input search list */
 .input-search {
   position: relative;
 

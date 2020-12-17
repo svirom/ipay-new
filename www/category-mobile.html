@@ -190,40 +190,17 @@
       </div>
     </header><!-- header -->
 
-    <!-- p2p menu mobile -->
-    <div class="nav-p2p-wrapper">
-      <div class="container">
-        <div class="dropdown">
-          <div class="row">
-            <div class="col-12 nav-p2p">
-              <a href="#" class="nav-p2p-item nav-dropdown-p2p-tel" role="button" id="nav-dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег по номеру телефона</span></a>
-              <div class="dropdown-menu" aria-labelledby="nav-dropdown-p2p">
-                <a class="dropdown-item dropdown-p2p" href="#">Перевод денег с карты на карту</a>
-                <a class="dropdown-item dropdown-p2p-tel active" href="#">Перевод денег по номеру телефона</a>
-                <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
-                <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- p2p menu mobile -->
-
     <!-- main wrapper -->
     <div class="main-wrapper">
 
       <!-- search form mobile -->
       <div class="d-lg-none form-search-mobile">
-        <div class="form-search">
-          <h3 class="form-search__title">Поиск</h3>
-          <form action="">
-            <div class="form-group">
-              <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-              <label class="control-label form-label" for="search-icon">Поиск услуги</label>
-              <a href="#" class="form-search__search"></a>
-              <a href="#" class="form-search__cancel"></a>
-             </div>
-          </form>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="#" class="form-search__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -790,6 +767,10 @@
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Поиск</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          </div>
           <div class="form-search">
             <form action="">
               <div class="form-group">
