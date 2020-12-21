@@ -32,55 +32,56 @@ button, input, optgroup, select, textarea, label, a {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
-h1 {
+h1, .h1 {
   font-size: 1.625rem;
   line-height: 1.2308;
 }
 
 @media screen and (max-width: 767px) {
-  h1 {
+  h1, .h1 {
     font-size: 1.5rem;
   }
 }
 
-h2 {
+h2, .h2 {
   font-size: 1.5rem;
   line-height: 1.2084;
 }
 
 @media screen and (max-width: 767px) {
-  h2 {
+  h2, .h2 {
     font-size: 1.3125rem;
   }
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.25rem;
   line-height: 1.2;
 }
 
 @media screen and (max-width: 767px) {
-  h3 {
+  h3, .h3 {
     font-size: 1rem;
   }
 }
 
-h4 {
+h4, .h4 {
   font-size: 1.125rem;
   line-height: 1.2223;
 }
 
 @media screen and (max-width: 767px) {
-  h4 {
+  h4, .h4 {
     font-size: 1rem;
   }
 }
 
-h5 {
+h5, .h5 {
   font-size: 1rem;
   line-height: 1.25;
 }

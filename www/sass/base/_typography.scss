@@ -10,11 +10,12 @@ button, input, optgroup, select, textarea, label, a {
   font-family: $text-font;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+  font-family: $heading-font;
   font-weight: bold;
 }
 
-h1 {
+h1, .h1 {
   font-size: 1.625rem; // 26px
   line-height: 1.2308; // 32px
 
@@ -23,7 +24,7 @@ h1 {
   }
 }
 
-h2 {
+h2, .h2 {
   font-size: 1.5rem; // 24px
   line-height: 1.2084; // 29px
 
@@ -32,7 +33,7 @@ h2 {
   }
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.25rem; // 20px
   line-height: 1.2; // 24px
 
@@ -41,7 +42,7 @@ h3 {
   }
 }
 
-h4 {
+h4, .h4 {
   font-size: 1.125rem; // 18px
   line-height: 1.2223; // 22px
 
@@ -50,7 +51,7 @@ h4 {
   }
 }
 
-h5 {
+h5, .h5 {
   font-size: 1rem;
   line-height: 1.25;
 }
