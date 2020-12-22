@@ -80,7 +80,7 @@
 
 .form-input {
   position: relative;
-  padding: 2.026rem 1.0775rem 1.1rem;
+  padding: 2.026rem 2.5rem 1.1rem 1.0775rem;
   border: 3px solid $middle-grey;
   border-radius: $border-radius;
   color: $heading-color;
@@ -93,6 +93,9 @@
   @include transition(all, 0.3s);
   background-repeat: no-repeat;
   background-position: right 1.1rem center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &:focus, &.filled {
     @include placeholder {
@@ -125,7 +128,7 @@
   }
 
   &.input-icon-left {
-    padding: 2.026rem 1.1rem 1.0775rem 3.75rem;
+    padding: 2.026rem 2.5rem 1.0775rem 3.75rem;
 
     &~.label-icon-left {
       position: absolute;

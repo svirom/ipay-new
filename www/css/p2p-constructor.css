@@ -1,0 +1,233 @@
+.p2p.p2c .p2c__title {
+  font-weight: bold;
+}
+
+.p2c {
+  padding-top: 1rem;
+}
+
+.p2c .p2p__card-title {
+  padding-left: 15px;
+}
+
+.p2c__card-wrapper {
+  width: 26.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p2c__card {
+  margin-bottom: 2rem;
+}
+
+.p2c__contact-info {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
+.p2c__contact-info .form-group.has-error .p2c__contact-text {
+  margin-top: 1.875rem;
+}
+
+.p2c__contact-text {
+  margin-top: 0.25rem;
+  padding-left: 1.25rem;
+}
+
+.p2c .form-input.p2c-input::-webkit-input-placeholder {
+  color: #7C9CAC;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.p2c .form-input.p2c-input:-ms-input-placeholder {
+  color: #7C9CAC;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.p2c .form-input.p2c-input::-ms-input-placeholder {
+  color: #7C9CAC;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.p2c .form-input.p2c-input::placeholder {
+  color: #7C9CAC;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.p2c .form-input.p2c-input:focus::-webkit-input-placeholder, .p2c .form-input.p2c-input.filled::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.p2c .form-input.p2c-input:focus:-ms-input-placeholder, .p2c .form-input.p2c-input.filled:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.p2c .form-input.p2c-input:focus::-ms-input-placeholder, .p2c .form-input.p2c-input.filled::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.p2c .form-input.p2c-input:focus::placeholder, .p2c .form-input.p2c-input.filled::placeholder {
+  opacity: 1;
+}
+
+.p2c .form-input.p2c-input ~ .form-label {
+  color: #3B566E;
+}
+
+.p2c__fields {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
+}
+
+.p2c__field-wrapper:first-of-type .p2c__field {
+  border-top: 2px dashed #DEE7F3;
+}
+
+.p2c__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  border-bottom: 2px dashed #DEE7F3;
+}
+
+.p2c__field-text {
+  color: #172A3A;
+}
+
+.p2c__field-btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.p2c__field-btn svg {
+  stroke: #172A3A;
+}
+
+.p2c__field-btn:hover svg {
+  stroke: #3B566E;
+}
+
+.p2c__field-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.p2c__field-input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+}
+
+.p2c .p2c-field-add {
+  margin-left: 0.8125rem;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.2661 1.6521V20.5722' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.0254 11.1121H1.50684' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1199px) {
+  .p2c__card-wrapper {
+    width: 23.125rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .p2c .p2p__card-title {
+    max-width: 26.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  .p2c__card-wrapper {
+    width: auto;
+    max-width: 26.25rem;
+  }
+  .p2c__card-wrapper--payment {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .p2c .p2p__card-title {
+    max-width: 22.5rem;
+  }
+  .p2c__card-wrapper {
+    max-width: 20.625rem;
+  }
+  .p2c__card-wrapper--payment {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .p2c__contact-info {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.p2c-mastercard img {
+  width: 10rem;
+}
+
+.p2c-service {
+  padding-top: 2.75rem;
+}
+
+@media screen and (max-width: 991px) {
+  .p2c-service {
+    padding-top: 1.5rem;
+  }
+}
+
+.p2c-service-cards {
+  padding-top: 3.1875rem;
+}
+
+.p2c-service-card {
+  text-align: center;
+}
+
+.p2c-service-card__img {
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=p2p-constructor.css.map */

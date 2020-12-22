@@ -708,7 +708,7 @@ label {
 
 .form-input {
   position: relative;
-  padding: 2.026rem 1.0775rem 1.1rem;
+  padding: 2.026rem 2.5rem 1.1rem 1.0775rem;
   border: 3px solid #DEE7F3;
   border-radius: 0.5rem;
   color: #172A3A;
@@ -719,6 +719,9 @@ label {
   transition: all 0.3s ease;
   background-repeat: no-repeat;
   background-position: right 1.1rem center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .form-input::-webkit-input-placeholder {
@@ -790,7 +793,7 @@ label {
 }
 
 .form-input.input-icon-left {
-  padding: 2.026rem 1.1rem 1.0775rem 3.75rem;
+  padding: 2.026rem 2.5rem 1.0775rem 3.75rem;
 }
 
 .form-input.input-icon-left ~ .label-icon-left {
@@ -2267,6 +2270,8 @@ label {
 
 .template-card__text {
   color: #172A3A;
+  word-break: break-all;
+  max-width: 80%;
 }
 
 .template-card .dropdown-menu {
