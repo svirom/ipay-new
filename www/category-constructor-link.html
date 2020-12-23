@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/p2p-main.css">
     <link rel="stylesheet" href="/css/p2p-constructor.css">
 
-    <title>Category P2P Constructor</title>
+    <title>Category P2P Constructor Link</title>
   </head>
   <body>
 
@@ -257,20 +257,24 @@
                       <div class="p2p__card p2c__card">
                         <div class="bank-card">
                           <div class="bank-card__header">
-                            <div class="bank-card__bank"></div>
-                            <div class="bank-card__type"></div>
+                            <div class="bank-card__bank">
+                              <img src="/img/banks/otp.png" alt="">
+                            </div>
+                            <div class="bank-card__type">
+                              <img src="/img/banks/mastercard.png" alt="">
+                            </div>
                           </div>
                           <div class="bank-card__body">
                             <div class="bank-card__number">
-                              <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="p2pform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="tel" class="form-control form-input filled" id="p2pform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="5168 1111 4534 6789">
                                 <label class="control-label form-label" for="p2pform-sender_card_pan">Номер карты</label>
                                 <div class="help-block"></div>
                               </div>
                             </div>
                             <div class="bank-card__name">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-input" id="Тemplatep2p-target_fio" name="name" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="text" class="form-control form-input filled" id="Тemplatep2p-target_fio" name="name" autocomplete="off" placeholder="" aria-required="true" value="Конотоповенко Виталий Викторович">
                                 <label class="control-label form-label" for="Тemplatep2p-target_fio">ФИО получателя<span class="red-color">*</span></label>
                               </div>
                             </div>
@@ -279,15 +283,15 @@
                       </div>
 
                       <div class="p2c__contact-info">
-                        <div class="form-group required">
-                          <input type="email" class="form-control form-input" id="Тemplatep2p-notification_email" name="ТemplateP2p[notification_email]" aria-required="true" aria-invalid="false" placeholder="">
+                        <div class="form-group required has-success">
+                          <input type="email" class="form-control form-input filled" id="Тemplatep2p-notification_email" name="ТemplateP2p[notification_email]" aria-required="true" aria-invalid="false" placeholder="" value="konotopovenko@gmail.com">
                           <label class="control-label form-label" for="p2pform-sender_phone">Email<span class="red-link">*</span></label>
                           <div class="help-block"></div>
                           <p class="p2c__contact-text">Для отчетов и уведомлений</p>
                         </div>
                         
-                        <div class="form-group mb-4">
-                          <input type="tel" class="form-control form-input" id="Тemplatep2p-notification_phone" name="ТemplateP2p[notification_phone]" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
+                        <div class="form-group mb-4 has-success">
+                          <input type="tel" class="form-control form-input filled" id="Тemplatep2p-notification_phone" name="ТemplateP2p[notification_phone]" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00" value="+380 (67) 999 88 77">
                           <label class="control-label form-label" for="p2pform-sender_phone">Телефон получателя</label>
                           <div class="help-block">Введите номер телефона</div>
                         </div>
@@ -303,11 +307,11 @@
 
                       <div class="p2c__payment-info">
                         <div class="form-group mb-4">
-                          <input type="text" id="Тemplatep2p-destination" class="form-control form-input p2c-input filled" name="ТemplateP2p[destination]" autocomplete="off" placeholder="Например, “Сбор средств на подарок”" aria-invalid="false">
+                          <input type="text" id="Тemplatep2p-destination" class="form-control form-input p2c-input filled" name="ТemplateP2p[destination]" autocomplete="off" placeholder="Например, “Сбор средств на подарок”" aria-invalid="false" value="Сбор средств на пожертвование в детский дом">
                           <label class="control-label form-label" for="Тemplatep2p-destination">Назначение перевода</label>
                         </div>
                         <div class="form-group">
-                          <input type="tel" class="form-control form-input input-icon-right" id="Тemplatep2p-invoice" name="ТemplateP2p[invoice]" required="required" pattern="[0-9+-]{1,}" autocomplete="off" placeholder="0.00" aria-required="true">
+                          <input type="tel" class="form-control form-input input-icon-right filled" id="Тemplatep2p-invoice" name="ТemplateP2p[invoice]" required="required" pattern="[0-9+-]{1,}" autocomplete="off" placeholder="0.00" aria-required="true" value="100">
                           <label class="control-label form-label" for="Тemplatep2p-invoice">Сумма взноса</label>
                           <label class="label-icon-right label-currency">грн</label>
                         </div>
@@ -318,21 +322,21 @@
                         <p><small>Если Вам нужно собрать деньги с группы людей, Вы можете создать дополнительные поля, которые заполнят отправители.</small></p>
                         <div class="p2c__fields-more" id="p2c__fields-more">
                           
-                          <!-- <div class="p2c__field-wrapper">
-                            <input type="hidden" name="" value="">
+                          <div class="p2c__field-wrapper" id="add-1">
+                            <input type="hidden" name="Fields[0]" value="ФИО">
                             <div class="p2c__field">
                               <span class="p2c__field-text">ФИО</span>
                               <span class="p2c__field-btn"></span>
                             </div>
-                          </div> -->
+                          </div>
 
-                          <!-- <div class="p2c__field-wrapper">
-                            <input type="hidden" name="" value="">
+                          <div class="p2c__field-wrapper" id="add-2">
+                            <input type="hidden" name="Fields[1]" value="Группа">
                             <div class="p2c__field">
                               <span class="p2c__field-text">Группа</span>
                               <span class="p2c__field-btn"></span>
                             </div>
-                          </div> -->
+                          </div>
 
                           <div class="p2c__field-add">
                             <div class="p2c__field-input">
@@ -346,7 +350,7 @@
                       </div>
 
                       <div class="p2c__submit">
-                          <button type="submit" class="btn btn-green btn-block btn-link-builder" disabled>Создать ссылку</button>
+                          <button type="submit" class="btn btn-green btn-block btn-link-builder">Обновить ссылку</button>
                       </div>
 
                     </div>
@@ -355,6 +359,45 @@
                 </div>
 
               </form>
+
+              <!-- <div class="row justify-content-center">
+                <div class="col-lg-10"> -->
+
+                  <div class="p2c-link">
+
+                    <div class="row justify-content-center">
+                      <div class="col-12 text-center">
+                        <h4>Ваша ссылка готова!</h4>
+                        <p>Скопируйте эту ссылку и отправьте ее для получения перевода</p>
+                      </div>
+                      <div class="col-lg-9 col-xl-8">
+                        <div class="p2c-link__generated">
+                          <div class="p2c-link__input">
+                            <div class="form-group mb-0">
+                              <input type="text" class="form-control form-input input-icon-left p2c-input filled" id="link-generated" value="https://www.ipay.ua/ru/p2p/default/constructor/7c773571d74ddc1eae30633468948b09" onfocus="this.select()">
+                              <label class="control-label form-label" for="field-add">Ссылка</label>
+                              <label class="label-icon-left"></label>
+                            </div>
+                          </div>
+                          <div class="p2c-link__btn">
+                            <a role="button" class="btn btn-green btn-empty btn-link-generated" data-clipboard-target="#link-generated" title="Скопировать ссылку">
+                              <span>
+                                <span class="p2c-link__btn-text" style="padding-left: 36px">Скопировать ссылку</span>
+                              </span>
+                            </a>
+                            <span class="clipboard">Скопировано!</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                <!-- </div>
+              </div> -->
+
+              <!-- p2c link section -->
+              <!-- p2c link section -->
 
               <div class="row justify-content-center p2c-mastercard pt-4">
                 <div class="col text-center">
