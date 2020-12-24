@@ -27,7 +27,12 @@ $(document).ready(function() {
         html += '</div>';
         html += '</div>';
 
-    $('.p2c__field-add').before(html);
+    if (fieldTitle) {
+      $('#field-add').nextAll('.p2c__field-error').removeClass('active');
+      $('.p2c__field-add').before(html);
+    } else {
+      $('#field-add').nextAll('.p2c__field-error').addClass('active');
+    }
 
     $('#field-add').val('');
 
@@ -46,7 +51,7 @@ $(document).ready(function() {
   // clipboard plugin initiate
   var clipboard = new ClipboardJS('.btn-link-generated');
 
-  clipboard.on('success', function(event) {
+  clipboard.on('success', function(e) {
 
     $('.p2c-link__btn span').addClass('copied');
 
@@ -56,7 +61,7 @@ $(document).ready(function() {
       $('.p2c-link__btn span').removeClass('copied');
     }
 
-    event.clearSelection();
+    e.clearSelection();
   });
 
 })

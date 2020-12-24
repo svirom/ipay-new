@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/p2p-main.css">
     <link rel="stylesheet" href="/css/p2p-menu-mobile.css">
+    <link rel="stylesheet" href="/css/p2p-constructor.css">
 
-    <title>Category P2P 1-2</title>
+    <title>Category Constructor P2P</title>
   </head>
   <body>
 
@@ -232,7 +233,7 @@
       </nav><!-- breadcrumb widget -->
 
       <!-- main area & p2p main widget -->
-      <main class="p2p" id="p2p-widget">
+      <main class="p2p p2c" id="p2p-widget">
 
         <!-- p2p main section -->
 
@@ -267,17 +268,8 @@
               </div>
 
               <div class="row">
-                <div class="col-lg">
-                  <h1>Перевод денег с карты на карту</h1>
-                  <p>Мгновенные переводы с карты на карту любого банка Украины</p>
-                </div>
-                <div class="col-lg-5 p2p__alert d-none d-lg-block">
-                  <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
-                    <strong>11 человек</strong> оплачивают услугу прямо сейчас
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                  </div>
+                <div class="col-lg mb-4">
+                  <h1>Сбор средств на пожертвование в детский дом</h1>
                 </div>
               </div>
 
@@ -285,11 +277,11 @@
 
                 <div class="row justify-content-between">
 
-                  <div class="col-lg-5 mt-3 mt-lg-0">
+                  <div class="col-lg-5">
 
                     <div class="p2p__card-wrapper">
 
-                      <div class="p2p__card-title">С карты</div>
+                      <div class="p2p__card-title p2c__card-title mb-2 pl-0">Отправитель</div>
 
                       <div class="p2p__card p2p__card--sender">
                         <div class="bank-card">
@@ -329,10 +321,23 @@
                       <div class="p2p__sender-phone">
                         <div class="form-group required has-success">
                           <input type="tel" class="form-control form-input filled" id="p2pform-sender_phone" name="P2pForm[sender_phone]" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00" value="+380 (67) 999 88 77">
-                          <label class="control-label form-label" for="p2pform-sender_phone">Номер телефона*</label>
+                          <label class="control-label form-label" for="p2pform-sender_phone">Номер телефона<span class="red-color">*</span></label>
                           <div class="help-block">Введите номер телефона</div>
                         </div>
                         <p>Для возможности обратной связи</p>
+                      </div>
+
+                      <div class="p2c__additional-fields">
+                        <div class="form-group required has-success mb-4">
+                          <input type="text" class="form-control form-input filled" id="p2p-form-add-1" name="" aria-required="true" aria-invalid="false" placeholder="" value="Николай Ваcильев">
+                          <label class="control-label form-label" for="p2p-form-add-1">ФИО<span class="red-color">*</span></label>
+                          <div class="help-block">Введите ФИО</div>
+                        </div>
+                        <div class="form-group required has-success">
+                          <input type="text" class="form-control form-input filled" id="p2p-form-add-2" name="" aria-required="true" aria-invalid="false" placeholder="" value="Домоуправление №24">
+                          <label class="control-label form-label" for="p2p-form-add-2">Группа<span class="red-color">*</span></label>
+                          <div class="help-block">Введите Группу</div>
+                        </div>
                       </div>
 
                       <div class="p2p__security d-none d-lg-flex" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
@@ -369,7 +374,8 @@
 
                     <div class="p2p__card-wrapper p2p__card-wrapper--receiver">
 
-                      <div class="p2p__card-title">На карту</div>
+                      <div class="p2p__card-title mb-2 pl-0">Получатель</div>
+                      <p class="p2c__card-subtitle mb-2">Конотоповенко Виталий Викторович</p>
 
                       <div class="p2p__card p2p__card--receiver">
                         <div class="bank-card">
@@ -384,10 +390,8 @@
                           <div class="bank-card__body">
                             <div class="bank-card__number">
                               <div class="form-group required has-success">
-                                <input type="tel" class="form-control form-input filled" id="p2pform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="5167 5654 6789 8900">
+                                <input type="tel" class="form-control form-input filled" id="p2pform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="5167 5654 6789 8900" disabled>
                                 <label class="control-label form-label" for="p2pform-target_card_pan">Номер карты</label>
-                                <div class="help-block"></div>
-                                <p class="target-text-info" style="display: block;">Эта карта может принимать переводы <strong>мгновенно</strong></p>
                               </div>
                             </div>
                             <div class="bank-card__invoice">
@@ -403,40 +407,7 @@
                                 <p class="bank-card__commission" id="commission" data-text="грн">15.00 грн</p>
                               </div>
                             </div>
-                            <div class="bank-card__checkbox">
-                              <div class="form-group">
-                                <div class="checkbox-control">
-                                  <input class="checkbox-input" type="checkbox" id="checkbox-inp">
-                                  <label class="checkbox-label" for="checkbox-inp">Комиссия за счет получателя</label>
-                                </div>
-                              </div>
-                            </div>
                           </div>
-                        </div>
-                      </div>
-
-                      <div class="p2p__bonuses">
-                        <span class="p2p__bonuses-title">За этот платеж вы получите не менее</span>
-                        <div class="p2p__bonuses-amount">
-                          <div class="p2p__bonuses-count">
-                            <button type="button" class="p2p__bonuses-minus" disabled>
-                              <span>
-                                <svg width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.7826 6.05225H1.44922" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                              </span>
-                            </button>
-                            <span class="p2p__bonuses-number bonus-value">9999</span>
-                            <button type="button" class="p2p__bonuses-plus">
-                              <span>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.11572 1.38574V12.7191" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M12.7826 7.05225H1.44922" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                  </svg>
-                              </span>
-                            </button>
-                          </div>
-                          <span class="p2p__bonuses-text"><span class="bonus-i18n" data-i18n-zero="бонусов" data-i18n-one="бонус" data-i18n-many="бонуса">бонусов</span> добра <a role="button" tabindex="0" class="bonus-tooltip" id="bonus-tooltip" data-toggle="popover" data-title="Что такое Бонусы Добра?" data-content='Это бонусы, которые Вы накапливаете в личном кабинете на сервисе iPay.ua при совершении платежей или переводе денег с карты на карту.<br><br> <a href="https://ipay-v4.romaniuk.office.udc.ua/ru/yapomoga" target="_blank">Подробнее</a>'></a></span>
                         </div>
                       </div>
 
@@ -471,7 +442,6 @@
 
                       <div class="p2p__submit">
                           <button type="submit" class="btn btn-green btn-block button-transfer go-to-pay">Перевести</button>
-                          <div class="p2p-progress"><span>Перевести</span></div>
                       </div>
 
                       <div class="text-center mt-3">
@@ -1016,5 +986,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
     <script src="/js/p2p-main.js"></script>
+    <script src="/js/p2p-constructor.js"></script>
   </body>
 </html>

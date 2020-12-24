@@ -2,12 +2,31 @@
   font-weight: bold;
 }
 
+.p2p.p2c .p2p__sender-phone {
+  margin-bottom: 0;
+}
+
 .p2c {
   padding-top: 1rem;
 }
 
 .p2c .p2p__card-title {
   padding-left: 15px;
+}
+
+.p2c .form-group.has-success .form-input:disabled {
+  border-color: #F0F5FA;
+}
+
+.p2c__card-title {
+  padding-top: 1.8125rem;
+}
+
+.p2c__card-subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.17;
+  color: #172A3A;
 }
 
 .p2c__card-wrapper {
@@ -133,6 +152,20 @@
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.2778 10.7219L10.7218 21.278' stroke='%233B566E' stroke-width='1.66667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.2783 21.278L10.7222 10.7219' stroke='%233B566E' stroke-width='1.66667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M30.9998 16.0001C30.9998 24.2844 24.2841 31.0001 15.9998 31.0001C7.71557 31.0001 0.999837 24.2844 0.999837 16.0001C0.999837 7.71581 7.71557 1.00008 15.9998 1.00008C24.2841 1.00008 30.9998 7.71581 30.9998 16.0001Z' stroke='%233B566E' stroke-width='1.66667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
+.p2c__field-error {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  color: #E84F35;
+}
+
+.p2c__field-error.active {
+  display: block;
+}
+
 .p2c__field-add {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,6 +195,10 @@
   background-repeat: no-repeat;
 }
 
+.p2c__additional-fields {
+  margin-bottom: 2.0625rem;
+}
+
 @media screen and (max-width: 1199px) {
   .p2c__card-wrapper {
     width: 23.125rem;
@@ -175,6 +212,9 @@
     margin-right: auto;
     margin-bottom: 0;
     padding-left: 0;
+  }
+  .p2c__card-title {
+    padding-top: 0;
   }
   .p2c__card-wrapper {
     width: auto;
