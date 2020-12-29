@@ -8,13 +8,15 @@
   top: -48px;
   left: 50%;
   -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
 .bill-result__row {
   position: relative;
   line-height: 1.1875rem;
-  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
   -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
           box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #fff;
@@ -50,25 +52,31 @@
 
 .bill-result__buttons {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   padding-top: 0.75rem;
   padding-bottom: 1.5rem;
 }
 
 .bill-result__buttons form {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding-left: 1rem;
@@ -100,6 +108,7 @@
   .bill-result__buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -118,26 +127,30 @@
 }
 
 .bill-result__success-message {
-  -ms-flex-preferred-size: 31.75rem;
-      flex-basis: 31.75rem;
+  -webkit-flex-basis: 31.75rem;
+      -ms-flex-preferred-size: 31.75rem;
+          flex-basis: 31.75rem;
   max-width: 31.75rem;
   margin-top: 0.5rem;
   padding: 0.5rem 0.5rem 0.5rem 2.25rem;
   font-size: 1rem;
   font-weight: 400;
   color: #09BC8A;
-  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
   background-color: #E9FCF3;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09277 6.35742L4.91777 10.1824C5.49527 10.7599 6.44027 10.7599 7.01777 10.1824L15.3428 1.85742' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: left 0.5rem center;
-  background-size: 18px;
+  -webkit-background-size: 18px 18px;
+          background-size: 18px;
 }
 
 @media screen and (max-width: 767px) {
   .bill-result__success-message {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
+    -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
     max-width: none;
   }
 }
@@ -145,8 +158,10 @@
 .bill-result__collapse {
   margin-top: -4px;
   padding: 0.85rem 1rem;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  -webkit-border-bottom-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+  -webkit-border-bottom-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 
@@ -167,8 +182,10 @@
   font-weight: normal;
   text-align: center;
   cursor: pointer;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  -webkit-border-bottom-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+  -webkit-border-bottom-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 
@@ -183,13 +200,16 @@
   background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 20px;
+  -webkit-background-size: 20px 20px;
+          background-size: 20px;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .bill-result__details[aria-expanded="true"]::after {
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -200,7 +220,8 @@
 .template-add {
   padding: 0.875rem 0.4375rem 0.25rem;
   font-weight: 400;
-  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 
@@ -210,35 +231,42 @@
 
 .template-add__link {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   color: #3B566E;
 }
 
 .template-add__plus {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
   width: 2rem;
   height: 2rem;
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23DEE7F3'/%3E%3Cpath d='M16.1543 8.52344V23.6595' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.7107 16.0918H8.59961' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 32px;
+  -webkit-background-size: 32px 32px;
+          background-size: 32px;
 }
 
 .template-add__add, .template-add__card, .template-add__info {
   padding-left: 2rem;
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: 18px;
+  -webkit-background-size: 18px 18px;
+          background-size: 18px;
 }
 
 .template-add__add {

@@ -20,6 +20,7 @@
 }
 
 .p2c {
+  min-height: 60vh;
   padding-top: 1rem;
 
   .p2p__card-title {
@@ -306,8 +307,25 @@
     padding-left: 2.25rem;
   }
 
+  &--report {
+    max-width: none;
+    padding: 1.5rem 1.5rem;
+
+    .p2c-link__generated {
+      margin-top: 0;
+    }
+
+    .p2c-link__btn {
+      margin-left: 0.375rem;
+    }
+  }
+
   @include until($xl) {
     max-width: 48.125rem;
+
+    &--report {
+      max-width: none;
+    }
   }
 
   @include until($lg) {
@@ -329,6 +347,49 @@
 
     &__btn-text {
       display: block;
+    }
+
+    &--report {
+      max-width: none;
+
+      .p2c-link__generated {
+        flex-direction: row;
+        width: auto;
+      }
+
+      .p2c-link__input, .p2c-link__btn {
+        width: auto;
+      }
+
+      .p2c-link__btn {
+        margin-top: 0;
+      }
+
+      .p2c-link__btn-text {
+        display: none;
+      }
+    }
+  }
+
+  @include until($md) {
+    &--report {
+      .p2c-link__generated {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .p2c-link__input, .p2c-link__btn {
+        width: 100%;
+      }
+
+      .p2c-link__btn {
+        margin-top: 1rem;
+        margin-left: 0;
+      }
+
+      .p2c-link__btn-text {
+        display: block;
+      }
     }
   }
 }
@@ -416,5 +477,132 @@
   @include until($lg) {
     padding-top: 1.5rem;
     padding-bottom: 0;
+  }
+}
+
+.p2c-table {
+  padding-top: 3rem;
+
+  .table {
+    font-size: 1rem;
+
+    th, td {
+      padding: 1.1rem 0.75rem;
+    }
+
+    th {
+      color: $main-blue;
+    }
+
+    tr {
+      border-bottom-style: solid;
+    }
+
+    td {
+      span {
+        color: $heading-color;
+
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+
+    &--empty {
+      tr {
+        border-top: 1px solid $middle-grey;
+
+        td {
+          color: $heading-color;
+        }
+      }
+    }
+  }
+
+  &__date {
+    span {
+      &:last-child {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__amount {
+    span {
+      &:last-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  @include until($lg) {
+    padding-top: 1rem;
+
+    .table {
+      thead {
+        display: none;
+      }
+
+      td {
+        display: block;
+        padding: 0.75rem 0;
+        overflow: auto;
+
+        span {
+          word-break: break-word;
+
+          &:first-child {
+            display: inline-block;
+            float: left;
+            width: 12rem;
+            padding-right: 1.5rem;
+            font-size: 1rem;
+            color: $main-blue;
+            font-weight: 700;
+            vertical-align: middle;
+          }
+
+          &:last-child {
+            display: block;
+            padding-left: 12rem;
+            font-size: 1rem;
+          }
+        }
+
+        &:first-child {
+          padding-top: 1.75rem;
+          padding-bottom: 0.75rem;
+        }
+
+        &:last-child {
+          padding-top: 0.75rem;
+          padding-bottom: 1.75rem;
+        }
+      }
+
+      &--empty {
+        td {
+          &:last-child {
+            padding-bottom: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include until($sm) {
+    .table {
+      td {
+        span {
+          &:first-child {
+            width: 9rem;
+          }
+
+          &:last-child {
+            padding-left: 9rem;
+          }
+        }
+      }
+    }
   }
 }

@@ -5,42 +5,51 @@
 .account-card {
   position: relative;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 22.5rem;
   height: 8.125rem;
   padding: 1.375rem 1.25rem 1.175rem;
   font-family: "Roboto", sans-serif;
-  border-radius: 1.25rem;
+  -webkit-border-radius: 1.25rem;
+          border-radius: 1.25rem;
   -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.15);
           box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.15);
 }
 
 .account-card__header {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .account-card__bank, .account-card__type {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 1.875rem;
   background-repeat: no-repeat;
-  background-size: auto 1.875rem;
+  -webkit-background-size: auto 1.875rem;
+          background-size: auto 1.875rem;
 }
 
 .account-card__bank img, .account-card__type img {
@@ -51,17 +60,21 @@
 
 .account-card__bank {
   -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-position: left center;
 }
 
 .account-card__type {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-basis: 33%;
+      -ms-flex-preferred-size: 33%;
+          flex-basis: 33%;
   -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-position: right center;
@@ -69,12 +82,15 @@
 
 .account-card__body {
   -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 1.125rem;
@@ -96,8 +112,9 @@
 }
 
 .account-card__delete {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
 }
 
 .account-card__delete-button {
@@ -105,9 +122,11 @@
   width: 1.875rem;
   height: 1.875rem;
   border: 2px solid #E84F35;
-  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
   background: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23E84F35'/%3E%3C/svg%3E%0A") center no-repeat;
-  background-size: 12px;
+  -webkit-background-size: 12px 12px;
+          background-size: 12px;
 }
 
 .account-card__confirm {
@@ -119,7 +138,8 @@
   width: 100%;
   height: 100%;
   color: #fff;
-  border-radius: 1.25rem;
+  -webkit-border-radius: 1.25rem;
+          border-radius: 1.25rem;
   background-color: #E84F35;
 }
 
@@ -139,7 +159,8 @@
   width: 0.75rem;
   height: 0.75rem;
   background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.54492 1.54541L12.454 12.4545' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.454 1.54541L1.54492 12.4545' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
-  background-size: 14px;
+  -webkit-background-size: 14px 14px;
+          background-size: 14px;
 }
 
 .account-card__confirm-purpose {
@@ -154,7 +175,8 @@
   color: #fff;
   text-decoration: underline;
   background: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.47008 1.65191H5.31008C5.39808 1.65191 5.47008 1.57991 5.47008 1.49191V1.65191H11.5501V1.49191C11.5501 1.57991 11.6221 1.65191 11.7101 1.65191H11.5501V3.09191H12.9901V1.49191C12.9901 0.785914 12.4161 0.211914 11.7101 0.211914H5.31008C4.60408 0.211914 4.03008 0.785914 4.03008 1.49191V3.09191H5.47008V1.65191ZM15.5501 3.09191H1.47008C1.11608 3.09191 0.830078 3.37791 0.830078 3.73191V4.37191C0.830078 4.45991 0.902078 4.53191 0.990078 4.53191H2.19808L2.69208 14.9919C2.72408 15.6739 3.28808 16.2119 3.97008 16.2119H13.0501C13.7341 16.2119 14.2961 15.6759 14.3281 14.9919L14.8221 4.53191H16.0301C16.1181 4.53191 16.1901 4.45991 16.1901 4.37191V3.73191C16.1901 3.37791 15.9041 3.09191 15.5501 3.09191ZM12.8961 14.7719H4.12408L3.64008 4.53191H13.3801L12.8961 14.7719Z' fill='%23ffffff'/%3E%3C/svg%3E%0A") left center no-repeat;
-  background-size: 16px;
+  -webkit-background-size: 16px 16px;
+          background-size: 16px;
 }
 
 .account-card__confirm-btn:hover {
@@ -165,16 +187,20 @@
 .account-card__mobile-wrapper {
   height: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 3rem;
@@ -187,7 +213,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
   overflow: hidden;
   z-index: 1001;
   color: #fff;
@@ -201,18 +228,22 @@
 .account-card__mobile-title {
   padding-top: 4.5rem;
   background: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11H41' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M31 21V33M24 20.76V33V20.76ZM17 21V33V21Z' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29 11H19V7C19 5.9 19.9 5 21 5H27C28.1 5 29 5.9 29 7V11Z' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M37 11V39C37 41.2 35.2 43 33 43H15C12.8 43 11 41.2 11 39V11' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center top no-repeat;
-  background-size: 48px;
+  -webkit-background-size: 48px 48px;
+          background-size: 48px;
 }
 
 .account-card__mobile-text {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
@@ -259,18 +290,22 @@
 
 .card-add__button {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 8.125rem;
   max-width: 22.5rem;
   border: 2px dashed #DEE7F3;
-  border-radius: 1.25rem;
+  -webkit-border-radius: 1.25rem;
+          border-radius: 1.25rem;
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 1.667;
@@ -300,7 +335,8 @@
     height: auto;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+            border-radius: 0.5rem;
   }
 }
 /*# sourceMappingURL=account-cards.css.map */

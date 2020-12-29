@@ -3,7 +3,8 @@
   width: 18.125rem;
   padding: 0.625rem;
   font-size: 0.75rem;
-  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
   background-color: #3B566E;
   z-index: -1;
 }
@@ -21,6 +22,7 @@
   left: -6px;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   border-width: 6px 6px 6px 0;
   border-color: transparent #3B566E transparent #3B566E;
@@ -49,6 +51,7 @@
     top: auto;
     bottom: -6px;
     -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     border-width: 6px 6px 0 6px;
     border-color: #3B566E transparent #3B566E transparent;
@@ -64,13 +67,16 @@
 
 #popover-account-search {
   left: 0;
+  top: -webkit-calc(100% + 12px);
   top: calc(100% + 12px);
 }
 
 #popover-account-templates {
+  left: -webkit-calc(100% + 20px);
   left: calc(100% + 20px);
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -80,14 +86,17 @@
     top: auto;
     bottom: 1.875rem;
     -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
 }
 
 #popover-account-payments {
+  left: -webkit-calc(100% + 20px);
   left: calc(100% + 20px);
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -97,14 +106,17 @@
     top: auto;
     bottom: 1.875rem;
     -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
 }
 
 #popover-account-menu {
+  left: -webkit-calc(100% + 5px);
   left: calc(100% + 5px);
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -114,6 +126,7 @@
     right: 15px;
     top: 3.75rem;
     -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
 }
@@ -121,6 +134,7 @@
 .popover-account {
   opacity: 0;
   -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 

@@ -1,23 +1,28 @@
 .homepage-header {
   padding: 5.2rem 0 2rem;
   background: url("../img/homepage/homepage-header-bkgr.png") center no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 .homepage-services-form {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 1.27rem;
   height: 8.75rem;
-  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
   background-color: #172A3A;
 }
 
@@ -36,7 +41,8 @@
   line-height: 1.3;
   color: #fff;
   background: url("data:image/svg+xml,%3Csvg width='31' height='30' viewBox='0 0 31 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.82471 25.6275V4.3725C8.82471 2.9925 9.94221 1.875 11.3222 1.875H20.0747C21.4547 1.875 22.5722 2.9925 22.5722 4.3725V25.62C22.5722 27 21.4547 28.1175 20.0747 28.1175H11.3297C9.94971 28.125 8.82471 27.0075 8.82471 25.6275Z' stroke='white' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.7021 25.62C16.0459 25.62 16.3246 25.3413 16.3246 24.9975C16.3246 24.6537 16.0459 24.375 15.7021 24.375C15.3583 24.375 15.0796 24.6537 15.0796 24.9975C15.0796 25.3413 15.3583 25.62 15.7021 25.62Z' stroke='white' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.8271 4.37244H17.5771' stroke='white' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left top no-repeat;
-  background-size: 31px;
+  -webkit-background-size: 31px 31px;
+          background-size: 31px;
 }
 
 @media screen and (max-width: 575px) {
@@ -48,9 +54,11 @@
 
 .homepage-services-form form {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 0.5rem;
@@ -58,43 +66,50 @@
 
 @media screen and (max-width: 575px) {
   .homepage-services-form form {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
 }
 
 .homepage-services-form__tel {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   min-width: 13.75rem;
 }
 
 @media screen and (max-width: 1199px) {
   .homepage-services-form__tel {
-    -ms-flex-negative: initial;
-        flex-shrink: initial;
+    -webkit-flex-shrink: initial;
+        -ms-flex-negative: initial;
+            flex-shrink: initial;
   }
 }
 
 @media screen and (max-width: 991px) {
   .homepage-services-form__tel {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
   }
 }
 
 @media screen and (max-width: 575px) {
   .homepage-services-form__tel {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 575px) {
   .homepage-services-form__amount {
-    -ms-flex-preferred-size: calc(100% - 5.375rem);
-        flex-basis: calc(100% - 5.375rem);
+    -webkit-flex-basis: -webkit-calc(100% - 5.375rem);
+        -ms-flex-preferred-size: calc(100% - 5.375rem);
+            flex-basis: calc(100% - 5.375rem);
+    width: -webkit-calc(100% - 5.375rem);
     width: calc(100% - 5.375rem);
   }
 }
@@ -106,17 +121,20 @@
 /* bill card (main page) */
 .main-card {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0.8175rem 0.9rem;
   height: 8.75rem;
   -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
           box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
   background-color: #fff;
 }
 
@@ -127,6 +145,7 @@
 
 .main-card span {
   -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   font-size: 1.125rem;
@@ -145,7 +164,8 @@
   position: relative;
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: 31px;
+  -webkit-background-size: 31px 31px;
+          background-size: 31px;
 }
 
 .main-card__img--p2p {
@@ -162,7 +182,8 @@
 
 .main-card__img--c2p {
   background-image: url("../img/homepage/monego.png");
-  background-size: 89px;
+  -webkit-background-size: 89px 89px;
+          background-size: 89px;
   background-position: left top 6px;
 }
 
@@ -184,10 +205,12 @@
 
 .main-card-account .main-card__content {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   text-transform: uppercase;
@@ -198,8 +221,9 @@
 }
 
 .main-card-account .main-card__content span:first-child {
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
   padding-bottom: 4px;
   font-size: 0.75rem;
   color: #FFD0CE;
