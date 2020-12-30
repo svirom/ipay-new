@@ -78,9 +78,17 @@
         font-weight: bold;
         white-space: nowrap;
 
+        span {
+          font-weight: bold;
+        }
+
         &.bank-card__commission {
           font-size: 1.25rem;
           color: $heading-color;
+
+          span {
+            color: $heading-color;
+          }
         }
       }
     }
@@ -169,6 +177,7 @@
       align-items: center;
   
       button {
+        display: none;
         width: 1.5rem;
         height: 1.5rem;
         padding: 0;
@@ -209,8 +218,8 @@
     }
   
     &-number {
-      padding-left: 1.1875rem;
-      padding-right: 1.1875rem;
+      /* padding-left: 1.1875rem; */
+      /* padding-right: 1.1875rem; */
       @include font(1.5rem, 700, 1.2);
       color: #64B3F7;
     }
@@ -441,8 +450,8 @@
       }
 
       &-number {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        /* padding-left: 0.5rem; */
+        /* padding-right: 0.5rem; */
       }
 
       &-text {
@@ -559,6 +568,10 @@
 
             &:first-child {
               white-space: normal;
+
+              span {
+                display: block;
+              }
             }
 
             &.bank-card__commission {
