@@ -68,7 +68,7 @@
       font-family: $text-font;
       font-size: 0.875rem;
       color: $btn-red;
-      text-align: right;
+      text-align: left;
       line-height: 1.2;
     }
   }
@@ -92,7 +92,7 @@
   }
   @include transition(all, 0.3s);
   background-repeat: no-repeat;
-  background-position: right 1.1rem center;
+  background-position: right 1rem center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -204,6 +204,11 @@
   @include transition(all, 0.3s);
   cursor: text;
   pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
+  text-overflow: ellipsis;
+  text-align: left;
 }
 
 .password-button {

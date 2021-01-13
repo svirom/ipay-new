@@ -698,7 +698,7 @@ label {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   color: #E84F35;
-  text-align: right;
+  text-align: left;
   line-height: 1.2;
 }
 
@@ -718,7 +718,7 @@ label {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background-repeat: no-repeat;
-  background-position: right 1.1rem center;
+  background-position: right 1rem center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -875,6 +875,11 @@ label {
   transition: all 0.3s ease;
   cursor: text;
   pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
+  text-overflow: ellipsis;
+  text-align: left;
 }
 
 .password-button {
@@ -2439,7 +2444,7 @@ label {
           flex-direction: column;
   width: 26.25rem;
   height: 18.125rem;
-  padding: 2rem 2.5rem 2.5rem;
+  padding: 1.625rem 1.875rem 3.25rem;
   border-radius: 1.25rem;
   -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.15);
           box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.15);
@@ -2539,7 +2544,7 @@ label {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-top: 1.125rem;
+  padding-top: 0.5rem;
 }
 
 .bank-card__body .has-error .form-input.form-control {
@@ -2547,7 +2552,7 @@ label {
 }
 
 .bank-card__number {
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
 }
 
 .bank-card__number .error .help-block {
@@ -2579,6 +2584,10 @@ label {
 
 .bank-card__cvv {
   height: 3.5rem;
+}
+
+.bank-card__cvv.form-group.has-error .help-block {
+  text-align: right;
 }
 
 .bank-card__cvv input {
@@ -3197,8 +3206,18 @@ label {
 }
 
 .main-nav__item .dropdown-item:focus, .main-nav__item .dropdown-item:hover {
-  text-decoration: underline;
-  background-color: #fff;
+  border-radius: 0;
+  background-color: #F0F5FA;
+}
+
+.main-nav__item .dropdown-item:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.main-nav__item .dropdown-item:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .main-nav__item .dropdown-item::before {
@@ -3217,6 +3236,17 @@ label {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@media screen and (max-width: 991px) {
+  .main-nav__item .dropdown-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .main-nav__item .dropdown-item:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .main-nav__item .dropdown-login {
