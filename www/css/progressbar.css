@@ -32,17 +32,14 @@
 }
 
 .progress-payment .progress-textline .progress-text:nth-of-type(2) {
-  left: -webkit-calc(25% + 24px);
   left: calc(25% + 24px);
 }
 
 .progress-payment .progress-textline .progress-text:nth-of-type(3) {
-  left: -webkit-calc(50% + 24px);
   left: calc(50% + 24px);
 }
 
 .progress-payment .progress-textline .progress-text:nth-of-type(4) {
-  left: -webkit-calc(75% + 24px);
   left: calc(75% + 24px);
 }
 
@@ -56,11 +53,9 @@
 
 .progress-payment .progress-steps {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
@@ -69,7 +64,6 @@
   width: 100%;
   height: 24px;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -77,10 +71,8 @@
   display: block;
   width: 20px;
   height: 20px;
-  margin-left: -webkit-calc(25% - 20px);
   margin-left: calc(25% - 20px);
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #F0F5FA;
 }
 
@@ -93,50 +85,42 @@
   background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: 12px 12px;
-          background-size: 12px 12px;
+  background-size: 12px 12px;
 }
 
 .progress-payment .progress-step.active {
   -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
   transform: scale(1.2);
   border: 5px solid #E84F35;
   background-color: #fff;
 }
 
 .progress-payment--three .progress-textline .progress-text:nth-of-type(2) {
-  left: -webkit-calc(33% + 24px);
   left: calc(33% + 24px);
 }
 
 .progress-payment--three .progress-textline .progress-text:nth-of-type(3) {
-  left: -webkit-calc(66% + 24px);
   left: calc(66% + 24px);
 }
 
 .progress-payment--three .progress-step {
-  margin-left: -webkit-calc(33% - 20px);
   margin-left: calc(33% - 20px);
 }
 
 /* progressbar mobile */
 .progress-mobile {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .progress-mobile__circle {
   position: relative;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 30px;
   height: 30px;
   background: none;
@@ -149,11 +133,9 @@
   height: 100%;
   top: 0;
   left: 0;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   border: 3px solid #F0F5FA;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -164,22 +146,18 @@
   height: 100%;
   top: 0;
   left: 0;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   border: 3px solid transparent;
 }
 
 .progress-mobile__value {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
@@ -188,8 +166,7 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   font-size: 0.625rem;
   font-weight: bold;
 }
@@ -200,12 +177,10 @@
 
 .progress-mobile__text {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 0.75rem;
@@ -250,7 +225,6 @@
 
 .progress-mobile--one-third .progress-mobile__circle::after {
   -webkit-transform: rotate(72deg);
-  -ms-transform: rotate(72deg);
   transform: rotate(72deg);
   border-top-color: #E84F35;
 }
@@ -262,7 +236,6 @@
 
 .progress-mobile--two-third .progress-mobile__circle::after {
   -webkit-transform: rotate(108deg);
-  -ms-transform: rotate(108deg);
   transform: rotate(108deg);
   border-top-color: #E84F35;
   border-right-color: #E84F35;
@@ -276,7 +249,6 @@
 
 .progress-mobile--three-third .progress-mobile__circle::after {
   -webkit-transform: rotate(108deg);
-  -ms-transform: rotate(108deg);
   transform: rotate(108deg);
   border-top-color: #E84F35;
   border-right-color: #E84F35;

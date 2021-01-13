@@ -8,15 +8,13 @@
   top: -48px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
 .bill-result__row {
   position: relative;
   line-height: 1.1875rem;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  border-radius: 0.5rem;
   -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
           box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #fff;
@@ -52,31 +50,25 @@
 
 .bill-result__buttons {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-top: 0.75rem;
   padding-bottom: 1.5rem;
 }
 
 .bill-result__buttons form {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding-left: 1rem;
@@ -108,7 +100,6 @@
   .bill-result__buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -127,30 +118,26 @@
 }
 
 .bill-result__success-message {
-  -webkit-flex-basis: 31.75rem;
-      -ms-flex-preferred-size: 31.75rem;
-          flex-basis: 31.75rem;
+  -ms-flex-preferred-size: 31.75rem;
+      flex-basis: 31.75rem;
   max-width: 31.75rem;
   margin-top: 0.5rem;
   padding: 0.5rem 0.5rem 0.5rem 2.25rem;
   font-size: 1rem;
   font-weight: 400;
   color: #09BC8A;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  border-radius: 0.5rem;
   background-color: #E9FCF3;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09277 6.35742L4.91777 10.1824C5.49527 10.7599 6.44027 10.7599 7.01777 10.1824L15.3428 1.85742' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: left 0.5rem center;
-  -webkit-background-size: 18px 18px;
-          background-size: 18px;
+  background-size: 18px;
 }
 
 @media screen and (max-width: 767px) {
   .bill-result__success-message {
-    -webkit-flex-basis: auto;
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
     max-width: none;
   }
 }
@@ -158,10 +145,8 @@
 .bill-result__collapse {
   margin-top: -4px;
   padding: 0.85rem 1rem;
-  -webkit-border-bottom-left-radius: 0.5rem;
-          border-bottom-left-radius: 0.5rem;
-  -webkit-border-bottom-right-radius: 0.5rem;
-          border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 
@@ -182,10 +167,8 @@
   font-weight: normal;
   text-align: center;
   cursor: pointer;
-  -webkit-border-bottom-left-radius: 0.5rem;
-          border-bottom-left-radius: 0.5rem;
-  -webkit-border-bottom-right-radius: 0.5rem;
-          border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 
@@ -200,16 +183,13 @@
   background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: 20px 20px;
-          background-size: 20px;
+  background-size: 20px;
   -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .bill-result__details[aria-expanded="true"]::after {
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -220,8 +200,7 @@
 .template-add {
   padding: 0.875rem 0.4375rem 0.25rem;
   font-weight: 400;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  border-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 
@@ -231,42 +210,52 @@
 
 .template-add__link {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   color: #3B566E;
 }
 
-.template-add__plus {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
+.template-add__plus, .template-add__success, .template-add__unsuccess {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   width: 2rem;
   height: 2rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23DEE7F3'/%3E%3Cpath d='M16.1543 8.52344V23.6595' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.7107 16.0918H8.59961' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  border-radius: 50%;
   background-repeat: no-repeat;
-  background-position: right center;
-  -webkit-background-size: 32px 32px;
-          background-size: 32px;
+  background-position: center;
+}
+
+.template-add__plus {
+  background-color: #DEE7F3;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.1543 1.52173V16.6578' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.7097 9.08972H1.59863' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 18px;
+}
+
+.template-add__success {
+  background-color: #09BC8A;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='12' viewBox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.63623 6.1205L5.58934 9.93203C6.18618 10.5075 7.16283 10.5075 7.75968 9.93203L16.3635 1.63635' stroke='%23E9FCF3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 18px;
+}
+
+.template-add__unsuccess {
+  background-color: #E84F35;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.07227 1.09082L11.3639 11.3825' stroke='%23FFFCFC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.3639 1.09082L1.07227 11.3825' stroke='%23FFFCFC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 13px;
 }
 
 .template-add__add, .template-add__card, .template-add__info {
   padding-left: 2rem;
   background-repeat: no-repeat;
   background-position: left top;
-  -webkit-background-size: 18px 18px;
-          background-size: 18px;
+  background-size: 18px;
 }
 
 .template-add__add {

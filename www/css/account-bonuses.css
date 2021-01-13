@@ -4,15 +4,12 @@
 
 .account-bonuses .bonuses-header {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  border-radius: 0.5rem;
   background-color: #172A3A;
 }
 
@@ -31,15 +28,13 @@
 }
 
 .account-bonuses .bonuses-header__nav {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding: 1.5rem 1.5rem 0;
 }
 
 .account-bonuses .bonuses-header__nav .nav {
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
@@ -54,11 +49,9 @@
 
 .account-bonuses .bonuses-header__link {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 2.625rem;
@@ -115,11 +108,9 @@
   .account-bonuses .bonuses-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -131,10 +122,9 @@
     display: block;
   }
   .account-bonuses .bonuses-header__nav {
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-                -ms-grid-row-align: center;
-            align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     padding: 1.5rem 1rem 0;
   }
 }
@@ -175,27 +165,23 @@
 
 .account-bonuses .bonuses-howto {
   padding: 1.5rem;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  border-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 
 .account-bonuses .bonuses-howto__card {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .account-bonuses .bonuses-howto__img {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 2.625rem;
   text-align: center;
 }
@@ -219,8 +205,7 @@
   margin: 0 auto 3.3125rem;
   padding: 2.375rem 1rem 1.5rem;
   text-align: center;
-  -webkit-border-radius: 1.25rem;
-          border-radius: 1.25rem;
+  border-radius: 1.25rem;
   -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
           box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
   background-repeat: no-repeat;
@@ -240,15 +225,12 @@
 
 .bonuses-card__img {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 11.25rem;
@@ -286,8 +268,7 @@
   padding: 0.75rem 1.635rem;
   font-size: 1rem;
   color: #ffffff;
-  -webkit-border-radius: 1.5625rem;
-          border-radius: 1.5625rem;
+  border-radius: 1.5625rem;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -330,19 +311,16 @@
 
 .gift-card {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 17.8125rem;
   padding: 1.5rem 1.25rem;
   border: 3px solid #DEE7F3;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .gift-card:hover {
@@ -350,19 +328,15 @@
 }
 
 .gift-card__img {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 10.5rem;
@@ -394,8 +368,7 @@
 .gift-card__description {
   max-height: 2.375rem;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   box-orient: vertical;
@@ -407,7 +380,6 @@
   .gift-card {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
     height: auto;
@@ -417,9 +389,8 @@
     margin-bottom: 0;
     height: 5rem;
     width: 5rem;
-    -webkit-flex-basis: 5rem;
-        -ms-flex-preferred-size: 5rem;
-            flex-basis: 5rem;
+    -ms-flex-preferred-size: 5rem;
+        flex-basis: 5rem;
   }
   .gift-card__text {
     padding-left: 1rem;
@@ -437,8 +408,7 @@
   height: 15px;
   vertical-align: middle;
   border: 0;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 0C6.01664 0 4.56659 0.439867 3.33323 1.26398C2.09986 2.08809 1.13856 3.25943 0.570907 4.62987C0.00324965 6.00032 -0.145275 7.50832 0.144114 8.96318C0.433503 10.418 1.14781 11.7544 2.1967 12.8033C3.2456 13.8522 4.58197 14.5665 6.03683 14.8559C7.49168 15.1453 8.99968 14.9968 10.3701 14.4291C11.7406 13.8614 12.9119 12.9001 13.736 11.6668C14.5601 10.4334 15 8.98336 15 7.5C15 6.51508 14.806 5.53981 14.4291 4.62987C14.0522 3.71993 13.4997 2.89314 12.8033 2.1967C12.1069 1.50026 11.2801 0.947814 10.3701 0.570903C9.46019 0.193993 8.48492 0 7.5 0ZM8.25 12.75H6.75V11.25H8.25V12.75ZM9.8025 6.9375L9.1275 7.6275C8.82542 7.888 8.58867 8.21573 8.43626 8.58436C8.28386 8.95299 8.22007 9.35223 8.25 9.75H6.75V9.375C6.75142 8.57952 7.06677 7.81675 7.6275 7.2525L8.5575 6.3075C8.6985 6.16999 8.81036 6.00548 8.88638 5.82378C8.96241 5.6421 9.00105 5.44695 9 5.25C9 4.85217 8.84197 4.47064 8.56066 4.18934C8.27936 3.90803 7.89783 3.75 7.5 3.75C7.10218 3.75 6.72065 3.90803 6.43934 4.18934C6.15804 4.47064 6 4.85217 6 5.25H4.5C4.5 4.45435 4.81607 3.69129 5.37868 3.12868C5.94129 2.56607 6.70435 2.25 7.5 2.25C8.29565 2.25 9.05871 2.56607 9.62132 3.12868C10.1839 3.69129 10.5 4.45435 10.5 5.25C10.5004 5.88272 10.2495 6.4897 9.8025 6.9375Z' fill='%23DEE7F3'/%3E%3C/svg%3E") center no-repeat;
 }
 
@@ -450,8 +420,7 @@
 .popover.popover-bonuses {
   font-size: 0.75rem;
   border: 0;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  border-radius: 0.5rem;
   background-color: #3B566E;
 }
 
@@ -499,10 +468,8 @@
   padding: 1rem 1rem 0.5rem;
   color: #fff;
   border-bottom: 0;
-  -webkit-border-top-left-radius: 0.5rem;
-          border-top-left-radius: 0.5rem;
-  -webkit-border-top-right-radius: 0.5rem;
-          border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   background: #3B566E url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59668 1.72266L14.5967 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5967 1.72266L1.59668 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") right 0.75rem top 0.75rem no-repeat;
 }
 

@@ -14,12 +14,9 @@
   font-size: 1.125rem;
   color: #172A3A;
   line-height: 1.1667;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
-  -webkit-border-top-right-radius: 0;
-          border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-          border-bottom-right-radius: 0;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .catalogue__item:hover {
@@ -41,8 +38,7 @@
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 .catalogue__item span:not(.badge) {
@@ -54,7 +50,6 @@
   right: 1rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 0.75rem;
 }
@@ -69,11 +64,9 @@
   left: 0.625rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   background-image: url("../img/menu-catalogue.png");
-  -webkit-background-size: 169px 169px;
-          background-size: 169px;
+  background-size: 169px;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -87,8 +80,7 @@
   height: 100%;
   -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
           box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  border-radius: 0.5rem;
   background-color: #fff;
 }
 
@@ -309,21 +301,17 @@
   left: 0;
   top: 0;
   -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
   transform: translateX(100%);
   background-color: #fff;
   z-index: 2;
   -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .catalogue-mobile.active {
   -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
   -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -335,8 +323,7 @@
   width: 10px;
   height: 18px;
   background: url("../img/button-icon.png") 0px -36px no-repeat;
-  -webkit-background-size: auto auto;
-          background-size: auto;
+  background-size: auto;
 }
 
 .catalogue-mobile .catalogue {
@@ -346,8 +333,7 @@
 .catalogue-mobile .catalogue__item {
   padding: 0.938rem 1.5rem 0.938rem 3.65rem;
   font-size: 1rem;
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  border-radius: 0;
 }
 
 .catalogue-mobile .catalogue__item::before {
