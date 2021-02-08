@@ -11,6 +11,10 @@
   padding: 5.2rem 0 2rem; 
   background: url('../img/homepage/homepage-header-bkgr.png') center no-repeat;
   background-size: cover;
+
+  @include until($sm) {
+    padding-top: 1.5rem;
+  }
 }
 
 .homepage-form-search {
@@ -100,6 +104,27 @@
   }
 
   &__amount {
+    // flex-basis: 8rem;
+    // min-width: 8rem;
+    flex-grow: 1;
+
+    @include until($xl) {
+      // flex-basis: 5.5rem;
+      // min-width: 5.5rem;
+
+      .form-input {
+        padding-right: 1rem;
+      }
+
+      &.form-group {
+        &.has-success, &.has-error {
+          .form-input:not([type='password']):not(.input-icon-right) {
+            background-image: none;
+          }
+        }
+      }
+    }
+
     @include until($sm) {
       flex-basis: calc(100% - 5.375rem);
       width: calc(100% - 5.375rem);

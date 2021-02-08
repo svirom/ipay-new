@@ -4,6 +4,12 @@
   background-size: cover;
 }
 
+@media screen and (max-width: 575px) {
+  .homepage-header {
+    padding-top: 1.5rem;
+  }
+}
+
 .homepage-form-search .form-search__search {
   position: relative;
   display: block;
@@ -117,6 +123,21 @@
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     width: 100%;
+  }
+}
+
+.homepage-services-form__amount {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media screen and (max-width: 1199px) {
+  .homepage-services-form__amount .form-input {
+    padding-right: 1rem;
+  }
+  .homepage-services-form__amount.form-group.has-success .form-input:not([type='password']):not(.input-icon-right), .homepage-services-form__amount.form-group.has-error .form-input:not([type='password']):not(.input-icon-right) {
+    background-image: none;
   }
 }
 

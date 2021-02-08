@@ -246,15 +246,19 @@
 }
 
 .archive--col-9 .archive-card__bonus span {
-  display: block;
+  display: inline-block;
+  margin-right: 0.25rem;
 }
 
 .archive--col-9 .archive-card__bonus.icon-bonus::before {
+  position: relative;
+  display: inline-block;
   left: 0;
   top: 0.5rem;
   -webkit-transform: translateY(0);
   transform: translateY(0);
   background-size: 18px;
+  background-position: left 0.25rem center;
 }
 
 .archive--col-9 .archive-card__collapse {

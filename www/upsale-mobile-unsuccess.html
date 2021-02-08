@@ -6,13 +6,16 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/bill-result.css">
+    <link rel="stylesheet" href="/css/bill-message.css">
     <link rel="stylesheet" href="/css/service-rate.css">
+    <link rel="stylesheet" href="/css/upsale-mobile-widget.css">
 
-    <title>Category P2P Unsuccess</title>
+    <title>Upsale Mobile Unuccess</title>
   </head>
   <body>
 
@@ -24,7 +27,7 @@
             <div class="main-nav__logo logo-color">
               <a href="#"></a>
             </div>
-            <nav>
+            <nav class="">
               <ul class="main-nav__nav">
                 <li class="main-nav__item main-nav__icon--search">
                   <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
@@ -44,14 +47,8 @@
                     <span>плательщиков</span>
                   </a>
                 </li>
-                <li class="main-nav__item">
-                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
-                    <span class="main-nav__bonus">154300</span>
-                    <span>бонусов</span>
-                  </span>
-                </li>
                 <li class="main-nav__item dropdown">
-                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Вильгельмина Петренко</a>
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
                     <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
@@ -198,6 +195,17 @@
     <!-- main wrapper -->
     <div class="main-wrapper">
 
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="#" class="form-search__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- breadcrumb widget -->
       <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
@@ -205,7 +213,9 @@
             <div class="col-12">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item breadcrumb__home"><a href="#"></a></li>
-                <li class="breadcrumb-item active" aria-current="page">Перевод денег с карты на карту</li>
+                <li class="breadcrumb-item"><a href="#">Услуги</a></li>
+                <li class="breadcrumb-item"><a href="#">Коммунальные услуги</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Оплата коммунальных услуг</li>
               </ol>
             </div>
           </div>
@@ -225,12 +235,20 @@
                   <div class="row">
 
                     <div class="col-12 mt-2 mb-3 d-lg-none">
-                      <a href="#" class="btn btn-link btn-back">Главная</a>
+                      <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
                     </div>
+
+                    <!-- upsale mobile title section -->
+                    <div class="upsale-mobile__result-title">
+                      <div class="col-12">
+                        <p class="upsale-mobile__title-main upsale-success"><a href="#">Пополнение счета "Киевстар"</a></p>
+                        <p class="upsale-mobile__title-upsale upsale-unsuccess"><a href="#">Оплата заказа REMAX ARMOR SER Оплата заказа REMAX ARMOR SER</a></p>
+                      </div>
+                    </div><!-- upsale mobile title section -->
       
                     <div class="col-12 mb-3">
-                      <div class="bill-title text-center">
-                        <h1>Перевод денег с карты на карту</h1>
+                      <div class="bill-title">
+                        <h1>Пополнение счета "Киевстар"</h1>
                       </div>
                     </div>
       
@@ -239,18 +257,23 @@
                       <div class="row">
                         <div class="col-12 mt-4">
                           <!-- bill result widget -->
-                          <div class="bill-result icon-unsuccess" id="bill-result-widget">
+                          <div class="bill-result icon-success" id="bill-result-widget">
                             <div class="bill-result__row">
                               <div class="bill-result__header">
-                                <h3>Платеж не удался!</h3>
+                                <h3>Платеж успешен!</h3>
                                 <p>Платеж №37473537</p>
                               </div>
                               <div class="bill-result__footer">
-                                <div class="alert alert-danger fade show" role="alert">
-                                  <h3>Причина</h3>
-                                  <ul class="list list--circle">
-                                    <li class="mb-3">Платеж был отклонен вашим банком</li>
-                                  </ul>
+                                <h4 class="text-center mt-3">Квитанция</h4>
+                                <div class="bill-result__buttons">
+                                  <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
+                                  <form>
+                                    <div class="form-group">
+                                      <input type="email" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="qwerty@email.com" aria-required="true">
+                                      <label class="control-label form-label" for="form-name">Отправить на e-mail</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                  </form>
                                 </div>
                               </div>
                             </div>
@@ -289,43 +312,110 @@
                       </div>
       
                     </div>
-      
-                    <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
-                      <a href="#" class="btn btn-green btn-again">Попробовать снова</a>
-                    </div>
 
-                    <!-- aside mobile area -->
-                    <div class="col-12 mb-3 d-lg-none">
-                      <!-- warning message widget -->
-                      <div id="warning-message-widget">
-                        <div class="alert alert-warning fade show" role="alert">
-                          <h3>Рекомендации</h3><br>
-                          <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
-                          <p>2. Попробуйте повторить платеж оплатив другой картой</p>
-                          <p>3. Попробовать оплаить через 24 часа.</p>
+                    <!-- upsale mobile section -->
+                    <div class="upsale-mobile__result">
+
+                      <div class="col-12 mb-5 pb-3">
+                        <div class="bill-title">
+                          <h2>Оплата заказа REMAX</h2>
                         </div>
-                      </div><!-- warning message widget -->
-                    </div><!-- aside mobile area -->
+                      </div>
 
-                    <div class="col-12 mt-3 mb-5 mb-lg-3">
-                      <!-- service rate widget -->
-                      <div class="service-rate" id="service-rate-widget">
-                        <h3>Вы можете оставить свой отзыв</h3>
-                        <p>Оставьте свои контакты для ответа от техподдержки</p>
-                        <form action="/">
-                          <div class="row">
-                            <div class="col-md">
-                              <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="rate-sender_phone" name="rate-sender_phone" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
-                                <label class="control-label form-label" for="rate-sender_phone">Номер телефона</label>
-                                <div class="help-block">Введите номер телефона</div>
+                      <div class="col-12 mt-5">
+                        <!-- bill result widget -->
+                        <div class="bill-result icon-unsuccess" id="bill-result-widget-2">
+                          <div class="bill-result__row">
+                            <div class="bill-result__header">
+                              <h3>Платеж не удался!</h3>
+                              <p>Платеж №37473537</p>
+                            </div>
+                            <div class="bill-result__footer">
+                              <div class="alert alert-danger fade show" role="alert">
+                                <h3>Причина</h3>
+                                <ul class="list list--circle">
+                                  <li class="mb-3">Платеж был отклонен вашим банком</li>
+                                </ul>
                               </div>
                             </div>
-                            <div class="col-md">
-                              <div class="form-group">
-                                <input type="email" class="form-control form-input" id="rate-sender_email" name="rate-sender_email" autocomplete="off" placeholder="qwerty@email.com" aria-required="true">
-                                <label class="control-label form-label" for="rate-sender_email">e-mail</label>
-                              </div>
+                          </div>
+                          <div id="archive-upsale" class="collapse">
+                            <div class="bill-result__collapse">
+                              <div class="table-responsive">
+                                <table class="table">
+                                  <tbody>
+                                    <tr>
+                                      <td>Назначение</td>
+                                      <td>Оплата коммунальной услуги</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Сумма пополнения</td>
+                                      <td>75.00 грн.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Комиссия</td>
+                                      <td>2.00 грн.</td>
+                                    </tr>
+                                    <tr class="table-summary">
+                                      <td>К оплате</td>
+                                      <td>77.00 грн.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>                          
+                            </div>
+                          </div>
+                          <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-upsale" aria-expanded="false">
+                            <span class="bill-result__info-show">Информация о платеже</span>
+                            <span class="bill-result__info-hide">Скрыть информацию о платеже</span>
+                          </div>
+                        </div><!-- bill result widget -->
+                      </div>
+
+                    </div><!-- upsale mobile section -->
+      
+                    <div class="col-12 mt-4">
+                      <!-- bill message widget -->
+                      <div class="bonus-message" id="bill-message-widget">
+                        <div class="row align-items-center">
+                          <div class="col-md-3 bonus-message__left">
+                            <p>За этот платеж Вам начислено</p>
+                          </div>
+                          <div class="col-md-4 bonus-message__center">
+                            <p>12 бонусов Добра</p>
+                          </div>
+                          <div class="col-md-5 bonus-message__button">
+                            <a href="#" class="btn btn-default btn-block">Получить бонусы</a>
+                          </div>
+                        </div>
+                      </div><!-- bill message widget -->
+                    </div>
+      
+                    <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
+                      <a href="#" class="btn btn-green btn-again">Оплатить еще эту услугу</a>
+                    </div>
+
+                    <div class="col-12 mb-5 mb-lg-3">
+                      <!-- service rate widget -->
+                      <div class="service-rate" id="service-rate-widget">
+                        <h3>Оцените качество услуги</h3>
+                        <form action="/">
+                          <div class="form-group service-rate__rating">
+                            <div class="rating-input">
+                              <input id="star-4" type="radio" name="rating-input">
+                              <label for="star-4"></label>
+                      
+                              <input id="star-3" type="radio" name="rating-input">
+                              <label for="star-3"></label>
+                          
+                              <input id="star-2" type="radio" name="rating-input">
+                              <label for="star-2"></label>
+                          
+                              <input id="star-1" type="radio" name="rating-input">
+                              <label for="star-1"></label>
+                          
+                              <input id="star-0" type="radio" name="rating-input">
+                              <label for="star-0"></label>
                             </div>
                           </div>
                           <div class="form-group service-rate__textarea">
@@ -334,7 +424,7 @@
                           </div>
                           <div class="service-rate__submit row justify-content-end">
                             <div class="col-md-5">
-                              <button type="submit" class="btn btn-green btn-block">Оставить отзыв</button>
+                              <button type="submit" class="btn btn-green btn-block">Оценить</button>
                             </div>
                           </div>
                         </form>
@@ -344,25 +434,105 @@
                   </div>
                 </div><!-- bill main widget -->
               </div>
-
+            
             </div>
+
+
+            <!-- aside mobile area -->
+            <div class="row d-lg-none">
+
+              <div class="col-12 mb-3">
+                <!-- success message-widget -->
+                <div id="success-message-widget">
+                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
+                    Загляните в меню!<br>
+                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                </div><!-- success message-widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <!-- services more widget -->
+                <div id="services-more-widget">
+                  <h4 class="mb-3">Также могут заинтересовать</h4>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Перевод с карты на карту</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київводоканал</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київгаз</span>
+                  </a>
+                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                </div><!-- services more widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
+              </div>
+
+            </div><!-- aside mobile area -->
 
           </main><!-- main area -->
 
           <!-- aside area -->
-          <aside class="col-lg-4 d-none d-lg-block mt-5">
-            <div class="row mt-5">
+          <aside class="col-lg-4 d-none d-lg-block">
+            <div class="row">
 
-              <div class="col-12 mt-4 mb-3">
-                <!-- warning message widget -->
-                <div id="warning-message-widget">
-                  <div class="alert alert-warning fade show" role="alert">
-                    <h3>Рекомендации</h3><br>
-                    <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
-                    <p>2. Попробуйте повторить платеж оплатив другой картой</p>
-                    <p>3. Попробовать оплаить через 24 часа.</p>
+              <div class="col-12 mb-3">
+                <!-- success message-widget -->
+                <div id="success-message-widget">
+                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
+                    Загляните в меню!<br>
+                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
                   </div>
-                </div><!-- warning message widget -->
+                </div><!-- success message-widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <!-- services more widget -->
+                <div id="services-more-widget">
+                  <h4 class="mb-3">Также могут заинтересовать</h4>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Перевод с карты на карту</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київводоканал</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київгаз</span>
+                  </a>
+                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                </div><!-- services more widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
               </div>
 
             </div>
@@ -479,6 +649,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
+    <script src="/js/upsale-mobile-widget.js"></script>
   </body>
 </html>

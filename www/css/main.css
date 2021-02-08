@@ -20,6 +20,11 @@ ol, ul, li {
   padding: 0;
 }
 
+[type="button"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -925,6 +930,11 @@ label {
 
 .select-input-wrapper .select2-container .select2-selection__rendered {
   padding-left: 0;
+}
+
+.select-input-wrapper .select2-container .select2-selection__rendered .select2-selection__clear {
+  margin-right: 8px;
+  line-height: 28px;
 }
 
 .select-input-wrapper .select2-container .select2-selection__placeholder {
@@ -3120,7 +3130,7 @@ label {
   padding: 0.5rem 0 0.375rem;
   border-bottom: 2px solid #F0F5FA;
   background-color: #ffffff;
-  z-index: 1020;
+  z-index: 1000;
 }
 
 @media screen and (max-width: 991px) {
@@ -3878,6 +3888,13 @@ label {
 
 .homepage-wrapper h1 {
   font-size: 2.25rem;
+}
+
+@media screen and (max-width: 575px) {
+  .homepage-wrapper h1 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
 }
 
 .main-wrapper {
