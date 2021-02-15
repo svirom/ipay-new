@@ -416,7 +416,9 @@
   }
 
   .catalogue {
+    height: calc(100vh - 120px);
     border-right: 0;
+    overflow: auto;
 
     &__item { 
       padding: 0.938rem 1.5rem 0.938rem 3.65rem;

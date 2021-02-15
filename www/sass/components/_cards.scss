@@ -139,6 +139,7 @@
     background-color: #fff;
 
     img {
+      -ms-flex: 0 0 auto;/* ie11 width fix */
       max-width: calc(100% - 8px);
       max-height: calc(100% - 8px);
     }
@@ -157,8 +158,18 @@
   }
 
   &__content {
+    max-height: 3.75rem; /* ie11 height fix */
     padding-left: 1.5625rem;
     color: $heading-color;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
   }
 
   // template card

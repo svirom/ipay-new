@@ -3,6 +3,8 @@
 // -----------------------------------------------------------------------------
 
 .main-header {
+  position: sticky;
+    top: 0;
   padding: 0.5rem 0 0.375rem;
   border-bottom: 2px solid $light-grey;
   background-color: #ffffff;
@@ -10,10 +12,6 @@
 
   @include until($lg) {
     padding: 0.75rem 0 0.625rem;
-  }
-  @include at-least($lg) {
-    position: sticky;
-    top: 0;
   }
 }
 
@@ -113,7 +111,7 @@
           border-top-right-radius: 0;
         }
   
-        &:last-child {
+        &:not(.dropdown-login-mobile):last-child {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
