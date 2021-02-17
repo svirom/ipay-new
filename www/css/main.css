@@ -3275,6 +3275,10 @@ label {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
+  .main-nav__item .dropdown-item.dropdown-login-mobile:hover, .main-nav__item .dropdown-item.dropdown-login-mobile:focus {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
 }
 
 .main-nav__item .dropdown-login {
@@ -3380,7 +3384,7 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px;
+  margin: 24px 10px 10px;
   padding: 0.688rem 1.345rem;
   width: calc(100% - 20px);
   border-radius: 0.5rem;
@@ -3659,9 +3663,6 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: auto;
   min-height: calc(100vh - 63px);
   -webkit-transition: all 0.3s ease;
