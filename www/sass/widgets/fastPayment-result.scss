@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------
+// This file contains all styles related to the p2p fast payment result widget
+// -----------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.fastPayment-result {
+  max-width: 17.5rem;
+  margin: 1.5rem auto 0;
+  text-align: center;
+
+  .fastPayment-result__info, 
+  .fastPayment-result__save {
+    margin-bottom: 0.75rem;
+
+    p {
+      color: $text-color;
+    }
+  }
+
+  &__info {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: $light-grey;
+  }
+
+  &__time {
+    color: $btn-green;
+    font-weight: 700;
+  }
+
+  .btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
