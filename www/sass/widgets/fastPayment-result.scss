@@ -14,8 +14,6 @@
 
   .fastPayment-result__info, 
   .fastPayment-result__save {
-    margin-bottom: 0.75rem;
-
     p {
       color: $text-color;
     }
@@ -27,9 +25,18 @@
     background-color: $light-grey;
   }
 
+  &__save {
+    margin-top: 0.75rem;
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+  }
+
   &__time {
     color: $btn-green;
     font-weight: 700;
+    white-space: nowrap;
   }
 
   .btn {

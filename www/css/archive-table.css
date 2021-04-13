@@ -207,6 +207,8 @@
 }
 
 .archive-card__buttons {
+  -ms-flex: 0 1 100%;
+  /* ie11 fix */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,7 +270,13 @@
           flex-direction: column;
 }
 
+.archive--col-9 .archive-card__description {
+  width: 100%;
+}
+
 .archive--col-9 .archive-card__buttons {
+  -ms-flex: 0 1 auto;
+  /* ie11 fix */
   -ms-flex-item-align: end;
       align-self: flex-end;
 }

@@ -730,27 +730,23 @@ label {
 }
 
 .form-input::-webkit-input-placeholder {
-  color: #DEE7F3;
   font-weight: 400;
-  opacity: 0;
+  color: rgba(222, 231, 243, 0);
 }
 
 .form-input:-ms-input-placeholder {
-  color: #DEE7F3;
   font-weight: 400;
-  opacity: 0;
+  color: rgba(222, 231, 243, 0);
 }
 
 .form-input::-ms-input-placeholder {
-  color: #DEE7F3;
   font-weight: 400;
-  opacity: 0;
+  color: rgba(222, 231, 243, 0);
 }
 
 .form-input::placeholder {
-  color: #DEE7F3;
   font-weight: 400;
-  opacity: 0;
+  color: rgba(222, 231, 243, 0);
 }
 
 .form-input:focus, .form-input.filled {
@@ -759,19 +755,19 @@ label {
 }
 
 .form-input:focus::-webkit-input-placeholder, .form-input.filled::-webkit-input-placeholder {
-  opacity: 1;
+  color: #dee7f3;
 }
 
 .form-input:focus:-ms-input-placeholder, .form-input.filled:-ms-input-placeholder {
-  opacity: 1;
+  color: #dee7f3;
 }
 
 .form-input:focus::-ms-input-placeholder, .form-input.filled::-ms-input-placeholder {
-  opacity: 1;
+  color: #dee7f3;
 }
 
 .form-input:focus::placeholder, .form-input.filled::placeholder {
-  opacity: 1;
+  color: #dee7f3;
 }
 
 .form-input:focus ~ .form-label, .form-input.filled ~ .form-label {
@@ -2101,6 +2097,8 @@ label {
 }
 
 .provider-card__img img {
+  -ms-flex: 0 0 auto;
+  /* ie11 fix */
   max-width: calc(100% - 8px);
   max-height: calc(100% - 8px);
 }

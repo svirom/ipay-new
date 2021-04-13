@@ -172,6 +172,8 @@
   }
 
   &__buttons {
+    -ms-flex: 0 1 100%;
+    /* ie11 fix */
     display: flex;
     align-items: center;
     padding-top: 1rem;
@@ -227,7 +229,13 @@
         flex-direction: column;
       }
 
+      &__description {
+        width: 100%;
+      }
+
       &__buttons {
+        -ms-flex: 0 1 auto;
+        /* ie11 fix */
         align-self: flex-end;
       }
     }

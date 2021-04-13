@@ -4,11 +4,6 @@
   text-align: center;
 }
 
-.fastPayment-result .fastPayment-result__info,
-.fastPayment-result .fastPayment-result__save {
-  margin-bottom: 0.75rem;
-}
-
 .fastPayment-result .fastPayment-result__info p,
 .fastPayment-result .fastPayment-result__save p {
   color: #3B566E;
@@ -20,9 +15,18 @@
   background-color: #F0F5FA;
 }
 
+.fastPayment-result__save {
+  margin-top: 0.75rem;
+}
+
+.fastPayment-result__save p {
+  margin-bottom: 0.75rem;
+}
+
 .fastPayment-result__time {
   color: #09BC8A;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .fastPayment-result .btn {
