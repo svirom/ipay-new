@@ -65,7 +65,7 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-image: url("../img/dashboard-catalogue.png");
+  background-image: url("../img/dashboard-catalogue-new.png");
   background-size: 120px;
   background-repeat: no-repeat;
   z-index: 1;
@@ -86,7 +86,7 @@
 
 .catalogue-account__account::before {
   width: 24px;
-  height: 25px;
+  height: 24px;
   background-position: -72px 0;
 }
 
@@ -96,7 +96,7 @@
 
 .catalogue-account__archive::before {
   width: 24px;
-  height: 25px;
+  height: 24px;
   background-position: 0 0;
 }
 
@@ -106,7 +106,7 @@
 
 .catalogue-account__templates::before {
   width: 24px;
-  height: 25px;
+  height: 24px;
   background-position: -49px -49px;
 }
 
@@ -134,13 +134,23 @@
   background-position: 0 -25px;
 }
 
+.catalogue-account__ipayplus::before {
+  width: 24px;
+  height: 24px;
+  background-position: -96px -25px;
+}
+
+.catalogue-account__ipayplus:active::before, .catalogue-account__ipayplus.active::before, .catalogue-account__ipayplus--red::before {
+  background-position: -96px -49px;
+}
+
 .catalogue-account__settings::before {
-  width: 25px;
+  width: 24px;
   height: 25px;
-  background-position: 0 -49px;
+  background-position: 0 -48px;
 }
 
 .catalogue-account__settings:active::before, .catalogue-account__settings.active::before, .catalogue-account__settings--red::before {
-  background-position: -24px -49px;
+  background-position: -24px -48px;
 }
 /*# sourceMappingURL=catalogue-account.css.map */

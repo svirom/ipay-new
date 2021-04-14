@@ -1,0 +1,115 @@
+// ------------------------------------------------------------------------------
+// This file contains all styles related to the p2p fast payment unsuccess widget
+// ------------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.fastPayment-unsuccess {
+  display: block;
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  z-index: 2;
+  background: $heading-color url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23E84F35'/%3E%3Cpath d='M13.6289 21.834L19.4625 16.0004' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.4629 16L13.6293 10.1664' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 1.5rem bottom 1.5rem no-repeat;
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: 5.375rem;
+    height: 5.375rem;
+    top: -24px;
+    right: -16px;
+    border: 1px solid rgba(#EA001B, 0.5);
+  }
+
+  &::after {
+    width: 4rem;
+    height: 4rem;
+    top: 24px;
+    right: -16px;
+    border: 1px solid rgba(#FBB333, 0.5);
+  }
+
+  p, span {
+    margin-bottom: 0;
+    color: #ffffff;
+  }
+
+  p {
+    position: relative;
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    &:first-child {
+      margin-bottom: 1.1875rem;
+
+      span {
+        font-weight: 700;
+
+        &:first-child {
+          font-size: 1.5rem;
+        }
+
+        &:last-child {
+          font-size: 1.625rem;
+          color: $btn-red;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include until($md) {
+    margin-top: 0.875rem;
+    margin-bottom: 0.875rem;
+    padding: 0.875rem;
+    background-size: 1.5rem;
+    background-position: right 0.875rem bottom 0.875rem;
+
+    &::before {
+      width: 5rem;
+      height: 5rem;
+      top: -20px;
+      right: -40px;
+    }
+  
+    &::after {
+      width: 3.75rem;
+      height: 3.75rem;
+      top: 26px;
+      right: -40px;
+    }
+
+    p {
+      font-size: 1rem;
+
+      &:first-child {
+        margin-bottom: 0.875rem;
+  
+        span {
+          &:first-child {
+            font-size: 1rem;
+          }
+  
+          &:last-child {
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+}

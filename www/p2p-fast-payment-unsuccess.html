@@ -10,12 +10,10 @@
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/bill-result.css">
-    <link rel="stylesheet" href="/css/bill-message.css">
     <link rel="stylesheet" href="/css/service-rate.css">
-    <link rel="stylesheet" href="/css/fastPayment-result.css">
-    <link rel="stylesheet" href="/css/fastPayment-rating.css">
+    <link rel="stylesheet" href="/css/fastPayment-unsuccess.css">
 
-    <title>P2P Fast Payment Success R (not TOP 100) 2</title>
+    <title>Category P2P Unsuccess</title>
   </head>
   <body>
 
@@ -248,36 +246,18 @@
                       <div class="row">
                         <div class="col-12 mt-4">
                           <!-- bill result widget -->
-                          <div class="bill-result icon-success" id="bill-result-widget">
+                          <div class="bill-result icon-unsuccess" id="bill-result-widget">
                             <div class="bill-result__row">
                               <div class="bill-result__header">
-                                <h3>Платеж успешен!</h3>
+                                <h3>Платеж не удался!</h3>
                                 <p>Платеж №37473537</p>
-
-                                <!-- fast payment result widget -->
-                                <div class="fastPayment-result" id="fastPayment-result-widget">
-                                  <div class="fastPayment-result__info">
-                                    <p class="mb-0">Ваш результат <span class="fastPayment-result__time">01 мин 56 сек</span></p>
-                                    <p class="mb-0">Вы быстрее <span>60%</span> пользователей</p>
-                                  </div>
-                                  <!-- <div class="fastPayment-result__save">
-                                    <p>Сохраните свой результат чтобы учавствовать в розыгрыше призов от Mastercard!</p>
-                                    <a href="#" class="btn btn-green btn-block">Сохранить результат</a>
-                                  </div> -->
-                                </div><!-- fast payment result widget -->
-
                               </div>
                               <div class="bill-result__footer">
-                                <h4 class="text-center mt-3">Квитанция</h4>
-                                <div class="bill-result__buttons">
-                                  <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
-                                  <form>
-                                    <div class="form-group">
-                                      <input type="email" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="qwerty@email.com" aria-required="true">
-                                      <label class="control-label form-label" for="form-name">Отправить на e-mail</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
-                                  </form>
+                                <div class="alert alert-danger fade show" role="alert">
+                                  <h3>Причина</h3>
+                                  <ul class="list list--circle">
+                                    <li class="mb-3">Платеж был отклонен вашим банком</li>
+                                  </ul>
                                 </div>
                               </div>
                             </div>
@@ -316,227 +296,40 @@
                       </div>
       
                     </div>
-
-                    <div class="col-12">
-                      <!-- fast payment rating widget -->
-                      <div class="fastPayment-rating" id="fastPayment-rating-widget">
-                        <div class="row justify-content-center">
-                          <div class="col-md-9">
-
-                            <div class="fastPayment-rating__banner fastPayment-rating__banner--nottop">
-                              <p class="fastPayment-rating__banner-title">Попадите в топ-100 для возможности участия в розыгрыше призов</p>
-                              <p class="fastPayment-rating__banner-record mb-0">
-                                <span class="heading-color">Топ-100 сейчас: </span>
-                                <span class="heading-color fastPayment-rating__record-amount">01:01</span>
-                              </p>
-                            </div>
-
-                            <div class="fastPayment-rating__info fastPayment-rate">
-                              <div role="button" data-toggle="collapse" data-target="#collapse-fastPayment-rate" class="fastPayment-rate__row">
-                                <div class="fastPayment-rate__row-img">
-                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 21H18V11H21V21ZM16 21H13V8H16V21ZM11 21H8V5H11V21ZM6 21H3V13H6V21Z" fill="#7C9CAC"/>
-                                  </svg>
-                                </div>
-                                <div class="fastPayment-rate__row-info"><span>Ваш рейтинг - </span><span>186</span></div>
-                                <div class="fastPayment-rate__row-arrow">
-                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.1665 9.62891L12.0001 15.4625" stroke="#7C9CAC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 15.4629L17.8336 9.62928" stroke="#7C9CAC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                  </svg>
-                                </div>
-                              </div>
-                              <div class="collapse" id="collapse-fastPayment-rate">
-                                <div class="fastPayment-rate__collapse">
-
-                                  <ul class="nav" role="tablist">
-                                    <li class="nav-item">
-                                      <a class="nav-link active" id="fastPayment-week-tab" data-toggle="pill" href="#fastPayment-week" role="tab" aria-controls="fastPayment-week" aria-selected="true">За неделю</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="fastPayment-month-tab" data-toggle="pill" href="#fastPayment-month" role="tab" aria-controls="fastPayment-month" aria-selected="false">За месяц</a>
-                                    </li>
-                                  </ul>
-
-                                  <div class="tab-content">
-
-                                    <div class="tab-pane fade show active" id="fastPayment-week" role="tabpanel" aria-labelledby="fastPayment-week-tab">
-
-                                      <div class="table-responsive">
-                                        <table class="table fastPayment-table">
-                                          <tbody>
-                                            <tr>
-                                              <td>183</td>
-                                              <td>Петр</td>
-                                              <td>00:59</td>
-                                            </tr>
-                                            <tr>
-                                              <td>184</td>
-                                              <td>Иван Иванов</td>
-                                              <td>01:10</td>
-                                            </tr>
-                                            <tr>
-                                              <td>185</td>
-                                              <td>Игорь Петров</td>
-                                              <td>01:09</td>
-                                            </tr>
-                                            <tr class="active">
-                                              <td>186</td>
-                                              <td>Николай</td>
-                                              <td>01:10</td>
-                                            </tr>
-                                            <tr>
-                                              <td>187</td>
-                                              <td>Василий Иванов</td>
-                                              <td>01:25</td>
-                                            </tr>
-                                            <tr>
-                                              <td>188</td>
-                                              <td>Константин Андреев</td>
-                                              <td>01:27</td>
-                                            </tr>
-                                            <tr>
-                                              <td>189</td>
-                                              <td>Константин Андреев</td>
-                                              <td>01:27</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </div>
-
-                                    </div>
-
-                                    <div class="tab-pane fade" id="fastPayment-month" role="tabpanel" aria-labelledby="fastPayment-month-tab">
-
-                                      <div class="fastPayment-leader">
-                                        <span class="fastPayment-leader__rate">1</span>
-                                        <span class="fastPayment-leader__info">Святослав Петриченко</span>
-                                        <span class="fastPayment-leader__time">00:53</span>
-                                        <span class="fastPayment-leader__img">
-                                          <img src="/img/fast-payment/fast-payment-leader.png" srcset="/img/fast-payment/fast-payment-leader.png 1x, /img/fast-payment/fast-payment-leader@2x.png 2x" alt="Leader">
-                                        </span>
-                                      </div>
-
-                                      <div class="table-responsive">
-                                        <table class="table fastPayment-table">
-                                          <tbody>
-                                            <tr>
-                                              <td>183</td>
-                                              <td>Петр</td>
-                                              <td>00:59</td>
-                                            </tr>
-                                            <tr>
-                                              <td>184</td>
-                                              <td>Иван Иванов</td>
-                                              <td>01:10</td>
-                                            </tr>
-                                            <tr>
-                                              <td>185</td>
-                                              <td>Игорь Петров</td>
-                                              <td>01:09</td>
-                                            </tr>
-                                            <tr class="active">
-                                              <td>186</td>
-                                              <td>Николай</td>
-                                              <td>01:10</td>
-                                            </tr>
-                                            <tr>
-                                              <td>187</td>
-                                              <td>Василий Иванов</td>
-                                              <td>01:25</td>
-                                            </tr>
-                                            <tr>
-                                              <td>188</td>
-                                              <td>Константин Андреев</td>
-                                              <td>01:27</td>
-                                            </tr>
-                                            <tr>
-                                              <td>189</td>
-                                              <td>Константин Андреев</td>
-                                              <td>01:27</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </div>
-
-                                    </div>
-
-                                  </div>
-
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="text-center mt-3 mt-sm-4">
-                              <a href="#" class="btn btn-green btn-block mb-4">Попробовать еще раз</a>
-                              <p class="mb-0">Изучите подробную информацию про призы и условия конкурса</p>
-                              <p><strong><a href="" class="red-link">Подробнее</a></strong></p>
-                            </div>
-
-                            <div class="fastPayment-rating__share">
-                              <p class="heading-color">Поделитесь вашим результатом</p>
-                              <div class="fastPayment-rating__cards">
-                                <a href="#" class="fastPayment-rating__card fastPayment-rating__card--facebook">
-                                  <img src="/img/fast-payment/facebook.svg" alt="Facebook">
-                                </a>
-                                <a href="#" class="fastPayment-rating__card fastPayment-rating__card--telegram">
-                                  <img src="/img/fast-payment/telegram.svg" alt="Telegram">
-                                </a>
-                                <a href="#" class="fastPayment-rating__card fastPayment-rating__card--viber">
-                                  <img src="/img/fast-payment/viber.svg" alt="Viber">
-                                </a>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div><!-- fast payment rate widget -->
-                    </div>
       
-                    <div class="col-12 mt-4">
-                      <!-- bill message widget -->
-                      <div class="bonus-message" id="bill-message-widget">
-                        <div class="row align-items-center">
-                          <div class="col-md-3 bonus-message__left">
-                            <p>За этот платеж Вам начислено</p>
-                          </div>
-                          <div class="col-md-4 bonus-message__center">
-                            <p>12 бонусов Добра</p>
-                          </div>
-                          <div class="col-md-5 bonus-message__button">
-                            <a href="#" class="btn btn-default btn-block">Получить бонусы</a>
-                          </div>
-                        </div>
-                      </div><!-- bill message widget -->
-                    </div>
-      
-                    <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
-                      <a href="#" class="btn btn-green btn-again">Оплатить еще эту услугу</a>
+                    <div class="col-12" id="fastPayment-unsuccess-widget">
+                      <a href="#" class="fastPayment-unsuccess">
+                        <p>
+                          <span>Совершайте перевод картой Mastercard </span>
+                          <span>и выигрывайте призы!</span>
+                        </p>
+                        <p>Подробнее</p>
+                      </a>
                     </div>
 
-                    <div class="col-12 mb-5 mb-lg-3">
+                    <div class="col-12 mt-3 mb-4 mb-lg-5 text-center">
+                      <a href="#" class="btn btn-green btn-again">Попробовать снова</a>
+                    </div>
+
+                    <!-- aside mobile area -->
+                    <div class="col-12 mb-3 d-lg-none">
+                      <!-- warning message widget -->
+                      <div id="warning-message-widget">
+                        <div class="alert alert-warning fade show" role="alert">
+                          <h3>Рекомендации</h3><br>
+                          <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
+                          <p>2. Попробуйте повторить платеж оплатив другой картой</p>
+                          <p>3. Попробовать оплаить через 24 часа.</p>
+                        </div>
+                      </div><!-- warning message widget -->
+                    </div><!-- aside mobile area -->
+
+                    <div class="col-12 mt-3 mb-5 mb-lg-3">
                       <!-- service rate widget -->
                       <div class="service-rate" id="service-rate-widget">
-                        <h3>Оцените качество услуги</h3>
+                        <h3>Вы можете оставить свой отзыв</h3>
+                        <p>Оставьте свои контакты для ответа от техподдержки</p>
                         <form action="/">
-                          <div class="form-group service-rate__rating">
-                            <div class="rating-input">
-                              <input id="star-4" type="radio" name="rating-input">
-                              <label for="star-4"></label>
-                      
-                              <input id="star-3" type="radio" name="rating-input">
-                              <label for="star-3"></label>
-                          
-                              <input id="star-2" type="radio" name="rating-input">
-                              <label for="star-2"></label>
-                          
-                              <input id="star-1" type="radio" name="rating-input">
-                              <label for="star-1"></label>
-                          
-                              <input id="star-0" type="radio" name="rating-input">
-                              <label for="star-0"></label>
-                            </div>
-                          </div>
                           <div class="row">
                             <div class="col-md">
                               <div class="form-group">
@@ -558,7 +351,7 @@
                           </div>
                           <div class="service-rate__submit row justify-content-end">
                             <div class="col-md-5">
-                              <button type="submit" class="btn btn-green btn-block">Оценить</button>
+                              <button type="submit" class="btn btn-green btn-block">Оставить отзыв</button>
                             </div>
                           </div>
                         </form>
@@ -568,105 +361,25 @@
                   </div>
                 </div><!-- bill main widget -->
               </div>
-            
+
             </div>
-
-
-            <!-- aside mobile area -->
-            <div class="row d-lg-none">
-
-              <div class="col-12 mb-3">
-                <!-- success message-widget -->
-                <div id="success-message-widget">
-                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
-                    Загляните в меню!<br>
-                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                  </div>
-                </div><!-- success message-widget -->
-              </div>
-
-              <div class="col-12 mb-3">
-                <!-- services more widget -->
-                <div id="services-more-widget">
-                  <h4 class="mb-3">Также могут заинтересовать</h4>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/yasno.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Перевод с карты на карту</span>
-                  </a>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgasenergy.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Київводоканал</span>
-                  </a>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgas.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Київгаз</span>
-                  </a>
-                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
-                </div><!-- services more widget -->
-              </div>
-
-              <div class="col-12 mb-3">
-                <div class="banner banner-w100"></div>
-              </div>
-
-            </div><!-- aside mobile area -->
 
           </main><!-- main area -->
 
           <!-- aside area -->
-          <aside class="col-lg-4 d-none d-lg-block">
-            <div class="row">
+          <aside class="col-lg-4 d-none d-lg-block mt-5">
+            <div class="row mt-5">
 
-              <div class="col-12 mb-3">
-                <!-- success message-widget -->
-                <div id="success-message-widget">
-                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
-                    Загляните в меню!<br>
-                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
+              <div class="col-12 mt-4 mb-3">
+                <!-- warning message widget -->
+                <div id="warning-message-widget">
+                  <div class="alert alert-warning fade show" role="alert">
+                    <h3>Рекомендации</h3><br>
+                    <p>1. Обратитесь в службу поддержки вашего банка (контакты указаны на обратной стороне вашей банковской карты</p>
+                    <p>2. Попробуйте повторить платеж оплатив другой картой</p>
+                    <p>3. Попробовать оплаить через 24 часа.</p>
                   </div>
-                </div><!-- success message-widget -->
-              </div>
-
-              <div class="col-12 mb-3">
-                <!-- services more widget -->
-                <div id="services-more-widget">
-                  <h4 class="mb-3">Также могут заинтересовать</h4>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/yasno.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Перевод с карты на карту</span>
-                  </a>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgasenergy.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Київводоканал</span>
-                  </a>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgas.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Київгаз</span>
-                  </a>
-                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
-                </div><!-- services more widget -->
-              </div>
-
-              <div class="col-12 mb-3">
-                <div class="banner banner-w100"></div>
+                </div><!-- warning message widget -->
               </div>
 
             </div>

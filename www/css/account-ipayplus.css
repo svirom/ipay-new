@@ -1,0 +1,169 @@
+.ipayplus-header {
+  padding-top: 1rem;
+  border-bottom: 2px solid #DEE7F3;
+}
+
+.ipayplus-header li {
+  margin-right: 1.125rem;
+}
+
+.ipayplus-header__link {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.5625rem;
+  color: #3B566E;
+}
+
+.ipayplus-header__link::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: #E84F35;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.ipayplus-header__link.active {
+  font-weight: 700;
+  color: #172A3A;
+}
+
+.ipayplus-header__link.active::after {
+  width: 100%;
+}
+
+.ipayplus-header__link:hover {
+  color: #172A3A;
+  text-decoration: none;
+}
+
+.ipayplus-card {
+  margin-bottom: 2rem;
+}
+
+.ipayplus-card__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6.875rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.ipayplus-card__img img {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ipayplus-card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 10.5rem;
+  padding: 0.9375rem 1rem 0;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  background-color: #ffffff;
+}
+
+.ipayplus-card__content h5 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-height: 3.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+  font-weight: 500;
+}
+
+.ipayplus-card__content .ipayplus-card__more {
+  display: block;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  padding: 1rem 0.9375rem 0.875rem;
+  border-top: 1px dashed #DEE7F3;
+  color: #172A3A;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62891 17.834L15.4625 12.0004' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4619 12L9.62831 6.16639' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right 0.875rem center;
+  background-repeat: no-repeat;
+}
+
+.ipayplus-card__content .ipayplus-card__more:hover {
+  text-decoration: none;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62891 17.834L15.4625 12.0004' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4619 12L9.62831 6.16639' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 0.875rem center no-repeat;
+}
+
+.ipayplus-card__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  min-height: 1.875rem;
+  padding-bottom: 0.25rem;
+}
+
+.ipayplus-card__time span {
+  font-size: 0.75rem;
+}
+
+.ipayplus-card__time .ipayplus-card__period {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #E84F35;
+}
+
+.ipayplus-card__time .ipayplus-card__status {
+  text-align: right;
+  color: #7C9CAC;
+}
+
+.ipayplus-card__time .ipayplus-card__status--in {
+  color: #09BC8A;
+}
+
+.ipayplus-card-mobile {
+  padding: 1rem 0 0.5rem;
+  border-bottom: 1px dashed #DEE7F3;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62891 17.834L15.4625 12.0004' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4619 12L9.62831 6.16639' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right top 1.5rem;
+  background-repeat: no-repeat;
+}
+
+.ipayplus-card-mobile h5 {
+  margin-bottom: 0.625rem;
+  padding-right: 1.5rem;
+  font-weight: 500;
+}
+/*# sourceMappingURL=account-ipayplus.css.map */

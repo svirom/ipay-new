@@ -1,0 +1,159 @@
+// ------------------------------------------------------------------------------
+// This file contains all styles related to the account ipay+ widget
+// ------------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-ipayplus {
+
+}
+
+.ipayplus-header {
+  padding-top: 1rem;
+  border-bottom: 2px solid $middle-grey;
+
+  li {
+    margin-right: 1.125rem;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.5625rem;
+    color: $text-color;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -2px;
+      background-color: $btn-red;
+      transition: width 0.2s;
+    }
+
+    &.active {
+      font-weight: 700;
+      color: $heading-color;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      color: $heading-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.ipayplus-card {
+  margin-bottom: 2rem;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.875rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    img {
+      flex-grow: 0;
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 10.5rem;
+    padding: 0.9375rem 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 20px $card-shadow;
+    background-color: #ffffff;
+
+    h5 {
+      flex-grow: 1;
+      max-height: 3.75rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      line-clamp: 3;
+      box-orient: vertical;
+      font-weight: 500;
+    }
+
+    .ipayplus-card__more {
+      display: block;
+      margin-left: -0.9375rem;
+      margin-right: -0.9375rem;
+      padding: 1rem 0.9375rem 0.875rem;
+      border-top: 1px dashed $middle-grey;
+      color: $heading-color;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62891 17.834L15.4625 12.0004' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4619 12L9.62831 6.16639' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: right 0.875rem center;
+      background-repeat: no-repeat;
+
+      &:hover {
+        text-decoration: none;
+        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62891 17.834L15.4625 12.0004' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4619 12L9.62831 6.16639' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 0.875rem center no-repeat;
+      }
+    }
+  }
+
+  &__time {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    min-height: 1.875rem;
+    padding-bottom: 0.25rem;
+
+    span {
+      font-size: 0.75rem;
+    }
+
+    .ipayplus-card__period {
+      font-family: $heading-font;
+      font-weight: 700;
+      color: $btn-red;
+    }
+
+    .ipayplus-card__status {
+      text-align: right;
+      color: $main-blue;
+
+      &--in {
+        color: $btn-green;
+      }
+    }
+  }
+}
+
+// card mobile
+.ipayplus-card-mobile {
+  padding: 1rem 0 0.5rem;
+  border-bottom: 1px dashed $middle-grey;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62891 17.834L15.4625 12.0004' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4619 12L9.62831 6.16639' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right top 1.5rem;
+  background-repeat: no-repeat;
+
+  h5 {
+    margin-bottom: 0.625rem;
+    padding-right: 1.5rem;
+    font-weight: 500;
+  }
+}

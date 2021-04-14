@@ -72,7 +72,7 @@
       left: 0.625rem;
       top: 50%;
       @include transform(translateY(-50%));
-      background-image: url('../img/dashboard-catalogue.png');
+      background-image: url('../img/dashboard-catalogue-new.png');
       background-size: 120px;
       background-repeat: no-repeat;
       z-index: 1;
@@ -94,7 +94,7 @@
   &__account {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -72px 0;
     }
 
@@ -108,7 +108,7 @@
   &__archive {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: 0 0;
     }
 
@@ -122,7 +122,7 @@
   &__templates {
     &::before {
       width: 24px;
-			height: 25px;
+			height: 24px;
       background-position: -49px -49px;
     }
 
@@ -161,16 +161,30 @@
     }
   }
 
-  &__settings {
+  &__ipayplus {
     &::before {
-      width: 25px;
-			height: 25px;
-      background-position: 0 -49px;
+      width: 24px;
+			height: 24px;
+      background-position: -96px -25px;
     }
 
     &:active, &.active, &--red {
       &::before {
-        background-position: -24px -49px;
+        background-position: -96px -49px;
+      }
+    }
+  }
+
+  &__settings {
+    &::before {
+      width: 24px;
+			height: 25px;
+      background-position: 0 -48px;
+    }
+
+    &:active, &.active, &--red {
+      &::before {
+        background-position: -24px -48px;
       }
     }
   }
