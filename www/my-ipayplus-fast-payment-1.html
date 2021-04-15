@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/catalogue-account.css">
+    <link rel="stylesheet" href="/css/fastPayment-rate.css">
+    <link rel="stylesheet" href="/css/fastPayment-article.css">
+
+    <title>iPay+ Fast Prepare Article 1</title>
+  </head>
+  <body>
+
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
+                    <span class="main-nav__bonus">1543 </span>
+                    <span>бонусов</span>
+                  </span>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account">
+                  <span class="main-nav__item-account--registered">Мой кабинет</span>
+                  <span>Альберт</span>
+                </li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
+                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
+                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
+                      </ul>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Мой кабинет</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>iPay+</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Оплата на время с Mastercard</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- aside area -->
+          <aside class="col-lg-3 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-5">
+                <!-- account catalogue widget -->
+                <div class="catalogue-account" id="catalogue-account-widget">
+                  <ul class="catalogue-account__list">
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__account">
+                        <span>Мой кабинет</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__archive">
+                        <span>Архив платежей</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__templates">
+                        <span>Мои шаблоны</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__cards">
+                        <span>Мои карты</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
+                        <span>Мои бонусы</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__ipayplus active">
+                        <span>iPay+</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__settings">
+                        <span>Мой профиль</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div><!-- account catalogue widget -->
+              </div>
+
+              <div class="col-12 mb-2">
+                <div class="banner banner-w100"></div>
+              </div>
+
+            </div>
+            
+          </aside><!-- aside area -->
+          <!-- main area -->
+          <main class="col-lg-9">
+
+            <div class="row">
+
+              <div class="col-12">
+
+                <div class="row">
+                  <div class="col-12 mt-2 mb-3 d-lg-none">
+                    <a href="#" class="btn btn-link btn-back">iPay Plus</a>
+                  </div>
+                </div>
+
+                <!-- ipay+ fast payment article widget -->
+                <article class="fastPayment-article" id="fastPayment-article-widget">
+
+                  <header class="fastPayment-article__header">
+                    <div class="fastPayment-article__header-img">
+                      <img src="/img/fast-payment/ipay+/fastPrepare-article-1.jpg" alt="Image">
+                    </div>
+                    <h1 class="mb-4">Оплата на время с Mastercard. Сезон 1.</h1>
+                    <div class="fastPayment-article__time">
+                      <div class="fastPayment-article__period">
+                        <p>Период розыгрыша</p>
+                        <p>29.03.21 - 04.04.21</p>
+                      </div>
+                      <p class="fastPayment-article__status fastPayment-article__status--in">Вы участвуете</p>
+                    </div>
+                  </header>
+
+                  <section class="fastPayment-article__content">
+                    <p class="mb-4"><span class="heading-color"><strong>Александр</strong></span>, совершайте переводы с карты на карту, используя  Mastercard и автоматически участвуйте в розыгрыше призов!</p>
+                    <h4 class="mb-3">Правила участия</h4>
+                    <ol class="list list-ordered">
+                      <li>Делайте переводы картой Mastercard на любую сумму.</li>
+                      <li>Узнайте время платежа и свою позицию в рейтинге.</li>
+                      <li>Среди <span class="font-weight-medium">Топ-100 участников каждое воскресенье в 12:00</span> будут розыграны призы!</li>
+                    </ol>
+                    <a href="#" class="fastPayment-article__action-link">
+                      <span>На страницу розыгрыша</span>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.4307 19.3193L16.7504 12.9996" stroke="#E84F35" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.751 13L10.4312 6.68026" stroke="#E84F35" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </section>
+
+                  <section class="fastPayment-article__rating">
+
+                    <!-- my rating -->
+                    <div class="fastPayment-rate">
+
+                      <div class="fastPayment-rate__row no-collapse">
+                        <div class="fastPayment-rate__row-img">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21H18V11H21V21ZM16 21H13V8H16V21ZM11 21H8V5H11V21ZM6 21H3V13H6V21Z" fill="#7C9CAC"/>
+                          </svg>
+                        </div>
+                        <div class="fastPayment-rate__row-info"><span>Мой рейтинг</span></div>
+                      </div>
+
+                      <!-- my rating desktop -->
+                      <div class="d-none d-md-block">
+                        <div class="fastPayment-article__rating-container">
+
+                          <div class="fastPayment-article__rating-week">
+
+                            <div class="fastPayment-article__rating-header">
+                              <p class="heading-color mb-0">За неделю</p>
+                              <p class="fastPayment-article__rating-record mb-0">
+                                <span class="small">Топ-100 сейчас:</span>
+                                <span class="heading-color fastPayment-article__rating-time">01:01</span>
+                              </p>
+                            </div>
+  
+                            <div class="table-responsive">
+                              <table class="table fastPayment-table">
+                                <tbody>
+                                  <tr>
+                                    <td>183</td>
+                                    <td>Петр</td>
+                                    <td>00:59</td>
+                                  </tr>
+                                  <tr>
+                                    <td>184</td>
+                                    <td>Иван Иванов</td>
+                                    <td>01:10</td>
+                                  </tr>
+                                  <tr>
+                                    <td>185</td>
+                                    <td>Игорь Петров</td>
+                                    <td>01:09</td>
+                                  </tr>
+                                  <tr class="active">
+                                    <td>186</td>
+                                    <td>Николай</td>
+                                    <td>01:10</td>
+                                  </tr>
+                                  <tr>
+                                    <td>187</td>
+                                    <td>Василий Иванов</td>
+                                    <td>01:25</td>
+                                  </tr>
+                                  <tr>
+                                    <td>188</td>
+                                    <td>Константин Андреев</td>
+                                    <td>01:27</td>
+                                  </tr>
+                                  <tr>
+                                    <td>189</td>
+                                    <td>Константин Андреев</td>
+                                    <td>01:27</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+  
+                          </div>
+  
+                          <div class="fastPayment-article__rating-month">
+
+                            <div class="fastPayment-article__rating-header">
+                              <p class="heading-color mb-0">За месяц</p>
+                            </div>
+  
+                            <div class="fastPayment-leader">
+                              <span class="fastPayment-leader__rate">1</span>
+                              <span class="fastPayment-leader__info">Святослав Петриченко</span>
+                              <span class="fastPayment-leader__time">00:53</span>
+                              <span class="fastPayment-leader__img">
+                                <img src="/img/fast-payment/fast-payment-leader.png" srcset="/img/fast-payment/fast-payment-leader.png 1x, /img/fast-payment/fast-payment-leader@2x.png 2x" alt="Leader">
+                              </span>
+                            </div>
+  
+                            <div class="table-responsive">
+                              <table class="table fastPayment-table">
+                                <tbody>
+                                  <tr>
+                                    <td>184</td>
+                                    <td>Иван Иванов</td>
+                                    <td>01:10</td>
+                                  </tr>
+                                  <tr>
+                                    <td>185</td>
+                                    <td>Игорь Петров</td>
+                                    <td>01:09</td>
+                                  </tr>
+                                  <tr class="active">
+                                    <td>186</td>
+                                    <td>Николай</td>
+                                    <td>01:10</td>
+                                  </tr>
+                                  <tr>
+                                    <td>187</td>
+                                    <td>Василий Иванов</td>
+                                    <td>01:25</td>
+                                  </tr>
+                                  <tr>
+                                    <td>188</td>
+                                    <td>Константин Андреев</td>
+                                    <td>01:27</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+  
+  
+                          </div>
+  
+                        </div>
+                      </div><!-- my rating desktop -->
+
+                      <!-- my rating mobile -->
+                      <div class="d-md-none">
+                        <div class="fastPayment-rate__collapse">
+
+                          <ul class="nav" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="fastPayment-week-tab" data-toggle="pill" href="#fastPayment-week" role="tab" aria-controls="fastPayment-week" aria-selected="true">За неделю</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="fastPayment-month-tab" data-toggle="pill" href="#fastPayment-month" role="tab" aria-controls="fastPayment-month" aria-selected="false">За месяц</a>
+                            </li>
+                          </ul>
+
+                          <div class="tab-content">
+
+                            <div class="tab-pane fade show active" id="fastPayment-week" role="tabpanel" aria-labelledby="fastPayment-week-tab">
+
+                              <div class="fastPayment-article__rating-header">
+                                <p class="fastPayment-article__rating-record mb-0">
+                                  <span class="small">Топ-100 сейчас:</span>
+                                  <span class="heading-color fastPayment-article__rating-time">01:01</span>
+                                </p>
+                              </div>
+
+                              <div class="table-responsive">
+                                <table class="table fastPayment-table">
+                                  <tbody>
+                                    <tr>
+                                      <td>183</td>
+                                      <td>Петр</td>
+                                      <td>00:59</td>
+                                    </tr>
+                                    <tr>
+                                      <td>184</td>
+                                      <td>Иван Иванов</td>
+                                      <td>01:10</td>
+                                    </tr>
+                                    <tr>
+                                      <td>185</td>
+                                      <td>Игорь Петров</td>
+                                      <td>01:09</td>
+                                    </tr>
+                                    <tr class="active">
+                                      <td>186</td>
+                                      <td>Николай</td>
+                                      <td>01:10</td>
+                                    </tr>
+                                    <tr>
+                                      <td>187</td>
+                                      <td>Василий Иванов</td>
+                                      <td>01:25</td>
+                                    </tr>
+                                    <tr>
+                                      <td>188</td>
+                                      <td>Константин Андреев</td>
+                                      <td>01:27</td>
+                                    </tr>
+                                    <tr>
+                                      <td>189</td>
+                                      <td>Константин Андреев</td>
+                                      <td>01:27</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="fastPayment-month" role="tabpanel" aria-labelledby="fastPayment-month-tab">
+
+                              <div class="fastPayment-leader">
+                                <span class="fastPayment-leader__rate">1</span>
+                                <span class="fastPayment-leader__info">Святослав Петриченко</span>
+                                <span class="fastPayment-leader__time">00:53</span>
+                                <span class="fastPayment-leader__img">
+                                  <img src="/img/fast-payment/fast-payment-leader.png" srcset="/img/fast-payment/fast-payment-leader.png 1x, /img/fast-payment/fast-payment-leader@2x.png 2x" alt="Leader">
+                                </span>
+                              </div>
+
+                              <div class="table-responsive">
+                                <table class="table fastPayment-table">
+                                  <tbody>
+                                    <tr>
+                                      <td>183</td>
+                                      <td>Петр</td>
+                                      <td>00:59</td>
+                                    </tr>
+                                    <tr>
+                                      <td>184</td>
+                                      <td>Иван Иванов</td>
+                                      <td>01:10</td>
+                                    </tr>
+                                    <tr>
+                                      <td>185</td>
+                                      <td>Игорь Петров</td>
+                                      <td>01:09</td>
+                                    </tr>
+                                    <tr class="active">
+                                      <td>186</td>
+                                      <td>Николай</td>
+                                      <td>01:10</td>
+                                    </tr>
+                                    <tr>
+                                      <td>187</td>
+                                      <td>Василий Иванов</td>
+                                      <td>01:25</td>
+                                    </tr>
+                                    <tr>
+                                      <td>188</td>
+                                      <td>Константин Андреев</td>
+                                      <td>01:27</td>
+                                    </tr>
+                                    <tr>
+                                      <td>189</td>
+                                      <td>Константин Андреев</td>
+                                      <td>01:27</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div><!-- my rating mobile -->
+
+                      <div class="row justify-content-center">
+                        <div class="col-sm-7 col-md-5 col-xl-4 mt-4">
+                          <a href="#" class="btn btn-green btn-block">Улучшить результат</a>
+                        </div>
+                      </div>
+
+                    </div><!-- my rating -->
+
+                    <!-- leaderboard -->
+                    <div class="fastPayment-rate fastPayment-article__leaderboard">
+
+                      <div role="button" data-toggle="collapse" data-target="#collapse-fastPayment-rate" class="fastPayment-rate__row">
+                        <div class="fastPayment-rate__row-img">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2598 12.0297L13.6797 6.71973" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 14C12.5523 14 13 13.5523 13 13C13 12.4477 12.5523 12 12 12C11.4477 12 11 12.4477 11 13C11 13.5523 11.4477 14 12 14Z" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.11 21.5C20.76 19.59 22.5 16.51 22.5 13C22.5 7.2 17.8 2.5 12 2.5C6.2 2.5 1.5 7.2 1.5 13C1.5 16.51 3.24001 19.59 5.89001 21.5" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 2.5V4.5" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.75 3.91016L7.75 5.64016" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.91016 7.75L4.64017 8.75" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.3604 17.25L21.0904 18.25" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.5 13H3.5" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.5 13H22.5" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.91016 18.25L4.64017 17.25" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.3604 8.75L21.0904 7.75" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.25 5.64016L17.25 3.91016" stroke="#E84F35" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div class="fastPayment-rate__row-info"><span>Лидеры недели</span></div>
+                        <div class="fastPayment-rate__row-arrow">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.1665 9.62891L12.0001 15.4625" stroke="#3B566E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 15.4629L17.8336 9.62928" stroke="#3B566E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div class="collapse" id="collapse-fastPayment-rate">
+                        <div class="fastPayment-rate__collapse">
+
+                          <div class="table-responsive">
+                            <table class="table">
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>00:59</td>
+                                  <td>Петр</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>01:10</td>
+                                  <td>Иван Иванов</td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>01:09</td>
+                                  <td>Игорь Петров</td>
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td>01:10</td>
+                                  <td>Николай</td>
+                                </tr>
+                                <tr>
+                                  <td>5</td>
+                                  <td>01:25</td>
+                                  <td>Василий Иванов</td>
+                                </tr>
+                                <tr>
+                                  <td>6</td>
+                                  <td>01:27</td>
+                                  <td>Константин Андреев</td>
+                                </tr>
+                                <tr>
+                                  <td>7</td>
+                                  <td>01:27</td>
+                                  <td>Константин Андреев</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div><!-- leaderboard -->
+
+                    
+                    
+                    
+                    
+                    
+
+                  </section>
+
+                </article><!-- ipay+ fast prepare article widget -->             
+                  
+              </div>
+
+            </div>
+
+          </main><!-- main area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>
