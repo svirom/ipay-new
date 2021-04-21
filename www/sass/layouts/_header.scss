@@ -79,7 +79,6 @@
       border-radius: $border-radius;
 
       &:focus, &:hover {
-        // text-decoration: underline;
         border-radius: 0;
         background-color: $light-grey;
       }
@@ -190,6 +189,15 @@
         width: 24px;
 			  height: 24px;
         background: url('../img/header-icon-new.png') -52px -2px no-repeat;
+        background-size: 130px;
+      }
+    }
+
+    .dropdown-ipayplus {
+      &::before {
+        width: 24px;
+			  height: 26px;
+        background: url('../img/header-icon-new.png') -102px -30px no-repeat;
         background-size: 130px;
       }
     }

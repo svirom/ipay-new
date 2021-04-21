@@ -1,0 +1,35 @@
+// ------------------------------------------------------------------------------
+// This file contains all styles related to the p2p fast payment messages widget
+// ------------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.alert-fastPayment {
+  padding: 0.75rem 1.5rem 1.5rem 4.25rem;
+  background-repeat: no-repeat;
+  background-position: left 0.625rem top 0.75rem;
+
+  &-promo {
+    background-image: url('../img/fast-payment/alert/fastPayment-alert-promo.png');
+  }
+
+  &-result {
+    background-image: url('../img/fast-payment/alert/fastPayment-alert-result.png');
+  }
+
+  @include until($md) {
+    padding: 4.5rem 0.875rem 1.25rem;
+    background-position: left 0.875rem top 1rem;
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    &-result {
+      background-position: left 0.625rem top 1rem;
+    }
+  }
+}
