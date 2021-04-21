@@ -18,8 +18,19 @@
 .main-wrapper {
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 386px);
+
+  & > #operations {
+    flex-grow: 1;
+  }
+
+  @include until($xl) {
+    min-height: calc(100vh - 399px);
+  }
 
   @include until($lg) {
+    min-height: calc(100vh - 636px);
+
     .breadcrumb-wrapper {
       order: 1;
     }
@@ -27,6 +38,7 @@
 }
 
 .main-content {
+  flex-grow: 1;
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
 

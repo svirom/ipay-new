@@ -46,6 +46,7 @@
 
   &__bank {
     flex-grow: 1;
+    margin-right: 0.5rem;
     background-position: left center;
   }
 
@@ -54,6 +55,13 @@
     flex-basis: 33%;
     justify-content: flex-end;
     background-position: right center;
+
+    &.card-title-mark.type-card-visa,
+    &.card-title-mark.type-card-mc,
+    &.card-title-mark.type-card-prostir {
+      width: auto;
+      height: auto;
+    }
   }
 
   &__body {

@@ -15,6 +15,20 @@
     .archive-card__row {
       border-bottom: 1px solid $middle-grey;
     }
+
+    &:hover {
+      .archive-card__row {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  &:hover {
+    & + .archive-card {
+      .archive-card__row {
+        border-top-color: transparent;
+      }
+    }
   }
 
   &__row {
@@ -201,15 +215,25 @@
 .archive {
   &--col-9 {
     .archive-card {
+      &__row {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+      }
+
       &__bonus {
         flex-basis: 5.5rem;
         max-width: 5.5rem;
         padding-left: 0.75rem;
+        padding-top: 0;
+        padding-bottom: 0.25rem;
         text-align: center;
+        line-height: 0.8;
 
         span {
           display: inline-block;
           margin-right: 0.25rem;
+          padding-top: 0.375rem;
+          vertical-align: top;
         }
 
         &.icon-bonus {
@@ -217,7 +241,7 @@
             position: relative;
             display: inline-block;
             left: 0;
-            top: 0.5rem;
+            top: 0.1rem;
             @include transform(translateY(0));
             background-size: 18px;
             background-position: left 0.25rem center;
@@ -237,6 +261,19 @@
         -ms-flex: 0 1 auto;
         /* ie11 fix */
         align-self: flex-end;
+        padding-top: 0;
+
+        h4 {
+          display: none;
+        }
+
+        .bill-result__buttons {
+          padding-bottom: 0.5rem;
+
+          form .form-group .form-label {
+            top: 0.95rem;
+          }
+        }
       }
     }
   }
@@ -350,7 +387,7 @@
   &__card {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 0 0.15rem;
+    padding: 0.25rem 0 0;
     border-bottom: 1px dashed $middle-grey;
 
     &:hover {
@@ -368,7 +405,7 @@
 
     &--main {
       position: relative;
-      padding: 0.84125rem 0;
+      padding: 0.5rem 0 0.8125rem;
       background: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.834 23.9387L21.6121 16.1606' stroke='%23DEE7F3' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.6133 16.1604L13.8351 8.38226' stroke='%23DEE7F3' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center no-repeat;
     }
   }

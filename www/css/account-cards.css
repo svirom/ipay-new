@@ -53,6 +53,7 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  margin-right: 0.5rem;
   background-position: left center;
 }
 
@@ -65,6 +66,11 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-position: right center;
+}
+
+.account-card__type.card-title-mark.type-card-visa, .account-card__type.card-title-mark.type-card-mc, .account-card__type.card-title-mark.type-card-prostir {
+  width: auto;
+  height: auto;
 }
 
 .account-card__body {

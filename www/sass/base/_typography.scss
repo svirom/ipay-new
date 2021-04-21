@@ -63,6 +63,14 @@ p, span, li {
   color: $text-color;
 }
 
+a {
+  color: $btn-red;
+
+  &:hover {
+    color: $btn-red;
+  }
+}
+
 a[download] {
   &:not(.btn) {
     word-break: break-word;

@@ -6,6 +6,14 @@
   border-bottom: 1px solid #DEE7F3;
 }
 
+.archive-card:last-of-type:hover .archive-card__row {
+  border-bottom-color: transparent;
+}
+
+.archive-card:hover + .archive-card .archive-card__row {
+  border-top-color: transparent;
+}
+
 .archive-card__row {
   position: relative;
   display: -webkit-box;
@@ -239,24 +247,34 @@
   margin-right: 0.5rem;
 }
 
+.archive--col-9 .archive-card__row {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
 .archive--col-9 .archive-card__bonus {
   -ms-flex-preferred-size: 5.5rem;
       flex-basis: 5.5rem;
   max-width: 5.5rem;
   padding-left: 0.75rem;
+  padding-top: 0;
+  padding-bottom: 0.25rem;
   text-align: center;
+  line-height: 0.8;
 }
 
 .archive--col-9 .archive-card__bonus span {
   display: inline-block;
   margin-right: 0.25rem;
+  padding-top: 0.375rem;
+  vertical-align: top;
 }
 
 .archive--col-9 .archive-card__bonus.icon-bonus::before {
   position: relative;
   display: inline-block;
   left: 0;
-  top: 0.5rem;
+  top: 0.1rem;
   -webkit-transform: translateY(0);
   transform: translateY(0);
   background-size: 18px;
@@ -279,6 +297,19 @@
   /* ie11 fix */
   -ms-flex-item-align: end;
       align-self: flex-end;
+  padding-top: 0;
+}
+
+.archive--col-9 .archive-card__buttons h4 {
+  display: none;
+}
+
+.archive--col-9 .archive-card__buttons .bill-result__buttons {
+  padding-bottom: 0.5rem;
+}
+
+.archive--col-9 .archive-card__buttons .bill-result__buttons form .form-group .form-label {
+  top: 0.95rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -414,7 +445,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.5rem 0 0.15rem;
+  padding: 0.25rem 0 0;
   border-bottom: 1px dashed #DEE7F3;
 }
 
@@ -439,7 +470,7 @@
 
 .archive-mobile__row--main {
   position: relative;
-  padding: 0.84125rem 0;
+  padding: 0.5rem 0 0.8125rem;
   background: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.834 23.9387L21.6121 16.1606' stroke='%23DEE7F3' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.6133 16.1604L13.8351 8.38226' stroke='%23DEE7F3' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center no-repeat;
 }
 

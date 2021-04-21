@@ -112,6 +112,11 @@
     box-shadow: 0px 4px 20px $card-shadow;
   }
 
+  .badge {
+    flex-shrink: 0;
+    padding: 0.625rem 0.9375rem;
+  }
+
   @include at-least($lg) {
     &.active {
       border-color: $btn-red;
@@ -160,8 +165,10 @@
   }
 
   &__content {
+    flex-grow: 1;
     max-height: 3.75rem; /* ie11 height fix */
     padding-left: 1.5625rem;
+    padding-right: 0.25rem;
     color: $heading-color;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -172,6 +179,10 @@
     -webkit-box-orient: vertical;
     line-clamp: 3;
     box-orient: vertical;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   // template card
@@ -234,7 +245,6 @@
   }
 
   &__amount {
-    // padding-top: 0.5rem;
     font-size: 0.75rem;
     color: $main-blue;
   }
@@ -370,7 +380,7 @@
   height: 18.125rem;
   padding: 1.625rem 1.875rem 3.25rem;
   border-radius: 1.25rem;
-  box-shadow: 0px 5px 20px $box-shadow;
+  box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
 
   @include until($sm) {
     width: 100%;

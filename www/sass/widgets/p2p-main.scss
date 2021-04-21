@@ -558,6 +558,19 @@
         padding: 0.75rem 0.875rem 0;
         box-shadow: 0px 5px 20px $box-shadow;
 
+        &__bank, &__type {
+          height: 2rem;
+        }
+
+        &__type {
+          padding-top: 0.1875rem;
+          padding-bottom: 0.1875rem;
+        }
+
+        &__header {
+          align-items: flex-end;
+        }
+
         &__number {
           padding-bottom: 0.5rem;
         }
@@ -724,7 +737,7 @@
 /* popover bonuses */
 .popover {
   &.popover-bonuses {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     border: 0;
     border-radius: $border-radius;
     background-color: $text-color;
@@ -782,7 +795,7 @@
     }
 
     .popover-header {
-      padding: 1rem 1rem 0.5rem;
+      padding: 1rem 2rem 0.5rem 1rem;
       color: #fff;
       border-bottom: 0;
       border-top-left-radius: $border-radius;
@@ -1131,6 +1144,7 @@ launch history styles
   @include until($md) {
     blockquote {
       padding: 2.375rem 0 2.375rem 2rem;
+      color: $main-blue;
 
       &::before {
         bottom: 4.875rem;
@@ -1390,6 +1404,8 @@ launch history styles
 }
 
 .field-p2pform-target_card_guid,
-.field-p2pform-invoice_currency {
+.field-p2pform-invoice_currency,
+.field-contactidform-invoice_currency,
+.field-Тemplatep2p-target_card_guid {
   display: none;
 }

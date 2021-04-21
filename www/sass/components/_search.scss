@@ -15,7 +15,7 @@
       border-color: transparent;
       box-shadow: 0px 5px 20px $box-shadow;
       @include placeholder {
-        color: $main-blue;
+        color: rgba($main-blue, 0);
         font-weight: normal;
       }
 
@@ -32,6 +32,10 @@
         border-color: $light-grey;
         box-shadow: none;
         background-color: $light-grey;
+
+        @include placeholder {
+          color: rgba($main-blue, 1);
+        }
 
         @include until($lg) {
           border-color: transparent;

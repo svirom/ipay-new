@@ -16,6 +16,7 @@
   }
 
   &__icon {
+    position: relative;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
@@ -24,6 +25,18 @@
     height: 3rem;
     box-shadow: 0px 3px 10px $template-shadow-hover;
     border-radius: $border-radius;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../img/menu-catalogue.png');
+      background-size: 169px;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
 
     img {
       max-width: calc(100% - 6px);
