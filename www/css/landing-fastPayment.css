@@ -1,0 +1,334 @@
+.landing-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #FFA727;
+  z-index: 1000;
+}
+
+.landing-top::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  background-color: #E84F35;
+}
+
+.landing-top + .main-header {
+  top: 4px;
+}
+
+.landing-wrapper {
+  padding-top: 1.5rem;
+  padding-bottom: 3.75rem;
+}
+
+.landing-wrapper h2 {
+  line-height: 1.35;
+}
+
+.landing-wrapper .btn-fastPayment {
+  max-width: 200px;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  border-color: #FFA727;
+  background-color: #FFA727;
+}
+
+@media screen and (max-width: 767px) {
+  .landing-wrapper h2 {
+    font-size: 1.5rem;
+  }
+  .landing-wrapper h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .landing-wrapper {
+    padding-top: 0.875rem;
+    padding-bottom: 2.5rem;
+  }
+  .landing-wrapper .btn-fastPayment {
+    max-width: none;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    font-size: 1rem;
+  }
+}
+
+.landing-header {
+  max-width: 79.375rem;
+  margin: auto;
+  padding-top: 3.125rem;
+  padding-bottom: 4.875rem;
+  border-radius: 1.5rem;
+  background: #F7F5F3 url("../img/fast-payment/landing/landing-header-bkgr.png") right bottom no-repeat;
+}
+
+.landing-header h1 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  font-size: 2.625rem;
+  line-height: 1.33;
+}
+
+.landing-header__content p {
+  max-width: 350px;
+  margin-bottom: 1.875rem;
+}
+
+.landing-header__img {
+  width: 462px;
+  margin-left: auto;
+  margin-right: -30px;
+  padding-top: 1.75rem;
+}
+
+.landing-header__img img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .landing-header__img {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .landing-header {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    background-position: right -180px bottom;
+  }
+  .landing-header h1 {
+    margin-top: 0.875rem;
+    margin-bottom: 0.875rem;
+    font-size: 1.5rem;
+  }
+  .landing-header__content svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .landing-header__content p {
+    margin-bottom: 0.875rem;
+  }
+  .landing-header__img {
+    width: 231px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .landing-header__img {
+    width: auto;
+    padding-top: 2.5rem;
+  }
+}
+
+.landing-conditions {
+  padding-top: 6.25rem;
+}
+
+.landing-conditions h2 {
+  margin-bottom: 2.625rem;
+}
+
+@media screen and (max-width: 767px) {
+  .landing-conditions {
+    padding-top: 3.75rem;
+  }
+  .landing-conditions h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.landing-condition {
+  padding-bottom: 2.625rem;
+}
+
+.landing-condition p {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .landing-condition {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.landing-prizes {
+  padding-top: 5.125rem;
+  padding-bottom: 6.25rem;
+}
+
+.landing-prizes .btn-fastPayment {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .landing-prizes {
+    padding-top: 2.25rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.landing-prize {
+  padding-top: 2.25rem;
+  padding-bottom: 0.625rem;
+  text-align: center;
+}
+
+.landing-prize img {
+  max-width: 100%;
+  -webkit-filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.35));
+          filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.35));
+}
+
+.landing-prize h3 {
+  color: #3B566E;
+}
+
+.landing-prize__img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 21.875rem;
+  padding-bottom: 1.5rem;
+}
+
+.landing-prize__img span {
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 55px;
+  text-align: center;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 20px 40px rgba(25, 40, 60, 0.5);
+          box-shadow: 10px 20px 40px rgba(25, 40, 60, 0.5);
+  z-index: 1;
+}
+
+.landing-prize--coffeemaker img {
+  -webkit-filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.5));
+          filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.5));
+}
+
+.landing-prize--coffeemaker .landing-prize__img span {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-84px, -136px);
+          transform: translate(-84px, -136px);
+  background-color: #FFA727;
+}
+
+.landing-prize--tv .landing-prize__img span {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-163px, -57px);
+          transform: translate(-163px, -57px);
+  background-color: #FFA727;
+}
+
+.landing-prize--playstation .landing-prize__img span {
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(135px, -76px);
+          transform: translate(135px, -76px);
+  background-color: #E84F35;
+}
+
+@media screen and (max-width: 991px) {
+  .landing-prize--coffeemaker .landing-prize__img span {
+    -webkit-transform: translate(-76px, -128px);
+            transform: translate(-76px, -128px);
+  }
+  .landing-prize--tv .landing-prize__img span {
+    -webkit-transform: translate(-127px, -53px);
+            transform: translate(-127px, -53px);
+  }
+  .landing-prize--playstation .landing-prize__img span {
+    -webkit-transform: translate(110px, -65px);
+            transform: translate(110px, -65px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .landing-prize {
+    padding-top: 0.875rem;
+    padding-bottom: 0;
+  }
+  .landing-prize__img {
+    height: 20rem;
+    padding-bottom: 0.5rem;
+  }
+  .landing-prize--coffeemaker {
+    padding-top: 1.5rem;
+  }
+  .landing-prize--coffeemaker .landing-prize__img span {
+    -webkit-transform: translate(-84px, -136px);
+            transform: translate(-84px, -136px);
+  }
+  .landing-prize--tv .landing-prize__img span {
+    -webkit-transform: translate(-156px, -36px);
+            transform: translate(-156px, -36px);
+  }
+  .landing-prize--playstation {
+    padding-bottom: 1.5rem;
+  }
+  .landing-prize--playstation .landing-prize__img span {
+    -webkit-transform: translate(135px, -76px);
+            transform: translate(135px, -76px);
+  }
+}
+
+.landing-advices {
+  max-width: 79.375rem;
+  margin: auto;
+  padding-top: 3.75rem;
+  padding-bottom: 4.75rem;
+  border-radius: 1.5rem;
+  background-color: #F7F5F3;
+}
+
+.landing-advices__top {
+  padding-bottom: 1.5rem;
+}
+
+.landing-advice p {
+  line-height: 1.35;
+}
+
+.landing-advice p:first-child {
+  margin-bottom: 0.875rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 767px) {
+  .landing-advices {
+    padding-top: 1.5rem;
+    padding-bottom: 1.3125em;
+  }
+  .landing-advices__top {
+    padding-bottom: 0.75rem;
+  }
+}
+/*# sourceMappingURL=landing-fastPayment.css.map */

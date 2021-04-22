@@ -1,0 +1,363 @@
+// --------------------------------------------------------------------------
+// This file contains all styles related to the landing fast payment widget
+// --------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.landing-top {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background-color: $orange;
+  z-index: 1000;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: 100%;
+    background-color: $btn-red;
+  }
+
+  & + .main-header {
+    top: 4px;
+  }
+}
+
+.landing-wrapper {
+  padding-top: 1.5rem;
+  padding-bottom: 3.75rem;
+
+  h2 {
+    line-height: 1.35;
+  }
+
+  .btn-fastPayment {
+    max-width: 200px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    border-color: $orange;
+    background-color: $orange;
+  }
+
+  @include until($md) {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  @include until($sm) {
+    padding-top: 0.875rem;
+    padding-bottom: 2.5rem;
+
+    .btn-fastPayment {
+      max-width: none;
+      padding-top: 0.875rem;
+      padding-bottom: 0.875rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.landing-header {
+  max-width: 79.375rem;
+  margin: auto;
+  padding-top: 3.125rem;
+  padding-bottom: 4.875rem;
+  border-radius: 1.5rem;
+  background: #F7F5F3 url('../img/fast-payment/landing/landing-header-bkgr.png') right bottom no-repeat;
+
+  h1 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    font-size: 2.625rem;
+    line-height: 1.33;
+  }
+
+  &__content {
+    p {
+      max-width: 350px;
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  &__img {
+    width: 462px;
+    margin-left: auto;
+    margin-right: -30px;
+    padding-top: 1.75rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @include until($lg) {
+    &__img {
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 3.75rem;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    background-position: right -180px bottom;
+
+    h1 {
+      margin-top: 0.875rem;
+      margin-bottom: 0.875rem;
+      font-size: 1.5rem;
+    }
+
+    &__content {
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      p {
+        margin-bottom: 0.875rem;
+      }
+    }
+
+    &__img {
+      width: 231px;
+    }
+  }
+
+  @include until($sm) {
+    &__img {
+      width: auto;
+      padding-top: 2.5rem;
+    }
+  }
+}
+
+.landing-conditions {
+  padding-top: 6.25rem;
+
+  h2 {
+    margin-bottom: 2.625rem;
+  }
+
+  @include until($md) {
+    padding-top: 3.75rem;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.landing-condition {
+  padding-bottom: 2.625rem;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @include until($md) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.landing-prizes {
+  padding-top: 5.125rem;
+  padding-bottom: 6.25rem;
+
+  .btn-fastPayment {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include until($md) {
+    padding-top: 2.25rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.landing-prize {
+  padding-top: 2.25rem;
+  padding-bottom: 0.625rem;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.35));
+  }
+
+  h3 {
+    color: $text-color;
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 21.875rem;
+    padding-bottom: 1.5rem;
+
+    span {
+      display: block;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      @include font(1.5rem, 700, 55px);
+      text-align: center;
+      color:#ffffff;
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 10px 20px 40px rgba(25, 40, 60, 0.5);
+      z-index: 1;
+    }
+  }
+
+  &--coffeemaker {
+    img {
+      filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.5));
+    }
+    
+    .landing-prize__img {
+      span {
+        top: 50%;
+        left: 50%;
+        transform: translate(-84px, -136px);
+        background-color: $orange;
+      }
+    }
+  }
+
+  &--tv {
+    .landing-prize__img {
+      span {
+        top: 50%;
+        left: 50%;
+        transform: translate(-163px, -57px);
+        background-color: $orange;
+      }
+    }
+  }
+
+  &--playstation {
+    .landing-prize__img {
+      span {
+        top: 50%;
+        right: 50%;
+        transform: translate(135px, -76px);
+        background-color: $btn-red;
+      }
+    }
+  }
+
+  @include until($lg) {
+    &--coffeemaker {
+      .landing-prize__img {
+        span {
+          transform: translate(-76px, -128px);
+        }
+      }
+    }
+  
+    &--tv {
+      .landing-prize__img {
+        span {
+          transform: translate(-127px, -53px);
+        }
+      }
+    }
+  
+    &--playstation {
+      .landing-prize__img {
+        span {
+          transform: translate(110px, -65px);
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    padding-top: 0.875rem;
+    padding-bottom: 0;
+
+    &__img {
+      height: 20rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &--coffeemaker {
+      padding-top: 1.5rem;
+
+      .landing-prize__img {
+        span {
+          transform: translate(-84px, -136px);
+        }
+      }
+    }
+  
+    &--tv {
+      .landing-prize__img {
+        span {
+          transform: translate(-156px, -36px);
+        }
+      }
+    }
+  
+    &--playstation {
+      padding-bottom: 1.5rem;
+
+      .landing-prize__img {
+        span {
+          transform: translate(135px, -76px);
+        }
+      }
+    }
+  }
+}
+
+.landing-advices {
+  max-width: 79.375rem;
+  margin: auto;
+  padding-top: 3.75rem;
+  padding-bottom: 4.75rem;
+  border-radius: 1.5rem;
+  background-color: #F7F5F3;
+
+  &__top {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.landing-advice {
+  p {
+    line-height: 1.35;
+
+    &:first-child {
+      margin-bottom: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+@include until($md) {
+  .landing-advices {
+    padding-top: 1.5rem;
+    padding-bottom: 1.3125em;
+
+    &__top {
+      padding-bottom: 0.75rem;
+    }
+  }
+}
