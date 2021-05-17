@@ -1,0 +1,111 @@
+.ipayplus-quest1 .quest1-menu__item {
+  margin-bottom: 1.125rem;
+}
+
+.ipayplus-quest1 .quest1-menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ipayplus-quest1 .quest1-menu__link:hover .quest1-menu__text {
+  color: #E84F35;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62842 17.8336L15.462 12' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4624 12L9.6288 6.16639' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.ipayplus-quest1 .quest1-menu__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #F0F5FA;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9999 0.700012L5.51985 9.18001L1.97985 5.64001C1.79288 5.45303 1.53928 5.34799 1.27485 5.34799C1.01043 5.34799 0.756831 5.45303 0.569853 5.64001C0.382875 5.82699 0.277832 6.08059 0.277832 6.34501C0.277832 6.47594 0.303621 6.60559 0.353726 6.72655C0.403831 6.84752 0.477271 6.95743 0.569853 7.05001L4.80985 11.29C5.19985 11.68 5.82985 11.68 6.21985 11.29L15.3999 2.11001C15.4931 2.01646 15.5668 1.90535 15.6168 1.78313C15.6668 1.6609 15.692 1.52998 15.6911 1.39793C15.6902 1.26588 15.6631 1.13532 15.6113 1.01381C15.5596 0.892298 15.4844 0.782244 15.3899 0.690012C15.0199 0.310012 14.3899 0.310012 13.9999 0.700012Z' fill='%23DEE7F3'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ipayplus-quest1 .quest1-menu__text {
+  padding-left: 1.5rem;
+  padding-right: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #172A3A;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62842 17.8336L15.462 12' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4624 12L9.6288 6.16639' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.ipayplus-quest1 .quest1-menu__item--done .quest1-menu__link {
+  pointer-events: none;
+}
+
+.ipayplus-quest1 .quest1-menu__item--done .quest1-menu__icon {
+  -webkit-box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+          box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+  background-color: #09BC8A;
+}
+
+.ipayplus-quest1 .quest1-menu__item--done .quest1-menu__text {
+  color: #3B566E;
+  background-image: none;
+}
+
+.ipayplus-quest1 .quest1-alert {
+  margin-top: 2.625rem;
+  border-top: 1px solid #DEE7F3;
+}
+
+.ipayplus-quest1 .quest1-alert .alert::before {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  left: 0;
+  top: 2rem;
+  background-color: #FEF7E0;
+}
+
+.ipayplus-quest1 .quest1-alert .alert::after {
+  top: 3rem;
+}
+
+.ipayplus-quest1 .quest1-alert .alert.alert-face {
+  padding: 2.5rem 0 1.25rem 5.9375rem;
+}
+
+@media screen and (max-width: 575px) {
+  .ipayplus-quest1 .quest1-menu__link {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .ipayplus-quest1 .quest1-menu__text {
+    padding-left: 0.875rem;
+    font-size: 0.875rem;
+    background-position: right top;
+  }
+  .ipayplus-quest1 .quest1-alert {
+    margin-top: 2rem;
+  }
+  .ipayplus-quest1 .quest1-alert .alert::before {
+    width: 2rem;
+    height: 2rem;
+    top: 1.5rem;
+  }
+  .ipayplus-quest1 .quest1-alert .alert::after {
+    width: 1rem;
+    height: 1rem;
+    top: 2rem;
+    left: 0.5rem;
+    background-position: -16px -48px;
+    background-size: 32px;
+  }
+  .ipayplus-quest1 .quest1-alert .alert.alert-face {
+    padding: 1.5rem 1rem 1.25rem 2.875rem;
+  }
+}
+/*# sourceMappingURL=ipayplus-quest1.css.map */

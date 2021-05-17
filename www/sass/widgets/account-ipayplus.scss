@@ -7,10 +7,6 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-.account-ipayplus {
-
-}
-
 .ipayplus-header {
   padding-top: 1rem;
   border-bottom: 2px solid $middle-grey;
@@ -76,7 +72,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    height: 10.5rem;
+    height: 11.75rem;
     padding: 0.9375rem 1rem 0;
     border-radius: 0.5rem;
     box-shadow: 0px 4px 20px $card-shadow;
@@ -84,7 +80,8 @@
 
     h5 {
       flex-grow: 1;
-      max-height: 3.75rem;
+      max-height: 4rem;
+      margin-bottom: 1.125rem;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -moz-box;
@@ -101,7 +98,7 @@
       display: block;
       margin-left: -0.9375rem;
       margin-right: -0.9375rem;
-      padding: 1rem 0.9375rem 0.875rem;
+      padding: 0.8125rem 0.9375rem 0.75rem;
       border-top: 1px dashed $middle-grey;
       color: $heading-color;
       background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62891 17.834L15.4625 12.0004' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4619 12L9.62831 6.16639' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -116,24 +113,18 @@
   }
 
   &__time {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    min-height: 1.875rem;
-    padding-bottom: 0.25rem;
-
-    span {
-      font-size: 0.75rem;
-    }
+    padding-bottom: 0.5rem;
 
     .ipayplus-card__period {
       font-family: $heading-font;
-      font-weight: 700;
+      margin-bottom: 0.5rem;
+      @include font(0.75rem, 700, 1.3);
       color: $btn-red;
     }
 
     .ipayplus-card__status {
-      text-align: right;
+      margin-bottom: 0;
+      font-size: 0.75rem;
       color: $main-blue;
 
       &--in {
@@ -161,5 +152,12 @@
 
   &:hover {
     text-decoration: none;
+  }
+
+  .ipayplus-card__time {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 0.4375rem;
   }
 }
