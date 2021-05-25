@@ -10,12 +10,13 @@
 .ipayplus-quest1 {
   .quest1-menu {
     &__item {
-      margin-bottom: 1.125rem;
+      margin-bottom: 1rem;
     }
   
     &__link {
-      display: flex;
+      display: inline-flex;
       align-items: center;
+      vertical-align: middle;
 
       &:hover {
         .quest1-menu__text {
@@ -40,7 +41,7 @@
       padding-left: 1.5rem;
       padding-right: 2rem;
       font-family: $heading-font;
-      @include font(1.125rem, 700, 1.33);
+      @include font(1rem, 700, 1.33);
       color: $heading-color;
       background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62842 17.8336L15.462 12' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4624 12L9.6288 6.16639' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-position: right center;
