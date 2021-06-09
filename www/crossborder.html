@@ -266,17 +266,6 @@
 
             <div class="col-12 mt-2 mt-lg-0 mb-3">
 
-              <!-- <div class="row mb-2 align-items-center">
-                <div class="col">
-                  <span class="p2p__connection" data-toggle="tooltip" title="На странице используется ассиметричное 256-битное шифрование - один из самых безопасных в мире методов шифрований">Безопасное соединение</span>
-                </div>
-                <div class="col-auto p2p__alert d-lg-none">
-                  <div class="alert alert-success alert-people fade show" role="alert">
-                    <strong>11</strong>
-                  </div>
-                </div>
-              </div> -->
-
               <div class="row">
                 <div class="col-lg">
                   <div class="row mb-2 align-items-center">
@@ -289,10 +278,10 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row crossborder__title">
                     <div class="col">
                       <h1>Международные переводы</h1>
-                      <p>Мгновенные международные переводы переводы с карты на карту в Украину из-за рубежа</p>
+                      <p class="d-none d-md-block">Мгновенные международные переводы переводы с карты на карту в Украину из-за рубежа</p>
                     </div>
                   </div>
                 </div>
@@ -306,37 +295,101 @@
                 </div>
               </div>
 
-              <!-- <div class="row">
-                <div class="col-lg">
-                  <h1>Международные переводы</h1>
-                  <p>Мгновенные международные переводы переводы с карты на карту в Украину из-за рубежа</p>
-                </div>
-                <div class="col-lg-5 p2p__alert d-none d-lg-block">
-                  <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
-                    <strong>11 человек</strong> оплачивают услугу прямо сейчас
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                  </div>
-                </div>
-              </div> -->
-
               <form action="/">
 
-                <div class="row justify-content-between">
+                <div class="crossborder__transfer">
+                  <div class="row">
+  
+                    <div class="col-md-6 col-lg-4">
+                      <div class="crossborder__transfer-currency">
+                        <h3 class="crossborder__transfer-title h5 mb-3">Что вы хотите перевести?</h3>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="radio-control">
+                                <input type="radio" id="curr-eur" name="currency" class="checkbox-input" value="eur" checked>
+                                <label class="btn btn-label btn-block" for="curr-eur">
+                                  <span>EUR</span>
+                                </label> 
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="radio-control">
+                                <input type="radio" id="curr-pln" name="currency" class="checkbox-input" value="pln">
+                                <label class="btn btn-label btn-block" for="curr-pln">
+                                  <span>PLN</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group form-currency-amount">
+                          <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                          <label class="control-label form-label" for="form-icon-r">Сумма отправки</label>
+                          <label class="label-icon-right label-currency">EUR</label>
+                        </div>
+                        <p class="currency-eur main-blue-color mb-0 pl-3 active">От 1 до 850 EUR</p>
+                        <p class="currency-pln main-blue-color mb-0 pl-3">От 1 до 3 700 PLN</p>
+                      </div>
+                    </div>
+  
+                    <div class="col-lg-3 d-none d-lg-flex justify-content-end">
+                      <div class="crossborder__transfer-send">
+                        <h3 class="crossborder__transfer-title h5 mb-3">Будет списано</h3>
+                        <p class="crossborder__transfer-amount"><span id="amount-send">867.00</span> <span id="send-currency">EUR</span></p>
+                        <p class="mb-2">С учетом комиссии</p>
+                        <p class="crossborder__commission"><span id="commission-send">17.0</span id="commission-currency"> <span>EUR</span></p>
+                      </div>
+                    </div>
+  
+                    <div class="col-lg-5 d-none d-lg-block">
+                      <div class="crossborder__transfer-receive">
+                        <h3 class="crossborder__transfer-title h5 mb-3">Будет зачислено</h3>
+                        <p class="crossborder__transfer-amount"><span id="amount-receive">28 262.50</span> <span id="receive-currency">UAH</span></p>
+                        <p class="mb-2">Курс</p>
+                        <p class="crossborder__exchange-rate"><span id="rate-send">1 EUR</span> <span>=</span> <span id="rate-receive">33.1 UAH</span></p>
+                      </div>
+                    </div>
 
-                  <div class="col-lg-5 mt-3 mt-lg-0">
+                    <div class="col-md-6 d-lg-none">
+                      <div class="crossborder__transfer-table">
+                        <div class="crossborder__transfer-row">
+                          <span>Курс</span>
+                          <span>1 EUR = 33.1 UAH</span>
+                        </div>
+                        <div class="crossborder__transfer-hr"></div>
+                        <div class="crossborder__transfer-row">
+                          <span>Комиссия</span>
+                          <span>17.00 EUR</span>
+                        </div>
+                        <div class="crossborder__transfer-row">
+                          <span>Будет списано</span>
+                          <span>867.00 EUR</span>
+                        </div>
+                        <div class="crossborder__transfer-row">
+                          <span>Будет зачислено</span>
+                          <span>28 262.50 UAH</span>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-lg-5">
 
                     <div class="crossborder__card-wrapper">
 
-                      <div class="crossborder__card-title">Отправитель</div>
+                      <div class="crossborder__card-title">
+                        Отправитель
+                        <a role="button" tabindex="-1" class="crossborder-tooltip" data-toggle="popover" data-title="" data-content="Перевод с карты Visa или Mastercard любого банка из указаного <a href='#crossborder-countries'>списка стран</a>" data-original-title="" title=""></a>
+                      </div>
 
                       <div class="crossborder__card crossborder__card--sender">
                         <div class="bank-card">
                           <div class="bank-card__header">
-                            <div class="bank-card__bank">
-                              <div id="sender-bank-card"></div>
-                            </div>
                             <div class="bank-card__type">
                               <div id="sender-type-card"></div>
                             </div>
@@ -367,10 +420,45 @@
                       </div>
 
                       <div class="crossborder__sender-info">
-                        <div class="form-group required">
-                          <input type="tel" class="form-control form-input" id="crossborderform-sender_phone" name="crossborderForm[sender_phone]" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
-                          <label class="control-label form-label" for="crossborderform-sender_phone">Номер телефона*</label>
-                          <div class="help-block">Введите номер телефона</div>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="purpose-send" name="purpose-send" autocomplete="off" placeholder="" aria-required="true">
+                          <label class="control-label form-label" for="purpose-send">Назначение <span class="main-blue-color"><i>- опционально</i></span></label>
+                        </div>
+                        <div class="row">
+                          <div class="col col-left">
+                            <div class="form-group">
+                              <input type="text" class="form-control form-input" id="name-send" name="name-send" autocomplete="off" placeholder="" aria-required="true">
+                              <label class="control-label form-label" for="name-send">Имя</label>
+                            </div>
+                          </div>
+                          <div class="col col-right">
+                            <div class="form-group">
+                              <input type="text" class="form-control form-input" id="surname-send" name="surname-send" autocomplete="off" placeholder="" aria-required="true">
+                              <label class="control-label form-label" for="surname-send">Фамилия</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="tel" class="form-control form-input" id="crossborderform-sender_phone" name="crossborderForm[sender_phone]" aria-required="true" placeholder="+380 (00) 000 00 00">
+                          <label class="control-label form-label" for="crossborderform-sender_phone">Номер телефона</label>
+                        </div>
+                        <div class="row">
+                          <div class="col col-left">
+                            <div class="form-group">
+                              <input type="text" class="form-control form-input" id="house-send" name="house-send" autocomplete="off" placeholder="" aria-required="true">
+                              <label class="control-label form-label" for="house-send">Город</label>
+                            </div>
+                          </div>
+                          <div class="col col-right">
+                            <div class="form-group">
+                              <input type="tel" class="form-control form-input" id="zip-send" name="zip-send" autocomplete="off" placeholder="" aria-required="true">
+                              <label class="control-label form-label" for="zip-send">Индекс</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input" id="address-send" name="address-send" autocomplete="off" placeholder="" aria-required="true">
+                          <label class="control-label form-label" for="address-send">Адрес</label>
                         </div>
                       </div>
 
@@ -408,16 +496,16 @@
 
                     <div class="crossborder__card-wrapper crossborder__card-wrapper--receiver">
 
-                      <div class="crossborder__card-title">Получатель</div>
+                      <div class="crossborder__card-title">
+                        Получатель
+                        <a role="button" tabindex="-1" class="crossborder-tooltip" data-toggle="popover" data-title="" data-content="Перевод на карту Visa или Mastercard любого банка Украины" data-original-title="" title=""></a>
+                      </div>
 
                       <div class="crossborder__card crossborder__card--receiver">
                         <div class="bank-card">
                           <div class="bank-card__header">
-                            <div class="bank-card__bank">
-                              <div id="sender-bank-card"></div>
-                            </div>
                             <div class="bank-card__type">
-                              <div id="sender-type-card"></div>
+                              <div id="target-type-card"></div>
                             </div>
                           </div>
                           <div class="bank-card__body">
@@ -642,6 +730,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
-    <script src="/js/p2p-main.js"></script>
+    <script src="/js/crossborder.js"></script>
   </body>
 </html>
