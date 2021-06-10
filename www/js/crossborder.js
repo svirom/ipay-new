@@ -7,12 +7,16 @@ $(document).ready(function() {
         .find('.label-currency').text('EUR').end()
         .find('.currency-eur').addClass('active').end()
         .find('.currency-pln').removeClass('active');
+
+      $(this).parents('.crossborder__transfer').find('#send-currency').text('EUR');
     }
     else if ($(this).val() == 'pln') {
       $(this).parents('.crossborder__transfer-currency')
         .find('.label-currency').text('PLN').end()
         .find('.currency-pln').addClass('active').end()
-        .find('.currency-eur').removeClass('active');;
+        .find('.currency-eur').removeClass('active');
+      
+      $(this).parents('.crossborder__transfer').find('#send-currency').text('PLN');
     }
   });
 
@@ -27,11 +31,9 @@ $(document).ready(function() {
 	}
 
   if (docWidth < 768) {
-    bonusesOptions.placement = 'bottom';
+    crossborderOptions.placement = 'bottom';
   }
 
   $(".crossborder-tooltip").popover(crossborderOptions);
-
-  
 
 })

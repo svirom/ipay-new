@@ -87,6 +87,14 @@
   display: block;
 }
 
+.crossborder__transfer-currency .col-left {
+  padding-right: 0.75rem;
+}
+
+.crossborder__transfer-currency .col-right {
+  padding-left: 0.75rem;
+}
+
 .crossborder__transfer-receive {
   padding-left: 5.75rem;
   background: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5581 32.52L28.1959 21.8822' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M28.1958 21.8823L17.558 11.2446' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left 0.25rem top 2rem no-repeat;
@@ -133,6 +141,11 @@
   padding-bottom: 0;
 }
 
+.crossborder__form {
+  padding-bottom: 2.75rem;
+  border-bottom: 3px solid #F0F5FA;
+}
+
 .crossborder__card-wrapper {
   width: 26.25rem;
 }
@@ -141,19 +154,8 @@
   margin-left: auto;
 }
 
-.crossborder__card-wrapper .col-left {
-  padding-right: 0.625rem;
-}
-
-.crossborder__card-wrapper .col-right {
-  padding-left: 0.625rem;
-}
-
 .crossborder__card-title {
   margin-bottom: 0.75rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.22;
 }
 
 .crossborder__card {
@@ -176,6 +178,15 @@
 .crossborder .bank-card__type {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+}
+
+.crossborder__subtitle {
+  padding-top: 0.25rem;
+  padding-bottom: 1rem;
+}
+
+.crossborder__subtitle h4, .crossborder__subtitle p {
+  margin-bottom: 0;
 }
 
 .crossborder__security {
@@ -209,6 +220,11 @@
 }
 
 .crossborder__payment {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.crossborder__amount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,25 +234,50 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 1rem;
 }
 
-.crossborder__payment span {
-  font-weight: bold;
+.crossborder__amount span {
   color: #172A3A;
 }
 
-.crossborder__payment-text {
+.crossborder__amount-text {
   margin-top: 2px;
 }
 
-.crossborder__payment-amount {
+.crossborder__amount--send {
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #F0F5FA;
+}
+
+.crossborder__amount--send span {
+  font-weight: 700;
+}
+
+.crossborder__amount--send .crossborder__amount-amount {
   font-size: 1.625rem;
+}
+
+.crossborder__amount--receive {
+  padding-top: 0.5rem;
+}
+
+.crossborder__amount--receive .crossborder__amount-text {
+  color: #3B566E;
+}
+
+.crossborder__amount--receive .crossborder__amount-amount {
+  font-size: 1.125rem;
 }
 
 .crossborder__submit .btn:disabled, .crossborder__submit .btn.disabled {
   opacity: 1;
   color: #ffffff;
+}
+
+.crossborder__oferta .checkbox-label::before, .crossborder__oferta .checkbox-label::after {
+  top: 1px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .crossborder-arrow {
@@ -260,6 +301,15 @@
 
 .crossborder-arrow svg {
   stroke: #172A3A;
+}
+
+@media screen and (min-width: 768px) {
+  .crossborder__card-wrapper .col-left {
+    padding-right: 0.625rem;
+  }
+  .crossborder__card-wrapper .col-right {
+    padding-left: 0.625rem;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -286,11 +336,17 @@
   .crossborder__transfer {
     margin-bottom: 2rem;
   }
+  .crossborder__form {
+    padding-bottom: 2rem;
+  }
   .crossborder__card-wrapper {
     width: auto;
     max-width: 26.25rem;
     margin-left: auto;
     margin-right: auto;
+  }
+  .crossborder__card-wrapper--receiver {
+    padding-top: 1rem;
   }
   .crossborder__security-img img {
     height: 1.5rem;
@@ -299,6 +355,7 @@
 
 @media screen and (max-width: 767px) {
   .crossborder__transfer {
+    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 0;
@@ -306,6 +363,9 @@
   }
   .crossborder__transfer-table {
     margin-top: 1.5rem;
+  }
+  .crossborder__card {
+    margin-bottom: 1.5rem;
   }
   .crossborder__security {
     -webkit-box-orient: vertical;
@@ -341,6 +401,12 @@
 }
 
 @media screen and (max-width: 575px) {
+  .crossborder__form .form-input {
+    padding-left: 0.75rem;
+  }
+  .crossborder__form .form-label {
+    left: 1rem;
+  }
   .crossborder__card-wrapper {
     max-width: 22.5rem;
   }
@@ -351,6 +417,14 @@
     padding: 0.75rem 0.875rem 0;
     -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
             box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+  }
+  .crossborder__card .bank-card .form-label {
+    top: 1rem;
+    font-size: 1rem;
+  }
+  .crossborder__card .bank-card .form-input:focus ~ .form-label, .crossborder__card .bank-card .form-input.filled ~ .form-label {
+    top: 0.45rem;
+    font-size: 0.77777rem;
   }
   .crossborder__card .bank-card__type {
     height: 2rem;
@@ -366,10 +440,19 @@
   .crossborder__card .bank-card__number {
     padding-bottom: 0.5rem;
   }
-  .crossborder__submit {
-    width: 18.125rem;
-    margin-left: auto;
-    margin-right: auto;
+  .crossborder__card .bank-card__expires {
+    width: 10.375rem;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .crossborder__card .bank-card__expires {
+    -ms-flex: 1 0 auto;
+    width: auto;
+    margin-right: 1.25rem;
+  }
+  .crossborder__card .bank-card__cvv input {
+    width: 6rem;
   }
 }
 
@@ -378,7 +461,7 @@
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin-left: 0.25rem;
+  margin-left: 0.5rem;
   vertical-align: middle;
   border: 0;
   border-radius: 50%;
@@ -443,6 +526,56 @@
   text-decoration: underline;
 }
 
+/* how-to section */
+.crossborder-howto {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.crossborder-howto__title {
+  padding-bottom: 2rem;
+}
+
+.crossborder-howto__cards {
+  padding-top: 0.625rem;
+}
+
+.crossborder-howto__card {
+  margin-top: 1.875rem;
+}
+
+.crossborder-howto__card-header {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1.25rem;
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: #3B566E;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #DEE7F3;
+}
+
+.crossborder-howto__card-text {
+  margin-bottom: 0;
+  color: #000000;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .crossborder-howto {
+    padding-top: 1.875rem;
+    padding-bottom: 2.5rem;
+  }
+  .crossborder-howto__title {
+    padding-bottom: 1.875rem;
+  }
+  .crossborder-howto__cards {
+    padding-top: 0;
+  }
+}
+
 /* limitations section */
 .crossborder-limitations {
   padding-top: 2.75rem;
@@ -456,7 +589,7 @@
 
 @media screen and (max-width: 991px) {
   .crossborder-limitations {
-    padding-top: 2.125rem;
+    padding-top: 2rem;
     padding-bottom: 0;
   }
   .crossborder-limitations__title {
@@ -466,8 +599,7 @@
 
 @media screen and (max-width: 767px) {
   .crossborder-limitations {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
   }
   .crossborder-limitations__title {
     margin-bottom: 0.5rem;
@@ -496,6 +628,9 @@
 
 .crossborder-card__amount {
   padding-bottom: 0.5rem;
+}
+
+.crossborder-card__amount span {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -503,15 +638,31 @@
 }
 
 .crossborder-card__text {
-  padding-right: 3.75rem;
+  padding-right: 2.5rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .crossborder-card__amount span {
+    font-size: 1.125rem;
+  }
+  .crossborder-card__text {
+    padding-right: 1rem;
+  }
 }
 
 @media screen and (max-width: 991px) {
   .crossborder-card {
+    margin-bottom: 1.875rem;
     padding: 0.9375rem;
+  }
+  .crossborder-card--first, .crossborder-card--second, .crossborder-card--third {
+    height: 9.375rem;
   }
   .crossborder-card__amount {
     padding-right: 1rem;
+  }
+  .crossborder-card__amount span:last-child {
+    display: block;
   }
   .crossborder-card__text {
     padding-right: 0;
@@ -521,14 +672,16 @@
 
 @media screen and (max-width: 767px) {
   .crossborder-card {
-    height: 7rem;
-    margin-bottom: 1rem;
+    height: 6.5rem;
     padding: 1rem;
     text-align: center;
   }
   .crossborder-card__amount {
     padding-right: 0;
     padding-bottom: 0.625rem;
+  }
+  .crossborder-card__amount span:last-child {
+    display: inline;
   }
 }
 /*# sourceMappingURL=crossborder.css.map */

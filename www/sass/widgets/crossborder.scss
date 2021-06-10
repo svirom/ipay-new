@@ -102,6 +102,14 @@
         display: block;
       }
     }
+
+    .col-left {
+      padding-right: 0.75rem;
+    }
+  
+    .col-right {
+      padding-left: 0.75rem;
+    }
   }
 
   &__transfer-receive {
@@ -146,25 +154,21 @@
     }
   }
 
+  &__form {
+    padding-bottom: 2.75rem;
+    border-bottom: 3px solid $light-grey;
+  }
+
   &__card-wrapper {
     width: 26.25rem;
 
     &--receiver {
       margin-left: auto;
     }
-
-    .col-left {
-      padding-right: 0.625rem;
-    }
-  
-    .col-right {
-      padding-left: 0.625rem;
-    }
   }
 
   &__card-title {
     margin-bottom: 0.75rem;
-    @include font(1.25rem, 700, 1.22);
   }
 
   &__card {
@@ -184,6 +188,15 @@
 
   .bank-card__type {
     flex-basis: 100%;
+  }
+
+  &__subtitle {
+    padding-top: 0.25rem;
+    padding-bottom: 1rem;
+
+    h4, p {
+      margin-bottom: 0;
+    }
   }
 
   &__security {
@@ -213,13 +226,16 @@
   }
 
   &__payment {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__amount {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
     
     span {
-      font-weight: bold;
       color: $heading-color;
     }
 
@@ -227,8 +243,29 @@
       margin-top: 2px;
     }
 
-    &-amount {
-      font-size: 1.625rem;
+    &--send {
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid $light-grey;
+
+      span {
+        font-weight: 700;
+      }
+
+      .crossborder__amount-amount {
+        font-size: 1.625rem;
+      }
+    }
+
+    &--receive {
+      padding-top: 0.5rem;
+
+      .crossborder__amount-text {
+        color: $text-color;
+      }
+
+      .crossborder__amount-amount {
+        font-size: 1.125rem;
+      }
     }
   }
 
@@ -237,6 +274,15 @@
       &:disabled, &.disabled {
         opacity: 1;
         color: #ffffff;
+      }
+    }
+  }
+
+  &__oferta {
+    .checkbox-label {
+      &::before, &::after {
+        top: 1px;
+        transform: translateY(0);
       }
     }
   }
@@ -255,6 +301,18 @@
 
     svg {
       stroke: $heading-color;
+    }
+  }
+
+  @include at-least($md) {
+    &__card-wrapper {
+      .col-left {
+        padding-right: 0.625rem;
+      }
+    
+      .col-right {
+        padding-left: 0.625rem;
+      }
     }
   }
 
@@ -297,11 +355,19 @@
       margin-bottom: 2rem;
     }
 
+    &__form {
+      padding-bottom: 2rem;
+    }
+
     &__card-wrapper {
       width: auto;
       max-width: 26.25rem;
       margin-left: auto;
-      margin-right: auto
+      margin-right: auto;
+
+      &--receiver {
+        padding-top: 1rem;
+      }
     }
 
     &__security {
@@ -315,6 +381,7 @@
 
   @include until($md) {
     &__transfer {
+      margin-top: 0.5rem;
       margin-bottom: 1.5rem;
       padding-top: 1rem;
       padding-bottom: 0;
@@ -323,6 +390,10 @@
 
     &__transfer-table {
       margin-top: 1.5rem;
+    }
+
+    &__card {
+      margin-bottom: 1.5rem;
     }
 
     &__security {
@@ -354,6 +425,16 @@
   }
 
   @include until($sm) {
+    &__form {
+      .form-input {
+        padding-left: 0.75rem;
+      }
+
+      .form-label {
+        left: 1rem;
+      }
+    }
+
     &__card-wrapper {
       max-width: 22.5rem;
     }
@@ -366,27 +447,49 @@
         padding: 0.75rem 0.875rem 0;
         box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
 
-        &__type {
-          height: 2rem;
-          padding-top: 0.1875rem;
-          padding-bottom: 0.1875rem;
+        .form-label {
+          top: 1rem;
+          font-size: 1rem;
         }
 
-        &__header {
-          align-items: flex-end;
-          height: 2rem;
-        }
-
-        &__number {
-          padding-bottom: 0.5rem;
+        .form-input:focus ~ .form-label, .form-input.filled ~ .form-label {
+          top: 0.45rem;
+          font-size: 0.77777rem;
         }
       }
-    }
 
-    &__submit {
-      width: 18.125rem;
-      margin-left: auto;
-      margin-right: auto;
+      .bank-card__type {
+        height: 2rem;
+        padding-top: 0.1875rem;
+        padding-bottom: 0.1875rem;
+      }
+
+      .bank-card__header {
+        align-items: flex-end;
+        height: 2rem;
+      }
+
+      .bank-card__number {
+        padding-bottom: 0.5rem;
+      }
+
+      .bank-card__expires {
+        width: 10.375rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 359px) {
+    &__card {
+      .bank-card__expires {
+        -ms-flex: 1 0 auto;
+        width: auto;
+        margin-right: 1.25rem;
+      }
+
+      .bank-card__cvv input {
+        width: 6rem;
+      }
     }
   }
 }
@@ -396,7 +499,7 @@
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin-left: 0.25rem;
+  margin-left: 0.5rem;
   vertical-align: middle;
   border: 0;
   border-radius: 50%;
@@ -471,6 +574,54 @@
   }
 }
 
+/* how-to section */
+.crossborder-howto {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  &__title {
+    padding-bottom: 2rem;
+  }
+
+  &__cards {
+    padding-top: 0.625rem;
+  }
+
+  &__card {
+    margin-top: 1.875rem;
+  }
+
+  &__card-header {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 1.25rem;
+    @include font(1.625rem, 700, 3rem);
+    color: $text-color;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: $middle-grey;
+  }
+
+  &__card-text {
+    margin-bottom: 0;
+    color: #000000;
+    text-align: center;
+  }
+
+  @include until($md) {
+    padding-top: 1.875rem;
+    padding-bottom: 2.5rem;
+
+    &__title {
+      padding-bottom: 1.875rem;
+    }
+
+    &__cards {
+      padding-top: 0;
+    }
+  }
+}
+
 /* limitations section */
 .crossborder-limitations {
   padding-top: 2.75rem;
@@ -482,7 +633,7 @@
   }
 
   @include until($lg) {
-    padding-top: 2.125rem;
+    padding-top: 2rem;
     padding-bottom: 0;
 
     &__title {
@@ -491,8 +642,7 @@
   }
 
   @include until($md) {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
 
     &__title {
       margin-bottom: 0.5rem;
@@ -513,21 +663,47 @@
 
   &__amount {
     padding-bottom: 0.5rem;
-    font-family: $heading-font;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: $btn-red;
+
+    span {
+      font-family: $heading-font;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $btn-red;
+    }
   }
 
   &__text {
-    padding-right: 3.75rem;
+    padding-right: 2.5rem;
+  }
+
+  @include until($xl) {
+    &__amount {
+      span {
+        font-size: 1.125rem;
+      }
+    }
+
+    &__text {
+      padding-right: 1rem;
+    }
   }
 
   @include until($lg) {
+    margin-bottom: 1.875rem;
     padding: 0.9375rem;
+
+    &--first, &--second, &--third {
+      height: 9.375rem;
+    }
 
     &__amount {
       padding-right: 1rem;
+
+      span {
+        &:last-child {
+          display: block;
+        }
+      }
     }
 
     &__text {
@@ -537,14 +713,19 @@
   }
 
   @include until($md) {
-    height: 7rem;
-    margin-bottom: 1rem;
+    height: 6.5rem;
     padding: 1rem;
     text-align: center;
 
     &__amount {
       padding-right: 0;
       padding-bottom: 0.625rem;
+
+      span {
+        &:last-child {
+          display: inline;
+        }
+      }
     }
   }
 }

@@ -264,7 +264,7 @@
               </div>
             </div>
 
-            <div class="col-12 mt-2 mt-lg-0 mb-3">
+            <div class="col-12 mt-2 mt-lg-0">
 
               <div class="row">
                 <div class="col-lg">
@@ -297,6 +297,7 @@
 
               <form action="/">
 
+                <!-- crossborder transfer info -->
                 <div class="crossborder__transfer">
                   <div class="row">
   
@@ -305,7 +306,7 @@
                         <h3 class="crossborder__transfer-title h5 mb-3">Что вы хотите перевести?</h3>
                         <div class="form-group">
                           <div class="row">
-                            <div class="col-6">
+                            <div class="col-6 col-left">
                               <div class="radio-control">
                                 <input type="radio" id="curr-eur" name="currency" class="checkbox-input" value="eur" checked>
                                 <label class="btn btn-label btn-block" for="curr-eur">
@@ -313,7 +314,7 @@
                                 </label> 
                               </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-6 col-right">
                               <div class="radio-control">
                                 <input type="radio" id="curr-pln" name="currency" class="checkbox-input" value="pln">
                                 <label class="btn btn-label btn-block" for="curr-pln">
@@ -374,187 +375,255 @@
                     </div>
   
                   </div>
-                </div>
+                </div><!-- crossborder transfer info -->
 
-                <div class="row">
-
-                  <div class="col-lg-5">
-
-                    <div class="crossborder__card-wrapper">
-
-                      <div class="crossborder__card-title">
-                        Отправитель
-                        <a role="button" tabindex="-1" class="crossborder-tooltip" data-toggle="popover" data-title="" data-content="Перевод с карты Visa или Mastercard любого банка из указаного <a href='#crossborder-countries'>списка стран</a>" data-original-title="" title=""></a>
-                      </div>
-
-                      <div class="crossborder__card crossborder__card--sender">
-                        <div class="bank-card">
-                          <div class="bank-card__header">
-                            <div class="bank-card__type">
-                              <div id="sender-type-card"></div>
+                <!-- crossborder form info -->
+                <div class="crossborder__form">
+                  <div class="row">
+  
+                    <div class="col-lg-5">
+  
+                      <div class="crossborder__card-wrapper">
+  
+                        <h3 class="crossborder__card-title">
+                          Отправитель
+                          <a role="button" tabindex="-1" class="crossborder-tooltip" data-toggle="popover" data-title="" data-content="Перевод с карты Visa или Mastercard любого банка из указаного <a href='#crossborder-countries'>списка стран</a>" data-original-title="" title=""></a>
+                        </h3>
+  
+                        <div class="crossborder__card crossborder__card--sender">
+                          <div class="bank-card">
+                            <div class="bank-card__header">
+                              <div class="bank-card__type">
+                                <div id="sender-type-card"></div>
+                              </div>
+                            </div>
+                            <div class="bank-card__body">
+                              <div class="bank-card__number">
+                                <div class="form-group">
+                                  <input type="tel" class="form-control form-input" id="crossborderform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                  <label class="control-label form-label" for="crossborderform-sender_card_pan">Номер карты</label>
+                                  <div class="help-block"></div>
+                                </div>
+                              </div>
+                              <div class="bank-card__card-data">
+                                <div class="form-group bank-card__expires">
+                                  <input type="text" class="form-control form-input" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                                  <label class="control-label form-label" for="cardform-exp">Срок действия</label>
+                                  <div class="help-block"></div>
+                                </div>
+                                <div class="form-group bank-card__cvv">
+                                  <input type="password" class="form-control form-input" id="crossborderform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                                  <label class="control-label form-label" for="crossborderform-sender_card_cvv">CVV</label>
+                                  <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты"></a>
+                                  <div class="help-block"></div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div class="bank-card__body">
-                            <div class="bank-card__number">
+                        </div>
+  
+                        <div class="crossborder__sender-info">
+                          <div class="form-group">
+                            <input type="text" class="form-control form-input" id="purpose-send" name="purpose-send" autocomplete="off" placeholder="" aria-required="true">
+                            <label class="control-label form-label" for="purpose-send">Назначение <span class="main-blue-color"><i>- опционально</i></span></label>
+                          </div>
+                          <div class="crossborder__subtitle">
+                            <h4>
+                              Данные отправителя 
+                              <a role="button" tabindex="-1" class="crossborder-tooltip" data-toggle="popover" data-title="" data-content="Перевод на карту Visa или Mastercard любого банка Украины" data-original-title="" title=""></a>
+                            </h4>
+                            <p class="main-blue-color"><i>Заполнять латиницей</i></p>
+                          </div>
+                          <div class="row">
+                            <div class="col-md col-left">
                               <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="crossborderform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                                <label class="control-label form-label" for="crossborderform-sender_card_pan">Номер карты</label>
-                                <div class="help-block"></div>
+                                <input type="text" class="form-control form-input" id="name-send" name="name-send" autocomplete="off" placeholder="" aria-required="true">
+                                <label class="control-label form-label" for="name-send">Имя</label>
                               </div>
                             </div>
-                            <div class="bank-card__card-data">
-                              <div class="form-group bank-card__expires">
-                                <input type="text" class="form-control form-input" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
-                                <label class="control-label form-label" for="cardform-exp">Срок действия</label>
-                                <div class="help-block"></div>
-                              </div>
-                              <div class="form-group bank-card__cvv">
-                                <input type="password" class="form-control form-input" id="crossborderform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
-                                <label class="control-label form-label" for="crossborderform-sender_card_cvv">CVV</label>
-                                <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты"></a>
-                                <div class="help-block"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="crossborder__sender-info">
-                        <div class="form-group">
-                          <input type="text" class="form-control form-input" id="purpose-send" name="purpose-send" autocomplete="off" placeholder="" aria-required="true">
-                          <label class="control-label form-label" for="purpose-send">Назначение <span class="main-blue-color"><i>- опционально</i></span></label>
-                        </div>
-                        <div class="row">
-                          <div class="col col-left">
-                            <div class="form-group">
-                              <input type="text" class="form-control form-input" id="name-send" name="name-send" autocomplete="off" placeholder="" aria-required="true">
-                              <label class="control-label form-label" for="name-send">Имя</label>
-                            </div>
-                          </div>
-                          <div class="col col-right">
-                            <div class="form-group">
-                              <input type="text" class="form-control form-input" id="surname-send" name="surname-send" autocomplete="off" placeholder="" aria-required="true">
-                              <label class="control-label form-label" for="surname-send">Фамилия</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <input type="tel" class="form-control form-input" id="crossborderform-sender_phone" name="crossborderForm[sender_phone]" aria-required="true" placeholder="+380 (00) 000 00 00">
-                          <label class="control-label form-label" for="crossborderform-sender_phone">Номер телефона</label>
-                        </div>
-                        <div class="row">
-                          <div class="col col-left">
-                            <div class="form-group">
-                              <input type="text" class="form-control form-input" id="house-send" name="house-send" autocomplete="off" placeholder="" aria-required="true">
-                              <label class="control-label form-label" for="house-send">Город</label>
-                            </div>
-                          </div>
-                          <div class="col col-right">
-                            <div class="form-group">
-                              <input type="tel" class="form-control form-input" id="zip-send" name="zip-send" autocomplete="off" placeholder="" aria-required="true">
-                              <label class="control-label form-label" for="zip-send">Индекс</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <input type="text" class="form-control form-input" id="address-send" name="address-send" autocomplete="off" placeholder="" aria-required="true">
-                          <label class="control-label form-label" for="address-send">Адрес</label>
-                        </div>
-                      </div>
-
-                      <div class="crossborder__security d-none d-lg-flex" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
-                        <span class="crossborder__security-title">Безопасность переводов</span>
-                        <div class="crossborder__security-img">
-                          <a rel="nofollow" href="https://www.mastercard.ua/uk-ua/consumers/features-benefits/safety-and-security/securecode.html" target="_blank">
-                            <img src="/img/crossborder/mastercard-security-icon.svg" alt="Mastercard">
-                          </a>
-                          <a rel="nofollow" href="https://www.visa.com.ua/uk_UA/pay-with-visa/featured-technologies/verified-by-visa.html" target="_blank">
-                            <img src="/img/crossborder/visa-security-icon.svg" alt="Visa">
-                          </a>
-                          <a href="https://www.ipay.ua/ru/pci-dss-ipay-ua" target="_blank">
-                            <img src="/img/crossborder/pci-dss-security-icon.svg" alt="PCI DSS">
-                          </a>
-                        </div>
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                  <div class="col-lg d-none d-lg-block">
-                    <div class="crossborder-arrow">
-                      <svg width="54" height="44" viewBox="0 0 54 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.6758 32.6377L28.3136 21.9999" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M28.3135 22L17.6757 11.3622" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M27.6758 32.6377L38.3136 21.9999" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M38.3135 22L27.6757 11.3622" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-5">
-
-                    <div class="crossborder__card-wrapper crossborder__card-wrapper--receiver">
-
-                      <div class="crossborder__card-title">
-                        Получатель
-                        <a role="button" tabindex="-1" class="crossborder-tooltip" data-toggle="popover" data-title="" data-content="Перевод на карту Visa или Mastercard любого банка Украины" data-original-title="" title=""></a>
-                      </div>
-
-                      <div class="crossborder__card crossborder__card--receiver">
-                        <div class="bank-card">
-                          <div class="bank-card__header">
-                            <div class="bank-card__type">
-                              <div id="target-type-card"></div>
-                            </div>
-                          </div>
-                          <div class="bank-card__body">
-                            <div class="bank-card__number">
+                            <div class="col-md col-right">
                               <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="crossborderform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                                <label class="control-label form-label" for="crossborderform-target_card_pan">Номер карты</label>
-                                <div class="help-block"></div>
+                                <input type="text" class="form-control form-input" id="surname-send" name="surname-send" autocomplete="off" placeholder="" aria-required="true">
+                                <label class="control-label form-label" for="surname-send">Фамилия</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <input type="tel" class="form-control form-input" id="crossborderform-sender_phone" name="crossborderForm[sender_phone]" aria-required="true" placeholder="+380 (00) 000 00 00">
+                            <label class="control-label form-label" for="crossborderform-sender_phone">Номер телефона</label>
+                          </div>
+                          <div class="row">
+                            <div class="col-md col-left">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="house-send" name="house-send" autocomplete="off" placeholder="" aria-required="true">
+                                <label class="control-label form-label" for="house-send">Город</label>
+                              </div>
+                            </div>
+                            <div class="col-md col-right">
+                              <div class="form-group">
+                                <input type="tel" class="form-control form-input" id="zip-send" name="zip-send" autocomplete="off" placeholder="" aria-required="true">
+                                <label class="control-label form-label" for="zip-send">Индекс</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control form-input" id="address-send" name="address-send" autocomplete="off" placeholder="" aria-required="true">
+                            <label class="control-label form-label" for="address-send">Адрес</label>
+                          </div>
+                        </div>
+  
+                        <div class="crossborder__security d-none d-lg-flex" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
+                          <span class="crossborder__security-title">Безопасность переводов</span>
+                          <div class="crossborder__security-img">
+                            <a rel="nofollow" href="https://www.mastercard.ua/uk-ua/consumers/features-benefits/safety-and-security/securecode.html" target="_blank">
+                              <img src="/img/crossborder/mastercard-security-icon.svg" alt="Mastercard">
+                            </a>
+                            <a rel="nofollow" href="https://www.visa.com.ua/uk_UA/pay-with-visa/featured-technologies/verified-by-visa.html" target="_blank">
+                              <img src="/img/crossborder/visa-security-icon.svg" alt="Visa">
+                            </a>
+                            <a href="https://www.ipay.ua/ru/pci-dss-ipay-ua" target="_blank">
+                              <img src="/img/crossborder/pci-dss-security-icon.svg" alt="PCI DSS">
+                            </a>
+                          </div>
+                        </div>
+  
+                      </div>
+  
+                    </div>
+  
+                    <div class="col-lg d-none d-lg-block">
+                      <div class="crossborder-arrow">
+                        <svg width="54" height="44" viewBox="0 0 54 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.6758 32.6377L28.3136 21.9999" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M28.3135 22L17.6757 11.3622" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M27.6758 32.6377L38.3136 21.9999" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M38.3135 22L27.6757 11.3622" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </div>
+                    </div>
+  
+                    <div class="col-lg-5">
+  
+                      <div class="crossborder__card-wrapper crossborder__card-wrapper--receiver">
+  
+                        <h3 class="crossborder__card-title">
+                          Получатель
+                          <a role="button" tabindex="-1" class="crossborder-tooltip" data-toggle="popover" data-title="" data-content="Перевод на карту Visa или Mastercard любого банка Украины" data-original-title="" title=""></a>
+                        </h3>
+  
+                        <div class="crossborder__card crossborder__card--receiver">
+                          <div class="bank-card">
+                            <div class="bank-card__header">
+                              <div class="bank-card__type">
+                                <div id="target-type-card"></div>
+                              </div>
+                            </div>
+                            <div class="bank-card__body">
+                              <div class="bank-card__number">
+                                <div class="form-group">
+                                  <input type="tel" class="form-control form-input" id="crossborderform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                  <label class="control-label form-label" for="crossborderform-target_card_pan">Номер карты</label>
+                                  <div class="help-block"></div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-
-                      <div class="crossborder__payment">
-                        <span class="crossborder__payment-text">К оплате:</span>
-                        <span class="crossborder__payment-amount" id="amount">0.00 грн</span>
-                      </div>
-
-                      <div class="crossborder__submit mb-4">
-                          <button type="submit" class="btn btn-green btn-block button-transfer go-to-pay" disabled>Перевести</button>
-                      </div>
-
-                      <div class="form-group">
-                        <div class="checkbox-control">
-                          <input class="checkbox-input" type="checkbox" id="checkbox-inp">
-                          <label class="checkbox-label" for="checkbox-inp">Я согласен(-а) с условиями <a href="/media/files/public-offer.pdf" class="red-link" target="_blank">публичного договора</a></label>
+  
+                        <div class="crossborder__receiver-info">
+                          <div class="crossborder__subtitle">
+                            <h4>
+                              Данные получателя 
+                              <a role="button" tabindex="-1" class="crossborder-tooltip" data-toggle="popover" data-title="" data-content="Перевод на карту Visa или Mastercard любого банка Украины" data-original-title="" title=""></a>
+                            </h4>
+                            <p class="main-blue-color"><i>Заполнять латиницей</i></p>
+                          </div>
+                          <div class="row">
+                            <div class="col-md col-left">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="name-receive" name="name-receive" autocomplete="off" placeholder="" aria-required="true">
+                                <label class="control-label form-label" for="name-receive">Имя</label>
+                              </div>
+                            </div>
+                            <div class="col-md col-right">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="surname-receive" name="surname-receive" autocomplete="off" placeholder="" aria-required="true">
+                                <label class="control-label form-label" for="surname-receive">Фамилия</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <input type="tel" class="form-control form-input" id="crossborderform-receiver_phone" name="crossborderForm[receiver_phone]" aria-required="true" placeholder="+380 (00) 000 00 00">
+                            <label class="control-label form-label" for="crossborderform-receiver_phone">Номер телефона</label>
+                          </div>
+                          <div class="form-group">
+                            <input type="email" class="form-control form-input" id="email-receive" name="email-receive" autocomplete="off" placeholder="email@email.com" aria-required="true">
+                            <label class="control-label form-label" for="email-receive">E-mail</label>
+                          </div>
+                          <div class="row">
+                            <div class="col-md col-left">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-input" id="house-receive" name="house-receive" autocomplete="off" placeholder="" aria-required="true">
+                                <label class="control-label form-label" for="house-receive">Город</label>
+                              </div>
+                            </div>
+                            <div class="col-md col-right">
+                              <div class="form-group">
+                                <input type="tel" class="form-control form-input" id="zip-receive" name="zip-receive" autocomplete="off" placeholder="" aria-required="true">
+                                <label class="control-label form-label" for="zip-receive">Индекс</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control form-input" id="address-receive" name="address-receive" autocomplete="off" placeholder="" aria-required="true">
+                            <label class="control-label form-label" for="address-receive">Адрес</label>
+                          </div>
                         </div>
-                      </div>
-
-                      <div class="crossborder__security mt-4 d-lg-none" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
-                        <span class="crossborder__security-title">Безопасность переводов</span>
-                        <div class="crossborder__security-img">
-                          <a rel="nofollow" href="https://www.mastercard.ua/uk-ua/consumers/features-benefits/safety-and-security/securecode.html" target="_blank">
-                            <img src="/img/crossborder/mastercard-security-icon.svg" alt="Mastercard">
-                          </a>
-                          <a rel="nofollow" href="https://www.visa.com.ua/uk_UA/pay-with-visa/featured-technologies/verified-by-visa.html" target="_blank">
-                            <img src="/img/crossborder/visa-security-icon.svg" alt="Visa">
-                          </a>
-                          <a href="https://www.ipay.ua/ru/pci-dss-ipay-ua" target="_blank">
-                            <img src="/img/crossborder/pci-dss-security-icon.svg" alt="PCI DSS">
-                          </a>
+  
+                        <div class="crossborder__payment">
+                          <div class="crossborder__amount crossborder__amount--send">
+                            <span class="crossborder__amount-text">Сумма перевода</span>
+                            <span class="crossborder__amount-amount">867.00 EUR</span>
+                          </div>
+                          <div class="crossborder__amount crossborder__amount--receive">
+                            <span class="crossborder__amount-text">Будет зачислено</span>
+                            <span class="crossborder__amount-amount">28 262.50 UAH</span>
+                          </div>
                         </div>
+  
+                        <div class="crossborder__submit mb-4">
+                            <button type="submit" class="btn btn-green btn-block button-transfer go-to-pay" disabled>Перевести</button>
+                        </div>
+  
+                        <div class="crossborder__oferta">
+                          <div class="form-group">
+                            <div class="checkbox-control">
+                              <input class="checkbox-input" type="checkbox" id="checkbox-inp">
+                              <label class="checkbox-label" for="checkbox-inp">Я согласен(-а) с условиями <a href="/media/files/public-offer.pdf" class="red-link" target="_blank"><u>публичного договора</a></u></label>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="crossborder__security mt-4 d-lg-none" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
+                          <span class="crossborder__security-title">Безопасность переводов</span>
+                          <div class="crossborder__security-img">
+                            <a rel="nofollow" href="https://www.mastercard.ua/uk-ua/consumers/features-benefits/safety-and-security/securecode.html" target="_blank">
+                              <img src="/img/crossborder/mastercard-security-icon.svg" alt="Mastercard">
+                            </a>
+                            <a rel="nofollow" href="https://www.visa.com.ua/uk_UA/pay-with-visa/featured-technologies/verified-by-visa.html" target="_blank">
+                              <img src="/img/crossborder/visa-security-icon.svg" alt="Visa">
+                            </a>
+                            <a href="https://www.ipay.ua/ru/pci-dss-ipay-ua" target="_blank">
+                              <img src="/img/crossborder/pci-dss-security-icon.svg" alt="PCI DSS">
+                            </a>
+                          </div>
+                        </div>
+  
                       </div>
-
+                    
                     </div>
-                  
                   </div>
-                </div>
+                </div><!-- crossborder form info -->
 
               </form>
 
@@ -563,6 +632,58 @@
           </div>
 
         </div><!-- crossborder main section -->
+
+        <!-- how-to section -->
+        <div class="crossborder-howto">
+          <div class="container">
+
+            <div class="row crossborder-howto__title">
+              <div class="col-12 text-center">
+                <h2>Как отправить перевод?</h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 text-center">
+                <img src="/img/crossborder/crossboard-howto.png" srcset="/img/crossborder/crossboard-howto.png 1x, /img/crossborder/crossboard-howto@2x.png 2x" class="img-fluid" alt="Image">
+              </div>
+            </div>
+
+            <div class="row crossborder-howto__cards">
+
+              <div class="col-md-6 col-lg-3">
+                <div class="crossborder-howto__card">
+                  <div class="crossborder-howto__card-header">1</div>
+                  <p class="crossborder-howto__card-text">Выберите тип валюты, которую хотите перевести</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="crossborder-howto__card">
+                  <div class="crossborder-howto__card-header">2</div>
+                  <p class="crossborder-howto__card-text">Укажите данные карты отправителя и заполните информацию об отправителе</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="crossborder-howto__card">
+                  <div class="crossborder-howto__card-header">3</div>
+                  <p class="crossborder-howto__card-text">Укажите украинскую карту получателя и его данные</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="crossborder-howto__card">
+                  <div class="crossborder-howto__card-header">4</div>
+                  <p class="crossborder-howto__card-text">С карты отправителя будет списана сумма в выбранной валюте. Получателю будет зачислена сумма в украинских гривнах</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- how-to section -->
 
         <!-- limitations section -->
         <div class="crossborder-limitations">
@@ -578,37 +699,44 @@
             <div class="row justify-content-center">
 
               <div class="col-md-4">
-                <div class="crossborder-card">
-                  <span class="crossborder-card__amount">25 256 ₴</span>
-                  <span class="crossborder-card__text">Максимальная сумма (грн) перевода с комиссией</span>
+                <div class="crossborder-card crossborder-card--first">
+                  <span class="crossborder-card__amount"><span>850 €</span> <span class="text-nowrap">(3 700 'zł.)</span></span>
+                  <span class="crossborder-card__text">Максимальная сумма перевода одной транзакцией</span>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="crossborder-card crossborder-card--second">
+                  <span class="crossborder-card__amount"><span>8 500 €</span> <span class="text-nowrap">(37 000 'zł.)</span></span>
+                  <span class="crossborder-card__text">Максимальная сумма переводов в сутки</span>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="crossborder-card crossborder-card--third">
+                  <span class="crossborder-card__amount"><span>8 500 €</span> <span class="text-nowrap">(37 000 'zł.)</span></span>
+                  <span class="crossborder-card__text">Максимальная сумма переводов за месяц</span>
                 </div>
               </div>
 
               <div class="col-md-4">
                 <div class="crossborder-card">
-                  <span class="crossborder-card__amount">110 000 ₴</span>
-                  <span class="crossborder-card__text">Максимальная сумма (грн) переводов в сутки</span>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="crossborder-card">
-                  <span class="crossborder-card__amount">220 000 ₴</span>
-                  <span class="crossborder-card__text">Максимальная сумма (грн) переводов за месяц</span>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="crossborder-card">
-                  <span class="crossborder-card__amount">25</span>
+                  <span class="crossborder-card__amount"><span>10</span></span>
                   <span class="crossborder-card__text">Максимальное количество всех переводов в сутки</span>
                 </div>
               </div>
 
               <div class="col-md-4">
                 <div class="crossborder-card">
-                  <span class="crossborder-card__amount">100</span>
+                  <span class="crossborder-card__amount"><span>25</span></span>
                   <span class="crossborder-card__text">Максимальное количество всех переводов за месяц</span>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="crossborder-card">
+                  <span class="crossborder-card__amount"><span>15</span></span>
+                  <span class="crossborder-card__text">Максимальное количество получений переводов за месяц</span>
                 </div>
               </div>
 
