@@ -729,3 +729,371 @@
     }
   }
 }
+
+/* countries section */
+.crossborder-countries {
+  padding-top: 5rem;
+  padding-bottom: 1.25rem;
+
+  &__title {
+    margin-bottom: 3.5rem;
+  }
+
+  &__country {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 2rem;
+    margin-bottom: 1.25rem;
+    padding-left: 4.4375rem;
+
+    span {
+      font-size: 1.125rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 55px;
+      height: 32px;
+      left: 0;
+      top: 0;
+      background-image: url('/img/crossborder/sprite-flags.png');
+      background-repeat: no-repeat;
+      background-size: 335px;
+    }
+
+    &--austria {
+      &::before {
+        background-position: 0 0;
+      }
+    }
+
+    &--azerbaijan {
+      &::before {
+        background-position: 0 -66px;
+      }
+    }
+
+    &--albania {
+      &::before {
+        background-position: -112px -66px;
+      }
+    }
+
+    &--armenia {
+      &::before {
+        background-position: 0 -132px;
+      }
+    }
+
+    &--belarus {
+      &::before {
+        background-position: -168px -33px;
+      }
+    }
+
+    &--belgium {
+      &::before {
+        background-position: 0 -165px;
+      }
+    }
+
+    &--bulgaria {
+      &::before {
+        background-position: -224px 0;
+      }
+    }
+
+    &--bosnia-and-herzegovina {
+      &::before {
+        background-position: -224px -132px;
+      }
+    }
+
+    &--great-britain {
+      &::before {
+        background-position: -112px -198px;
+      }
+    }
+
+    &--hungary {
+      &::before {
+        background-position: -56px -231px;
+      }
+    }
+
+    &--germany {
+      &::before {
+        background-position: -280px 0;
+      }
+    }
+
+    &--greece {
+      &::before {
+        background-position: -280px -132px;
+      }
+    }
+
+    &--georgia {
+      &::before {
+        background-position: 0 -264px;
+      }
+    }
+
+    &--denmark {
+      &::before {
+        background-position: -56px 0;
+      }
+    }
+
+    &--israel {
+      &::before {
+        background-position: -56px -66px;
+      }
+    }
+
+    &--ireland {
+      &::before {
+        background-position: 0 -99px;
+      }
+    }
+
+    &--iceland {
+      &::before {
+        background-position: -56px -132px;
+      }
+    }
+
+    &--spain {
+      &::before {
+        background-position: -168px -66px;
+      }
+    }
+
+    &--italy {
+      &::before {
+        background-position: -56px -165px;
+      }
+    }
+
+    &--kazakhstan {
+      &::before {
+        background-position: -224px -33px;
+      }
+    }
+
+    &--cyprus {
+      &::before {
+        background-position: -224px -165px;
+      }
+    }
+
+    &--kyrgyzstan {
+      &::before {
+        background-position: -168px -198px;
+      }
+    }
+
+    &--latvia {
+      &::before {
+        background-position: -112px -231px;
+      }
+    }
+
+    &--lithuania {
+      &::before {
+        background-position: -280px -33px;
+      }
+    }
+
+    &--liechtenstein {
+      &::before {
+        background-position: -280px -165px;
+      }
+    }
+
+    &--luxembourg {
+      &::before {
+        background-position: -56px -264px;
+      }
+    }
+
+    &--north-macedonia {
+      &::before {
+        background-position: 0 -33px;
+      }
+    }
+
+    &--malta {
+      &::before {
+        background-position: -112px 0;
+      }
+    }
+
+    &--moldova {
+      &::before {
+        background-position: -56px -99px;
+      }
+    }
+
+    &--monaco {
+      &::before {
+        background-position: -112px -132px;
+      }
+    }
+
+    &--netherlands {
+      &::before {
+        background-position: -168px -99px;
+      }
+    }
+
+    &--norway {
+      &::before {
+        background-position: -112px -165px;
+      }
+    }
+
+    &--poland {
+      &::before {
+        background-position: -224px -66px;
+      }
+    }
+
+    &--portugal {
+      &::before {
+        background-position: 0 -198px;
+      }
+    }
+
+    &--russia {
+      &::before {
+        background-position: -224px -198px;
+      }
+    }
+
+    &--romania {
+      &::before {
+        background-position: -168px -231px;
+      }
+    }
+
+    &--serbia {
+      &::before {
+        background-position: -280px -66px;
+      }
+    }
+
+    &--slovakia {
+      &::before {
+        background-position: -280px -198px;
+      }
+    }
+
+    &--slovenia {
+      &::before {
+        background-position: -112px -264px;
+      }
+    }
+
+    &--tajikistan {
+      &::before {
+        background-position: -56px -33px;
+      }
+    }
+
+    &--turkmenistan {
+      &::before {
+        background-position: -112px -33px;
+      }
+    }
+
+    &--turkey {
+      &::before {
+        background-position: -112px -99px;
+      }
+    }
+
+    &--uzbekistan {
+      &::before {
+        background-position: -168px 0;
+      }
+    }
+
+    &--finland {
+      &::before {
+        background-position: -168px -132px;
+      }
+    }
+
+    &--france {
+      &::before {
+        background-position: -168px -165px;
+      }
+    }
+
+    &--croatia {
+      &::before {
+        background-position: -224px -99px;
+      }
+    }
+
+    &--montenegro {
+      &::before {
+        background-position: -56px -198px;
+      }
+    }
+
+    &--czechia {
+      &::before {
+        background-position: 0 -231px;
+      }
+    }
+
+    &--switzerland {
+      &::before {
+        background-position: -224px -231px;
+      }
+    }
+
+    &--sweden {
+      &::before {
+        background-position: -280px -99px;
+      }
+    }
+
+    &--estonia {
+      &::before {
+        background-position: -280px -231px;
+      }
+    }
+  }
+
+  @include until($lg) {
+    &__title {
+      margin-bottom: 2rem;
+    }
+
+    &__country {
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 2.5rem;
+
+    &__title {
+      margin-bottom: 0.875rem;
+    }
+
+    &__country {
+      margin-bottom: 1.25rem;
+      padding-left: 3.6875rem;
+
+      span {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

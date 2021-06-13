@@ -684,4 +684,272 @@
     display: inline;
   }
 }
+
+/* countries section */
+.crossborder-countries {
+  padding-top: 5rem;
+  padding-bottom: 1.25rem;
+}
+
+.crossborder-countries__title {
+  margin-bottom: 3.5rem;
+}
+
+.crossborder-countries__country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 2rem;
+  margin-bottom: 1.25rem;
+  padding-left: 4.4375rem;
+}
+
+.crossborder-countries__country span {
+  font-size: 1.125rem;
+}
+
+.crossborder-countries__country::before {
+  position: absolute;
+  content: '';
+  width: 55px;
+  height: 32px;
+  left: 0;
+  top: 0;
+  background-image: url("/img/crossborder/sprite-flags.png");
+  background-repeat: no-repeat;
+  background-size: 335px;
+}
+
+.crossborder-countries__country--austria::before {
+  background-position: 0 0;
+}
+
+.crossborder-countries__country--azerbaijan::before {
+  background-position: 0 -66px;
+}
+
+.crossborder-countries__country--albania::before {
+  background-position: -112px -66px;
+}
+
+.crossborder-countries__country--armenia::before {
+  background-position: 0 -132px;
+}
+
+.crossborder-countries__country--belarus::before {
+  background-position: -168px -33px;
+}
+
+.crossborder-countries__country--belgium::before {
+  background-position: 0 -165px;
+}
+
+.crossborder-countries__country--bulgaria::before {
+  background-position: -224px 0;
+}
+
+.crossborder-countries__country--bosnia-and-herzegovina::before {
+  background-position: -224px -132px;
+}
+
+.crossborder-countries__country--great-britain::before {
+  background-position: -112px -198px;
+}
+
+.crossborder-countries__country--hungary::before {
+  background-position: -56px -231px;
+}
+
+.crossborder-countries__country--germany::before {
+  background-position: -280px 0;
+}
+
+.crossborder-countries__country--greece::before {
+  background-position: -280px -132px;
+}
+
+.crossborder-countries__country--georgia::before {
+  background-position: 0 -264px;
+}
+
+.crossborder-countries__country--denmark::before {
+  background-position: -56px 0;
+}
+
+.crossborder-countries__country--israel::before {
+  background-position: -56px -66px;
+}
+
+.crossborder-countries__country--ireland::before {
+  background-position: 0 -99px;
+}
+
+.crossborder-countries__country--iceland::before {
+  background-position: -56px -132px;
+}
+
+.crossborder-countries__country--spain::before {
+  background-position: -168px -66px;
+}
+
+.crossborder-countries__country--italy::before {
+  background-position: -56px -165px;
+}
+
+.crossborder-countries__country--kazakhstan::before {
+  background-position: -224px -33px;
+}
+
+.crossborder-countries__country--cyprus::before {
+  background-position: -224px -165px;
+}
+
+.crossborder-countries__country--kyrgyzstan::before {
+  background-position: -168px -198px;
+}
+
+.crossborder-countries__country--latvia::before {
+  background-position: -112px -231px;
+}
+
+.crossborder-countries__country--lithuania::before {
+  background-position: -280px -33px;
+}
+
+.crossborder-countries__country--liechtenstein::before {
+  background-position: -280px -165px;
+}
+
+.crossborder-countries__country--luxembourg::before {
+  background-position: -56px -264px;
+}
+
+.crossborder-countries__country--north-macedonia::before {
+  background-position: 0 -33px;
+}
+
+.crossborder-countries__country--malta::before {
+  background-position: -112px 0;
+}
+
+.crossborder-countries__country--moldova::before {
+  background-position: -56px -99px;
+}
+
+.crossborder-countries__country--monaco::before {
+  background-position: -112px -132px;
+}
+
+.crossborder-countries__country--netherlands::before {
+  background-position: -168px -99px;
+}
+
+.crossborder-countries__country--norway::before {
+  background-position: -112px -165px;
+}
+
+.crossborder-countries__country--poland::before {
+  background-position: -224px -66px;
+}
+
+.crossborder-countries__country--portugal::before {
+  background-position: 0 -198px;
+}
+
+.crossborder-countries__country--russia::before {
+  background-position: -224px -198px;
+}
+
+.crossborder-countries__country--romania::before {
+  background-position: -168px -231px;
+}
+
+.crossborder-countries__country--serbia::before {
+  background-position: -280px -66px;
+}
+
+.crossborder-countries__country--slovakia::before {
+  background-position: -280px -198px;
+}
+
+.crossborder-countries__country--slovenia::before {
+  background-position: -112px -264px;
+}
+
+.crossborder-countries__country--tajikistan::before {
+  background-position: -56px -33px;
+}
+
+.crossborder-countries__country--turkmenistan::before {
+  background-position: -112px -33px;
+}
+
+.crossborder-countries__country--turkey::before {
+  background-position: -112px -99px;
+}
+
+.crossborder-countries__country--uzbekistan::before {
+  background-position: -168px 0;
+}
+
+.crossborder-countries__country--finland::before {
+  background-position: -168px -132px;
+}
+
+.crossborder-countries__country--france::before {
+  background-position: -168px -165px;
+}
+
+.crossborder-countries__country--croatia::before {
+  background-position: -224px -99px;
+}
+
+.crossborder-countries__country--montenegro::before {
+  background-position: -56px -198px;
+}
+
+.crossborder-countries__country--czechia::before {
+  background-position: 0 -231px;
+}
+
+.crossborder-countries__country--switzerland::before {
+  background-position: -224px -231px;
+}
+
+.crossborder-countries__country--sweden::before {
+  background-position: -280px -99px;
+}
+
+.crossborder-countries__country--estonia::before {
+  background-position: -280px -231px;
+}
+
+@media screen and (max-width: 991px) {
+  .crossborder-countries__title {
+    margin-bottom: 2rem;
+  }
+  .crossborder-countries__country {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .crossborder-countries {
+    padding-top: 2.5rem;
+  }
+  .crossborder-countries__title {
+    margin-bottom: 0.875rem;
+  }
+  .crossborder-countries__country {
+    margin-bottom: 1.25rem;
+    padding-left: 3.6875rem;
+  }
+  .crossborder-countries__country span {
+    font-size: 0.875rem;
+  }
+}
 /*# sourceMappingURL=crossborder.css.map */
