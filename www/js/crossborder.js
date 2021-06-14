@@ -36,4 +36,14 @@ $(document).ready(function() {
 
   $(".crossborder-tooltip").popover(crossborderOptions);
 
+  // scroll to anchor
+  $('body').click(function(e) {
+    if ($(e.target).hasClass('data-anchor')) {
+      e.preventDefault();
+      var anchor = $(e.target).attr('href');
+  
+      $('html, body').animate({scrollTop: $(anchor).offset().top}, 600);
+    }
+  });
+
 })

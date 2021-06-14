@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/crossborder.css">
     <link rel="stylesheet" href="/css/p2p-menu-mobile.css">
 
-    <title>Crossborder</title>
+    <title>Crossborder 1</title>
   </head>
   <body>
 
@@ -324,7 +324,7 @@
                           </div>
                         </div>
                         <div class="form-group form-currency-amount">
-                          <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                          <input type="tel" class="form-control form-input input-icon-right filled" id="form-icon-r" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="850.00">
                           <label class="control-label form-label" for="form-icon-r">Сумма отправки</label>
                           <label class="label-icon-right label-currency">EUR</label>
                         </div>
@@ -336,16 +336,16 @@
                     <div class="col-lg-3 d-none d-lg-flex justify-content-end">
                       <div class="crossborder__transfer-send">
                         <h3 class="crossborder__transfer-title h5 mb-3">Будет списано</h3>
-                        <p class="crossborder__transfer-amount"><span id="amount-send">0.00</span> <span id="send-currency">EUR</span></p>
+                        <p class="crossborder__transfer-amount"><span id="amount-send">867.00</span> <span id="send-currency">EUR</span></p>
                         <p class="mb-2">С учетом комиссии</p>
-                        <p class="crossborder__commission"><span id="commission-send">0.0</span id="commission-currency"> <span>EUR</span></p>
+                        <p class="crossborder__commission"><span id="commission-send">17.0</span id="commission-currency"> <span>EUR</span></p>
                       </div>
                     </div>
   
                     <div class="col-lg-5 d-none d-lg-block">
                       <div class="crossborder__transfer-receive">
                         <h3 class="crossborder__transfer-title h5 mb-3">Будет зачислено</h3>
-                        <p class="crossborder__transfer-amount"><span id="amount-receive">0.00</span> <span id="receive-currency">UAH</span></p>
+                        <p class="crossborder__transfer-amount"><span id="amount-receive">28 262.50</span> <span id="receive-currency">UAH</span></p>
                         <p class="mb-2">Курс</p>
                         <p class="crossborder__exchange-rate"><span id="rate-send">1 EUR</span> <span>=</span> <span id="rate-receive">33.1 UAH</span></p>
                       </div>
@@ -357,19 +357,19 @@
                           <span>Курс</span>
                           <span>1 EUR = 33.1 UAH</span>
                         </div>
-                        <!-- <div class="crossborder__transfer-hr"></div>
+                        <div class="crossborder__transfer-hr"></div>
                         <div class="crossborder__transfer-row">
                           <span>Комиссия</span>
-                          <span>0.00 EUR</span>
+                          <span>17.00 EUR</span>
                         </div>
                         <div class="crossborder__transfer-row">
                           <span>Будет списано</span>
-                          <span>0.00 EUR</span>
+                          <span>867.00 EUR</span>
                         </div>
                         <div class="crossborder__transfer-row">
                           <span>Будет зачислено</span>
-                          <span>0.00 UAH</span>
-                        </div> -->
+                          <span>28 262.50 UAH</span>
+                        </div>
                       </div>
                     </div>
   
@@ -393,25 +393,25 @@
                           <div class="bank-card">
                             <div class="bank-card__header">
                               <div class="bank-card__type">
-                                <div id="sender-type-card"></div>
+                                <div class="type-card type-card-mc"></div>
                               </div>
                             </div>
                             <div class="bank-card__body">
                               <div class="bank-card__number">
-                                <div class="form-group">
-                                  <input type="tel" class="form-control form-input" id="crossborderform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                <div class="form-group has-success">
+                                  <input type="tel" class="form-control form-input filled" id="crossborderform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="5168 2222 2222 3333">
                                   <label class="control-label form-label" for="crossborderform-sender_card_pan">Номер карты</label>
                                   <div class="help-block"></div>
                                 </div>
                               </div>
                               <div class="bank-card__card-data">
-                                <div class="form-group bank-card__expires">
-                                  <input type="text" class="form-control form-input" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                                <div class="form-group bank-card__expires has-success">
+                                  <input type="text" class="form-control form-input filled" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true" value="02 / 22">
                                   <label class="control-label form-label" for="cardform-exp">Срок действия</label>
                                   <div class="help-block"></div>
                                 </div>
                                 <div class="form-group bank-card__cvv">
-                                  <input type="password" class="form-control form-input" id="crossborderform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                                  <input type="password" class="form-control form-input filled" id="crossborderform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true" value="123">
                                   <label class="control-label form-label" for="crossborderform-sender_card_cvv">CVV</label>
                                   <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты"></a>
                                   <div class="help-block"></div>
@@ -435,38 +435,38 @@
                           </div>
                           <div class="row">
                             <div class="col-md col-left">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-input" id="name-send" name="name-send" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="text" class="form-control form-input filled" id="name-send" name="name-send" autocomplete="off" placeholder="" aria-required="true" value="Nikolay">
                                 <label class="control-label form-label" for="name-send">Имя</label>
                               </div>
                             </div>
                             <div class="col-md col-right">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-input" id="surname-send" name="surname-send" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="text" class="form-control form-input filled" id="surname-send" name="surname-send" autocomplete="off" placeholder="" aria-required="true" value="VasilievVasilievV">
                                 <label class="control-label form-label" for="surname-send">Фамилия</label>
                               </div>
                             </div>
                           </div>
-                          <div class="form-group">
-                            <input type="tel" class="form-control form-input" id="crossborderform-sender_phone" name="crossborderForm[sender_phone]" aria-required="true" placeholder="+380 (00) 000 00 00">
+                          <div class="form-group has-success">
+                            <input type="tel" class="form-control form-input filled" id="crossborderform-sender_phone" name="crossborderForm[sender_phone]" aria-required="true" placeholder="+380 (00) 000 00 00" value="+4856787689">
                             <label class="control-label form-label" for="crossborderform-sender_phone">Номер телефона</label>
                           </div>
                           <div class="row">
                             <div class="col-md col-left">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-input" id="house-send" name="house-send" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="text" class="form-control form-input filled" id="house-send" name="house-send" autocomplete="off" placeholder="" aria-required="true" value="Warszawa">
                                 <label class="control-label form-label" for="house-send">Город</label>
                               </div>
                             </div>
                             <div class="col-md col-right">
-                              <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="zip-send" name="zip-send" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="tel" class="form-control form-input filled" id="zip-send" name="zip-send" autocomplete="off" placeholder="" aria-required="true" value="02189">
                                 <label class="control-label form-label" for="zip-send">Индекс</label>
                               </div>
                             </div>
                           </div>
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input" id="address-send" name="address-send" autocomplete="off" placeholder="" aria-required="true">
+                          <div class="form-group has-success">
+                            <input type="text" class="form-control form-input filled" id="address-send" name="address-send" autocomplete="off" placeholder="" aria-required="true" value="Gaverva,20">
                             <label class="control-label form-label" for="address-send">Адрес</label>
                           </div>
                         </div>
@@ -514,13 +514,13 @@
                           <div class="bank-card">
                             <div class="bank-card__header">
                               <div class="bank-card__type">
-                                <div id="target-type-card"></div>
+                                <div class="type-card type-card-visa"></div>
                               </div>
                             </div>
                             <div class="bank-card__body">
                               <div class="bank-card__number">
-                                <div class="form-group">
-                                  <input type="tel" class="form-control form-input" id="crossborderform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                <div class="form-group has-success">
+                                  <input type="tel" class="form-control form-input filled" id="crossborderform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="4167 5654 6789 8900">
                                   <label class="control-label form-label" for="crossborderform-target_card_pan">Номер карты</label>
                                   <div class="help-block"></div>
                                 </div>
@@ -539,42 +539,42 @@
                           </div>
                           <div class="row">
                             <div class="col-md col-left">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-input" id="name-receive" name="name-receive" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="text" class="form-control form-input filled" id="name-receive" name="name-receive" autocomplete="off" placeholder="" aria-required="true" value="Stanislav">
                                 <label class="control-label form-label" for="name-receive">Имя</label>
                               </div>
                             </div>
                             <div class="col-md col-right">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-input" id="surname-receive" name="surname-receive" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="text" class="form-control form-input filled" id="surname-receive" name="surname-receive" autocomplete="off" placeholder="" aria-required="true" value="Buzonkichkin">
                                 <label class="control-label form-label" for="surname-receive">Фамилия</label>
                               </div>
                             </div>
                           </div>
-                          <div class="form-group">
-                            <input type="tel" class="form-control form-input" id="crossborderform-receiver_phone" name="crossborderForm[receiver_phone]" aria-required="true" placeholder="+380 (00) 000 00 00">
+                          <div class="form-group has-success">
+                            <input type="tel" class="form-control form-input filled" id="crossborderform-receiver_phone" name="crossborderForm[receiver_phone]" aria-required="true" placeholder="+380 (00) 000 00 00" value="+38 (66) 567 87 87">
                             <label class="control-label form-label" for="crossborderform-receiver_phone">Номер телефона</label>
                           </div>
-                          <div class="form-group">
-                            <input type="email" class="form-control form-input" id="email-receive" name="email-receive" autocomplete="off" placeholder="email@email.com" aria-required="true">
+                          <div class="form-group has-success">
+                            <input type="email" class="form-control form-input filled" id="email-receive" name="email-receive" autocomplete="off" placeholder="email@email.com" aria-required="true" value="Nicolasdadw@gmail.com">
                             <label class="control-label form-label" for="email-receive">E-mail</label>
                           </div>
                           <div class="row">
                             <div class="col-md col-left">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-input" id="house-receive" name="house-receive" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="text" class="form-control form-input filled" id="house-receive" name="house-receive" autocomplete="off" placeholder="" aria-required="true" value="Ivano-Frankovsk">
                                 <label class="control-label form-label" for="house-receive">Город</label>
                               </div>
                             </div>
                             <div class="col-md col-right">
-                              <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="zip-receive" name="zip-receive" autocomplete="off" placeholder="" aria-required="true">
+                              <div class="form-group has-success">
+                                <input type="tel" class="form-control form-input filled" id="zip-receive" name="zip-receive" autocomplete="off" placeholder="" aria-required="true" value="02189">
                                 <label class="control-label form-label" for="zip-receive">Индекс</label>
                               </div>
                             </div>
                           </div>
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input" id="address-receive" name="address-receive" autocomplete="off" placeholder="" aria-required="true">
+                          <div class="form-group has-success">
+                            <input type="text" class="form-control form-input filled" id="address-receive" name="address-receive" autocomplete="off" placeholder="" aria-required="true" value="Goverla,45">
                             <label class="control-label form-label" for="address-receive">Адрес</label>
                           </div>
                         </div>
@@ -582,22 +582,22 @@
                         <div class="crossborder__payment">
                           <div class="crossborder__amount crossborder__amount--send">
                             <span class="crossborder__amount-text">Сумма перевода</span>
-                            <span class="crossborder__amount-amount">0.00 EUR</span>
+                            <span class="crossborder__amount-amount">867.00 EUR</span>
                           </div>
-                          <!-- <div class="crossborder__amount crossborder__amount--receive">
+                          <div class="crossborder__amount crossborder__amount--receive">
                             <span class="crossborder__amount-text">Будет зачислено</span>
-                            <span class="crossborder__amount-amount">0.00 UAH</span>
-                          </div> -->
+                            <span class="crossborder__amount-amount">28 262.50 UAH</span>
+                          </div>
                         </div>
   
                         <div class="crossborder__submit mb-4">
-                            <button type="submit" class="btn btn-green btn-block button-transfer go-to-pay" disabled>Перевести</button>
+                            <button type="submit" class="btn btn-green btn-block button-transfer go-to-pay">Перевести</button>
                         </div>
   
                         <div class="crossborder__oferta">
                           <div class="form-group">
                             <div class="checkbox-control">
-                              <input class="checkbox-input" type="checkbox" id="checkbox-inp">
+                              <input class="checkbox-input" type="checkbox" id="checkbox-inp" checked>
                               <label class="checkbox-label" for="checkbox-inp">Я согласен(-а) с условиями <a href="/media/files/public-offer.pdf" class="red-link text-nowrap" target="_blank"><u>публичного договора</a></u></label>
                             </div>
                           </div>

@@ -1,5 +1,5 @@
 .crossborder {
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .crossborder__connection {
@@ -146,6 +146,15 @@
   border-bottom: 3px solid #F0F5FA;
 }
 
+.crossborder__form .alert {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.crossborder__form .alert p {
+  color: #E84F35;
+}
+
 .crossborder__card-wrapper {
   width: 26.25rem;
 }
@@ -178,6 +187,26 @@
 .crossborder .bank-card__type {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+}
+
+.crossborder .bank-card__type .type-card {
+  width: 100%;
+  height: 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.crossborder .bank-card__type .type-card-mc {
+  background-image: url("/img/crossborder/mastercard-logo.svg");
+}
+
+.crossborder .bank-card__type .type-card-visa {
+  background-image: url("/img/crossborder/visa-logo.svg");
+}
+
+.crossborder .form-group.has-error .form-input {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .crossborder__subtitle {
@@ -354,6 +383,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .crossborder {
+    padding-bottom: 2.5rem;
+  }
   .crossborder__transfer {
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
@@ -430,6 +462,9 @@
     height: 2rem;
     padding-top: 0.1875rem;
     padding-bottom: 0.1875rem;
+  }
+  .crossborder__card .bank-card__type .type-card {
+    background-size: auto 100%;
   }
   .crossborder__card .bank-card__header {
     -webkit-box-align: end;
@@ -944,12 +979,81 @@
   .crossborder-countries__title {
     margin-bottom: 0.875rem;
   }
+}
+
+@media screen and (max-width: 575px) {
   .crossborder-countries__country {
-    margin-bottom: 1.25rem;
-    padding-left: 3.6875rem;
+    margin-bottom: 0.75rem;
+    padding-left: 3.125rem;
+  }
+  .crossborder-countries__country::before {
+    top: -1px;
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
   }
   .crossborder-countries__country span {
     font-size: 0.875rem;
+    line-height: 1;
+  }
+}
+
+/* faq section */
+.crossborder-faq {
+  padding-top: 2.5rem;
+}
+
+.crossborder-faq__title {
+  margin-bottom: 3.25rem;
+}
+
+@media screen and (max-width: 767px) {
+  .crossborder-faq {
+    padding-top: 0.625rem;
+  }
+  .crossborder-faq__title {
+    margin-bottom: 1.375rem;
+  }
+}
+
+.faq-card {
+  border-bottom: 2px solid #DEE7F3;
+}
+
+.faq-card:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.faq-card__header {
+  cursor: pointer;
+}
+
+.faq-card__header h4 {
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.faq-card__header h4::after {
+  position: absolute;
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 0;
+  top: 0;
+  background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.6665 9.71704L12.5001 15.5507' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5 15.5507L18.3336 9.71705' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.faq-card__header h4[aria-expanded="true"]::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media screen and (max-width: 767px) {
+  .faq-card:not(:last-child) {
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=crossborder.css.map */

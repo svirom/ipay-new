@@ -8,7 +8,7 @@
 @import '../abstracts/mixins';
 
 .crossborder {
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 
   &__connection {
     padding: 2px 0 2px 1.3625rem;
@@ -157,6 +157,15 @@
   &__form {
     padding-bottom: 2.75rem;
     border-bottom: 3px solid $light-grey;
+
+    .alert {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+
+      p {
+        color: $btn-red;
+      }
+    }
   }
 
   &__card-wrapper {
@@ -188,6 +197,25 @@
 
   .bank-card__type {
     flex-basis: 100%;
+
+    .type-card {
+      width: 100%;
+      height: 100%;
+      background-position: right center;
+      background-repeat: no-repeat;
+    }
+
+    .type-card-mc {
+      background-image: url('/img/crossborder/mastercard-logo.svg');
+    }
+
+    .type-card-visa {
+      background-image: url('/img/crossborder/visa-logo.svg');
+    }
+  }
+
+  .form-group.has-error .form-input {
+    box-shadow: none;
   }
 
   &__subtitle {
@@ -380,6 +408,8 @@
   }
 
   @include until($md) {
+    padding-bottom: 2.5rem;
+
     &__transfer {
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
@@ -462,6 +492,10 @@
         height: 2rem;
         padding-top: 0.1875rem;
         padding-bottom: 0.1875rem;
+
+        .type-card {
+          background-size: auto 100%;
+        }
       }
 
       .bank-card__header {
@@ -1087,13 +1121,86 @@
       margin-bottom: 0.875rem;
     }
 
+    // &__country {
+    //   padding-left: 3.6875rem;
+
+    //   span {
+    //     font-size: 0.875rem;
+    //   }
+    // }
+  }
+
+  @include until($sm) {
     &__country {
-      margin-bottom: 1.25rem;
-      padding-left: 3.6875rem;
+      margin-bottom: 0.75rem;
+      padding-left: 3.125rem;
+
+      &::before {
+        top: -1px;
+        transform: scale(0.625);
+      }
 
       span {
         font-size: 0.875rem;
+        line-height: 1;
       }
+    }
+  }
+}
+
+/* faq section */
+.crossborder-faq {
+  padding-top: 2.5rem;
+
+  &__title {
+    margin-bottom: 3.25rem;
+  }
+
+  @include until($md) {
+    padding-top: 0.625rem;
+
+    &__title {
+      margin-bottom: 1.375rem;
+    }
+  }
+}
+
+.faq-card {
+  border-bottom: 2px solid $middle-grey;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__header {
+    cursor: pointer;
+
+    h4 {
+      position: relative;
+      padding-right: 1.5rem;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 1.5rem;
+        height: 1.5rem;
+        right: 0;
+        top: 0;
+        background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.6665 9.71704L12.5001 15.5507' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5 15.5507L18.3336 9.71705' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+        transition: transform 0.3s;
+      }
+
+      &[aria-expanded="true"] {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
     }
   }
 }
