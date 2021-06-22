@@ -1,0 +1,264 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the catalog page of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.catalog-page-search {
+  .form-search__search {
+    position: relative;
+    display: block;
+    width: 100%;
+    left: auto;
+    padding: 1.563rem 3.75rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    color: #4F6E7A;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 20px rgba(75, 103, 126, 0.2);
+    background-color: #ffffff;
+    background-position: left 1rem center;
+
+    &:hover {
+      text-decoration: none;
+      // background-color: $light-grey;
+    }
+  }
+
+  @include until($lg) {
+    .form-search__search {
+      padding: 1.063rem 1rem 1.063rem 2.75rem;
+      font-size: 1rem;
+      background-position: left 0.75rem center;
+    }
+  }
+}
+
+.catalog-page-list {
+  margin-bottom: 2rem;
+
+  .catalogue__item {
+    padding-top: 0.844rem;
+    padding-bottom: 0.844rem;
+
+    &:hover {
+      background-color: #ffffff;
+
+      span {
+        color: $btn-red;
+      }
+    }
+
+    &:active, &.active {
+      background-color: #ffffff;
+
+      span {
+        color: $heading-color;
+      }
+    }
+  }
+
+  .catalogue {
+    &__crossboard {  
+      &:hover {
+        &::before {
+          background-position: -72px -49px;
+        }
+      }
+    }
+  
+    &__p2p {
+      &:hover {
+        &::before {
+          background-position: -122px -74px;
+        }
+      }
+    }
+  
+    &__p2r {  
+      &:hover {
+        &::before {
+          background-position: -24px -98px;
+        }
+      }
+    }
+  
+    &__by-email {
+      &:hover {
+        &::before {
+          background-position: 0 -25px;
+        }
+      }
+    }
+  
+    &__by-phone {
+      &:hover {
+        &::before {
+          background-position: -49px -25px;
+        }
+      }
+    }
+  
+    &__receive {  
+      &:hover {
+        &::before {
+          background-position: -24px -50px;
+        }
+      }
+    }
+  
+    &__mobile {
+      &:hover {
+        &::before {
+          background-position: -96px -74px;
+        }
+      }
+    }
+  
+    &__utility {
+      &::before {
+        width: 23px;
+      }
+
+      &:hover {
+        &::before {
+          background-position: -98px -124px;
+        }
+      }
+    }
+  
+    &__kindergarten {
+      &:hover {
+        &::before {
+          background-position: -97px -25px;
+        }
+      }
+    }
+  
+    &__internet {
+      &:hover {
+        &::before {
+          background-position: -48px -74px;
+        }
+      }
+    }
+  
+    &__tv {
+      &:hover {
+        &::before {
+          background-position: -50px -122px;
+        }
+      }
+    }
+  
+    &__phone {
+      &:hover {
+        &::before {
+          background-position: -72px -99px;
+        }
+      }
+    }
+  
+    &__security {
+      &:hover {
+        &::before {
+          background-position: -120px -98px;
+        }
+      }
+    }
+  
+    &__transport {
+      &:hover {
+        &::before {
+          background-position: -145px -73px;
+        }
+      }
+    }
+  
+    &__penalty {
+      &:hover {
+        &::before {
+          background-position: -145px -25px;
+        }
+      }
+    }
+  
+    &__tourism {  
+      &:hover {
+        &::before {
+          background-position: -25px -123px;
+        }
+      }
+    }
+  
+    &__banks {
+      &:hover {
+        &::before {
+          background-position: -121px -24px;
+        }
+      }
+    }
+  
+    &__education {
+      &:hover {
+        &::before {
+          background-position: 0 -74px;
+        }
+      }
+    }
+  
+    &__business {
+      &:hover {
+        &::before {
+          background-position: -24px 0;
+        }
+      }
+    }
+  
+    &__charity {
+      &:hover {
+        &::before {
+          background-position: -73px -24px;
+        }
+      }
+    }
+  
+    &__budget {
+      &:hover {
+        &::before {
+          background-position: -145px -122px;
+        }
+      }
+    }
+  }
+
+  &--first {
+    margin-top: 1rem;
+  }
+
+  @include until($md) {
+    margin-bottom: 1.5rem;
+
+    .catalogue__item {
+      padding-top: 0.9375rem;
+      padding-bottom: 0.9375rem;
+      padding-left: 2.625rem;
+      font-size: 1rem;
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &--first {
+      margin-top: 0.5rem;
+    }
+  }
+}

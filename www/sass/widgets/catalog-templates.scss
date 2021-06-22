@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the catalogue templates widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.catalog-templates {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  &__more {
+    font-size: 1.125rem;
+  }
+
+  @include until($md) {
+    margin-top: 0.5rem;
+
+    h3 {
+      margin-bottom: 0.25rem;
+      font-size: 1.25rem;
+    }
+  } 
+}
+
+.catalog-templates-wrapper {
+  padding: 1rem 1rem 0.75rem;
+  border-radius: $border-radius;
+  background-color: $light-grey;
+
+  @include until($lg) {
+    padding-bottom: 0;
+  }
+}
