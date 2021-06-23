@@ -24,7 +24,6 @@
 
     &:hover {
       text-decoration: none;
-      // background-color: $light-grey;
     }
   }
 
@@ -35,6 +34,81 @@
       background-position: left 0.75rem center;
     }
   }
+}
+
+.catalog-page-alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.alert {
+    padding: 1rem 1rem 1rem 4.5rem;
+
+    span {
+      color: $dark-green;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+
+  &.alert.alert-face::before {
+    top: 1.3125rem;
+    left: 1rem;
+  }
+
+  &.alert.alert-face::after {
+    top: 1.75rem;
+    left: 1.375rem;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAxCAYAAACcXioiAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMqSURBVHgB7Zq/UxQxFMdfkr0D7oBhZFRGGaRwqCxsqL3/wMZe6W38E/wDHC3sLeysLPwDrGgtLClgRhhEkPM47vb2Nj982QXB3eyv3M0tDPuZCTO3STb5Zl+SlxcIpPDx2cOWUuQ5XAGE8F9tfN75E33upFVSkqwChRdwNXiNKSaAwjXHyVuQMQK1OoFJ4g0kKJVeJrcAymDyAjz8My4B5+gR4b7KVZaggTpOKFpwACmz60lMUwUGykrAwJWZ5dp9BbOzFG7NhZ3xhxL8DOFcKDh0Fazdr0FeCgs4Z2qagpPQTg87f+yKQMBlKP6caZrXDYVjsnPAUQQUwloAITqRmDkJmW5ilBKjOXle9lc1YS1Ak9ecouQxp7xc+32gElA2lYCyqQSUTSWgbG64AEtvQI3Hiwiw9oW0M2bjgHmeAs7Hp8BKgPbbd3/JwPMswu9TBSceT8yX+GkcVuzUV1iAdqNdRaA5k1kS6pfeLs5am3dIah1GJyDg3iKDojQbNEjjZqTzwEgN1yisP1mGWu3/weh2hvBtcy//e6BEjg5c6A0vfq+sNGGmUaxLpQngvoSt74fQ6V0sBj+26rAwX8w8CwuQ2Fi/l738cFxmGZrJXCOclB4ePX3DAsTOksZF8zk6lHB3MX+3rL6A0p3DmkkLBkd9u22Bk10XCAsFm5deJlNaPNLL7EChAMiNtQnVcHRNkTr9hQZdEYiIolew6YbZRPQG5/nJe0QSI80BoznhKKsMCzOZk5J2u/PIk9imYW1Oth2OUrnTZVMJKJtKQNlUAsqmElA2IwmwuWXR/pMOCoyLwBfa3t9fBSFa0cytT29aPze/GCu2T9Hj9I1ZkNS/IYZTusccZMJFHk9xAh+/fPt0+/16J/o8dOYEtBjQD9HMhdVHYBLQDm4hi8VU8AAGex2Z2klNPSFq0bzz4B0zGEwgoNvv6aBMLLM/GMae6avSpdsMliD76McutdfAk9nacv773ygnfRcG9V7seSBA4K0hMfRHJcQO607xfznQ8R42woyTOHmkISYZmhATXzFrI547Fd79By+gIMc393JBFfw78Avu4nDGJ89f89FCl10jlH8AAAAASUVORK5CYII=") center no-repeat;
+    background-size: 24px;
+  }
+
+  .btn {
+    -ms-flex: 1 1 15.937rem;
+    max-width: 15.9375rem;
+  }
+
+  @include until($md) {
+    &.alert {
+      margin-bottom: 0.5rem;
+    }
+
+    &.alert.alert-face::before {
+      top: 1rem;
+    }
+
+    &.alert.alert-face::after {
+      top: 1.4375rem;
+    }
+  }
+}
+
+.catalog-page-info {
+  padding: 1.25rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+
+  &__card {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+
+    span {
+      padding-left: 0.75rem;
+      color: $heading-color;
+    }
+  }
+}
+
+.tooltip .tooltip-inner {
+  padding: 1rem;
+  font-family: $text-font;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
 }
 
 .catalog-page-list {
@@ -259,6 +333,10 @@
 
     &--first {
       margin-top: 0.5rem;
+    }
+
+    &--last {
+      margin-bottom: 0;
     }
   }
 }

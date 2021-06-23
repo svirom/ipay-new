@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/catalog-page.css">
     <link rel="stylesheet" href="/css/catalog-templates.css">
 
-    <title>Catalog Registered</title>
+    <title>Catalog Unregistered</title>
   </head>
   <body>
 
@@ -44,31 +44,17 @@
                     <span>плательщиков</span>
                   </a>
                 </li>
-                <li class="main-nav__item">
-                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
-                    <span class="main-nav__bonus">1543 </span>
-                    <span>бонусов</span>
-                  </span>
-                </li>
                 <li class="main-nav__item dropdown">
-                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
-                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
-                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
-                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
-                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
-                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
-                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
                   </div>
                 </li>
               </ul>
               <ul class="main-nav__nav-mobile">
-                <li class="main-nav__item-account">
-                  <span class="main-nav__item-account--registered">Мой кабинет</span>
-                  <span>Альберт</span>
-                </li>
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
                 <li class="main-nav__item main-nav__item-mobile">
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
@@ -77,16 +63,14 @@
                     <div class="navbar-collapse__menu">
                       <ul>
                         <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
-                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
-                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
-                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
-                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
-                        <li><a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a></li>
-                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
-                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
                     </div>
                     <div class="catalogue-mobile">
                       <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
@@ -261,7 +245,7 @@
 
           <div class="col-12">
             <!-- catalog templates widget -->
-            <div class="catalog-templates" id="catalog-templates-widget">
+            <!-- <div class="catalog-templates" id="catalog-templates-widget">
 
               <div class="row justify-content-between align-items-baseline mb-3 mb-md-2">
                 <div class="col-12 col-md">
@@ -335,18 +319,18 @@
                 </div>
               </div>
 
-            </div><!-- catalog templates widget -->
+            </div> --><!-- catalog templates widget -->
           </div>
 
-          <!-- <div class="col-12 mt-2 mt-md-3 mb-3 mb-md-0">
+          <div class="col-12 mt-2 mt-md-3 mb-3 mb-md-0">
             <div class="alert alert-success alert-face catalog-page-alert fade show" role="alert">
               <span>Войдите и получите все преимущества персонального кабинета</span>
               <a href="#" class="btn btn-green btn-block d-none d-md-block">Войти</a>
             </div>
             <a href="#" class="btn btn-green btn-block d-md-none">Войти</a>
-          </div> -->
+          </div>
 
-          <!-- <div class="col-12 mb-3 d-none d-md-block">
+          <div class="col-12 mb-3 d-none d-md-block">
             <div class="catalog-page-info">
               <div class="row">
                 <div class="col-md-3">
@@ -375,7 +359,7 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
 
           <div class="col-12 catalog-page-list catalog-page-list--first">
             <h2>Перевод денег</h2>
