@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------
-// This file contains all styles related to the ipay+ quest 1 widget
+// This file contains all styles related to the ipay+ quest 4 widget
 // ------------------------------------------------------------------------------
 @charset 'UTF-8';
 
@@ -7,8 +7,8 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
-.ipayplus-quest1 {
-  .quest1-menu {
+.ipayplus-quest4 {
+  .quest4-menu {
     &__item {
       margin-bottom: 1rem;
     }
@@ -19,7 +19,7 @@
       vertical-align: middle;
 
       &:hover {
-        .quest1-menu__text {
+        .quest4-menu__text {
           color: $btn-red;
           background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62842 17.8336L15.462 12' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4624 12L9.6288 6.16639' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         }
@@ -49,23 +49,23 @@
     }
 
     &__item--done {
-      .quest1-menu__link {
+      .quest4-menu__link {
         pointer-events: none;
       }
 
-      .quest1-menu__icon {
+      .quest4-menu__icon {
         box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
         background-color: $btn-green;
       }
 
-      .quest1-menu__text {
+      .quest4-menu__text {
         color: $text-color;
         background-image: none;
       }
     }
   }
 
-  .quest1-alert {
+  .quest4-alert {
     margin-top: 2.625rem;
     border-top: 1px solid $middle-grey;
 
@@ -89,7 +89,7 @@
   }
 
   @include until($sm) {
-    .quest1-menu {
+    .quest4-menu {
       &__link {
         align-items: flex-start;
       }
@@ -101,7 +101,7 @@
       }
     }
 
-    .quest1-alert {
+    .quest4-alert {
       margin-top: 2rem;
 
       .alert {
