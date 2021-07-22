@@ -10,6 +10,7 @@
 .homepage-header {
   padding: 5.2rem 0 2rem; 
   background: url('../img/homepage/homepage-header-bkgr.png') center no-repeat;
+  background-color: $light-grey;
   background-size: cover;
 
   @include until($sm) {
@@ -88,6 +89,7 @@
   &__tel {
     flex-shrink: 0;
     min-width: 13.75rem;
+    max-width: 16.75rem;
 
     @include until($xl) {
       flex-shrink: initial;
@@ -100,6 +102,7 @@
     @include until($sm) {
       flex-basis: 100%;
       width: 100%;
+      max-width: none;
     }
   }
 
@@ -131,7 +134,7 @@
     }
   }
 
-  .form-group {
+  .form-group, .form-group.has-error {
     margin-bottom: 0;
   }
 }

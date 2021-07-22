@@ -299,31 +299,30 @@
                 <!-- account ipay+ widget -->
                 <div class="account-ipayplus" id="account-ipayplus-widget">
 
-                  <!-- desktop section -->
-                  <div class="d-none d-md-block">
+                  <div class="ipayplus-header">
+                    <ul class="nav" role="tablist">
+                      <li class="ipayplus-header__item">
+                        <a class="ipayplus-header__link active" id="ipayplus-all-tab" data-toggle="pill" href="#ipayplus-all" role="tab" aria-controls="ipayplus-all" aria-selected="true">Все</a>
+                      </li>
+                      <li class="ipayplus-header__item">
+                        <a class="ipayplus-header__link" id="ipayplus-in-tab" data-toggle="pill" href="#ipayplus-in" role="tab" aria-controls="ipayplus-in" aria-selected="false">Участвуете</a>
+                      </li>
+                      <li class="ipayplus-header__item ipayplus-header__item--last-mobile">
+                        <a class="ipayplus-header__link" id="ipayplus-out-tab" data-toggle="pill" href="#ipayplus-out" role="tab" aria-controls="ipayplus-out" aria-selected="false">Не участвуете</a>
+                      </li>
+                      <li class="ipayplus-header__item ipayplus-header__item--last">
+                        <a class="ipayplus-header__link" id="ipayplus-archive-tab" data-toggle="pill" href="#ipayplus-archive" role="tab" aria-controls="ipayplus-archive" aria-selected="false">Архив</a>
+                      </li>
+                    </ul>
+                  </div>
 
-                    <div class="ipayplus-header">
-                      <ul class="nav" role="tablist">
-                        <li>
-                          <a class="ipayplus-header__link active" id="ipayplus-all-tab" data-toggle="pill" href="#ipayplus-all" role="tab" aria-controls="ipayplus-all" aria-selected="true">Все</a>
-                        </li>
-                        <li>
-                          <a class="ipayplus-header__link" id="ipayplus-in-tab" data-toggle="pill" href="#ipayplus-in" role="tab" aria-controls="ipayplus-in" aria-selected="false">Я участвую</a>
-                        </li>
-                        <li>
-                          <a class="ipayplus-header__link" id="ipayplus-out-tab" data-toggle="pill" href="#ipayplus-out" role="tab" aria-controls="ipayplus-out" aria-selected="false">Не участвую</a>
-                        </li>
-                        <li>
-                          <a class="ipayplus-header__link" id="ipayplus-archive-tab" data-toggle="pill" href="#ipayplus-archive" role="tab" aria-controls="ipayplus-archive" aria-selected="false">Архив</a>
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="tab-content mt-md-4">
 
-                    <div class="tab-content mt-4">
-  
-                      <!-- all actions section -->
-                      <div class="tab-pane fade show active" id="ipayplus-all" role="tabpanel" aria-labelledby="ipayplus-all-tab">
-  
+                    <!-- all actions section -->
+                    <div class="tab-pane fade show active" id="ipayplus-all" role="tabpanel" aria-labelledby="ipayplus-all-tab">
+
+                      <!-- desktop -->
+                      <div class="d-none d-md-block">
                         <div class="row">
   
                           <div class="col-md-6 col-xl-4">
@@ -334,7 +333,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">29.03.21 - 04.04.21</div>
-                                  <p class="ipayplus-card__status ipayplus-card__status--in">Вы участвуете</p>
+                                  <p class="ipayplus-card__status ipayplus-card__status--in">Участвуете</p>
                                 </div>
                                 <h5>Оплачивайте на скорость с Mastercard. Сезон 1.</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -350,7 +349,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">29.03.21 - 04.04.21</div>
-                                  <p class="ipayplus-card__status">Ви не приймаєте участь</p>
+                                  <p class="ipayplus-card__status">Не участвуете</p>
                                 </div>
                                 <h5>Оплачивайте на скорость с Mastercard. Сезон 2. Оплачивайте на скорость с Mastercard. Сезон 2.</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -366,7 +365,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">20.05.21 - 20.06.21</div>
-                                  <p class="ipayplus-card__status">Вы не участвуете</p>
+                                  <p class="ipayplus-card__status">Не участвуете</p>
                                 </div>
                                 <h5>Квест 4. Оставайтесь всегда на связи.</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -382,7 +381,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">Скоро</div>
-                                  <p class="ipayplus-card__status">Вы не участвуете</p>
+                                  <p class="ipayplus-card__status">Не участвуете</p>
                                 </div>
                                 <h5>Оплачивайте на скорость с Mastercard. Сезон 2.</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -398,7 +397,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">Завершено</div>
-                                  <p class="ipayplus-card__status">Вы не учавствовали</p>
+                                  <p class="ipayplus-card__status">Не участвовали</p>
                                 </div>
                                 <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -414,7 +413,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">Завершено</div>
-                                  <p class="ipayplus-card__status ipayplus-card__status--in">Вы принимали участие</p>
+                                  <p class="ipayplus-card__status ipayplus-card__status--in">Не участвовали</p>
                                 </div>
                                 <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -423,12 +422,87 @@
                           </div>
   
                         </div>
-  
-                      </div><!-- all actions section -->
-  
-                      <!-- I'm in section -->
-                      <div class="tab-pane fade" id="ipayplus-in" role="tabpanel" aria-labelledby="ipayplus-in-tab">
-  
+                      </div><!-- desktop -->
+
+                      <!-- mobile -->
+                      <div class="d-md-none">
+
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Оплачивайте на скорость с Mastercard. Сезон 1.</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">29.03.21 - 04.04.21</div>
+                            <p class="ipayplus-card__status ipayplus-card__status--in">Участвуете</p>
+                          </div>
+                        </a>
+
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Оплачивайте на скорость с Mastercard. Сезон 2.</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">Скоро</div>
+                            <p class="ipayplus-card__status">Не участвуете</p>
+                          </div>
+                        </a>
+
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Квест 4. Оставайтесь всегда на связи.</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">20.05.21 - 20.06.21</div>
+                            <p class="ipayplus-card__status">Не участвуете</p>
+                          </div>
+                        </a>
+
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Оплачивайте на скорость с Mastercard. Сезон 4.</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">Скоро</div>
+                            <p class="ipayplus-card__status">Не участвуете</p>
+                          </div>
+                        </a>
+
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">02.02.21 - 13.02.21</div>
+                            <p class="ipayplus-card__status">Завершено</p>
+                          </div>
+                        </a>
+
+                      </div><!-- mobile -->
+
+                      <!-- pagination -->
+                      <div class="ipayplus-pagination mt-3 mt-md-0">
+                        <div class="pages-more text-center">
+                          <a href="#" class="btn btn-more">Показать еще</a>
+                        </div>
+                        <div class="pagination-wrapper">
+                          <ul class="pagination justify-content-center d-none d-sm-flex">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item"><a class="page-link next-link" href="#">»</a></li>
+                          </ul>
+                          <ul class="pagination justify-content-center d-sm-none">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">9</a></li>
+                            <li class="page-item">
+                              <a class="page-link next-link" href="#">»</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div><!-- pagination -->
+
+                    </div><!-- all actions section -->
+
+                    <!-- I'm in section -->
+                    <div class="tab-pane fade" id="ipayplus-in" role="tabpanel" aria-labelledby="ipayplus-in-tab">
+
+                      <!-- desktop -->
+                      <div class="d-none d-md-block">
                         <div class="row">
   
                           <div class="col-md-6 col-xl-4">
@@ -439,7 +513,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">29.03.21 - 04.04.21</div>
-                                  <p class="ipayplus-card__status ipayplus-card__status--in">Вы участвуете</p>
+                                  <p class="ipayplus-card__status ipayplus-card__status--in">Участвуете</p>
                                 </div>
                                 <h5>Оплачивайте на скорость с Mastercard. Сезон 1.</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -448,12 +522,55 @@
                           </div>
   
                         </div>
-  
-                      </div><!-- I'm in section -->
-  
-                      <!-- I'm out section -->
-                      <div class="tab-pane fade" id="ipayplus-out" role="tabpanel" aria-labelledby="ipayplus-out-tab">
-  
+                      </div><!-- desktop -->
+
+                      <!-- mobile -->
+                      <div class="d-md-none">
+
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Оплачивайте на скорость с Mastercard. Сезон 1.</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">29.03.21 - 04.04.21</div>
+                            <p class="ipayplus-card__status ipayplus-card__status--in">Участвуете</p>
+                          </div>
+                        </a>
+
+                      </div><!-- mobile -->
+
+                      <!-- pagination -->
+                      <div class="ipayplus-pagination mt-3 mt-md-0">
+                        <div class="pages-more text-center">
+                          <a href="#" class="btn btn-more">Показать еще</a>
+                        </div>
+                        <div class="pagination-wrapper">
+                          <ul class="pagination justify-content-center d-none d-sm-flex">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item"><a class="page-link next-link" href="#">»</a></li>
+                          </ul>
+                          <ul class="pagination justify-content-center d-sm-none">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">9</a></li>
+                            <li class="page-item">
+                              <a class="page-link next-link" href="#">»</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div><!-- pagination -->
+
+                    </div><!-- I'm in section -->
+
+                    <!-- I'm out section -->
+                    <div class="tab-pane fade" id="ipayplus-out" role="tabpanel" aria-labelledby="ipayplus-out-tab">
+
+                      <!-- desktop -->
+                      <div class="d-none d-md-block">
                         <div class="row">
   
                           <div class="col-md-6 col-xl-4">
@@ -464,7 +581,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">29.03.21 - 04.04.21</div>
-                                  <p class="ipayplus-card__status">Ви не приймаєте участь</p>
+                                  <p class="ipayplus-card__status">Не участвуете</p>
                                 </div>
                                 <h5>Оплачивайте на скорость с Mastercard. Сезон 2.</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -480,7 +597,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">20.05.21 - 20.06.21</div>
-                                  <p class="ipayplus-card__status">Вы не участвуете</p>
+                                  <p class="ipayplus-card__status">Не участвуете</p>
                                 </div>
                                 <h5>Квест 4. Оставайтесь всегда на связи.</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -496,7 +613,7 @@
                               <div class="ipayplus-card__content">
                                 <div class="ipayplus-card__time">
                                   <div class="ipayplus-card__period">Скоро</div>
-                                  <p class="ipayplus-card__status">Вы не участвуете</p>
+                                  <p class="ipayplus-card__status">Не участвуете</p>
                                 </div>
                                 <h5>Оплачивайте на скорость с Mastercard. Сезон 2.</h5>
                                 <a href="#" class="ipayplus-card__more">Подробнее</a>
@@ -505,96 +622,155 @@
                           </div>
   
                         </div>
-  
-                      </div><!-- I'm out section -->
+                      </div><!-- desktop -->
 
-                      <!-- Archive section -->
-                      <div class="tab-pane fade" id="ipayplus-archive" role="tabpanel" aria-labelledby="ipayplus-archive-tab">
-                        <div class="row">
+                      <!-- mobile -->
+                      <div class="d-md-none">
 
-                          <div class="col-md-6 col-xl-4">
-                            <div class="ipayplus-card">
-                              <div class="ipayplus-card__img">
-                                <img src="/img/fast-payment/ipay+/ipayplus-card-4.png" alt="Image">
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Оплачивайте на скорость с Mastercard. Сезон 2.</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">Скоро</div>
+                            <p class="ipayplus-card__status">Не участвуете</p>
+                          </div>
+                        </a>
+
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Квест 4. Оставайтесь всегда на связи.</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">20.05.21 - 20.06.21</div>
+                            <p class="ipayplus-card__status">Не участвуете</p>
+                          </div>
+                        </a>
+
+                        <a href="#" class="ipayplus-card-mobile">
+                          <h5>Оплачивайте на скорость с Mastercard. Сезон 4.</h5>
+                          <div class="ipayplus-card__time">
+                            <div class="ipayplus-card__period">Скоро</div>
+                            <p class="ipayplus-card__status">Не участвуете</p>
+                          </div>
+                        </a>
+
+                      </div><!-- mobile -->
+
+                      <!-- pagination -->
+                      <div class="ipayplus-pagination mt-3 mt-md-0">
+                        <div class="pages-more text-center">
+                          <a href="#" class="btn btn-more">Показать еще</a>
+                        </div>
+                        <div class="pagination-wrapper">
+                          <ul class="pagination justify-content-center d-none d-sm-flex">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item"><a class="page-link next-link" href="#">»</a></li>
+                          </ul>
+                          <ul class="pagination justify-content-center d-sm-none">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">9</a></li>
+                            <li class="page-item">
+                              <a class="page-link next-link" href="#">»</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div><!-- pagination -->
+
+                    </div><!-- I'm out section -->
+
+                    <!-- Archive section (desktop) -->
+                    <div class="tab-pane fade ipayplus-archive" id="ipayplus-archive" role="tabpanel" aria-labelledby="ipayplus-archive-tab">
+
+                      <div class="row">
+
+                        <div class="col-md-6 col-xl-4">
+                          <div class="ipayplus-card">
+                            <div class="ipayplus-card__img">
+                              <img src="/img/fast-payment/ipay+/ipayplus-card-4.png" alt="Image">
+                            </div>
+                            <div class="ipayplus-card__content">
+                              <div class="ipayplus-card__time">
+                                <div class="ipayplus-card__period">Завершено</div>
+                                <p class="ipayplus-card__status">Не участвовали</p>
                               </div>
-                              <div class="ipayplus-card__content">
-                                <div class="ipayplus-card__time">
-                                  <div class="ipayplus-card__period">Завершено</div>
-                                  <p class="ipayplus-card__status">Вы не учавствовали</p>
-                                </div>
-                                <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
-                                <a href="#" class="ipayplus-card__more">Подробнее</a>
-                              </div>
+                              <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
+                              <a href="#" class="ipayplus-card__more">Подробнее</a>
                             </div>
                           </div>
+                        </div>
 
-                          <div class="col-md-6 col-xl-4">
-                            <div class="ipayplus-card">
-                              <div class="ipayplus-card__img">
-                                <img src="/img/fast-payment/ipay+/ipayplus-card-4.png" alt="Image">
+                        <div class="col-md-6 col-xl-4">
+                          <div class="ipayplus-card">
+                            <div class="ipayplus-card__img">
+                              <img src="/img/fast-payment/ipay+/ipayplus-card-4.png" alt="Image">
+                            </div>
+                            <div class="ipayplus-card__content">
+                              <div class="ipayplus-card__time">
+                                <div class="ipayplus-card__period">Завершено</div>
+                                <p class="ipayplus-card__status ipayplus-card__status--in">Участвовали</p>
                               </div>
-                              <div class="ipayplus-card__content">
-                                <div class="ipayplus-card__time">
-                                  <div class="ipayplus-card__period">Завершено</div>
-                                  <p class="ipayplus-card__status ipayplus-card__status--in">Вы принимали участие</p>
-                                </div>
-                                <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
-                                <a href="#" class="ipayplus-card__more">Подробнее</a>
-                              </div>
+                              <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
+                              <a href="#" class="ipayplus-card__more">Подробнее</a>
                             </div>
                           </div>
+                        </div>
 
-                        </div> 
-                      </div><!-- Archive section -->
-  
-                    </div>
+                      </div> 
 
-                  </div><!-- desktop section -->
+                      <!-- pagination -->
+                      <div class="ipayplus-pagination mt-3 mt-md-0">
+                        <div class="pages-more text-center">
+                          <a href="#" class="btn btn-more">Показать еще</a>
+                        </div>
+                      </div><!-- pagination -->
 
-                  <!-- mobile section -->
+                    </div><!-- Archive section (desktop) -->
+
+                  </div>
+
+                  <!-- Archive section (mobile) -->
                   <div class="d-md-none">
 
-                    <a href="#" class="ipayplus-card-mobile">
-                      <h5>Оплачивайте на скорость с Mastercard. Сезон 1.</h5>
-                      <div class="ipayplus-card__time">
-                        <div class="ipayplus-card__period">29.03.21 - 04.04.21</div>
-                        <p class="ipayplus-card__status ipayplus-card__status--in">Вы участвуете</p>
-                      </div>
+                    <a class="ipayplus-archive-mobile" data-toggle="collapse" href="#ipayplus-archive-mobile" role="button" aria-expanded="false" aria-controls="ipayplus-archive-mobile">
+                      <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5 16.5H3.5C2.4 16.5 1.5 15.6 1.5 14.5V8.5H8.5V9.5C8.5 10.6 9.4 11.5 10.5 11.5H13.5C14.6 11.5 15.5 10.6 15.5 9.5V8.5H22.5V14.5C22.5 15.6 21.6 16.5 20.5 16.5Z" stroke="#172A3A" stroke-width="1.08333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1.5 8.5L4.92 2.51C5.28 1.88 5.94 1.5 6.66 1.5H17.34C18.06 1.5 18.72 1.88 19.08 2.51L22.5 8.5" stroke="#172A3A" stroke-width="1.08333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <h4>Архив</h4>
                     </a>
 
-                    <a href="#" class="ipayplus-card-mobile">
-                      <h5>Оплачивайте на скорость с Mastercard. Сезон 2.</h5>
-                      <div class="ipayplus-card__time">
-                        <div class="ipayplus-card__period">Скоро</div>
-                        <p class="ipayplus-card__status">Вы не участвуете</p>
-                      </div>
-                    </a>
+                    <div class="collapse" id="ipayplus-archive-mobile">
 
-                    <a href="#" class="ipayplus-card-mobile">
-                      <h5>Квест 4. Оставайтесь всегда на связи.</h5>
-                      <div class="ipayplus-card__time">
-                        <div class="ipayplus-card__period">20.05.21 - 20.06.21</div>
-                        <p class="ipayplus-card__status">Вы не участвуете</p>
-                      </div>
-                    </a>
+                      <a href="#" class="ipayplus-card-mobile">
+                        <h5>Оплачивайте на скорость с Mastercard. Сезон 4.</h5>
+                        <div class="ipayplus-card__time">
+                          <div class="ipayplus-card__period">Скоро</div>
+                          <p class="ipayplus-card__status">Не участвуете</p>
+                        </div>
+                      </a>
 
-                    <a href="#" class="ipayplus-card-mobile">
-                      <h5>Оплачивайте на скорость с Mastercard. Сезон 4.</h5>
-                      <div class="ipayplus-card__time">
-                        <div class="ipayplus-card__period">Скоро</div>
-                        <p class="ipayplus-card__status">Вы не участвуете</p>
-                      </div>
-                    </a>
+                      <a href="#" class="ipayplus-card-mobile">
+                        <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
+                        <div class="ipayplus-card__time">
+                          <div class="ipayplus-card__period">02.02.21 - 13.02.21</div>
+                          <p class="ipayplus-card__status">Завершено</p>
+                        </div>
+                      </a>
 
-                    <a href="#" class="ipayplus-card-mobile">
-                      <h5>Відправляйте віртуальні валентинки і вигравайте романтичні призи</h5>
-                      <div class="ipayplus-card__time">
-                        <div class="ipayplus-card__period">02.02.21 - 13.02.21</div>
-                        <p class="ipayplus-card__status">Завершено</p>
-                      </div>
-                    </a>
+                      <!-- pagination -->
+                      <div class="ipayplus-pagination mt-3 mt-md-0">
+                        <div class="pages-more text-center">
+                          <a href="#" class="btn btn-more">Показать еще</a>
+                        </div>
+                      </div><!-- pagination -->
 
-                  </div><!-- mobile section -->
+                    </div>
+
+                  </div><!-- Archive section (mobile) -->
 
                 </div><!-- account ipay+ widget -->                
                   

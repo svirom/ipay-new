@@ -1,0 +1,250 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the payment method p2p masterpass widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.payment-method {
+  &__radio {
+    &--first {
+      [aria-expanded="false"] > .payment-card {
+        margin-bottom: 0.375rem;
+      }
+    }
+
+    &--last {
+      padding-top: 0.875rem;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    padding-left: 0;
+    padding-bottom: 0.875rem;
+  
+    &-text {
+      position: relative;
+      padding-left: 1.75rem;
+      color: $heading-color;
+      vertical-align: middle;
+      cursor: default;
+    
+      &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        pointer-events: none;
+        background-color: #ffffff;
+        border: 2px solid $middle-grey;
+        border-radius: 50%;      
+      }
+    }
+  
+    &[aria-expanded="true"] {
+      .payment-method__label-text {      
+        &::before {
+          border: 5px solid $btn-red;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    [aria-expanded="true"] {
+      .payment-card {
+        &--active {
+          &::after {
+            @include transform(rotate(180deg));
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    top: auto !important;
+    @include transform(none !important);
+    padding: 0;
+    border: 0;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 20px $card-shadow;
+
+    .payment-card {
+      border-bottom: 1px solid $middle-grey;
+      border-radius: 0;
+      box-shadow: none;
+
+      &:first-of-type {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      &:last-of-type {
+        border-bottom: 0;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+
+      &--active {
+        &::after {
+          width: 1.875rem;
+          background-image: url("data:image/svg+xml,%3Csvg width='32' height='20' viewBox='0 0 32 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.27344 10.2408L9.17966 17.8638C10.3733 19.0147 12.3266 19.0147 13.5203 17.8638L30.728 1.27246' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-size: 1.875rem;
+        }
+      }
+    }
+  }
+
+  @include until($sm) {
+    &__radio {
+      &--last {
+        .payment-method__label {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.payment-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.5rem;
+  border-radius: $border-radius;
+  box-shadow: 0px 4px 20px $card-shadow;
+  cursor: pointer;
+
+  @include until($sm) {
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+  }
+
+  &__header {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 9.75rem;
+    height: 6.875rem;
+    padding: 1.0rem 0.5rem;
+    border-radius: 0.375rem;
+    background-color: $light-grey;
+
+    @include until($sm) {
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  &__bank, &__type {
+    display: flex;
+
+    @include until($sm) {
+      img {
+        max-height: 2.75rem;
+      }
+    }
+  }
+
+  &__bank {
+    align-items: flex-end;
+    order: 1;
+
+    img {
+      max-height: 1.125rem;
+    }
+
+    @include until($sm) {
+      align-items: center;
+      order: 0;
+    }
+  }
+
+  &__type {
+    align-items: flex-start;
+    flex-shrink: 0;
+    justify-content: flex-end;
+
+    img {
+      max-height: 1.75rem;
+    }
+
+    @include until($sm) {
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+
+      img {
+        max-height: 1.25rem;
+      }
+    }
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 1.9rem;
+
+    @include until($sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-left: 0;
+      padding-top: 1rem;
+    }
+  }
+
+  &__number {
+    font-family: $text-font;
+  }
+
+  &__purpose {
+    margin-bottom: 0.25rem;
+    @include font(0.875rem, 400, 1.15);
+    color: $main-blue;
+  }
+
+  &__card {
+    @include font(1.1875rem, 400, 1.15);
+  }
+
+  &--active {
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 1.25rem;
+      height: 100%;
+      top: 0;
+      right: 0.875rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      @include transition(all, 0.3s);
+      z-index: 10;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .payment-method--p2p .payment-card__body {
+    padding-left: 0.5rem;
+  }
+}

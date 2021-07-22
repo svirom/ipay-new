@@ -1,5 +1,5 @@
 .ipayplus-fastPayment {
-  padding-top: 1.5rem;
+  padding-top: 0.75rem;
 }
 
 .ipayplus-fastPayment .fastPayment-rate__row.no-collapse {
@@ -30,13 +30,17 @@
 }
 
 .ipayplus-fastPayment__rating-week, .ipayplus-fastPayment__rating-month {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
 }
 
 .ipayplus-fastPayment__rating-week {
   padding-right: 0.78125rem;
+}
+
+.ipayplus-fastPayment__rating-week--finished {
+  padding-right: 0;
 }
 
 .ipayplus-fastPayment__rating-month {
@@ -64,19 +68,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 2rem;
   padding: 0 0.875rem;
   border-radius: 0.5rem;
   background-color: #FFE7E6;
+}
+
+.ipayplus-fastPayment__rating-record span {
+  line-height: 1.5;
 }
 
 .ipayplus-fastPayment__rating-record--in {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  height: 2rem;
   padding: 0.375rem 0.875rem 0.375rem 1rem;
   background-color: #E9FCF3;
 }
@@ -84,10 +89,59 @@
 .ipayplus-fastPayment__rating-time {
   margin-left: 1.125rem;
   padding-left: 1.625rem;
-  padding: 0.3125rem 0 0.25rem 1.625rem;
+  padding: 0 0 0 1.625rem;
   font-size: 1.125rem;
   font-weight: 700;
-  background: url("data:image/svg+xml,%3Csvg width='20' height='23' viewBox='0 0 20 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 21.5C14.1421 21.5 17.5 18.1421 17.5 14C17.5 9.85786 14.1421 6.5 10 6.5C5.85786 6.5 2.5 9.85786 2.5 14C2.5 18.1421 5.85786 21.5 10 21.5Z' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 4.5C10.8284 4.5 11.5 3.82843 11.5 3C11.5 2.17157 10.8284 1.5 10 1.5C9.17157 1.5 8.5 2.17157 8.5 3C8.5 3.82843 9.17157 4.5 10 4.5Z' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 14L13.5 17.5' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 5.5L1.5 7.5' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 5.5L18.5 7.5' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 4.5V6.5' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left top 3px no-repeat;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='23' viewBox='0 0 20 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 21.5C14.1421 21.5 17.5 18.1421 17.5 14C17.5 9.85786 14.1421 6.5 10 6.5C5.85786 6.5 2.5 9.85786 2.5 14C2.5 18.1421 5.85786 21.5 10 21.5Z' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 4.5C10.8284 4.5 11.5 3.82843 11.5 3C11.5 2.17157 10.8284 1.5 10 1.5C9.17157 1.5 8.5 2.17157 8.5 3C8.5 3.82843 9.17157 4.5 10 4.5Z' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 14L13.5 17.5' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 5.5L1.5 7.5' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 5.5L18.5 7.5' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 4.5V6.5' stroke='%23E84F35' stroke-width='1.3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left top 0px no-repeat;
+}
+
+.ipayplus-fastPayment__alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #FEF7E0;
+}
+
+.ipayplus-fastPayment__alert-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.25rem;
+}
+
+.ipayplus-fastPayment__alert-img img {
+  max-width: 100%;
+}
+
+.ipayplus-fastPayment__rating-empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 303px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
 }
 
 .ipayplus-fastPayment .table.fastPayment-table {
@@ -123,7 +177,7 @@
 
 .ipayplus-fastPayment__leaderboard {
   padding-top: 0.75rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.25rem;
 }
 
 .ipayplus-fastPayment__leaderboard .fastPayment-rate__row-img {
@@ -157,7 +211,6 @@
 }
 
 .ipayplus-fastPayment__winners {
-  padding-top: 0.375rem;
   padding-bottom: 2rem;
 }
 
@@ -169,8 +222,31 @@
   font-size: 1rem;
 }
 
+.ipayplus-fastPayment__winners-period {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 1.125rem;
+}
+
 .ipayplus-fastPayment__winners-period h5 {
   font-weight: 400;
+}
+
+.ipayplus-fastPayment__winners-period a span {
+  margin-right: 0.25rem;
+  color: #7C9CAC;
+  vertical-align: middle;
+}
+
+.ipayplus-fastPayment__winners-period a:hover {
+  text-decoration: none;
 }
 
 .ipayplus-fastPayment__winners-card {
@@ -260,17 +336,57 @@
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
   }
+  .ipayplus-fastPayment__rating-week--finished .ipayplus-fastPayment__rating-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+  }
+  .ipayplus-fastPayment__rating-week--finished .ipayplus-fastPayment__rating-record {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 2.5rem;
+    margin-top: 0.625rem;
+  }
+  .ipayplus-fastPayment__rating-empty {
+    height: 190px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
   .ipayplus-fastPayment__leaderboard {
     padding-bottom: 1.375rem;
   }
   .ipayplus-fastPayment__winners {
     padding-bottom: 1.375rem;
   }
+  .ipayplus-fastPayment__winners-period {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 575px) {
   .ipayplus-fastPayment {
     padding-top: 0.75rem;
+  }
+  .ipayplus-fastPayment__alert {
+    padding: 1rem;
+  }
+  .ipayplus-fastPayment__alert-img {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .ipayplus-fastPayment__empty img {
+    max-width: 128px;
   }
   .ipayplus-fastPayment .table.fastPayment-table {
     font-size: 0.875rem;

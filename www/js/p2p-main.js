@@ -29,4 +29,13 @@ $(document).ready(function() {
   $("#bonus-tooltip").popover(bonusesOptions);
   $("#invoice-popover").popover(invoiceOptions);
 
+  // p2p masterpass always one collapsed element open
+  $('.payment-method--p2p [data-toggle=collapse]').on('click', function (e) {
+    e.preventDefault();
+    if(!$(this).hasClass('collapsed')){
+      e.stopPropagation();
+      return false;
+    }
+  })
+
 })
