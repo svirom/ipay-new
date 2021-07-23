@@ -92,6 +92,14 @@
   padding-bottom: 0.5rem;
 }
 
+.homepage-services-form form input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
 @media screen and (max-width: 575px) {
   .homepage-services-form form {
     -ms-flex-wrap: wrap;

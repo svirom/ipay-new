@@ -1,0 +1,257 @@
+// -----------------------------------------------------------------
+// This file contains all styles related to the landing biber page
+// -----------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.viber-wrapper {
+  // padding-top: 1.5rem;
+  // padding-bottom: 3.75rem;
+
+  h2 {
+    // line-height: 1.35;
+  }
+
+  @include until($md) {
+    h2 {
+      // font-size: 1.5rem;
+    }
+
+    h3 {
+      // font-size: 1.25rem;
+    }
+  }
+
+  @include until($sm) {
+    // padding-top: 0.875rem;
+    // padding-bottom: 2.5rem;
+  }
+}
+
+.viber-header {
+  padding-top: 0.375rem;
+  padding-bottom: 1.25rem;
+  background: linear-gradient(185.55deg, #655CAC 35.75%, #322A78 95.57%);
+
+  h1, p, a {
+    color: #ffffff;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .btn-link.btn-back {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='27' viewBox='0 0 26 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5693 6.88428L9.24958 13.204' stroke='%23FFFFFF' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.24902 13.2041L15.5688 19.5238' stroke='%23FFFFFF' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
+  &__left {
+    align-self: center;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    p {
+      font-size: 1.25rem;
+    }
+
+    h1 ~ p:last-of-type {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    &::before, &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    &::before {
+      width: 33.75rem;
+      height: 33.75rem;
+      border: 2px solid #5C51B4;
+    }
+
+    &::after {
+      width: 27.25rem;
+      height: 27.25rem;
+      border: 6px solid #786DD1;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+      max-width: 100%;
+      z-index: 1;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20.375rem;
+      height: 20.375rem;
+      border-radius: 50%;
+      background-color: $btn-red;
+    }
+  }
+
+  &__partner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__qr-wrapper {
+    position: relative;
+    flex: 0 0 15.125rem;
+    height: 100%;
+    padding: 1.8125rem;
+    border: 1px solid #5C51B4;
+    border-radius: 0.5rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 13.125rem;
+      height: 13.125rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #7F73DA;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__qr {
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__logo {
+    flex: 1 0 auto;
+    padding-left: 1.625rem;
+
+    p {
+      margin-top: 0.75rem;
+      margin-bottom: 0.125rem;
+    }
+
+    .btn-viber {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      color: $heading-color;
+      background-color: #ffffff;
+    }
+  }
+
+  @include until($lg) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.375rem;
+
+    &__qr-wrapper {
+      flex-basis: 9.5rem;
+      padding: 1.125rem;
+      border-radius: 0.3125rem;
+      
+      &::before {
+        width: 8.25rem;
+        height: 8.25rem;
+        border-width: 2px;
+        border-radius: 0.3125rem;
+      }
+    }
+
+    &__qr {
+      padding: 0.5rem;
+      border-radius: 0.3125rem;
+    }
+
+    &__img-wrapper {
+      &::before {
+        width: 20.625rem;
+        height: 20.625rem;
+        border-width: 1px;
+      }
+
+      &::after {
+        width: 16.75rem;
+        height: 16.75rem;
+        border-width: 4px;
+      }
+    }
+
+    &__img {
+      padding: 0 1rem;
+
+      img {
+        max-width: 15.75rem;
+      }
+
+      &::before {
+        width: 12.5rem;
+        height: 12.5rem;
+      }
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1.5rem;
+
+    &__right {
+      overflow: hidden;
+    }
+
+    &__partner {
+      padding-top: 0.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    &__qr-wrapper {
+      display: none;
+    }
+    
+    &__logo {
+      padding-left: 0;
+      text-align: center;
+
+      p {
+        margin-top: 0.625rem;
+        font-size: 0.8125rem;
+      }
+    }
+
+    &__logo-ipay {
+      width: 4.875rem;
+      margin-top: 1rem;
+    }
+
+    &__logo-viber {
+      width: 8.75rem;
+    }
+  }
+
+  @include until($sm) {
+  }
+}

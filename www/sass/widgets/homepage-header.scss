@@ -81,6 +81,14 @@
     align-items: center;
     padding-bottom: 0.5rem;
 
+    input::-webkit-contacts-auto-fill-button {
+      visibility: hidden;
+      display: none !important;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+    }
+
     @include until($sm) {
       flex-wrap: wrap;
     }
