@@ -1,3 +1,7 @@
+.viber-wrapper p, .viber-wrapper span {
+  color: #172A3A;
+}
+
 .viber-header {
   padding-top: 0.375rem;
   padding-bottom: 1.25rem;
@@ -229,6 +233,101 @@
   }
   .viber-header__logo-viber {
     width: 8.75rem;
+  }
+}
+
+.viber-main {
+  padding-top: 4.5rem;
+  text-align: center;
+}
+
+.viber-main h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3125rem;
+}
+
+.viber-bills {
+  margin-bottom: 1.625rem;
+}
+
+.viber-bill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.625rem;
+  margin-bottom: 1.875rem;
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  border-radius: 0.4375rem;
+}
+
+.viber-bill span {
+  padding-left: 0.5rem;
+  font-weight: 500;
+}
+
+.viber-cards {
+  padding-bottom: 3.5rem;
+  border-bottom: 2px solid #DEE7F3;
+}
+
+.viber-card {
+  position: relative;
+  padding-top: 5.5rem;
+}
+
+.viber-card img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (max-width: 991px) {
+  .viber-main {
+    padding-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .viber-main h2 {
+    text-align: left;
+  }
+  .viber-bills {
+    margin-bottom: 1.5rem;
+  }
+  .viber-bill {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+  .viber-bill span {
+    padding-left: 1.375rem;
+  }
+  .viber-cards {
+    padding-bottom: 2.5rem;
+  }
+  .viber-card {
+    margin-bottom: 2rem;
+    padding-top: 0;
+    padding-left: 3rem;
+    text-align: left;
+  }
+  .viber-card img {
+    width: 2.5rem;
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 /*# sourceMappingURL=landing-viber.css.map */

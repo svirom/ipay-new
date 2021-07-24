@@ -15,6 +15,10 @@
     // line-height: 1.35;
   }
 
+  p, span {
+    color: $heading-color;
+  }
+
   @include until($md) {
     h2 {
       // font-size: 1.5rem;
@@ -257,5 +261,98 @@
   }
 
   @include until($sm) {
+  }
+}
+
+.viber-main {
+  padding-top: 4.5rem;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3125rem;
+  }
+}
+
+.viber-bills {
+  margin-bottom: 1.625rem;
+}
+
+
+.viber-bill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.625rem;
+  margin-bottom: 1.875rem;
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  border-radius: 0.4375rem;
+
+  span {
+    padding-left: 0.5rem;
+    font-weight: 500;
+  }
+}
+
+.viber-cards {
+  padding-bottom: 3.5rem;
+  border-bottom: 2px solid $middle-grey;
+}
+
+.viber-card {
+  position: relative;
+  padding-top: 5.5rem;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@include until($lg) {
+  .viber-main {
+    padding-top: 2.5rem;
+  }
+}
+
+@include until($md) {
+  .viber-main {
+    h2 {
+      text-align: left;
+    }
+  }
+
+  .viber-bills {
+    margin-bottom: 1.5rem;
+  }
+
+  .viber-bill {
+    justify-content: flex-start;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+
+    span {
+      padding-left: 1.375rem;
+    }
+  }
+
+  .viber-cards {
+    padding-bottom: 2.5rem;
+  }
+
+  .viber-card {
+    margin-bottom: 2rem;
+    padding-top: 0;
+    padding-left: 3rem;
+    text-align: left;
+
+    img {
+      width: 2.5rem;
+      left: 0;
+      transform: none;
+    }
   }
 }
