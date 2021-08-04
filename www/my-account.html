@@ -299,6 +299,7 @@
                   <div class="row">
 
                     <div class="col-12 mt-2 mb-3">
+
                       <div class="account-title mb-2">
                         <span class="account-title__img account-title__img--morning"></span>
                         <!-- <span class="account-title__img account-title__img--day"></span> -->
@@ -306,12 +307,62 @@
                         <!-- <span class="account-title__img account-title__img--sunset"></span> -->
                         <h1>Доброе утро, <strong>Альберт!</strong></h1>
                       </div>
+
+                      <!-- acount main alerts -->
+                      <div class="account-alerts" id="account-alerts-widget">
+
+                        <p class="account-subtitle mb-2">Интересное сегодня</p>
+
+                        <a href="#" class="alert alert-primary account-alert alert-dismissible fade show" role="alert">
+                          <div class="account-alert__img">
+                            <img src="/img/account/account-alerts/ipay-introduction.svg" alt="Icon">
+                          </div>
+                          <div class="account-alert__content">
+                            <p class="account-alert__title">Квест: Знакомство с iPay+</p>
+                            <p class="account-alert__text">Новый раздел iPay+, интересные акции, крутые призы.</p>
+                            <span>Подробнее</span>
+                          </div>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </a>
+
+                        <a href="#" class="alert alert-warning account-alert alert-dismissible fade show" role="alert">
+                          <div class="account-alert__img">
+                            <img src="/img/account/account-alerts/ipay-addressee.svg" alt="Icon">
+                          </div>
+                          <div class="account-alert__content">
+                            <p class="account-alert__title">Счастливый адресат</p>
+                            <p class="account-alert__text">Сообщайте получателю бесплатно, что деньги уже на его карте.</p>
+                            <span>Подробнее</span>
+                          </div>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </a>
+
+                        <a href="#" class="alert alert-success account-alert alert-dismissible fade show" role="alert">
+                          <div class="account-alert__img">
+                            <img src="/img/account/account-alerts/ipay-connection.svg" alt="Icon">
+                          </div>
+                          <div class="account-alert__content">
+                            <p class="account-alert__title">Квест: Всегда на связи!</p>
+                            <p class="account-alert__text">Онлайн всегда и везде - новый квест месяца.</p>
+                            <span>Подробнее</span>
+                          </div>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </a>
+                      </div><!-- acount main alerts -->
+
                       <p class="account-subtitle">Что сегодня будем оплачивать?</p>
+
                     </div>
 
                     <div class="col-12">
                       <div class="form-search">
-                        <h3 class="form-search__title">Поиск</h3>
+                        <!-- <h3 class="form-search__title">Поиск</h3> -->
                         <form action="">
                           <div class="form-group">
                             <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">

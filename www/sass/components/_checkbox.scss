@@ -246,4 +246,24 @@
       }
     }
   }
+
+  &.radio-regular {
+    .checkbox-input {
+      &:checked {
+        & ~ .btn-label {
+          border-color: $heading-color;
+          background-color: $heading-color;
+        }
+      }
+    }
+
+    .btn-label {
+      margin-bottom: 0;
+
+      span {
+        padding: 0.625rem 0.375rem;
+        @include font(1.125rem, 700, 1.667);
+      }
+    }
+  }
 }

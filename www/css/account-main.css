@@ -164,12 +164,120 @@
 .account-subtitle {
   margin-bottom: 0;
   font-size: 1.25rem;
-  color: #7C9CAC;
 }
 
 @media screen and (max-width: 767px) {
   .account-subtitle {
     font-size: 1rem;
+  }
+}
+
+.account-alerts {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.alert.account-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0.625rem 2.5rem 0.625rem 0.625rem;
+}
+
+.alert.account-alert:hover {
+  text-decoration: none;
+}
+
+.alert.account-alert .account-alert__img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2.875rem;
+  height: 2.875rem;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+
+.alert.account-alert .account-alert__img img {
+  max-width: 100%;
+}
+
+.alert.account-alert .account-alert__content {
+  padding-left: 0.625rem;
+}
+
+.alert.account-alert .account-alert__content p {
+  margin-bottom: 0.25rem;
+  color: #172A3A;
+}
+
+.alert.account-alert .account-alert__content p.account-alert__text {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.alert.account-alert .account-alert__content span {
+  color: #172A3A;
+  text-decoration: underline;
+}
+
+.alert.account-alert .account-alert__title {
+  font-weight: 700;
+}
+
+.alert.account-alert.alert-primary {
+  border-color: #F0F8FF;
+  background-color: #F0F8FF;
+}
+
+.alert.account-alert.alert-primary .account-alert__img {
+  background-color: #CFE9FF;
+}
+
+.alert.account-alert.alert-primary .account-alert__title {
+  color: #64B3F7;
+}
+
+.alert.account-alert.alert-primary .close span {
+  color: #64B3F7;
+}
+
+.alert.account-alert.alert-primary .close:hover span {
+  background-color: #CFE9FF;
+}
+
+.alert.account-alert.alert-warning .account-alert__img {
+  background-color: #FFD578;
+}
+
+.alert.account-alert.alert-warning .account-alert__title {
+  color: #DE7800;
+}
+
+.alert.account-alert.alert-success .account-alert__img {
+  background-color: #D5F2EA;
+}
+
+.alert.account-alert.alert-success .account-alert__title {
+  color: #0C6858;
+}
+
+@media screen and (max-width: 767px) {
+  .account-alerts {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+  }
+  .alert.account-alert .account-alert__content p.account-alert__text {
+    display: none;
   }
 }
 /*# sourceMappingURL=account-main.css.map */

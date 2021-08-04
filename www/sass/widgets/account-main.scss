@@ -170,9 +170,123 @@
 .account-subtitle {
   margin-bottom: 0;
   font-size: 1.25rem;
-  color: $main-blue;
 
   @include until($md) {
     font-size: 1rem;
+  }
+}
+
+.account-alerts {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.alert {
+  &.account-alert {
+    display: flex;
+    margin-bottom: 0.5rem;
+    padding: 0.625rem 2.5rem 0.625rem 0.625rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .account-alert__img {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.875rem;
+      height: 2.875rem;
+      padding: 0.25rem;
+      border-radius: 50%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  
+    .account-alert__content {
+      padding-left: 0.625rem;
+      
+      p {
+        margin-bottom: 0.25rem;
+        color: $heading-color;
+
+        &.account-alert__text {
+          display: inline-block;
+          margin-bottom: 0;
+        }
+      }
+
+      span {
+        color: $heading-color;
+        text-decoration: underline;
+      }
+    }
+
+    .account-alert__title {
+      font-weight: 700;
+    }
+
+    &.alert-primary {
+      border-color: #F0F8FF;
+      background-color: #F0F8FF;
+
+      .account-alert__img {
+        background-color: #CFE9FF;
+      }
+
+      .account-alert__title {
+        color: $blue;
+      }
+
+      .close span {
+        color: $blue;
+      }
+
+      .close:hover span {
+        background-color: #CFE9FF;
+      }
+    }
+
+    &.alert-warning {
+      .account-alert__img {
+        background-color: $yellow;
+      }
+
+      .account-alert__title {
+        color: $dark-orange;
+      }
+    }
+
+    &.alert-success {
+      .account-alert__img {
+        background-color: $success;
+      }
+
+      .account-alert__title {
+        color: $dark-green;
+      }
+    }
+  }
+}
+
+@include until($md) {
+  .account-alerts {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .alert {
+    &.account-alert {
+      .account-alert__content {
+        p {
+          &.account-alert__text {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

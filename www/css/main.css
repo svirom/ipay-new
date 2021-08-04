@@ -1300,6 +1300,22 @@ label {
   background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+.radio-control.radio-regular .checkbox-input:checked ~ .btn-label {
+  border-color: #172A3A;
+  background-color: #172A3A;
+}
+
+.radio-control.radio-regular .btn-label {
+  margin-bottom: 0;
+}
+
+.radio-control.radio-regular .btn-label span {
+  padding: 0.625rem 0.375rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.667;
+}
+
 .form-textarea {
   padding: 1.75rem 1rem 0.5rem;
   border: 2px solid #DEE7F3;
@@ -4008,5 +4024,9 @@ label {
   .main-content {
     padding-top: 1rem;
   }
+}
+
+.bill-main--step1 {
+  border-bottom: 2px solid #DEE7F3;
 }
 /*# sourceMappingURL=main.css.map */

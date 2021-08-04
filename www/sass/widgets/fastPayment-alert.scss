@@ -8,9 +8,11 @@
 @import '../abstracts/mixins';
 
 .alert-fastPayment {
-  padding: 0.75rem 1.5rem 1.5rem 4.25rem;
-  background-repeat: no-repeat;
-  background-position: left 0.625rem top 0.75rem;
+  &.alert {
+    padding: 0.75rem 1.5rem 1.5rem 4.25rem;
+    background-repeat: no-repeat;
+    background-position: left 0.625rem top 0.75rem;
+  }
 
   &-promo {
     background-image: url('../img/fast-payment/alert/fastPayment-alert-promo@2x.png');

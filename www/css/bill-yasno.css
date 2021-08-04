@@ -1,0 +1,228 @@
+.bill-yasno__help {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.bill-yasno__help-link {
+  text-decoration: underline;
+}
+
+.bill-yasno__help-collapse {
+  padding-top: 0.75rem;
+  overflow: hidden;
+}
+
+.bill-yasno__tariff-pills .btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bill-yasno__tariff-pills .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.bill-yasno__counter-row {
+  margin-top: 1rem;
+  border-bottom: 2px dashed #DEE7F3;
+}
+
+.bill-yasno__counter-result {
+  padding-top: 0.25rem;
+}
+
+.bill-yasno__counter-result p, .bill-yasno__counter-result span {
+  color: #000000;
+}
+
+.bill-yasno__counter-result span {
+  font-weight: 700;
+}
+
+.bill-yasno__subvention .checkbox-switch {
+  padding-left: 4.125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.bill-yasno__subvention .checkbox-label {
+  padding-top: 0.3125rem;
+}
+
+.bill-yasno__subvention .checkbox-switch .checkbox-label::before {
+  top: 0;
+  left: -4.125rem;
+  width: 3.625rem;
+  height: 1.875rem;
+  border-radius: 0.9375rem;
+}
+
+.bill-yasno__subvention .checkbox-switch .checkbox-label::after {
+  top: 0.25rem;
+  left: -3.875rem;
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 50%;
+}
+
+.bill-yasno__subvention .checkbox-switch .checkbox-input:checked ~ .checkbox-label::after {
+  -webkit-transform: translateX(1.75rem);
+          transform: translateX(1.75rem);
+}
+
+.bill-yasno__card {
+  border: 1px solid #DEE7F3;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.bill-yasno__card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 1.25rem 1rem;
+  background-color: #F0F5FA;
+  cursor: pointer;
+}
+
+.bill-yasno__card-row span {
+  color: #172A3A;
+}
+
+.bill-yasno__card-row::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 1.125rem;
+  right: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.bill-yasno__card-row[aria-expanded="true"]::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.bill-yasno__card-row[aria-expanded="true"] .bill-yasno__card-more {
+  display: none;
+}
+
+.bill-yasno__card-more {
+  padding-right: 2rem;
+}
+
+.bill-yasno__card-more span:first-child {
+  font-weight: 700;
+}
+
+.bill-yasno__card-more span:last-child {
+  padding-left: 0.25rem;
+  color: #E84F35;
+  text-decoration: underline;
+}
+
+.bill-yasno__table .table {
+  margin-bottom: 0;
+}
+
+.bill-yasno__table .table thead th, .bill-yasno__table .table tr {
+  border-bottom: 0;
+}
+
+.bill-yasno__table .table thead tr {
+  background-color: #F0F5FA;
+}
+
+.bill-yasno__table .table td, .bill-yasno__table .table th {
+  border-top: 1px solid #DEE7F3;
+  font-size: 1rem;
+  color: #172A3A;
+  text-align: center;
+  font-weight: 400;
+}
+
+.bill-yasno__table .table td:first-child, .bill-yasno__table .table th:first-child {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.bill-yasno__table .table td:last-child, .bill-yasno__table .table th:last-child {
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+.bill-yasno__table .table td:last-child {
+  font-weight: 700;
+}
+
+.bill-yasno__amount {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px dashed #DEE7F3;
+}
+
+@media screen and (max-width: 575px) {
+  .bill-yasno__counter-row:first-of-type {
+    margin-top: 0;
+  }
+  .bill-yasno__card-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1.25rem 0.875rem;
+  }
+  .bill-yasno__card-row::after {
+    right: 1.125rem;
+  }
+  .bill-yasno__card-more {
+    margin: 1.125rem -0.875rem 0;
+    padding: 1.0625rem 0.875rem 0;
+    border-top: 1px solid #DEE7F3;
+  }
+  .bill-yasno .p-left-0 {
+    padding-left: 0;
+  }
+}
+
+/* mobile table */
+.table-yasno__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.75rem;
+  padding: 0.5rem 0.875rem;
+  border-top: 1px solid #DEE7F3;
+}
+
+.table-yasno__row span {
+  color: #172A3A;
+}
+
+.table-yasno__row span:first-child {
+  padding-right: 1.5rem;
+}
+
+.table-yasno__row--title {
+  background-color: #F0F5FA;
+}
+
+.table-yasno__row:last-of-type span:last-child {
+  font-weight: 700;
+}
+/*# sourceMappingURL=bill-yasno.css.map */

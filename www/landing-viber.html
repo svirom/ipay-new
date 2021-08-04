@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/landing-viber.css">
 
@@ -175,184 +176,209 @@
       </div>
     </header><!-- header -->
 
-    <!-- landing viber wrapper -->
-    <div class="viber-wrapper">
-
-      <!-- viber header -->
-      <div class="viber-header">
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+      
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
           <div class="row">
-
-            <div class="col mb-3 d-md-none">
-              <a href="#" class="btn btn-link btn-back">Главная</a>
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Платежи iPay в Viber</span>
+                </li>
+              </ul>
             </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
 
-            <div class="col-md-6 viber-header__left">
-              <div class="viber-header__content">
-                <h1>Платежи iPay.ua теперь в Viber!</h1>
-                <p>Официальный чат-бот iPay.ua позволяет Вам в любое время и в любом месте оплатить услуги через iPay.ua в Viber</p>
-                <p class="d-none d-md-block"><strong>Сканируй QR код и переходи в ViberBot iPay.ua</strong></p>
-                <div class="viber-header__partner">
-                  <div class="viber-header__qr-wrapper">
-                    <div class="viber-header__qr">
-                      <img src="/img/landing-viber/viber-qrcode.svg" alt="QR Code">
+      <!-- landing viber wrapper -->
+      <div class="viber-wrapper">
+  
+        <!-- viber header -->
+        <div class="viber-header">
+          <div class="container">
+            <div class="row">
+  
+              <div class="col mb-3 d-md-none">
+                <a href="#" class="btn btn-link btn-back">Главная</a>
+              </div>
+  
+              <div class="col-md-6 viber-header__left">
+                <div class="viber-header__content">
+                  <h1>Оплачивать услуги теперь можно прямо в Viber!</h1>
+                  <p>Совершайте любые платежи через Viber в официальном платежном чат-боте iPay.ua!</p>
+                  <p class="d-none d-md-block"><strong>Сканируйте QR-код для перехода в чат-бот</strong></p>
+                  <div class="viber-header__partner">
+                    <div class="viber-header__qr-wrapper">
+                      <div class="viber-header__qr">
+                        <img src="/img/landing-viber/viber-qrcode.svg" alt="QR Code">
+                      </div>
+                    </div>
+                    <div class="viber-header__logo">
+                      <a href="viber://pa?chatURI=ipayua" class="btn btn-viber btn-block d-md-none">Перейти в чат-бот iPay.ua</a>
+                      <img class="viber-header__logo-ipay" src="/img/landing-viber/ipay-logo.svg" alt="iPay">
+                      <p>официальный партнер</p>
+                      <img class="viber-header__logo-viber" src="/img/landing-viber/viber-logo.svg" alt="Viber">
                     </div>
                   </div>
-                  <div class="viber-header__logo">
-                    <a href="viber://pa?chatURI=ipayua" class="btn btn-viber btn-block d-md-none">Перейти в Viber Bot iPay</a>
-                    <img class="viber-header__logo-ipay" src="/img/landing-viber/ipay-logo.svg" alt="iPay">
-                    <p>официальный партнер</p>
-                    <img class="viber-header__logo-viber" src="/img/landing-viber/viber-logo.svg" alt="Viber">
+                </div>
+              </div>
+  
+              <div class="col-md-6 viber-header__right">
+                <div class="viber-header__img-wrapper">
+                  <div class="viber-header__img">
+                    <img src="/img/landing-viber/viber-header.png" srcset="/img/landing-viber/viber-header.png 1x, /img/landing-viber/viber-header@2x.png 2x" alt="Image">
                   </div>
                 </div>
               </div>
+  
             </div>
-
-            <div class="col-md-6 viber-header__right">
-              <div class="viber-header__img-wrapper">
-                <div class="viber-header__img">
-                  <img src="/img/landing-viber/viber-header.png" srcset="/img/landing-viber/viber-header.png 1x, /img/landing-viber/viber-header@2x.png 2x" alt="Image">
+          </div>
+        </div><!-- viber header -->   
+        
+        <!-- viber main -->
+        <div class="viber-main">
+          <div class="container">
+  
+            <div class="row">
+              <div class="col">
+                <h2>Оплачивайте через чат-бот:</h2>
+              </div>
+            </div>
+  
+            <div class="row viber-bills">
+  
+              <div class="col-md-6 col-lg-4">
+                <div class="viber-bill">
+                  <img src="/img/landing-viber/bill-icons/mobile-icon.svg" alt="Mobile">
+                  <span>Мобильную связь</span>
                 </div>
               </div>
+  
+              <div class="col-md-6 col-lg-4">
+                <div class="viber-bill">
+                  <img src="/img/landing-viber/bill-icons/utility-icon.svg" alt="Utility">
+                  <span>Коммунальные услуги</span>
+                </div>
+              </div>
+  
+              <div class="col-md-6 col-lg-4">
+                <div class="viber-bill">
+                  <img src="/img/landing-viber/bill-icons/internet-icon.svg" alt="Internet">
+                  <span>Интернет</span>
+                </div>
+              </div>
+  
+              <div class="col-md-6 col-lg-4">
+                <div class="viber-bill">
+                  <img src="/img/landing-viber/bill-icons/tv-icon.svg" alt="TV">
+                  <span>Телевидение</span>
+                </div>
+              </div>
+  
+              <div class="col-md-6 col-lg-4">
+                <div class="viber-bill">
+                  <img src="/img/landing-viber/bill-icons/phone-icon.svg" alt="Phone">
+                  <span>Стационарный телефон</span>
+                </div>
+              </div>
+  
+              <div class="col-md-6 col-lg-4">
+                <div class="viber-bill">
+                  <img src="/img/landing-viber/bill-icons/p2r-icon.svg" alt="Requisites">
+                  <span>Платежи по реквизитам</span>
+                </div>
+              </div>
+  
             </div>
-
+  
+            <div class="row">
+              <div class="col">
+                <h2>Что еще?</h2>
+              </div>
+            </div>
+  
+            <div class="viber-cards">
+              <div class="row">
+    
+                <div class="col-md-4">
+                  <div class="viber-card">
+                    <img src="/img/landing-viber/card-icons/viber-payments.svg" alt="Payments">
+                    <p class="mb-0">Чат-бот iPay.ua синхронизирует все ваши платежи и шаблоны с кабинетом iPay.ua и вы ничего не потеряете</p>
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <div class="viber-card">
+                    <img src="/img/landing-viber/card-icons/viber-cards.svg" alt="Cards">
+                    <p class="mb-0">Управляйте платежными картами непосредственно в Viber-боте быстро и безопасно</p>
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <div class="viber-card mb-0">
+                    <img src="/img/landing-viber/card-icons/viber-templates.svg" alt="Templates">
+                    <p class="mb-0">Платите с помощью существующих и создавайте новые шаблоны не выходя из Viber</p>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+  
           </div>
-        </div>
-      </div><!-- viber header -->   
-      
-      <!-- viber main -->
-      <div class="viber-main">
-        <div class="container">
-
-          <div class="row">
-            <div class="col">
-              <h2>Платите в Вайбер за:</h2>
-            </div>
-          </div>
-
-          <div class="row viber-bills">
-
-            <div class="col-md-6 col-lg-4">
-              <div class="viber-bill">
-                <img src="/img/landing-viber/bill-icons/mobile-icon.svg" alt="Mobile">
-                <span>Мобильную связь</span>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="viber-bill">
-                <img src="/img/landing-viber/bill-icons/utility-icon.svg" alt="Utility">
-                <span>Коммунальные услуги</span>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="viber-bill">
-                <img src="/img/landing-viber/bill-icons/internet-icon.svg" alt="Internet">
-                <span>Интернет</span>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="viber-bill">
-                <img src="/img/landing-viber/bill-icons/tv-icon.svg" alt="TV">
-                <span>Телевидение</span>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="viber-bill">
-                <img src="/img/landing-viber/bill-icons/phone-icon.svg" alt="Phone">
-                <span>Стационарный телефон</span>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="viber-bill">
-                <img src="/img/landing-viber/bill-icons/p2r-icon.svg" alt="Requisites">
-                <span>Платежи по реквизитам</span>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <h2>Что еще?</h2>
-            </div>
-          </div>
-
-          <div class="viber-cards">
+        </div><!-- viber main -->
+  
+        <!-- viber footer -->
+        <div class="viber-footer">
+          <div class="container">
             <div class="row">
   
               <div class="col-md-4">
-                <div class="viber-card">
-                  <img src="/img/landing-viber/card-icons/viber-payments.svg" alt="Payments">
-                  <p class="mb-0">ViberBot iPay.ua синхронизирует ваши платежи и шаблоны с кабинетом iPay.ua и вы ничего не потеряете</p>
+                <div class="viber-footer__title">
+                  <h2>Чтобы работать с чат-ботом в Viber, отсканируйте QR-код* или жмите на кнопку</h2>
                 </div>
               </div>
   
               <div class="col-md-4">
-                <div class="viber-card">
-                  <img src="/img/landing-viber/card-icons/viber-cards.svg" alt="Cards">
-                  <p class="mb-0">Управляйте платежными картами непосредственно в ViberBot быстро и безопасно</p>
-                </div>
-              </div>
-  
-              <div class="col-md-4">
-                <div class="viber-card mb-0">
-                  <img src="/img/landing-viber/card-icons/viber-templates.svg" alt="Templates">
-                  <p class="mb-0">Платите с помощью существующих и создавайте новые шаблоны не выходя из Viber</p>
-                </div>
-              </div>
-  
-            </div>
-          </div>
-
-        </div>
-      </div><!-- viber main -->
-
-      <!-- viber footer -->
-      <div class="viber-footer">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-md-4">
-              <div class="viber-footer__title">
-                <h2>Чтобы работать с чат-ботом в Viber, отсканируйте QR-код* или жмите на кнопку</h2>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="viber-footer__phone-wrapper">
-                <div class="viber-footer__phone">
-                  <p>* Рекомендуем воспользоваться QR-сканером Viber. Для этого откройте приложение Viber и перейдите в меню «Добавить контакт» - «Сканировать QR-код».</p>
-                  <div class="viber-footer__qr">
-                    <img src="/img/landing-viber/viber-qrcode.svg" alt="QR Code">
+                <div class="viber-footer__phone-wrapper">
+                  <div class="viber-footer__phone">
+                    <p>* Рекомендуем воспользоваться QR-сканером Viber. Для этого откройте приложение Viber и перейдите в меню «Добавить контакт» - «Сканировать QR-код».</p>
+                    <div class="viber-footer__qr">
+                      <img src="/img/landing-viber/viber-qrcode.svg" alt="QR Code">
+                    </div>
+                    <p class="text-center px-2 px-md-3 px-lg-2">или кликните на кнопку</p>
+                    <a href="https://clc.am/pHY_ww" class="btn btn-viber">Перейти в чат-бот iPay.ua</a>
                   </div>
-                  <p class="text-center px-2 px-md-3 px-lg-2">или перейдите в ViberBot одним кликом</p>
-                  <a href="viber://pa?chatURI=ipayua" class="btn btn-viber">Перейти в Viber Bot iPay</a>
                 </div>
               </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="viber-footer__links">
-                <p>Убедитесь, что на Вашем смартфоне установлено приложение Viber или загрузите по ссылкам:</p>
-                <a href="https://apps.apple.com/us/app/viber-messenger-chats-calls/id382617920">
-                  <img src="/img/landing-viber/apple-link.svg" alt="Apple Store">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.viber.voip">
-                  <img src="/img/landing-viber/google-link.svg" alt="Google Play Market">
-                </a>
+  
+              <div class="col-md-4">
+                <div class="viber-footer__links">
+                  <p>Убедитесь, что на Вашем смартфоне установлено приложение Viber или загрузите по ссылкам:</p>
+                  <a href="https://apps.apple.com/us/app/viber-messenger-chats-calls/id382617920">
+                    <img src="/img/landing-viber/apple-link.svg" alt="Apple Store">
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.viber.voip">
+                    <img src="/img/landing-viber/google-link.svg" alt="Google Play Market">
+                  </a>
+                </div>
               </div>
+  
             </div>
-
           </div>
-        </div>
-      </div><!-- viber footer -->
+        </div><!-- viber footer -->
+  
+      </div><!-- landing viber wrapper -->  
 
-    </div><!-- landing viber wrapper -->    
+    </div><!-- main wrapper --> 
 
     <!-- footer -->
     <div class="main-footer">
