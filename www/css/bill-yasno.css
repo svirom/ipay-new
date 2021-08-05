@@ -8,8 +8,13 @@
 }
 
 .bill-yasno__help-collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 0.75rem;
-  overflow: hidden;
 }
 
 .bill-yasno__tariff-pills .btn {
@@ -168,6 +173,15 @@
 .bill-yasno__amount {
   padding-bottom: 0.5rem;
   border-bottom: 2px dashed #DEE7F3;
+}
+
+@media screen and (max-width: 767px) {
+  .bill-yasno__help-collapse {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 575px) {

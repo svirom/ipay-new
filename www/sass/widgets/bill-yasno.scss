@@ -18,8 +18,9 @@
   }
 
   &__help-collapse {
+    display: flex;
+    justify-content: center;
     padding-top: 0.75rem;
-    overflow: hidden;
   }
 
   &__tariff-pills {
@@ -183,6 +184,13 @@
   &__amount {
     padding-bottom: 0.5rem;
     border-bottom: 2px dashed $middle-grey;
+  }
+
+  @include until($md) {
+    &__help-collapse {
+      justify-content: flex-start;
+      overflow: hidden;
+    }
   }
 
   @include until($sm) {

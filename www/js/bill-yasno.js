@@ -5,7 +5,8 @@ $(document).ready(function() {
     dropdownCssClass: 'select-dropdown',
     selectionCssClass: 'select-selection',
     minimumResultsForSearch: Infinity,
-    dropdownParent: $('.select-input-wrapper')
+    dropdownParent: $('.select-input-wrapper'),
+    width: '100%'
   });
 
   // choose relative fields on select change
