@@ -1591,9 +1591,9 @@
         </div>
       </div>
       <div class="row mt-3">
-        <div class="col-12">
-          <div class="form-group select-input-wrapper" style="max-width: 260px;">
-            <select class="select-period form-control form-input" name="select">
+        <div class="col-md-6">
+          <div class="form-group select-input-wrapper" style="max-width: 260px;" data-label="Период">
+            <select class="select-period form-control form-input js-example-basic-single" name="select">
               <option value=""></option>
               <option value="1">Сегодня</option>
               <option value="2">Вчера</option>
@@ -1606,8 +1606,38 @@
           </div>
           <div class="mb-4">
             <code>
-              &lt;div class="form-group select-input-wrapper"><br>
+              &lt;div class="form-group select-input-wrapper" data-label="Период"><br>
               &nbsp;&lt;select class="select-period form-control form-input" name="select"><br>
+              &nbsp;&nbsp;&lt;option value="">&lt;/option><br>
+              &nbsp;&nbsp;&lt;option value="1">Сегодня&lt;/option><br>
+              &nbsp;&nbsp;&lt;option value="2">Вчера&lt;/option><br>
+              &nbsp;&nbsp;&lt;option value="3">Последние 7 дней&lt;/option><br>
+              &nbsp;&nbsp;&lt;option value="4">Последние 30 дней&lt;/option><br>
+              &nbsp;&nbsp;&lt;option value="5">Текущий месяц&lt;/option><br>
+              &nbsp;&nbsp;&lt;option value="6">Предыдущий месяц&lt;/option><br>
+              &nbsp;&nbsp;&lt;option value="7">Текущий год&lt;/option><br>
+              &nbsp;&lt;/select><br>
+              &lt;/div>
+            </code>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group select-input-wrapper" style="max-width: 260px;" data-label="Период">
+            <select class="select-search form-control form-input js-example-basic-single" name="select">
+              <option value=""></option>
+              <option value="1">Сегодня</option>
+              <option value="2">Вчера</option>
+              <option value="3">Последние 7 дней</option>
+              <option value="4">Последние 30 дней</option>
+              <option value="5">Текущий месяц</option>
+              <option value="6">Предыдущий месяц</option>
+              <option value="7">Текущий год</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <code>
+              &lt;div class="form-group select-input-wrapper" data-label="Период"><br>
+              &nbsp;&lt;select class="select-search form-control form-input" name="select"><br>
               &nbsp;&nbsp;&lt;option value="">&lt;/option><br>
               &nbsp;&nbsp;&lt;option value="1">Сегодня&lt;/option><br>
               &nbsp;&nbsp;&lt;option value="2">Вчера&lt;/option><br>
