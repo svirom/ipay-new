@@ -6,15 +6,14 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/progressbar.css">
     <link rel="stylesheet" href="/css/service-provider.css">
-    <link rel="stylesheet" href="/css/bill-yasno.css">
+    <link rel="stylesheet" href="/css/bill-vkp.css">
 
-    <title>Bill Yasno 2</title>
+    <title>Bill VKP 2</title>
   </head>
   <body>
 
@@ -37,7 +36,6 @@
                     <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
                     <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
                     <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
-                    <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
                   </div>
                 </li>
                 <li class="main-nav__item">
@@ -216,7 +214,7 @@
                   </a>
                 </li>
                 <li class="active" aria-current="page">
-                  <span>Киевские энергетические услуги (YASNO)</span>
+                  <span>Украинский ВКП</span>
                 </li>
               </ul>
             </div>
@@ -234,7 +232,7 @@
 
               <div class="col-12">
                 <!-- bill main widget -->
-                <div class="bill-main bill-yasno" id="bill-main-widget">
+                <div class="bill-main bill-vkp" id="bill-main-widget">
                   <div class="row">
 
                     <div class="col-12 mt-2 mb-3 d-lg-none">
@@ -243,8 +241,8 @@
 
                     <div class="col-12 mb-3">
                       <div class="bill-title">
-                        <h1>Оплатить за Киевские энергетические услуги (YASNO)</h1>
-                        <p>Оплатить услуги ООО "Киевские энергетические услуги" YASNO онлайн с помощью банковской карты Visa, MasterCard или ПРОСТІР.</p>
+                        <h1>Оплатить Украинская ВКП</h1>
+                        <p>Оплата услуг Украинского ВКП через интернет осуществляется банковской картой Visa или MasterCard.</p>
                       </div>
                     </div>
 
@@ -307,20 +305,8 @@
                               <table class="table">
                                 <tbody>
                                   <tr>
-                                    <td>Лицевой счет</td>
-                                    <td>14457806606</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Адрес</td>
-                                    <td>Ул. Блакитноозерная 46, кв.14, Соломянский район</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Долг</td>
-                                    <td>43.20 грн</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Рекомендовано к оплате</td>
-                                    <td>49.20 грн</td>
+                                    <td class="bill-vkp-cell">Адрес</td>
+                                    <td>ул. Сосновая  1, кв.1</td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -328,49 +314,14 @@
                           </div>
 
                           <div class="col-12 mt-3">
-                            <h3 class="mb-3">Ввести показания счетчиков</h3>
-                          </div>
 
-                          <div class="col-12">
-                            <p class="heading-color">Выберите ваш тариф</p>
+                            <!-- counter card -->
+                            <div class="bill-countercard">
 
-                            <div class="bill-yasno__tariff-pills d-none d-sm-block">
-                              <ul class="row nav" role="tablist">
+                              <h4 class="mb-2">Холодное водоснабжение и водоотвод</h4>
 
-                                <li class="col-sm-4">
-                                  <a class="btn btn-outline btn-block active" id="pills-regular-tab" data-toggle="pill" href="#pills-regular" role="tab" aria-controls="pills-regular" aria-selected="true">Обычный</a>
-                                </li>
-
-                                <li class="col-sm-4">
-                                  <a class="btn btn-outline btn-block" id="pills-2zone-tab" data-toggle="pill" href="#pills-2zone" role="tab" aria-controls="pills-2zone" aria-selected="false">2х-зонный</a>
-                                </li>
-
-                                <li class="col-sm-4">
-                                  <a class="btn btn-outline btn-block" id="pills-3zone-tab" data-toggle="pill" href="#pills-3zone" role="tab" aria-controls="pills-3zone" aria-selected="false">3х-зонный</a>
-                                </li>
-
-                              </ul>
-                            </div>
-
-                            <div class="bill-yasno__tariff-select d-sm-none">
-                              <div class="form-group select-input-wrapper">
-                                <select class="select-counter-type form-control form-input" name="select">
-                                  <option value="0">Обычный</option>
-                                  <option value="1">2х-зонный</option>
-                                  <option value="2">3х-зонный</option>
-                                </select>
-                              </div>
-                            </div>
-                          
-                          </div>
-
-                          <div class="col-12 mt-sm-2 tab-content bill-yasno__tab-content">
-
-                            <!-- regular counter -->
-                            <div class="tab-pane fade show active s0" id="pills-regular" role="tabpanel" aria-labelledby="pills-regular-tab">
-
-                              <div class="bill-yasno__counter-row">
-                                <p class="heading-color">Показания счетчика</p>
+                              <div class="bill-countercard__row" data-counter="1">
+                                <p class="heading-color mb-1">Показания счетчика №1</p>
 
                                 <div class="row">
   
@@ -385,51 +336,33 @@
                                       <input type="text" id="billform-oldvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][oldValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-oldvalue0">Предыдущие, кВт</label>
                                     </div>
                                   </div>
+
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <input type="text" id="billform-tariff" class="form-control form-input" name="BillForm[service][0][counter][0][tariff]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-tariff">Тариф</label>
+                                    </div>
+                                  </div>
   
-                                  <div class="col-md-auto">
-                                    <div class="bill-yasno__counter-result">
-                                      <p class="mb-3 mb-md-2 mr-2 d-inline-block d-md-block">Разница:</p>
-                                      <p class="mb-3 mb-md-0 d-inline-block d-md-block"><span>0</span> кВт/час</p>
+                                  <div class="col-12 mb-2">
+                                    <div class="bill-countercard__row-result">
+                                      <p class="mb-2 mr-4 d-md-inline-block heading-color">Разница:<span class="heading-color">0</span></p>
+                                      <p class="mb-2 d-md-inline-block heading-color">К оплате:<span class="heading-color">0 грн</span></p>
                                     </div>
                                   </div>
   
                                 </div>
+
                               </div>
 
-                            </div><!-- regular counter -->
-
-                            <!-- 2 zone counter -->
-                            <div class="tab-pane fade s1" id="pills-2zone" role="tabpanel" aria-labelledby="pills-2zone-tab">
-
-                              <div class="bill-yasno__counter-row">
-                                <p class="heading-color">День</p>
-
-                                <div class="row">
-  
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-currentvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue0">Текущие, кВт</label>
-                                    </div>
+                              <div class="bill-countercard__row mt-4" data-counter="2">
+                                <div class="row justify-content-between mb-1">
+                                  <div class="col-12 col-md-auto mb-2 mb-md-0 d-flex align-items-center">
+                                    <p class="heading-color mb-0">Показания счетчика №2</p>
                                   </div>
-  
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-oldvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][oldValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-oldvalue0">Предыдущие, кВт</label>
-                                    </div>
+                                  <div class="col-12 col-md-auto text-md-right mb-2 mb-md-0">
+                                    <a href="#" class="btn btn-link btn-bill-counterremove">Удалить счетчик</a>
                                   </div>
-  
-                                  <div class="col-md-auto">
-                                    <div class="bill-yasno__counter-result">
-                                      <p class="mb-3 mb-md-2 mr-2 d-inline-block d-md-block">Разница:</p>
-                                      <p class="mb-3 mb-md-0 d-inline-block d-md-block"><span>0</span> кВт/час</p>
-                                    </div>
-                                  </div>
-  
                                 </div>
-                              </div>
-
-                              <div class="bill-yasno__counter-row">
-                                <p class="heading-color">Ночь</p>
 
                                 <div class="row">
   
@@ -444,285 +377,123 @@
                                       <input type="text" id="billform-oldvalue1" class="form-control form-input" name="BillForm[service][1][counter][1][oldValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-oldvalue1">Предыдущие, кВт</label>
                                     </div>
                                   </div>
+
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <input type="text" id="billform-tariff1" class="form-control form-input" name="BillForm[service][1][counter][1][tariff]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-tariff1">Тариф</label>
+                                    </div>
+                                  </div>
   
-                                  <div class="col-md-auto">
-                                    <div class="bill-yasno__counter-result">
-                                      <p class="mb-3 mb-md-2 mr-2 d-inline-block d-md-block">Разница:</p>
-                                      <p class="mb-3 mb-md-0 d-inline-block d-md-block"><span>0</span> кВт/час</p>
+                                  <div class="col-12 mb-2">
+                                    <div class="bill-countercard__row-result">
+                                      <p class="mb-2 mr-4 d-md-inline-block heading-color">Разница:<span class="heading-color">0</span></p>
+                                      <p class="mb-2 d-md-inline-block heading-color">К оплате:<span class="heading-color">0 грн</span></p>
                                     </div>
                                   </div>
   
                                 </div>
+
                               </div>
 
-                            </div><!-- 2 zone counter -->
-
-                            <!-- 3 zone counter -->
-                            <div class="tab-pane fade s2" id="pills-3zone" role="tabpanel" aria-labelledby="pills-3zone-tab">
-                            
-                              <div class="bill-yasno__counter-row">
-                                <p class="heading-color">Пик</p>
-
-                                <div class="row">
-  
+                              <div class="bill-countercard__add">
+                                <div class="row justify-content-between">
+                                  <div class="col-md-4 mb-3 mb-md-0">
+                                    <button type="button" class="btn btn-green btn-plus btn-block btn-bill-counteradd">Добавить счетчик</button>
+                                  </div>
                                   <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-currentvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue0">Текущие, кВт</label>
+                                    <div class="form-group mb-0">
+                                      <input type="tel" class="form-control form-input input-icon-right" id="form-counter-1" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                                      <label class="control-label form-label" for="form-counter-1">Оплачиваю</label>
+                                      <label class="label-icon-right label-currency">грн</label>
                                     </div>
                                   </div>
-  
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-oldvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][oldValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-oldvalue0">Предыдущие, кВт</label>
-                                    </div>
-                                  </div>
-  
-                                  <div class="col-md-auto">
-                                    <div class="bill-yasno__counter-result">
-                                      <p class="mb-3 mb-md-2 mr-2 d-inline-block d-md-block">Разница:</p>
-                                      <p class="mb-3 mb-md-0 d-inline-block d-md-block"><span>0</span> кВт/час</p>
-                                    </div>
-                                  </div>
-  
                                 </div>
-                              </div>
-
-                              <div class="bill-yasno__counter-row">
-                                <p class="heading-color"><strong>Полупик</strong></p>
-
-                                <div class="row">
-  
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-currentvalue1" class="form-control form-input" name="BillForm[service][1][counter][1][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue1">Текущие, кВт</label>
-                                    </div>
-                                  </div>
-  
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-oldvalue1" class="form-control form-input" name="BillForm[service][1][counter][1][oldValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-oldvalue1">Предыдущие, кВт</label>
-                                    </div>
-                                  </div>
-  
-                                  <div class="col-md-auto">
-                                    <div class="bill-yasno__counter-result">
-                                      <p class="mb-3 mb-md-2 mr-2 d-inline-block d-md-block">Разница:</p>
-                                      <p class="mb-3 mb-md-0 d-inline-block d-md-block"><span>0</span> кВт/час</p>
-                                    </div>
-                                  </div>
-  
-                                </div>
-                              </div>
-
-                              <div class="bill-yasno__counter-row">
-                                <p class="heading-color">Ночь</p>
-
-                                <div class="row">
-  
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-currentvalue2" class="form-control form-input" name="BillForm[service][2][counter][2][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue2">Текущие, кВт</label>
-                                    </div>
-                                  </div>
-  
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-oldvalue2" class="form-control form-input" name="BillForm[service][2][counter][2][oldValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-oldvalue2">Предыдущие, кВт</label>
-                                    </div>
-                                  </div>
-  
-                                  <div class="col-md-auto">
-                                    <div class="bill-yasno__counter-result">
-                                      <p class="mb-3 mb-md-2 mr-2 d-inline-block d-md-block">Разница:</p>
-                                      <p class="mb-3 mb-md-0 d-inline-block d-md-block"><span>0</span> кВт/час</p>
-                                    </div>
-                                  </div>
-  
-                                </div>
-                              </div>
-
-                            </div><!-- 3 zone counter -->
-                            
-                          </div>
-
-                          <div class="col-12 mt-4">
-                            <div class="bill-yasno__subvention">
-  
-                              <div class="checkbox-control checkbox-switch mb-3" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                <input class="checkbox-input" type="checkbox" id="checkbox-subvention">
-                                <label class="checkbox-label" for="checkbox-subvention">Укажите льготу и(или) Субсидию</label>
-                              </div>
-  
-                              <div class="bill-yasno__subvention-fields collapse" id="collapseExample">
-                                <div class="row">
-    
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-percent" class="form-control form-input" name="BillForm[percent]">
-                                      <label class="control-label form-label" for="billform-percent">Льгота по тарифу, %</label>
-                                    </div>
-                                  </div>
-    
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-limit" class="form-control form-input" name="BillForm[limit]">
-                                      <label class="control-label form-label" for="billform-limit">Льгота, кВт</label>
-                                    </div>
-                                  </div>
-    
-                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                      <input type="text" id="billform-subsidy" class="form-control form-input" name="BillForm[subsidy]" placeholder="0.00">
-                                      <label class="control-label form-label" for="billform-subsidy">Субсидия</label>
-                                    </div>
-                                  </div>
-    
-                                </div>
-                              </div>
-  
-                            </div>
-                          </div>
-
-                          <div class="col-12 mt-2">
-                            <div class="bill-yasno__table">
-
-                              <div class="bill-yasno__card">
-                                <div class="bill-yasno__card-row" role="button" data-toggle="collapse" data-target="#yasno-collapse" aria-expanded="false">
-                                  <span>Рекомендовано к оплате</span>
-                                  <span class="bill-yasno__card-more">
-                                    <span>49.20 грн</span>
-                                    <span>Детальнее</span>
-                                  </span>
-                                </div>
-
-                                <div id="yasno-collapse" class="collapse">
-
-                                  <!-- desktop table view -->
-                                  <div class="d-none d-sm-block">
-                                    <div class="table-responsive">
-                                      <table class="table">
-                                        <thead>
-                                          <tr>
-                                            <th scope="col">Название</th>
-                                            <th scope="col">Потреблено, кВт/ч</th>
-                                            <th scope="col">Тариф, грн</th>
-                                            <th scope="col">Сумма к оплате, грн</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>Единый тариф</td>
-                                            <td>250</td>
-                                            <td>1.68</td>
-                                            <td>420.00</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Льгота</td>
-                                            <td>100</td>
-                                            <td>1.241</td>
-                                            <td>124.10</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Субсидия</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>100.00</td>
-                                          </tr>
-                                          <tr>
-                                            <td colspan="3">Рекомендовано к оплате, грн</td>
-                                            <td>195.90</td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </div>
-                                  </div><!-- desktop table view -->
-
-                                  <!-- mobile table view -->
-                                  <div class="d-sm-none">
-                                    <div class="table-yasno">
-
-                                      <div class="table-yasno__card">
-                                        <div class="table-yasno__row table-yasno__row--title">
-                                          <span>Единый тариф</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Потреблено, кВт/ч</span>
-                                          <span>0</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Тариф, грн</span>
-                                          <span>1.68</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Сумма к оплате, грн</span>
-                                          <span>0.00</span>
-                                        </div>
-                                      </div>
-
-                                      <div class="table-yasno__card">
-                                        <div class="table-yasno__row table-yasno__row--title">
-                                          <span>Льгота</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Потреблено, кВт/ч</span>
-                                          <span>100</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Тариф, грн</span>
-                                          <span>1.241</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Сумма к оплате, грн</span>
-                                          <span>124.10</span>
-                                        </div>
-                                      </div>
-
-                                      <div class="table-yasno__card">
-                                        <div class="table-yasno__row table-yasno__row--title">
-                                          <span>Субсидия</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Потреблено, кВт/ч</span>
-                                          <span>-</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Тариф, грн</span>
-                                          <span>-</span>
-                                        </div>
-                                        <div class="table-yasno__row">
-                                          <span>Сумма к оплате, грн</span>
-                                          <span>100.00</span>
-                                        </div>
-                                      </div>
-
-                                      <div class="table-yasno__card">
-                                        <div class="table-yasno__row table-yasno__row--title">
-                                          <span>Рекомендовано<br> к оплате, грн</span>
-                                          <span>63.00</span>
-                                        </div>
-                                      </div>
-
-                                    </div>
-                                  </div><!-- mobile table view -->
-
-                                </div>
-                              </div>
+                              </div>                              
 
                             </div>
-                          </div>
 
-                          <div class="col-12 mt-4">
-                            <div class="bill-yasno__amount">
-                              <div class="row justify-content-end">
-                                <div class="col-sm-5 col-md-4">
-                                  <div class="form-group">
-                                    <input type="tel" class="form-control form-input input-icon-right" id="form-icon-r" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
-                                    <label class="control-label form-label" for="form-icon-r">Сумма</label>
+                            <!-- counter card -->
+                            <div class="bill-countercard mt-3">
+
+                              <h4 class="mb-2">Горячая вода</h4>
+
+                              <div class="bill-countercard__row" data-counter="1">
+                                <p class="heading-color mb-1">Показания счетчика №1</p>
+
+                                <div class="row">
+  
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <input type="text" id="billform2-currentvalue0" class="form-control form-input" name="BillForm2[service][0][counter][0][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform2-currentvalue0">Текущие, кВт</label>
+                                    </div>
+                                  </div>
+  
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <input type="text" id="billform2-oldvalue0" class="form-control form-input" name="BillForm2[service][0][counter][0][oldValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform2-oldvalue0">Предыдущие, кВт</label>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <input type="text" id="billform2-tariff" class="form-control form-input" name="BillForm2[service][0][counter][0][tariff]" value="" placeholder="0.00"><label class="control-label form-label" for="billform2-tariff">Тариф</label>
+                                    </div>
+                                  </div>
+  
+                                  <div class="col-12 mb-2">
+                                    <div class="bill-countercard__row-result">
+                                      <p class="mb-2 mr-4 d-md-inline-block heading-color">Разница:<span class="heading-color">0</span></p>
+                                      <p class="mb-2 d-md-inline-block heading-color">К оплате:<span class="heading-color">0 грн</span></p>
+                                    </div>
+                                  </div>
+  
+                                </div>
+
+                              </div>
+
+                              <div class="bill-countercard__add">
+                                <div class="row justify-content-between">
+                                  <div class="col-md-4 mb-3 mb-md-0">
+                                    <button type="button" class="btn btn-green btn-plus btn-block btn-bill-counteradd">Добавить счетчик</button>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-group mb-0">
+                                      <input type="tel" class="form-control form-input input-icon-right" id="form-counter-2" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                                      <label class="control-label form-label" for="form-counter-2">Оплачиваю</label>
+                                      <label class="label-icon-right label-currency">грн</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>                              
+
+                            </div>
+
+                            <!-- counter card -->
+                            <div class="bill-countercard mt-3">
+
+                              <div class="row">
+                                <div class="col-md mb-3 mb-md-0 d-flex align-items-center">
+                                  <h4 class="mb-0">Абонентская плата</h4>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-group mb-0">
+                                    <input type="tel" class="form-control form-input input-icon-right" id="form-counter-abonent" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                                    <label class="control-label form-label" for="form-counter-abonent">Оплачиваю</label>
                                     <label class="label-icon-right label-currency">грн</label>
                                   </div>
                                 </div>
                               </div>
+
                             </div>
+
+                            <!-- counter card result -->
+                            <div class="bill-countercard bill-countercard--result mt-3">
+                              <div class="d-flex justify-content-between align-items-baseline">
+                                <p class="mb-0 heading-color">К оплате:</p>
+                                <p class="mb-0 heading-color bill-countercard__amount">0.00 грн</p>
+                              </div>
+                            </div>
+
                           </div>
 
                           <div class="col-12 mt-4">
@@ -734,7 +505,7 @@
                                     <button type="button" class="btn btn-outline btn-prev btn-empty d-sm-none"></button>
                                   </div>
                                   <div class="col col-sm-6 mb-3 p-left-0">
-                                    <button type="submit" class="btn btn-green btn-next btn-block" disabled>Далее</button>
+                                    <button type="submit" class="btn btn-green btn-next btn-block" disabled>Оплатить</button>
                                   </div>
                                 </div>
                               </div>
@@ -966,8 +737,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
-    <script src="/js/bill-yasno.js"></script>
+    <script src="/js/bill-vkp.js"></script>
   </body>
 </html>

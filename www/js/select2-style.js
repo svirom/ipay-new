@@ -7,7 +7,8 @@ $(document).ready(function() {
     dropdownCssClass: 'select-dropdown',
     selectionCssClass: 'select-selection',
     minimumResultsForSearch: Infinity,
-    dropdownParent: $('.select-input-wrapper')
+    dropdownParent: $('.select-input-wrapper'),
+    width: '100%'
   });
 
   $('.select-address').select2({
@@ -16,7 +17,8 @@ $(document).ready(function() {
     dropdownCssClass: 'select-dropdown',
     selectionCssClass: 'select-selection',
     minimumResultsForSearch: Infinity,
-    dropdownParent: $('.select-input-wrapper')
+    dropdownParent: $('.select-input-wrapper'),
+    width: '100%'
   });
 
   $('.select-search').select2({
@@ -44,6 +46,6 @@ $(document).ready(function() {
           }
         }
     });
-});
+  });
 
 })
