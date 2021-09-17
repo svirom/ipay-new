@@ -49,6 +49,41 @@
       }
     }
   }
+
+  @include until($sm) {
+    & ~ .tab-content {
+      .select-input-wrapper .select2-container .select2-selection {
+        font-size: 1rem;
+      }
+  
+      .form-input {
+        font-size: 1rem;
+      }
+
+      .form-label {
+        top: 1.05rem;
+        font-size: 1rem;
+      }
+
+      .form-input:focus ~ .form-label, 
+      .form-input.filled ~ .form-label {
+        top: 0.45rem;
+        font-size: 0.77777rem;
+      }
+    }
+  }
+}
+
+.bill-tablist-2cols {
+  &.row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+
+    [class^="col-"] {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
 }
 
 .bill-vkp-cell {

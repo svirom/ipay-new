@@ -45,6 +45,34 @@
   width: 100%;
 }
 
+@media screen and (max-width: 575px) {
+  .bill-tablist ~ .tab-content .select-input-wrapper .select2-container .select2-selection {
+    font-size: 1rem;
+  }
+  .bill-tablist ~ .tab-content .form-input {
+    font-size: 1rem;
+  }
+  .bill-tablist ~ .tab-content .form-label {
+    top: 1.05rem;
+    font-size: 1rem;
+  }
+  .bill-tablist ~ .tab-content .form-input:focus ~ .form-label,
+  .bill-tablist ~ .tab-content .form-input.filled ~ .form-label {
+    top: 0.45rem;
+    font-size: 0.77777rem;
+  }
+}
+
+.bill-tablist-2cols.row {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.bill-tablist-2cols.row [class^="col-"] {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .bill-vkp-cell {
   width: 100%;
   max-width: 34.52%;

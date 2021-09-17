@@ -29,13 +29,13 @@ $(document).ready(function() {
           html += '<div class="col-md-4">';
           html += '<div class="form-group">';
           html += '<input type="text" id="billform-currentvalue0" class="form-control form-input" name="">';
-          html += '<label class="control-label form-label" for="billform-currentvalue0">Текущие, кВт</label>';
+          html += '<label class="control-label form-label" for="billform-currentvalue0">Текущие</label>';
           html += '</div>';
           html += '</div>';
           html += '<div class="col-md-4">';
           html += '<div class="form-group">';
           html += '<input type="text" id="billform-oldvalue0" class="form-control form-input" name="">';
-          html += '<label class="control-label form-label" for="billform-oldvalue0">Предыдущие, кВт</label>';
+          html += '<label class="control-label form-label" for="billform-oldvalue0">Предыдущие</label>';
           html += '</div>';
           html += '</div>';
           html += '<div class="col-md-4">';
