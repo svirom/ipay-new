@@ -88,4 +88,19 @@ $(document).ready(function() {
     $(this).closest('.form-search').find('.input-search').removeClass('filled').val('');
   }
 
+  // search field
+  $('.search-field__cancel').on('click', function(e) {
+    e.preventDefault();
+    $(this).closest('.search-field').find('.form-input').removeClass('filled').val('').end()
+      .find('.input-search__list ul').html('');
+  })
+
+  $('.input-search__list').on('click', function(e) {
+    if ($(e.target).hasClass('input-search__item')) {
+      var itemValue = $(e.target).text();
+      $(this).closest('.search-field').find('.form-input').val(itemValue);
+      $(this).html('');
+    }
+  })
+
 })

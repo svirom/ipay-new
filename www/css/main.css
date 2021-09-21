@@ -832,6 +832,7 @@ label {
 
 .form-input.input-icon-left ~ .form-label {
   left: 3.9rem;
+  width: calc(100% - 4.0875rem);
 }
 
 .form-input.input-icon-right {
@@ -890,7 +891,7 @@ label {
   pointer-events: none;
   white-space: nowrap;
   overflow: hidden;
-  width: 90%;
+  width: calc(100% - 1.4375rem);
   text-overflow: ellipsis;
   text-align: left;
 }
@@ -3157,6 +3158,51 @@ label {
   text-decoration: none;
 }
 
+/* search field */
+.search-field__cancel {
+  position: absolute;
+  top: 1rem;
+  right: 0.8125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L12.5 12.5' stroke='%23172A3A' stroke-width='1.34667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.5 12.5L12.5 1.50003' stroke='%23172A3A' stroke-width='1.34667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.search-field .form-input {
+  padding: 2.026rem 2.5rem 1.1rem 2.875rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.9342 19.8683C15.8684 19.8683 19.8684 15.8683 19.8684 10.9341C19.8684 5.99995 15.8684 2 10.9342 2C5.99997 2 2 5.99995 2 10.9341C2 15.8683 5.99997 19.8683 10.9342 19.8683Z' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M22.4999 22.4999L17.2563 17.2563' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-position: left 0.6875rem center;
+  background-repeat: no-repeat;
+}
+
+.search-field .form-input ~ .form-label {
+  left: 3.0625rem;
+  width: calc(100% - 3.25rem);
+}
+
+.search-field .form-input.filled ~ .search-field__cancel, .search-field .form-input:focus ~ .search-field__cancel {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-field.form-group.has-error .form-input:not([type='password']):not(.input-icon-right),
+.search-field.form-group.has-success .form-input:not([type='password']):not(.input-icon-right) {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.9342 19.8683C15.8684 19.8683 19.8684 15.8683 19.8684 10.9341C19.8684 5.99995 15.8684 2 10.9342 2C5.99997 2 2 5.99995 2 10.9341C2 15.8683 5.99997 19.8683 10.9342 19.8683Z' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M22.4999 22.4999L17.2563 17.2563' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-size: auto;
+}
+
+.search-field.form-group.has-error .form-input:not([type='password']):not(.input-icon-right) ~ .search-field__cancel,
+.search-field.form-group.has-success .form-input:not([type='password']):not(.input-icon-right) ~ .search-field__cancel {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* input search list */
 .input-search {
   position: relative;
@@ -3166,35 +3212,36 @@ label {
   position: absolute;
   top: 3.5rem;
   width: 100%;
-  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+          box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
   border-radius: 0.5rem;
   z-index: 10;
-  max-height: 11rem;
-  overflow-y: auto;
-  background-color: #fff;
+  overflow: hidden;
+  background-color: #ffffff;
 }
 
-.input-search__list::-webkit-scrollbar-track {
+.input-search__list ul {
+  max-height: 17.5rem;
+  overflow-y: auto;
+}
+
+.input-search__list ul::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-.input-search__list::-webkit-scrollbar {
+.input-search__list ul::-webkit-scrollbar {
   width: 6px;
   background-color: transparent;
 }
 
-.input-search__list::-webkit-scrollbar-thumb {
+.input-search__list ul::-webkit-scrollbar-thumb {
   border-radius: 3px;
   background-color: #E84F35;
 }
 
 .input-search__item {
-  padding: 1rem 1.2875rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.125rem;
-  color: #000;
-  border-bottom: 1px solid #F0F5FA;
+  padding: 1.125rem 0.875rem;
+  color: #172A3A;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3202,6 +3249,10 @@ label {
 
 .input-search__item:last-of-type {
   border-bottom: none;
+}
+
+.input-search__item:hover {
+  background-color: #F0F5FA;
 }
 
 .main-header {

@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the bill yasno of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.bill-help-text {
+  line-height: 1.4;
+}
+
+.bill-info-message {
+  padding: 0.625rem;
+  color: $heading-color;
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+
+  p {
+    margin-bottom: 0;
+    color: $heading-color;
+  }
+
+  &.bill-info-iban {
+    p {
+      font-size: 0.9375rem;
+    }
+
+    .iban-title {
+      margin-bottom: 0.125rem;
+      font-size: 0.75rem;
+      color: $text-color;
+    }
+  }
+}
+
+.bill-2cols {
+  &.row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+
+    [class^="col"] {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}
