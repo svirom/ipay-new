@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/progressbar.css">
+    <link rel="stylesheet" href="/css/service-provider.css">
+    <link rel="stylesheet" href="/css/bill-eps.css">
+
+    <title>Bill EPS 1</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Каталог услуг</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Коммунальные услуги</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Тернопольский РЦ</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- main area -->
+          <main class="col-lg-8">
+
+            <div class="row">
+
+              <div class="col-12">
+                <!-- bill main widget -->
+                <div class="bill-main bill-vkp" id="bill-main-widget">
+                  <div class="row">
+
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                      <div class="bill-title">
+                        <h1>Оплатить за Тернопольский РЦ</h1>
+                        <p>Оплатить коммунальные услуги в городе Тернополь онлайн с помощью банковской карты Visa, MasterCard или ПРОСТІР.</p>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <!-- progressbar widget -->
+                      <div id="progressbar-widget">
+                        <div class="row">
+
+                          <div class="col-12 mt-3 mb-5 d-none d-sm-block">
+                            <div class="progress-payment">
+                              <div class="progress">
+                                <div class="progress-textline">
+                                  <span class="progress-text active">Ввод данных плательщика</span>
+                                  <span class="progress-text">Ввод данных платежа</span>
+                                  <span class="progress-text">Ввод данных карты</span>
+                                  <span class="progress-text">Подтверждение платежа</span>
+                                </div>
+                                <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-steps">
+                                  <span class="progress-step active"></span>
+                                  <span class="progress-step"></span>
+                                  <span class="progress-step"></span>
+                                  <span class="progress-step"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 my-3 d-sm-none">
+                            <div class="progress-mobile progress-mobile--one-fourth">
+                              <div class="progress-mobile__circle">
+                                <div class="progress-mobile__value">
+                                  <div>1/4</div>
+                                </div>
+                              </div>
+                              <div class="progress-mobile__text">
+                                <span class="progress-mobile__current">Ввод данных плательщика</span>
+                                <span class="progress-mobile__next">Далее: Ввод данных платежа</span>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div><!-- progressbar widget -->
+                    </div>
+
+                    <div class="col-12 mt-1 mb-5 mt-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-12 pb-2 d-none d-lg-block">
+                          <h2>Ввод данных плательщика</h2>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-7 col-xl-6">
+                          <form action="/" id="utility-form">
+
+                            <div class="bill-tablist">
+                              <ul class="nav" role="tablist">
+                                <li class="bill-tablist__item">
+                                  <a class="bill-tablist__link active" id="bill-tablist1-tab" data-toggle="pill" href="#bill-tablist1" role="tab" aria-controls="bill-tablist1" aria-selected="true">По лицевому счету</a>
+                                </li>
+                                <li class="bill-tablist__item">
+                                  <a class="bill-tablist__link" id="bill-tablist2-tab" data-toggle="pill" href="#bill-tablist2" role="tab" aria-controls="bill-tablist2" aria-selected="false">По адресу</a>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="tab-content mt-3">
+
+                              <!-- 1st tab section -->
+                              <div class="tab-pane fade show active" id="bill-tablist1" role="tabpanel" aria-labelledby="bill-tablist1-tab">
+                                <div class="form-group">
+                                  <input type="tel" class="form-control form-input" id="bill-account" name="name" autocomplete="off" placeholder="Лицевой счет" aria-required="true">
+                                  <label class="control-label form-label" for="bill-acount">Лицевой счет</label>
+                                </div>
+                              </div>
+
+                              <!-- 2nd tab section -->
+                              <div class="tab-pane fade" id="bill-tablist2" role="tabpanel" aria-labelledby="bill-tablist2-tab">
+
+                                <div class="form-group select-input-wrapper" data-label="Район">
+                                  <select class="select-search form-control form-input js-example-basic-single" name="select">
+                                    <option value=""></option>
+                                    <option value="1">Тернопольский</option>
+                                    <option value="2">Збаражский</option>
+                                    <option value="2">Вишневецкий</option>
+                                    <option value="2">Кременецкий</option>
+                                    <option value="2">Бучачский</option>
+                                  </select>
+                                </div>
+
+                                <div class="form-group select-input-wrapper" data-label="Населенный пункт">
+                                  <select class="select-search form-control form-input js-example-basic-single" name="select2">
+                                    <option value=""></option>
+                                    <option value="1">Тернополь</option>
+                                    <option value="2">Збараж</option>
+                                    <option value="2">Почаев</option>
+                                    <option value="2">Бучач</option>
+                                    <option value="2">Чорткив</option>
+                                  </select>
+                                </div>
+
+                                <div class="form-group select-input-wrapper" data-label="Улица">
+                                  <select class="select-search form-control form-input js-example-basic-single" name="select2">
+                                    <option value=""></option>
+                                    <option value="1">Шевченка</option>
+                                    <option value="2">Независимости</option>
+                                    <option value="2">Вишневая</option>
+                                    <option value="2">Львовская</option>
+                                    <option value="2">Киевская</option>
+                                  </select>
+                                </div>
+
+                                <div class="row bill-2cols">
+                                  <div class="col-6">
+                                    <div class="form-group">
+                                      <input type="text" id="billform-house" class="form-control form-input" name="BillForm[house]" placeholder="">
+                                      <label class="control-label form-label" for="billform-house">Номер дома</label>
+                                    </div>
+                                  </div>
+  
+                                  <div class="col-6">
+                                    <div class="form-group">
+                                      <input type="text" id="billform-korpus" class="form-control form-input" name="BillForm[korpus]" placeholder="">
+                                      <label class="control-label form-label" for="billform-korpus">Корпус</label>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <input type="text" id="billform-appartment" class="form-control form-input" name="BillForm[appartment]" placeholder="">
+                                  <label class="control-label form-label" for="billform-appartment">Квартира</label>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                            <button type="submit" class="btn btn-block btn-green btn-next" disabled>Далее</button>
+
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div><!-- bill main widget -->
+              </div>
+
+            </div>
+
+              <!-- aside mobile area -->
+              <div class="row d-lg-none">
+
+                <div class="col-12 mb-3">
+                  <!-- service provider widget -->
+                <h4 class="mb-3">Поставщик услуги</h4>
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__tel">+380(342)50-62-01</div>
+                          <div class="provider-card__tel">+380(342)50-62-02</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                  <div class="service-provider__rating">
+                    <h4 class="service-provider__title">Рейтинг услуги</h4>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result">4.4</span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                </div><!-- service provider widget -->
+                </div>
+
+              </div><!-- aside mobile area -->
+
+          </main><!-- main area -->
+
+          <!-- aside area -->
+          <aside class="col-lg-4 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-3">
+                <!-- service provider widget -->
+                <h4 class="mb-3">Поставщик услуги</h4>
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__tel">+380(342)50-62-01</div>
+                          <div class="provider-card__tel">+380(342)50-62-02</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                  <div class="service-provider__rating">
+                    <h4 class="service-provider__title">Рейтинг услуги</h4>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result">4.4</span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                </div><!-- service provider widget -->
+              </div>
+
+            </div>
+          </aside><!-- aside area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Поиск</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/select2-style.js"></script>
+  </body>
+</html>
