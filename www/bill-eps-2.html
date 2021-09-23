@@ -324,24 +324,24 @@
                           <div class="col-12 mt-3">
                             <div class="utility-wrapper">
 
-                              <div class="checkbox-control mb-3">
+                              <div class="checkbox-control mb-3 utility-checkbox">
                                 <input class="checkbox-input" type="checkbox" id="checkbox-all" checked>
                                 <label class="checkbox-label" for="checkbox-all">Выбрать все</label>
                               </div>
 
-                              <!-- utility card -->
-                              <div class="utility-card">
+                              <!-- utility card version-1 (single counter with tariff) -->
+                              <div class="utility-card mb-3">
 
                                 <!-- card -->
                                 <div class="utility-card__row">
 
                                   <div class="utility-card__inner">
                                     <div class="utility-card__inner-text">
-                                      <div class="checkbox-control mb-1">
+                                      <div class="checkbox-control">
                                         <input class="checkbox-input" type="checkbox" id="checkbox-card-1" checked>
-                                        <label class="checkbox-label heading-color" for="checkbox-card-1"><strong>Вода</strong></label>
+                                        <label class="checkbox-label heading-color" for="checkbox-card-1"><strong>За спожитий газ</strong></label>
                                       </div>
-                                      <p class="small">Тернопільводоканал o/р 14160<br> ПЕРЕВЕРТАЙЛО М. Г.</p>
+                                      <p class="small">ДП “Киевгазенеджи” о/р: 35645675<br> ПЕРЕВЕРТАЙЛО М. Г.</p>
                                     </div>
                                     <div class="utility-card__inner-field">
                                       <div class="form-group">
@@ -361,32 +361,294 @@
                                   <div class="utility-card__collapse">
 
                                     <div class="utility-card__counters">
-                                      <p class="mb-1"><strong>Ввести показания счетчиков</strong></p>
+                                      <p class="mb-2"><strong>Ввести показания счетчиков</strong></p>
       
-                                      <div class="row bill-2cols">
-        
-                                        <div class="col-md-4">
-                                          <div class="form-group">
-                                            <input type="text" id="billform-currentvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue0">Текущие</label>
+                                      <div class="utility-card__counter">
+                                        <div class="row bill-2cols">
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card1-counter-current" class="form-control form-input" name="card1-counter-current" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card1-counter-current">Текущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card1-counter-old" class="form-control form-input" name="card1-counter-old" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card1-counter-old">Предыдущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card1-counter-tariff" class="form-control form-input" name="card1-counter-tariff" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card1-counter-tariff">Тариф</label>
+                                            </div>
                                           </div>
                                         </div>
-        
-                                        <div class="col-md-4">
-                                          <div class="form-group">
-                                            <input type="text" id="billform-oldvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][oldValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-oldvalue0">Предыдущие</label>
+                                        <div class="row">
+                                          <div class="col-12 mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>0</strong></span></p>
+                                              <p class="mb-0 heading-color">Расчет по счетчику: <span class="heading-color"><strong>0.00 грн</strong></span></p>
+                                            </div>
                                           </div>
                                         </div>
+                                      </div>
       
-                                        <div class="col-md-4">
-                                          <div class="form-group">
-                                            <input type="text" id="billform-tariff" class="form-control form-input" name="BillForm[service][0][counter][0][tariff]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-tariff">Тариф</label>
+                                    </div>
+
+                                    <div class="utility-card__summary">
+                                      <p class="mb-2">Насчитано: 125.82 грн</p>
+                                      <p class="mb-2">Долг: 48.93 грн</p>
+                                      <p class="mb-2">Субсидия: 48.93 грн</p>
+                                      <p class="mb-0"><strong>Рекомендовано к оплате: 125.82 грн</strong></p>
+                                      
+                                      <div class="collapse" id="collapseAlert1">
+                                        <div class="utility-card__requisites">
+                                          <p class="utility-card__requisites-title"><strong>Реквизиты платежа</strong></p>
+                                          <p class="small">КП Киевгазэнерджи</p>
+                                          <p class="small"><strong>Р/счет: </strong>UA983226690000026039300016928</p>
+                                          <p class="small"><strong>МФО: </strong>3454354</p>
+                                          <p class="small"><strong>ОКПО: </strong>32453465</p>
+                                          <p class="small mb-0"><strong>Банк: </strong>Головне управління  ПО Ощадбанк м. Київ</p>
+                                          <a class="utility-card__requisites-close" data-toggle="collapse" href="#collapseAlert1" role="button" aria-expanded="false" aria-controls="collapseAlert1"></a>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="utility-card__footer">
+                                      <a class="btn btn-link btn-utility-requisites" data-toggle="collapse" href="#collapseAlert1" role="button" aria-expanded="false" aria-controls="collapseAlert1">Реквизиты платежа</a>
+                                      <a class="btn btn-link btn-utility-close" data-toggle="collapse" href="#collapseCard1" role="button" aria-expanded="false" aria-controls="collapseCard1">Свернуть</a>
+                                    </div>
+
+                                  </div>
+                                </div><!-- colllapse -->
+
+                              </div><!-- utility card version-1  (single counter with tariff) -->
+
+                              <!-- utility card version-2 (add counters) -->
+                              <div class="utility-card mb-3">
+
+                                <!-- card -->
+                                <div class="utility-card__row">
+
+                                  <div class="utility-card__inner">
+                                    <div class="utility-card__inner-text">
+                                      <div class="checkbox-control">
+                                        <input class="checkbox-input" type="checkbox" id="checkbox-card-2" checked>
+                                        <label class="checkbox-label heading-color" for="checkbox-card-2"><strong>За спожитий газ</strong></label>
+                                      </div>
+                                      <p class="small">ДП “Киевгазенеджи” о/р: 35645675<br> ПЕРЕВЕРТАЙЛО М. Г.</p>
+                                    </div>
+                                    <div class="utility-card__inner-field">
+                                      <div class="form-group">
+                                        <input type="tel" class="form-control form-input input-icon-right filled" id="form-icon-card-2" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="125.82">
+                                        <label class="control-label form-label" for="form-icon-card-2">К оплате</label>
+                                        <label class="label-icon-right label-currency">грн</label>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <a class="btn btn-link utility-card__link" data-toggle="collapse" href="#collapseCard2" role="button" aria-expanded="false" aria-controls="collapseCard2">Счетчики, долг, начисления</a>
+                                
+                                </div><!-- card -->
+
+                                <!-- colllapse -->
+                                <div class="collapse" id="collapseCard2">
+                                  <div class="utility-card__collapse">
+
+                                    <div class="utility-card__counters">
+                                      <p class="mb-2"><strong>Ввести показания счетчиков</strong></p>
+      
+                                      <!-- counter 1 -->
+                                      <div class="utility-card__counter">
+                                        <p class="pt-2 mb-2">Счетчик №1</p>
+                                        <div class="row bill-2cols">
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter-current" class="form-control form-input" name="card2-counter-current" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter-current">Текущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter-old" class="form-control form-input" name="card2-counter-old" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter-old">Предыдущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter-tariff" class="form-control form-input" name="card2-counter-tariff" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter-tariff">Тариф</label>
+                                            </div>
                                           </div>
                                         </div>
-        
-                                        <div class="col-12 mb-2">
-                                          <div class="d-flex flex-column flex-md-row">
-                                            <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>0</strong></span></p>
-                                            <p class="mb-0 heading-color">К оплате: <span class="heading-color"><strong>0 грн</strong></span></p>
+                                        <div class="row">
+                                          <div class="col-12 mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>0</strong></span></p>
+                                              <p class="mb-0 heading-color">Расчет по счетчику: <span class="heading-color"><strong>0.00 грн</strong></span></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <a href="#" class="btn btn-link btn-utility-addcounter">Добавить счетчик</a>
+                                      </div><!-- counter 1 -->
+
+                                      <!-- counter 2 -->
+                                      <div class="utility-card__counter hidden">
+                                        <p class="pt-2 mb-2">Счетчик №2</p>
+                                        <div class="row bill-2cols">
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter2-current" class="form-control form-input" name="card2-counter2-current" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter2-current">Текущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter2-old" class="form-control form-input" name="card2-counter2-old" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter2-old">Предыдущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter2-tariff" class="form-control form-input" name="card2-counter2-tariff" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter2-tariff">Тариф</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12 mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>0</strong></span></p>
+                                              <p class="mb-0 heading-color">Расчет по счетчику: <span class="heading-color"><strong>0.00 грн</strong></span></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <a href="#" class="btn btn-link btn-utility-addcounter">Добавить счетчик</a>
+                                      </div><!-- counter 2 -->
+
+                                      <!-- counter 3 -->
+                                      <div class="utility-card__counter hidden">
+                                        <p class="pt-2 mb-2">Счетчик №3</p>
+                                        <div class="row bill-2cols">
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter3-current" class="form-control form-input" name="card2-counter3-current" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter3-current">Текущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter3-old" class="form-control form-input" name="card2-counter3-old" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter3-old">Предыдущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group">
+                                              <input type="text" id="card2-counter3-tariff" class="form-control form-input" name="card2-counter3-tariff" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card2-counter3-tariff">Тариф</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12 mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>0</strong></span></p>
+                                              <p class="mb-0 heading-color">Расчет по счетчику: <span class="heading-color"><strong>0.00 грн</strong></span></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div><!-- counter 3-->
+      
+                                    </div>
+
+                                    <div class="utility-card__summary">
+                                      <p class="mb-2">Насчитано: 125.82 грн</p>
+                                      <p class="mb-2">Долг: 48.93 грн</p>
+                                      <p class="mb-2">Субсидия: 48.93 грн</p>
+                                      <p class="mb-0"><strong>Рекомендовано к оплате: 125.82 грн</strong></p>
+                                      
+                                      <div class="collapse" id="collapseAlert2">
+                                        <div class="utility-card__requisites">
+                                          <p class="utility-card__requisites-title"><strong>Реквизиты платежа</strong></p>
+                                          <p class="small">КП Киевгазэнерджи</p>
+                                          <p class="small"><strong>Р/счет: </strong>UA983226690000026039300016928</p>
+                                          <p class="small"><strong>МФО: </strong>3454354</p>
+                                          <p class="small"><strong>ОКПО: </strong>32453465</p>
+                                          <p class="small mb-0"><strong>Банк: </strong>Головне управління  ПО Ощадбанк м. Київ</p>
+                                          <a class="utility-card__requisites-close" data-toggle="collapse" href="#collapseAlert2" role="button" aria-expanded="false" aria-controls="collapseAlert2"></a>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="utility-card__footer">
+                                      <a class="btn btn-link btn-utility-requisites" data-toggle="collapse" href="#collapseAlert2" role="button" aria-expanded="false" aria-controls="collapseAlert2">Реквизиты платежа</a>
+                                      <a class="btn btn-link btn-utility-close" data-toggle="collapse" href="#collapseCard2" role="button" aria-expanded="false" aria-controls="collapseCard2">Свернуть</a>
+                                    </div>
+
+                                  </div>
+                                </div><!-- colllapse -->
+
+                              </div><!-- utility card version-2 (add counters) -->
+
+                              <!-- utility card version-3 (single counter without tariff) -->
+                              <div class="utility-card mb-3">
+
+                                <!-- card -->
+                                <div class="utility-card__row">
+
+                                  <div class="utility-card__inner">
+                                    <div class="utility-card__inner-text">
+                                      <div class="checkbox-control">
+                                        <input class="checkbox-input" type="checkbox" id="checkbox-card-3" checked>
+                                        <label class="checkbox-label heading-color" for="checkbox-card-3"><strong>За спожитий газ</strong></label>
+                                      </div>
+                                      <p class="small">ДП “Киевгазенеджи” о/р: 35645675<br> ПЕРЕВЕРТАЙЛО М. Г.</p>
+                                    </div>
+                                    <div class="utility-card__inner-field">
+                                      <div class="form-group">
+                                        <input type="tel" class="form-control form-input input-icon-right filled" id="form-icon-card-3" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="125.82">
+                                        <label class="control-label form-label" for="form-icon-card-3">К оплате</label>
+                                        <label class="label-icon-right label-currency">грн</label>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <a class="btn btn-link utility-card__link" data-toggle="collapse" href="#collapseCard3" role="button" aria-expanded="false" aria-controls="collapseCard3">Счетчики, долг, начисления</a>
+                                
+                                </div><!-- card -->
+
+                                <!-- colllapse -->
+                                <div class="collapse" id="collapseCard3">
+                                  <div class="utility-card__collapse">
+
+                                    <div class="utility-card__counters">
+                                      <p class="mb-2"><strong>Ввести показания счетчиков</strong></p>
+      
+                                      <div class="utility-card__counter">
+                                        <div class="row bill-2cols">
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                              <input type="text" id="card3-counter-current" class="form-control form-input" name="card3-counter-current" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card3-counter-current">Текущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                              <input type="text" id="card3-counter-old" class="form-control form-input" name="card3-counter-old" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card3-counter-old">Предыдущие</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12 mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>0</strong></span></p>
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Тариф: <span class="heading-color"><strong>26.91</strong></span></p>
+                                              <p class="mb-0 heading-color">Расчет по счетчику: <span class="heading-color"><strong>0.00 грн</strong></span></p>
+                                            </div>
                                           </div>
                                         </div>
         
@@ -399,18 +661,332 @@
                                       <p class="mb-2">Долг: 48.93 грн</p>
                                       <p class="mb-2">Субсидия: 48.93 грн</p>
                                       <p class="mb-0"><strong>Рекомендовано к оплате: 125.82 грн</strong></p>
+                                      
+                                      <div class="collapse" id="collapseAlert3">
+                                        <div class="utility-card__requisites">
+                                          <p class="utility-card__requisites-title"><strong>Реквизиты платежа</strong></p>
+                                          <p class="small">КП Киевгазэнерджи</p>
+                                          <p class="small"><strong>Р/счет: </strong>UA983226690000026039300016928</p>
+                                          <p class="small"><strong>МФО: </strong>3454354</p>
+                                          <p class="small"><strong>ОКПО: </strong>32453465</p>
+                                          <p class="small mb-0"><strong>Банк: </strong>Головне управління  ПО Ощадбанк м. Київ</p>
+                                          <a class="utility-card__requisites-close" data-toggle="collapse" href="#collapseAlert3" role="button" aria-expanded="false" aria-controls="collapseAlert3"></a>
+                                        </div>
+                                      </div>
+
                                     </div>
 
                                     <div class="utility-card__footer">
-                                      <a class="btn btn-link" data-toggle="collapse" href="#collapseAlert" role="button" aria-expanded="false" aria-controls="collapseAlert">Реквизиты платежа</a>
-                                      <a class="btn btn-link" data-toggle="collapse" href="#collapseCard1" role="button" aria-expanded="false" aria-controls="collapseCard1">Свернуть</a>
+                                      <a class="btn btn-link btn-utility-requisites" data-toggle="collapse" href="#collapseAlert3" role="button" aria-expanded="false" aria-controls="collapseAlert3">Реквизиты платежа</a>
+                                      <a class="btn btn-link btn-utility-close" data-toggle="collapse" href="#collapseCard3" role="button" aria-expanded="false" aria-controls="collapseCard3">Свернуть</a>
                                     </div>
 
                                   </div>
                                 </div><!-- colllapse -->
 
-                              </div><!-- utility card -->
+                              </div><!-- utility card version-3  (single counter without tariff) -->
 
+                              <!-- utility card version-4 (single counter with only one field) -->
+                              <div class="utility-card mb-3">
+
+                                <!-- card -->
+                                <div class="utility-card__row">
+
+                                  <div class="utility-card__inner">
+                                    <div class="utility-card__inner-text">
+                                      <div class="checkbox-control">
+                                        <input class="checkbox-input" type="checkbox" id="checkbox-card-4" checked>
+                                        <label class="checkbox-label heading-color" for="checkbox-card-4"><strong>За спожитий газ</strong></label>
+                                      </div>
+                                      <p class="small">ДП “Киевгазенеджи” о/р: 35645675<br> ПЕРЕВЕРТАЙЛО М. Г.</p>
+                                    </div>
+                                    <div class="utility-card__inner-field">
+                                      <div class="form-group">
+                                        <input type="tel" class="form-control form-input input-icon-right filled" id="form-icon-card-4" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="125.82">
+                                        <label class="control-label form-label" for="form-icon-card-4">К оплате</label>
+                                        <label class="label-icon-right label-currency">грн</label>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <a class="btn btn-link utility-card__link" data-toggle="collapse" href="#collapseCard4" role="button" aria-expanded="false" aria-controls="collapseCard4">Счетчики, долг, начисления</a>
+                                
+                                </div><!-- card -->
+
+                                <!-- colllapse -->
+                                <div class="collapse" id="collapseCard4">
+                                  <div class="utility-card__collapse">
+
+                                    <div class="utility-card__counters">
+                                      <p class="mb-2"><strong>Ввести показания счетчиков</strong></p>
+      
+                                      <div class="utility-card__counter">
+                                        <div class="row bill-2cols">
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                              <input type="text" id="card4-counter-current" class="form-control form-input" name="card4-counter-current" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card4-counter-current">Текущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 order-first order-md-1">
+                                            <p class="mt-2 mb-2 mb-md-0">Показания счетчика<br> 
+                                              на текущую дату</p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12 mt-2 mt-md-0 mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Текущие: <span class="heading-color"><strong>101.7</strong></span></p>
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Предыдущие: <span class="heading-color"><strong>100.7</strong></span></p>
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>1.0</strong></span></p>
+                                              <p class="mb-2 mb-md-0 heading-color">Тариф: <span class="heading-color"><strong>10.21</strong></span></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+      
+                                    </div>
+
+                                    <div class="utility-card__summary">
+                                      <p class="mb-2">Насчитано: 125.82 грн</p>
+                                      <p class="mb-2">Долг: 48.93 грн</p>
+                                      <p class="mb-2">Субсидия: 48.93 грн</p>
+                                      <p class="mb-0"><strong>Рекомендовано к оплате: 125.82 грн</strong></p>
+                                      
+                                      <div class="collapse" id="collapseAlert4">
+                                        <div class="utility-card__requisites">
+                                          <p class="utility-card__requisites-title"><strong>Реквизиты платежа</strong></p>
+                                          <p class="small">КП Киевгазэнерджи</p>
+                                          <p class="small"><strong>Р/счет: </strong>UA983226690000026039300016928</p>
+                                          <p class="small"><strong>МФО: </strong>3454354</p>
+                                          <p class="small"><strong>ОКПО: </strong>32453465</p>
+                                          <p class="small mb-0"><strong>Банк: </strong>Головне управління  ПО Ощадбанк м. Київ</p>
+                                          <a class="utility-card__requisites-close" data-toggle="collapse" href="#collapseAlert4" role="button" aria-expanded="false" aria-controls="collapseAlert4"></a>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="utility-card__footer">
+                                      <a class="btn btn-link btn-utility-requisites" data-toggle="collapse" href="#collapseAlert4" role="button" aria-expanded="false" aria-controls="collapseAlert4">Реквизиты платежа</a>
+                                      <a class="btn btn-link btn-utility-close" data-toggle="collapse" href="#collapseCard4" role="button" aria-expanded="false" aria-controls="collapseCard4">Свернуть</a>
+                                    </div>
+
+                                  </div>
+                                </div><!-- colllapse -->
+
+                              </div><!-- utility card version-4  (single counter with only one field) -->
+
+                              <!-- utility card version-5 (two counters with only one field) -->
+                              <div class="utility-card mb-3">
+
+                                <!-- card -->
+                                <div class="utility-card__row">
+
+                                  <div class="utility-card__inner">
+                                    <div class="utility-card__inner-text">
+                                      <div class="checkbox-control">
+                                        <input class="checkbox-input" type="checkbox" id="checkbox-card-5" checked>
+                                        <label class="checkbox-label heading-color" for="checkbox-card-5"><strong>За спожитий газ</strong></label>
+                                      </div>
+                                      <p class="small">ДП “Киевгазенеджи” о/р: 35645675<br> ПЕРЕВЕРТАЙЛО М. Г.</p>
+                                    </div>
+                                    <div class="utility-card__inner-field">
+                                      <div class="form-group">
+                                        <input type="tel" class="form-control form-input input-icon-right filled" id="form-icon-card-5" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="125.82">
+                                        <label class="control-label form-label" for="form-icon-card-5">К оплате</label>
+                                        <label class="label-icon-right label-currency">грн</label>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <a class="btn btn-link utility-card__link" data-toggle="collapse" href="#collapseCard5" role="button" aria-expanded="false" aria-controls="collapseCard5">Счетчики, долг, начисления</a>
+                                
+                                </div><!-- card -->
+
+                                <!-- colllapse -->
+                                <div class="collapse" id="collapseCard5">
+                                  <div class="utility-card__collapse">
+
+                                    <div class="utility-card__counters">
+                                      <p class="mb-2"><strong>Ввести показания счетчиков</strong></p>
+      
+                                      <!-- counter 1 -->
+                                      <div class="utility-card__counter">
+                                        <p class="pt-3 pt-md-2 mb-0 mb-md-2"><strong>Счетчик №436884</strong></p>
+                                        <div class="row bill-2cols">
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                              <input type="text" id="card5-counter-current" class="form-control form-input" name="card5-counter-current" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card5-counter-current">Текущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 order-first order-md-1">
+                                            <p class="mt-2 mb-2 mb-md-0">Показания счетчика<br> 
+                                              на текущую дату</p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12 mt-2 mt-md-0 mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Текущие: <span class="heading-color"><strong>101.7</strong></span></p>
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Предыдущие: <span class="heading-color"><strong>100.7</strong></span></p>
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>1.0</strong></span></p>
+                                              <p class="mb-2 mb-md-0 heading-color">Тариф: <span class="heading-color"><strong>10.21</strong></span></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div><!-- counter 1 -->
+
+                                      <!-- counter 2 -->
+                                      <div class="utility-card__counter">
+                                        <p class="pt-3 pt-md-2 mb-0 mb-md-2"><strong>Счетчик №436884</strong></p>
+                                        <div class="row bill-2cols">
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                              <input type="text" id="card5-counter2-current" class="form-control form-input" name="card5-counter2-current" value="" placeholder="0.00">
+                                              <label class="control-label form-label" for="card5-counter2-current">Текущие</label>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 order-first order-md-1">
+                                            <p class="mt-2 mb-2 mb-md-0">Показания счетчика<br> 
+                                              на текущую дату</p>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-12 mt-2 mt-md-0 mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Текущие: <span class="heading-color"><strong>101.7</strong></span></p>
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Предыдущие: <span class="heading-color"><strong>100.7</strong></span></p>
+                                              <p class="mb-2 mb-md-0 mr-4 heading-color">Разница: <span class="heading-color"><strong>1.0</strong></span></p>
+                                              <p class="mb-2 mb-md-0 heading-color">Тариф: <span class="heading-color"><strong>10.21</strong></span></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div><!-- counter 2 -->
+      
+                                    </div>
+
+                                    <div class="utility-card__summary">
+                                      <p class="mb-2">Насчитано: 125.82 грн</p>
+                                      <p class="mb-2">Долг: 48.93 грн</p>
+                                      <p class="mb-2">Субсидия: 48.93 грн</p>
+                                      <p class="mb-0"><strong>Рекомендовано к оплате: 125.82 грн</strong></p>
+                                      
+                                      <div class="collapse" id="collapseAlert5">
+                                        <div class="utility-card__requisites">
+                                          <p class="utility-card__requisites-title"><strong>Реквизиты платежа</strong></p>
+                                          <p class="small">КП Киевгазэнерджи</p>
+                                          <p class="small"><strong>Р/счет: </strong>UA983226690000026039300016928</p>
+                                          <p class="small"><strong>МФО: </strong>3454354</p>
+                                          <p class="small"><strong>ОКПО: </strong>32453465</p>
+                                          <p class="small mb-0"><strong>Банк: </strong>Головне управління  ПО Ощадбанк м. Київ</p>
+                                          <a class="utility-card__requisites-close" data-toggle="collapse" href="#collapseAlert5" role="button" aria-expanded="false" aria-controls="collapseAlert5"></a>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="utility-card__footer">
+                                      <a class="btn btn-link btn-utility-requisites" data-toggle="collapse" href="#collapseAlert5" role="button" aria-expanded="false" aria-controls="collapseAlert5">Реквизиты платежа</a>
+                                      <a class="btn btn-link btn-utility-close" data-toggle="collapse" href="#collapseCard5" role="button" aria-expanded="false" aria-controls="collapseCard5">Свернуть</a>
+                                    </div>
+
+                                  </div>
+                                </div><!-- colllapse -->
+
+                              </div><!-- utility card version-5  (two counters with only one field) -->
+
+                              <!-- utility card version-6 (without counters) -->
+                              <div class="utility-card mb-3">
+
+                                <!-- card -->
+                                <div class="utility-card__row">
+
+                                  <div class="utility-card__inner">
+                                    <div class="utility-card__inner-text">
+                                      <div class="checkbox-control">
+                                        <input class="checkbox-input" type="checkbox" id="checkbox-card-6" checked>
+                                        <label class="checkbox-label heading-color" for="checkbox-card-6"><strong>За спожитий газ</strong></label>
+                                      </div>
+                                      <p class="small">ДП “Киевгазенеджи” о/р: 35645675<br> ПЕРЕВЕРТАЙЛО М. Г.</p>
+                                    </div>
+                                    <div class="utility-card__inner-field">
+                                      <div class="form-group">
+                                        <input type="tel" class="form-control form-input input-icon-right filled" id="form-icon-card-6" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="125.82">
+                                        <label class="control-label form-label" for="form-icon-card-6">К оплате</label>
+                                        <label class="label-icon-right label-currency">грн</label>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <a class="btn btn-link utility-card__link" data-toggle="collapse" href="#collapseCard6" role="button" aria-expanded="false" aria-controls="collapseCard6">Счетчики, долг, начисления</a>
+                                
+                                </div><!-- card -->
+
+                                <!-- colllapse -->
+                                <div class="collapse" id="collapseCard6">
+                                  <div class="utility-card__collapse">
+
+                                    <div class="utility-card__summary">
+                                      <p class="mb-2">Насчитано: 125.82 грн</p>
+                                      <p class="mb-2">Долг: 48.93 грн</p>
+                                      <p class="mb-2">Субсидия: 48.93 грн</p>
+                                      <p class="mb-0"><strong>Рекомендовано к оплате: 125.82 грн</strong></p>
+                                      
+                                      <div class="collapse" id="collapseAlert6">
+                                        <div class="utility-card__requisites">
+                                          <p class="utility-card__requisites-title"><strong>Реквизиты платежа</strong></p>
+                                          <p class="small">КП Киевгазэнерджи</p>
+                                          <p class="small"><strong>Р/счет: </strong>UA983226690000026039300016928</p>
+                                          <p class="small"><strong>МФО: </strong>3454354</p>
+                                          <p class="small"><strong>ОКПО: </strong>32453465</p>
+                                          <p class="small mb-0"><strong>Банк: </strong>Головне управління  ПО Ощадбанк м. Київ</p>
+                                          <a class="utility-card__requisites-close" data-toggle="collapse" href="#collapseAlert6" role="button" aria-expanded="false" aria-controls="collapseAlert6"></a>
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="utility-card__footer">
+                                      <a class="btn btn-link btn-utility-requisites" data-toggle="collapse" href="#collapseAlert6" role="button" aria-expanded="false" aria-controls="collapseAlert6">Реквизиты платежа</a>
+                                      <a class="btn btn-link btn-utility-close" data-toggle="collapse" href="#collapseCard6" role="button" aria-expanded="false" aria-controls="collapseCard6">Свернуть</a>
+                                    </div>
+
+                                  </div>
+                                </div><!-- colllapse -->
+
+                              </div><!-- utility card version-6  (without counters) -->
+
+                            </div>
+                          </div>
+
+                          <div class="col-12 mt-4 mb-3">
+                            <div class="utility-summary">
+                              <div class="row justify-content-between align-items-baseline">
+                                <div class="col-auto">
+                                  <span class="heading-color"><strong>К оплате:</strong></span>
+                                </div>
+                                <div class="col-auto">
+                                  <span class="heading-color utility-summary__amount"><strong>1176.00 грн</strong></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="row justify-content-end">
+                              <div class="col-sm-12 col-md-8">
+                                <div class="row">
+                                  <div class="col-auto col-sm-5 mb-3">
+                                    <button type="button" class="btn btn-outline btn-prev btn-block d-none d-sm-block">Назад</button>
+                                    <button type="button" class="btn btn-outline btn-prev btn-empty d-sm-none"></button>
+                                  </div>
+                                  <div class="col col-sm-7 mb-3">
+                                    <button type="submit" class="btn btn-green btn-next btn-block" disabled="">Далее</button>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
 
