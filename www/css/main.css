@@ -209,6 +209,17 @@ label {
   font-weight: 500;
 }
 
+/* columns paddings 8px */
+.col-pad8.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col-pad8.row [class^="col"] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 .logo-color, .logo-red, .logo-white {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -943,8 +954,8 @@ label {
 }
 
 .select-input-wrapper .select2-container .select2-selection__rendered .select2-selection__clear {
-  margin-right: 8px;
-  line-height: 28px;
+  /* margin-right: 8px; */
+  line-height: 30px;
 }
 
 .select-input-wrapper .select2-container .select2-selection__placeholder {
@@ -3269,6 +3280,243 @@ label {
 }
 
 .input-search__item:hover {
+  background-color: #F0F5FA;
+}
+
+/* modal sign in */
+.modal-auth .modal-content {
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.modal-auth .modal-header {
+  padding: 1.875rem 1.5rem 0.25rem;
+  border-bottom: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.modal-auth .modal-header--success {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 0;
+}
+
+.modal-auth .modal-header-img {
+  margin-bottom: 0.75rem;
+}
+
+.modal-auth .close {
+  position: absolute;
+  right: 2rem;
+  top: 1.75rem;
+  opacity: 1;
+}
+
+.modal-auth .close:hover, .modal-auth .close:focus {
+  opacity: 1;
+}
+
+.modal-auth .close:focus {
+  outline: none;
+}
+
+.modal-auth .modal-body {
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .modal-auth .modal-dialog {
+    max-width: 350px;
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .modal-auth.modal {
+    background-color: #ffffff;
+  }
+  .modal-auth .modal-dialog {
+    margin: 0;
+  }
+  .modal-auth .modal-header, .modal-auth .modal-body {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+  .modal-auth .close {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+.modal-tablist__item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.modal-tablist__link {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.625rem;
+  font-family: "Montserrat", sans-serif;
+  color: #172A3A;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.modal-tablist__link::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -1px;
+  background-color: #E84F35;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.modal-tablist__link:hover {
+  color: #172A3A;
+  text-decoration: none;
+}
+
+.modal-tablist__link.active {
+  font-weight: 700;
+}
+
+.modal-tablist__link.active::after {
+  width: 100%;
+}
+
+.modal-social__title {
+  position: relative;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-social__title span {
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: #172A3A;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.modal-social__title::before {
+  position: absolute;
+  content: '';
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-bottom: 2px solid #DEE7F3;
+}
+
+.modal-social__buttons .btn {
+  height: 3.5rem;
+  padding: 0.5rem;
+}
+
+.modal-social__buttons .btn-signin-fb {
+  background: url("../img/authentication/icon-fb.svg") center no-repeat;
+}
+
+.modal-social__buttons .btn-signin-google {
+  background: url("../img/authentication/icon-google.svg") center no-repeat;
+}
+
+.modal-social__buttons .btn-signin-apple {
+  background: url("../img/authentication/icon-apple.svg") center no-repeat;
+}
+
+.modal-social--signup .modal-social__title {
+  text-align: left;
+}
+
+.modal-social--signup .modal-social__title span {
+  padding-left: 0;
+}
+
+.modal-signup {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.modal-signup .help-list {
+  padding-left: 0.25rem;
+}
+
+.modal-signup .help-list li {
+  padding: 0.1875rem 0.5rem 0.1875rem 1rem;
+}
+
+.modal-signup .help-list li::before {
+  top: 7px;
+}
+
+.modal-signup .modal-signup__collapse-in {
+  display: none;
+  position: relative;
+  margin-bottom: 0;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+.modal-signup .modal-signup__collapse-in span {
+  position: relative;
+  padding-right: 0.5rem;
+  color: #172A3A;
+  background-color: #ffffff;
+}
+
+.modal-signup .modal-signup__collapse-in::before {
+  position: absolute;
+  content: '';
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-bottom: 2px solid #DEE7F3;
+}
+
+.modal-signup .modal-signup__collapse-btn {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #172A3A;
+  background-color: #ffffff;
+}
+
+.modal-signup .modal-signup__collapse-btn span {
+  color: #E84F35;
+  text-decoration: underline;
+}
+
+.modal-signup .modal-signup__collapse-btn:hover {
+  text-decoration: none;
+}
+
+.modal-signup .modal-signup__collapse-btn[aria-expanded="true"] {
+  display: none;
+}
+
+.modal-signup .modal-signup__collapse-btn[aria-expanded="true"] ~ .modal-signup__collapse-in {
+  display: block;
+}
+
+.modal-signup__collapse form {
+  margin-top: 1rem;
+}
+
+.modal-recovery-email {
+  padding: 1rem;
+  border-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 

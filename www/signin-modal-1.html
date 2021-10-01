@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    
+    
+    <link rel="stylesheet" href="/css/p2p-fastPayment.css">
+
+    <title>Sign In Modal 1</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav>
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
+                    <span class="main-nav__bonus">154300</span>
+                    <span>бонусов</span>
+                  </span>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Вильгельмина Петренко</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Перевод денег с карты на карту</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      
+      <main>
+
+        <div class="container pt-3 pb-5">
+
+          <div class="row mt-4">
+
+            <div class="col-12">
+              <h1>Authentication Modals</h1>
+            </div>
+
+            <div class="col-12">
+              <div class="row mt-4">
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal Authentication main</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth">Modal Auth 1</a>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal phone confirmation (social)</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-2">Modal Auth 2</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal phone confirmation</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-2-1">Modal Auth 2-1</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal phone SMS</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-3">Modal Auth 3</a>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal Google success</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-4">Modal Auth 4</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal Facebook success</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-5">Modal Auth 5</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal Apple success</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-6">Modal Auth 6</a>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal Signup Success (social)</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-7">Modal Auth 7</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal Signup Success</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-8">Modal Auth 8</a>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal pass recovery</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-9">Modal Auth 9</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal pass recovery email</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-10">Modal Auth 10</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal pass recovery SMS</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-11">Modal Auth 11</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal pass recovery new pass</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-12">Modal Auth 12</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal pass recovery expired</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-13">Modal Auth 13</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Поиск</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal authentication -->
+    <div class="modal fade modal-auth" id="modal-auth" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <div class="modal-tablist">
+              <ul class="nav" role="tablist">
+                <li class="modal-tablist__item">
+                  <a class="modal-tablist__link active" id="modal-signin-tab" data-toggle="pill" href="#modal-signin" role="tab" aria-controls="modal-signin" aria-selected="true">Вход</a>
+                </li>
+                <li class="modal-tablist__item">
+                  <a class="modal-tablist__link" id="modal-signup-tab" data-toggle="pill" href="#modal-signup" role="tab" aria-controls="modal-signup" aria-selected="false">Регистрация</a>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="tab-content">
+
+              <!-- 1st tab section -->
+              <div class="tab-pane fade show active" id="modal-signin" role="tabpanel" aria-labelledby="modal-signin-tab">
+
+                <form action="">
+                  <div class="form-group">
+                    <input type="text" class="form-control form-input" id="account-login" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                    <label class="control-label form-label" for="account-login">Телефон или email</label>
+                  </div>
+                  <div class="form-group mb-0">
+                    <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
+                    <label class="control-label form-label" for="account-pass">Пароль</label>
+                    <button type="button" class="password-button"></button>
+                  </div>
+                  <div class="form-group text-right mt-1">
+                    <a href="#" class="btn btn-link remind-link small">Напомнить пароль</a>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-green btn-block" disabled="">Войти</button>
+                  </div>
+                </form>
+
+                <div class="modal-social">
+                  <div class="modal-social__title">
+                    <span>или войти с помощью соцсетей</span>
+                  </div>
+                  <div class="modal-social__buttons">
+                    <div class="row col-pad8">
+                      <div class="col-4">
+                        <a href="#" id="signinFacebook" class="btn btn-outline btn-block btn-signin-fb"></a>
+                      </div>
+                      <div class="col-4">
+                        <a href="#" id="signinGoogle" class="btn btn-outline btn-block btn-signin-google"></a>
+                      </div>
+                      <div class="col-4">
+                        <a href="#" id="signinApple" class="btn btn-outline btn-block btn-signin-apple"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              <!-- 2nd tab section -->
+              <div class="tab-pane fade" id="modal-signup" role="tabpanel" aria-labelledby="modal-signup-tab">
+
+                <div class="modal-social modal-social--signup">
+                  <div class="modal-social__title">
+                    <span>Войти с помощью соцсетей</span>
+                  </div>
+                  <div class="modal-social__buttons">
+                    <div class="row col-pad8">
+                      <div class="col-4">
+                        <a href="#" id="signupFacebook" class="btn btn-outline btn-block btn-signin-fb"></a>
+                      </div>
+                      <div class="col-4">
+                        <a href="#" id="signupGoogle" class="btn btn-outline btn-block btn-signin-google"></a>
+                      </div>
+                      <div class="col-4">
+                        <a href="#" id="signupApple" class="btn btn-outline btn-block btn-signin-apple"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-signup">
+                  <a class="modal-signup__collapse-btn" data-toggle="collapse" href="#collapseSignupTel" role="button" aria-expanded="false" aria-controls="collapseSignupTel">или по <span>номеру телефона</span></a>
+                  <p class="modal-signup__collapse-in"><span>или по номеру телефона</span></p>
+
+                  <div class="collapse" id="collapseSignupTel">
+                    <div class="modal-signup__collapse">
+
+                      <form action="">
+                        <div class="form-group">
+                          <input type="tel" class="form-control form-input" id="account-phone" name="form-phone" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true">
+                          <label class="control-label form-label" for="account-phone">Номер телефона</label>
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
+                          <label class="control-label form-label" for="account-pass">Пароль</label>
+                          <button type="button" class="password-button"></button>
+                        </div>
+                        <div class="form-group mb-2">
+                          <p class="mb-2 small heading-color">Пароль должен содержать:</p>
+                          <div class="row no-gutters">
+                            <div class="col-6">
+                              <ul class="help-list">
+                                <li>не менее 8 символов</li>
+                                <li>1 цифру</li>
+                                <li>1 заглавною букву</li>
+                              </ul>
+                            </div>
+                            <div class="col-6">
+                              <ul class="help-list">
+                                <li>1 строчную букву</li>
+                                <li>не содержать кириллицу</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-green btn-block" disabled="">Зарегистрироваться</button>
+                        </div>
+                      </form>
+
+                      <p class="text-center heading-color mb-0">Нажимая кнопку “Зарегистрироваться”, Вы соглашаетесь с условиями <a href="#" class="red-link">публичного договора</a></p>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal phone confirmation social (modal auth 2) -->
+    <div class="modal fade modal-auth" id="modal-auth-2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h4 class="mb-0">Подтверждение<br> телефона</h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <p>Для успешной привязки аккаунта к iPay.ua укажите ваш номер телефона, Зарегистрированный на iPay.ua</p>
+
+            <form action="">
+              <div class="form-group">
+                <input type="tel" class="form-control form-input" id="account-tel" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                <label class="control-label form-label" for="account-tel">Телефон</label>
+              </div>
+
+              <div class="form-group mb-0">
+                <div class="row col-pad8">
+                  <div class="col-auto">
+                    <a href="#" class="btn btn-outline btn-prev btn-empty d-block"></a>
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-green btn-block" disabled="">Продолжить</button>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal phone confirmation (modal auth 2-1) -->
+    <div class="modal fade modal-auth" id="modal-auth-2-1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h4 class="mb-0">Подтверждение<br> телефона</h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <p>Для успешной привязки аккаунта к iPay.ua укажите ваш номер телефона</p>
+
+            <form action="">
+              <div class="form-group">
+                <input type="tel" class="form-control form-input" id="account-tel-1" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                <label class="control-label form-label" for="account-tel-1">Телефон</label>
+              </div>
+
+              <div class="form-group mb-0">
+                <div class="row col-pad8">
+                  <div class="col-auto">
+                    <a href="#" class="btn btn-outline btn-prev btn-empty d-block"></a>
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-green btn-block" disabled="">Продолжить</button>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal phone sms social (modal auth 3) -->
+    <div class="modal fade modal-auth" id="modal-auth-3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h4 class="mb-0">Подтверждение<br> телефона</h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <p class="heading-color">на номер <strong>+380(67)999-88-77</strong> выслано SMS с проверочным кодом.</p>
+
+            <form action="">
+
+              <div class="form-group">
+                <input type="tel" class="form-control form-input" id="account-sms" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                <label class="control-label form-label" for="account-sms">Код из SMS</label>
+              </div>
+
+              <div class="form-group d-flex justify-content-between align-items-baseline">
+                <p class="heading-color mb-0 small text-nowrap">Не приходит SMS?</p> 
+                <p class="mb-0 small text-nowrap"><a href="#" class="btn btn-link remind-link small">Отправить код повторно</a></p>
+              </div>
+
+              <div class="form-group mb-0">
+                <div class="row col-pad8">
+                  <div class="col-auto">
+                    <a href="#" class="btn btn-outline btn-prev btn-empty d-block"></a>
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-green btn-block" disabled="">Продолжить</button>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal google success (modal auth 4) -->
+    <div class="modal fade modal-auth" id="modal-auth-4" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header modal-header--success">
+
+            <div class="modal-header-img">
+              <img src="/img/authentication/icon-google.svg" alt="Google">
+            </div>
+
+            <h2 class="mb-0 text-center">Вы подвязали ваш аккаунт Google!</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <p class="heading-color">Теперь вам доступны все возможности и преимущества сервиса iPay.ua</p>
+
+            <button type="button" class="btn btn-green btn-block" data-dismiss="modal" aria-label="Close">Отлично!</button>
+
+            <p class="mt-3">Для максимальной безопасности создайте пароль для вашего аккаунта</p>
+
+            <a href="#" class="red-link">Создать пароль</a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal facebook success (modal auth 5) -->
+    <div class="modal fade modal-auth" id="modal-auth-5" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header modal-header--success">
+
+            <div class="modal-header-img">
+              <img src="/img/authentication/icon-fb.svg" alt="Facebook">
+            </div>
+
+            <h2 class="mb-0 text-center">Вы подвязали ваш аккаунт Facebook!</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <p class="heading-color">Теперь вы можете входить на iPay.ua с помощью Facebook в один клик</p>
+
+            <button type="button" class="btn btn-green btn-block" data-dismiss="modal" aria-label="Close">Отлично!</button>
+
+            <p class="mt-3">Для максимальной безопасности создайте пароль для вашего аккаунта</p>
+
+            <a href="#" class="red-link">Создать пароль</a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal apple success (modal auth 6) -->
+    <div class="modal fade modal-auth" id="modal-auth-6" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header modal-header--success">
+
+            <div class="modal-header-img">
+              <img src="/img/authentication/icon-apple.svg" alt="Apple">
+            </div>
+
+            <h2 class="mb-0 text-center">Вы подвязали ваш аккаунт Apple!</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <p class="heading-color">Теперь вы можете входить на iPay.ua с помощью Apple в один клик</p>
+
+            <button type="button" class="btn btn-green btn-block" data-dismiss="modal" aria-label="Close">Отлично!</button>
+
+            <p class="mt-3">Для максимальной безопасности создайте пароль для вашего аккаунта</p>
+
+            <a href="#" class="red-link">Создать пароль</a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal signup success social (modal auth 7) -->
+    <div class="modal fade modal-auth" id="modal-auth-7" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header modal-header--success">
+
+            <div class="modal-header-img">
+              <img src="/img/authentication/signup-success-img.svg" alt="Success">
+            </div>
+
+            <h2 class="mb-0 text-center">Регистрация<br> успешна</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <p class="heading-color">Теперь вам доступны все возможности и преимущества сервиса iPay.ua</p>
+
+            <button type="button" class="btn btn-green btn-block" data-dismiss="modal" aria-label="Close">Отлично!</button>
+
+            <p class="mt-3">Для максимальной безопасности создайте пароль для вашего аккаунта</p>
+
+            <a href="#" class="red-link">Создать пароль</a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal signup success (modal auth 8) -->
+    <div class="modal fade modal-auth" id="modal-auth-8" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header modal-header--success">
+
+            <div class="modal-header-img">
+              <img src="/img/authentication/signup-success-img.svg" alt="Success">
+            </div>
+
+            <h2 class="mb-0 text-center">Регистрация<br> успешна</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <p class="heading-color">Теперь вам доступны все возможности и преимущества сервиса iPay.ua</p>
+
+            <button type="button" class="btn btn-green btn-block" data-dismiss="modal" aria-label="Close">Отлично!</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal password recovery (modal auth 9) -->
+    <div class="modal fade modal-auth" id="modal-auth-9" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h4 class="mb-0">Восстановление пароля</h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <form action="">
+              <div class="form-group">
+                <input type="tel" class="form-control form-input" id="account-tel-email" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                <label class="control-label form-label" for="account-tel-email">Телефон или e-mail</label>
+              </div>
+
+              <div class="form-group mb-0">
+                <div class="row col-pad8">
+                  <div class="col-auto">
+                    <a href="#" class="btn btn-outline btn-prev btn-empty d-block"></a>
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-green btn-block">Продолжить</button>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal password recovery email (modal auth 10) -->
+    <div class="modal fade modal-auth" id="modal-auth-10" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h4 class="mb-0">Восстановление пароля</h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <div class="modal-recovery-email mb-3">
+              <p class="heading-color mb-0">на <strong>qwerty@gmail.com</strong> выслан e-mail с ссылкой на восстановление пароля</p>
+            </div>
+
+            <a href="#" class="red-link"><u>Вернуться ко Входу</u></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal password recovery sms (modal auth 11) -->
+    <div class="modal fade modal-auth" id="modal-auth-11" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h4 class="mb-0">Восстановление пароля</h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <p class="heading-color">на номер <strong>+380(67)999-88-77</strong> выслано SMS с проверочным кодом.</p>
+
+            <form action="">
+
+              <div class="form-group">
+                <input type="tel" class="form-control form-input" id="account-sms-11" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                <label class="control-label form-label" for="account-sms-11">Код из SMS</label>
+              </div>
+
+              <div class="form-group d-flex justify-content-between align-items-baseline">
+                <p class="heading-color mb-0 small text-nowrap">Не приходит SMS?</p> 
+                <p class="mb-0 small text-nowrap"><a href="#" class="btn btn-link remind-link small">Отправить код повторно</a></p>
+              </div>
+
+              <div class="form-group mb-0">
+                <div class="row col-pad8">
+                  <div class="col-auto">
+                    <a href="#" class="btn btn-outline btn-prev btn-empty d-block"></a>
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-green btn-block" disabled="">Продолжить</button>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal password recovery new pass (modal auth 12) -->
+    <div class="modal fade modal-auth" id="modal-auth-12" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h4 class="mb-0">Введите новый пароль</h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <form action="">
+              <div class="form-group has-success">
+                <input type="password" class="form-control form-input filled" id="account-pass" name="form-login" autocomplete="off" placeholder="" aria-required="true" value="fghfdsfs">
+                <label class="control-label form-label" for="account-pass">Пароль</label>
+                <button type="button" class="password-button"></button>
+              </div>
+
+              <div class="form-group mb-2">
+                <p class="mb-2 small heading-color">Пароль должен содержать:</p>
+                <div class="row no-gutters">
+                  <div class="col-6">
+                    <ul class="help-list">
+                      <li class="checked">не менее 8 символов</li>
+                      <li class="checked">1 цифру</li>
+                      <li class="checked">1 заглавною букву</li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="help-list">
+                      <li class="checked">1 строчную букву</li>
+                      <li class="checked">не содержать кириллицу</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-0">
+                <button type="submit" class="btn btn-green btn-block">Сохранить и Войти</button>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal password recovery expired (modal auth 13) -->
+    <div class="modal fade modal-auth" id="modal-auth-13" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h4 class="mb-0">Введите новый пароль</h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body text-center">
+
+            <div class="modal-recovery-email mb-3">
+              <p class="heading-color mb-0">Срок действия ссылки восстановления пароля истек.</p>
+            </div>
+
+            <a href="#" class="btn btn-green btn-block mb-3">Запросить новую ссылку</button>
+
+            <a href="#" class="red-link"><u>Вернуться ко Входу</u></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/p2p-main.js"></script>
+  </body>
+</html>

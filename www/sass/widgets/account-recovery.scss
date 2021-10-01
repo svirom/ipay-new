@@ -11,6 +11,10 @@
   min-height: 60vh;
 
   &__email {
+    padding: 1rem;
+    border-radius: $border-radius;
+    background-color: $light-grey;
+
     p {
       color: #000;
     }
@@ -22,17 +26,13 @@
     height: 4.5rem;
   }
 
-  @include until($md) {
-    &__email {
-      padding: 1.36125rem 1.7rem 0.36125rem;
-      border-radius: $border-radius;
-      background-color: $light-grey;
-    }
+  &__back {
+    .btn-link {
+      color: $btn-red;
 
-    &__back {
-      .remind-link.btn-link, 
-      .remind-link.btn-link.text-link {
+      &:hover {
         color: $btn-red;
+        text-decoration: underline;
       }
     }
   }

@@ -2,6 +2,12 @@
   min-height: 60vh;
 }
 
+.account-recovery__email {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
+}
+
 .account-recovery__email p {
   color: #000;
 }
@@ -14,16 +20,13 @@
   height: 4.5rem;
 }
 
-@media screen and (max-width: 767px) {
-  .account-recovery__email {
-    padding: 1.36125rem 1.7rem 0.36125rem;
-    border-radius: 0.5rem;
-    background-color: #F0F5FA;
-  }
-  .account-recovery__back .remind-link.btn-link,
-  .account-recovery__back .remind-link.btn-link.text-link {
-    color: #E84F35;
-  }
+.account-recovery__back .btn-link {
+  color: #E84F35;
+}
+
+.account-recovery__back .btn-link:hover {
+  color: #E84F35;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 575px) {

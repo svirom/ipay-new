@@ -152,6 +152,22 @@
   padding-top: 1rem;
 }
 
+.utility-card__counters .btn-utility-addcounter {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.75rem;
+  color: #3B566E;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 6.76794L10 14.2322' stroke='%233B566E' stroke-width='0.628906' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.7319 10.5001L6.26758 10.5001' stroke='%233B566E' stroke-width='0.628906' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.6019 10.5C17.6019 14.6986 14.1983 18.1022 9.99967 18.1022C5.80109 18.1022 2.39746 14.6986 2.39746 10.5C2.39746 6.30139 5.80109 2.89777 9.99967 2.89777C14.1983 2.89777 17.6019 6.30139 17.6019 10.5Z' stroke='%23172A3A' stroke-width='0.628906' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center no-repeat;
+}
+
+.utility-card__counters .btn-utility-addcounter.hidden {
+  display: none;
+}
+
+.utility-card__counters .btn-utility-addcounter:focus {
+  text-decoration: none;
+}
+
 .utility-card__counter {
   position: relative;
 }
@@ -177,16 +193,10 @@
   display: none;
 }
 
-.utility-card__counter .btn-utility-addcounter {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+.utility-card__counter .btn-utility-removecounter {
   padding-left: 1.75rem;
-  color: #3B566E;
-  background: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 6.76794L10 14.2322' stroke='%233B566E' stroke-width='0.628906' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.7319 10.5001L6.26758 10.5001' stroke='%233B566E' stroke-width='0.628906' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.6019 10.5C17.6019 14.6986 14.1983 18.1022 9.99967 18.1022C5.80109 18.1022 2.39746 14.6986 2.39746 10.5C2.39746 6.30139 5.80109 2.89777 9.99967 2.89777C14.1983 2.89777 17.6019 6.30139 17.6019 10.5Z' stroke='%23172A3A' stroke-width='0.628906' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center no-repeat;
-}
-
-.utility-card__counter .btn-utility-addcounter.hidden {
-  display: none;
+  color: #E84F35;
+  background: url("data:image/svg+xml,%3Csvg width='19' height='21' viewBox='0 0 19 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.35449 4.27081H17.6462' stroke='%23E84F35' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.8543 9.06245V14.8124M9.50016 8.94745V14.8124V8.94745ZM6.146 9.06245V14.8124V9.06245Z' stroke='%23E84F35' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.8962 4.27081H7.10449V2.35415C7.10449 1.82706 7.53574 1.39581 8.06283 1.39581H10.9378C11.4649 1.39581 11.8962 1.82706 11.8962 2.35415V4.27081Z' stroke='%23E84F35' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.7293 4.27081V17.6875C15.7293 18.7416 14.8668 19.6041 13.8127 19.6041H5.18766C4.1335 19.6041 3.271 18.7416 3.271 17.6875V4.27081' stroke='%23E84F35' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center no-repeat;
 }
 
 .utility-card__summary {

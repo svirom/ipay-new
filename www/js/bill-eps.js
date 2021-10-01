@@ -36,11 +36,23 @@ $(document).ready(function() {
 
   })
 
-  // add counter
+  // add/remove counter
   $('.utility-card__counters').on('click', function(e) {
     e.preventDefault();
+
+    var utilityCardHidden = $(e.target).parents('.utility-card__counters').find('.utility-card__counter.hidden');
+
     if ($(e.target).hasClass('btn-utility-addcounter')) {
-      $(e.target).addClass('hidden').parents('.utility-card__counter').next('.utility-card__counter').removeClass('hidden');
+      $(utilityCardHidden).first().removeClass('hidden');
+      
+      ($(utilityCardHidden).first().index() === $(utilityCardHidden).last().index()) ? $(e.target).addClass('hidden') : '';
+    }
+
+    if ($(e.target).hasClass('btn-utility-removecounter')) {
+      $(e.target).parents('.utility-card__counter').addClass('hidden');
+      utilityCardHidden = $(e.target).parents('.utility-card__counters').find('.utility-card__counter.hidden');
+
+      ($(utilityCardHidden).length) ? $(e.target).parents('.utility-card__counters').find('.btn-utility-addcounter').removeClass('hidden') : '';
     }
   })
   
