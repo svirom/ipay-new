@@ -1,0 +1,571 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the insurance pages of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.insurance-main {
+  &.main-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.375rem;
+    color: $btn-red;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  .btn-insurance {
+    width: 100%;
+    max-width: 13.5rem;
+    padding: 0.75rem;
+    color: #ffffff;
+    background-color: $btn-red;
+
+    &:hover, &:focus {
+      color: #ffffff;
+      background-color: $btn-red-hover;
+    }
+  }
+
+  .insurance-list {
+    li {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 1.75rem;
+      color: $heading-color;
+  
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 4px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $btn-red;
+      }
+  
+      &:last-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .insurance-dark {
+    color: #ffffff;
+    background-color: $heading-color;
+
+    h2 {
+      color: $btn-red;
+    }
+
+    p {
+      color: #ffffff;
+    }
+
+    .insurance-list {
+      li {
+        color: #ffffff;
+      }
+    }
+  }
+
+  @include until($xl) {
+    h1 {
+      font-size: 1.875rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include until($md) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.125rem;
+    }
+
+    h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+
+    .btn-insurance {
+      max-width: none;
+    }
+
+    .insurance-list {
+      li {
+        margin-bottom: 1.125rem;
+      }
+    }
+  }
+}
+
+/* title section */
+.insurance-title {
+  padding: 4rem 0 6.5rem;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 45% auto;
+
+  &.osago-title {
+    background-image: url('../img/insurance/osago-title-img1.jpg');
+  }
+
+  &.travel-title {
+    background-image: url('../img/insurance/travel-title-img1.jpg');
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (max-width: 1760px) {
+    background-position: right -100px center;
+    background-size: 55% auto;
+  }
+
+  @media screen and (max-width: 1440px) {
+    &.osago-title {
+      background-image: url('../img/insurance/osago-title-img.jpg');
+      background-position: right center;
+      background-size: auto 100%;
+    }
+
+    &.travel-title {
+      background-image: url('../img/insurance/travel-title-img.jpg');
+      background-size: auto 100%;
+    }
+  }
+
+  @include until($xl) {
+    padding: 4rem 0;
+
+    p {
+      padding-right: 2.5rem;
+    }
+
+    &.osago-title {
+      background-position: right -156px center;
+    }
+  }
+
+  @include until($lg) {
+    padding: 3rem 0;
+
+    &.osago-title {
+      background-position: right -198px center;
+    }
+
+    &.travel-title {
+      background-position: right -248px center;
+    }
+  }
+
+  @include until($md) {
+    &.osago-title, &.travel-title {
+      background-image: none;
+    }
+  }
+
+  @include until($sm) {
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+
+    p {
+      padding-right: 0;
+    }
+
+    .insurance-title-img {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+/* insurance about section */
+.insurance-about {
+  padding: 5rem 0 3rem;
+
+  .insurance-accident-img {
+    margin-bottom: 2rem;
+  }
+
+  h4 {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  &.travel-howto {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #284359;
+  }
+
+  @include until($md) {
+    padding: 2.5rem 0 0.5rem;
+
+    &.travel-howto {
+      padding-bottom: 2.5rem;
+    }
+  }
+}
+
+/* insurance types section */
+.insurance-types {
+  padding-top: 5rem;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 43%;
+
+  h4 {
+    font-family: $text-font;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  &.osago-types {
+    background-image: url('../img/insurance/osago-types.jpg');
+  }
+
+  &.travel-types {
+    background-image: url('../img/insurance/travel-types.jpg');
+  }
+
+  .insurance-types-img {
+    margin-bottom: 2rem;
+  }
+
+  @include until($xl) {
+    padding-top: 3.75rem;
+    background-size: 41%;
+  }
+
+  @include until($lg) {
+    background-size: 33%;
+  }
+
+  @include until($md) {
+    padding-top: 2.5rem;
+
+    &.osago-types, &.travel-types {
+      background-image: none;
+    }
+  }
+
+  @include until($sm) {
+    padding-top: 0;
+
+    .insurance-types-img {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+/* insurance advantages section */
+.insurance-advantages {
+  padding: 7.5rem 0 5rem;
+
+  h2 {
+    margin-bottom: 3.25rem;
+  }
+
+  .advantages-card {
+    padding: 0 1rem;
+
+    h3 {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      font-family: $text-font;
+      font-weight: 500;
+    }
+  }
+
+  @include until($xl) {
+    padding-top: 3.75rem;
+  }
+
+  @include until($lg) {
+    padding: 2.5rem 0 1rem;
+    
+    .advantages-card {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include until($md) {
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .advantages-card {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+/* insurance get section */
+.insurance-get {
+  padding: 5rem 0;
+
+  .insurance-list li {
+    margin-bottom: 1.125rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .insurance-get-img {
+    text-align: right;
+
+    img {
+      border-radius: 0.5rem;
+      box-shadow: 0px 4px 20px $card-shadow;
+    }
+  }
+
+  @include until($md) {
+    padding: 2rem 0 2.5rem;
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .insurance-list li:last-child {
+      margin-bottom: 1.5rem;
+    }
+
+    .insurance-get-img {
+      text-align: left;
+    }
+  }
+}
+
+/* insurance documents section */
+.insurance-documents {
+  padding: 5rem 0;
+  background-color: $light-grey;
+
+  h2 {
+    margin-bottom: 2.625rem;
+  }
+
+  .documents-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 229px;
+    padding: 2.625rem 0.875rem 0;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+  
+    img {
+      margin-bottom: 2rem;
+    }
+  }  
+
+  .documents-btn {
+    margin-top: 3.75rem;
+  }
+
+  @include until($xl) {
+    .documents-card {
+      height: 260px;
+    }
+  }
+
+  @include until($lg) {
+    .documents-card {
+      height: 229px;
+      margin-bottom: 1.5rem;
+    }
+
+    .documents-btn {
+      margin-top: 2.5rem;
+    }
+  }
+
+  @include until($md) {
+    padding: 2.5rem 0 2.5rem;
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .documents-btn {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+/* insurance cost section */
+.insurance-cost {
+  padding: 5rem 0 3.5rem;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 43%;
+
+  &.osago-cost {
+    background-image: url('../img/insurance/osago-cost.jpg');
+  }
+
+  &.travel-cost {
+    background-image: url('../img/insurance/travel-cost.jpg');
+  }
+
+  .insurance-cost-img {
+    margin-bottom: 2rem;
+  }
+
+  @include until($xl) {
+    background-size: 41%;
+  }
+
+  @include until($lg) {
+    padding-top: 3.75rem;
+    padding-bottom: 2rem;
+    background-size: 33%;
+  }
+
+  @include until($md) {
+    padding-top: 2.5rem;
+    padding-bottom: 0.5rem;
+
+    &.osago-cost, &.travel-cost {
+      background-image: none;
+    }
+
+    h3 {
+      margin-bottom: 1.125rem;
+    }
+  }
+
+  @include until($sm) {
+    padding-top: 0;
+
+    .insurance-cost-img {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+/* insurance electronic policy section */
+.insurance-electronic {
+  padding: 5rem 0;
+  border-bottom: 1px solid #284359;
+  background-image: linear-gradient(to right, $light-grey 50%, $heading-color 50%, $heading-color 100%);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+
+  .electronic-howto {
+    position: relative;
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .electronic-promo {
+    position: relative;
+
+    h2, p {
+      color: #ffffff;
+    }
+  }
+
+  @include until($md) {
+    padding: 0;
+    background-image: none;
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .electronic-howto {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      background-color: $light-grey;
+
+      p {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .electronic-promo {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      background-color: $heading-color;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .electronic-howto, .electronic-promo {
+      &::before, &::after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 50%;
+        top: 0;
+      }
+
+      &::before {
+        left: -50%;
+      }
+
+      &::after {
+        right: -50%;
+      }
+    }
+
+    .electronic-howto {
+      &::before, &::after {
+        background-color: $light-grey;
+      }
+    }
+
+    .electronic-promo {
+      &::before, &::after {
+        background-color: $heading-color;
+      }
+    }
+  }
+}

@@ -9,13 +9,13 @@ $(document).ready(function() {
       var counter = rows.length;
 
       if ($(e.target).hasClass('btn-bill-counteradd')) {
-      
+
         if (rows.length < 3) {
 
           $(rows).each(function() {
             ($(this).data('counter') == counter) ? counter++ : counter;
           })
-    
+
           var html = '<div class="bill-countercard__row mt-4" data-counter="' + counter + '">';
           html += '<div class="row justify-content-between mb-1">';
           html += '<div class="col-12 col-md-auto mb-2 mb-md-0 d-flex align-items-center">';
@@ -52,11 +52,11 @@ $(document).ready(function() {
           html += '</div>';
           html += '</div>';
           html += '</div>';
-    
+
           $(this).find('.bill-countercard__add').before(html);
-    
+
         }
-  
+
         (rows.length === 2) ? $(this).find('.btn-bill-counteradd').css('display', 'none') : $(this).find('.btn-bill-counteradd').css('display', 'block');
       }
 

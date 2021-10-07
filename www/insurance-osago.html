@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/insurance.css">
+
+    <title>ОСАГО Онлайн</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                    <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span>
+                        <span>или зарегистрироваться</span>
+                      </a>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Платежи</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Страхование</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>ОСАГО онлайн</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content / main area -->
+      <main class="main-content insurance-main">
+
+        <!-- title section -->
+        <section class="insurance-title osago-title">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-7 col-xl-6 pr-xl-0 pb-2 pb-md-0">
+                <h1>Купить автогражданку (ОСАГО) онлайн</h1>
+                <p>Езда на автомобиле всегда связана с различными рисками, особенно вероятность столкновения  дорогостоящими машинами. Именно для таких случаев и требуется страховка авто ОСАГО, которая позволит избежать финансовых издержек при возникновении непредвиденных ситуаций.</p>
+                <a href="#" class="btn btn-insurance">Оформить ОСАГО</a>
+              </div>
+              <div class="col-12 mt-4 d-md-none insurance-title-img">
+                <img src="/img/insurance/osago-title-img-mobile.jpg" class="img-fluid" alt="Image">
+              </div>
+            </div>
+          </div>
+        </section><!-- title section -->
+
+        <!-- about insurance section -->
+        <section class="insurance-about insurance-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h2>Что такое Автогражданка (ОСАГО)?</h2>
+                <p>Страховка на машину ОСАГО является формой государственной защиты людей, которые пострадали в результате дорожно-транспортных происшествий. Фактически, она представляет собой обязательное страхование гражданско-правовой ответственности владельцев транспорта. С ее помощью компенсируется ущерб лицам, которые понесли ущерб во время ДТП. ОСАГО покрывает расходы, которые возникнут у виновника аварии.</p>
+                <h4>Страховщик оплачивает:</h4>
+                <ul class="insurance-list">
+                  <li>Ремонт пострадавшей машины;</li>
+                  <li>Лечение водителя и пасажиров;</li>
+                  <li>Восстановление поврежденного имущества третьих лиц (забор, стена дома и прочая недвижимость).</li>
+                </ul>
+                <p>Большинство людей полис ОСАГО называют Автогражданкой. Необходимо еще раз подчеркнуть, что такая разновидность страхования является обязательной. Без страховки садиться за руль автомобиля запрещено. Кроме того, с ее помощью можно получить возмещение даже в том случае, если в результате ДТП вы понесли ущерб, а у виновника ОСАГО нет. Действует страховка в течение периода от 15 дней до 1 года.</p>
+              </div>
+            </div>
+          </div>
+        </section><!-- about insurance section -->
+
+        <!-- insurance types section -->
+        <section class="insurance-types osago-types">
+          <div class="container">
+            <div class="row justify-content-end">
+              <div class="col-12 d-md-none insurance-types-img">
+                <img src="/img/insurance/osago-types-mobile.jpg" class="img-fluid" alt="Image">
+              </div>
+              <div class="col-md-8 col-lg-7 col-xl-6">
+                <h3>Какие автогражданки бывают?</h3>
+                <h4>Онлайн-полис</h4>
+                <p>Страховка авто онлайн – это наиболее оптимальный способ защитить себя от серьезных материальных издержек при возникновении дорожно-транспортного происшествия. Документ имеет точно такую же юридическую силу, как и обычная страховка. После оплаты всей стоимости полис вышлют вам на e-mail в формате PDF. Он будет зафиксирован в базе МТСБУ и проверяется полицией. Проверить действительность полиса можно по номерному знаку авто или номеру страховки на сайте МТСБУ.</p>
+              </div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-lg-7 col-xl-6 mt-3">
+                <h4>Обычная (бумажная) страховка</h4>
+                <p>Это традиционный вариант, когда вы посещаете офис. Его преимущество состоит в том, что сотрудник страховой компании сможет максимально подробно рассказать об особенностях полиса. В то же время, менеджеры заинтересованы в том, чтобы продать вам товар с наценкой, предложить дополнительные услуги. Кроме того, сама процедура может отнять достаточно много времени (особенно, если поблизости нет подходящего офиса).</p>
+              </div>
+            </div>
+          </div>
+        </section><!-- insurance types section -->
+
+        <!-- insurance advantages section -->
+        <section class="insurance-advantages">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h2>Преимущества онлайн полиса перед обычным</h2>
+              </div>
+            </div>
+            <div class="row justify-content-center text-center">
+              <div class="col-md-6 col-lg-4">
+                <div class="advantages-card">
+                  <img src="/img/insurance/insurance-clock.svg" alt="Icon">
+                  <h3>Экономия времени</h3>
+                  <p class="mb-0">Вам не нужно посещать отделение подходящей страховой компании,  ждать, пока подготовят полис. Вся процедура занимает несколько минут, документ в формате PDF отправят на почту сразу же после оплаты</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="advantages-card">
+                  <img src="/img/insurance/insurance-sale.svg" alt="Icon">
+                  <h3>Доступная стоимость</h3>
+                  <p class="mb-0">С помощью онлайн-ресурсов вы не только не будете оплачивать стоимость доставки, но еще и экономите на самой цене полиса до 10%</p>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-4">
+                <div class="advantages-card">
+                  <img src="/img/insurance/insurance-shield.svg" alt="Icon">
+                  <h3>Гарантия подлинности</h3>
+                  <p class="mb-0">Подделать электронную страховку невозможно. Кроме того, потерять такой полис невозможно – он всегда будет на вашем компьютере, планшете или телефоне</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section><!-- insurance advantages section -->
+
+        <!-- about insurance section -->
+        <section class="insurance-about insurance-dark text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h2>Онлайн полис от Арсенал страхование и iPay.ua</h2>
+                <p>Совсем недавно ресурс для онлайн-транзакций iPay.ua, а также СК «Арсенал-Страхование» запустили услугу покупки ОСАГО через интернет. Главное преимущество такого предложения – это максимальная оперативность получения полиса. Вы получите необходимый документ сразу же после оплаты. При этом для владельца автомобиля нет нужды готовить никакие бумаги. Электронное страхование возможно для владельцев любых транспортных средств, включая мотобайки, легковые и грузовые автомобили, автобусы, прицепы. Есть разные страховые продукты для машин с любым объемом двивжка. iPay.ua – это первый в нашей стране онлайн-ресурс, позволяющий оформить ОСАГО и рассчитать страховку онлайн, сидя перед монитором компьютера или экрана смартфона!</p>
+              </div>
+            </div>
+          </div>
+        </section><!-- about insurance section -->
+
+        <!-- insurance get online section -->
+        <section class="insurance-get">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3>Как оформить осаго онлайн?</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p>Главным преимуществом онлайн-страхования является тот факт, что процедура требует от владельца автотранспорта минимум сил и времени. Для оформления полиса владельцу не нужно готовить никаких бумажных документов. Достаточно лишь посетить сайт iPay.ua, выбрать категорию Страхование-ОСАГО, после чего ввести следующую информацию:</p>
+                <ul class="insurance-list">
+                  <li>Тип транспортного средства;</li>
+                  <li>Объем мотора;</li>
+                  <li>Наличие льготной категории;</li>
+                  <li>Место регистрации авто;</li>
+                  <li>Размер франшизы (размер средств, покрывающихся за счет владельца автомобиля);</li>
+                  <li>Начало и период действия полиса.</li>
+                </ul>
+                <p class="mb-md-0">После этого онлайн-калькулятор рассчитает стоимость услуги, а вам останется лишь ввести сведения о себе и авто, после чего оплатить полис. Спустя пару минут на ваш e-mail придет письмо с электронным документом, который можно использовать в случае возникновения непредвиденных ситуаций.</p>
+              </div>
+              <div class="col-md-6 insurance-get-img">
+                <img src="/img/insurance/osago-get.jpg" srcset="/img/insurance/osago-get.jpg 1x, /img/insurance/osago-get@2x.jpg 2x" class="img-fluid" alt="Image">
+              </div>
+            </div>
+          </div>
+        </section><!-- insurance get online section -->
+
+        <!-- insurance documents section -->
+        <section class="insurance-documents">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h2 class="text-color">Онлайн полис от Арсенал страхование и iPay.ua</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-lg-3 text-center">
+                <div class="documents-card">
+                  <img src="img/insurance/osago-doc-1.svg" alt="Image">
+                  <p>Свидетельство о регистрации<br> ТС (техпаспорт)</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 text-center">
+                <div class="documents-card">
+                  <img src="img/insurance/osago-doc-2.svg" alt="Image">
+                  <p>Водительское<br> удостоверение</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 text-center">
+                <div class="documents-card">
+                  <img src="img/insurance/osago-doc-3.svg" alt="Image">
+                  <p>Паспорт и ИНН<br> (Идентификационный код)</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 text-center">
+                <div class="documents-card">
+                  <img src="img/insurance/osago-doc-4.svg" alt="Image">
+                  <p>Для льготников информация<br> подтверждающая статус</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 documents-btn text-center">
+                <a href="#" class="btn btn-insurance">Оформить ОСАГО</a>
+              </div>
+            </div>
+          </div>
+        </section><!-- insurance documents section -->
+
+        <!-- insurance cost section -->
+        <section class="insurance-cost osago-cost">
+          <div class="container">
+            <div class="row justify-content-end">
+              <div class="col-12 d-md-none insurance-cost-img">
+                <img src="/img/insurance/osago-cost.jpg" class="img-fluid" alt="Image">
+              </div>
+              <div class="col-md-8 col-lg-7 col-xl-6">
+                <h3>От чего зависит стоимость страховки?</h3>
+                <ul class="insurance-list">
+                  <li>Место, где зарегистрирован автомобиль;</li>
+                  <li>Мощность силового агрегата авто (объем мотора);</li>
+                  <li>Водительский стаж;</li>
+                  <li>Период действия страховки;</li>
+                  <li>Размер франшизы (чем меньше, тем больше будет конечная стоимость);</li>
+                  <li>Пенсионерам, участникам войны и чернобыльцам предоставляется 50-процентная скидка.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section><!-- insurance cost section -->
+
+        <!-- insurance about section -->
+        <section class="insurance-about insurance-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <img src="img/insurance/osago-accident.svg" alt="Image" class="insurance-accident-img">
+                <h2>Что делать при ДТП?</h2>
+                <p>В случае возникновения страхового случая (ДТП), необходимо, прежде всего, действовать в соответствии с правилами дорожного движения. Если нет пострадавших, нужно сразу же позвонить оператору страховой компании – он будет координировать ваши действия. Также следует вызвать сотрудников Нацполиции или оформить событие через Европротокол. Подать заявление о возмещении ущерба в СК необходимо в течение трех рабочих дней после ДТП.</p>
+                <h4>Кроме того, стоит придерживаться и ряда общих рекомендаций:</h4>
+                <ul class="insurance-list">
+                  <li>Запишите контактные данные всех участников страхового случая;</li>
+                  <li>Примите необходимые меры с целью снижения убытков;</li>
+                  <li>Сделайте фото- или видеосъемку места аварии;</li>
+                  <li>Не занимайтесь ремонтом авто до того, как его осмотрит представитель СК.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section><!-- insurance about section -->
+
+        <!-- insurance about section -->
+        <section class="insurance-about">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-10 text-center">
+                <h3>Как возмещают ущерб?</h3>
+                <p>СК должна возместить ущерб, который был нанесен потерпевшему лицу в результате ДТП. При этом потерпевшим считается не только водитель, но и все пассажиры. Также возмещается ущерб, нанесенный имуществу потерпевших (прежде всего, речь идет о транспортном средстве). Максимальный размер страховой суммы составляет 100 тыс. грн. за ущерб здоровью и 50 тыс. грн. за поврежденное имущество на каждого потерпевшего в результате ДТП. Страховщик должен выплатить сумму в период от 15 до 90 дней после подачи документов. В случае просрочки может насчитываться пеня.</p>
+              </div>
+            </div>
+          </div>
+        </section><!-- insurance about section -->
+
+        <!-- electronic policy section -->
+        <section class="insurance-electronic">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-md-6 col-lg-5">
+                <div class="electronic-howto">
+                  <h2>Как пользоваться электронным полисом ОСАГО?</h2>
+                  <p>Электронный полис представляет собой полностью законный документ, который позволяет рассчитывать на такие же права, как и при наличии обычного бумажного варианта. Полиция не имеет права штрафовать владельцев, которые оформили страховку онлайн. Распечатывать документ не обязательно – достаточно показать его на экране своего планшета или смартфона. Никаких сложностей с его проверкой у правоохранительных органов возникнуть не должно – вся информация о нем есть в базе  МТСБУ.</p>
+                  <a href="#" class="btn btn-insurance">Оформить ОСАГО</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-5">
+                <div class="electronic-promo">
+                  <h2>Онлайн-полис ОСАГО – лучший выбор для автовладельцев</h2>
+                  <p>Оформлять страховку гражданской ответственности нужно всем автовладельцам в обязательном порядке. Но сейчас нет нужды идти в отделение СК, лучше выполнить все онлайн. Это быстрее, удобнее и дешевле. При этом юридическая сила у такого полиса точно такая, как и у бумажной версии. Оформить ОСАГО через интернет вы можете на сайте iPay.ua.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Поиск</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>
