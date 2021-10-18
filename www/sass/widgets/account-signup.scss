@@ -8,7 +8,7 @@
 @import '../abstracts/mixins';
 
 .account-signup {
-  min-height: 60vh;
+  // min-height: 60vh;
 
   .help-list {
     column-count: 2;
@@ -64,6 +64,12 @@
     height: 112px;
   }
 
+  &__success-card {
+    img {
+      max-width: 5rem;
+    }
+  }
+
   @include until($sm) {
     .help-list {
       height: 5.5rem;
@@ -71,6 +77,12 @@
 
     &__continue {
       padding-left: 1.175rem;
+    }
+
+    &__success-card {
+      img {
+        max-width: 2.5rem;
+      }
     }
   }
 

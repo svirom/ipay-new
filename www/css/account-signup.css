@@ -1,7 +1,3 @@
-.account-signup {
-  min-height: 60vh;
-}
-
 .account-signup .help-list {
   -webkit-column-count: 2;
           column-count: 2;
@@ -60,12 +56,19 @@
   height: 112px;
 }
 
+.account-signup__success-card img {
+  max-width: 5rem;
+}
+
 @media screen and (max-width: 575px) {
   .account-signup .help-list {
     height: 5.5rem;
   }
   .account-signup__continue {
     padding-left: 1.175rem;
+  }
+  .account-signup__success-card img {
+    max-width: 2.5rem;
   }
 }
 
