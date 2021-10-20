@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/tripleCashback-landing.css">
+
+    <title>Triple Cashback Landing</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- landing wrapper -->
+    <div class="landing-wrapper">
+
+      <!-- landing header -->
+      <div class="landing-header">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-6 col-lg-7">
+              <div class="landing-header__content">
+                <p class="landing-header__date mb-2 mb-md-3">С 25.10.21 до 21.11.21</p>
+                <h1 class="mb-2 mb-md-3">Лови "Тройной кешбэк"!*</h1>
+                <p class="landing-header__subtitle mb-2 mb-md-3">Совершай переводы картой Mastercard и выигрывайте возврат средств в тройном размере!</p>
+                <a href="#" class="btn btn-landing btn-block">Совершить перевод</a>
+                <p class="extra-small mt-2 mt-md-3 mb-0">*під кешбеком маєтьмя на увазі грошовий приз, що буде розіграно серед учасників акції.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-5">
+              <div class="landing-header__img">
+                <img src="/img/triple-cashback/landing-header.png" srcset="/img/triple-cashback/landing-header.png 1x, /img/triple-cashback/landing-header@2x.png 2x" alt="Image">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- landing header -->
+
+      <!-- landing conditions -->
+      <div class="landing-conditions">
+        <div class="container">
+
+          <div class="row mb-2 mb-md-4">
+            <div class="col-12">
+              <h2 class="landing-conditions__title"><span class="red-color">Есть карта Mastercard?</span><br>Лови “Тройной кешбек”</h2>
+              <p class="landing-conditions__subtitle heading-color">Сделай осень ярче!<br> С 25 октября до 21 ноября 2021 года переводи деньги с карты Mastercard на любую другую карту и автоматически становись участником акции. Имеешь шанс вернуть потраченные при переводе средства в трехкратном размере. Розыгрыши проходят в течение четырех недель подряд!</p>
+              <p>Совершив перевод под авторизацией в личном кабинете, можешь вернуть утроенную сумму.</p>
+              <ul>
+                <li>Перевел 100 грн? <span>Посоревнуешься за 300!</span></li>
+                <li>Переслал 500 грн? <span>Можешь вернуть 1500 грн!</span></li>
+                <li>Максимальная сумма возможного выигрыша – <span>4500 грн.</span></li>
+              </ul>
+              <h3>Совершил перевод как незарегистрированный пользователь? </h3>
+              <p>Тоже участвуешь, но сумма твоего возможного выиграша умножается на 2, а не на 3. Не забывай войти в свой личный кабинет на iPay.ua при следующем платеже и повысь свои шансы на успех!</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <h3 class="h1 mb-4">Как участвовать?</h3>
+            </div>
+          </div>
+
+          <div class="row mt-md-3">
+
+            <div class="col-md-4 landing-condition">
+              <span>1</span>
+              <p class="heading-color mb-0"><a href="https://www.ipay.ua/ua/user/signup" class="red-link">Зарегистрируйся</a> или <a href="https://www.ipay.ua/ua/user/signin" class="red-link">войди</a> в личный кабинет на iPay.ua и соверши перевод с карты Mastercard на любую сумму.</p>
+            </div>
+
+            <div class="col-md-4 landing-condition">
+              <span>2</span>
+              <p class="heading-color mb-0">Подпишись на <a href="https://www.facebook.com/iPay.ua" class="red-link">Facebook страничку</a> iPay.ua, чтобы не пропустить розыгрыш.</p>
+            </div>
+
+            <div class="col-md-4 landing-condition">
+              <span>3</span>
+              <p class="heading-color mb-0">Каждый понедельник на нашей странице в Facebook выбираем сразу трех победителей недели</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div><!-- landing conditions -->
+
+      <!-- landing-promo -->
+      <div class="landing-promo">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-12">
+              <div class="landing-promo__card">
+                <div class="row">
+                  <div class="col-12 col-lg-auto">
+                    <div class="landing-promo__img d-none d-lg-block">
+                      <img src="/img/triple-cashback/landing-promo-1.png" srcset="/img/triple-cashback/landing-promo-1.png 1x, /img/triple-cashback/landing-promo-1@2x.png 2x" alt="Image">
+                      <img src="/img/triple-cashback/landing-promo-2.png" srcset="/img/triple-cashback/landing-promo-2.png 1x, /img/triple-cashback/landing-promo-2@2x.png 2x" class="image-2" alt="Image">
+                    </div>
+                    <div class="landing-promo__img d-lg-none">
+                      <img src="/img/triple-cashback/landing-promo-mob-1.png" srcset="/img/triple-cashback/landing-promo-mob-1.png 1x, /img/triple-cashback/landing-promo-mob-1@2x.png 2x" alt="Image">
+                      <img src="/img/triple-cashback/landing-promo-mob-2.png" srcset="/img/triple-cashback/landing-promo-mob-2.png 1x, /img/triple-cashback/landing-promo-mob-2@2x.png 2x" class="image-2" alt="Image">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="landing-promo__text">
+                      <p class="mb-4 mb-lg-0">Чем больше переводов,<br> тем выше шансы на выигрыш!</p>
+                      <a href="#" class="btn btn-landing btn-block">Совершить перевод</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- landing-promo -->
+      
+      <!-- bottom button -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 landing-bottom">
+            <a href="#" class="btn btn-landing btn-block">Официальные условия акции</a>
+          </div>
+        </div>
+      </div><!-- bottom button -->
+
+    </div><!-- landing wrapper -->    
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>

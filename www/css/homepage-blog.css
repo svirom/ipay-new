@@ -40,18 +40,43 @@
 }
 
 .homepage-article__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
   margin-bottom: 1.25rem;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .homepage-article__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 100%;
   height: auto;
+  min-height: 100%;
   border-radius: 0.5rem;
 }
 
 .homepage-article__time {
   margin-right: 1.45rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .homepage-article__img {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .homepage-article__img {
+    height: auto;
+  }
 }
 /*# sourceMappingURL=homepage-blog.css.map */

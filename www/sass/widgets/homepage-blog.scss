@@ -44,18 +44,36 @@
   }
 
   &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
     margin-bottom: 1.25rem;
     border-radius: $border-radius;
     overflow: hidden;
 
     img {
+      object-fit: cover;
       max-width: 100%;
       height: auto;
+      min-height: 100%;
       border-radius: $border-radius;
     }
   }
 
   &__time {
     margin-right: 1.45rem;
+  }
+
+  @include until($xl) {
+    &__img {
+      height: 160px;
+    }
+  }
+
+  @include until($md) {
+    &__img {
+      height: auto;
+    }
   }
 }
