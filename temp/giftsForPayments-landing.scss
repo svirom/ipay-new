@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------
-// This file contains all styles related to the landing triple cashback widget
+// This file contains all styles related to the landing gifts for payments widget
 // --------------------------------------------------------------------------
 @charset 'UTF-8';
 
@@ -9,7 +9,7 @@
 
 .landing-wrapper {
   padding-top: 1.75rem;
-  padding-bottom: 3.75rem;
+  padding-bottom: 2.5rem;
 
   h1 {
     font-size: 2.625rem;
@@ -31,26 +31,36 @@
   @include until($lg) {
     padding-top: 1rem;
 
-    h1 {
-      font-size: 1.75rem;
-    }
-  }
-
-  @include until($md) {
     .btn-landing {
       display: block;
       max-width: none;
     }
 
     h1 {
+      font-size: 1.75rem;
+    }
+
+    h2 {
       font-size: 1.5rem;
     }
   }
 
+  @include until($md) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+
   @include until($sm) {
+    padding-top: 0.875rem;
     padding-bottom: 2.5rem;
 
     .btn-landing {
+      max-width: none;
       padding-top: 0.875rem;
       padding-bottom: 0.875rem;
       font-size: 1rem;
@@ -84,7 +94,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
     height: 100%;
 
     p {
@@ -127,18 +136,16 @@
     }
   }
 
-  &__expl {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 0;
-
-    p {
-      font-size: 0.75rem;
-    }
+  &__img {
+    margin-left: -104px;
+    padding-top: 0.75rem;
+    padding-bottom: 2.375rem;
   }
 
-  &__img {
-    margin-left: -5.625rem;
+  @include until($xl) {
+    &__img {
+      margin-left: -32px;
+    }
   }
 
   @include until($lg) {
@@ -152,21 +159,15 @@
       }
     }
 
-    &__expl {
-      p {
-        font-size: 0.75rem;
-      }
-    }
-
     &__img {
       margin-left: 0;
+      padding-top: 1.5rem;
     }
   }
 
   @include until($md) {
-    padding-top: 3rem;
+    padding-top: 2.8125rem;
     padding-bottom: 1rem;
-    background-position: right 0.625rem bottom 1.125rem;
 
     &::before {
       top: 50%;
@@ -181,15 +182,12 @@
     }
 
     &__logo {
-      // display: none;
-    }
-
-    &__expl {
-      position: static;
+      display: none;
     }
 
     &__img {
-      padding-top: 0.5rem;
+      padding-top: 0.9375rem;
+      padding-bottom: 0;
 
       img {
         max-width: 100%;
@@ -199,52 +197,40 @@
 }
 
 .landing-conditions {
-  padding-top: 3.75rem;
-
-  .landing-conditions__subtitle {
-    font-size: 1.5rem;
-  }
+  padding-top: 2.5rem;
 
   &__title {
-    padding-top: 3.75rem;
-    padding-bottom: 3.75rem;
-  }
-
-  &__card {
-    height: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-
-    p {
-      color: $heading-color;
-    }
-  }
-
-  &__card-title {
-    margin-bottom: 0.75rem;
-    font-size: 2.25rem;
-    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
 
     span {
-      color: $btn-red;
       font-family: $heading-font;
-      font-size: 6.375rem;
       font-weight: 700;
     }
   }
 
-  &__card-subtitle {
-    font-size: 1.25rem;
+  p {
+    font-size: 1.125rem;
+    color: $heading-color;
+
+    &.landing-conditions__subtitle {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
   }
 
-  @include until($lg) {
-    &__card-title {
-      font-size: 2rem;
+  h3 {
+    margin-bottom: 1rem;
+  }
 
-      span {
-        font-size: 5rem;
-      }
+  &__alert {
+    .alert.alert-danger {
+      margin-bottom: 0;
+      padding: 1rem;
+      text-align: center;
+      font-family: $heading-font;
+      font-size: 1.25rem;
+      color: $btn-red;
     }
   }
 
@@ -252,26 +238,158 @@
     padding-top: 1.5rem;
 
     &__title {
-      padding-top: 2.5rem;
-      padding-bottom: 2.5rem;
+      margin-bottom: 1rem;
     }
 
-    .landing-conditions__subtitle {
+    p {  
+      &.landing-conditions__subtitle {
+        margin-bottom: 1rem;
+      }
+    }
+
+    h3:not(.h1) {
       font-size: 1.25rem;
     }
+  }
+}
 
-    &__card-title {
-      font-size: 1.75rem;
+.landing-condition {
+  padding-bottom: 2.5rem;
 
-      span {
-        font-size: 4rem;
+  & > span {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: calc(3rem + 1px);
+    text-align: center;
+    border-radius: 50%;
+    background-color: $btn-red;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+
+  @include until($md) {
+    padding-bottom: 1.5rem;
+
+    & > span {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.landing-prizes {
+  padding-top: 2.5rem;
+
+  &__title {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.125rem;
+
+    span {
+      font-family: $heading-font;
+      font-weight: 700;
+      color: $btn-red;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1.5rem;
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.landing-prize {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 21.875rem;
+    margin-bottom: 1rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 13.25rem;
+      height: 13.25rem;
+      border-radius: 50%;
+      background-color: $btn-red;
+      z-index: -1;
+    }
+  }
+
+  &--prize2 {
+    .landing-prize__img {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &--prize3 {
+    .landing-prize__img {
+      padding-bottom: 1.1875rem;
+    }
+  }
+
+  @include until($xl) {
+    &__img {
+      height: 18.75rem;
+    }
+  }
+
+  @include until($lg) {
+    &__img {
+      height: 13.125rem;
+      margin-bottom: 1rem;
+
+      &::before {
+        height: 11rem;
+        width: 11rem;
       }
+    }
+
+    &--prize2, &--prize3 {
+      .landing-prize__img {
+        padding-bottom: 0;
+      }
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1rem;
+
+    &__img {
+      height: 18.125rem;
+    }
+
+    &--prize1 {
+      padding-top: 0;
     }
   }
 }
 
 .landing-promo {
-  padding-top: 133px;
+  padding-top: 105px;
 
   &__card {
     border-radius: 0.5rem;
@@ -279,17 +397,9 @@
   }
 
   &__img {
-    position: relative;
-    margin-top: -133px;
-    margin-left: 100px;
-
-    .image-2 {
-      position: absolute;
-      left: -72px;
-      bottom: -18px;
-      box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
-      border-radius: 14.7669px;
-    }
+    margin-top: -86px;
+    margin-left: -26px;
+    margin-bottom: -10px;
   }
 
   &__text {
@@ -297,19 +407,16 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-left: 1.5rem;
     padding-right: 2.0625rem;
     font-size: 1.5rem;
 
     p {
       color: #ffffff;
-      font-weight: 700;
+      font-size: 1.875rem;
     }
-  }
 
-  @include until($xl) {
-    &__text {
-      padding-left: 0;
+    .btn-landing {
+      max-width: 13.75rem;
     }
   }
 
@@ -318,15 +425,9 @@
 
     &__img {
       margin-left: 0;
-      margin-top: -110px;
-      margin-bottom: 104px;
+      margin-top: -62px;
+      margin-bottom: 0;
       text-align: center;
-
-      .image-2 {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -82px;
-      }
     }
 
     &__text {
@@ -335,6 +436,10 @@
       padding-right: 0.9375rem;
       font-size: 1.5rem;
       text-align: center;
+
+      p {
+        font-size: 1.5rem;
+      }
     }
 
     .btn-landing {
@@ -356,6 +461,10 @@
     &__text {
       padding-left: 0;
       padding-right: 0;
+      
+      .btn-landing {
+        max-width: none;
+      }
     }
   }
 }
