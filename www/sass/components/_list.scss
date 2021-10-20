@@ -15,6 +15,18 @@
     }
   }
 
+  &--regular {
+    li {
+      &::before {
+        top: 8px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: $heading-color;
+      }
+    }
+  }
+
   &--circle {
     li {
       &::before {

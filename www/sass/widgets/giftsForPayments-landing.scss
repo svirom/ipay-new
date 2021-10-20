@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------
-// This file contains all styles related to the landing triple cashback widget
+// This file contains all styles related to the landing gifts for payments widget
 // --------------------------------------------------------------------------
 @charset 'UTF-8';
 
@@ -14,7 +14,6 @@
   h1 {
     font-size: 2.625rem;
     color: #ffffff;
-    white-space: nowrap;
   }
 
   h2 {
@@ -49,7 +48,6 @@
   @include until($md) {
     h1 {
       font-size: 1.5rem;
-      white-space: normal;
     }
 
     h2 {
@@ -76,31 +74,20 @@
   margin: auto;
   border-radius: 1.5rem;
   background-color: $heading-color;
-  background: $heading-color url("data:image/svg+xml,%3Csvg width='42' height='26' viewBox='0 0 42 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.25 25.2495C19.0155 25.2495 24.5 19.765 24.5 12.9995C24.5 6.23402 19.0155 0.749512 12.25 0.749512C5.48451 0.749512 0 6.23402 0 12.9995C0 19.765 5.48451 25.2495 12.25 25.2495Z' fill='%23EA001B'/%3E%3Cpath d='M29.75 25.2495C36.5155 25.2495 42 19.765 42 12.9995C42 6.23402 36.5155 0.749512 29.75 0.749512C22.9845 0.749512 17.5 6.23402 17.5 12.9995C17.5 19.765 22.9845 25.2495 29.75 25.2495Z' fill='%23FFA200' fill-opacity='0.8'/%3E%3C/svg%3E") right 1.75rem bottom 1.75rem no-repeat;
   overflow: hidden;
   z-index: 2;
 
-  &::before, &::after {
+  &::before {
     position: absolute;
     content: '';
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    z-index: -1;
-  }
-
-  &::before {
     top: 63px;
     right: -100px;
+    width: 25rem;
+    height: 25rem;
     border: 1px solid rgba(#FFB533, 0.25);
+    border-radius: 50%;
     background-color: rgba(255, 181, 51, 0.04);
-  }
-
-  &::after {
-    right: 60px;
-    bottom: -105px;
-    border: 1px solid rgba(#EA001B, 0.25);
-    background-color: rgba(234, 0, 27, 0.04);
+    z-index: -1;
   }
 
   &__content {
@@ -112,10 +99,6 @@
     p {
       font-size: 1.5rem;
       color: #ffffff;
-
-      &.extra-small {
-        font-size: 0.75rem;
-      }
     }
 
     .landing-header__date {
@@ -128,9 +111,41 @@
     }
   }
 
+  &__logo {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__logo-img {
+    position: relative;
+
+    &:last-of-type {
+      margin-left: 2.25rem;
+      padding-top: 0.25rem;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: -5px;
+        left: -1.125rem;
+        width: 0;
+        height: calc(100% + 10px);
+        border-left: 0.617284px solid $light-grey;
+      }
+    }
+  }
+
   &__img {
-    margin-left: -5.625rem;
-    padding-top: 5rem;
+    margin-left: -104px;
+    padding-top: 0.75rem;
+    padding-bottom: 2.375rem;
+  }
+
+  @include until($xl) {
+    &__img {
+      margin-left: -32px;
+    }
   }
 
   @include until($lg) {
@@ -151,18 +166,13 @@
   }
 
   @include until($md) {
-    padding-top: 3rem;
+    padding-top: 2.8125rem;
     padding-bottom: 1rem;
-    background-position: right 0.625rem bottom 1.125rem;
 
     &::before {
       top: 50%;
       transform: translateY(-50%);
       right: -270px;
-    }
-
-    &::after {
-      display: none;
     }
 
     &__content {
@@ -171,8 +181,13 @@
       }
     }
 
+    &__logo {
+      display: none;
+    }
+
     &__img {
-      padding-top: 2.75rem;
+      padding-top: 0.9375rem;
+      padding-bottom: 0;
 
       img {
         max-width: 100%;
@@ -204,35 +219,19 @@
     }
   }
 
-  ul {
-    margin-bottom: 1rem;
-    font-size: 1.125rem;
-    
-    li {
-      position: relative;
-      padding-left: 1.625rem;
-      color: $heading-color;
-
-      &::before {
-        position: absolute;
-        content: '';
-        left: 12px;
-        top: 8px;
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        background-color: $heading-color;
-      }
-    }
-
-    span {
-      color: $btn-red;
-      font-weight: 700;
-    }
-  }
-
   h3 {
     margin-bottom: 1rem;
+  }
+
+  &__alert {
+    .alert.alert-danger {
+      margin-bottom: 0;
+      padding: 1rem;
+      text-align: center;
+      font-family: $heading-font;
+      font-size: 1.25rem;
+      color: $btn-red;
+    }
   }
 
   @include until($md) {
@@ -275,7 +274,7 @@
   }
 
   @include until($md) {
-    padding-bottom: 0.875rem;
+    padding-bottom: 1.5rem;
 
     & > span {
       margin-bottom: 1rem;
@@ -283,8 +282,114 @@
   }
 }
 
+.landing-prizes {
+  padding-top: 2.5rem;
+
+  &__title {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.125rem;
+
+    span {
+      font-family: $heading-font;
+      font-weight: 700;
+      color: $btn-red;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1.5rem;
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.landing-prize {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 21.875rem;
+    margin-bottom: 1rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 13.25rem;
+      height: 13.25rem;
+      border-radius: 50%;
+      background-color: $btn-red;
+      z-index: -1;
+    }
+  }
+
+  &--prize2 {
+    .landing-prize__img {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &--prize3 {
+    .landing-prize__img {
+      padding-bottom: 1.1875rem;
+    }
+  }
+
+  @include until($xl) {
+    &__img {
+      height: 18.75rem;
+    }
+  }
+
+  @include until($lg) {
+    &__img {
+      height: 13.125rem;
+      margin-bottom: 1rem;
+
+      &::before {
+        height: 11rem;
+        width: 11rem;
+      }
+    }
+
+    &--prize2, &--prize3 {
+      .landing-prize__img {
+        padding-bottom: 0;
+      }
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1rem;
+
+    &__img {
+      height: 18.125rem;
+    }
+
+    &--prize1 {
+      padding-top: 0;
+    }
+  }
+}
+
 .landing-promo {
-  padding-top: 133px;
+  padding-top: 105px;
 
   &__card {
     border-radius: 0.5rem;
@@ -292,17 +397,9 @@
   }
 
   &__img {
-    position: relative;
-    margin-top: -133px;
-    margin-left: 100px;
-
-    .image-2 {
-      position: absolute;
-      left: -72px;
-      bottom: -18px;
-      box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
-      border-radius: 14.7669px;
-    }
+    margin-top: -86px;
+    margin-left: -26px;
+    margin-bottom: -10px;
   }
 
   &__text {
@@ -310,19 +407,16 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-left: 1.5rem;
     padding-right: 2.0625rem;
     font-size: 1.5rem;
 
     p {
       color: #ffffff;
-      font-weight: 700;
+      font-size: 1.875rem;
     }
-  }
 
-  @include until($xl) {
-    &__text {
-      padding-left: 0;
+    .btn-landing {
+      max-width: 13.75rem;
     }
   }
 
@@ -331,15 +425,9 @@
 
     &__img {
       margin-left: 0;
-      margin-top: -110px;
-      margin-bottom: 104px;
+      margin-top: -62px;
+      margin-bottom: 0;
       text-align: center;
-
-      .image-2 {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -82px;
-      }
     }
 
     &__text {
@@ -348,6 +436,10 @@
       padding-right: 0.9375rem;
       font-size: 1.5rem;
       text-align: center;
+
+      p {
+        font-size: 1.5rem;
+      }
     }
 
     .btn-landing {
@@ -369,6 +461,10 @@
     &__text {
       padding-left: 0;
       padding-right: 0;
+      
+      .btn-landing {
+        max-width: none;
+      }
     }
   }
 }

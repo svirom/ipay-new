@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------
+// This file contains all styles related to the gifts for payments widget
+// -----------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.giftsForPayments-result {
+  display: flex;
+  justify-content: center;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  background-color: $heading-color;
+
+  p {
+    margin-bottom: 0;
+    color: #ffffff;
+  }
+
+  &__img {
+    position: relative;
+    flex-shrink: 0;
+    width: 2.875rem;
+    height: 2.875rem;
+    text-align: center;
+    border-radius: 50%;
+    background: $text-color url('../img/triple-cashback/giftsForPayments.png') center no-repeat;
+    background-size: 1.5rem;
+  }
+
+  .giftsForPayments-result__content {
+    padding-left: 0.625rem;
+  }
+
+  &--registered {
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-left: -1.375rem;
+    margin-right: -1.375rem;
+    margin-bottom: calc(-1.5rem - 2px);
+    border-radius: 0;
+    text-align: left;
+  }
+
+  @include until($md) {
+    &--registered {
+      align-items: flex-start;
+    }
+  }
+}
