@@ -62,7 +62,7 @@
 .list-ordered {
   counter-reset: ordered-counter;
 
-  li {
+  & > li {
     counter-increment: ordered-counter;
 
     &::before {

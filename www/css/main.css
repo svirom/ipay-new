@@ -1460,11 +1460,11 @@ label {
   counter-reset: ordered-counter;
 }
 
-.list-ordered li {
+.list-ordered > li {
   counter-increment: ordered-counter;
 }
 
-.list-ordered li::before {
+.list-ordered > li::before {
   content: counter(ordered-counter) ". ";
   top: 0;
   color: #E84F35;
