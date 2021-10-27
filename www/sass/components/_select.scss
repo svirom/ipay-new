@@ -2,9 +2,9 @@
 // This file contains all styles related to the select component (using select2 plugin).
 // -----------------------------------------------------------------------------
 
-.select-input-wrapper {
+// .select-input-wrapper {
 
-  .select2-container {
+  .select2-container.select2-container--default {
 
     .select2-selection {
       height: auto;
@@ -114,7 +114,7 @@
       }
     }
 
-    &--open {
+    &.select2-container--open {
 
       .select2-selection {
         border-color: transparent; 
@@ -166,5 +166,5 @@
       }
     }
   }
-}
+// }
 
