@@ -45,6 +45,15 @@
     padding: 1rem 1.5rem 1.5rem;
   }
 
+  .password-button {
+    top: 1.125rem;
+    margin-top: 0;
+  }
+
+  .form-group.has-error .help-block {
+    position: static;
+  }
+
   @include at-least($sm) {
     .modal-dialog {
       max-width: 350px;
