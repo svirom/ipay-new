@@ -1,0 +1,167 @@
+.glasses-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.glasses-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #C5C5C5;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.glasses-logo {
+  padding: 0.75rem 0;
+  text-align: center;
+}
+
+.glasses-main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1.25rem 0 2.5rem;
+  text-align: center;
+}
+
+.glasses-img {
+  padding-top: 1rem;
+  padding-bottom: 0.375rem;
+}
+
+.glasses-select {
+  max-width: 290px;
+  margin: 0 auto;
+}
+
+.glasses-select .btn-glasses {
+  width: 3.5rem;
+  padding: 0.625rem;
+  border: 3px solid #252525;
+}
+
+.glasses-select .btn-glasses:hover {
+  background-color: #F0F5FA;
+}
+
+.glasses-select .btn-glasses:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.glasses-select .btn-glasses-submit {
+  padding: 0.9375rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  border-color: #3CB4E7;
+  background-color: #3CB4E7;
+}
+
+.glasses-select .btn-glasses-submit:hover {
+  border-color: #25abe4;
+  background-color: #25abe4;
+}
+
+.glasses-amount {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #F5F5F5;
+}
+
+.glasses-amount p {
+  color: #252525;
+}
+
+.glasses-amount__select > span {
+  display: inline-block;
+  width: 5rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 3.54rem;
+  color: #172A3A;
+  vertical-align: middle;
+  border-radius: 0.5rem;
+  background-color: #F5F5F5;
+}
+
+.glasses-result {
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.glasses-result span {
+  color: #172A3A;
+}
+
+.glasses-result .glasses-result-left {
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.glasses-result .glasses-result-right {
+  font-size: 1.125rem;
+}
+
+.glasses-result .glasses-result-right > span {
+  font-weight: 700;
+}
+
+.glasses-footer {
+  padding: 0.875rem 0 1.5rem;
+  border-top: 1px solid #DEE7F3;
+}
+
+.glasses-footer a:hover {
+  color: #3B566E;
+}
+
+.glasses-secure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.glasses-secure img {
+  max-width: 100%;
+  margin-right: 1.875rem;
+}
+
+@media screen and (max-width: 991px) {
+  .glasses-secure {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 1.875rem;
+  }
+  .glasses-secure img {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .glasses-logo {
+    margin-bottom: -15px;
+    padding-top: 7px;
+    padding-bottom: 0;
+    text-align: left;
+  }
+  .glasses-main {
+    padding-top: 3.125rem;
+  }
+  .glasses-amount__select > span {
+    width: 6.75rem;
+  }
+}

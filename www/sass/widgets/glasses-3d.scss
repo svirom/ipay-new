@@ -1,0 +1,170 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the glasses 3d landing of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.glasses-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.glasses-header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #C5C5C5;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.glasses-logo {
+  padding: 0.75rem 0;
+  text-align: center;
+}
+
+.glasses-main {
+  flex-grow: 1;
+  padding: 1.25rem 0 2.5rem;
+  text-align: center;
+}
+
+.glasses-img {
+  padding-top: 1rem;
+  padding-bottom: 0.375rem;
+}
+
+.glasses-select {
+  max-width: 290px;
+  margin: 0 auto;
+
+  .btn-glasses {
+    width: 3.5rem;
+    padding: 0.625rem;
+    border: 3px solid #252525;
+
+    &:hover {
+      background-color: $light-grey;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .btn-glasses-submit {
+    padding: 0.9375rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    border-color: #3CB4E7;
+    background-color: #3CB4E7;
+
+    &:hover {
+      border-color: darken(#3CB4E7, 5%);
+      background-color: darken(#3CB4E7, 5%);
+    }
+  }
+}
+
+.glasses-amount {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #F5F5F5;
+
+  p {
+    color: #252525;
+  }
+
+  &__select {
+    & > span {
+      display: inline-block;
+      width: 5rem;
+      height: 3.5rem;
+      @include font(1.5rem, 700, 3.54rem);
+      color: $heading-color;
+      vertical-align: middle;
+      border-radius: 0.5rem;
+      background-color: #F5F5F5;
+    }
+  }
+}
+
+.glasses-result {
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  span {
+    color: $heading-color;
+  }
+
+  .glasses-result-left {
+    font-size: 1.0625rem;
+    font-weight: 700;
+  }
+
+  .glasses-result-right {
+    font-size: 1.125rem;
+
+    & > span {
+      font-weight: 700;
+    }
+  }
+}
+
+.glasses-footer {
+  padding: 0.875rem 0 1.5rem;
+  border-top: 1px solid $middle-grey;
+
+  a {
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+.glasses-secure {
+  display: flex;
+  align-items: center;
+
+  img {
+    max-width: 100%;    
+    margin-right: 1.875rem;
+  }
+}
+
+@include until($lg) {
+  .glasses-secure {
+    justify-content: space-between;
+    margin-bottom: 1.875rem;
+
+    img {
+      margin-right: 0;
+    }
+  }
+}
+
+@include until($sm) {
+  .glasses-logo {
+    margin-bottom: -15px;
+    padding-top: 7px;
+    padding-bottom: 0;
+    text-align: left;
+  }
+
+  .glasses-main {
+    padding-top: 3.125rem;
+  }
+
+  .glasses-amount {
+    &__select {
+      & > span {
+        width: 6.75rem;
+      }
+    }
+  }
+}
