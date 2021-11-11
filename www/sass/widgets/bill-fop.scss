@@ -46,3 +46,84 @@
     }
   }
 }
+
+.bill-details {
+  &__row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -4px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 20px $card-shadow;
+    background-color: #ffffff;
+    cursor: pointer;
+    z-index: 1;
+
+    span {
+      font-size: 1.125rem;
+      line-height: 1.17;
+      color: $heading-color;
+    }
+
+    &[aria-expanded="true"] {
+      .bill-details__details {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__details {
+    position: relative;
+    padding-right: 1.75rem;
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 1.25rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.13867 8.52393L10 13.3853' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 13.3853L14.8613 8.52391' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__collapse {
+    padding: 0.85rem 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: $light-grey;
+
+    .table {
+      margin-bottom: 0;
+    }
+  }
+
+  @include until($sm) {
+    &__collapse {
+      padding: 10px;
+      
+      .table {
+        font-size: 1rem;
+
+        tr td:first-child {
+          padding-top: 11px;
+          color: $text-color;
+        }
+
+        tr td:last-child {
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}
