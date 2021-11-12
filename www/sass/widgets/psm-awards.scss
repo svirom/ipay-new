@@ -1,0 +1,94 @@
+// -----------------------------------------------------------------
+// This file contains all styles related to the landing biber page
+// -----------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.psm-awards {
+  position: relative;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  background-color: #0F0F1E;
+
+  p {
+    padding-right: 264px;
+
+    & > span {
+      @include font(1.5rem, 700, 1.17);
+      color: #ffffff;
+    }
+
+    & > img {
+      position: absolute;
+      top: 1.25rem;
+      right: 3rem;
+    }
+  }
+
+  &--homepage {
+    p {
+      & > span {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .btn-red {
+    width: 260px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .btn-link {
+    margin-left: 29px;
+    color: $btn-red;
+    line-height: 1.2;
+    vertical-align: middle;
+  }
+
+  @include until($xl) {
+    p {  
+      & > img {
+        right: 1.25rem;
+      }
+    }
+
+    &--homepage {
+      p {
+        & > img {
+          right: 3rem;
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    padding: 1rem 0.9375rem;
+
+    p {
+      padding-right: 88px;
+  
+      & > span {
+        font-size: 1rem;
+      }
+  
+      & > img {
+        top: 1rem;
+        right: 1rem;
+        width: 76px;
+      }
+    }
+
+    .btn-red {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  
+    .btn-link {
+      margin-left: 0;
+    }
+  }
+}
