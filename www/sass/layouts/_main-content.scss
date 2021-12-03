@@ -18,18 +18,18 @@
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 386px);
+  min-height: calc(100vh - 411px);
 
   & > #operations {
     flex-grow: 1;
   }
 
   @include until($xl) {
-    min-height: calc(100vh - 399px);
+    min-height: calc(100vh - 425px);
   }
 
   @include until($lg) {
-    min-height: calc(100vh - 636px);
+    min-height: auto;
 
     .breadcrumb-wrapper {
       order: 1;

@@ -3441,24 +3441,38 @@ label {
   padding: 0.5rem;
 }
 
-.modal-social__buttons .btn-signin-fb {
-  background: url("../img/authentication/icon-fb.svg") center no-repeat;
+.modal-social__buttons .btn ~ .btn {
+  margin-top: 1rem;
 }
 
-.modal-social__buttons .btn-signin-google {
-  background: url("../img/authentication/icon-google.svg") center no-repeat;
+.modal-social__buttons .btn-signin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.modal-social__buttons .btn-signin-apple {
-  background: url("../img/authentication/icon-apple.svg") center no-repeat;
+.modal-social__buttons .btn-signin > span {
+  padding-left: 2.375rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.modal-social--signup .modal-social__title {
-  text-align: left;
+.modal-social__buttons .btn-signin-fb > span {
+  background: url("../img/authentication/auth-fb.svg") left center no-repeat;
 }
 
-.modal-social--signup .modal-social__title span {
-  padding-left: 0;
+.modal-social__buttons .btn-signin-google > span {
+  background: url("../img/authentication/auth-google.svg") left center no-repeat;
+}
+
+.modal-social__buttons .btn-signin-apple > span {
+  background: url("../img/authentication/icon-apple.svg") left center no-repeat;
 }
 
 .modal-signup {
@@ -4328,7 +4342,7 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: calc(100vh - 386px);
+  min-height: calc(100vh - 411px);
 }
 
 .main-wrapper > #operations {
@@ -4339,13 +4353,13 @@ label {
 
 @media screen and (max-width: 1199px) {
   .main-wrapper {
-    min-height: calc(100vh - 399px);
+    min-height: calc(100vh - 425px);
   }
 }
 
 @media screen and (max-width: 991px) {
   .main-wrapper {
-    min-height: calc(100vh - 636px);
+    min-height: auto;
   }
   .main-wrapper .breadcrumb-wrapper {
     -webkit-box-ordinal-group: 2;
