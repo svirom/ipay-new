@@ -49,6 +49,85 @@
     }
   }
 
+  &__title {
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    &::after {
+      content: '';
+      width: calc(100% - 30px);
+      margin-left: 15px;
+      height: 0;
+      border-bottom: 1px solid $middle-grey;
+    }
+  }
+
+  .p2p__tabs {
+    h4 {
+      margin-bottom: 0.875rem;
+    }
+  }
+
+  .p2p-tablist {
+    .nav {
+      flex-wrap: nowrap;
+    }
+
+    &__item {
+      position: relative;
+
+      & + .p2p-tablist__item {
+        margin-left: 0.625rem;
+      }
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3rem;
+      width: 186px;
+      padding: 0.25rem 0.125rem;
+      border: 3px solid $middle-grey;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease-out;
+
+      span {
+        color: $heading-color;
+        line-height: 1.1;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        background-color: $light-grey;
+        text-decoration: none;
+      }
+
+      &:active, &.active {
+        border-color: $heading-color;
+        background-color: $heading-color;
+
+        span {
+          color: #ffffff;
+        }
+      }
+    }
+
+    &__badge {
+      position: absolute;
+      top: -0.4375rem;
+      right: 0.625rem;
+      padding: 0.1875rem 0.1875rem 0.125rem;
+      color: #ffffff;
+      font-size: 0.5rem;
+      line-height: 1.125;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      border-radius: 0.25rem;
+      background-color: $btn-red;
+    }
+  }
+
   &__card-wrapper {
     width: 26.25rem;
 
@@ -70,11 +149,15 @@
 
   .bank-card {
     position: relative;
-    padding: 1.5rem 1.875rem 0;
+    padding: 2rem 1.875rem 0;
     background-color: #ffffff;
 
+    &__header, &__bank, &__type {
+      height: 2.5rem;
+    }
+
     &__body {
-      padding-top: 0.75rem;
+      padding-top: 1rem;
     }
 
     &__invoice {
@@ -83,30 +166,26 @@
     }
 
     &__descr {
-      padding-left: 0.625rem;
+      padding-left: 1.1875rem;
 
       p {
-        margin-bottom: 0.125rem;
-        font-weight: bold;
-        white-space: nowrap;
-
-        span {
-          font-weight: bold;
-        }
+        margin-bottom: 0;
+        color: $heading-color;
 
         &.bank-card__commission {
-          font-size: 1.25rem;
-          color: $heading-color;
+          font-weight: 700;
+          white-space: nowrap;
 
           span {
             color: $heading-color;
+            font-weight: 700;
           }
         }
       }
     }
     
     &__amount {
-      width: 12rem;
+      width: 13.75rem;
 
       .bank-card__cvv-button {
         right: 4.25rem;
@@ -123,13 +202,16 @@
 
   &__sender-phone {
     width: 26.25rem;
-    margin-bottom: 2.0625rem;
+    margin-bottom: 1.5rem;
 
-    .form-group {
+    & > p {
+      display: inline-block;
+      position: relative;
       margin-bottom: 0.5rem;
+      padding-right: 1.5rem;
 
-      &.has-error {
-        margin-bottom: 1.875rem;
+      .bank-card__cvv-button {
+        right: 0;
       }
     }
   }
@@ -230,8 +312,6 @@
     }
   
     &-number {
-      /* padding-left: 1.1875rem; */
-      /* padding-right: 1.1875rem; */
       @include font(1.5rem, 700, 1.2);
       color: #64B3F7;
     }
@@ -252,7 +332,7 @@
   }
 
   &__notification {
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     &-row {
       display: flex;
@@ -462,11 +542,6 @@
         font-size: 0.875rem;
       }
 
-      &-number {
-        /* padding-left: 0.5rem; */
-        /* padding-right: 0.5rem; */
-      }
-
       &-text {
         padding-left: 0.5rem;
       }
@@ -497,6 +572,18 @@
       }
     }
 
+    .p2p-tablist {
+      &__item {
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+      }
+
+      &__link {
+        width: auto;
+      }
+    }
+
     &__card-wrapper, .bank-card, &__sender-phone, &__bonuses {
       width: auto;
       max-width: 26.25rem;
@@ -505,10 +592,6 @@
     &__card-wrapper {
       margin-left: auto;
       margin-right: auto;
-    }
-
-    &__sender-phone {
-      margin-bottom: 0;
     }
 
     &__submit {
@@ -531,20 +614,45 @@
   }
 
   @include until($md) {
+    &__title {
+      &::after {
+        display: none;
+      }
+    }
+
+    .p2p-tablist {
+      &__item {
+        & + .p2p-tablist__item {
+          margin-left: 0.5rem;
+        }
+      }
+
+      &__link {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 4rem;
+        font-size: 0.75rem;
+      }
+
+      &__badge {
+        display: none;
+      }
+    }
+
     &__security {
       flex-direction: column;
-      padding: 0.5rem 0.75rem;
+      padding: 1rem;
 
       &-title {
-        align-self: flex-start;
         max-width: none;
         width: 100%;
-        margin-bottom: 0.875rem;
+        margin-bottom: 1rem;
+        text-align: center;
       }
 
       &-img {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-basis: 100%;
         width: 100%;
 
@@ -564,52 +672,50 @@
       max-width: 20.625rem;
     }
 
+    .form-label {
+      top: 1rem;
+      left: 1rem;
+      font-size: 1rem;
+    }
+
+    .form-input:focus ~ .form-label, .form-input.filled ~ .form-label {
+      left: 1.25rem;
+    }
+
     &__card {
       .bank-card {
         height: 16rem;
-        margin: 1rem 0 0;
-        padding: 0.75rem 0.875rem 0;
+        padding: 1rem 0.9375rem 0;
         box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
 
-        &__bank, &__type {
+        &__header, &__bank, &__type {
           height: 2rem;
         }
 
-        &__type {
-          padding-top: 0.1875rem;
-          padding-bottom: 0.1875rem;
-        }
-
-        &__header {
-          align-items: flex-end;
+        &__body {
+          padding-top: 0.5rem;
         }
 
         &__number {
-          padding-bottom: 0.5rem;
+          padding-bottom: 0.75rem;
+        }
+
+        &__expires {
+          margin-right: 0.5rem;
+        }
+
+        &__amount {
+          width: 11.375rem;
         }
 
         &__descr {
+          padding-left: 0.625rem;
+
           p {
-            line-height: 1.17;
-
-            &:first-child {
-              white-space: normal;
-
-              span {
-                display: block;
-              }
-            }
-
             &.bank-card__commission {
               font-size: 1.125rem;
             }
           }
-        }
-      }
-
-      &--receiver {
-        .bank-card {
-          height: 17rem;
         }
       }
     }
@@ -684,48 +790,6 @@
     @include transform(rotate(-25deg));
   }
 }
-
-/* p2p mobile progressbar */
-// .p2p-progressbar {
-//   position: relative;
-//   height: 4px;
-  
-//   background-color: $middle-grey;
-
-//   .p2p-progress {
-//     position: absolute;
-//     height: 100%;
-//     width: 0.75rem;
-//     top: 0;
-//     left: 0;
-//     background-color: $btn-green;
-//     @include transition(width, 0.8s);
-
-//     &.progress-1 {
-//       width: 16%;
-//     }
-
-//     &.progress-2 {
-//       width: 32%;
-//     }
-
-//     &.progress-3 {
-//       width: 48%;
-//     }
-
-//     &.progress-4 {
-//       width: 64%;
-//     }
-
-//     &.progress-5 {
-//       width: 80%;
-//     }
-
-//     &.progress-6 {
-//       width: 100%;
-//     }
-//   }
-// }
 
 .target-text-info {
   display: none;
@@ -851,8 +915,8 @@
 
 /* promo cards section */
 .p2p-promo {
-  padding-top: 6.875rem;
-  padding-bottom: 6.875rem;
+  padding-top: 6.75rem;
+  padding-bottom: 3.125rem;
 
   &__card {
     display: flex;
@@ -893,9 +957,13 @@
   }
 
   @include until($md) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
     &__card {
       flex-direction: row;
-      margin-bottom: 1.375rem;
+      margin-bottom: 1.5rem;
+      padding-left: 0.9375rem;
 
       &--last {
         margin-bottom: 0;
@@ -907,7 +975,7 @@
     }
 
     &__content {
-      margin-left: 0.75rem;
+      margin-left: 1rem;
       text-align: left;
     }
   }
@@ -915,24 +983,25 @@
 
 /* limitations section */
 .p2p-limitations {
-  padding-top: 2.75rem;
-  padding-bottom: 2.125rem;
+  padding-top: 1.875rem;
+  padding-bottom: 0.375rem;
   background-color: $light-grey;
 
   &__title {
-    margin-bottom: 2.3125rem;
+    margin-bottom: 1.5rem;
   }
 
   .launch-card {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 1.75rem;
-    padding-top: 1.125rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
 
     &__amount {
       padding-bottom: 0.5rem;
       padding-right: 0;
       font-size: 1.5rem;
+      line-height: 1.22;
     }
 
     &__text {
@@ -942,10 +1011,10 @@
 
   @include until($lg) {
     padding-top: 2.125rem;
-    padding-bottom: 0;
+    padding-bottom: 0.125rem;
 
     &__title {
-      margin-bottom: 0;
+      margin-bottom: 1rem;
     }
 
     .launch-card {
@@ -959,16 +1028,27 @@
   }
 
   @include until($md) {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+
+    &__title {
+      h2 {
+        margin-bottom: 0.25rem;
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+      }
+    }
 
     .launch-card {
       height: 7rem;
       margin-bottom: 1rem;
-    }
 
-    &__title {
-      margin-bottom: 0.5rem;
+      &__amount {
+        font-size: 1.625rem;
+      }
     }
   }
 }
@@ -976,10 +1056,10 @@
 /* protection section */
 .p2p-protection {
   padding-top: 3rem;
-  padding-bottom: 3.875rem;
+  padding-bottom: 4.25rem;
 
   &__title {
-    margin-bottom: 2.75rem;
+    margin-bottom: 4rem;
   }
 
   &__card {
@@ -1006,18 +1086,27 @@
     }
   }
 
-  @include until($sm) {
-    padding-bottom: 0.25rem;
-    
+  @include until($md) {
     &__title {
-      margin-bottom: 1.25rem;
+      h2 {
+        font-size: 1.125rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+      }
     }
+  }
+
+  @include until($sm) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     &__card {
       flex-direction: column;
 
-      a {
-        margin-bottom: 2.25rem;
+      a:not(:last-child) {
+        margin-bottom: 1.875rem;
       }
     }
   }
@@ -1026,7 +1115,6 @@
 /* 
 launch history styles 
 */
-
 .launch-container {
   max-width: 57.5rem;
   margin: 0 auto;
@@ -1045,7 +1133,7 @@ launch history styles
   }
 
   h2 {
-    width: 267px;
+    width: 16.6875rem;
     margin: 0 auto;
   }
 
@@ -1070,6 +1158,12 @@ launch history styles
   @include until($xl) {
     &__img {
       overflow-x: hidden;
+    }
+  }
+
+  @include until($lg) {
+    &__img {
+      margin-left: -72px;
     }
   }
 
@@ -1107,15 +1201,23 @@ launch history styles
     &__img {
       justify-content: center;
       margin-top: 0;
+      margin-left: 0;
     }
   }
 
   @include until($sm) {
     &__wrapper {
       border-radius: 0;
+      background-color: $light-grey;
+    }
+
+    &__left {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
     }
 
     &__img {
+      margin-left: -58px;
       border-bottom-right-radius: 0;
     }
   }
@@ -1123,8 +1225,8 @@ launch history styles
 
 /* launch promo */
 .launch-promo {
-  padding-top: 2.625rem;
-  padding-bottom: 3.125rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3rem;
 
   blockquote {
     position: relative;
@@ -1168,14 +1270,24 @@ launch history styles
   }
 
   @include until($lg) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
     blockquote {
       padding: 2.875rem 0.625rem 2.875rem 2.375rem;
+    }
+
+    .launch-cards {
+      padding-top: 1.5rem;
     }
   }
 
   @include until($md) {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+
     blockquote {
-      padding: 2.375rem 0 2.375rem 2rem;
+      padding: 2.25rem 0 2.25rem 1.875rem;
       color: $main-blue;
 
       &::before {
@@ -1190,12 +1302,16 @@ launch history styles
         width: 3px;
       }
     }
+
+    .launch-cards {
+      padding-top: 0.5rem;
+    }
   }
 }
 
 
 .launch-cards {
-  padding-top: 2.125rem;
+  padding-top: 2rem;
 
   @include until($md) {
     padding-top: 1.5rem;
@@ -1205,7 +1321,7 @@ launch history styles
 .launch-card {
   display: flex;
   align-items: center;
-  height: 7.75rem;
+  height: 7rem;
   padding: 1.25rem 1.875rem 1.25rem 1.25rem;
   border-radius: $border-radius;
   box-shadow: 0px 4px 20px $card-shadow;
@@ -1220,6 +1336,7 @@ launch history styles
   }
 
   @include until($lg) {
+    height: 7.75rem;
     padding: 0.5rem;
 
     &__amount {
@@ -1243,16 +1360,16 @@ launch history styles
 /* launch p2p */
 .launch-p2p {
   padding-top: 4rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 5.25rem;
   background-color: $light-grey;
 
   &__cards {
-    padding-top: 4.5rem;
+    padding-top: 4rem;
   }
   
   &__card {
     display: flex;
-    margin-bottom: 2.75rem;
+    margin-bottom: 3.75rem;
   }
   
   &__img {
@@ -1281,18 +1398,22 @@ launch history styles
       margin-bottom: 0.75rem;
       font-weight: bold;
     }
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   @include until($lg) {
     padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.125rem;
 
     &__cards {
       padding-top: 1.75rem;
     }
     
     &__card {
-      margin-bottom: 1rem;
+      margin-bottom: 1.75rem;
     }
   
     &__img {
@@ -1301,24 +1422,31 @@ launch history styles
   }
   
   @include until($md) {
-    padding-top: 1.25rem;
-    padding-bottom: 0.625rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   
     h3 {
       text-align: left;
+      font-size: 1.25rem;
     }
   
     &__cards {
-      padding-top: 1.125rem;
+      padding-top: 1rem;
     }
   
     &__card {
       flex-direction: column;
-      margin-bottom: 0.875rem;
+      margin-bottom: 1.5rem;
     }
 
     &__img {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__content {
+      h4 {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }
@@ -1345,9 +1473,7 @@ launch history styles
     align-items: center;
     margin-top: -34px;
     padding-right: 1.875rem;
-  }
-  
-  &__img {
+
     img {
       width: 246px;
     }
@@ -1394,6 +1520,7 @@ launch history styles
 
     &__img {
       margin-top: 0.5rem;
+      padding-right: 0.625rem;
     }
   
     &__content {
@@ -1404,18 +1531,30 @@ launch history styles
       }
     }
   }
+
+  @include until($md) {
+    &__wrapper {
+      border-radius: 0.5rem;
+    }
+
+    &__right {
+      padding: 1.125rem 0.9375rem;
+    }
+  }
 }
 
 /* additional info */
 .p2p-info {
+  padding-bottom: 1rem;
+
   &__title {
     padding-top: 3rem;
     padding-bottom: 2.5rem;
   }
 
   &__content {
-    h3 {
-      margin-bottom: 1rem;
+    .list, .list li, p {
+      margin-bottom: 0.5rem;
     }
 
     a {
@@ -1423,14 +1562,26 @@ launch history styles
     }
   }
 
-  @include until($md) {
-    h3 {
-      font-size: 1.25rem;
-    }
-
+  @include until($lg) {
     &__title {
       padding-top: 2.5rem;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0;
+    }
+
+    &__content {
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @include until($md) {
+    &__title {
+      padding-top: 1.5rem;
+
+      h3 {
+        font-size: 1.25rem;
+      }
     }
   }
 }

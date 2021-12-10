@@ -257,13 +257,13 @@
 
             <div class="col-12 mt-2 mt-lg-0 mb-3">
 
-              <div class="row">
+              <div class="row p2p__title">
                 <div class="col-md">
                   <h1>
                     <a role="button" tabindex="0" class="p2p__connection p2p-popover d-none d-md-inline-block" data-toggle="popover" data-content="На странице используется ассиметричное 256-битное шифрование - один из самых безопасных в мире методов шифрований"></a>
                     Перевод денег с карты на карту
                   </h1>
-                  <p>Мгновенные переводы с карты на карту любого банка Украины</p>
+                  <p class="mb-0 mb-md-4">Мгновенные переводы с карты на карту любого банка Украины</p>
                 </div>
                 <div class="col-auto p2p__alert d-none d-md-block d-lg-none">
                   <div class="alert alert-success alert-people fade show" role="alert">
@@ -280,58 +280,128 @@
                 </div>
               </div>
 
+              <div class="row justify-content-between mb-4">
+
+                <div class="col-12 col-lg-auto p2p__tabs">
+                  <h4>Выберите метод перевода:</h4>
+
+                  <div class="p2p-tablist">
+                    <ul class="nav" role="tablist">
+                      <li class="p2p-tablist__item">
+                        <a class="p2p-tablist__link p2p-tablist__link--card active" id="tablist-card-tab" data-toggle="pill" href="#tablist-card" role="tab" aria-controls="tablist-card" aria-selected="true">
+                          <img src="/img/p2p/tablist/tablist-card.svg" alt="Card">
+                          <span>С карты</span>
+                        </a>
+                      </li>
+                      <li class="p2p-tablist__item">
+                        <a class="p2p-tablist__link p2p-tablist__link--masterpass" id="tablist-masterpass-tab" data-toggle="pill" href="#tablist-masterpass" role="tab" aria-controls="tablist-masterpass" aria-selected="false">
+                          <img src="/img/p2p/tablist/tablist-masterpass.svg" alt="Masterpass">
+                          <span>Мои карты</span>
+                        </a>
+                      </li>
+                      <li class="p2p-tablist__item">
+                        <span class="p2p-tablist__badge">Новое</span>
+                        <a class="p2p-tablist__link p2p-tablist__link--applepay" id="tablist-applepay-tab" data-toggle="pill" href="#tablist-applepay" role="tab" aria-controls="tablist-applepay" aria-selected="false">
+                          <img src="/img/p2p/tablist/tablist-applepay.svg" alt="ApplePay">
+                          <span>Apple Pay</span>
+                        </a>
+                      </li>
+                      <li class="p2p-tablist__item">
+                        <span class="p2p-tablist__badge">Новое</span>
+                        <a class="p2p-tablist__link p2p-tablist__link--googlepay" id="tablist-googlepay-tab" data-toggle="pill" href="#tablist-googlepay" role="tab" aria-controls="tablist-googlepay" aria-selected="false">
+                          <img src="/img/p2p/tablist/tablist-googlepay.svg" alt="GooglePay">
+                          <span>Google Pay</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-lg-auto align-self-end order-first order-lg-1">
+                  <!-- events placeholder -->
+                </div>
+
+              </div>
+
               <form action="/">
 
                 <div class="row justify-content-between">
 
-                  <div class="col-lg-5 mt-3 mt-lg-0">
+                  <div class="col-lg-5">
 
                     <div class="p2p__card-wrapper">
 
-                      <div class="p2p__card-title">С карты</div>
+                      <div class="p2p__card-title" data-google-title="С Apple Pay" data-google-title="С Google Pay">С карты</div>
 
                       <div class="p2p__card p2p__card--sender">
-                        <div class="bank-card">
-                          <div class="bank-card__header">
-                            <div class="bank-card__bank">
-                              <div id="sender-bank-card"></div>
-                            </div>
-                            <div class="bank-card__type">
-                              <div id="sender-type-card"></div>
-                            </div>
-                          </div>
-                          <div class="bank-card__body">
-                            <div class="bank-card__number">
-                              <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="p2pform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                                <label class="control-label form-label" for="p2pform-sender_card_pan">Номер карты</label>
-                                <div class="help-block"></div>
+
+                        <div class="tab-content">
+
+                          <!-- tablist card -->
+                          <div class="tab-pane fade show active" id="tablist-card" role="tabpanel" aria-labelledby="tablist-card-tab">
+                            <div class="bank-card">
+                              <div class="bank-card__header">
+                                <div class="bank-card__bank">
+                                  <div id="sender-bank-card"></div>
+                                </div>
+                                <div class="bank-card__type">
+                                  <div id="sender-type-card"></div>
+                                </div>
+                              </div>
+                              <div class="bank-card__body">
+                                <div class="bank-card__number">
+                                  <div class="form-group">
+                                    <input type="tel" class="form-control form-input" id="p2pform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                    <label class="control-label form-label" for="p2pform-sender_card_pan">Номер карты</label>
+                                    <div class="help-block"></div>
+                                  </div>
+                                </div>
+                                <div class="bank-card__card-data">
+                                  <div class="form-group bank-card__expires">
+                                    <input type="text" class="form-control form-input" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                                    <label class="control-label form-label" for="cardform-exp">Срок действия</label>
+                                    <div class="help-block"></div>
+                                  </div>
+                                  <div class="form-group bank-card__cvv">
+                                    <input type="password" class="form-control form-input" id="p2pform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                                    <label class="control-label form-label" for="p2pform-sender_card_cvv">CVV</label>
+                                    <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты"></a>
+                                    <div class="help-block"></div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                            <div class="bank-card__card-data">
-                              <div class="form-group bank-card__expires">
-                                <input type="text" class="form-control form-input" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
-                                <label class="control-label form-label" for="cardform-exp">Срок действия</label>
-                                <div class="help-block"></div>
-                              </div>
-                              <div class="form-group bank-card__cvv">
-                                <input type="password" class="form-control form-input" id="p2pform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
-                                <label class="control-label form-label" for="p2pform-sender_card_cvv">CVV</label>
-                                <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты"></a>
-                                <div class="help-block"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                          </div><!-- tablist card -->
+
+                          <!-- tablist masterpass -->
+                          <div class="tab-pane fade" id="tablist-masterpass" role="tabpanel" aria-labelledby="tablist-masterpass-tab">
+                            <p>masterpass</p>
+                          </div><!-- tablist masterpass -->
+
+                          <!-- tablist applepay -->
+                          <div class="tab-pane fade" id="tablist-applepay" role="tabpanel" aria-labelledby="tablist-applepay-tab">
+                            <p>applepay</p>
+                          </div><!-- tablist applepay -->
+
+                          <!-- tablist googlepay -->
+                          <div class="tab-pane fade" id="tablist-googlepay" role="tabpanel" aria-labelledby="tablist-googlepay-tab">
+                            <p>googlepay</p>
+                          </div><!-- tablist googlepay -->
+
+                        </div> <!-- /.tab-content -->
+
                       </div>
 
                       <div class="p2p__sender-phone">
+                        <p>
+                          Ваш номер телефона - обязательно <a role="button" tabindex="0" class="bank-card__cvv-button p2p-popover" data-toggle="popover" data-content="Для возможности обратной связи"></a>
+                        </p>
                         <div class="form-group required">
                           <input type="tel" class="form-control form-input" id="p2pform-sender_phone" name="P2pForm[sender_phone]" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
-                          <label class="control-label form-label" for="p2pform-sender_phone">Номер телефона*</label>
+                          <label class="control-label form-label" for="p2pform-sender_phone">Номер телефона</label>
                           <div class="help-block">Введите номер телефона</div>
                         </div>
-                        <p>Для возможности обратной связи</p>
                       </div>
 
                       <div class="p2p__security d-none d-lg-flex" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
@@ -353,7 +423,7 @@
 
                   </div>
 
-                  <div class="col-lg">
+                  <div class="col-lg d-none d-lg-block">
                     <div class="p2p-arrow">
                       <svg width="54" height="44" viewBox="0 0 54 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.6758 32.6377L28.3136 21.9999" stroke-width="2.02" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -398,8 +468,8 @@
                                 <div class="help-block">Сумма перевода должна быть больше 5</div>
                               </div>
                               <div class="form-group bank-card__descr">
-                                <p><span>Комиссия</span> 1%+5 грн</p>
-                                <p class="bank-card__commission" id="commission" data-text="грн"><span>0.00</span> грн</p>
+                                <p class="small">Комиссия<br>1%+5 грн</p>
+                                <p class="bank-card__commission"><span id="commission">0.00</span> грн</p>
                               </div>
                             </div>
                             <!-- <div class="bank-card__checkbox">
@@ -474,7 +544,7 @@
                       </div>
 
                       <div class="text-center mt-3">
-                        <p class="px-3">Нажимая кнопку "Перевести", Вы соглашаетесь с условиями <a href="/media/files/public-offer.pdf" class="red-link" target="_blank">публичного договора</a></p>
+                        <p class="px-3">Нажимая кнопку "Перевести", Вы соглашаетесь с условиями <a href="/media/files/public-offer.pdf" class="red-link" target="_blank"><u>публичного договора</u></a></p>
                       </div>
 
                       <div class="p2p__security mt-4 d-lg-none" data-toggle="tooltip" title="Мы обрабатываем всю информацию о картах согласно международным стандартам безопасности">
@@ -556,8 +626,8 @@
 
             <div class="row p2p-limitations__title">
               <div class="col-12 text-center">
-                <h2 class="mb-2 mb-lg-3">Лимиты и ограничения</h2>
-                <p>Переводы с карты на карту по Украине</p>
+                <h2>Лимиты и ограничения</h2>
+                <p class="mb-0">Переводы с карты на карту по Украине</p>
               </div>
             </div>
 
@@ -610,8 +680,8 @@
 
             <div class="row p2p-protection__title">
               <div class="col-12 text-center">
-                <h2 class="mb-2 mb-lg-3">Мы защищаем ваши данные</h2>
-                <p>Все операции, совершаемые на сайте iPay.ua находятся под защитой технологии 3D-Secure</p>
+                <h2>Мы защищаем ваши данные</h2>
+                <p class="mb-0">Все операции, совершаемые на сайте iPay.ua находятся под защитой технологии 3D-Secure</p>
               </div>
             </div>
 
@@ -655,7 +725,6 @@
             
                         <div class="col-md-6 launch-header__right">
                           <div class="launch-header__img">
-                            <!-- <img src="/v4/p2p/web/source/default_IPAY-13912/img/launch-header-img.png" srcset="/v4/p2p/web/source/default_IPAY-13912/img/launch-header-img.png 1x, /v4/p2p/web/source/default_IPAY-13912/img/launch-header-img@2x.png 2x" alt="Image"> -->
                             <img src="/img/p2p/launch-header-img.png" srcset="/img/p2p/launch-header-img.png 1x, /img/p2p/launch-header-img@2x.png 2x" alt="Image">
                           </div>
                         </div>
@@ -678,7 +747,7 @@
                 <div class="launch-container">
                   <div class="col-12">
                     <p><strong>iPay.ua — первый PSP-провайдер, который запустил услугу денежных переводов с карты на карту в Украине. Это произошло в 2011 году благодаря партнерству с Альфа-Банк Украина и международными платежными системами Visa и Mastercard.</strong></p>
-                    <p>Услуга оказалась инновационной для своего времени. Еще 9 лет назад украинские банки не умели обрабатывать данный тип транзакций, что приводило к низкому проценту успешных переводов. Поначалу они составляли не более 26%.</p>
+                    <p class="mb-0">Услуга оказалась инновационной для своего времени. Еще 9 лет назад украинские банки не умели обрабатывать данный тип транзакций, что приводило к низкому проценту успешных переводов. Поначалу они составляли не более 26%.</p>
                     <p>Влиять на работы всех банков страны (а их было более 170) не представлялось возможным. Но мы верили, что сервис «Перевод денег с карты на карту» будет популярным. И нужно применить сверхусилия, чтобы добиться максимальной конверсии. Наши топ-менеджеры встречались с сотрудниками банков и процессинговых центров с обучающими техническими материалами.</p>
                     <blockquote><span></span>Уже через месяц процент успешных операций был чуть более 50. Еще через 3 месяца сервис работал в штатном режиме с максимальной проходимостью операций.</blockquote>
                     <p>Сегодня перевод с карты на карту — одна из самых востребованных услуг, которой ежедневно пользуются десятки тысяч украинцев. А iPay.ua входит в тройку лидеров среди провайдеров платежных услуг в Украине.</p>
@@ -761,7 +830,7 @@
                     <div class="col-md-6">
                       <div class="launch-p2p__card">
                         <div class="launch-p2p__img launch-p2p__img--main">
-                          <img src="/img/p2p/launch-p2p-devices.svg" alt="Icon">
+                          <img src="/img/p2p/launch-p2p-devices-new.svg" alt="Icon">
                         </div>
                         <div class="launch-p2p__content">
                           <h4>Сервис доступен на всех устройствах</h4>
@@ -789,7 +858,7 @@
                   <div class="row">
         
                     <div class="col-md-6">
-                      <div class="launch-p2p__card">
+                      <div class="launch-p2p__card mb-0">
                         <div class="launch-p2p__img">
                           <img src="/img/p2p/launch-p2p-control.svg" alt="Icon">
                         </div>
@@ -846,7 +915,7 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-12 text-center p2p-info__title">
+              <div class="col-12 text-left text-md-center p2p-info__title">
                 <h3>Дополнительная информация</h3>
               </div>
 
@@ -895,7 +964,7 @@
                   <li><a rel="nofollow" target="_blank" href="https://www.ipay.ua/ru/p2p/ideabank" class="red-link">Идея Банк</a>
                   </li>
                 </ul>
-                <p class="mt-2">Смело пользуйтесь услугой на сайте своего банка. А если Вашего банка в этом списке не оказалось, то всегда есть наш сервис!</p>
+                <p>Смело пользуйтесь услугой на сайте своего банка. А если Вашего банка в этом списке не оказалось, то всегда есть наш сервис!</p>
               </div>
 
             </div>
