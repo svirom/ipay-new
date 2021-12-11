@@ -49,76 +49,6 @@
   border-bottom: 1px solid #DEE7F3;
 }
 
-.p2p .p2p__tabs h4 {
-  margin-bottom: 0.875rem;
-}
-
-.p2p .p2p-tablist .nav {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
-.p2p .p2p-tablist__item {
-  position: relative;
-}
-
-.p2p .p2p-tablist__item + .p2p-tablist__item {
-  margin-left: 0.625rem;
-}
-
-.p2p .p2p-tablist__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 3rem;
-  width: 186px;
-  padding: 0.25rem 0.125rem;
-  border: 3px solid #DEE7F3;
-  border-radius: 0.5rem;
-  -webkit-transition: background-color 0.3s ease-out;
-  transition: background-color 0.3s ease-out;
-}
-
-.p2p .p2p-tablist__link span {
-  color: #172A3A;
-  line-height: 1.1;
-  white-space: nowrap;
-}
-
-.p2p .p2p-tablist__link:hover {
-  background-color: #F0F5FA;
-  text-decoration: none;
-}
-
-.p2p .p2p-tablist__link:active, .p2p .p2p-tablist__link.active {
-  border-color: #172A3A;
-  background-color: #172A3A;
-}
-
-.p2p .p2p-tablist__link:active span, .p2p .p2p-tablist__link.active span {
-  color: #ffffff;
-}
-
-.p2p .p2p-tablist__badge {
-  position: absolute;
-  top: -0.4375rem;
-  right: 0.625rem;
-  padding: 0.1875rem 0.1875rem 0.125rem;
-  color: #ffffff;
-  font-size: 0.5rem;
-  line-height: 1.125;
-  text-transform: uppercase;
-  letter-spacing: 0.25px;
-  border-radius: 0.25rem;
-  background-color: #E84F35;
-}
-
 .p2p__card-wrapper {
   width: 26.25rem;
 }
@@ -601,17 +531,6 @@
   .p2p__alert .alert.alert-people::before {
     top: 0.5rem;
   }
-  .p2p .p2p-tablist__item {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    max-width: 100%;
-  }
-  .p2p .p2p-tablist__link {
-    width: auto;
-  }
   .p2p__card-wrapper, .p2p .bank-card, .p2p__sender-phone, .p2p__bonuses {
     width: auto;
     max-width: 26.25rem;
@@ -636,23 +555,6 @@
 
 @media screen and (max-width: 767px) {
   .p2p__title::after {
-    display: none;
-  }
-  .p2p .p2p-tablist__item + .p2p-tablist__item {
-    margin-left: 0.5rem;
-  }
-  .p2p .p2p-tablist__link {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 4rem;
-    font-size: 0.75rem;
-  }
-  .p2p .p2p-tablist__badge {
     display: none;
   }
   .p2p__security {
@@ -823,6 +725,453 @@
 
 .bonus-tooltip:focus {
   outline: none;
+}
+
+/* p2p tabs */
+.p2p__tabs h4 {
+  margin-bottom: 0.875rem;
+}
+
+.p2p__tabs .p2p-tablist .nav {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.p2p__tabs .p2p-tablist__item {
+  position: relative;
+}
+
+.p2p__tabs .p2p-tablist__item + .p2p-tablist__item {
+  margin-left: 0.625rem;
+}
+
+.p2p__tabs .p2p-tablist__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3rem;
+  width: 186px;
+  padding: 0.25rem 0.125rem;
+  border: 3px solid #DEE7F3;
+  border-radius: 0.5rem;
+  -webkit-transition: background-color 0.3s ease-out, border 0.3s ease-out;
+  transition: background-color 0.3s ease-out, border 0.3s ease-out;
+}
+
+.p2p__tabs .p2p-tablist__link span {
+  color: #172A3A;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.p2p__tabs .p2p-tablist__link:hover {
+  background-color: #F0F5FA;
+  text-decoration: none;
+}
+
+.p2p__tabs .p2p-tablist__link:active, .p2p__tabs .p2p-tablist__link.active {
+  border-color: #172A3A;
+  background-color: #172A3A;
+}
+
+.p2p__tabs .p2p-tablist__link:active span, .p2p__tabs .p2p-tablist__link.active span {
+  color: #ffffff;
+}
+
+.p2p__tabs .p2p-tablist__badge {
+  position: absolute;
+  top: -0.4375rem;
+  right: 0.625rem;
+  padding: 0.1875rem 0.1875rem 0.125rem;
+  color: #ffffff;
+  font-size: 0.5rem;
+  line-height: 1.125;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+  border-radius: 0.25rem;
+  background-color: #E84F35;
+}
+
+@media screen and (max-width: 991px) {
+  .p2p__tabs .p2p-tablist__item {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    max-width: 100%;
+  }
+  .p2p__tabs .p2p-tablist__link {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p2p__tabs .p2p-tablist__item + .p2p-tablist__item {
+    margin-left: 0.5rem;
+  }
+  .p2p__tabs .p2p-tablist__link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 4rem;
+    font-size: 0.75rem;
+  }
+  .p2p__tabs .p2p-tablist__badge {
+    display: none;
+  }
+}
+
+/* p2p masterpass */
+.p2p-masterpass .dropdown [aria-expanded="true"] .payment-card--active::after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.p2p-masterpass .dropdown-menu {
+  width: 100%;
+  top: auto !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  padding: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+}
+
+.p2p-masterpass .dropdown-menu .masterpass-card {
+  border-bottom: 1px solid #DEE7F3;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.p2p-masterpass .dropdown-menu .masterpass-card:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.p2p-masterpass .dropdown-menu .masterpass-card:last-of-type {
+  border-bottom: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.p2p-masterpass .dropdown-menu .masterpass-card--active::after {
+  width: 1.875rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='20' viewBox='0 0 32 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.27344 10.2408L9.17966 17.8638C10.3733 19.0147 12.3266 19.0147 13.5203 17.8638L30.728 1.27246' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 1.875rem;
+}
+
+.masterpass-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.625rem 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  cursor: pointer;
+}
+
+.masterpass-card__header {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 9.75rem;
+  height: 6.875rem;
+  padding: 1.0rem 0.5rem;
+  border-radius: 0.375rem;
+  background-color: #F0F5FA;
+}
+
+.masterpass-card__bank, .masterpass-card__type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.masterpass-card__bank {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.masterpass-card__bank img {
+  max-height: 1.125rem;
+}
+
+.masterpass-card__type {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.masterpass-card__type img {
+  max-height: 1.75rem;
+}
+
+.masterpass-card__body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 1.9rem;
+}
+
+.masterpass-card__number {
+  font-family: "Roboto", sans-serif;
+}
+
+.masterpass-card__purpose {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #7C9CAC;
+}
+
+.masterpass-card__card {
+  font-size: 1.1875rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.masterpass-card--active::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 1.25rem;
+  height: 100%;
+  top: 0;
+  right: 0.875rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+@media screen and (max-width: 575px) {
+  .masterpass-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0.75rem 1rem;
+  }
+  .masterpass-card__header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+  .masterpass-card__bank img, .masterpass-card__type img {
+    max-height: 2.75rem;
+  }
+  .masterpass-card__bank {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .masterpass-card__type {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .masterpass-card__type img {
+    max-height: 1.25rem;
+  }
+  .masterpass-card__body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+.masterpass-empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.625rem 1.5rem 0.625rem 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+}
+
+.masterpass-empty__header {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 9.75rem;
+  height: 6.875rem;
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: #F0F5FA;
+}
+
+.masterpass-empty__body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 1.25rem;
+}
+
+.masterpass-empty__body p {
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 575px) {
+  .masterpass-empty {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+  }
+  .masterpass-empty__header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+  .masterpass-empty__body {
+    padding-top: 1rem;
+    padding-left: 0;
+  }
+  .masterpass-empty__body a {
+    display: none;
+  }
+}
+
+.pay-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.625rem;
+  padding: 1.125rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+}
+
+.pay-card span {
+  margin-left: 1rem;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 575px) {
+  .pay-card {
+    padding: 0.25rem;
+  }
+  .pay-card span {
+    margin-left: 0.375rem;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .p2p-masterpass .masterpass-card__body {
+    padding-left: 0.5rem;
+  }
+  .masterpass-card--active::after {
+    right: 0.375rem;
+  }
 }
 
 /* popover bonuses */

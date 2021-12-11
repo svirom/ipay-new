@@ -62,72 +62,6 @@
     }
   }
 
-  .p2p__tabs {
-    h4 {
-      margin-bottom: 0.875rem;
-    }
-  }
-
-  .p2p-tablist {
-    .nav {
-      flex-wrap: nowrap;
-    }
-
-    &__item {
-      position: relative;
-
-      & + .p2p-tablist__item {
-        margin-left: 0.625rem;
-      }
-    }
-
-    &__link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 3rem;
-      width: 186px;
-      padding: 0.25rem 0.125rem;
-      border: 3px solid $middle-grey;
-      border-radius: 0.5rem;
-      transition: background-color 0.3s ease-out;
-
-      span {
-        color: $heading-color;
-        line-height: 1.1;
-        white-space: nowrap;
-      }
-
-      &:hover {
-        background-color: $light-grey;
-        text-decoration: none;
-      }
-
-      &:active, &.active {
-        border-color: $heading-color;
-        background-color: $heading-color;
-
-        span {
-          color: #ffffff;
-        }
-      }
-    }
-
-    &__badge {
-      position: absolute;
-      top: -0.4375rem;
-      right: 0.625rem;
-      padding: 0.1875rem 0.1875rem 0.125rem;
-      color: #ffffff;
-      font-size: 0.5rem;
-      line-height: 1.125;
-      text-transform: uppercase;
-      letter-spacing: 0.25px;
-      border-radius: 0.25rem;
-      background-color: $btn-red;
-    }
-  }
-
   &__card-wrapper {
     width: 26.25rem;
 
@@ -572,18 +506,6 @@
       }
     }
 
-    .p2p-tablist {
-      &__item {
-        flex-grow: 1;
-        flex-basis: 0;
-        max-width: 100%;
-      }
-
-      &__link {
-        width: auto;
-      }
-    }
-
     &__card-wrapper, .bank-card, &__sender-phone, &__bonuses {
       width: auto;
       max-width: 26.25rem;
@@ -616,25 +538,6 @@
   @include until($md) {
     &__title {
       &::after {
-        display: none;
-      }
-    }
-
-    .p2p-tablist {
-      &__item {
-        & + .p2p-tablist__item {
-          margin-left: 0.5rem;
-        }
-      }
-
-      &__link {
-        flex-direction: column;
-        justify-content: space-between;
-        height: 4rem;
-        font-size: 0.75rem;
-      }
-
-      &__badge {
         display: none;
       }
     }
@@ -817,6 +720,373 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+/* p2p tabs */
+.p2p__tabs {
+  h4 {
+    margin-bottom: 0.875rem;
+  }
+
+  .p2p-tablist {
+    .nav {
+      flex-wrap: nowrap;
+    }
+  
+    &__item {
+      position: relative;
+  
+      & + .p2p-tablist__item {
+        margin-left: 0.625rem;
+      }
+    }
+  
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3rem;
+      width: 186px;
+      padding: 0.25rem 0.125rem;
+      border: 3px solid $middle-grey;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease-out, border 0.3s ease-out;
+  
+      span {
+        color: $heading-color;
+        line-height: 1.1;
+        white-space: nowrap;
+      }
+  
+      &:hover {
+        background-color: $light-grey;
+        text-decoration: none;
+      }
+  
+      &:active, &.active {
+        border-color: $heading-color;
+        background-color: $heading-color;
+  
+        span {
+          color: #ffffff;
+        }
+      }
+    }
+  
+    &__badge {
+      position: absolute;
+      top: -0.4375rem;
+      right: 0.625rem;
+      padding: 0.1875rem 0.1875rem 0.125rem;
+      color: #ffffff;
+      font-size: 0.5rem;
+      line-height: 1.125;
+      text-transform: uppercase;
+      letter-spacing: 0.25px;
+      border-radius: 0.25rem;
+      background-color: $btn-red;
+    }
+  }
+
+  @include until($lg) {
+    .p2p-tablist {
+      &__item {
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+      }
+
+      &__link {
+        width: auto;
+      }
+    }
+  }
+
+  @include until($md) {
+    .p2p-tablist {
+      &__item {
+        & + .p2p-tablist__item {
+          margin-left: 0.5rem;
+        }
+      }
+
+      &__link {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 4rem;
+        font-size: 0.75rem;
+      }
+
+      &__badge {
+        display: none;
+      }
+    }
+  }
+}
+
+/* p2p masterpass */
+.p2p-masterpass {
+  .dropdown {
+    [aria-expanded="true"] {
+      .payment-card {
+        &--active {
+          &::after {
+            @include transform(rotate(180deg));
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    top: auto !important;
+    @include transform(none !important);
+    padding: 0;
+    border: 0;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 20px $card-shadow;
+
+    .masterpass-card {
+      border-bottom: 1px solid $middle-grey;
+      border-radius: 0;
+      box-shadow: none;
+
+      &:first-of-type {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      &:last-of-type {
+        border-bottom: 0;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+
+      &--active {
+        &::after {
+          width: 1.875rem;
+          background-image: url("data:image/svg+xml,%3Csvg width='32' height='20' viewBox='0 0 32 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.27344 10.2408L9.17966 17.8638C10.3733 19.0147 12.3266 19.0147 13.5203 17.8638L30.728 1.27246' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-size: 1.875rem;
+        }
+      }
+    }
+  }
+}
+
+.masterpass-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 20px $card-shadow;
+  cursor: pointer;
+
+  &__header {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 9.75rem;
+    height: 6.875rem;
+    padding: 1.0rem 0.5rem;
+    border-radius: 0.375rem;
+    background-color: $light-grey;
+  }
+
+  &__bank, &__type {
+    display: flex;
+  }
+
+  &__bank {
+    align-items: flex-end;
+    order: 1;
+
+    img {
+      max-height: 1.125rem;
+    }
+  }
+
+  &__type {
+    align-items: flex-start;
+    flex-shrink: 0;
+    justify-content: flex-end;
+
+    img {
+      max-height: 1.75rem;
+    }
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 1.9rem;
+  }
+
+  &__number {
+    font-family: $text-font;
+  }
+
+  &__purpose {
+    margin-bottom: 0.25rem;
+    @include font(0.875rem, 400, 1.15);
+    color: $main-blue;
+  }
+
+  &__card {
+    @include font(1.1875rem, 400, 1.15);
+  }
+
+  &--active {
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 1.25rem;
+      height: 100%;
+      top: 0;
+      right: 0.875rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      @include transition(all, 0.3s);
+      z-index: 10;
+    }
+  }
+
+  @include until($sm) {
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+
+    &__header {
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    &__bank, &__type {
+      img {
+        max-height: 2.75rem;
+      }
+    }
+
+    &__bank {
+      align-items: center;
+      order: 0;
+    }
+
+    &__type {
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+
+      img {
+        max-height: 1.25rem;
+      }
+    }
+
+    &__body {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-left: 0;
+      padding-top: 1rem;
+    }
+  }
+}
+
+.masterpass-empty {
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 1.5rem 0.625rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 20px $card-shadow;
+
+  &__header {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.75rem;
+    height: 6.875rem;
+    padding: 0.25rem;
+    border-radius: 0.375rem;
+    background-color: $light-grey;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 1.25rem;
+
+    p {
+      line-height: 1.2;
+    }
+  }
+
+  @include until($sm) {
+    flex-direction: column;
+    padding: 1rem;
+
+    &__header {
+      justify-content: flex-start;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    &__body {
+      padding-top: 1rem;
+      padding-left: 0;
+
+      a {
+        display: none;
+      }
+    }
+  }
+}
+
+.pay-card {
+  display: flex;
+  align-items: center;
+  height: 5.625rem;
+  padding: 1.125rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 20px $card-shadow;
+
+  span {
+    margin-left: 1rem;
+    line-height: 1.2;
+  }
+
+  @include until($sm) {
+    padding: 0.25rem;
+
+    span {
+      margin-left: 0.375rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .p2p-masterpass .masterpass-card__body {
+    padding-left: 0.5rem;
+  }
+
+  .masterpass-card--active::after {
+    right: 0.375rem;
   }
 }
 
