@@ -291,6 +291,10 @@
                   <h3>Modal pass recovery expired</h3>
                   <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-13">Modal Auth 13</a>
                 </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal create pass</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-14">Modal Auth 14</a>
+                </div>
               </div>
             </div>
 
@@ -405,7 +409,7 @@
 
     <!-- modal authentication -->
     <div class="modal fade modal-auth" id="modal-auth" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog--main">
         <div class="modal-content">
 
           <div class="modal-header">
@@ -436,107 +440,117 @@
               <!-- 1st tab section -->
               <div class="tab-pane fade show active" id="modal-signin" role="tabpanel" aria-labelledby="modal-signin-tab">
 
-                <form action="">
-                  <div class="form-group">
-                    <input type="text" class="form-control form-input" id="account-login" name="form-login" autocomplete="off" placeholder="" aria-required="true">
-                    <label class="control-label form-label" for="account-login">Телефон или email</label>
-                  </div>
-                  <div class="form-group mb-0">
-                    <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
-                    <label class="control-label form-label" for="account-pass">Пароль</label>
-                    <button type="button" class="password-button"></button>
-                  </div>
-                  <div class="form-group text-right mt-1">
-                    <a href="#" class="btn btn-link remind-link small">Напомнить пароль</a>
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-green btn-block" disabled="">Войти</button>
-                  </div>
-                </form>
+                <div class="row">
 
-                <div class="modal-social">
-                  <div class="modal-social__title">
-                    <span>или</span>
+                  <div class="col-md-6 modal-left">
+                    <p class="heading-color d-none d-md-block">Войти с помощью логина</p>
+                    <form action="">
+                      <div class="form-group">
+                        <input type="text" class="form-control form-input" id="account-login" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                        <label class="control-label form-label" for="account-login">Телефон или email</label>
+                      </div>
+                      <div class="form-group mb-0">
+                        <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
+                        <label class="control-label form-label" for="account-pass">Пароль</label>
+                        <button type="button" class="password-button"></button>
+                      </div>
+                      <div class="form-group text-right mt-1">
+                        <a href="#" class="btn btn-link remind-link small">Напомнить пароль</a>
+                      </div>
+                      <button type="submit" class="btn btn-green btn-block" disabled="">Войти</button>
+                    </form>
                   </div>
-                  <div class="modal-social__buttons">
-                    <a href="#" id="signinFacebook" class="btn btn-outline btn-block btn-signin btn-signin-fb">
-                      <span>Войти через Facebook</span>
-                    </a>
-                    <a href="#" id="signinGoogle" class="btn btn-outline btn-block btn-signin btn-signin-google">
-                      <span>Войти через Google</span>
-                    </a>
-                    <a href="#" id="signinApple" class="btn btn-outline btn-block btn-signin btn-signin-apple">
-                      <span>Войти через Apple</span>
-                    </a>
+
+                  <div class="col-md-6 mt-3 mt-md-0 modal-right">
+                    <p class="heading-color d-none d-md-block">или быстро войти с помощью</p>
+                    <div class="modal-social">
+                      <div class="modal-social__title d-md-none">
+                        <span>или</span>
+                      </div>
+                      <div class="modal-social__buttons">
+                        <a href="#" id="signinFacebook" class="btn btn-block btn-signin btn-signin-fb">
+                          <span>Войти через Facebook</span>
+                        </a>
+                        <a href="#" id="signinGoogle" class="btn btn-block btn-signin btn-signin-google">
+                          <span>Войти через Google</span>
+                        </a>
+                        <a href="#" id="signinApple" class="btn btn-block btn-signin btn-signin-apple">
+                          <span>Войти через Apple</span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
+
                 </div>
                 
-              </div>
+              </div><!-- 1st tab section -->
 
               <!-- 2nd tab section -->
               <div class="tab-pane fade" id="modal-signup" role="tabpanel" aria-labelledby="modal-signup-tab">
 
-                <div class="modal-social modal-social--signup">
-                  <div class="modal-social__buttons">
-                    <a href="#" id="signupFacebook" class="btn btn-outline btn-block btn-signin btn-signin-fb">
-                      <span>Продолжить через Facebook</span>
-                    </a>
-                    <a href="#" id="signupGoogle" class="btn btn-outline btn-block btn-signin btn-signin-google">
-                      <span>Продолжить через Google</span>
-                    </a>
-                    <a href="#" id="signupApple" class="btn btn-outline btn-block btn-signin btn-signin-apple">
-                      <span>Продолжить через Apple</span>
-                    </a>
-                  </div>
-                </div>
+                <div class="row">
 
-                <div class="modal-signup">
-                  <a class="modal-signup__collapse-btn" data-toggle="collapse" href="#collapseSignupTel" role="button" aria-expanded="false" aria-controls="collapseSignupTel">или по <span>номеру телефона</span></a>
-                  <p class="modal-signup__collapse-in"><span>или по номеру телефона</span></p>
-
-                  <div class="collapse" id="collapseSignupTel">
-                    <div class="modal-signup__collapse">
-
-                      <form action="">
-                        <div class="form-group">
-                          <input type="tel" class="form-control form-input" id="account-phone" name="form-phone" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true">
-                          <label class="control-label form-label" for="account-phone">Номер телефона</label>
-                        </div>
-                        <div class="form-group">
-                          <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
-                          <label class="control-label form-label" for="account-pass">Пароль</label>
-                          <button type="button" class="password-button"></button>
-                        </div>
-                        <div class="form-group mb-2">
-                          <p class="mb-2 small heading-color">Пароль должен содержать:</p>
-                          <div class="row no-gutters">
-                            <div class="col-6">
-                              <ul class="help-list">
-                                <li>не менее 8 символов</li>
-                                <li>1 цифру</li>
-                                <li>1 заглавною букву</li>
-                              </ul>
-                            </div>
-                            <div class="col-6">
-                              <ul class="help-list">
-                                <li>1 строчную букву</li>
-                                <li>не содержать кириллицу</li>
-                              </ul>
-                            </div>
+                  <div class="col-md-6 modal-left">
+                    <p class="heading-color d-none d-md-block">С помощью телефона</p>
+                    <form action="">
+                      <div class="form-group">
+                        <input type="tel" class="form-control form-input" id="account-phone" name="form-phone" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true">
+                        <label class="control-label form-label" for="account-phone">Номер телефона</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
+                        <label class="control-label form-label" for="account-pass">Пароль</label>
+                        <button type="button" class="password-button"></button>
+                      </div>
+                      <div class="form-group mb-2">
+                        <p class="mb-2 small heading-color">Пароль должен содержать:</p>
+                        <div class="row no-gutters">
+                          <div class="col-6">
+                            <ul class="help-list">
+                              <li>не менее 8 символов</li>
+                              <li>1 цифру</li>
+                              <li>1 заглавною букву</li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="help-list">
+                              <li>1 строчную букву</li>
+                              <li>не содержать кириллицу</li>
+                            </ul>
                           </div>
                         </div>
-                        <div class="form-group">
-                          <button type="submit" class="btn btn-green btn-block" disabled="">Зарегистрироваться</button>
-                        </div>
-                      </form>
+                      </div>
+                      <button type="submit" class="btn btn-green btn-block" disabled="">Зарегистрироваться</button>
+                    </form>
+                  </div>
 
-                      <p class="text-center heading-color mb-0">Нажимая кнопку “Зарегистрироваться”, Вы соглашаетесь с условиями <a href="#" class="red-link">публичного договора</a></p>
-
+                  <div class="col-md-6 mt-3 mt-md-0 modal-right">
+                    <p class="heading-color d-none d-md-block">или зарегистрироваться через</p>
+                    <div class="modal-social">
+                      <div class="modal-social__title d-md-none">
+                        <span>или</span>
+                      </div>
+                      <div class="modal-social__buttons">
+                        <a href="#" id="signupFacebook" class="btn btn-block btn-signin btn-signin-fb">
+                          <span>Продолжить через Facebook</span>
+                        </a>
+                        <a href="#" id="signupGoogle" class="btn btn-block btn-signin btn-signin-google">
+                          <span>Продолжить через Google</span>
+                        </a>
+                        <a href="#" id="signupApple" class="btn btn-block btn-signin btn-signin-apple">
+                          <span>Продолжить через Apple</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
+
+                  <div class="col-12 mt-3 mt-md-4">
+                    <p class="text-center heading-color mb-0">Создавая аккаунт, Вы соглашаетесь с условиями <a href="#" class="red-link">публичного договора</a></p>
+                  </div>
+
                 </div>
 
-              </div>
+              </div><!-- 2nd tab section -->
 
             </div>
             
@@ -565,7 +579,7 @@
 
           <div class="modal-body">
 
-            <p>Для успешной привязки аккаунта к iPay.ua укажите ваш номер телефона, Зарегистрированный на iPay.ua</p>
+            <p>Для успешной привязки аккаунта к iPay.ua укажите ваш номер телефона.</p>
 
             <form action="">
               <div class="form-group">
@@ -698,7 +712,7 @@
           <div class="modal-header modal-header--success">
 
             <div class="modal-header-img">
-              <img src="/img/authentication/icon-google.svg" alt="Google">
+              <img src="/img/authentication/icon-google-success.svg" alt="Google">
             </div>
 
             <h2 class="mb-0 text-center">Вы подвязали ваш аккаунт Google!</h2>
@@ -735,7 +749,7 @@
           <div class="modal-header modal-header--success">
 
             <div class="modal-header-img">
-              <img src="/img/authentication/icon-fb.svg" alt="Facebook">
+              <img src="/img/authentication/icon-fb-success.svg" alt="Facebook">
             </div>
 
             <h2 class="mb-0 text-center">Вы подвязали ваш аккаунт Facebook!</h2>
@@ -772,7 +786,7 @@
           <div class="modal-header modal-header--success">
 
             <div class="modal-header-img">
-              <img src="/img/authentication/icon-apple.svg" alt="Apple">
+              <img src="/img/authentication/icon-apple-success.svg" alt="Apple">
             </div>
 
             <h2 class="mb-0 text-center">Вы подвязали ваш аккаунт Apple!</h2>
@@ -1081,6 +1095,65 @@
             <a href="#" class="btn btn-green btn-block mb-3">Запросить новую ссылку</button>
 
             <a href="#" class="red-link"><u>Вернуться ко Входу</u></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal create password (modal auth 14) -->
+    <div class="modal fade modal-auth" id="modal-auth-14" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h3 class="mb-0">Создайте пароль</h3>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <p>Создайте пароль для резервного доступа в кабинет с помощью телефона и пароля.</p>
+
+            <form action="">
+              <div class="form-group has-success">
+                <input type="password" class="form-control form-input filled" id="account-pass" name="form-login" autocomplete="off" placeholder="" aria-required="true" value="fghfdsfs">
+                <label class="control-label form-label" for="account-pass">Пароль</label>
+                <button type="button" class="password-button"></button>
+              </div>
+
+              <div class="form-group mb-3">
+                <p class="mb-2 small heading-color">Пароль должен содержать:</p>
+                <div class="row no-gutters">
+                  <div class="col-6">
+                    <ul class="help-list">
+                      <li class="checked">не менее 8 символов</li>
+                      <li class="checked">1 цифру</li>
+                      <li class="checked">1 заглавною букву</li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="help-list">
+                      <li class="checked">1 строчную букву</li>
+                      <li class="checked">не содержать кириллицу</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-0">
+                <button type="submit" class="btn btn-green btn-block">Сохранить пароль</button>
+              </div>
+
+            </form>
 
           </div>
 

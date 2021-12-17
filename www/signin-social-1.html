@@ -23,6 +23,17 @@
             </div>
             <nav class="">
               <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                  </div>
+                </li>
                 <li class="main-nav__item">
                   <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
                     <span>Безопасность </span>
@@ -197,68 +208,68 @@
       <div class="container main-content">
         <div class="row justify-content-center">
           <!-- main area -->
-          <main class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+          <main class="col-sm-8 col-md-12 col-lg-10 col-xl-8">
 
-            <div class="row">
-              <div class="col-12 mt-3">
-                <!-- account signin widget -->
-                <div class="account-signin" id="account-signin-widget">
-                  
-                  <div class="row">
+            <!-- account signin widget -->
+            <div class="account-signin" id="account-signin-widget">
+              
+              <div class="row">
 
-                    <div class="col-12 mb-3 text-md-center">
-                      <h1>Вход в кабинет</h1>
-                    </div>
-
-                    <div class="col-12">
-                      <form action="">
-                        <div class="form-group mb-4">
-                          <input type="text" class="form-control form-input" id="account-login" name="form-login" autocomplete="off" placeholder="" aria-required="true">
-                          <label class="control-label form-label" for="account-login">Телефон или email</label>
-                        </div>
-                        <div class="form-group mb-0">
-                          <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
-                          <label class="control-label form-label" for="account-pass">Пароль</label>
-                          <button type="button" class="password-button"></button>
-                        </div>
-                        <div class="form-group text-right">
-                          <a href="#" class="btn btn-link remind-link small">Напомнить пароль</a>
-                        </div>
-                        <div class="form-group">
-                          <button type="submit" class="btn btn-green btn-block" disabled>Войти</button>
-                        </div>
-
-                        <div class="modal-social mb-3">
-                          <div class="modal-social__title">
-                            <span>или</span>
-                          </div>
-                          <div class="modal-social__buttons">
-                            <a href="#" id="signinFacebook" class="btn btn-outline btn-block btn-signin btn-signin-fb">
-                              <span>Войти через Facebook</span>
-                            </a>
-                            <a href="#" id="signinGoogle" class="btn btn-outline btn-block btn-signin btn-signin-google">
-                              <span>Войти через Google</span>
-                            </a>
-                            <a href="#" id="signinApple" class="btn btn-outline btn-block btn-signin btn-signin-apple">
-                              <span>Войти через Apple</span>
-                            </a>
-                          </div>
-                        </div>
-
-                        <div class="form-group text-left mb-0">
-                          <a href="#" class="btn btn-link heading-color">Нет кабинета?</a>
-                        </div>
-                        <div class="form-group mb-4 mb-md-5">
-                          <button type="button" class="btn btn-outline btn-block">Создать кабинет</button>
-                        </div>
-                      </form>
-                    </div>
-
+                <div class="col-12 mt-2 mt-lg-0 mb-3 mb-md-4">
+                  <div class="modal-tablist">
+                    <ul class="nav" role="tablist">
+                      <li class="modal-tablist__item">
+                        <a class="modal-tablist__link active" href="/signin-social-1.html">Вход</a>
+                      </li>
+                      <li class="modal-tablist__item">
+                        <a class="modal-tablist__link" href="/signup-social-1.html">Регистрация</a>
+                      </li>
+                    </ul>
                   </div>
+                </div>
 
-                </div><!-- account signin widget -->
+                <div class="col-md-6 modal-left">
+                  <p class="heading-color d-none d-md-block">Войти с помощью логина</p>
+                  <form action="">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-input" id="account-login" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                      <label class="control-label form-label" for="account-login">Телефон или email</label>
+                    </div>
+                    <div class="form-group mb-0">
+                      <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
+                      <label class="control-label form-label" for="account-pass">Пароль</label>
+                      <button type="button" class="password-button"></button>
+                    </div>
+                    <div class="form-group text-right">
+                      <a href="#" class="btn btn-link remind-link small">Напомнить пароль</a>
+                    </div>
+                    <button type="submit" class="btn btn-green btn-block" disabled>Войти</button>
+                  </form>
+                </div>
+
+                <div class="col-md-6 mt-3 mt-md-0 modal-right">
+                  <p class="heading-color d-none d-md-block">или быстро войти с помощью</p>
+                  <div class="modal-social">
+                    <div class="modal-social__title d-md-none">
+                      <span>или</span>
+                    </div>
+                    <div class="modal-social__buttons">
+                      <a href="#" id="signinFacebook" class="btn btn-block btn-signin btn-signin-fb">
+                        <span>Войти через Facebook</span>
+                      </a>
+                      <a href="#" id="signinGoogle" class="btn btn-block btn-signin btn-signin-google">
+                        <span>Войти через Google</span>
+                      </a>
+                      <a href="#" id="signinApple" class="btn btn-block btn-signin btn-signin-apple">
+                        <span>Войти через Apple</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-            </div>
+
+            </div><!-- account signin widget -->
 
           </main><!-- main area -->
         </div>
@@ -340,10 +351,33 @@
             <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
             <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
             <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
           </div>
         </div>
       </div>
     </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Поиск</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- Optional JavaScript -->

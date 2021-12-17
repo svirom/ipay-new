@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru-RU">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
-    <link rel="stylesheet" href="/css/bill-result.css">
-    <link rel="stylesheet" href="/css/bill-message.css">
-    <link rel="stylesheet" href="/css/service-rate.css">
-    <link rel="stylesheet" href="/css/psm-awards.css">
+    <link rel="stylesheet" href="/css/progressbar.css">
+    <link rel="stylesheet" href="/css/service-provider.css">
+    <link rel="stylesheet" href="/css/bill-eps.css">
 
-    <title>PSM Awards Success P2P</title>
+    <title>Bill EPS 1</title>
   </head>
   <body>
 
@@ -26,7 +26,7 @@
             <div class="main-nav__logo logo-color">
               <a href="#"></a>
             </div>
-            <nav>
+            <nav class="">
               <ul class="main-nav__nav">
                 <li class="main-nav__item main-nav__icon--search">
                   <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
@@ -37,7 +37,6 @@
                     <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
                     <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
                     <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
-                    <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
                   </div>
                 </li>
                 <li class="main-nav__item">
@@ -205,8 +204,18 @@
                     <span class="d-none">Головна</span>
                   </a>
                 </li>
+                <li>
+                  <a href="#">
+                    <span>Каталог услуг</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Коммунальные услуги</span>
+                  </a>
+                </li>
                 <li class="active" aria-current="page">
-                  <span>Перевод денег с карты на карту</span>
+                  <span>Тернопольский РЦ</span>
                 </li>
               </ul>
             </div>
@@ -219,226 +228,215 @@
         <div class="row">
           <!-- main area -->
           <main class="col-lg-8">
+
             <div class="row">
 
               <div class="col-12">
                 <!-- bill main widget -->
-                <div class="bill-main" id="bill-main-widget">
+                <div class="bill-main bill-vkp" id="bill-main-widget">
                   <div class="row">
 
                     <div class="col-12 mt-2 mb-3 d-lg-none">
-                      <a href="#" class="btn btn-link btn-back">Главная</a>
+                      <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
                     </div>
-      
+
                     <div class="col-12 mb-3">
-                      <div class="bill-title text-center">
-                        <h1>Перевод денег с карты на карту</h1>
+                      <div class="bill-title">
+                        <h1>Оплатить за Тернопольский РЦ</h1>
+                        <p>Оплатить коммунальные услуги в городе Тернополь онлайн с помощью банковской карты Visa, MasterCard или ПРОСТІР.</p>
                       </div>
                     </div>
-      
-                    <div class="col-12 mt-1 mt-lg-3">
-      
-                      <div class="row">
-                        <div class="col-12 mt-4">
-                          <!-- bill result widget -->
-                          <div class="bill-result icon-success" id="bill-result-widget">
-                            <div class="bill-result__row">
-                              <div class="bill-result__header">
-                                <h3>Платеж успешен!</h3>
-                                <p>Платеж №37473537</p>
-                              </div>
-                              <div class="bill-result__footer">
-                                <h4 class="text-center mt-3">Квитанция</h4>
-                                <div class="bill-result__buttons">
-                                  <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
-                                  <form>
-                                    <div class="form-group">
-                                      <input type="email" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="qwerty@email.com" aria-required="true">
-                                      <label class="control-label form-label" for="form-name">Отправить на e-mail</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
-                                  </form>
+
+                    <div class="col-12">
+                      <!-- progressbar widget -->
+                      <div id="progressbar-widget">
+                        <div class="row">
+
+                          <div class="col-12 mt-3 mb-5 d-none d-sm-block">
+                            <div class="progress-payment">
+                              <div class="progress">
+                                <div class="progress-textline">
+                                  <span class="progress-text active">Ввод данных плательщика</span>
+                                  <span class="progress-text">Ввод данных платежа</span>
+                                  <span class="progress-text">Ввод данных карты</span>
+                                  <span class="progress-text">Подтверждение платежа</span>
+                                </div>
+                                <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-steps">
+                                  <span class="progress-step active"></span>
+                                  <span class="progress-step"></span>
+                                  <span class="progress-step"></span>
+                                  <span class="progress-step"></span>
                                 </div>
                               </div>
                             </div>
-                            <div id="archive-1" class="collapse">
-                              <div class="bill-result__collapse">
-                                <div class="table-responsive">
-                                  <table class="table">
-                                    <tbody>
-                                      <tr>
-                                        <td>Назначение</td>
-                                        <td>Оплата коммунальной услуги</td>
-                                      </tr>
-                                      <tr>
-                                        <td>Сумма пополнения</td>
-                                        <td>75.00 грн.</td>
-                                      </tr>
-                                      <tr>
-                                        <td>Комиссия</td>
-                                        <td>2.00 грн.</td>
-                                      </tr>
-                                      <tr class="table-summary">
-                                        <td>К оплате</td>
-                                        <td>77.00 грн.</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>                          
+                          </div>
+                          <div class="col-12 my-3 d-sm-none">
+                            <div class="progress-mobile progress-mobile--one-fourth">
+                              <div class="progress-mobile__circle">
+                                <div class="progress-mobile__value">
+                                  <div>1/4</div>
+                                </div>
+                              </div>
+                              <div class="progress-mobile__text">
+                                <span class="progress-mobile__current">Ввод данных плательщика</span>
+                                <span class="progress-mobile__next">Далее: Ввод данных платежа</span>
                               </div>
                             </div>
-                            <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">
-                              <span class="bill-result__info-show">Информация о платеже</span>
-                              <span class="bill-result__info-hide">Скрыть информацию о платеже</span>
-                            </div>
-                          </div><!-- bill result widget -->
+                          </div>
+
+                        </div>
+                      </div><!-- progressbar widget -->
+                    </div>
+
+                    <div class="col-12 mt-1 mb-5 mt-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-12 pb-2 d-none d-lg-block">
+                          <h2>Ввод данных плательщика</h2>
                         </div>
                       </div>
-      
-                    </div>
+                      <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-7 col-xl-6">
+                          <form action="/" id="utility-form">
 
-                    <!-- psm awards 2021 -->
-                    <div id="psm-awards-widget">
-                      <!-- <div class="row"> -->
-                        <div class="col-12 mt-4">
-                          <div class="psm-awards">
-                            <p>
-                              <span>Поддержи лучший сервис денежных переводов iPay.ua в премии PSM Awards</span>
-                              <img src="/img/psm-awards/psm-awards.png" srcset="/img/psm-awards/psm-awards.png 1x, /img/psm-awards/psm-awards@2x.png 2x" alt="PSM Awards">
-                            </p>
-                            <a href="#" class="btn btn-red">Проголосовать за iPay.ua</a>
-                            <a href="#" class="btn btn-link">Все номинации</a>
-                          </div>
-                        </div>
-                      <!-- </div> -->
-                    </div><!-- psm awards 2021 -->
-      
-                    <div class="col-12 mt-4">
-                      <!-- bill message widget -->
-                      <div class="bonus-message" id="bill-message-widget">
-                        <div class="row align-items-center">
-                          <div class="col-md-3 bonus-message__left">
-                            <p>За этот платеж Вам начислено</p>
-                          </div>
-                          <div class="col-md-4 bonus-message__center">
-                            <p>12 бонусов Добра</p>
-                          </div>
-                          <div class="col-md-5 bonus-message__button">
-                            <a href="#" class="btn btn-default btn-block">Получить бонусы</a>
-                          </div>
-                        </div>
-                      </div><!-- bill message widget -->
-                    </div>
-      
-                    <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
-                      <a href="#" class="btn btn-green btn-again">Оплатить еще эту услугу</a>
-                    </div>
+                            <div class="bill-tablist">
+                              <ul class="nav" role="tablist">
+                                <li class="bill-tablist__item">
+                                  <a class="bill-tablist__link active" id="bill-tablist1-tab" data-toggle="pill" href="#bill-tablist1" role="tab" aria-controls="bill-tablist1" aria-selected="true">По лицевому счету</a>
+                                </li>
+                                <li class="bill-tablist__item">
+                                  <a class="bill-tablist__link" id="bill-tablist2-tab" data-toggle="pill" href="#bill-tablist2" role="tab" aria-controls="bill-tablist2" aria-selected="false">По адресу</a>
+                                </li>
+                              </ul>
+                            </div>
 
-                    <div class="col-12 mb-5 mb-lg-3">
-                      <!-- service rate widget -->
-                      <div class="service-rate" id="service-rate-widget">
-                        <h3>Оцените качество услуги</h3>
-                        <form action="/">
-                          <div class="form-group service-rate__rating">
-                            <div class="rating-input">
-                              <input id="star-4" type="radio" name="rating-input">
-                              <label for="star-4"></label>
-                      
-                              <input id="star-3" type="radio" name="rating-input">
-                              <label for="star-3"></label>
-                          
-                              <input id="star-2" type="radio" name="rating-input">
-                              <label for="star-2"></label>
-                          
-                              <input id="star-1" type="radio" name="rating-input">
-                              <label for="star-1"></label>
-                          
-                              <input id="star-0" type="radio" name="rating-input">
-                              <label for="star-0"></label>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md">
-                              <div class="form-group">
-                                <input type="tel" class="form-control form-input" id="rate-sender_phone" name="rate-sender_phone" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
-                                <label class="control-label form-label" for="rate-sender_phone">Номер телефона</label>
-                                <div class="help-block">Введите номер телефона</div>
+                            <div class="tab-content mt-3">
+
+                              <!-- 1st tab section -->
+                              <div class="tab-pane fade show active" id="bill-tablist1" role="tabpanel" aria-labelledby="bill-tablist1-tab">
+                                <div class="form-group">
+                                  <input type="tel" class="form-control form-input" id="bill-account" name="name" autocomplete="off" placeholder="Лицевой счет" aria-required="true">
+                                  <label class="control-label form-label" for="bill-acount">Лицевой счет</label>
+                                </div>
                               </div>
-                            </div>
-                            <div class="col-md">
-                              <div class="form-group">
-                                <input type="email" class="form-control form-input" id="rate-sender_email" name="rate-sender_email" autocomplete="off" placeholder="qwerty@email.com" aria-required="true">
-                                <label class="control-label form-label" for="rate-sender_email">e-mail</label>
+
+                              <!-- 2nd tab section -->
+                              <div class="tab-pane fade" id="bill-tablist2" role="tabpanel" aria-labelledby="bill-tablist2-tab">
+
+                                <div class="form-group select-input-wrapper" data-label="Район">
+                                  <select class="select-search form-control form-input js-example-basic-single" name="select">
+                                    <option value=""></option>
+                                    <option value="1">Тернопольский</option>
+                                    <option value="2">Збаражский</option>
+                                    <option value="2">Вишневецкий</option>
+                                    <option value="2">Кременецкий</option>
+                                    <option value="2">Бучачский</option>
+                                  </select>
+                                </div>
+
+                                <div class="form-group select-input-wrapper" data-label="Населенный пункт">
+                                  <select class="select-search form-control form-input js-example-basic-single" name="select2">
+                                    <option value=""></option>
+                                    <option value="1">Тернополь</option>
+                                    <option value="2">Збараж</option>
+                                    <option value="2">Почаев</option>
+                                    <option value="2">Бучач</option>
+                                    <option value="2">Чорткив</option>
+                                  </select>
+                                </div>
+
+                                <div class="form-group select-input-wrapper" data-label="Улица">
+                                  <select class="select-search form-control form-input js-example-basic-single" name="select3">
+                                    <option value=""></option>
+                                    <option value="1">Шевченка</option>
+                                    <option value="2">Независимости</option>
+                                    <option value="2">Вишневая</option>
+                                    <option value="2">Львовская</option>
+                                    <option value="2">Киевская</option>
+                                  </select>
+                                </div>
+
+                                <div class="row bill-2cols">
+                                  <div class="col-6">
+                                    <div class="form-group">
+                                      <input type="text" id="billform-house" class="form-control form-input" name="BillForm[house]" placeholder="">
+                                      <label class="control-label form-label" for="billform-house">Номер дома</label>
+                                    </div>
+                                  </div>
+  
+                                  <div class="col-6">
+                                    <div class="form-group">
+                                      <input type="text" id="billform-korpus" class="form-control form-input" name="BillForm[korpus]" placeholder="">
+                                      <label class="control-label form-label" for="billform-korpus">Корпус</label>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <input type="text" id="billform-appartment" class="form-control form-input" name="BillForm[appartment]" placeholder="">
+                                  <label class="control-label form-label" for="billform-appartment">Квартира</label>
+                                </div>
+
                               </div>
+
                             </div>
-                          </div>
-                          <div class="form-group service-rate__textarea">
-                            <textarea class="form-control form-textarea" id="form-textarea" rows="3" placeholder="Ваш текст"></textarea>
-                            <label class="control-label form-label" for="form-textarea">Введите ваш комментарий</label>
-                          </div>
-                          <div class="service-rate__submit row justify-content-end">
-                            <div class="col-md-5">
-                              <button type="submit" class="btn btn-green btn-block">Оценить</button>
-                            </div>
-                          </div>
-                        </form>
-                      </div><!-- service rate widget -->
+
+                            <button type="submit" class="btn btn-block btn-green btn-next" disabled>Далее</button>
+
+                          </form>
+                        </div>
+                      </div>
                     </div>
 
                   </div>
                 </div><!-- bill main widget -->
               </div>
-            
+
             </div>
 
+              <!-- aside mobile area -->
+              <div class="row d-lg-none">
 
-            <!-- aside mobile area -->
-            <div class="row d-lg-none">
-
-              <div class="col-12 mb-3">
-                <!-- success message-widget -->
-                <div id="success-message-widget">
-                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
-                    Загляните в меню!<br>
-                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
+                <div class="col-12 mb-3">
+                  <!-- service provider widget -->
+                <h4 class="mb-3">Поставщик услуги</h4>
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__tel">+380(342)50-62-01</div>
+                          <div class="provider-card__tel">+380(342)50-62-02</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div><!-- success message-widget -->
-              </div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                  <div class="service-provider__rating">
+                    <h4 class="service-provider__title">Рейтинг услуги</h4>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result">4.4</span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                </div><!-- service provider widget -->
+                </div>
 
-              <div class="col-12 mb-3">
-                <!-- services more widget -->
-                <div id="services-more-widget">
-                  <h4 class="mb-3">Также могут заинтересовать</h4>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/yasno.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Перевод с карты на карту</span>
-                  </a>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgasenergy.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Київводоканал</span>
-                  </a>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgas.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Київгаз</span>
-                  </a>
-                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
-                </div><!-- services more widget -->
-              </div>
-
-              <div class="col-12 mb-3">
-                <div class="banner banner-w100"></div>
-              </div>
-
-            </div><!-- aside mobile area -->
+              </div><!-- aside mobile area -->
 
           </main><!-- main area -->
 
@@ -447,46 +445,42 @@
             <div class="row">
 
               <div class="col-12 mb-3">
-                <!-- success message-widget -->
-                <div id="success-message-widget">
-                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
-                    Загляните в меню!<br>
-                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
+                <!-- service provider widget -->
+                <h4 class="mb-3">Поставщик услуги</h4>
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__tel">+380(342)50-62-01</div>
+                          <div class="provider-card__tel">+380(342)50-62-02</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div><!-- success message-widget -->
-              </div>
-
-              <div class="col-12 mb-3">
-                <!-- services more widget -->
-                <div id="services-more-widget">
-                  <h4 class="mb-3">Также могут заинтересовать</h4>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/yasno.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Перевод с карты на карту</span>
-                  </a>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgasenergy.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Київводоканал</span>
-                  </a>
-                  <a href="#" class="bill-card mb-2">
-                    <span class="bill-card__img">
-                      <img src="img/providers/kyivgas.png" alt="">
-                    </span>
-                    <span class="bill-card__content">Київгаз</span>
-                  </a>
-                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
-                </div><!-- services more widget -->
-              </div>
-
-              <div class="col-12 mb-3">
-                <div class="banner banner-w100"></div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                  <div class="service-provider__rating">
+                    <h4 class="service-provider__title">Рейтинг услуги</h4>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result">4.4</span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                </div><!-- service provider widget -->
               </div>
 
             </div>
@@ -570,6 +564,7 @@
             <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
             <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
             <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
           </div>
         </div>
       </div>
@@ -603,6 +598,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
+    <script src="/js/select2-style.js"></script>
   </body>
 </html>

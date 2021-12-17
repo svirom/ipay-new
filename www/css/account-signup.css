@@ -6,6 +6,22 @@
   height: 4.5rem;
 }
 
+.account-signup .help-list {
+  padding-left: 0.25rem;
+}
+
+.account-signup .help-list li {
+  padding: 0.1875rem 0.5rem 0.1875rem 1rem;
+}
+
+.account-signup .help-list li::before {
+  top: 7px;
+}
+
+.account-signup .help-list li.checked::before, .account-signup .help-list li.unchecked::before {
+  top: 4px;
+}
+
 .account-signup__success-title {
   position: relative;
   padding-top: 4.5rem;

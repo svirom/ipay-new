@@ -50,14 +50,40 @@
     margin-top: 0;
   }
 
+  .form-group.has-error {
+    margin-bottom: 1rem;
+  }
+
   .form-group.has-error .help-block {
     position: static;
+  }
+
+  .help-list {
+    padding-left: 0.25rem;
+
+    li {
+      padding: 0.1875rem 0.5rem 0.1875rem 1rem;
+
+      &::before {
+        top: 7px;
+      }
+
+      &.checked, &.unchecked {
+        &::before {
+          top: 4px;
+        }
+      }
+    }
   }
 
   @include at-least($sm) {
     .modal-dialog {
       max-width: 350px;
       margin-top: 5rem;
+
+      &--main {
+        max-width: 778px;
+      }
     }
   }
 
@@ -92,7 +118,7 @@
   &__link {
     display: inline-block;
     position: relative;
-    padding-bottom: 0.625rem;
+    padding-bottom: 0.4375rem;
     font-family: $heading-font;
     color: $heading-color;
     @include font(1rem, 500, 1.25);
@@ -119,6 +145,42 @@
       &::after {
         width: 100%;
       }
+    }
+  }
+}
+
+.modal-left {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    right: -1px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-right: 3px solid $light-grey;
+  }
+}
+
+@include at-least($md) {
+  .modal-left {
+    &[class^=col] {
+      padding-right: 30px;
+    }
+  }
+
+  .modal-right {
+    &[class^=col] {
+      padding-left: 30px;
+    }
+  }
+}
+
+@include until($md) {
+  .modal-left {
+    &::after {
+      display: none;
     }
   }
 }
@@ -165,110 +227,55 @@
       align-items: center;
 
       & > span {
-        padding-left: 2.375rem;
+        padding-left: 2.125rem;
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 700;
+        line-height: 1.6;
+        color: #ffffff;
       }
     }
 
     .btn-signin-fb {
+      background-color: #1877F2;
+
       & > span {
-        background: url('../img/authentication/auth-fb.svg') left center no-repeat;
+        background: url('../img/authentication/icon-fb.svg') left center no-repeat;
+      }
+
+      &:hover {
+        background-color: #0B63D4;
       }
     }
 
     .btn-signin-google {
+      box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.5);
+
       & > span {
-        background: url('../img/authentication/auth-google.svg') left center no-repeat;
+        color: #444444;
+        background: url('../img/authentication/icon-google.svg') left center no-repeat;
+      }
+
+      &:hover {
+        background-color: #F8F9FB;
       }
     }
 
     .btn-signin-apple {
+      background-color: #000000;
+
       & > span {
         background: url('../img/authentication/icon-apple.svg') left center no-repeat;
       }
     }
   }
 
-  &--signup {
-    // .modal-social__title {
-    //   text-align: left;
-
-    //   span {
-    //     padding-left: 0;
-    //   }
-    // }
-  }
-}
-
-.modal-signup {
-  position: relative;
-  margin-top: 1rem;
-
-  .help-list {
-    padding-left: 0.25rem;
-
-    li {
-      padding: 0.1875rem 0.5rem 0.1875rem 1rem;
-
-      &::before {
-        top: 7px;
+  @include until($md) {
+    &__buttons {
+      .btn {  
+        & ~ .btn {
+          margin-top: 0.5rem;
+        }
       }
-    }
-  }
-
-  .modal-signup__collapse-in {
-    display: none;
-    position: relative;
-    margin-bottom: 0;
-    line-height: 1.5;
-    z-index: 1;
-
-    span {
-      position: relative;
-      padding-right: 0.5rem;
-      color: $heading-color;
-      background-color: #ffffff;
-    }
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: calc(50% - 1px);
-      left: 0;
-      width: 100%;
-      height: 0;
-      border-bottom: 2px solid $middle-grey;
-    }
-  }
-
-  .modal-signup__collapse-btn {
-    display: inline-block;
-    padding-right: 0.5rem;
-    color: $heading-color;
-    background-color: #ffffff;
-
-    span {
-      color: $btn-red;
-      text-decoration: underline;
-    }
-
-    &:hover {
-      text-decoration: none;
-    }
-
-    &[aria-expanded="true"] {
-      display: none;
-
-      & ~ .modal-signup__collapse-in {
-        display: block;
-      }
-    }
-  }
-
-  &__collapse {
-    form {
-      margin-top: 1rem;
     }
   }
 }
