@@ -217,52 +217,6 @@
           align-items: center;
 }
 
-.p2p__bonuses-count button {
-  display: none;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0;
-  border: 2px solid #3B566E;
-  border-radius: 50%;
-}
-
-.p2p__bonuses-count button span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.p2p__bonuses-count button svg {
-  stroke: #3B566E;
-}
-
-.p2p__bonuses-count button:hover {
-  background-color: #3B566E;
-}
-
-.p2p__bonuses-count button:hover svg {
-  stroke: #ffffff;
-}
-
-.p2p__bonuses-count button:focus {
-  outline: none;
-}
-
-.p2p__bonuses-count button:disabled, .p2p__bonuses-count button.disabled {
-  border-color: #DEE7F3;
-  background-color: #DEE7F3;
-}
-
-.p2p__bonuses-count button:disabled svg, .p2p__bonuses-count button.disabled svg {
-  stroke: #7C9CAC;
-}
-
 .p2p__bonuses-number {
   font-size: 1.5rem;
   font-weight: 700;
@@ -426,43 +380,86 @@
   overflow: hidden;
   -webkit-transition: all 1.2s ease;
   transition: all 1.2s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.p2p__submit .p2p-progress span {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 56px;
+  color: #ffffff;
 }
 
 .p2p__submit .p2p-progress.progress-1 {
-  width: 16%;
+  -webkit-clip-path: inset(0 84% 0 0);
+          clip-path: inset(0 84% 0 0);
 }
 
 .p2p__submit .p2p-progress.progress-2 {
-  width: 32%;
+  -webkit-clip-path: inset(0 68% 0 0);
+          clip-path: inset(0 68% 0 0);
 }
 
 .p2p__submit .p2p-progress.progress-3 {
-  width: 48%;
+  -webkit-clip-path: inset(0 52% 0 0);
+          clip-path: inset(0 52% 0 0);
 }
 
 .p2p__submit .p2p-progress.progress-4 {
-  width: 64%;
+  -webkit-clip-path: inset(0 36% 0 0);
+          clip-path: inset(0 36% 0 0);
 }
 
 .p2p__submit .p2p-progress.progress-5 {
-  width: 80%;
+  -webkit-clip-path: inset(0 20% 0 0);
+          clip-path: inset(0 20% 0 0);
 }
 
 .p2p__submit .p2p-progress.progress-6 {
   display: none;
 }
 
-.p2p__submit .p2p-progress span {
-  position: absolute;
-  top: 50%;
-  left: 210px;
-  left: 13.125rem;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 1.125rem;
-  font-weight: bold;
-  line-height: 1.6;
-  color: #ffffff;
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .p2p__submit {
+    /* ie11 fix */
+    width: 18.125rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .p2p__submit .p2p-progress {
+    width: 0;
+  }
+  .p2p__submit .p2p-progress span {
+    position: absolute;
+    top: 50%;
+    left: 210px;
+    left: 9.0625rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+  .p2p__submit .p2p-progress.progress-1 {
+    width: 16%;
+  }
+  .p2p__submit .p2p-progress.progress-2 {
+    width: 32%;
+  }
+  .p2p__submit .p2p-progress.progress-3 {
+    width: 48%;
+  }
+  .p2p__submit .p2p-progress.progress-4 {
+    width: 64%;
+  }
+  .p2p__submit .p2p-progress.progress-5 {
+    width: 80%;
+  }
+  .p2p__submit .p2p-progress.progress-6 {
+    display: none;
+  }
 }
 
 .p2p-arrow {
@@ -516,10 +513,6 @@
   .p2p__bonuses-text {
     padding-left: 0.5rem;
   }
-  .p2p__submit .p2p-progress span {
-    left: 185px;
-    left: 11.5625rem;
-  }
 }
 
 @media screen and (max-width: 991px) {
@@ -538,10 +531,6 @@
   .p2p__card-wrapper {
     margin-left: auto;
     margin-right: auto;
-  }
-  .p2p__submit .p2p-progress span {
-    left: 210px;
-    left: 13.125rem;
   }
   .p2p-arrow {
     margin-top: 0.5rem;
@@ -589,9 +578,6 @@
 }
 
 @media screen and (max-width: 575px) {
-  .p2p__card-wrapper, .p2p__sender-phone {
-    max-width: 20.625rem;
-  }
   .p2p .form-label {
     top: 1rem;
     left: 1rem;
@@ -654,22 +640,6 @@
   .p2p__notification-title {
     padding-right: 2rem;
     padding-left: 0.5rem;
-  }
-  .p2p__submit .p2p-progress span {
-    left: 165px;
-    left: 10.3125rem;
-  }
-}
-
-@media screen and (max-width: 359px) {
-  .p2p__submit {
-    width: 18.125rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .p2p__submit .p2p-progress span {
-    left: 145px;
-    left: 9.0625rem;
   }
 }
 

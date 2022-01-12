@@ -195,6 +195,13 @@
   }
 }
 
+/* ie11 fix - displaying typed text */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-input {
+    height: 3.5rem;
+  }
+}
+
 .form-label {
   position: absolute;
   top: 0.95rem;

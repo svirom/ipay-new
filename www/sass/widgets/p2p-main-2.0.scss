@@ -203,46 +203,6 @@
       flex-shrink: 0;
       display: flex;
       align-items: center;
-  
-      button {
-        display: none;
-        width: 1.5rem;
-        height: 1.5rem;
-        padding: 0;
-        border: 2px solid $text-color;
-        border-radius: 50%;
-  
-        span {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-  
-        svg {
-          stroke: $text-color;
-        }
-  
-        &:hover {
-          background-color: $text-color;
-  
-          svg {
-            stroke: #ffffff;
-          }
-        }
-  
-        &:focus {
-          outline: none;
-        }
-  
-        &:disabled, &.disabled {
-          border-color: $middle-grey;
-          background-color: $middle-grey;
-  
-          svg {
-            stroke: $main-blue;
-          }
-        }
-      }
     }
   
     &-number {
@@ -383,42 +343,101 @@
       cursor: pointer;
       overflow: hidden;
       @include transition(all, 1.2s);
+      width: 100%;
+      text-align: center;
 
+      span {
+        font-size: 1.125rem;
+        font-weight: bold;
+        line-height: 56px;
+        color:#ffffff;
+      }
 
       &.progress-1 {
-        width: 16%;
+        // width: 16%;
+        clip-path: inset(0 84% 0 0);
       }
 
       &.progress-2 {
-        width: 32%;
+        // width: 32%;
+        clip-path: inset(0 68% 0 0);
       }
 
       &.progress-3 {
-        width: 48%;
+        // width: 48%;
+        clip-path: inset(0 52% 0 0);
       }
 
       &.progress-4 {
-        width: 64%;
+        // width: 64%;
+        clip-path: inset(0 36% 0 0);
       }
 
       &.progress-5 {
-        width: 80%;
+        // width: 80%;
+        clip-path: inset(0 20% 0 0);
       }
 
       &.progress-6 {
         display: none;
       }
 
-      span {
-        position: absolute;
-        top: 50%;
-        left: 210px;
-        left: 13.125rem;
-        @include transform(translate(-50%, -50%));
-        font-size: 1.125rem;
-        font-weight: bold;
-        line-height: 1.6;
-        color:#ffffff;
+      // span {
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 210px;
+      //   left: 13.125rem;
+      //   @include transform(translate(-50%, -50%));
+      //   font-size: 1.125rem;
+      //   font-weight: bold;
+      //   line-height: 1.6;
+      //   color:#ffffff;
+      // }
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { /* ie11 fix */
+      width: 18.125rem;
+      margin-left: auto;
+      margin-right: auto;
+  
+      .p2p-progress {
+        width: 0;
+        
+        span {
+          position: absolute;
+          top: 50%;
+          left: 210px;
+          left: 9.0625rem;
+          @include transform(translate(-50%, -50%));
+          font-size: 1.125rem;
+          font-weight: bold;
+          line-height: 1.6;
+          color:#ffffff;
+        }
+
+        &.progress-1 {
+          width: 16%;
+        }
+  
+        &.progress-2 {
+          width: 32%;
+        }
+  
+        &.progress-3 {
+          width: 48%;
+        }
+  
+        &.progress-4 {
+          width: 64%;
+        }
+  
+        &.progress-5 {
+          width: 80%;
+        }
+  
+        &.progress-6 {
+          display: none;
+        }
       }
     }
   }
@@ -481,14 +500,14 @@
       }
     }
 
-    &__submit {
-      .p2p-progress {
-        span {
-          left: 185px;
-          left: 11.5625rem;
-        }
-      }
-    }
+    // &__submit {
+    //   .p2p-progress {
+    //     span {
+    //       left: 185px;
+    //       left: 11.5625rem;
+    //     }
+    //   }
+    // }
   }
 
   @include until($lg) {
@@ -516,14 +535,14 @@
       margin-right: auto;
     }
 
-    &__submit {
-      .p2p-progress {
-        span {
-          left: 210px;
-          left: 13.125rem;
-        }
-      }
-    }
+    // &__submit {
+    //   .p2p-progress {
+    //     span {
+    //       left: 210px;
+    //       left: 13.125rem;
+    //     }
+    //   }
+    // }
 
     &-arrow {
       margin-top: 0.5rem;
@@ -571,9 +590,9 @@
   }
 
   @include until($sm) {
-    &__card-wrapper, &__sender-phone {
-      max-width: 20.625rem;
-    }
+    // &__card-wrapper, &__sender-phone {
+    //   max-width: 20.625rem;
+    // }
 
     .form-label {
       top: 1rem;
@@ -659,30 +678,45 @@
       }
     }
 
-    &__submit {
-      .p2p-progress {
-        span {
-          left: 165px;
-          left: 10.3125rem;
-        }
-      }
-    }
+    // &__submit {
+    //   .p2p-progress {
+    //     span {
+    //       left: 165px;
+    //       left: 10.3125rem;
+    //     }
+    //   }
+    // }
   }
 
   @include until(360px) {
-    &__submit {
-      width: 18.125rem;
-      margin-left: auto;
-      margin-right: auto;
+    // &__submit {
+    //   width: 18.125rem;
+    //   margin-left: auto;
+    //   margin-right: auto;
   
-      .p2p-progress {
-        span {
-          left: 145px;
-          left: 9.0625rem;
-        }
-      }
-    }
+    //   .p2p-progress {
+    //     span {
+    //       left: 145px;
+    //       left: 9.0625rem;
+    //     }
+    //   }
+    // }
   }
+}
+
+@media screen and (max-width: 360px) {
+  // .p2p__submit {
+  //   width: 18.125rem;
+  //   margin-left: auto;
+  //   margin-right: auto;
+
+  //   .p2p-progress {
+  //     span {
+  //       left: 145px;
+  //       left: 9.0625rem;
+  //     }
+  //   }
+  // }
 }
 
 @keyframes bellRotate {
