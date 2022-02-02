@@ -370,7 +370,7 @@
 .p2p__submit .p2p-progress {
   position: absolute;
   height: 100%;
-  width: 0;
+  width: 100%;
   top: 0;
   left: 0;
   border-top-left-radius: 0.5rem;
@@ -380,8 +380,9 @@
   overflow: hidden;
   -webkit-transition: all 1.2s ease;
   transition: all 1.2s ease;
-  width: 100%;
   text-align: center;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
 }
 
 .p2p__submit .p2p-progress span {

@@ -334,7 +334,7 @@
     .p2p-progress {
       position: absolute;
       height: 100%;
-      width: 0;
+      width: 100%;
       top: 0;
       left: 0;
       border-top-left-radius: $border-radius;
@@ -343,8 +343,8 @@
       cursor: pointer;
       overflow: hidden;
       @include transition(all, 1.2s);
-      width: 100%;
       text-align: center;
+      clip-path: inset(0 100% 0 0);
 
       span {
         font-size: 1.125rem;
