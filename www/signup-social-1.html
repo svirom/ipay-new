@@ -41,11 +41,19 @@
                     <span>плательщиков</span>
                   </a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--bonuses">
                   <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
                     <span class="main-nav__bonus">1543 </span>
                     <span>бонусов</span>
                   </span>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
                 </li>
                 <li class="main-nav__item dropdown">
                   <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
@@ -70,7 +78,7 @@
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
                   </button>
-                  <div class="navbar-collapse collapse overflow-hidden" id="dropdown-account-mobile">
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
                     <div class="navbar-collapse__menu">
                       <ul>
                         <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
@@ -84,6 +92,14 @@
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
                         <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="catalogue-mobile">
                       <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>

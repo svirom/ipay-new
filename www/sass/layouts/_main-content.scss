@@ -18,14 +18,14 @@
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 411px);
+  min-height: calc(100vh - 410px);
 
   & > #operations {
     flex-grow: 1;
   }
 
   @include until($xl) {
-    min-height: calc(100vh - 425px);
+    min-height: calc(100vh - 424px);
   }
 
   @include until($lg) {

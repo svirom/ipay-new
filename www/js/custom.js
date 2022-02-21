@@ -40,23 +40,22 @@ $(document).ready(function() {
 
   function catalogueMobile(e) {
     e.preventDefault();
-
-    var catalogueHeight = $('.navbar-collapse').find('.catalogue-mobile').height();
-
-    $(this).closest('.navbar-collapse').removeClass('overflow-hidden')
-      .find('.catalogue-mobile').addClass('active').end()
-      .css({'height' : catalogueHeight});
+    $(this).closest('.navbar-collapse').find('.catalogue-mobile').addClass('active');
   }
 
   function catalogueMobileHide(e) {
     e.preventDefault();
-
-    var mobileMenuHeight = $('.navbar-collapse__menu').height();
-
-    $(this).closest('.navbar-collapse').addClass('overflow-hidden')
-      .find('.catalogue-mobile').removeClass('active').end()
-      .css({'height' : mobileMenuHeight});
+    $(this).closest('.navbar-collapse').find('.catalogue-mobile').removeClass('active');
   }
+
+  // resolve issue with height and mobile bottom bar
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+
+  window.addEventListener('resize', function() {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+  });
 
   // initialize tooltips
   $('[data-toggle="tooltip"]').tooltip();
