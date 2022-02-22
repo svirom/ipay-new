@@ -620,6 +620,11 @@
   }
 
   @include until($xl) {
+    &__item {
+      &--bonuses {
+        margin-left: 0.5rem;
+      }
+    }
     &__nav {
       padding-left: 2rem;
     }
