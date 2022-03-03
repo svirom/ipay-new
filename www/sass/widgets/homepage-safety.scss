@@ -1,0 +1,94 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the homepage header of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.homepage-safety {
+  margin-top: -3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.safety-card {
+  display: block;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+  background-color: rgba(255, 255, 255, 0.8);
+
+  &__img {
+    margin-right: 1rem;
+  }
+
+  &__content {
+    padding-right: 1rem;
+
+    h5 {
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    border-radius: 50%;
+    background-color: $btn-green;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4094 10.7163L6.0003 10.7163' stroke='white' stroke-width='1.54167' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.2048 14.9209L15.2503 10.7164L10.2048 6.51181' stroke='white' stroke-width='1.54167' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 2.25rem;
+      border-left: 1px solid $middle-grey;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@include until($sm) {
+  .homepage-safety {
+    margin-top: 0.5625rem;
+    margin-bottom: 1.4375rem;
+  }
+
+  .safety-card {
+    padding: 0.625rem;
+
+    &__img {
+      margin-right: 0.5rem;
+    }
+
+    &__content {
+      padding-right: 0;
+
+      h5 {
+        margin-bottom: 0;
+        font-size: 0.875rem;
+      }
+    }
+
+    &__link {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
