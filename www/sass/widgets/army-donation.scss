@@ -1,0 +1,133 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the army donation landing of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.army-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.army-main {
+  flex-grow: 1;
+  padding: 2.625rem 0 2.5rem;
+
+  h1 {
+    margin-bottom: 1.25rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .army-subtitle {
+    color: $heading-color;
+    font-size: 1.5rem;
+  }
+}
+
+.army-form {
+  padding-top: 2.125rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid $middle-grey;
+
+  .army-form__title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border: 3px solid $middle-grey;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    span {
+      padding-left: 1.25rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: $heading-color;
+    }
+  }
+
+  .radio-control {
+    label.army-form__label {
+      margin-bottom: 1.875rem;
+    }
+
+    .checkbox-input {
+      &:checked {
+        & ~ .army-form__label {
+          border-color: $heading-color;
+        }
+      }
+    }
+  }
+
+  .btn-army {
+    color: #ffffff;
+    border: 3px solid $heading-color;
+    background-color: $heading-color;
+  }
+}
+
+.army-partners {
+  display: flex;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  span {
+    position: relative;
+
+    &:first-child {
+      margin-right: 0.8125rem;
+      padding-right: 0.8125rem;
+
+      &::before {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        border-left: 1px solid rgba($main-blue, 0.4);
+      }
+    }
+  }
+}
+
+.army-purposes {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding-top: 1.875rem;
+  padding-bottom: 2.5rem;
+  border-radius: 1.5rem;
+  background-color: #F3F8FC;
+}
+
+.army-card {
+  padding: 0.9375rem;
+  border: 1px solid $middle-grey;
+  border-radius: 0.5rem;
+
+  &__img {
+    height: 3.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__content {
+    span {
+      color: $heading-color;
+    }
+  }
+}
+
+@include until($lg) {}
+
+@include until($sm) {}

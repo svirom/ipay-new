@@ -1,0 +1,128 @@
+.army-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.army-main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 2.625rem 0 2.5rem;
+}
+
+.army-main h1 {
+  margin-bottom: 1.25rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.army-main .army-subtitle {
+  color: #172A3A;
+  font-size: 1.5rem;
+}
+
+.army-form {
+  padding-top: 2.125rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid #DEE7F3;
+}
+
+.army-form .army-form__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.army-form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.75rem;
+  border: 3px solid #DEE7F3;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.army-form__label span {
+  padding-left: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #172A3A;
+}
+
+.army-form .radio-control label.army-form__label {
+  margin-bottom: 1.875rem;
+}
+
+.army-form .radio-control .checkbox-input:checked ~ .army-form__label {
+  border-color: #172A3A;
+}
+
+.army-form .btn-army {
+  color: #ffffff;
+  border: 3px solid #172A3A;
+  background-color: #172A3A;
+}
+
+.army-partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.army-partners span {
+  position: relative;
+}
+
+.army-partners span:first-child {
+  margin-right: 0.8125rem;
+  padding-right: 0.8125rem;
+}
+
+.army-partners span:first-child::before {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-left: 1px solid rgba(124, 156, 172, 0.4);
+}
+
+.army-purposes {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding-top: 1.875rem;
+  padding-bottom: 2.5rem;
+  border-radius: 1.5rem;
+  background-color: #F3F8FC;
+}
+
+.army-card {
+  padding: 0.9375rem;
+  border: 1px solid #DEE7F3;
+  border-radius: 0.5rem;
+}
+
+.army-card__img {
+  height: 3.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.army-card__content span {
+  color: #172A3A;
+}
+/*# sourceMappingURL=army-donation.css.map */
