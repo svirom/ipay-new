@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/army-donation.css">
+
+    <title>Вместе к победе!</title>
+  </head>
+  <body>
+
+    <div class="army-wrapper">
+
+      <main class="army-main">
+        <div class="container">
+
+          <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5 col-xl-4">
+
+              <div class="army-data">
+
+                <div class="army-data__icon">
+                  <img src="/img/army-donation/iconarmy-support.svg" alt="Icon">
+                </div>
+
+                <div class="army-data__descr">
+                  <p class="mb-1"><strong>Назначение</strong></p>
+                  <p class="mb-0">Поддержка армии - перевод на счет НБУ</p>
+                  <hr>
+                  <div class="army-data__amount">
+                    <span>Сумма</span>
+                    <span>500 грн</span>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <p>Оплатите с помощью</p>
+                  <p>или введите данные карты</p>
+                </div>
+
+                <form>
+                  <div class="bank-card mx-auto">
+                    <div class="bank-card__header">
+                      <div class="bank-card__bank">
+                        <div id="sender-bank-card"></div>
+                      </div>
+                      <div class="bank-card__type">
+                        <div id="sender-type-card"></div>
+                      </div>
+                    </div>
+                    <div class="bank-card__body">
+                      <div class="bank-card__number">
+                        <div class="form-group">
+                          <input type="tel" class="form-control form-input" id="p2pform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                          <label class="control-label form-label" for="p2pform-sender_card_pan">Номер карты</label>
+                          <div class="help-block"></div>
+                        </div>
+                      </div>
+                      <div class="bank-card__card-data">
+                        <div class="form-group bank-card__expires">
+                          <input type="text" class="form-control form-input" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                          <label class="control-label form-label" for="cardform-exp">Срок действия</label>
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group bank-card__cvv">
+                          <input type="password" class="form-control form-input" id="p2pform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                          <label class="control-label form-label" for="p2pform-sender_card_cvv">CVV</label>
+                          <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты" data-original-title="" title=""></a>
+                          <div class="help-block"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row justify-content-center col-pad8">
+                    <div class="col-auto">
+                      <button type="button" class="btn btn-outline btn-prev btn-empty"></button>
+                    </div>
+                    <div class="col">
+                      <button type="submit" class="btn btn-army btn-block">Перевести</button>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="army-security">
+                  <p class="small text-center">Безопасность переводов</p>
+                  <div class="army-security__img">
+                    <a rel="nofollow" href="https://www.mastercard.ua/uk-ua/consumers/features-benefits/safety-and-security/securecode.html" target="_blank">
+                      <img src="/img/army-donation/mastercard-security-icon.svg" alt="Mastercard">
+                    </a>
+                    <a rel="nofollow" href="https://www.visa.com.ua/uk_UA/pay-with-visa/featured-technologies/verified-by-visa.html" target="_blank">
+                      <img src="/img/army-donation/visa-security-icon.svg" alt="Visa">
+                    </a>
+                    <a href="https://www.ipay.ua/ru/pci-dss-ipay-ua" target="_blank">
+                      <img src="/img/army-donation/pci-dss-security-icon.svg" alt="PCI DSS">
+                    </a>
+                  </div>
+                </div>
+
+              </div> <!-- /.army-data -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </main> <!-- /.army-main -->
+
+      <footer class="army-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="army-footer__inner">
+
+                <div class="row">
+                  <div class="col-lg-3">
+                    <h3 class="mb-4 mb-md-3 mb-lg-0">Техническая поддержка</h3>
+                  </div>
+                  <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+                    <a href="tel:0800601160">0 800 60 11 60</a>
+                    <p class="small mt-1 mb-0">Бесплатно с мобильных</p>
+                  </div>
+                  <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+                    <a href="tel:+380445021160">+38 044 502 11 60</a>
+                    <p class="small mt-1 mb-0">Для дзвінків з-за кордону</p>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <a href="mailto:help@ipay.ua">help@ipay.ua</a>
+                    <p class="small mt-1 mb-0">Пишите на email</p>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer><!-- /.army-footer -->
+
+    </div> <!-- /.army-wrapper -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>

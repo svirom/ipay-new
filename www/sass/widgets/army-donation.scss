@@ -27,6 +27,12 @@
     color: $heading-color;
     font-size: 1.5rem;
   }
+
+  .btn-army {
+    color: #ffffff;
+    border: 3px solid $heading-color;
+    background-color: $heading-color;
+  }
 }
 
 .army-form {
@@ -68,12 +74,6 @@
       }
     }
   }
-
-  .btn-army {
-    color: #ffffff;
-    border: 3px solid $heading-color;
-    background-color: $heading-color;
-  }
 }
 
 .army-partners {
@@ -109,12 +109,31 @@
   padding-bottom: 2.5rem;
   border-radius: 1.5rem;
   background-color: #F3F8FC;
+
+  h2 {
+    margin-bottom: 0;
+    font-size: 1.75rem;
+  }
+
+  &__title {
+    padding-top: 2.5rem;
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .army-card {
+  height: 100%;
   padding: 0.9375rem;
   border: 1px solid $middle-grey;
   border-radius: 0.5rem;
+
+  &--humanitarian {
+    height: 10rem;
+  }
 
   &__img {
     height: 3.75rem;
@@ -122,12 +141,263 @@
   }
 
   &__content {
+    line-height: 1.3;
+
     span {
       color: $heading-color;
     }
   }
 }
 
-@include until($lg) {}
+.army-data {
+  max-width: 21.875rem;
+  margin: 0 auto;
 
-@include until($sm) {}
+  &__icon {
+    text-align: center;
+  }
+
+  &__descr {
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+    padding: 0.9375rem;
+    border-radius: 0.5rem;
+    background-color: $light-grey;
+
+    p, span {
+      color: $heading-color;
+    }
+
+    hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border-top: 1px solid #94ADBB;
+    }
+  }
+
+  &__amount {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+  }
+
+  .bank-card {
+    width: 100%;
+    max-width: none;
+    height: 16rem;
+    margin-bottom: 1.25rem;
+    padding: 0.5rem 1rem 1rem;
+
+    &__header, &__bank, &__type {
+      height: 2.5rem;
+    }
+
+    &__body {
+      padding-top: 0.5rem;
+    }
+
+    &__number {
+      padding-bottom: 0.75rem;
+    }
+
+    &__cvv {
+      input {
+        width: 7.5rem;
+      }
+    }
+
+    .form-label {
+      top: 1.0625rem;
+      font-size: 1rem;
+    }
+
+    .form-input:focus ~ .form-label, .form-input.filled ~ .form-label {
+      top: 0.45rem;
+      font-size: 0.77777rem;
+    }
+  }
+}
+
+.army-security {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+
+  &__img {
+    text-align: center;
+
+    a {
+      & + a {
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.army-footer {
+  padding-bottom: 1.6875rem;
+
+  &__inner {
+    padding: 1.8125rem;
+    border: 2px solid $middle-grey;
+    border-radius: 0.5rem;
+  }
+
+  a, p {
+    color: $heading-color;
+  }
+
+  a {
+    font-weight: 500;
+
+    &:hover {
+      color: $heading-color;
+    }
+  }
+}
+
+@include until($xl) {
+  .army-purposes {
+    max-width: 1010px;
+  }
+}
+
+@include until($lg) {
+  .army-purposes {
+    max-width: 770px;
+  }
+}
+
+@include until($md) {
+  .army-main {
+    padding-top: 2.5rem;
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .army-subtitle {
+      font-size: 1.25rem;
+    }
+  }
+
+  .army-form {
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+    border-bottom: none;
+  
+    .army-form__title {
+      margin-bottom: 1.25rem;
+    }
+
+    form {
+      & > .row {
+        margin-left: -5px;
+        margin-right: -5px;
+
+        & > [class^="col"] {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    }
+  
+    &__label {
+      display: flex;
+      flex-direction: column;
+      height: 10.625rem;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem;
+  
+      span {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+  
+    .radio-control {
+      label.army-form__label {
+        margin-bottom: 1.25rem;
+      }
+    } 
+  }
+
+  .army-purposes {
+    padding-bottom: 0.625rem;
+    border-radius: 0;
+
+    h2 {
+      font-size: 1.3125rem;
+    }
+
+    &__title {
+      padding-top: 1.875rem;
+
+      h3 {
+        margin-bottom: 1.25rem;
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  .army-card {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 0;
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid $middle-grey;
+
+    &--last {
+      border-bottom: 1px solid $middle-grey;
+    }
+
+    &--humanitarian {
+      height: auto;
+    }
+
+    &__img {
+      margin-bottom: 0;
+    }
+
+    &__content {
+      padding-left: 1.25rem;
+    }
+  }
+
+  .army-footer {
+    padding-bottom: 1.6875rem;
+  
+    &__inner {
+      padding: 1.5rem 1rem 3.375rem;
+      text-align: center;
+    }
+  }
+}
+
+@include until($sm) {
+  .army-data {
+    .bank-card {
+      box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+
+      &__expires {
+        width: 10.5rem;
+      }
+
+      &__cvv {
+        input {
+          width: 7rem;
+        }
+      }
+    }
+  }
+}
