@@ -220,6 +220,79 @@
       font-size: 0.77777rem;
     }
   }
+
+  &--success, &--unsuccess {
+    .army-data__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .army-data__title {
+      h2 {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .army-data__descr {
+      padding: 1.5rem;
+    }
+  }
+
+  &--success {
+    .army-data__icon {
+      background-color: $btn-green;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.2209 1.81358L8.98561 14.6112L0.945312 7.91018L2.46235 6.08973L8.64428 11.2405L17.372 0.334473L19.2209 1.81358V1.81358Z' fill='white'/%3E%3C/svg%3E");
+    }
+
+    .army-data__title {
+      h2 {
+        color: $btn-green;
+      }
+    }
+
+    .army-data__subtitle {
+      position: relative;
+      height: 1.875rem;
+
+      h2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+    }
+
+    .army-data__descr {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &--unsuccess {
+    .army-data__icon {
+      background-color: $btn-red;
+      background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12L24.5 24.5' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M24.5 12L12 24.5' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    .army-data__title {
+      h2 {
+        color: $btn-red;
+      }
+    }
+
+    .army-data__descr {
+      background-color: $danger;
+
+      hr {
+        border-top-color: $pink;
+      }
+    }
+  }
 }
 
 .army-security {
@@ -374,6 +447,20 @@
     }
   }
 
+  .army-data {
+    &--success, &--unsuccess {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .army-data__descr {
+        h3 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
   .army-footer {
     padding-bottom: 1.6875rem;
   
@@ -397,6 +484,23 @@
         input {
           width: 7rem;
         }
+      }
+    }
+
+    &--success {
+      .army-data__subtitle {
+        height: auto;
+  
+        h2 {
+          position: static;
+          transform: none;
+          white-space: normal;
+        }
+      }
+  
+      .army-data__descr {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
       }
     }
   }

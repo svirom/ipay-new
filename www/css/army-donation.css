@@ -224,6 +224,68 @@
   font-size: 0.77777rem;
 }
 
+.army-data--success .army-data__icon, .army-data--unsuccess .army-data__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.army-data--success .army-data__title h2, .army-data--unsuccess .army-data__title h2 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.army-data--success .army-data__descr, .army-data--unsuccess .army-data__descr {
+  padding: 1.5rem;
+}
+
+.army-data--success .army-data__icon {
+  background-color: #09BC8A;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.2209 1.81358L8.98561 14.6112L0.945312 7.91018L2.46235 6.08973L8.64428 11.2405L17.372 0.334473L19.2209 1.81358V1.81358Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.army-data--success .army-data__title h2 {
+  color: #09BC8A;
+}
+
+.army-data--success .army-data__subtitle {
+  position: relative;
+  height: 1.875rem;
+}
+
+.army-data--success .army-data__subtitle h2 {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.army-data--success .army-data__descr {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.army-data--unsuccess .army-data__icon {
+  background-color: #E84F35;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 12L24.5 24.5' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M24.5 12L12 24.5' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.army-data--unsuccess .army-data__title h2 {
+  color: #E84F35;
+}
+
+.army-data--unsuccess .army-data__descr {
+  background-color: #FFE7E6;
+}
+
+.army-data--unsuccess .army-data__descr hr {
+  border-top-color: #FFD0CE;
+}
+
 .army-security {
   margin-top: 1.25rem;
   padding: 1rem;
@@ -360,6 +422,12 @@
   .army-card__content {
     padding-left: 1.25rem;
   }
+  .army-data--success h2, .army-data--unsuccess h2 {
+    font-size: 1.5rem;
+  }
+  .army-data--success .army-data__descr h3, .army-data--unsuccess .army-data__descr h3 {
+    font-size: 1.25rem;
+  }
   .army-footer {
     padding-bottom: 1.6875rem;
   }
@@ -379,6 +447,19 @@
   }
   .army-data .bank-card__cvv input {
     width: 7rem;
+  }
+  .army-data--success .army-data__subtitle {
+    height: auto;
+  }
+  .army-data--success .army-data__subtitle h2 {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    white-space: normal;
+  }
+  .army-data--success .army-data__descr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 /*# sourceMappingURL=army-donation.css.map */
