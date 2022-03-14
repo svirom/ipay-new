@@ -9,6 +9,40 @@
   min-height: 100vh;
 }
 
+.army-header {
+  border-bottom: 1px solid #DEE7F3;
+}
+
+.army-lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 2.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.625rem;
+}
+
+.army-lang li a {
+  color: #3B566E;
+}
+
+.army-lang li a:hover {
+  text-decoration: none;
+  color: #172A3A;
+}
+
+.army-lang li.active a {
+  color: #172A3A;
+  font-weight: 700;
+}
+
+.army-lang li + li {
+  margin-left: 1rem;
+}
+
 .army-main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -340,6 +374,11 @@
 }
 
 @media screen and (max-width: 767px) {
+  .army-lang {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .army-main {
     padding-top: 2.5rem;
   }

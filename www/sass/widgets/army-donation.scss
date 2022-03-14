@@ -13,6 +13,40 @@
   min-height: 100vh;
 }
 
+.army-header {
+  border-bottom: 1px solid $middle-grey;
+}
+
+.army-lang {
+  display: flex;
+  justify-content: flex-end;
+  height: 2.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.625rem;
+
+  li {
+    a {
+      color: $text-color;
+
+      &:hover {
+        text-decoration: none;
+        color: $heading-color;
+      }
+    }
+
+    &.active {
+      a {
+        color: $heading-color;
+        font-weight: 700;
+      }
+    }
+
+    & + li {
+      margin-left: 1rem;
+    }
+  }
+}
+
 .army-main {
   flex-grow: 1;
   padding: 2.625rem 0 2.5rem;
@@ -351,6 +385,10 @@
 }
 
 @include until($md) {
+  .army-lang {
+    justify-content: center;
+  }
+  
   .army-main {
     padding-top: 2.5rem;
   
