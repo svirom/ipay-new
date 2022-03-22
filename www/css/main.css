@@ -2111,6 +2111,11 @@ input:-internal-autofill-selected ~ .password-button.show-pass {
   background-position: center;
 }
 
+.btn.btn-more:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .btn.btn-more.loading::after {
   -webkit-animation: more-rotate infinite 0.75s linear;
           animation: more-rotate infinite 0.75s linear;

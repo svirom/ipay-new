@@ -77,6 +77,10 @@
       background-position: center;
     }
 
+    &:focus {
+      box-shadow: none;
+    }
+
     &.loading {
       &::after {
         animation: more-rotate infinite 0.75s linear;
