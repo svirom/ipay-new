@@ -249,4 +249,30 @@
     margin-bottom: 0;
   }
 }
+
+.catalog-page-support .bill-card {
+  height: auto;
+  padding: 0.8125rem;
+}
+
+.catalog-page-support .bill-card__img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.catalog-page-support .bill-card__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.catalog-page-support .bill-card__content {
+  max-height: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .catalog-page-support .bill-card__img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
 /*# sourceMappingURL=catalog-page.css.map */
