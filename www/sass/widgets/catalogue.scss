@@ -72,8 +72,8 @@
       left: 0.625rem;
       top: 50%;
       @include transform(translateY(-50%));
-      background-image: url('../img/menu-catalogue.png');
-      background-size: 169px;
+      background-image: url('../img/menu-catalogue-2.0.png');
+      background-size: 194px;
       background-repeat: no-repeat;
       z-index: 1;
     }
@@ -382,6 +382,14 @@
       &::before {
         background-position: -145px -122px;
       }
+    }
+  }
+
+  &__army {
+    &::before {
+      width: 24px;
+			height: 24px;
+      background-position: -169px 0;
     }
   }
 }

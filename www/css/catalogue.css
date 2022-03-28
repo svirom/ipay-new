@@ -65,8 +65,8 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-image: url("../img/menu-catalogue.png");
-  background-size: 169px;
+  background-image: url("../img/menu-catalogue-2.0.png");
+  background-size: 194px;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -292,6 +292,12 @@
 
 .catalogue__budget:active::before, .catalogue__budget.active::before, .catalogue__budget--red::before {
   background-position: -145px -122px;
+}
+
+.catalogue__army::before {
+  width: 24px;
+  height: 24px;
+  background-position: -169px 0;
 }
 
 /* catalogue mobile */
