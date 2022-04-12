@@ -272,8 +272,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
-  padding: 1rem 2rem;
+  height: 4rem;
+  padding: 0 2rem;
   border-radius: 0.5rem;
 
   &__title {
@@ -302,8 +302,7 @@
   }
 
   @include until($md) {
-    height: 4.5rem;
-    padding: 1rem;
+    padding: 0 1rem;
 
     &--monego {
       margin-top: 1rem;
