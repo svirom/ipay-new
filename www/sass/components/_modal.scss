@@ -20,6 +20,10 @@
       align-items: center;
       padding-bottom: 0;
     }
+
+    &--verification {
+      padding: 1.5rem;
+    }
   }
 
   .modal-header-img {
@@ -99,6 +103,14 @@
     .modal-header, .modal-body {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem;
+    }
+
+    .modal-header {  
+      &--verification {
+        h4 {
+          font-size: 1.3125rem;
+        }
+      }
     }
 
     .close {

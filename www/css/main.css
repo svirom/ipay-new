@@ -3333,6 +3333,10 @@ input:-internal-autofill-selected ~ .password-button.show-pass {
   padding-bottom: 0;
 }
 
+.modal-auth .modal-header--verification {
+  padding: 1.5rem;
+}
+
 .modal-auth .modal-header-img {
   margin-bottom: 0.75rem;
 }
@@ -3405,6 +3409,9 @@ input:-internal-autofill-selected ~ .password-button.show-pass {
   .modal-auth .modal-header, .modal-auth .modal-body {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+  .modal-auth .modal-header--verification h4 {
+    font-size: 1.3125rem;
   }
   .modal-auth .close {
     right: 1rem;

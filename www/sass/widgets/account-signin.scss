@@ -8,7 +8,20 @@
 @import '../abstracts/mixins';
 
 .account-signin {
-  // min-height: 60vh;
+  &__alert {
+    padding: 0.5rem;
+    color: $btn-red;
+    border-radius: 0.5rem;
+    background-color: $danger;
+
+    p {
+      color: $btn-red;
+    }
+  }
+}
+
+.account-signin .form-group.has-error {
+  margin-bottom: 1rem;
 }
 
 .account-signin .form-group.has-error .help-block {
