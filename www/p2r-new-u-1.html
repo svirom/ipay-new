@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/p2r-new.css">
+
+    <title>P2R New Unregistered 1</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                    <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Каталог услуг</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Оплата счета по реквизитам</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <div class="p2r-new-progressbar d-lg-none">
+        <div class="p2r-progress"></div>
+      </div>
+
+      <!-- p2r new main widget -->
+      <main class="p2r-new" id="p2r-new-widget">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-12 d-lg-none">
+              <div class="row no-gutters align-items-center">
+                <div class="col-auto">
+                  <a href="#" class="btn btn-link btn-back">Каталог услуг</a>
+                </div>
+                <div class="col-auto ml-auto">
+                  <a href="#" class="p2r-new__old">
+                    <span>Предыдущая версия</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 mt-4 mt-lg-0 mb-1">
+              <span class="p2r-new__connection" data-toggle="tooltip" title="" data-original-title="На странице используется ассиметричное 256-битное шифрование - один из самых безопасных в мире методов шифрований">Безопасное соединение</span>
+            </div>
+
+            <div class="col-12">
+              <div class="row justify-content-between">
+                <div class="col-lg-7">
+                  <h1 class="mb-1 mb-lg-0">Оплата счета по реквизитам (IBAN)</h1>
+                </div>
+                <div class="col-lg-4">
+                  <a href="#" class="p2r-new__old d-none d-lg-block">
+                    <span>Предыдущая версия страницы</span>
+                  </a>
+                  <!-- p2r new template -->
+                  <div class="p2r-new-template mt-4 mt-lg-0 d-lg-none">
+                    <p class="mb-2 heading-color"><strong>Платите быстрее с помощью шаблонов!</strong></p>
+                    <p class="mb-1 small">Авторизуйтесь и сохраните этот платеж в шаблон для супербыстрых оплат!</p>
+                    <a href="#" data-target="#modal-auth" data-toggle="modal" tabindex="-1">Войти</a>
+                  </div><!-- p2r new template -->
+                  <!-- <div class="p2r-new-template p2r-new-template--logged">
+                    <p class="mb-0 small heading-color">На странице успеха, нажмите на кнопку <strong>“Сохранить как шаблон”</strong> для более быстрых повторных оплат.</p>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 d-lg-none"></div>
+          </div>
+
+          <div class="row justify-content-between">
+
+            <div class="col-lg-7">
+              <div class="row">
+
+                <div class="col-12">
+                  <form class="p2r-form">
+                    <h4>Получатель</h4>
+  
+                    <div class="p2r-new__form-wrapper">
+                      <div class="form-group">
+                        <input type="text" id="p2rform-target_edrpou" class="form-control form-input" name="P2rForm[target_edrpou]" autocomplete="off" data-tabindex="7" placeholder="Код отримувача, ЄДРПОУ або РНОКПП" aria-required="true" aria-invalid="true">
+                        <label class="control-label form-label" for="p2rform-target_edrpou">ЕГРПОУ или РНУКПН</label>
+                        <a role="button" tabindex="-1" class="bank-card__cvv-button p2r-popover" data-toggle="popover" data-content="Если получатель юридическое лицо, укажите ЕГРПОУ в 8 символов.<br>Если получатель физическое лицо, укажите РНУКПН в 10 символов." data-original-title="" title=""></a>
+                        <div class="help-block">Необхідно заповнити ЄДРПОУ</div>
+                      </div>
+                    </div>
+
+                    <div class="p2r-new__form-wrapper">
+                      <div class="form-group">
+                        <input type="text" id="p2rform-target_fio" class="form-control form-input" name="P2rForm[target_fio]" autocomplete="off" data-tabindex="6" placeholder="ПІБ або найменування організації" aria-required="true" aria-invalid="true">
+                        <label class="control-label form-label" for="p2rform-target_fio">Название получателя</label>
+                        <div class="help-block">Необхідно заповнити найменування одержувача</div>
+                      </div>
+                    </div>
+
+                    <div class="p2r-new__form-wrapper">
+                      <div class="form-group">
+                        <input type="text" id="p2rform-target_rr" class="form-control form-input filled" name="P2rForm[target_rr]" autocomplete="off" data-tabindex="8" placeholder="IBAN у форматі UA__" aria-required="true" aria-invalid="true" value="UA">
+                        <label class="control-label form-label" for="p2rform-target_rr">IBAN</label>
+                        <div class="help-block">Необхідно заповнити IBAN одержувача</div>
+                        </div>
+                    </div>
+
+                    <h4>Категория платежа</h4>
+
+                    <div class="p2r-new__form-wrapper">
+                      <div class="form-group select-input-wrapper" data-label="Другие платежи">
+                        <select class="select-p2r form-control form-input" id="p2rform-category" name="select" data-placeholder-1="Укажите за что производится оплата или перевод средств" data-placeholder-2="Л/с, адрес, период, назначение (оплата за ...)" data-placeholder-3="Укажите за какой товар или услугу осуществляется оплата, номер заказа" data-placeholder-4="*; Код вида платежа; РНУКПН; детали платежа;;;;" data-placeholder-5="Укажите за какую услугу осуществляется оплата, номер соглашения, период и т.п." data-placeholder-6="Л/с, адрес, назначение (оплата за ...)" data-placeholder-7="Укажите по какую услугу осуществляется оплата, номер страхового соглашения" data-placeholder-8="Укажите за какую услугу производится оплата" data-placeholder-9="Укажите за что производится оплата или перевод средств">
+                          <option value="1">Другие платежи</option>
+                          <option value="2">Коммунальные услуги (ОСМД, ЖСК, свет, вода, электроэнергия, домофон, мусора, лифт, охрана, паркинг, гараж)</option>
+                          <option value="3">Интернет/Телевидение/Телеком услуги</option>
+                          <option value="4">Платежи в бюджет (штрафы, налоги, сборы, государственная пошлина, судебные сборы)</option>
+                          <option value="5">Оплата товаров и услуг (оплата счета, заказа)</option>
+                          <option value="6">Погашение кредита</option>
+                          <option value="7">Страхование (страховые платежи)</option>
+                          <option value="8">Обучение (школа, детский сад (питание, родительская плата), вебинары, семинары, курсы, онлайн обучение и т.п.)</option>
+                          <option value="9">Благотворительные взносы</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="p2r-new__form-wrapper">
+                      <div class="form-group">
+                        <textarea id="p2rform-desc" class="form-control form-textarea" name="P2rForm[desc]" maxlength="140" rows="3" autocomplete="off" data-tabindex="9" placeholder="Укажите за что производится оплата или перевод средств" aria-required="true" aria-invalid="true"></textarea>
+                        <label class="control-label form-label" for="p2rform-desc">Назначение платежа</label>
+                        <div class="help-block">Необхідно заповнити призначення платежу</div>
+                        </div>
+                    </div>
+
+                    <h4>Отправитель</h4>
+
+                    <div class="p2r-new__form-wrapper">
+                      <div class="form-group">
+                        <input type="text" id="p2rform-sender_fio" class="form-control form-input" name="P2rForm[sender_fio]" autocomplete="off" data-tabindex="1" placeholder="Прізвище Ім'я По-батькові" aria-required="true" aria-invalid="true">
+                        <label class="control-label form-label" for="p2rform-sender_fio">ФИО отправителя</label>
+                        <div class="help-block">Необхідно заповнити ПІБ відправника</div>
+                      </div>
+                    </div>
+
+                    <div class="p2r-new__form-wrapper">
+                      <div class="form-group">
+                        <input type="tel" id="p2rform-sender_phone" class="form-control form-input" name="P2rForm[sender_phone]" data-tabindex="2" data-length="12" placeholder="+380 (00) 000 00 00" autocomplete="section-sender tel" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="true">
+                        <label class="control-label form-label" for="p2rform-sender_phone">Номер телефона</label>
+                        <div class="help-block">Необхідно заповнити номер телефону</div>
+                        </div>
+                    </div>
+
+                    <div class="p2r-new__form-wrapper p2r-new__invoice">
+                      <div class="form-group">
+                        <input type="tel" id="p2rform-invoice" class="form-control form-input input-icon-right" name="P2rForm[invoice]" maxlength="8" inputmode="decimal" data-tabindex="10" minlength="1" placeholder="10 - 29 999" autocomplete="off" aria-required="true" aria-invalid="true">
+                        <label class="control-label form-label" for="p2rform-invoice">Сумма</label>
+                        <label class="label-icon-right label-currency">грн</label>
+                        <div class="help-block">Сума платежу повинна бути не менше 10 грн</div>
+                      </div>
+                      <div class="row justify-content-between mb-2 px-0 px-md-3 p2r-new__invoice-commission">
+                        <div class="col-auto">
+                          <span>Комиссия<span class="p2r-new-commission-1 d-none"> 4%</span><span class="p2r-new-commission-2 d-none">+4 грн</span>:</span>
+                        </div>
+                        <div class="col-auto">
+                          <span><span id="commission">0.00</span> грн</span>
+                        </div>
+                      </div>
+                      <div class="row justify-content-between px-0 px-md-3 p2r-new__invoice-amount">
+                        <div class="col-auto">
+                          <span>К оплате:</span>
+                        </div>
+                        <div class="col-auto">
+                          <span><span id="amount">0.00</span> грн</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="text-center mt-4 pt-md-2">
+                      <p class="heading-color">Оплатите c помощью</p>
+                      <p class="heading-color">или введите данные карты</p>
+                    </div>
+
+                    <div class="p2r-new__card">
+                      <div class="bank-card mx-auto">
+                        <div class="bank-card__header">
+                            <div class="bank-card__bank">
+                                <div id="sender-bank-card"></div>
+                            </div>
+                            <div class="bank-card__type">
+                                <div id="sender-type-card"></div>
+                            </div>
+                        </div>
+                        <div class="bank-card__body">
+                          <div class="bank-card__number">
+                            <div class="form-group">
+                              <input type="tel" id="p2rform-sender_card_pan" class="form-control form-input" name="P2rForm[sender_card_pan]" autocomplete="section-sender cc-number" data-tabindex="3" data-length="16" placeholder="0000 0000 0000 0000" data-min-error-message="Вказані не всі цифри картки" data-luhn-error-message="Номер картки невірний" aria-required="true">
+                              <label class="control-label form-label" for="p2rform-sender_card_pan">Номер карты</label>
+                              <div class="help-block">Номер картки невірний</div>
+                            </div>
+                          </div>
+                          <div class="bank-card__card-data">
+                            <div class="form-group bank-card__expires">
+                              <input type="tel" id="p2rform-sender_card_exp" class="form-control form-input" name="P2rForm[sender_card_exp]" maxlength="7" data-length="4" minlength="7" autocomplete="off" data-tabindex="4" placeholder="ММ / РР" exp-error-message="Невірний термін дії картки" aria-required="true">
+                              <label class="control-label form-label" for="p2rform-sender_card_exp">Срок действия</label>
+                              <div class="help-block">Невірний термін дії картки</div>
+                            </div>
+                            <div class="form-group bank-card__cvv">
+                              <input type="password" id="p2rform-sender_card_cvv" class="form-control form-input" name="P2rForm[sender_card_cvv]" maxlength="3" data-tabindex="5" data-length="3" minlength="3" placeholder="000" autocomplete="section-sender cc-csc" aria-required="true">
+                              <label class="control-label form-label" for="p2rform-sender_card_cvv">CVV</label>
+                              <a role="button" tabindex="-1" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-content="Тризначний код на зворотній стороні платіжної картки" data-original-title="" title=""></a>
+                              <div class="help-block"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="p2r-new__submit mx-auto mt-4">
+                      <button type="submit" class="btn btn-green btn-block button-transfer go-to-pay" disabled="disabled">Оплатить</button>
+                      <div class="p2r-progress"><span>Оплатить</span></div>
+                    </div>
+
+                    <div class="p2r-new__oferta text-center mx-auto mt-3">
+                      <p class="small">Нажимая кнопку "Оплатить", Вы соглашаетесь с условиями <a href="/media/files/public-offer.pdf" class="red-link" target="_blank" tabindex="-1">публичного договора</a></p>
+                    </div>
+
+                  </form>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- aside area -->
+            <aside class="col-lg-4 d-none d-lg-block p2r-new__aside">
+              <div class="row">
+
+                <div class="col-12 mb-4">
+                  <!-- p2r new template -->
+                  <div class="p2r-new-template">
+                    <p class="mb-2 heading-color"><strong>Платите быстрее с помощью шаблонов!</strong></p>
+                    <p class="mb-1 small">Авторизуйтесь и сохраните этот платеж в шаблон для супербыстрых оплат!</p>
+                    <a href="#" data-target="#modal-auth" data-toggle="modal" tabindex="-1">Войти</a>
+                  </div><!-- p2r new template -->
+                  <!-- <div class="p2r-new-template p2r-new-template--logged">
+                    <p class="mb-0 small heading-color">На странице успеха, нажмите на кнопку <strong>“Сохранить как шаблон”</strong> для более быстрых повторных оплат.</p>
+                  </div> -->
+                </div>
+
+                <div class="col-12 mb-4">
+                  <!-- p2r new provider -->
+                  <div class="p2r-new-provider" id="p2r-new-provider-widget">
+                    <div class="p2r-new-provider__payments">
+                      <p class="mb-2">Успешных оплат</p>
+                      <p class="p2r-new-provider__number mb-2">2 334 721</p>
+                      <p>Последняя  оплата <span>22 минуты</span> назад </p>
+                    </div>
+                    <div class="p2r-new-provider__rating">
+                      <h4 class="mb-0">Рейтинг услуги</h4>
+                      <div class="rating-input">
+                        <span class="rating-input__star active"></span>
+                        <span class="rating-input__star active"></span>
+                        <span class="rating-input__star active"></span>
+                        <span class="rating-input__star active"></span>
+                        <span class="rating-input__star active-half"></span>
+                        <span class="rating-input__result">4.4</span>
+                      </div>
+                      <p class="mb-0">Оценили <span>49398</span> пользователей</p>
+                    </div>
+                  </div><!-- p2r new provider -->
+                </div>
+
+                <div class="col-12">
+                  <!-- p2r new limits -->
+                  <div class="p2r-new-limits">
+                    <h4 class="mb-3">Лимиты и ограничения </h4>
+                    <div class="row col-pad8">
+                      <div class="col-lg-6">
+                        <div class="p2r-new-limits__card">
+                          <p class="mb-2 heading-color"><strong>29 999 грн</strong></p>
+                          <p class="mb-0">Максимальная сумма перевода за раз</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="p2r-new-limits__card">
+                          <p class="mb-2 heading-color"><strong>110 000 грн</strong></p>
+                          <p class="mb-0">Максимальная сумма перевода в сутки</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- p2r new limits -->
+                </div>
+  
+              </div>
+            </aside><!-- aside area -->
+
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+
+              <div class="p2r-new-protection">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-8 col-xl-7">
+                    <p class="text-center">Ваши платежи защищены</p>
+                    <div class="p2r-new-protection__card">
+                      <a rel="nofollow" href="https://www.mastercard.ua/uk-ua/consumers/features-benefits/safety-and-security/securecode.html" target="_blank" tabindex="-1">
+                        <img src="img/p2r/mastercard-security-icon.svg" alt="Mastercard">
+                      </a>
+                      <a rel="nofollow" href="https://www.visa.com.ua/uk_UA/partner-with-us/payment-technology/verified-by-visa.html" target="_blank" tabindex="-1">
+                        <img src="img/p2r/visa-security-icon.svg" alt="Visa">
+                      </a>
+                      <a rel="nofollow" href="http://prostir.gov.ua/prostir/" target="_blank" tabindex="-1">
+                        <img src="img/p2r/prostir-security-icon.svg" alt="Prostir">
+                      </a>
+                      <a href="/ru/pci-dss-ipay-ua" target="_blank" tabindex="-1">
+                        <img src="img/p2r/pci-dss-security-icon.svg" alt="PCI DSS">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- aside mobile area -->
+              <div class="mb-3 d-lg-none">
+                <div class="mb-4">
+                  <!-- p2r new provider -->
+                  <div class="p2r-new-provider" id="p2r-new-provider-widget">
+                    <div class="p2r-new-provider__payments">
+                      <p class="mb-2">Успешных оплат</p>
+                      <p class="p2r-new-provider__number mb-2">2 334 721</p>
+                      <p>Последняя  оплата <span>22 минуты</span> назад </p>
+                    </div>
+                    <div class="p2r-new-provider__rating">
+                      <h4 class="mb-0">Рейтинг услуги</h4>
+                      <div class="rating-input">
+                        <span class="rating-input__star active"></span>
+                        <span class="rating-input__star active"></span>
+                        <span class="rating-input__star active"></span>
+                        <span class="rating-input__star active"></span>
+                        <span class="rating-input__star active-half"></span>
+                        <span class="rating-input__result">4.4</span>
+                      </div>
+                      <p class="mb-0">Оценили <span>49398</span> пользователей</p>
+                    </div>
+                  </div><!-- p2r new provider -->
+                </div>
+
+                <!-- p2r new limits -->
+                <div class="p2r-new-limits">
+                  <h4 class="mb-3">Лимиты и ограничения </h4>
+                  <div class="row col-pad8">
+                    <div class="col-lg-6 mb-3">
+                      <div class="p2r-new-limits__card">
+                        <p class="mb-2 heading-color"><strong>29 999 грн</strong></p>
+                        <p class="mb-0">Максимальная сумма перевода за раз</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                      <div class="p2r-new-limits__card">
+                        <p class="mb-2 heading-color"><strong>110 000 грн</strong></p>
+                        <p class="mb-0">Максимальная сумма перевода в сутки</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- p2r new limits -->
+              </div><!-- aside mobile area -->
+
+              <div class="p2r-new-info">
+                <h2>Оплачивайте счета, зная только реквизиты предприятия</h2>
+                <p>Всеукраинская система онлайн-платежей iPay.ua дает возможность всем своим клиентам осуществлять платежи, зная реквизиты компании или государственного учреждения. С iPay.ua оплатить счет по реквизитам очень просто, для этого нужно только иметь компьютер или планшет, а также банковскую карточку Maestro/Cirrus, MasterCard, Visa, Visa Electron, выпущенную абсолютно любым из банков Украины.</p>
+                <h3>Преимущества оплаты по свободным реквизитам</h3>
+                <p>Услуга перевода денег на счет дает всем пользователям сервиса iPay.ua массу преимуществ:</p>
+                <ul class="list list--regular">
+                  <li>Экономия времени. Время, которое занимает оплата счетов, - меньше минуты, доступность сервисов iPay.ua – 24/7.</li>
+                  <li>Быстрый перевод с карты на счет любых муниципальных предприятий.</li>
+                  <li>Осуществление налоговых и других платежей в бюджет.</li>
+                  <li>Быстрая оплата страховых взносов.</li>
+                </ul>
+                <h3>Как оплатить счет по реквизитам?</h3>
+                <p>По реквизитам в системе iPay.ua, вам необходимо быть обладателем банковской карточки, выданной любым из украинских банков. Для того чтобы указанная сумма была зачислена на счет предприятия, Отправителем денежных средств в специально предназначенных для этого полях указывается следующая информация:</p>
+                <ul class="list list--regular">
+                  <li>Код получателя</li>
+                </ul>
+                <p>Если речь идет о юридических лицах, то необходимо указать ЕГРПОУ (код Единого государственного реестра предприятий и организаций Украины). Код состоит из восьми цифр, его можно увидеть практически на любом документе, выданном конкретной организацией. Кроме того, существуют государственные базы, в которых можно найти ЕГРПОУ конкретного юридического лица. Когда же оплата происходит для физических лиц, необходимо указать РНУКПН (индивидуальный номер налогоплательщика). Он состоит из 10 цифр. В любом случае, ЕГРПОУ или РНУКПН будут обязательно указаны в реквизитах, на которые должна происходить оплата, а также квитанции на оплату товаров и услуг.</p>
+                <ul class="list list--regular">
+                  <li>Расчетный счет и IBAN</li>
+                  <li>Расчетный счет – это учетная запись, которая используется финансовым учреждением для учета денежных средств клиента. Раньше расчетные счета состояли из 20 символов. С недавнего времени они открываются с учетом международных стандартов IBAN (International Bank Account Number). В Украине этот код состоит из 29 буквенно-цифровых символов. Информацию можно найти в реквизитах.</li>
+                  <li>Назначение платежа</li>
+                </ul>
+                <p>Это обязательное поле, которое требуется для заполнения. При этом тут нужно указать в точности ту информацию, которая написана на сайте, где вы заказываете товары или услуги (или самой квитанции). Без этого платеж будет трудно идентифицировать, что может привести к определенным задержкам с отправкой продукции.</p>
+                <h2>Почему комиссия такая большая</h2>
+                <p>На первый взгляд может показаться, что комиссия достаточно большая. В то же время она просто не может быть меньше, поскольку делится между:</p>
+                <ul class="list list--regular">
+                  <li>банком-эквайером (финансовым учреждением, которое обслуживает компанию-получателя);</li>
+                  <li>сервисом iPay.ua (осуществляет перевод средств от покупателя к банку-эквайеру);</li>
+                  <li>международными платежными системами Visa и MasterCard (без них безналичные расчеты невозможны вообще).</li>
+                </ul>
+                <p>Собственно наша прибыль минимальна, большая часть комиссии перечисляется для посредников и платежных систем. Как результат, оплачивать товары и услуги через iPay.ua – это самое выгодное решение для вас и ваших клиентов!</p>
+                <h2>Условия оплаты счета по реквизитам</h2>
+                <p>Осуществляя перевод по реквизитам, Отправитель оплачивает небольшой комиссионный сбор за пользование сервисом. Его размер составляет 2% от перечисляемой суммы + 4 гривны. Поэтому перед тем, как оплачивать счета или страховые взносы, Отправителю следует удостовериться в том, что на его платежной карте достаточно денежных средств. Минимальная сумма, которая может быть отправлена – 10 гривен, максимальный платеж, который может быть переведен на счет предприятия или учреждения, составляет 29 999 гривен.</p>
+                <p>Всеукраинская система online-платежей iPay.ua позаботилась о комфорте своих пользователей, поэтому оплачивать счета можно, находясь в любом уголке Украины. iPay.ua – это безопасность и комфорт, именно поэтому оплата по реквизитам не занимает много времени. Теперь для быстрой оплаты счета не нужно идти в банк или пользоваться терминалами оплаты, достаточно просто зайти на сайт iPay.ua.</p>
+              </div>
+
+              <div class="p2r-new-card">
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <div class="p2r-new-card__img mb-4 mb-md-0">
+                      <img src="img/p2r/p2r-new-card.png" srcset="img/p2r/p2r-new-card.png 1x, img/p2r/p2r-new-card@2x.png 2x" alt="Image">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="p2r-new-card__content">
+                      <h3>Хочете брати на Вашому сайті оплату картками Visa і MasterCard? </h3>
+                      <p>Подключайте прийом платежей картой на вашем сайте с помощью сервиса iPay.ua</p>
+                      <a href="#" class="btn btn-red mt-md-3">Оставить заявку</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </main><!-- p2r new main widget -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Поиск</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal-auth" id="modal-auth" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog--main">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <div class="modal-tablist">
+              <ul class="nav" role="tablist">
+                <li class="modal-tablist__item">
+                  <a class="modal-tablist__link active" id="modal-signin-tab" data-toggle="pill" href="#modal-signin" role="tab" aria-controls="modal-signin" aria-selected="true">Вход</a>
+                </li>
+                <li class="modal-tablist__item">
+                  <a class="modal-tablist__link" id="modal-signup-tab" data-toggle="pill" href="#modal-signup" role="tab" aria-controls="modal-signup" aria-selected="false">Регистрация</a>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="tab-content">
+
+              <!-- 1st tab section -->
+              <div class="tab-pane fade show active" id="modal-signin" role="tabpanel" aria-labelledby="modal-signin-tab">
+
+                <div class="row">
+
+                  <div class="col-md-6 modal-left">
+                    <p class="heading-color d-none d-md-block">Войти с помощью логина</p>
+                    <form action="">
+                      <div class="form-group">
+                        <input type="text" class="form-control form-input" id="account-login" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                        <label class="control-label form-label" for="account-login">Телефон или email</label>
+                      </div>
+                      <div class="form-group mb-0">
+                        <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
+                        <label class="control-label form-label" for="account-pass">Пароль</label>
+                        <button type="button" class="password-button"></button>
+                      </div>
+                      <div class="form-group text-right mt-1">
+                        <a href="#" class="btn btn-link remind-link small">Напомнить пароль</a>
+                      </div>
+                      <button type="submit" class="btn btn-green btn-block" disabled="">Войти</button>
+                    </form>
+                  </div>
+
+                  <div class="col-md-6 mt-3 mt-md-0 modal-right">
+                    <p class="heading-color d-none d-md-block">или быстро войти с помощью</p>
+                    <div class="modal-social">
+                      <div class="modal-social__title d-md-none">
+                        <span>или</span>
+                      </div>
+                      <div class="modal-social__buttons">
+                        <a href="#" id="signinFacebook" class="btn btn-block btn-signin btn-signin-fb">
+                          <span>Войти через Facebook</span>
+                        </a>
+                        <a href="#" id="signinGoogle" class="btn btn-block btn-signin btn-signin-google">
+                          <span>Войти через Google</span>
+                        </a>
+                        <a href="#" id="signinApple" class="btn btn-block btn-signin btn-signin-apple">
+                          <span>Войти через Apple</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                
+              </div><!-- 1st tab section -->
+
+              <!-- 2nd tab section -->
+              <div class="tab-pane fade" id="modal-signup" role="tabpanel" aria-labelledby="modal-signup-tab">
+
+                <div class="row">
+
+                  <div class="col-md-6 modal-left">
+                    <p class="heading-color d-none d-md-block">С помощью телефона</p>
+                    <form action="">
+                      <div class="form-group">
+                        <input type="tel" class="form-control form-input" id="account-phone" name="form-phone" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true">
+                        <label class="control-label form-label" for="account-phone">Номер телефона</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
+                        <label class="control-label form-label" for="account-pass">Пароль</label>
+                        <button type="button" class="password-button"></button>
+                      </div>
+                      <div class="form-group mb-2">
+                        <p class="mb-2 small heading-color">Пароль должен содержать:</p>
+                        <div class="row no-gutters">
+                          <div class="col-6">
+                            <ul class="help-list">
+                              <li>не менее 8 символов</li>
+                              <li>1 цифру</li>
+                              <li>1 заглавною букву</li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="help-list">
+                              <li>1 строчную букву</li>
+                              <li>не содержать кириллицу</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-green btn-block" disabled="">Зарегистрироваться</button>
+                    </form>
+                  </div>
+
+                  <div class="col-md-6 mt-3 mt-md-0 modal-right">
+                    <p class="heading-color d-none d-md-block">или зарегистрироваться через</p>
+                    <div class="modal-social">
+                      <div class="modal-social__title d-md-none">
+                        <span>или</span>
+                      </div>
+                      <div class="modal-social__buttons">
+                        <a href="#" id="signupFacebook" class="btn btn-block btn-signin btn-signin-fb">
+                          <span>Продолжить через Facebook</span>
+                        </a>
+                        <a href="#" id="signupGoogle" class="btn btn-block btn-signin btn-signin-google">
+                          <span>Продолжить через Google</span>
+                        </a>
+                        <a href="#" id="signupApple" class="btn btn-block btn-signin btn-signin-apple">
+                          <span>Продолжить через Apple</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 mt-3 mt-md-4">
+                    <p class="text-center heading-color mb-0">Создавая аккаунт, Вы соглашаетесь с условиями <a href="#" class="red-link">публичного договора</a></p>
+                  </div>
+
+                </div>
+
+              </div><!-- 2nd tab section -->
+
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/p2r-new.js"></script>
+  </body>
+</html>
