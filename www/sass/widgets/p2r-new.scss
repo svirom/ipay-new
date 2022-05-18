@@ -78,6 +78,11 @@
   &__form-wrapper {
     .form-group {
       margin-bottom: 0.5rem;
+
+      &.has-success .bank-card__cvv-button,
+      &.has-error .bank-card__cvv-button {
+        right: 3rem;
+      }
     }
   }
 
@@ -91,6 +96,15 @@
     span {
       color: $heading-color;
       font-size: 1.125rem;
+    }
+
+    .p2r-new-commission-1,
+    .p2r-new-commission-2 {
+      display: none;
+
+      &.active {
+        display: inline;
+      }
     }
   }
 
@@ -127,6 +141,7 @@
   }
 
   &__submit {
+    position: relative;
     width: 100%;
     max-width: 26.25rem;
 
@@ -234,6 +249,15 @@
 
       .form-group.has-error .form-textarea ~ .form-label {
         padding-left: 0;
+      }
+    }
+
+    &__form-wrapper {
+      .form-group {  
+        &.has-success .bank-card__cvv-button,
+        &.has-error .bank-card__cvv-button {
+          right: 1.1rem;
+        }
       }
     }
 
@@ -587,6 +611,7 @@
   }
 
   &--logged {
+    margin-top: 1.5rem;
     background-color: $light-yellow;
 
     &::before {
@@ -748,6 +773,7 @@
   }
 
   .templates-mobile-card {
+    display: block;
     height: 5.5rem;
     padding: 0.25rem;
     text-align: center;

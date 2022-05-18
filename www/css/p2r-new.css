@@ -70,6 +70,11 @@
   margin-bottom: 0.5rem;
 }
 
+.p2r-new__form-wrapper .form-group.has-success .bank-card__cvv-button,
+.p2r-new__form-wrapper .form-group.has-error .bank-card__cvv-button {
+  right: 3rem;
+}
+
 .p2r-new__invoice {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -79,6 +84,16 @@
 .p2r-new__invoice-commission span {
   color: #172A3A;
   font-size: 1.125rem;
+}
+
+.p2r-new__invoice-commission .p2r-new-commission-1,
+.p2r-new__invoice-commission .p2r-new-commission-2 {
+  display: none;
+}
+
+.p2r-new__invoice-commission .p2r-new-commission-1.active,
+.p2r-new__invoice-commission .p2r-new-commission-2.active {
+  display: inline;
 }
 
 .p2r-new__invoice-amount span {
@@ -112,6 +127,7 @@
 }
 
 .p2r-new__submit {
+  position: relative;
   width: 100%;
   max-width: 26.25rem;
 }
@@ -224,6 +240,10 @@
   }
   .p2r-new .p2r-form .form-group.has-error .form-textarea ~ .form-label {
     padding-left: 0;
+  }
+  .p2r-new__form-wrapper .form-group.has-success .bank-card__cvv-button,
+  .p2r-new__form-wrapper .form-group.has-error .bank-card__cvv-button {
+    right: 1.1rem;
   }
   .p2r-new .select2-container.select2-container--default .select2-selection,
   .p2r-new .select2-container.select2-container--default .select2-dropdown {
@@ -555,6 +575,7 @@
 }
 
 .p2r-new-template--logged {
+  margin-top: 1.5rem;
   background-color: #FEF7E0;
 }
 
@@ -713,6 +734,7 @@
 }
 
 .p2r-templates-mobile .templates-mobile-card {
+  display: block;
   height: 5.5rem;
   padding: 0.25rem;
   text-align: center;

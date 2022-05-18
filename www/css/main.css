@@ -1716,17 +1716,13 @@ input:-internal-autofill-selected ~ .password-button.show-pass {
 }
 
 .alert.alert-success {
-  color: #0C6858;
+  color: #172A3A;
   border-color: #E9FCF3;
   background-color: #E9FCF3;
 }
 
-.alert.alert-success a, .alert.alert-success p {
-  color: #0C6858;
-}
-
-.alert.alert-success a {
-  font-weight: bold;
+.alert.alert-success p {
+  color: #172A3A;
 }
 
 .alert.alert-success .close span {
@@ -1738,13 +1734,13 @@ input:-internal-autofill-selected ~ .password-button.show-pass {
 }
 
 .alert.alert-warning {
-  color: #000;
+  color: #172A3A;
   border-color: #FEF7E0;
   background-color: #FEF7E0;
 }
 
-.alert.alert-warning a, .alert.alert-warning p {
-  color: #000;
+.alert.alert-warning p {
+  color: #172A3A;
 }
 
 .alert.alert-warning .close span {
@@ -1774,17 +1770,13 @@ input:-internal-autofill-selected ~ .password-button.show-pass {
 }
 
 .alert.alert-secondary {
-  color: #3B566E;
+  color: #172A3A;
   border-color: #F0F5FA;
   background-color: #F0F5FA;
 }
 
-.alert.alert-secondary a, .alert.alert-secondary p {
-  color: #3B566E;
-}
-
-.alert.alert-secondary a {
-  font-weight: bold;
+.alert.alert-secondary p {
+  color: #172A3A;
 }
 
 .alert.alert-secondary .close span {
@@ -1895,6 +1887,22 @@ input:-internal-autofill-selected ~ .password-button.show-pass {
 
 .alert.alert-face.alert-warning::before {
   background-color: #FFD578;
+}
+
+.alert.alert-auth {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 3.25rem;
+  background-position: left 0.625rem top 0.625rem;
+  background-repeat: no-repeat;
+}
+
+.alert.alert-auth--signin {
+  background-image: url("../img/alert/icon-hand-shake.svg");
+}
+
+.alert.alert-auth--signup {
+  background-image: url("../img/alert/icon-notepad.svg");
 }
 
 /* rating stars */

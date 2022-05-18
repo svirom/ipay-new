@@ -42,16 +42,12 @@
   }
 
   &.alert-success {
-    color: $dark-green;
+    color: $heading-color;
     border-color: $light-green;
     background-color: $light-green;
 
-    a, p {
-      color: $dark-green;
-    }
-
-    a {
-      font-weight: bold;
+    p {
+      color: $heading-color;
     }
 
     .close {
@@ -68,14 +64,12 @@
   }
 
   &.alert-warning {
-    // color: $dark-orange;
-    color: #000;
+    color: $heading-color;
     border-color: $light-yellow;
     background-color: $light-yellow;
 
-    a, p {
-      // color: $dark-orange;
-      color: #000;
+    p {
+      color: $heading-color;
     }
 
     .close {
@@ -114,16 +108,12 @@
   }
 
   &.alert-secondary {
-    color: $text-color;
+    color: $heading-color;
     border-color: $light-grey;
     background-color: $light-grey;
 
-    a, p {
-      color: $text-color;
-    }
-
-    a {
-      font-weight: bold;
+    p {
+      color: $heading-color;
     }
 
     .close {
@@ -258,6 +248,22 @@
       &::before {
         background-color: $yellow;
       }
+    }
+  }
+
+  &.alert-auth {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 3.25rem;
+    background-position: left 0.625rem top 0.625rem;
+    background-repeat: no-repeat;
+
+    &--signin {
+      background-image: url('../img/alert/icon-hand-shake.svg');
+    }
+
+    &--signup {
+      background-image: url('../img/alert/icon-notepad.svg');
     }
   }
 }
