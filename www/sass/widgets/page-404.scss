@@ -8,63 +8,85 @@
 @import '../abstracts/mixins';
 
 .page-404 {
-  .logo-color {
-    margin-bottom: 1.875rem;
-  }
-
   &__title {
-    margin-top: 3.125rem;
-    font-size: 1.5rem;
+    color: $btn-red;
   }
 
   &__subtitle {
-    @include font(2rem, 700, 1.25);
+    margin-bottom: 1.75rem;
+    color: $heading-color;
   }
 
-  &__support {
-    a {
-      font-weight: 500;
-    }
+  &__text {
+    margin-bottom: 1.75rem;
   }
 
   @include until($lg) {
-    &__title {
-      margin-top: 0.125rem;
-    }
-
-    &__support {
-      padding-top: 3.125rem;
-    }
+    padding-top: 2.125rem;
   }
 
   @include until($md) {
-    .logo-color {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &__title {
-      font-size: 0.75rem;
-    }
-
     &__subtitle {
-      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
     }
 
-    &__support {
-      text-align: center;
+    &__text {
+      margin-bottom: 2rem;
     }
   }
 }
 
 .page-maintenance {
-  &__img {
-    padding-top: 8.125rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__header, &__footer {
+    flex: 0 0 auto;
   }
 
-  @include until($lg) {
+  &__content {
+    flex: 1 1 0;
+  }
+
+  &__header {
+    padding-top: 0.75rem;
+  }
+
+  &__content {
+    // padding-top: 6.25rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  &__footer {
+    // padding-top: 3.5rem;
+    padding-bottom: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    color: $heading-color;
+  }
+
+  &__img {
+    // padding-top: 7.5rem;
+    padding-top: 4rem;
+  }
+
+  @include until($md) {
+    &__content {
+      padding-top: 2rem;
+    }
+
     &__img {
-      padding-top: 5.25rem;
+      padding-top: 2rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    &__widget {
+      padding-top: 1.875rem;
     }
   }
 }
