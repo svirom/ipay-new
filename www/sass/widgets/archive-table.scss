@@ -284,6 +284,36 @@
         width: 100%;
       }
 
+      &__send {
+        display: flex; 
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 0.5rem;
+
+        & > .btn-again {
+          flex: 1 1 auto;
+          width: auto;
+          max-width: 100%;
+        }
+
+        .archive-card__buttons {
+          .bill-result__buttons {
+            flex-wrap: nowrap;
+            margin-left: 0.5rem;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            form {
+              padding-left: 0.5rem;
+
+              .form-group.field-another-post {
+                padding-right: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
       &__buttons {
         -ms-flex: 0 1 auto;
         /* ie11 fix */
@@ -299,6 +329,34 @@
 
           form .form-group .form-label {
             top: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include until($xl) {
+    &--col-9 {
+      .archive-card {
+        &__send {
+          & > .btn-again {
+            flex: 1 0 220px;
+            max-width: 220px;
+            margin-bottom: 1rem;
+          }
+
+          .archive-card__buttons {
+            .bill-result__buttons {
+              margin-left: 0;
+            }
+          }
+        }
+
+        &__buttons {
+          .btn-download {
+            flex: 1 0 220px;
+            max-width: 220px;
+            margin-left: 0;
           }
         }
       }

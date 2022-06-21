@@ -319,6 +319,40 @@
   width: 100%;
 }
 
+.archive--col-9 .archive-card__send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.archive--col-9 .archive-card__send > .btn-again {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-left: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form {
+  padding-left: 0.5rem;
+}
+
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post {
+  padding-right: 0.5rem;
+}
+
 .archive--col-9 .archive-card__buttons {
   -ms-flex: 0 1 auto;
   /* ie11 fix */
@@ -337,6 +371,26 @@
 
 .archive--col-9 .archive-card__buttons .bill-result__buttons form .form-group .form-label {
   top: 0.95rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .archive--col-9 .archive-card__send > .btn-again {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 220px;
+            flex: 1 0 220px;
+    max-width: 220px;
+    margin-bottom: 1rem;
+  }
+  .archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons {
+    margin-left: 0;
+  }
+  .archive--col-9 .archive-card__buttons .btn-download {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 220px;
+            flex: 1 0 220px;
+    max-width: 220px;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
