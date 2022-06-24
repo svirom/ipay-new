@@ -323,8 +323,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   padding-top: 0.5rem;
 }
@@ -337,20 +340,59 @@
   max-width: 100%;
 }
 
+.archive--col-9 .archive-card__send .archive-card__buttons {
+  width: 100%;
+}
+
+.archive--col-9 .archive-card__send .archive-card__buttons > div {
+  width: 100%;
+}
+
 .archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-left: 0.5rem;
   padding-top: 0;
   padding-bottom: 0;
 }
 
 .archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-left: 0.5rem;
 }
 
 .archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: auto;
+  max-width: 100%;
   padding-right: 0.5rem;
+}
+
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post .form-input:focus ~ .form-label,
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post .form-input.filled ~ .form-label,
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post.has-success .form-label,
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post.has-error .form-label {
+  top: 0.45rem;
+}
+
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.has-error .help-block {
+  position: static;
+}
+
+.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons .bill-result__success-message {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: auto;
+  max-width: 100%;
 }
 
 .archive--col-9 .archive-card__buttons {
@@ -374,6 +416,10 @@
 }
 
 @media screen and (max-width: 1199px) {
+  .archive--col-9 .archive-card__send {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .archive--col-9 .archive-card__send > .btn-again {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 220px;

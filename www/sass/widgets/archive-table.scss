@@ -286,7 +286,8 @@
 
       &__send {
         display: flex; 
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        align-items: flex-start;
         width: 100%;
         padding-top: 0.5rem;
 
@@ -297,18 +298,46 @@
         }
 
         .archive-card__buttons {
+          width: 100%;
+
+          & > div {
+            width: 100%;
+          }
+
           .bill-result__buttons {
-            flex-wrap: nowrap;
+            align-items: flex-start;
             margin-left: 0.5rem;
             padding-top: 0;
             padding-bottom: 0;
 
             form {
+              align-items: flex-start;
+              flex-grow: 1;
               padding-left: 0.5rem;
 
               .form-group.field-another-post {
+                flex: 1 1 auto;
+                width: auto;
+                max-width: 100%;
                 padding-right: 0.5rem;
               }
+
+              .form-group.field-another-post .form-input:focus ~ .form-label,
+              .form-group.field-another-post .form-input.filled ~ .form-label,
+              .form-group.field-another-post.has-success .form-label, 
+              .form-group.field-another-post.has-error .form-label {
+                top: 0.45rem;
+              }
+
+              .form-group.has-error .help-block {
+                position: static;
+              }
+            }
+
+            .bill-result__success-message {
+              flex: 1 1 auto;
+              width: auto;
+              max-width: 100%;
             }
           }
         }
@@ -339,6 +368,8 @@
     &--col-9 {
       .archive-card {
         &__send {
+          flex-wrap: wrap;
+
           & > .btn-again {
             flex: 1 0 220px;
             max-width: 220px;
