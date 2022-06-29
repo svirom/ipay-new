@@ -26,7 +26,7 @@
     .form-label {
       top: 0.45rem;
       font-size: 0.77777rem;
-      color: $main-blue;
+      color: $text-color;
     }
   }
 
@@ -57,7 +57,7 @@
     .form-label {
       top: 0.45rem;
       font-size: 0.77777rem;
-      color: $main-blue;
+      color: $text-color;
     }
 
     .help-block {
@@ -105,7 +105,7 @@
     ~.form-label {
       top: 0.45rem;
       font-size: 0.77777rem;
-      color: $main-blue;
+      color: $text-color;
       @include transition(all, 0.3s);
     }
 
@@ -177,7 +177,7 @@
       margin-bottom: 0;
 
       &.label-currency {
-        color: $main-blue;
+        color: $heading-color;
         font-size: 1.125rem;
 
         &::before {
@@ -208,6 +208,7 @@
   left: 1.25rem;
   margin-bottom: 0;
   font-size: 1.125rem;
+  color: $heading-color;
   @include transition(all, 0.3s);
   cursor: text;
   pointer-events: none;
@@ -245,6 +246,21 @@
     background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg width='25' height='28' viewBox='0 0 25 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.845 17.4088C15.9273 17.4088 18.4259 14.9102 18.4259 11.8279C18.4259 8.74571 15.9273 6.24707 12.845 6.24707C9.7628 6.24707 7.26416 8.74571 7.26416 11.8279C7.26416 14.9102 9.7628 17.4088 12.845 17.4088Z' fill='%23172A3A'/%3E%3Cpath d='M2.34521 12.7471C2.34521 12.7471 6.34521 6.24707 12.8452 6.24707C19.3452 6.24707 23.3452 12.7471 23.3452 12.7471C23.3452 12.7471 19.3452 19.2471 12.8452 19.2471C6.34521 19.2471 2.34521 12.7471 2.34521 12.7471Z' stroke='%23172A3A' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
   }
+}
+
+.optional-wrapper {
+  padding-top: 1.25rem;
+}
+
+.optional-label {
+  position: absolute;
+  top: -1.25rem;
+  right: 0;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  line-height: 1.143;
+  color: $main-blue;
+  text-align: right;
 }
 
 input:-internal-autofill-selected ~ .password-button.show-pass {

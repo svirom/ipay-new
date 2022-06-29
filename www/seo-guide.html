@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/progressbar.css">
+    <link rel="stylesheet" href="/css/service-provider.css">
+    <link rel="stylesheet" href="/css/category-text.css">
+
+    <title>SEO Style Guide</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                    <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="#" class="form-search__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Услуги</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Коммунальные услуги</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Оплата коммунальных услуг</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- main area -->
+          <main class="col-lg-8">
+
+            <div class="row">
+              <div class="col-12">
+                <!-- bill main widget -->
+                <div class="bill-main" id="bill-main-widget" style="border-bottom: 2px solid rgb(222, 231, 243);">
+                  <div class="row">
+
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
+                    </div>
+      
+                    <div class="col-12 mb-3">
+                      <div class="bill-title">
+                        <h1>Оплата Коммунальной услуги по всем городам Украины </h1>
+                        <p>Оплата газа через интернет осуществляется банковской картой Visa, MasterCard или ПРОСТІР.</p>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <!-- progressbar widget -->
+                      <div id="progressbar-widget">
+                        <div class="row">
+
+                          <div class="col-12 mt-3 mb-5 d-none d-sm-block">
+                            <div class="progress-payment">
+                              <div class="progress">
+                                <div class="progress-textline">
+                                  <span class="progress-text active">Ввод данных плательщика</span>
+                                  <span class="progress-text">Ввод данных платежа</span>
+                                  <span class="progress-text">Ввод данных карты</span>
+                                  <span class="progress-text">Подтверждение платежа</span>
+                                </div>
+                                <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-steps">
+                                  <span class="progress-step active"></span>
+                                  <span class="progress-step"></span>
+                                  <span class="progress-step"></span>
+                                  <span class="progress-step"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-12 my-3 d-sm-none">
+                            <div class="progress-mobile progress-mobile--one-fourth">
+                              <div class="progress-mobile__circle">
+                                <div class="progress-mobile__value">
+                                  <div>1/4</div>
+                                </div>
+                              </div>
+                              <div class="progress-mobile__text">
+                                <span class="progress-mobile__current">Ввод данных плательщика</span>
+                                <span class="progress-mobile__next">Далее: Ввод данных платежа</span>
+                              </div>
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div><!-- progressbar widget -->
+                    </div>
+      
+                    <div class="col-12 mt-1 mb-5 mt-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-12 pb-3 d-none d-lg-block">
+                          <h2>Ввод данных плательщика</h2>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="col-md-6">
+                          <form action="/" id="utility-form">
+                            <div class="form-group mb-4">
+                              <input type="tel" class="form-control form-input" id="bill-account" name="name" autocomplete="off" placeholder="Лицевой счет" aria-required="true">
+                              <label class="control-label form-label" for="bill-account">Лицевой счет</label>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-green btn-next" disabled>Далее</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- bill main widget -->
+
+              </div>
+            </div>
+
+            <!-- aside mobile area -->
+            <div class="row d-lg-none">
+
+              <div class="col-12 mb-3">
+                <!-- service provider widget -->
+                <h4 class="mb-3">Поставщик услуги</h4>
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__tel">+380(342)50-62-01</div>
+                          <div class="provider-card__tel">+380(342)50-62-02</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                  <div class="service-provider__rating">
+                    <h4 class="service-provider__title">Рейтинг услуги</h4>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result">4.4</span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                </div><!-- service provider widget -->
+              </div>
+
+            </div><!-- aside mobile area -->
+            
+            <div class="row">
+              <div class="col-12 mt-4 mt-lg-5">
+                <!-- category text widget -->
+                <div class="category-text" id="category-text-widget">
+
+                  <code class="font-weight-bolder">Заголовок H2</code>
+                  <h2>Коммунальные услуги</h2>
+                  <code>
+                    &lt;h2>title&lt;/h2>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Заголовок H3</code>
+                  <h3>Как оплатить коммунальные услуги на iPay.ua?</h3>
+                  <code>
+                    &lt;h3>title&lt;/h3>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Параграф P</code>
+                  <p>Оплата коммунальных услуг – это ежемесячная обязанность каждого жителя нашей страны. При этом, согласно нововведенным нормативно-правовым требованиям, наказания за несвоевременное или неполное перечисление средств еще более ужесточились. Именно поэтому очень важно знать, как проходит оплата коммунальных услуг в Украине, и как ее лучше осуществить.</p>
+                  <code>
+                    &lt;p>text&lt;/p>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Параграф P (bold)</code>
+                  <p><strong>Оплата коммунальных услуг</strong> – это ежемесячная обязанность каждого жителя нашей страны. При этом, согласно нововведенным нормативно-правовым требованиям, наказания за несвоевременное или неполное перечисление средств еще более ужесточились. Именно поэтому очень важно знать, как проходит оплата коммунальных услуг в Украине, и как ее лучше осуществить.</p>
+                  <code>
+                    &lt;p>&lt;strong>text strong&lt;/strong> text&lt;/p>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">2 колонки</code>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                  </div>
+                  <code>
+                    &lt;div class="row"><br>
+                    &nbsp;&lt;div class="col-md-6"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-6"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &lt;/div>
+                  </code>
+
+                  <hr>
+
+                  <div class="mt-4">
+                    <code class="font-weight-bolder">3 колонки</code>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                  </div>
+                  <code>
+                    &lt;div class="row"><br>
+                    &nbsp;&lt;div class="col-md-4"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-4"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-4"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &lt;/div>
+                  </code>
+
+                  <hr>
+
+                  <div class="mt-4">
+                    <code class="font-weight-bolder">3 колонки з картинками</code>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-4">
+                      <img src="https://via.placeholder.com/80" class="mb-2" alt="">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="https://via.placeholder.com/80" class="mb-2" alt="">
+                      <p>Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <img src="https://via.placeholder.com/80" class="mb-2" alt="">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                  </div>
+                  <code>
+                    &lt;div class="row"><br>
+                    &nbsp;&lt;div class="col-6 col-md-4"><br>
+                    &nbsp;&nbsp;&lt;img src="" class="mb-2"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-4"><br>
+                    &nbsp;&nbsp;&lt;img src="" class="mb-2"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-4"><br>
+                    &nbsp;&nbsp;&lt;img src="" class="mb-2"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &lt;/div>
+                  </code>
+
+                  <hr>
+
+                  <div class="mt-4">
+                    <code class="font-weight-bolder">4 колонки варіант 1 (перехід 4-1 колонки)</code>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                    <div class="col-md-3">
+                      <p>Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях.</p>
+                    </div>
+                    <div class="col-md-3">
+                      <p> Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                    <div class="col-md-3">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                  </div>
+                  <code>
+                    &lt;div class="row"><br>
+                    &nbsp;&lt;div class="col-md-3"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-3"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-3"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-3"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &lt;/div>
+                  </code>
+
+                  <div class="mt-4">
+                    <code class="font-weight-bolder">4 колонки варіант 2 (перехід 4-2-1 колонки)</code>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <p>Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <p> Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                  </div>
+                  <code>
+                    &lt;div class="row"><br>
+                    &nbsp;&lt;div class="col-md-6 col-lg-3"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-6 col-lg-3"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-6 col-lg-3"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-6 col-lg-3"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &lt;/div>
+                  </code>
+
+                  <hr>
+
+                  <div class="mt-4">
+                    <code class="font-weight-bolder">4 колонки з картинками</code>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-3">
+                      <img src="https://via.placeholder.com/80" class="mb-2" alt="">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <img src="https://via.placeholder.com/80" class="mb-2" alt="">
+                      <p>Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <img src="https://via.placeholder.com/80" class="mb-2" alt="">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <img src="https://via.placeholder.com/80" class="mb-2" alt="">
+                      <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил.</p>
+                    </div>
+                  </div>
+                  <code>
+                    &lt;div class="row"><br>
+                    &nbsp;&lt;div class="col-6 col-md-3"><br>
+                    &nbsp;&nbsp;&lt;img src="" class="mb-2"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-3"><br>
+                    &nbsp;&nbsp;&lt;img src="" class="mb-2"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-3"><br>
+                    &nbsp;&nbsp;&lt;img src="" class="mb-2"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &nbsp;&lt;div class="col-md-3"><br>
+                    &nbsp;&nbsp;&lt;img src="" class="mb-2"><br>
+                    &nbsp;&nbsp;&lt;p>text&lt;/p><br>
+                    &nbsp;&lt;/div><br>
+                    &lt;/div>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Список</code>
+                  <ul class="list list--circle">
+                    <li>банковская карточка Visa или MasterCard (подойдет карточка любого финансового учреждения);</li>
+                    <li>банковская карточка Visa или MasterCard (подойдет карточка любого финансового учреждения);</li>
+                    <li>компьютер или смартфон с доступом к интернету.</li>
+                  </ul>
+                  <code>
+                    &lt;ul class="list list--circle"><br>
+                    &nbsp;&lt;li>list item&lt;/li><br>
+                    &nbsp;&lt;li>list item&lt;/li><br>
+                    &nbsp;&lt;li>list item&lt;/li><br>
+                    &lt;/ul>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Список нумерований</code>
+                  <ol class="list list-ordered">
+                    <li>банковская карточка Visa или MasterCard (подойдет карточка любого финансового учреждения);</li>
+                    <li>банковская карточка Visa или MasterCard (подойдет карточка любого финансового учреждения);</li>
+                    <li>компьютер или смартфон с доступом к интернету.</li>
+                  </ol>
+                  <code>
+                    &lt;ol class="list list-ordered"><br>
+                    &nbsp;&lt;li>list item&lt;/li><br>
+                    &nbsp;&lt;li>list item&lt;/li><br>
+                    &nbsp;&lt;li>list item&lt;/li><br>
+                    &lt;/ol>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Посилання</code>
+                  <div>
+                    <a href="#" class="red-link">Link</a>
+                  </div>
+                  <code>
+                    &lt;a href="" class="red-link">Link&lt;/a>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Посилання підкреслене</code>
+                  <div>
+                    <a href="#" class="red-link"><u>Link</u></a>
+                  </div>
+                  <code>
+                    &lt;a href="" class="red-link">&lt;u>Link&lt;/u>&lt;/a>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Зображення responsive</code>
+                  <div>
+                    <img src="https://via.placeholder.com/800x360" class="img-fluid" alt="">
+                  </div>
+                  <code>
+                    &lt;img href="" class="img-fluid">
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Зображення із закругленнями</code>
+                  <div>
+                    <img src="https://via.placeholder.com/160x120" class="img-rounded" alt="">
+                  </div>
+                  <code>
+                    &lt;img href="" class="img-rounded">
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Горизонтальна лінія</code>
+                  <hr>
+                  <code>
+                    &lt;hr>
+                  </code>
+
+                  <hr>
+
+                  <code class="font-weight-bolder">Accordion</code>
+                  <div class="accordion" id="accordionBill">
+
+                    <div class="accordion-card">
+                      <h4 class="accordion-card__title mb-0" id="headingOne" role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</h4>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                        <div class="accordion-card__body">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <tbody>
+                                <tr>
+                                  <td><strong>Газ</strong></td>
+                                  <td>ТОВ «ІВАНО-ФРАНКІВСЬКГАЗ ЗБУТ»</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Газ (Поставка)</strong></td>
+                                  <td>АТ Івано-франківськгаз (доставка газу</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Вода</strong></td>
+                                  <td>--</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Електроенергія</strong></td>
+                                  <td>ТОВ "ПРИКАРПАТЕНЕРГОТРЕЙД</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Опалення</strong></td>
+                                  <td>--</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Інші послуги</strong></td>
+                                  <td>--</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-card">
+                      <h4 class="accordion-card__title mb-0 collapsed" id="headingTwo" role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2</h4>
+                      
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                        <div class="accordion-card__body">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <tbody>
+                                <tr>
+                                  <td><strong>Газ</strong></td>
+                                  <td>ТОВ «ІВАНО-ФРАНКІВСЬКГАЗ ЗБУТ»</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Газ (Поставка)</strong></td>
+                                  <td>АТ Івано-франківськгаз (доставка газу</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Вода</strong></td>
+                                  <td>"Водотехпром (м. Івано-Франківськ)<br>
+                                    КП Івано-Франківськводоекотехпром<br>
+                                    ПП УК Комфорт (водопостачання)</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Електроенергія</strong></td>
+                                  <td>ТОВ "ПРИКАРПАТЕНЕРГОТРЕЙД</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Опалення</strong></td>
+                                  <td>1) ДМП Івано-Франківськтеплокомуненерго<br>
+                                    2) Станіславська теплоенергетична компанія</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Інші послуги</strong></td>
+                                  <td>1. Домофон Сервіс Прикарпаття<br>
+                                    2. ДП Автоколона 2222 ВАТ Івано-Франківськавтотранс<br>
+                                    3. КИТАЙСЬКА СТIНА 54, ОСББ<br>
+                                    4. ПП ""Пасічна ІФ"" (Електромонтажні та зварювальні роботи. Послуги сантехніка, столяра, слюсаря, маляра. Виклик майстра на дім. Встановлення систем водопостачання і водовідведення. Догляд за прибудинковими територіями.)<br>
+                                    5. Домофонні системи СПД ФО Зінько Василь Зіновійович<br>
+                                    6. Вивіз сміття Автотранспортне підприємство 0928 ВАТ<br>
+                                    7. ПП ""ЖЕО Житло-сервіс""<br>
+                                    8. РОЛЕКТА, ПП<br>
+                                    9. ЖЕО Прикарпаття ТОВ<br>
+                                    10.Домофон Люкс  Станчак Юрій Миколайович ПП<br>
+                                    11. ФОП ДОЛІШНІЙ В.Я. (Домосервіс)<br>
+                                    12. Громадська управляюча компанія ЖЕК<br>
+                                    13. Вовчинецька 207 ЖЕК<br>
+                                    14. КИТАЙСЬКА СТIНА 54, ОСББ<br>
+                                    15. ТзОВ БЛАГОУСТРIЙ М-ГРУП<br>
+                                    16.Дирекція замовника КП  (Утримання та ремонт спільного майна багатоквартирних будинків (гуртожитків) і прибудинкових територій)<br>
+                                    17. ТОВ ""УПРАВЛЯЮЧА КОМПАНІЯ ПРОФ-СЕРВІС""<br>
+                                    18. ПП УК Комфорт (квартплата, дод. посл.)<br>
+                                    19.Станіславів Комфорт, ТОВ <br>
+                                    20.Калинова слобода УК, ПП<br>
+                                    21.Експрес Комфорт ТзОВ</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-card">
+                      <h4 class="accordion-card__title mb-0 collapsed" id="headingThree" role="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Collapsible Group Item #3</h4>
+
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                        <div class="accordion-card__body">
+                          And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <code>
+                    &lt;div class="accordion" id="accordionBill"><br>
+                    <br>
+                    &nbsp;&lt;div class="accordion-card"><br>
+                    &nbsp;&nbsp;&lt;h4 class="accordion-card__title mb-0" id="headingOne" role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Title 1&lt;/h4><br>
+                    &nbsp;&nbsp;&lt;div id="collapseOne" class="collapse show" aria-labelledby="headingOne"><br>
+                    &nbsp;&nbsp;&nbsp;&lt;div class="accordion-card__body"><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="table-responsive"><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;table class="table"><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>&lt;strong>Text strong&lt;/strong>&lt;/td><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>text&lt;/td><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/table><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div><br>
+                    &nbsp;&nbsp;&nbsp;&lt;/div><br>
+                    &nbsp;&nbsp;&lt;/div><br>
+                    &nbsp;&lt;/div><br>
+                    <br>
+                    &nbsp;&lt;div class="accordion-card"><br>
+                    &nbsp;&nbsp;&lt;h4 class="accordion-card__title mb-0 collapsed" id="headingTwo" role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Title 2&lt;/h4><br>
+                    &nbsp;&nbsp;&lt;div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"><br>
+                    &nbsp;&nbsp;&nbsp;&lt;div class="accordion-card__body"><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;text<br>
+                    &nbsp;&nbsp;&nbsp;&lt;/div><br>
+                    &nbsp;&nbsp;&lt;/div><br>
+                    &nbsp;&lt;/div><br>
+                    <br>
+                    &lt;/div>
+                  </code>
+                  
+                </div><!-- category text widget -->
+              </div>
+            </div>
+
+          </main><!-- main area -->
+          
+          <!-- aside area -->
+          <aside class="col-lg-4 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-3">
+                <!-- service provider widget -->
+                <h4 class="mb-3">Поставщик услуги</h4>
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__tel">+380(342)50-62-01</div>
+                          <div class="provider-card__tel">+380(342)50-62-02</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                  <div class="service-provider__rating">
+                    <h4 class="service-provider__title">Рейтинг услуги</h4>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result">4.4</span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                </div><!-- service provider widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
+              </div>
+
+            </div>
+          </aside><!-- aside area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Поиск</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__search"></a>
+                <a href="#" class="form-search__cancel"></a>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>

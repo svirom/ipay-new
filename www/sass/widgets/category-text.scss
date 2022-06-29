@@ -11,4 +11,132 @@
   h2, h3, h4 {
     margin-bottom: 1rem;
   }
+
+  .list {
+    margin-left: 1.125rem;
+  }
+}
+
+.accordion-card {
+  margin-bottom: 1rem;
+
+  &__header {
+    padding: 1rem 1rem 1.125rem;
+    background-color: $light-grey;
+  }
+
+  &__title {
+    position: relative;
+    padding: 1.0625rem 3.125rem 1.0625rem 1rem;
+    background-color: $light-grey;
+    cursor: pointer;
+
+    &::before, &::after {
+      position: absolute;
+      content: '';
+      border-radius: 1px;
+      background-color: $heading-color;
+    }
+
+    &::before {
+      right: 16px;
+      top: 27px;
+      height: 2px;
+      width: 18px;
+    }
+
+    &::after {
+      right: 24px;
+      top: 19px;
+      height: 18px;
+      width: 2px;
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+
+    &[aria-expanded="true"] {
+      border-radius: 0.5rem;
+      
+      &::after {
+        opacity: 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__body {
+    padding: 1rem;
+    font-family: $text-font;
+
+    .table {
+      margin-bottom: 0;
+      font-size: 1rem;
+
+      td, th {
+        padding: 1.5rem 0.9375rem;
+        vertical-align: top;
+
+        &:first-child {
+          min-width: 10rem;
+          padding-left: 0;
+          color: $heading-color;
+        }
+      }
+
+      tr {
+        border-bottom: 1px solid #DEE7F3;
+
+        &:first-child {
+          td, th {
+            padding-top: 0.5rem;
+          }
+        }
+
+        &:last-child {
+          border-bottom: 0;
+
+          td, th {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    &__body {
+      .table {
+        td, th {
+          &:first-child {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include until($sm) {
+    &__body {
+      .table {
+        td, th {
+          &:first-child {
+            padding-top: 1rem;
+          }
+
+          &:last-child {
+            padding-bottom: 1rem;
+          }
+        }
+
+        tr {
+          td {
+            &:last-child {
+              padding-top: 0.625rem;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
