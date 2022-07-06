@@ -35,7 +35,7 @@
   .help-list {
     column-count: 2;
     column-fill: auto;
-    height: 4.5rem;
+    min-height: 4.5rem;
   }
 
   @include until($md) {
@@ -46,7 +46,7 @@
 
   @include until($sm) {
     .help-list {
-      height: 5.5rem;
+      min-height: 5.5rem;
     }
   }
 }

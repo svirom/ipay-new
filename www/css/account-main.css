@@ -230,6 +230,10 @@
   text-decoration: underline;
 }
 
+.alert.account-alert .account-alert__content p.red-color, .alert.account-alert .account-alert__content span.red-color {
+  color: #E84F35;
+}
+
 .alert.account-alert .account-alert__title {
   font-weight: 700;
 }
@@ -271,6 +275,28 @@
   color: #0C6858;
 }
 
+.alert.account-alert.alert-danger .account-alert__img {
+  background-color: rgba(232, 79, 53, 0.2);
+}
+
+.alert.account-alert.account-email {
+  padding: 0.6875rem 3.1875rem 0.6875rem 0.6875rem;
+}
+
+.alert.account-alert.account-email .account-alert__img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.alert.account-alert.account-email .account-alert__img img {
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.15));
+}
+
+.alert.account-alert.account-email .account-alert__content {
+  padding-left: 1rem;
+}
+
 @media screen and (max-width: 767px) {
   .account-alerts {
     padding-top: 0;
@@ -278,6 +304,9 @@
   }
   .alert.account-alert .account-alert__content p.account-alert__text {
     display: none;
+  }
+  .alert.account-alert.account-email {
+    padding: 0.5625rem 3.0625rem 0.5625rem 0.5625rem;
   }
 }
 /*# sourceMappingURL=account-main.css.map */

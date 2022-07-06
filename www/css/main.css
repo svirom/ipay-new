@@ -280,6 +280,10 @@ hr {
   line-height: 1.667;
 }
 
+.btn.disabled, .btn:disabled {
+  opacity: 1;
+}
+
 .btn-green {
   color: #fff;
   background-color: #09BC8A;
@@ -1715,6 +1719,110 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   </div>
 </div>
 */
+.popover.popover-main, .popover.popover-cvv {
+  font-size: 0.875rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #3B566E;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=right] > .arrow::after, .popover.popover-main.bs-popover-right > .arrow::after, .popover.popover-cvv.bs-popover-auto[x-placement^=right] > .arrow::after, .popover.popover-cvv.bs-popover-right > .arrow::after {
+  border-right-color: #3B566E;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=bottom] > .arrow::after, .popover.popover-main.bs-popover-bottom > .arrow::after, .popover.popover-cvv.bs-popover-auto[x-placement^=bottom] > .arrow::after, .popover.popover-cvv.bs-popover-bottom > .arrow::after {
+  border-bottom-color: #3B566E;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=bottom] .popover-header::before, .popover.popover-main.bs-popover-bottom .popover-header::before, .popover.popover-cvv.bs-popover-auto[x-placement^=bottom] .popover-header::before, .popover.popover-cvv.bs-popover-bottom .popover-header::before {
+  border-bottom: 0;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=left] > .arrow::after, .popover.popover-main.bs-popover-left > .arrow::after, .popover.popover-cvv.bs-popover-auto[x-placement^=left] > .arrow::after, .popover.popover-cvv.bs-popover-left > .arrow::after {
+  border-left-color: #3B566E;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=top] > .arrow::after, .popover.popover-main.bs-popover-top > .arrow::after, .popover.popover-cvv.bs-popover-auto[x-placement^=top] > .arrow::after, .popover.popover-cvv.bs-popover-top > .arrow::after {
+  border-top-color: #3B566E;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=top] .popover-header::before, .popover.popover-main.bs-popover-top .popover-header::before, .popover.popover-cvv.bs-popover-auto[x-placement^=top] .popover-header::before, .popover.popover-cvv.bs-popover-top .popover-header::before {
+  border-bottom: 0;
+}
+
+.popover.popover-main .popover-header, .popover.popover-cvv .popover-header {
+  color: #ffffff;
+  border-bottom: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background: #3B566E url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59668 1.72266L14.5967 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5967 1.72266L1.59668 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") right 0.75rem top 0.75rem no-repeat;
+}
+
+.popover.popover-main .popover-body, .popover.popover-cvv .popover-body {
+  color: #ffffff;
+}
+
+.popover.popover-main .popover-body a, .popover.popover-cvv .popover-body a {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=right], .popover.popover-main.bs-popover-right {
+  margin-left: 1rem;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=bottom], .popover.popover-main.bs-popover-bottom {
+  margin-top: 1rem;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=left], .popover.popover-main.bs-popover-left {
+  margin-right: 1rem;
+}
+
+.popover.popover-main.bs-popover-auto[x-placement^=top], .popover.popover-main.bs-popover-top {
+  margin-bottom: 1rem;
+}
+
+.popover.popover-main .popover-header {
+  padding: 1rem 2rem 0.5rem 1rem;
+}
+
+.popover.popover-main .popover-body {
+  padding: 0 1rem 1.5rem 1rem;
+}
+
+.popover.popover-cvv {
+  font-size: 0.75rem;
+}
+
+.popover.popover-cvv.bs-popover-auto[x-placement^=right], .popover.popover-cvv.bs-popover-right {
+  margin-left: 4.5rem;
+}
+
+.popover.popover-cvv.bs-popover-auto[x-placement^=bottom], .popover.popover-cvv.bs-popover-bottom {
+  margin-top: 2.5rem;
+}
+
+.popover.popover-cvv.bs-popover-auto[x-placement^=left], .popover.popover-cvv.bs-popover-left {
+  margin-right: 2.5rem;
+}
+
+.popover.popover-cvv.bs-popover-auto[x-placement^=top], .popover.popover-cvv.bs-popover-top {
+  margin-bottom: 2.5rem;
+}
+
+.popover.popover-cvv .popover-header {
+  padding: 1rem 1rem 0.5rem;
+}
+
+.popover.popover-cvv .popover-body {
+  min-height: 4.875rem;
+  padding: 0 8rem 1.5rem 1rem;
+  background: url("../img/card/cvv-img.png") right 1.5rem top no-repeat;
+}
+
 .alert {
   padding: 1.25rem;
   font-family: "Roboto", sans-serif;
@@ -2798,7 +2906,7 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   width: 16px;
   height: 16px;
   right: 1.125rem;
-  top: 50%;
+  top: 1.75rem;
   margin-top: -8px;
   padding: 0;
   border: 0;
@@ -2862,73 +2970,6 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   font-weight: bold;
   line-height: 1.667;
   color: #7C9CAC;
-}
-
-.popover.popover-cvv {
-  font-size: 0.75rem;
-  border: 0;
-  border-radius: 0.5rem;
-  background-color: #3B566E;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=right], .popover.popover-cvv.bs-popover-right {
-  margin-left: 4.5rem;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=right] > .arrow::after, .popover.popover-cvv.bs-popover-right > .arrow::after {
-  border-right-color: #3B566E;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=bottom], .popover.popover-cvv.bs-popover-bottom {
-  margin-top: 2.5rem;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=bottom] > .arrow::after, .popover.popover-cvv.bs-popover-bottom > .arrow::after {
-  border-bottom-color: #3B566E;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=bottom] .popover-header::before, .popover.popover-cvv.bs-popover-bottom .popover-header::before {
-  border-bottom: 0;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=left], .popover.popover-cvv.bs-popover-left {
-  margin-right: 2.5rem;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=left] > .arrow::after, .popover.popover-cvv.bs-popover-left > .arrow::after {
-  border-left-color: #3B566E;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=top], .popover.popover-cvv.bs-popover-top {
-  margin-bottom: 2.5rem;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=top] > .arrow::after, .popover.popover-cvv.bs-popover-top > .arrow::after {
-  border-top-color: #3B566E;
-}
-
-.popover.popover-cvv.bs-popover-auto[x-placement^=top] .popover-header::before, .popover.popover-cvv.bs-popover-top .popover-header::before {
-  border-bottom: 0;
-}
-
-.popover.popover-cvv .popover-header {
-  padding: 1rem 1rem 0.5rem;
-  color: #fff;
-  border-bottom: 0;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  background-color: #3B566E;
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59668 1.72266L14.5967 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5967 1.72266L1.59668 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem top 0.75rem;
-  background-size: 16px;
-}
-
-.popover.popover-cvv .popover-body {
-  min-height: 4.875rem;
-  padding: 0 8rem 1.5rem 1rem;
-  color: #fff;
-  background: url("../img/card/cvv-img.png") right 1.5rem top no-repeat;
 }
 
 .form-search {

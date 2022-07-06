@@ -8,23 +8,198 @@
 @import '../abstracts/mixins';
 
 .account-settings {
-  h3 {
-    color: $text-color;
+  padding-bottom: 1.5rem;
+
+  .checkbox-control {
+    padding-left: 0;
+    line-height: 1;
+
+    .checkbox-label {
+      padding-left: 1.75rem;
+
+      &::before, &::after {
+        left: 0;
+      }
+    }
+    
   }
 
-  &__edit-buttons {
-    padding-top: 1.125rem;
-    border-top: 2px solid $middle-grey;
+  .form-group {
+    margin-bottom: 0.75rem;
+
+    &.has-error {
+      margin-bottom: 0.75rem;
+
+      .help-block {
+        position: static;
+      }
+    }
   }
 
-  &__edit-pass {
-    padding-left: 1.85rem;
+  &__main {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    border: 1px solid $middle-grey;
+    border-radius: 0.5rem;
+
+    .alert {
+      &.alert-face {
+        padding: 0.75rem 0.75rem 0.75rem 4.625rem;
+
+        &::before {
+          left: 0.75rem;
+        }
+
+        &::after {
+          left: 1.1875rem;
+        }
+
+        &.alert-settings-personal {
+          &::after {
+            background: url('../img/account/icon-personal.png') center center/26px no-repeat;
+          }
+        }
+
+        &.alert-settings-address {
+          &::after {
+            background: url('../img/account/icon-address.png') center center/26px no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  &__main-submit {
+    margin-top: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid $middle-grey;
+  }
+
+  &__auth {
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .alert {
+      padding: 0.625rem;
+
+      &.alert-warning {
+        color: $text-color;
+      }
+
+      &.alert-success {
+        color: $dark-green;
+      }
+    }
+  }
+
+  &__social {
+    margin-top: 2rem;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px $card-shadow;
+
+    .connected {
+      display: none;
+    }
+
+    &.active {
+      .connected {
+        display: inline;
+      }
+
+      .account-settings__card-status {
+        color: $btn-red;
+      }
+    }
+  }
+
+  &__card-title {
+    flex: 1 1 auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 0.25rem;
+
+    p, span {
+      font-weight: 700;
+      color: $heading-color;
+    }
+
+    p {
+      margin-bottom: 0;
+      padding-left: 0.5rem;
+    }
+  }
+
+  &__card-status {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    line-height: 1.3;
     color: $heading-color;
-    background: url("data:image/svg+xml,%3Csvg width='26' height='27' viewBox='0 0 26 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M17.8737 12.6627C20.8652 12.6627 23.2904 10.2376 23.2904 7.24601C23.2904 4.25447 20.8652 1.82935 17.8737 1.82935C14.8822 1.82935 12.457 4.25447 12.457 7.24601C12.457 10.2376 14.8822 12.6627 17.8737 12.6627Z' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.91385 23.6693L3.61719 21.3727L13.5839 11.406' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.22156 21.3727L5.91406 19.0652' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='26' height='26' fill='white' transform='translate(0 0.204346)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") left center no-repeat;
-    background-size: 26px;
 
     &:hover {
       color: $heading-color;
+    }
+  }
+
+  &__email {
+    [type="submit"] {
+      padding-left: 1.375rem;
+      padding-right: 1.375rem;
+    }
+  }
+
+  &__notifications {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid $middle-grey;
+  }
+
+  &__saved {
+    font-size: 0.875rem;
+    color: $btn-green;
+  }
+
+  @include until($md) {
+    padding-bottom: 0;
+
+    &__main-submit {
+      margin-top: 0.25rem;
+    }
+
+    &__social {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  @include until($sm) {
+    &__main-submit {
+      .btn {
+        // display: block;
+        width: 100%;
+      }
+    }
+
+    &__notifications {
+      .btn[type="submit"] {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.account-main {
+  .account-settings {
+    .form-group.select-input-wrapper {
+      margin-bottom: 0.75rem;
     }
   }
 }

@@ -520,7 +520,7 @@
     width: 16px;
     height: 16px;
     right: 1.125rem;
-    top: 50%;
+    top: 1.75rem;
     margin-top: -8px;
     padding: 0;
     border: 0;
@@ -574,90 +574,6 @@
       padding-right: 0.625rem;
       @include font(1.375rem, bold, 1.667);
       color: $main-blue;
-    }
-  }
-}
-
-// popover cvv
-.popover {
-  // z-index: 999;
-  
-  &.popover-cvv {
-    font-size: 0.75rem;
-    border: 0;
-    border-radius: $border-radius;
-    background-color: $text-color;
-
-    &.bs-popover-auto[x-placement^=right], &.bs-popover-right {
-      margin-left: 4.5rem;
-
-      & > .arrow {
-        &::after {
-          border-right-color: $text-color;
-        }
-      }
-    }
-
-    &.bs-popover-auto[x-placement^=bottom], &.bs-popover-bottom {
-      margin-top: 2.5rem;
-
-      & > .arrow {
-        &::after {
-          border-bottom-color: $text-color;
-        }
-      }
-
-      .popover-header {
-        &::before {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    &.bs-popover-auto[x-placement^=left], &.bs-popover-left {
-      margin-right: 2.5rem;
-
-      & > .arrow {
-        &::after {
-          border-left-color: $text-color;
-        }
-      }
-    }
-
-    &.bs-popover-auto[x-placement^=top], &.bs-popover-top {
-      margin-bottom: 2.5rem;
-
-      & > .arrow {
-        &::after {
-          border-top-color: $text-color;
-        }
-      }
-
-      .popover-header {
-        &::before {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    .popover-header {
-      padding: 1rem 1rem 0.5rem;
-      color: #fff;
-      border-bottom: 0;
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
-      background-color: $text-color;
-      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59668 1.72266L14.5967 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5967 1.72266L1.59668 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-      background-repeat: no-repeat;
-      background-position: right 0.75rem top 0.75rem;
-      background-size: 16px;
-    }
-
-    .popover-body {
-      min-height: 4.875rem;
-      padding: 0 8rem 1.5rem 1rem;
-      color: #fff;
-      background: url('../img/card/cvv-img.png') right 1.5rem top no-repeat;
     }
   }
 }

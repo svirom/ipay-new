@@ -69,10 +69,21 @@ $(document).ready(function() {
     template: '<div class="popover popover-cvv" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
   }
 
+  // regular popover
+  popoverRegularOptions = {
+    trigger: "toggle",
+    // placement: "right",
+    html: true,
+    template:
+      '<div class="popover popover-main" role="tooltip"><div class="arrow"></div><div class="popover-body py-3"></div></div>',
+  };
+
   if (docWidth < 768) {
     popoverOptions.placement = 'bottom';
+    popoverRegularOptions.placement = "bottom";
   }
   $("#cvv-popover").popover(popoverOptions);
+  $(".question-popover").popover(popoverRegularOptions);
 
   // search input mobile
   if (docWidth < 992) {

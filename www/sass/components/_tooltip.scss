@@ -59,3 +59,133 @@
   </div>
 </div>
 */
+
+// popover
+.popover {
+  &.popover-main,
+  &.popover-cvv {
+    font-size: 0.875rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: $text-color;
+
+    &.bs-popover-auto[x-placement^=right], 
+    &.bs-popover-right {
+      & > .arrow::after {
+        border-right-color: $text-color;
+      }
+    }
+
+    &.bs-popover-auto[x-placement^=bottom], 
+    &.bs-popover-bottom {
+      & > .arrow::after {
+        border-bottom-color: $text-color;
+      }
+
+      .popover-header::before {
+        border-bottom: 0;
+      }
+    }
+
+    &.bs-popover-auto[x-placement^=left], 
+    &.bs-popover-left {
+      & > .arrow::after {
+        border-left-color: $text-color;
+      }
+    }
+
+    &.bs-popover-auto[x-placement^=top], 
+    &.bs-popover-top {
+      & > .arrow::after {
+        border-top-color: $text-color;
+      }
+
+      .popover-header::before {
+        border-bottom: 0;
+      }
+    }
+
+    .popover-header {
+      color: #ffffff;
+      border-bottom: 0;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      background: $text-color url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59668 1.72266L14.5967 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5967 1.72266L1.59668 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") right 0.75rem top 0.75rem no-repeat;
+    }
+
+    .popover-body {
+      color: #ffffff;
+
+      a {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.popover-main {    
+    &.bs-popover-auto[x-placement^=right], 
+    &.bs-popover-right {
+      margin-left: 1rem;
+    }
+
+    &.bs-popover-auto[x-placement^=bottom], 
+    &.bs-popover-bottom {
+      margin-top: 1rem;
+    }
+
+    &.bs-popover-auto[x-placement^=left], 
+    &.bs-popover-left {
+      margin-right: 1rem;
+    }
+
+    &.bs-popover-auto[x-placement^=top], 
+    &.bs-popover-top {
+      margin-bottom: 1rem;
+    }
+
+    .popover-header {
+      padding: 1rem 2rem 0.5rem 1rem;
+    }
+
+    .popover-body {
+      padding: 0 1rem 1.5rem 1rem;
+    }
+  }
+  
+  &.popover-cvv {
+    font-size: 0.75rem;
+
+    &.bs-popover-auto[x-placement^=right], 
+    &.bs-popover-right {
+      margin-left: 4.5rem;
+    }
+
+    &.bs-popover-auto[x-placement^=bottom], 
+    &.bs-popover-bottom {
+      margin-top: 2.5rem;
+    }
+
+    &.bs-popover-auto[x-placement^=left], 
+    &.bs-popover-left {
+      margin-right: 2.5rem;
+    }
+
+    &.bs-popover-auto[x-placement^=top], 
+    &.bs-popover-top {
+      margin-bottom: 2.5rem;
+    }
+
+    .popover-header {
+      padding: 1rem 1rem 0.5rem;
+    }
+
+    .popover-body {
+      min-height: 4.875rem;
+      padding: 0 8rem 1.5rem 1rem;
+      background: url('../img/card/cvv-img.png') right 1.5rem top no-repeat;
+    }
+  }
+}

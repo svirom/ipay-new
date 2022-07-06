@@ -1,20 +1,189 @@
-.account-settings h3 {
+.account-settings {
+  padding-bottom: 1.5rem;
+}
+
+.account-settings .checkbox-control {
+  padding-left: 0;
+  line-height: 1;
+}
+
+.account-settings .checkbox-control .checkbox-label {
+  padding-left: 1.75rem;
+}
+
+.account-settings .checkbox-control .checkbox-label::before, .account-settings .checkbox-control .checkbox-label::after {
+  left: 0;
+}
+
+.account-settings .form-group {
+  margin-bottom: 0.75rem;
+}
+
+.account-settings .form-group.has-error {
+  margin-bottom: 0.75rem;
+}
+
+.account-settings .form-group.has-error .help-block {
+  position: static;
+}
+
+.account-settings__main {
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+  border: 1px solid #DEE7F3;
+  border-radius: 0.5rem;
+}
+
+.account-settings__main .alert.alert-face {
+  padding: 0.75rem 0.75rem 0.75rem 4.625rem;
+}
+
+.account-settings__main .alert.alert-face::before {
+  left: 0.75rem;
+}
+
+.account-settings__main .alert.alert-face::after {
+  left: 1.1875rem;
+}
+
+.account-settings__main .alert.alert-face.alert-settings-personal::after {
+  background: url("../img/account/icon-personal.png") center center/26px no-repeat;
+}
+
+.account-settings__main .alert.alert-face.alert-settings-address::after {
+  background: url("../img/account/icon-address.png") center center/26px no-repeat;
+}
+
+.account-settings__main-submit {
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #DEE7F3;
+}
+
+.account-settings__auth .form-group {
+  margin-bottom: 1rem;
+}
+
+.account-settings__auth .alert {
+  padding: 0.625rem;
+}
+
+.account-settings__auth .alert.alert-warning {
   color: #3B566E;
 }
 
-.account-settings__edit-buttons {
-  padding-top: 1.125rem;
-  border-top: 2px solid #DEE7F3;
+.account-settings__auth .alert.alert-success {
+  color: #0C6858;
 }
 
-.account-settings__edit-pass {
-  padding-left: 1.85rem;
-  color: #172A3A;
-  background: url("data:image/svg+xml,%3Csvg width='26' height='27' viewBox='0 0 26 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M17.8737 12.6627C20.8652 12.6627 23.2904 10.2376 23.2904 7.24601C23.2904 4.25447 20.8652 1.82935 17.8737 1.82935C14.8822 1.82935 12.457 4.25447 12.457 7.24601C12.457 10.2376 14.8822 12.6627 17.8737 12.6627Z' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.91385 23.6693L3.61719 21.3727L13.5839 11.406' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.22156 21.3727L5.91406 19.0652' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='26' height='26' fill='white' transform='translate(0 0.204346)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") left center no-repeat;
-  background-size: 26px;
+.account-settings__social {
+  margin-top: 2rem;
 }
 
-.account-settings__edit-pass:hover {
+.account-settings__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+}
+
+.account-settings__card .connected {
+  display: none;
+}
+
+.account-settings__card.active .connected {
+  display: inline;
+}
+
+.account-settings__card.active .account-settings__card-status {
+  color: #E84F35;
+}
+
+.account-settings__card-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 0.25rem;
+}
+
+.account-settings__card-title p, .account-settings__card-title span {
+  font-weight: 700;
   color: #172A3A;
+}
+
+.account-settings__card-title p {
+  margin-bottom: 0;
+  padding-left: 0.5rem;
+}
+
+.account-settings__card-status {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  line-height: 1.3;
+  color: #172A3A;
+}
+
+.account-settings__card-status:hover {
+  color: #172A3A;
+}
+
+.account-settings__email [type="submit"] {
+  padding-left: 1.375rem;
+  padding-right: 1.375rem;
+}
+
+.account-settings__notifications {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #DEE7F3;
+}
+
+.account-settings__saved {
+  font-size: 0.875rem;
+  color: #09BC8A;
+}
+
+@media screen and (max-width: 767px) {
+  .account-settings {
+    padding-bottom: 0;
+  }
+  .account-settings__main-submit {
+    margin-top: 0.25rem;
+  }
+  .account-settings__social {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .account-settings__main-submit .btn {
+    width: 100%;
+  }
+  .account-settings__notifications .btn[type="submit"] {
+    width: 100%;
+  }
+}
+
+.account-main .account-settings .form-group.select-input-wrapper {
+  margin-bottom: 0.75rem;
 }
 /*# sourceMappingURL=account-settings.css.map */

@@ -223,6 +223,12 @@
         color: $heading-color;
         text-decoration: underline;
       }
+
+      p, span {
+        &.red-color {
+          color: $btn-red;
+        }
+      }
     }
 
     .account-alert__title {
@@ -269,6 +275,29 @@
         color: $dark-green;
       }
     }
+
+    &.alert-danger {
+      .account-alert__img {
+        background-color: rgba($btn-red, 0.2);
+      }
+    }
+
+    &.account-email {
+      padding: 0.6875rem 3.1875rem 0.6875rem 0.6875rem;
+
+      .account-alert__img {
+        width: 3rem;
+        height: 3rem;
+
+        img {
+          filter: drop-shadow(1px 1px 4px rgba(#000000, 0.15));
+        }
+      }
+
+      .account-alert__content {
+        padding-left: 1rem;
+      }
+    }
   }
 }
 
@@ -286,6 +315,10 @@
             display: none;
           }
         }
+      }
+
+      &.account-email {
+        padding: 0.5625rem 3.0625rem 0.5625rem 0.5625rem;
       }
     }
   }
