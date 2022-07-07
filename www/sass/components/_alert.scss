@@ -8,6 +8,10 @@
   line-height: 1.1875;
   border-radius: $border-radius;
 
+  &--small {
+    padding: 0.625rem;
+  }
+
   a {
     text-decoration: underline;
   }
@@ -103,6 +107,14 @@
         span {
           background-color: $pink;
         }
+      }
+    }
+
+    &--red {
+      color: $btn-red;
+
+      a, p, li {
+        color: $btn-red;
       }
     }
   }

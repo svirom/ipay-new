@@ -1830,6 +1830,10 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   border-radius: 0.5rem;
 }
 
+.alert--small {
+  padding: 0.625rem;
+}
+
 .alert a {
   text-decoration: underline;
 }
@@ -1915,6 +1919,14 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 
 .alert.alert-danger .close:hover span {
   background-color: #FFD0CE;
+}
+
+.alert.alert-danger--red {
+  color: #E84F35;
+}
+
+.alert.alert-danger--red a, .alert.alert-danger--red p, .alert.alert-danger--red li {
+  color: #E84F35;
 }
 
 .alert.alert-secondary {
@@ -2923,6 +2935,22 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 
 .bank-card__cvv-button:focus {
   outline: none;
+}
+
+.bank-card__cvv-button.question-popover {
+  width: 24px;
+  right: 0.875rem;
+  z-index: 1;
+}
+
+.has-success .question-popover,
+.has-error .question-popover {
+  right: 2.75rem;
+}
+
+.has-success .question-popover ~ .form-input,
+.has-error .question-popover ~ .form-input {
+  padding-right: 4rem;
 }
 
 .new-card__add {

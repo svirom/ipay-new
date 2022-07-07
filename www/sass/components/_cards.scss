@@ -537,6 +537,21 @@
     &:focus {
       outline: none;
     }
+
+    &.question-popover {
+      width: 24px;
+      right: 0.875rem;
+      z-index: 1;
+    }
+  }
+}
+
+.has-success .question-popover,
+.has-error .question-popover {
+  right: 2.75rem;
+
+  & ~ .form-input {
+    padding-right: 4rem;
   }
 }
 
