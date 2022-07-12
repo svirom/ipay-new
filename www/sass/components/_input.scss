@@ -10,7 +10,7 @@
   position: relative;
 
   &.has-success {
-    .form-input:not([type='password']):not(.input-icon-right) {
+    .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv) {
       border-color: $middle-grey;
       background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09277 6.35742L4.91777 10.1824C5.49527 10.7599 6.44027 10.7599 7.01777 10.1824L15.3428 1.85742' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-size: 18px;
@@ -44,7 +44,7 @@
         }
       }
 
-      &:not([type='password']):not(.input-icon-right) {
+      &:not([type='password']):not(.input-icon-right):not(.input-cvv) {
         background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.07227 1.09082L11.3639 11.3825' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.3639 1.09082L1.07227 11.3825' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-size: 14px;
         
@@ -193,6 +193,11 @@
       }
     }
   }
+}
+
+.input-cvv {
+  font-family: 'text-security-disc';
+  -webkit-text-security: disc;
 }
 
 /* ie11 fix - displaying typed text */
