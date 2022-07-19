@@ -916,6 +916,16 @@ hr {
   -webkit-text-security: disc;
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .input-cvv {
+      /* safari 11+ fix security text */
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+  }
+}
+
 /* ie11 fix - displaying typed text */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .form-input {

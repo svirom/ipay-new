@@ -198,6 +198,14 @@
 .input-cvv {
   font-family: 'text-security-disc';
   -webkit-text-security: disc;
+
+  @media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+      /* safari 11+ fix security text */
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+  }
 }
 
 /* ie11 fix - displaying typed text */
