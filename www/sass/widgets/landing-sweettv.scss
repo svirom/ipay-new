@@ -599,7 +599,7 @@
   top: 0px;
   left: -22px;
   width: 74px;
-  transform: rotate(280deg);
+  transform: rotate(-280deg);
 }
 
 .parallax-4 {
@@ -613,14 +613,18 @@
   top: -54px;
   left: calc(50% + 100px);
   width: 104px;
-  transform: rotate(320deg);
+  transform: rotate(-320deg);
+
+  &.parallax-5-hero {
+    top: 26px;
+  }
 }
 
 .parallax-6 {
   top: 70px;
   right: 18px;
   width: 164px;
-  transform: rotate(10deg);
+  transform: rotate(-10deg);
 }
 
 .non-parallax-1 {
