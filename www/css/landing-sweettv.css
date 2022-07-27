@@ -7,6 +7,10 @@
   color: #ffffff;
 }
 
+.landing-wrapper .footer-lang__item--current a {
+  color: #E84F35;
+}
+
 .landing-wrapper h1 {
   margin-bottom: 1.25rem;
   font-size: 3.75rem;
@@ -164,6 +168,10 @@
   border-color: #FF6A51;
 }
 
+.landing-hero__form .form-group.has-error .help-block {
+  padding-top: 3px;
+}
+
 .landing-hero__form .form-input {
   height: 72px;
   padding: 2.026rem 2.5rem 1.1rem 1.0775rem;
@@ -191,13 +199,22 @@
   width: 330px;
   padding: 0.8125rem 1.125rem;
   font-size: 1.5rem;
+}
+
+.landing-hero__form .btn:not(:disabled) {
   border-color: #BF432D;
   background-color: #BF432D;
 }
 
-.landing-hero__form .btn:hover:not(.disabled), .landing-hero__form .btn:hover:not(:disabled), .landing-hero__form .btn:active:not(.disabled), .landing-hero__form .btn:active:not(:disabled) {
+.landing-hero__form .btn:hover:not(:disabled), .landing-hero__form .btn:active:not(:disabled) {
   border-color: #E84F35;
   background-color: #E84F35;
+}
+
+.landing-hero__form .btn:active:disabled {
+  color: #7C9CAC;
+  border-color: #DEE7F3;
+  background-color: #DEE7F3;
 }
 
 .landing-hero__form-sent {

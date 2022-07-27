@@ -15,6 +15,10 @@
     color: #ffffff;
   }
 
+  .footer-lang__item--current a {
+    color: $btn-red;
+  }
+
   h1 {
     margin-bottom: 1.25rem;
     font-size: 3.75rem;
@@ -171,6 +175,10 @@
       &.has-error .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv).form-control:focus {
         border-color: $btn-red-hover;
       }
+
+      &.has-error .help-block {
+        padding-top: 3px;
+      }
     }
 
     .form-input {
@@ -199,15 +207,22 @@
       width: 330px;
       padding: 0.8125rem 1.125rem;
       font-size: 1.5rem;
-      border-color: #BF432D;
-      background-color: #BF432D;
 
-      &:hover:not(.disabled),
+      &:not(:disabled) {
+        border-color: #BF432D;
+        background-color: #BF432D;
+      }
+
       &:hover:not(:disabled),
-      &:active:not(.disabled),
       &:active:not(:disabled) {
         border-color: $btn-red;
         background-color: $btn-red;
+      }
+
+      &:active:disabled {
+        color: $main-blue;
+        border-color: $middle-grey;
+        background-color: $middle-grey;
       }
     }
   }
