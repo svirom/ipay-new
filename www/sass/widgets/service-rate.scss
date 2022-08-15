@@ -8,37 +8,74 @@
 @import '../abstracts/mixins';
 
 .service-rate {
+  &__form {
+    padding: 1.5rem;
+    border: 1px solid $middle-grey;
+    border-radius: 0.5rem;
+
+    &--success {
+      border-color: $yellow;
+    }
+  }
+
   &__rating {
-    overflow: auto;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
 
     .rating-input {
+      margin-right: 1rem;
+      overflow: unset;
+
       input {
-        width: 2.625rem;
-        height: 2.625rem;
+        width: 1px;
+        height: 1px;
       }
 
       label {
-        width: 2.625rem;
-        height: 2.625rem;
-        background-size: 2.625rem;
+        width: 2.125rem;
+        height: 2.125rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-size: 2.125rem;
 
         &:first-of-type {
-          margin-right: 0.5rem;
+          margin-right: 0;
         }
 
         &:last-of-type {
-          margin-left: 0.5rem;
+          margin-left: 0;
         }
+      }
+    }
+
+    .rating-result {
+      font-size: 0.875rem;
+
+      &.no-rating {
+        color: $main-blue;
+      }
+
+      &.rating-positive {
+        color: $dark-orange;
       }
     }
   }
 
   &__submit {
-    text-align: right;
+    .btn {
+      max-width: 255px;
+    }
   }
 
   .form-textarea {
     border-width: 3px;
+    resize: none;
 
     & ~ .form-label {
       top: 3px;
@@ -49,9 +86,107 @@
   .form-group {
     &.has-success {
       .form-textarea {
-        &~ .form-label {
+        & ~ .form-label {
           top: 3px;
           left: 3px;
+        }
+      }
+    }
+  }
+
+  &__rated {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: $light-grey;
+
+    .service-rate__rating {
+      justify-content: center;
+
+      .rating-input__star {
+        width: 2.125rem;
+        height: 2.125rem;
+        margin-top: 0.125rem;
+        margin-bottom: 0;
+        background-size: 2.125rem;
+  
+        &:first-of-type {
+          margin-left: 0;
+        }
+  
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+  
+      .rating-result {
+        font-size: 1rem;
+        color: $heading-color;
+      }
+    }
+
+    &--success {
+      background-color: $light-yellow;
+
+      .service-rate__rated-text,
+      .service-rate__rated-text p {
+        color: $dark-orange;
+      }
+    }
+  }
+
+  @include until($sm) {
+    h3 {
+      font-size: 1.125rem;
+    }
+
+    &__form {
+      padding: 1rem;
+    }
+
+    &__rating {
+      flex-direction: column;
+
+      .rating-input {
+        margin-right: 0;
+      }
+
+      .rating-result {
+        padding-top: 1rem;
+      }
+    }
+
+    &__submit {
+      .btn {
+        max-width: none;
+      }
+    }
+
+    .form-input {
+      & ~ .form-label {
+        top: 1rem;
+        font-size: 1rem;
+      }
+
+      &:focus ~ .form-label, &.filled ~ .form-label {
+        top: 0.45rem;
+        font-size: 0.77777rem;
+      }
+    }
+
+    .form-textarea {
+      min-height: 144px;
+    }
+
+    &__rated {  
+      .service-rate__rating {
+        flex-direction: row;
+
+        .rating-input {
+          margin-right: 0.875rem;
+        }
+
+        .rating-result {
+          padding-top: 0;
         }
       }
     }

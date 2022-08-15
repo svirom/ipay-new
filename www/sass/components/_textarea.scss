@@ -36,14 +36,14 @@
     }
   }
 
-  &~ .form-label {
+  & ~ .form-label {
     top: 2px;
     left: 2px;
     width: calc(100% - 22px);
     padding-top: 0.5rem;
     padding-left: 1.1rem;
     border-radius: $border-radius;
-    color: $main-blue;
+    color: $text-color;
     font-size: 0.875rem;
     background: #fff;
   }
@@ -54,7 +54,7 @@
     .form-textarea {
       &~ .form-label {
         top: 2px;
-        color: $main-blue;
+        color: $text-color;
         font-size: 0.875rem;
       }
     }
