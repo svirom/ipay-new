@@ -1,7 +1,5 @@
 .form-search {
   position: relative;
-  /*&__search, */
-  /* search result list */
 }
 
 .form-search .form-group {
@@ -452,23 +450,13 @@
   }
 }
 
-#searchModal .modal-content,
-#searchModal-2 .modal-content,
-#searchModal-3 .modal-content,
-#searchModal-4 .modal-content,
-#searchModal-5 .modal-content,
-#searchModal-6 .modal-content {
+#searchModal .modal-content {
   padding: 1rem;
   border-color: transparent;
   border-radius: 0.5rem;
 }
 
-#searchModal .modal-header,
-#searchModal-2 .modal-header,
-#searchModal-3 .modal-header,
-#searchModal-4 .modal-header,
-#searchModal-5 .modal-header,
-#searchModal-6 .modal-header {
+#searchModal .modal-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -477,12 +465,7 @@
   border-bottom: 0;
 }
 
-#searchModal .modal-header .close,
-#searchModal-2 .modal-header .close,
-#searchModal-3 .modal-header .close,
-#searchModal-4 .modal-header .close,
-#searchModal-5 .modal-header .close,
-#searchModal-6 .modal-header .close {
+#searchModal .modal-header .close {
   width: 1.875rem;
   height: 1.875rem;
   margin: 0;
@@ -492,135 +475,65 @@
   background: url("data:image/svg+xml,%3Csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.896 1.125L16.1043 14.875' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.1043 1.125L1.896 14.875' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center no-repeat;
 }
 
-#searchModal .form-search__list,
-#searchModal-2 .form-search__list,
-#searchModal-3 .form-search__list,
-#searchModal-4 .form-search__list,
-#searchModal-5 .form-search__list,
-#searchModal-6 .form-search__list {
+#searchModal .form-search__list {
   position: relative;
   margin-top: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#searchModal .form-search__tip,
-#searchModal-2 .form-search__tip,
-#searchModal-3 .form-search__tip,
-#searchModal-4 .form-search__tip,
-#searchModal-5 .form-search__tip,
-#searchModal-6 .form-search__tip {
+#searchModal .form-search__tip {
   padding: 1rem 0 0;
 }
 
-#searchModal .form-search__recent,
-#searchModal-2 .form-search__recent,
-#searchModal-3 .form-search__recent,
-#searchModal-4 .form-search__recent,
-#searchModal-5 .form-search__recent,
-#searchModal-6 .form-search__recent {
+#searchModal .form-search__recent {
   padding: 1.25rem 0 0.5rem;
 }
 
-#searchModal .form-search__ul,
-#searchModal-2 .form-search__ul,
-#searchModal-3 .form-search__ul,
-#searchModal-4 .form-search__ul,
-#searchModal-5 .form-search__ul,
-#searchModal-6 .form-search__ul {
+#searchModal .form-search__ul {
   margin-left: -1rem;
   margin-right: -1rem;
   max-height: 70vh;
 }
 
-#searchModal .form-search__loading,
-#searchModal-2 .form-search__loading,
-#searchModal-3 .form-search__loading,
-#searchModal-4 .form-search__loading,
-#searchModal-5 .form-search__loading,
-#searchModal-6 .form-search__loading {
+#searchModal .form-search__loading {
   padding-bottom: 0;
 }
 
-#searchModal .form-search__p2r, #searchModal .form-search__nothing,
-#searchModal-2 .form-search__p2r,
-#searchModal-2 .form-search__nothing,
-#searchModal-3 .form-search__p2r,
-#searchModal-3 .form-search__nothing,
-#searchModal-4 .form-search__p2r,
-#searchModal-4 .form-search__nothing,
-#searchModal-5 .form-search__p2r,
-#searchModal-5 .form-search__nothing,
-#searchModal-6 .form-search__p2r,
-#searchModal-6 .form-search__nothing {
+#searchModal .form-search__p2r, #searchModal .form-search__nothing {
   padding: 1rem 0 0;
 }
 
 @media screen and (min-width: 576px) {
-  #searchModal .modal-dialog,
-  #searchModal-2 .modal-dialog,
-  #searchModal-3 .modal-dialog,
-  #searchModal-4 .modal-dialog,
-  #searchModal-5 .modal-dialog,
-  #searchModal-6 .modal-dialog {
+  #searchModal .modal-dialog {
     max-width: 550px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  #searchModal .modal-dialog,
-  #searchModal-2 .modal-dialog,
-  #searchModal-3 .modal-dialog,
-  #searchModal-4 .modal-dialog,
-  #searchModal-5 .modal-dialog,
-  #searchModal-6 .modal-dialog {
+  #searchModal .modal-dialog {
     max-width: 750px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  #searchModal .modal-dialog,
-  #searchModal-2 .modal-dialog,
-  #searchModal-3 .modal-dialog,
-  #searchModal-4 .modal-dialog,
-  #searchModal-5 .modal-dialog,
-  #searchModal-6 .modal-dialog {
+  #searchModal .modal-dialog {
     max-width: 800px;
   }
 }
 
 @media screen and (max-width: 575px) {
-  #searchModal,
-  #searchModal-2,
-  #searchModal-3,
-  #searchModal-4,
-  #searchModal-5,
-  #searchModal-6 {
+  #searchModal {
     height: 100%;
     background-color: #ffffff;
   }
-  #searchModal .modal-dialog,
-  #searchModal-2 .modal-dialog,
-  #searchModal-3 .modal-dialog,
-  #searchModal-4 .modal-dialog,
-  #searchModal-5 .modal-dialog,
-  #searchModal-6 .modal-dialog {
+  #searchModal .modal-dialog {
     margin: 0 auto;
   }
-  #searchModal .modal-header,
-  #searchModal-2 .modal-header,
-  #searchModal-3 .modal-header,
-  #searchModal-4 .modal-header,
-  #searchModal-5 .modal-header,
-  #searchModal-6 .modal-header {
+  #searchModal .modal-header {
     padding: 0.125rem 0 0.75rem;
   }
-  #searchModal .modal-header .close,
-  #searchModal-2 .modal-header .close,
-  #searchModal-3 .modal-header .close,
-  #searchModal-4 .modal-header .close,
-  #searchModal-5 .modal-header .close,
-  #searchModal-6 .modal-header .close {
+  #searchModal .modal-header .close {
     position: absolute;
     top: -0.5rem;
     right: -0.5rem;
