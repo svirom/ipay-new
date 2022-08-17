@@ -8,32 +8,32 @@
 @import '../abstracts/mixins';
 
 .catalog-page-search {
-  .form-search__search {
-    position: relative;
-    display: block;
-    width: 100%;
-    left: auto;
-    padding: 1.563rem 3.75rem;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    color: #4F6E7A;
-    border-radius: 0.5rem;
-    box-shadow: 0 5px 20px rgba(75, 103, 126, 0.2);
-    background-color: #ffffff;
-    background-position: left 1rem center;
+  // .form-search__search {
+  //   position: relative;
+  //   display: block;
+  //   width: 100%;
+  //   left: auto;
+  //   padding: 1.563rem 3.75rem;
+  //   font-size: 1.125rem;
+  //   line-height: 1.25;
+  //   color: #4F6E7A;
+  //   border-radius: 0.5rem;
+  //   box-shadow: 0 5px 20px rgba(75, 103, 126, 0.2);
+  //   background-color: #ffffff;
+  //   background-position: left 1rem center;
 
-    &:hover {
-      text-decoration: none;
-    }
-  }
+  //   &:hover {
+  //     text-decoration: none;
+  //   }
+  // }
 
-  @include until($lg) {
-    .form-search__search {
-      padding: 1.063rem 1rem 1.063rem 2.75rem;
-      font-size: 1rem;
-      background-position: left 0.75rem center;
-    }
-  }
+  // @include until($lg) {
+  //   .form-search__search {
+  //     padding: 1.063rem 1rem 1.063rem 2.75rem;
+  //     font-size: 1rem;
+  //     background-position: left 0.75rem center;
+  //   }
+  // }
 }
 
 .catalog-page-alert {

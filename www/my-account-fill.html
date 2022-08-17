@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/catalogue-account.css">
+    <link rel="stylesheet" href="/css/form-search.css">
     <link rel="stylesheet" href="/css/account-main.css">
     <link rel="stylesheet" href="/css/account-templates.css">
     <link rel="stylesheet" href="/css/account-payments.css">
@@ -314,16 +315,30 @@
                     </div>
 
                     <div class="col-12">
-                      <div class="form-search">
-                        <h3 class="form-search__title">Поиск</h3>
-                        <form action="">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-input input-search" id="search-icon" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
-                            <label class="control-label form-label" for="search-icon">Найдите сервис по названию</label>
-                            <a href="#" class="form-search__search"></a>
-                            <a href="#" class="form-search__cancel"></a>
-                           </div>
-                        </form>
+                      <div class="form-search-catalog">
+                        <div class="row">
+
+                          <div class="col">
+                            <div class="form-search">
+                              <div class="d-none d-lg-block">
+                                <form action="">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control form-input input-search" id="searchbillform-search_tag" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                                    <label class="control-label form-label" for="searchbillform-search_tag">Найдите сервис по названию</label>
+                                    <a href="#" class="form-search__cancel"></a>
+                                  </div>
+                                  <div class="form-search__list"></div>
+                                </form>
+                              </div>
+                              <a href="#" class="form-search__btn d-lg-none" data-toggle="modal" data-target="#searchModal">Найдите сервис по названию</a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-auto mt-3 mt-md-0">
+                            <a href="#" class="btn btn-outline btn-prev btn-block">Каталог услуг</a>
+                          </div>
+
+                        </div>
                       </div>
                     </div>
 
@@ -480,6 +495,28 @@
         </div>
       </div>
     </div><!-- footer -->
+
+    <!-- modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__cancel"></a>
+              </div>
+              <div class="form-search__list"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- Optional JavaScript -->

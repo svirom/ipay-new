@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/catalogue-account.css">
+    <link rel="stylesheet" href="/css/form-search.css">
     <link rel="stylesheet" href="/css/utility-main.css">
     <link rel="stylesheet" href="/css/bill-message.css">
     <link rel="stylesheet" href="/css/progressbar.css">
@@ -24,6 +25,7 @@
     <link rel="stylesheet" href="/css/archive-table.css">
     <link rel="stylesheet" href="/css/account-cards.css">
     <link rel="stylesheet" href="/css/datepicker-style.css">
+    <link rel="stylesheet" href="/css/form-search.css">
 
     <style>
       .catalogue-mobile__backR {
@@ -2707,7 +2709,7 @@
           <h2 class="mt-5"><u>Search</u></h2>
         </div>
       </div>
-      <div class="row mt-3">
+      <!-- <div class="row mt-3">
         <div class="col-12 mt-4 mb-3">
           <h3>Search default</h3>
         </div>
@@ -2729,7 +2731,7 @@
         <div class="col-12 mt-4 mb-3">
           <h3>Search focused</h3>
         </div>
-        <div class="col-12 col-md-9 col-xl-6" style="height: 18rem">
+        <div class="col-12 col-md-9 col-xl-7" style="height: 18rem">
           <div class="form-search">
             <form action="">
               <div class="form-group">
@@ -2787,8 +2789,8 @@
             <h3 class="form-search__title">Поиск</h3>
             <form action="">
               <div class="form-group">
-                <input type="text" class="form-control form-input input-search filled" id="search-icon3" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true" value="Гоща">
-                <label class="control-label form-label" for="search-icon3">Найдите сервис по названию</label>
+                <input type="text" class="form-control form-input input-search filled" id="search-icon4" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true" value="Гоща">
+                <label class="control-label form-label" for="search-icon4">Найдите сервис по названию</label>
                 <a href="#" class="form-search__search"></a>
                 <a href="#" class="form-search__cancel"></a>
                </div>
@@ -2811,7 +2813,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row mt-3">
         <div class="col-12 mt-4 mb-3">
           <h3>Input search</h3>
@@ -3884,16 +3886,20 @@
 
     <!-- Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
           <div class="form-search">
             <form action="">
               <div class="form-group">
-                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
                 <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
-                <a href="#" class="form-search__search"></a>
                 <a href="#" class="form-search__cancel"></a>
-                </div>
+              </div>
+              <div class="form-search__list"></div>
             </form>
           </div>
         </div>

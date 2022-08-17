@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/form-search.css">
     <link rel="stylesheet" href="/css/catalog-page.css">
     <link rel="stylesheet" href="/css/catalog-templates.css">
 
@@ -271,7 +272,23 @@
 
           <div class="col-12 my-3 d-none d-lg-block">
             <div class="catalog-page-search">
-              <a href="#" class="form-search__search" data-toggle="modal" data-target="#searchModal">Найдите сервис по названию</a>
+              <div class="form-search bill-search-widget">
+                <div class="d-none d-lg-block">
+                  <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-input input-search filled" id="searchbillform-search_tag3" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true" value="Киї">
+                        <label class="control-label form-label" for="searchbillform-search_tag3">Найдите сервис по названию</label>
+                        <a href="#" class="form-search__cancel"></a>
+                      </div>
+                      <div class="form-search__list">
+                        <div class="form-search__loading">
+                          <img src="img/form-search/form-search-loader.gif" alt="Loader">
+                        </div>
+                      </div>
+                  </form>
+                </div>
+                <a href="#" class="form-search__btn d-lg-none" data-toggle="modal" data-target="#searchModal">Найдите сервис по названию</a>
+              </div>
             </div>
           </div>
 
@@ -636,20 +653,20 @@
 
     <!-- Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Поиск</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="form-search">
             <form action="">
               <div class="form-group">
-                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
                 <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
-                <a href="#" class="form-search__search"></a>
                 <a href="#" class="form-search__cancel"></a>
-                </div>
+              </div>
+              <div class="form-search__list"></div>
             </form>
           </div>
         </div>

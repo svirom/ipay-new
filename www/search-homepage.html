@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/form-search.css">
+    <link rel="stylesheet" href="/css/homepage-header.css">
+    <link rel="stylesheet" href="/css/homepage-awards.css">
+    <link rel="stylesheet" href="/css/last-payments.css">
+    <link rel="stylesheet" href="/css/homepage-blog.css">
+    <link rel="stylesheet" href="/css/category-text.css">
+
+    <title>Homepage</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__army">
+                              <span>Поддержи армию</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- homepage wrapper -->
+    <div class="homepage-wrapper">
+
+      <!-- homepage header -->
+      <div class="homepage-header" id="homepage-header-widget">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 px-4 text-center">
+              <h1>Онлайн переводы и платежи за 1 минуту</h1>
+            </div>
+          </div>
+          <div class="row justify-content-center my-2 my-sm-5">
+            <div class="col-lg-8">
+              <div class="homepage-form-search">
+                <div class="form-search bill-search-widget">
+                  <div class="d-none d-lg-block">
+                    <form action="">
+                      <div class="form-group">
+                        <input type="text" class="form-control form-input input-search filled" id="searchbillform-search_tag2" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true" value=" ">
+                        <label class="control-label form-label" for="searchbillform-search_tag2">Найдите сервис по названию</label>
+                        <a href="#" class="form-search__cancel"></a>
+                      </div>
+                      <div class="form-search__list">
+                        <div class="form-search__tip">
+                          <div class="form-search__tip-inner">
+                            <p class="mb-0 text-md-center">Почніть вводить назву у пошук, наприклад: Київстар, Київводоканал, Ясно</p>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <a href="#" class="form-search__btn d-lg-none" data-toggle="modal" data-target="#searchModal">Найдите сервис по названию</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="homepage-services" id="homepage-services-widget">
+
+            <div class="row pt-3">
+              
+              <div class="col-lg-6">
+                <div class="homepage-services-form">
+                  <span class="homepage-services-form__content">
+                    <a href="#">Быстрое пополнение мобильного</a>
+                    <span class="homepage-services-form__links">
+                      <a href="#">
+                        <img src="img/homepage/icon-kyivstar.png" srcset="img/homepage/icon-kyivstar.png 1x, img/homepage/icon-kyivstar@2x.png 2x" alt="Icon">
+                      </a>
+                      <a href="#">
+                        <img src="img/homepage/icon-vodafone.png" srcset="img/homepage/icon-vodafone.png 1x, img/homepage/icon-vodafone@2x.png 2x" alt="Icon">
+                      </a>
+                      <a href="#">
+                        <img src="img/homepage/icon-lifecell.png" srcset="img/homepage/icon-lifecell.png 1x, img/homepage/icon-lifecell@2x.png 2x" alt="Icon">
+                      </a>
+                    </span>
+                  </span>
+                  <form>
+                    <div class="form-group homepage-services-form__tel has-success">
+                      <input type="tel" class="form-control form-input filled" id="bill-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380(67)759-32-08">
+                      <label class="control-label form-label" for="bill-phone">Номер телефона</label>
+                    </div>
+                    <div class="form-group homepage-services-form__amount ml-0 ml-sm-3 mr-3 mt-3 mt-sm-0 has-success">
+                      <input type="tel" class="form-control form-input filled" id="bill-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="9999">
+                      <label class="control-label form-label" for="bill-amount">Сумма</label>
+                    </div>
+                    <button type="submit" class="btn btn-red btn-pay btn-empty mt-3 mt-sm-0"></button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-6">
+
+                <div class="row main-card-p">
+                  <div class="col-6">
+                    <a href="#" class="main-card">
+                      <span class="main-card__img main-card__img--p2p"></span>
+                      <span class="main-card__content">Перевод с карты на карту</span>
+                    </a>
+                  </div>
+                  <div class="col-6">
+                    <a href="#" class="main-card main-card-account">
+                      <span class="main-card__img main-card__img--account"></span>
+                      <span class="main-card__content">
+                        <span>Мой кабинет</span>
+                        <span>Войти</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row main-card-p">
+              <div class="col-6 col-lg-3">
+                <a href="#" class="main-card">
+                  <span class="main-card__img main-card__img--p2r"></span>
+                  <span class="main-card__content">Перевод по реквизитам</span>
+                </a>
+              </div>
+              <div class="col-6 col-lg-3">
+                <a href="#" class="main-card">
+                  <span class="main-card__img main-card__img--utility"></span>
+                  <span class="main-card__content">Коммунальные услуги</span>
+                </a>
+              </div>
+              <div class="col-6 col-lg-3">
+                <a href="#" class="main-card">
+                  <span class="main-card__img main-card__img--internet"></span>
+                  <span class="main-card__content">Интернет</span>
+                </a>
+              </div>
+              <div class="col-6 col-lg-3">
+                <a href="#" class="main-card">
+                  <span class="main-card__img main-card__img--all"></span>
+                  <span class="main-card__content">Все услуги</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="row homepage-services__row">
+              <div class="col-md-6">
+                <a href="#" class="business-card business-card--business">
+                  <h3 class="business-card__title">Решения для бизнеса</h3>
+                  <img src="/img/homepage/business-card-business.svg" class="business-card__img" alt="Icon">
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="business-card business-card--monego">
+                  <h3 class="business-card__title">Перевод наличных на карту</h3>
+                  <img src="/img/homepage/business-card-monego.svg" class="business-card__img" alt="Icon">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- homepage header -->
+
+      <!-- homepage main -->
+      <div class="container homepage-main">
+
+        <div class="row">
+          <div class="col-12 mt-2 mt-md-5 pb-0 pb-lg-4">
+
+            <!-- homepage awards widget -->
+            <div class="homepage-awards" id="homepage-awards-widget">
+              <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                  <a href="#" class="awards-article">
+                    <div class="awards-article__img">
+                      <img src="img/homepage/Mastercard-award-2019-logo-1.png" alt="Image">
+                    </div>
+                    <div class="awards-article__content">
+                      <h3>iPay.ua — лучший партнер Mastercard 2019</h3>
+                      <p>Сервис онлайн-платежей iPay.ua признан лучшим партнером международной платежной системы Mastercard среди провайдеров платежных услуг в Украине в 2019 году.</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 mb-0">
+                  <a href="#" class="awards-article">
+                    <div class="awards-article__img">
+                      <img src="img/homepage/top-1x1.png" alt="Image">
+                    </div>
+                    <div class="awards-article__content">
+                      <h3>iPay.ua – лучший сервис онлайн платежей по мнению читателей издания PaySpace Magazine и экспертов рынка!</h3>
+                      <p>По результатам ежегодного конкурса среди игроков сферы электронной коммерции и FinTech Украины PaySpace Magazine Awards компания iPay.ua стала серебряным призёром в номинации «Лучший сервис онлайн платежей» в 2018 году.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div><!-- homepage awards widget -->
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mt-5">
+
+            <!-- last payments widget -->
+            <div class="last-payments" id="last-payments-widget">
+              <div class="row">
+                <div class="col-12 mb-4 d-none d-lg-block">
+                  <h2>Последние платежи</h2>
+                </div>
+              </div>
+              <div class="row no-gutters last-payments-wrapper">
+                <div class="col-12 col-lg-auto">
+                  <div class="find-payment">
+                    <div class="find-payment__text">
+                      <p>Всего платежей</p>
+                      <p>62 814 303</p>
+                    </div>
+                    <div class="find-payment__last-payment">
+                      <span>Последний платеж</span>
+                      <span><span class="find-payment__time">0</span> секунд назад</span>
+                    </div>
+                    <div class="find-payment__button">
+                      <a href="#" class="btn btn-red btn-block">Найти мой платеж</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 d-lg-none mt-2">
+                  <a href="#" class="btn btn-red btn-block">Найти мой платеж</a>
+                </div>
+                <div class="col d-none d-lg-block">
+                  <div class="payments-timeline">
+                    <div class="payment-box payment-box--top" style="left: 10px">
+                      <div class="payment-box__left">
+                        <span class="payment-box__time">16:45:57</span>
+                        <span class="payment-box__amount">210.00</span>
+                      </div>
+                      <div class="payment-box__right">
+                        <span class="payment-box__title">Мобильная связь</span>
+                        <span class="payment-box__description">Киевстар</span>
+                      </div>
+                    </div>
+                    <div class="payment-box payment-box--bottom" style="left: 25%">
+                      <div class="payment-box__left">
+                        <span class="payment-box__time">16:45:57</span>
+                        <span class="payment-box__amount">210.00</span>
+                      </div>
+                      <div class="payment-box__right">
+                        <span class="payment-box__title">Коммунальные услуги</span>
+                        <span class="payment-box__description">Оплата Ивано-Франковск теплокоммунагазэнерго</span>
+                      </div>
+                    </div>
+                    <div class="payment-box payment-box--top" style="left: 50%">
+                      <div class="payment-box__left">
+                        <span class="payment-box__time">16:45:57</span>
+                        <span class="payment-box__amount">210.00</span>
+                      </div>
+                      <div class="payment-box__right">
+                        <span class="payment-box__title">Коммунальные услуги</span>
+                        <span class="payment-box__description">Оплата Ивано-Франковск теплокоммунагазэнерго</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- last payments widget -->
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mt-5">
+
+            <!-- blog homepage widget -->
+            <div class="homepage-blog" id="homepage-blog-widget">
+              <div class="row justify-content-between mb-4">
+                <div class="col">
+                  <h2>Блог</h2>
+                </div>
+                <div class="col-auto">
+                  <a href="#" class="btn btn-link btn-forward">Все записи</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <a href="#" class="homepage-article">
+                    <div class="homepage-article__img">
+                      <img src="img/homepage/img-blog1.jpg" alt="Image">
+                    </div>
+                    <p>Все поряд: що українці можуть робити через інтернет</p>
+                    <div class="homepage-article__meta">
+                      <span class="homepage-article__time">24.04.20 20:10</span>
+                      <span class="homepage-article__category">Новости компании</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="homepage-article">
+                    <div class="homepage-article__img">
+                      <img src="img/homepage/img-blog2.jpg" alt="Image">
+                    </div>
+                    <p>Сервіс по обслуговуванню домофонів Service24 підключив можливість онлайн-оплат через iPay.ua</p>
+                    <div class="homepage-article__meta">
+                      <span class="homepage-article__time">24.04.20 20:10</span>
+                      <span class="homepage-article__category">Акции</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#" class="homepage-article">
+                    <div class="homepage-article__img">
+                      <img src="img/homepage/img-blog3.jpg" alt="Image">
+                    </div>
+                    <p>Безпечний Великдень: як провести свято онлайн</p>
+                    <div class="homepage-article__meta">
+                      <span class="homepage-article__time">24.04.20 20:10</span>
+                      <span class="homepage-article__category">Статьи</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div><!-- blog homepage widget -->
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mt-5">
+
+            <!-- category text widget -->
+            <div class="category-text" id="category-text-widget">
+              <h2>Делайте платежи быстро и безопасно с сервисом iPay.ua!</h2>
+              <p>Сервис iPay.ua – это современная Интернет-платформа для совершения денежных переводов и онлайн-платежей. Мы сотрудничаем с ведущими платежными системами мира - Visa и MasterCard. За годы работы сервис стал одним из лидеров рынка онлайн-платежей. Наши партнеры - крупнейшие банки Украины и более 500 компаний, услуги которых Вы можете оплатить с помощью нашего сервиса. Ежедневно тысячи людей доверяют нам решение своих финансовых вопросов. С нами безопасно: применяются новейшие технологии защиты Ваших данных, признанные во всем мире. Для доступа к сервису нужен только Интернет.</p>
+              <h3>Почему вы выбираете iPay.ua</h3>
+              <ul class="list list--circle mb-4">
+                <li>Хотите быстро перевести деньги – сделайте это за одну минуту!</li>
+                <li>Спешите погасить долг или оплатить квитанцию – оцените удобство нашего сервиса!</li>
+                <li>Цените свое время – пользуйтесь iPay.ua круглосуточно!</li>
+                <li>Мечтаете упорядочить свои траты – установите функцию регулярных платежей!</li>
+                <li>Ненавидите очереди – платите из любого места!</li>
+                <li>Гарантии безопасности</li>
+              </ul>
+              <h3>Гарантии безопасности</h3>
+              <p>Сервис получил высочайшую оценку по надежности и качеству платежей. Это подтверждает международный сертификат соответствия мировым стандартам безопасности PCI DSS, который разработан экспертами ведущих компаний Visa и MasterCard.</p>
+              <p>Платить через “АйПэй” удобно, экономно, быстро и безопасно!</p>
+            </div><!-- category text widget -->
+
+          </div>
+        </div>
+      </div><!-- homepage main -->
+
+    </div><!-- homepage wrapper -->    
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__cancel"></a>
+              </div>
+              <div class="form-search__list"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+  </body>
+</html>

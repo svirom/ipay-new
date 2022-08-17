@@ -7,6 +7,231 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
+.form-search {
+  position: relative;
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .form-input {
+    &.input-search {
+      padding: 2.763rem 3.75rem 1.363rem 3.75rem;
+      border-color: transparent;
+      box-shadow: 0px 5px 20px $box-shadow;
+      @include placeholder {
+        color: rgba($main-blue, 0);
+        font-weight: normal;
+      }
+
+      @include until($lg) {
+        padding: 2.026rem 1.1rem 1.0775rem 3rem;
+      }
+
+      & ~ .form-label {
+        left: 3.9rem;
+        top: 1.45rem;
+      }
+
+      &:focus, &.filled {
+        border-color: $light-grey;
+        box-shadow: none;
+        background-color: $light-grey;
+
+        @include placeholder {
+          color: rgba($main-blue, 1);
+        }
+
+        // @include until($lg) {
+        //   border-color: transparent;
+        // }
+
+        & ~ .form-label {
+          top: 1rem;
+        }
+
+        & ~ .form-search__cancel {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__search, &__cancel {
+    position: absolute;
+    top: 0;
+    width: 3.75rem;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__search {
+    left: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3195 23.9626C19.6213 23.9626 24.7299 18.854 24.7299 12.5523C24.7299 6.25053 19.6213 1.14197 13.3195 1.14197C7.01777 1.14197 1.90918 6.25053 1.90918 12.5523C1.90918 18.854 7.01777 23.9626 13.3195 23.9626Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M28.0914 27.3238L21.3945 20.627' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
+    background-size: 29px;
+    background-position: center top 1.4rem;
+
+    @include until($lg) {
+      width: 3rem;
+      background-size: 22px;
+      background-position: center top 1.1rem;
+    }
+  }
+
+  &__cancel {
+    display: none;
+    right: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59082 1.13684L23.409 22.955' stroke='%23E84F35' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.409 1.13684L1.59082 22.955' stroke='%23E84F35' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-size: 25px;
+    background-position: center top 1.5rem;
+
+    @include until($lg) {
+      background-position: center top 0.65rem;
+    }
+  }
+
+  /* search result list */
+  &__list {
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    z-index: 100;
+    margin-top: 1rem;
+    max-height: 35rem;
+    overflow-y: auto;
+    background-color: #fff;
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: $btn-red;
+    }
+
+    @include until($lg) {
+      top: 6rem;
+    }
+  }
+
+  &__item {
+    margin-bottom: 0.5rem;
+    border-radius: $border-radius;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $heading-color;
+    }
+  }
+
+  &__item-img {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid $light-grey;
+    border-radius: $border-radius / 2;
+    background-color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: calc(100% - 6px);
+
+    img {
+      max-width: calc(100% - 6px);
+      max-height: calc(100% - 6px);
+    }
+  }
+
+  &__item-title {
+    flex-grow: 1;
+    padding-left: 1.4375rem;
+    @include font(1.125rem, 400, 1.2);
+    color: $heading-color;
+  }
+
+  &__not-found {
+    @include font(1.125rem, 400, 1.667);
+    color: $heading-color;
+  }
+
+  &__item-pay {
+    padding: 0.469rem 0.5rem;
+    background-color: $btn-green;
+    color: #fff;
+
+    &:hover {
+      .form-search__link {
+        text-decoration: none;
+      }
+    }
+    
+    .form-search__item-img {
+      border: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='29' height='37' viewBox='0 0 29 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.1477 4.48747V32.8175C28.1477 34.6575 26.5627 36.1475 24.6053 36.1475H5.09519C3.1378 36.1475 1.55273 34.6575 1.55273 32.8175V4.48747C1.55273 2.64747 3.1378 1.15747 5.09519 1.15747H24.5946C26.5627 1.15747 28.1477 2.64747 28.1477 4.48747Z' stroke='white' stroke-width='1.6667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.75488 26.1575H14.8504' stroke='white' stroke-width='1.6667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.75488 18.6575H21.946' stroke='white' stroke-width='1.6667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.75488 11.1575H21.946' stroke='white' stroke-width='1.6667' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-size: 26px;
+    }
+
+    .form-search__item-title {
+      display: flex;
+      flex-direction: column;
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='21' viewBox='0 0 22 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00342 15.0883L14.1749 10.2269' stroke='white' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.1753 10.2267L9.0038 5.36541' stroke='white' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 22px;
+
+      span {
+        color: #fff;
+        font-weight: bold;
+        line-height: 1.3;
+
+        &:first-child {
+          font-size: 0.875rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  @include until($lg) {
+    .form-input {
+      &.input-search {
+        & ~ .form-label {
+          top: 0.95rem;
+          left: 3rem;
+          font-size: 1rem;
+        }
+
+        &:focus, &.filled {
+          & ~ .form-label {
+            top: 0.45rem;
+            font-size: 0.77777rem;
+          }
+
+          & ~ .form-search__cancel {
+            display: block;
+            top: -2.625rem;
+            height: 2.5rem;
+            width: 2.5rem;
+            background-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .templates-add {
   min-height: 60vh;
 

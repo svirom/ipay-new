@@ -94,9 +94,37 @@ $(document).ready(function() {
   $('.form-search__cancel').on('click', searchCancel);
   $('#searchModal').on('hidden.bs.modal', searchCancel);
 
-  function searchCancel() {
-    $(this).closest('.form-search').find('.input-search').removeClass('filled').val('');
+  function searchCancel(e) {
+    e.preventDefault();
+    $(this).removeClass('active').closest('.form-search').find('.input-search').removeClass('filled').val('').end()
+      .find('.form-search__list').html('');
   }
+
+
+
+
+  
+  let searchesFields = $('.form-search .input-search');
+
+  $.each(searchesFields, function(index) {
+    if ($(this).val().length >= 3) {
+      $(this).closest('form').find('.form-search__cancel').addClass('active');
+    } else {
+      $(this).closest('form').find('.form-search__cancel').removeClass('active');
+    }
+  })
+
+  $('.form-search .input-search').on('keyup', function() {
+    if ($(this).val().length >= 3) {
+      $(this).closest('form').find('.form-search__cancel').addClass('active');
+    } else {
+      $(this).closest('form').find('.form-search__cancel').removeClass('active');
+    }
+  })
+
+
+
+
 
   // search field
   $('.search-field__cancel').on('click', function(e) {
