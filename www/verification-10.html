@@ -7,15 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/form-search.css">
     <link rel="stylesheet" href="/css/account-recovery.css">
 
-    <title>Verification Modal</title>
+    <title>Verification Call</title>
   </head>
   <body>
 
-    <!-- header -->
     <header class="main-header">
       <div class="container">
         <div class="row">
@@ -23,7 +22,7 @@
             <div class="main-nav__logo logo-color">
               <a href="#"></a>
             </div>
-            <nav>
+            <nav class="">
               <ul class="main-nav__nav">
                 <li class="main-nav__item main-nav__icon--search">
                   <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
@@ -44,7 +43,7 @@
                 </li>
                 <li class="main-nav__item main-nav__item--bonuses">
                   <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
-                    <span class="main-nav__bonus">154300</span>
+                    <span class="main-nav__bonus">1543 </span>
                     <span>бонусов</span>
                   </span>
                 </li>
@@ -57,16 +56,24 @@
                   </div>
                 </li>
                 <li class="main-nav__item dropdown">
-                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Вильгельмина Петренко</a>
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
-                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
                   </div>
                 </li>
               </ul>
               <ul class="main-nav__nav-mobile">
-                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item-account">
+                  <span class="main-nav__item-account--registered">Мой кабинет</span>
+                  <span>Альберт</span>
+                </li>
                 <li class="main-nav__item main-nav__item-mobile">
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
@@ -75,14 +82,16 @@
                     <div class="navbar-collapse__menu">
                       <ul>
                         <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
-                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
+                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
+                        <li><a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a></li>
+                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
-                      <a class="dropdown-item dropdown-login-mobile" href="#">
-                        <span>Войти</span> 
-                        <span>или зарегистрироваться</span>
-                      </a>
                       <div class="mobile-lang">
                         <span>Язык:</span>
                         <ul class="mobile-lang__list">
@@ -212,72 +221,46 @@
     <!-- main wrapper -->
     <div class="main-wrapper">
 
-      <!-- breadcrumb widget -->
-      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <ul class="breadcrumb">
-                <li>
-                  <a class="breadcrumb__home" href="/">
-                    <span class="d-none">Головна</span>
-                  </a>
-                </li>
-                <li class="active" aria-current="page">
-                  <span>Перевод денег с карты на карту</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> 
-      </nav><!-- breadcrumb widget -->
+      <!-- main content -->
+      <div class="container main-content" data-callchecktrycount="60">
+        <div class="row justify-content-center">
+          <!-- main area -->
+          <main class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
 
-      
-      <main>
+            <div class="row">
+              <div class="col-12 mt-3">
+                <!-- account signin widget -->
+                <div class="account-signin" id="account-signin-widget">
+                  
+                  <div class="row">
 
-        <div class="container pt-3 pb-5">
+                    <div class="col-12 text-center">
+                      <h2 class="mb-4">Подтверждение телефона</h2>
+                    </div>
 
-          <div class="row mt-4">
+                    <div class="col-12 mb-4 text-center verification-call" id="verification_by_ring_screen">
+                      <div class="pt-2 pt-sm-0">
+                        <img src="/img/authentication/ring.gif" srcset="/img/authentication/ring.gif 1x, /img/authentication/ring@2x.gif 2x" alt="Image">
+                      </div>
+  
+                      <h3 class="my-4">+380 44 000 00 00</h3>
+  
+                      <p class="mb-4">Ответьте на звонок с указанного номера и следуйте инструкциям</p>
+  
+                      <p class="mb-2">Ожидайте звонок</p>
+  
+                      <p class="verification-call__timer mb-0 text-center" id="callchecktrycount"></p>
+                    </div>
 
-            <div class="col-12">
-              <h1>Verification Modals</h1>
-            </div>
+                  </div>
 
-            <div class="col-12">
-              <div class="row mt-4">
-                <div class="col-auto mr-3 mb-3">
-                  <h3>Modal Verification Phone Lacking, Email Not Approved</h3>
-                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-verif-1">Modal Verif 1</a>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-auto mr-3 mb-3">
-                  <h3>Modal Verification Phone Verified 1, Email Not Approved</h3>
-                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-verif-2">Modal Verif 2</a>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-auto mr-3 mb-3">
-                  <h3>Modal Verification Phone Verified 2, Email Not Approved</h3>
-                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-verif-3">Modal Verif 3</a>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-auto mr-3 mb-3">
-                  <h3>Modal Verification Phone Not Approved, Email Not Approved</h3>
-                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-verif-4">Modal Verif 4</a>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-auto mr-3 mb-3">
-                  <h3>Modal Verification Call</h3>
-                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-verif-5">Modal Verif Call</a>
-                </div>
-                <div class="w-100"></div>
+                </div><!-- account signin widget -->
               </div>
             </div>
 
-          </div>
-
+          </main><!-- main area -->
         </div>
-
-      </main>
+      </div><!-- main content -->
 
     </div><!-- main wrapper -->
 
@@ -355,6 +338,7 @@
             <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
             <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
             <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
           </div>
         </div>
       </div>
@@ -362,217 +346,22 @@
 
     <!-- Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Поиск</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="form-search">
             <form action="">
               <div class="form-group">
-                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Например: киевстар, Киевоблэнерго, воля кабель" aria-required="true">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
                 <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
-                <a href="#" class="form-search__search"></a>
                 <a href="#" class="form-search__cancel"></a>
-                </div>
+              </div>
+              <div class="form-search__list"></div>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- modal verification phone lacking, email not approved (modal verif 1) -->
-    <div class="modal fade modal-auth" id="modal-verif-1" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header modal-header--verification">
-
-            <h2 class="mb-0">Подтвердите e-mail</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-
-          <div class="modal-body">
-
-            <div class="mb-3 py-3 py-sm-0 text-center">
-              <img src="/img/authentication/verification-1.svg" alt="Image">
-            </div>
-
-            <p class="heading-color pb-3 pb-sm-0">На ваш адрес <strong>useraddress@mail.com</strong> выслана ссылка подтверждения e-mail. Перейдите по ссылке для продолжения.</p>
-
-            <button type="button" class="btn btn-green btn-block" data-dismiss="modal" aria-label="Close">Закрыть</button>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- modal verification phone verified, email not approved (modal verif 2) -->
-    <div class="modal fade modal-auth" id="modal-verif-2" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header modal-header--verification">
-
-            <h2 class="mb-0">Подтвердите e-mail</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-
-          <div class="modal-body pt-0 pt-sm-3">
-
-            <p class="heading-color">Мы рады что вам нравится заходить на iPay.ua с помощью e-mail, но сейчас он не активирован. </p>
-
-            <div class="mb-3 py-3 py-sm-0 text-center">
-              <img src="/img/authentication/verification-2.svg" alt="Image">
-            </div>
-
-            <p class="heading-color pb-3 pb-sm-0 small">Подтвердите ваш адрес <strong>useraddress@mail.com</strong>, что позволит вам входить в кабинет по e-mail получать квитанции об оплатах, а также полезные напоминания</p>
-
-            <a href="#" class="btn btn-green btn-block">Подтвердить e-mail</a>
-
-            <div class="text-center mt-3">
-              <button type="button" class="btn btn-link remind-link small" data-dismiss="modal" aria-label="Close"><u>Не сейчас</u></button>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- modal verification phone lacking, email not approved (modal verif 3) -->
-    <div class="modal fade modal-auth" id="modal-verif-3" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header modal-header--verification">
-
-            <h2 class="mb-0">Подтвердите e-mail</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-
-          <div class="modal-body">
-
-            <div class="mb-3 py-3 py-sm-0 text-center">
-              <img src="/img/authentication/verification-1.svg" alt="Image">
-            </div>
-
-            <p class="heading-color pb-3 pb-sm-0">На ваш адрес <strong>useraddress@mail.com</strong> выслана ссылка подтверждения. Перейдите по ссылке для продолжения.</p>
-
-            <button type="button" class="btn btn-green btn-block" data-dismiss="modal" aria-label="Close">Закрыть</button>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!--  modal verification phone not approved, email not approved (modal verif 4) -->
-    <div class="modal fade modal-auth" id="modal-verif-4" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header">
-
-            <h2 class="mb-0">Подтверждение<br> телефона</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-
-          <div class="modal-body">
-
-            <p class="heading-color">на номер <strong>+380(67)999-88-77</strong> выслано SMS с проверочным кодом.</p>
-
-            <form action="">
-
-              <div class="form-group">
-                <input type="tel" class="form-control form-input" id="account-sms" name="form-login" autocomplete="off" placeholder="" aria-required="true">
-                <label class="control-label form-label" for="account-sms">Код из SMS</label>
-              </div>
-
-              <div class="form-group d-flex justify-content-between align-items-baseline">
-                <p class="heading-color mb-0 small text-nowrap">Не приходит SMS?</p> 
-                <p class="mb-0 small text-nowrap"><a href="#" class="btn btn-link remind-link small">Отправить код повторно</a></p>
-              </div>
-
-              <div class="form-group mb-0">
-                <div class="row col-pad8">
-                  <div class="col-auto">
-                    <a href="#" class="btn btn-outline btn-prev btn-empty d-block"></a>
-                  </div>
-                  <div class="col">
-                    <button type="submit" class="btn btn-green btn-block" disabled="">Продолжить</button>
-                  </div>
-                </div>
-              </div>
-
-            </form>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!--  modal verification call (modal verif 5) -->
-    <div class="modal fade modal-auth" id="modal-verif-5" tabindex="-1" aria-hidden="true" data-callchecktrycount="60">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header modal-header--verification pb-0">
-
-            <h2 class="mb-0">Подтверждение<br> телефона</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-
-          <div class="modal-body verification-call" id="verification_by_ring_screen">
-
-            <div class="pt-2 pt-sm-0 text-center">
-              <img src="/img/authentication/ring.gif" srcset="/img/authentication/ring.gif 1x, /img/authentication/ring@2x.gif 2x" alt="Image">
-            </div>
-
-            <h3 class="my-4 text-center">+380 44 000 00 00</h3>
-
-            <p class="mb-4 text-center">Ответьте на звонок с указанного номера и следуйте инструкциям</p>
-
-            <p class="mb-2 text-center">Мы уже звоним вам</p>
-
-            <p class="verification-call__timer mb-0 text-center" id="callchecktrycount"></p>
-
-          </div>
-
         </div>
       </div>
     </div>

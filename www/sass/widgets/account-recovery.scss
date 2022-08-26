@@ -43,3 +43,17 @@
     }
   }
 }
+
+.verification-call {
+  .verification-call__timer {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: $heading-color;
+  }
+
+  @include until($md) {
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
