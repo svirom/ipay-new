@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/css/service-provider.css">
     <link rel="stylesheet" href="/css/bill-yasno.css">
 
-    <title>Bill Yasno 2</title>
+    <title>Bill Yasno 3 no tabs</title>
   </head>
   <body>
 
@@ -344,158 +344,37 @@
                             </div>
                           </div>
 
-                          <div class="col-12 mt-3">
-                            <p class="heading-color mb-2"><strong>Выберите ваш тариф</strong></p>
-
-                            <div class="bill-yasno__tariff-pills d-none d-sm-block">
-                              <ul class="row nav" role="tablist">
-
-                                <li class="col-sm-4">
-                                  <a class="btn btn-outline btn-block active" id="pills-regular-tab" data-toggle="pill" href="#pills-regular" role="tab" aria-controls="pills-regular" aria-selected="true">1 зона</a>
-                                </li>
-
-                                <li class="col-sm-4">
-                                  <a class="btn btn-outline btn-block" id="pills-2zone-tab" data-toggle="pill" href="#pills-2zone" role="tab" aria-controls="pills-2zone" aria-selected="false">2 зоны</a>
-                                </li>
-
-                                <li class="col-sm-4">
-                                  <a class="btn btn-outline btn-block" id="pills-3zone-tab" data-toggle="pill" href="#pills-3zone" role="tab" aria-controls="pills-3zone" aria-selected="false">3 зоны</a>
-                                </li>
-
-                              </ul>
-                            </div>
-
-                            <div class="bill-yasno__tariff-select d-sm-none">
-                              <div class="form-group select-input-wrapper">
-                                <select class="select-counter-type form-control form-input" name="select">
-                                  <option value="0">1 зона</option>
-                                  <option value="1">2 зоны</option>
-                                  <option value="2">3 зоны</option>
-                                </select>
-                              </div>
-                            </div>
-                          
-                          </div>
-
                           <div class="col-12 mt-sm-2 tab-content bill-yasno__tab-content">
 
-                            <!-- regular counter -->
-                            <div class="tab-pane fade show active s0" id="pills-regular" role="tabpanel" aria-labelledby="pills-regular-tab">
-
-                              <div class="row justify-content-between mt-3">
-                                <div class="col-md-auto">
-                                  <p class="heading-color mb-2"><strong>Текущие показания счетчика</strong></p>
-                                </div>
-                                <div class="col-md-auto mb-2 mb-md-0">
-                                  <a data-toggle="collapse" href="#bill-yasno__currentCollapse0" role="button" aria-expanded="false" aria-controls="bill-yasno__currentCollapse0"><u>Когда передавать показания счетчиков</u></a>
-                                </div>
-                                <div class="col-12">
-                                  <div class="collapse" id="bill-yasno__currentCollapse0">
-                                    <div class="alert alert-secondary fade show bill-yasno__alert" role="alert">
-                                      <div class="bill-yasno__alert-row">
-                                        <span class="bill-yasno__alert-img">
-                                          <img src="img/bills/bill-yasno-alert.svg" alt="Icon">
-                                        </span>
-                                        <span class="bill-yasno__alert-text">Щоб отримувати коректні нарахування у платіжках за світло, необхідно передавати показання лічильників з 1 по 3 число включно кожного місяця. Якщо ви вже передали показання вчасно, вносити ці ж показники зараз вже не треба.<br>iPay.ua відправляє показники лічильників разом з оплатою</span>
-                                      </div>
+                            <div class="row justify-content-between mt-3">
+                              <div class="col-md-auto">
+                                <p class="heading-color mb-2"><strong>Текущие показания счетчика</strong></p>
+                              </div>
+                              <div class="col-md-auto mb-2 mb-md-0">
+                                <a data-toggle="collapse" href="#bill-yasno__currentCollapse0" role="button" aria-expanded="false" aria-controls="bill-yasno__currentCollapse0"><u>Когда передавать показания счетчиков</u></a>
+                              </div>
+                              <div class="col-12">
+                                <div class="collapse" id="bill-yasno__currentCollapse0">
+                                  <div class="alert alert-secondary fade show bill-yasno__alert" role="alert">
+                                    <div class="bill-yasno__alert-row">
+                                      <span class="bill-yasno__alert-img">
+                                        <img src="img/bills/bill-yasno-alert.svg" alt="Icon">
+                                      </span>
+                                      <span class="bill-yasno__alert-text">Щоб отримувати коректні нарахування у платіжках за світло, необхідно передавати показання лічильників з 1 по 3 число включно кожного місяця. Якщо ви вже передали показання вчасно, вносити ці ж показники зараз вже не треба.<br>iPay.ua відправляє показники лічильників разом з оплатою</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
+                            </div>
 
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <input type="text" id="billform-currentvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue0">Текущие, кВт</label>
-                                  </div>
-                                </div>  
-                              </div>
-
-                            </div><!-- regular counter -->
-
-                            <!-- 2 zone counter -->
-                            <div class="tab-pane fade s1" id="pills-2zone" role="tabpanel" aria-labelledby="pills-2zone-tab">
-
-                              <div class="row justify-content-between mt-3">
-                                <div class="col-md-auto">
-                                  <p class="heading-color mb-2"><strong>Текущие показания счетчика</strong></p>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input type="text" id="billform-currentvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue0">Текущие, кВт</label>
                                 </div>
-                                <div class="col-md-auto mb-2 mb-md-0">
-                                  <a data-toggle="collapse" href="#bill-yasno__currentCollapse1" role="button" aria-expanded="false" aria-controls="bill-yasno__currentCollapse1"><u>Когда передавать показания счетчиков</u></a>
-                                </div>
-                                <div class="col-12">
-                                  <div class="collapse" id="bill-yasno__currentCollapse1">
-                                    <div class="alert alert-secondary fade show bill-yasno__alert" role="alert">
-                                      <div class="bill-yasno__alert-row">
-                                        <span class="bill-yasno__alert-img">
-                                          <img src="img/bills/bill-yasno-alert.svg" alt="Icon">
-                                        </span>
-                                        <span class="bill-yasno__alert-text">Щоб отримувати коректні нарахування у платіжках за світло, необхідно передавати показання лічильників з 1 по 3 число включно кожного місяця. Якщо ви вже передали показання вчасно, вносити ці ж показники зараз вже не треба.<br>iPay.ua відправляє показники лічильників разом з оплатою</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                              </div>  
+                            </div>
 
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <input type="text" id="billform-currentvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue0">День, кВт</label>
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <input type="text" id="billform-currentvalue1" class="form-control form-input" name="BillForm[service][1][counter][1][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue1">Ночь, кВт</label>
-                                  </div>
-                                </div>  
-                              </div>
-
-                            </div><!-- 2 zone counter -->
-
-                            <!-- 3 zone counter -->
-                            <div class="tab-pane fade s2" id="pills-3zone" role="tabpanel" aria-labelledby="pills-3zone-tab">
-
-                              <div class="row justify-content-between mt-3">
-                                <div class="col-md-auto">
-                                  <p class="heading-color mb-2"><strong>Текущие показания счетчика</strong></p>
-                                </div>
-                                <div class="col-md-auto mb-2 mb-md-0">
-                                  <a data-toggle="collapse" href="#bill-yasno__currentCollapse2" role="button" aria-expanded="false" aria-controls="bill-yasno__currentCollapse2"><u>Когда передавать показания счетчиков</u></a>
-                                </div>
-                                <div class="col-12">
-                                  <div class="collapse" id="bill-yasno__currentCollapse2">
-                                    <div class="alert alert-secondary fade show bill-yasno__alert" role="alert">
-                                      <div class="bill-yasno__alert-row">
-                                        <span class="bill-yasno__alert-img">
-                                          <img src="img/bills/bill-yasno-alert.svg" alt="Icon">
-                                        </span>
-                                        <span class="bill-yasno__alert-text">Щоб отримувати коректні нарахування у платіжках за світло, необхідно передавати показання лічильників з 1 по 3 число включно кожного місяця. Якщо ви вже передали показання вчасно, вносити ці ж показники зараз вже не треба.<br>iPay.ua відправляє показники лічильників разом з оплатою</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="row">
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <input type="text" id="billform-currentvalue0" class="form-control form-input" name="BillForm[service][0][counter][0][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue0">Пик, кВт</label>
-                                  </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <input type="text" id="billform-currentvalue1" class="form-control form-input" name="BillForm[service][1][counter][1][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue1">Полупик, кВт</label>
-                                  </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <div class="form-group">
-                                    <input type="text" id="billform-currentvalue2" class="form-control form-input" name="BillForm[service][2][counter][2][currentValue]" value="" placeholder="0.00"><label class="control-label form-label" for="billform-currentvalue2">Ночь, кВт</label>
-                                  </div>
-                                </div>  
-                              </div>
-
-                            </div><!-- 3 zone counter -->
-                            
                           </div>
 
                           <div class="col-12 mt-2">
@@ -523,56 +402,6 @@
                                       <div class="col-md-4">
                                         <div class="form-group">
                                           <input type="text" id="calc-1-prev" class="form-control form-input" name="" placeholder="0.00"><label class="control-label form-label" for="calc-1-prev">Предыдущие, кВт</label>
-                                        </div>
-                                      </div>
-      
-                                      <div class="col-md-auto">
-                                        <div class="bill-yasno__calc-count">
-                                          <p class="mb-2">Разница:</p>
-                                          <p class="mb-md-0"><span>0</span> кВт/час</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="bill-yasno__card-row" data-calc="s1">
-                                    <p class="heading-color mb-2 bill-yasno__card-title" data-s0="" data-s1="Ночь" data-s2="Полупик">Показания счетчика<span></span></p>
-  
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <div class="form-group">
-                                          <input type="text" id="calc-2-curr" class="form-control form-input" name="" placeholder="0.00"><label class="control-label form-label" for="calc-2-curr">Текущие, кВт</label>
-                                        </div>
-                                      </div>
-      
-                                      <div class="col-md-4">
-                                        <div class="form-group">
-                                          <input type="text" id="calc-2-prev" class="form-control form-input" name="" placeholder="0.00"><label class="control-label form-label" for="calc-2-prev">Предыдущие, кВт</label>
-                                        </div>
-                                      </div>
-      
-                                      <div class="col-md-auto">
-                                        <div class="bill-yasno__calc-count">
-                                          <p class="mb-2">Разница:</p>
-                                          <p class="mb-md-0"><span>0</span> кВт/час</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="bill-yasno__card-row" data-calc="s2">
-                                    <p class="heading-color mb-2 bill-yasno__card-title" data-s0="" data-s1="" data-s2="Ночь">Показания счетчика<span></span></p>
-  
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <div class="form-group">
-                                          <input type="text" id="calc-3-curr" class="form-control form-input" name="" placeholder="0.00"><label class="control-label form-label" for="calc-3-curr">Текущие, кВт</label>
-                                        </div>
-                                      </div>
-      
-                                      <div class="col-md-4">
-                                        <div class="form-group">
-                                          <input type="text" id="calc-3-prev" class="form-control form-input" name="" placeholder="0.00"><label class="control-label form-label" for="calc-3-prev">Предыдущие, кВт</label>
                                         </div>
                                       </div>
       

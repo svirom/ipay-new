@@ -33,6 +33,8 @@ $(document).ready(function() {
       }
     })
 
+    calcValues($(this).val());
+
   })
 
   // synchronize active buttons on desktop and select value mobile
@@ -51,11 +53,53 @@ $(document).ready(function() {
         } else if ($(this).hasClass('s2')) {
           currClass = '2';
         }
+
+        calcValues(currClass);
       }
 
       $('.select-counter-type').val(currClass);
       $('.select-counter-type').trigger('change');
+
     })
-  })// synchronize active buttons on desktop and select value mobile
+  }) // synchronize active buttons on desktop and select value mobile
+
+  // change titles and values of calculator
+  function calcValues(value) {
+    $('.bill-yasno__card-row').find('input').val('');
+
+    var titleS0 = $('[data-calc="s0"]').find('.bill-yasno__card-title');
+    var titleS0_s1 = titleS0.data('s1');
+    var titleS0_s2 = titleS0.data('s2');
+    var titleS1 = $('[data-calc="s1"]').find('.bill-yasno__card-title');
+    var titleS1_s1 = titleS1.data('s1');
+    var titleS1_s2 = titleS1.data('s2');
+    var titleS2 = $('[data-calc="s2"]').find('.bill-yasno__card-title');
+    var titleS2_s2 = titleS2.data('s2');
+
+    if (value === '0') {
+      $('[data-calc="s0"]').addClass('active');
+      $('[data-calc="s1"]').removeClass('active');
+      $('[data-calc="s2"]').removeClass('active');
+
+      titleS0.find('span').text('');
+
+    } else if (value === '1') {
+      $('[data-calc="s0"]').addClass('active');
+      $('[data-calc="s1"]').addClass('active');
+      $('[data-calc="s2"]').removeClass('active');
+
+      titleS0.find('span').text(', ' + titleS0_s1);
+      titleS1.find('span').text(', ' + titleS1_s1);
+      
+    } else if (value === '2') {
+      $('[data-calc="s0"]').addClass('active');
+      $('[data-calc="s1"]').addClass('active');
+      $('[data-calc="s2"]').addClass('active');
+
+      titleS0.find('span').text(', ' + titleS0_s2);
+      titleS1.find('span').text(', ' + titleS1_s2);
+      titleS2.find('span').text(', ' + titleS2_s2);
+    }
+  }
 
 })
