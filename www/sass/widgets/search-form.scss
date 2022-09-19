@@ -36,6 +36,7 @@
       }
 
       &:focus, &.filled {
+        border-color: $light-grey;
         box-shadow: none;
         @include placeholder {
           color: rgba($main-blue, 1);
