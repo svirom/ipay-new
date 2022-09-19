@@ -1052,13 +1052,15 @@
     <script src="/js/custom.js"></script>
 
     <script>
-      $('a[href^="#"]').click(function(e) {
-        e.preventDefault();
-        var sectionTo = $(this).attr('href');
-        $('html, body').animate({
-          scrollTop: $(sectionTo).offset().top - 80
-        }, 800);
-      });
+      // $('a[href^="#"]').click(function(e) {
+      //   e.preventDefault();
+      //   var sectionTo = $(this).attr('href');
+      //   if (sectionTo.length > 1) {
+      //     $('html, body').animate({
+      //       scrollTop: $(sectionTo).offset().top - 80
+      //     }, 800);
+      //   }
+      // });
     </script>
   </body>
 </html>

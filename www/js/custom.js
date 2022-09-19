@@ -99,10 +99,6 @@ $(document).ready(function() {
     $(this).removeClass('active').closest('.form-search').find('.input-search').removeClass('filled').val('').end()
       .find('.form-search__list').html('');
   }
-
-
-
-
   
   let searchesFields = $('.form-search .input-search');
 
@@ -122,10 +118,6 @@ $(document).ready(function() {
     }
   })
 
-
-
-
-
   // search field
   $('.search-field__cancel').on('click', function(e) {
     e.preventDefault();
@@ -140,5 +132,16 @@ $(document).ready(function() {
       $(this).html('');
     }
   })
+
+  // scroll to anchor
+  $('a[href^="#"]').click(function(e) {
+    e.preventDefault();
+    var sectionTo = $(this).attr('href');
+    if (sectionTo.length > 1) {
+      $('html, body').animate({
+        scrollTop: $(sectionTo).offset().top - 80
+      }, 800);
+    }
+  });
 
 })
