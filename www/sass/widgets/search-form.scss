@@ -235,21 +235,21 @@
         width: auto;
         max-width: 100%;
       }
-  
+
       span {
+        color: $main-blue;
+        font-size: 0.875rem;
+      }
+  
+      .form-search__p2r-link {
         padding-right: 1rem;
         color: $heading-color;
         line-height: 1.17;
-      }
-    }
-  
-    .form-search__p2r-link {
-      color: $main-blue;
-      font-size: 0.875rem;
-  
-      &:hover {
-        color: $btn-red;
-        text-decoration: none;
+
+        &:hover {
+          color: $btn-red;
+          text-decoration: none;
+        }
       }
     }
   }

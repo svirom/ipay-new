@@ -134,14 +134,12 @@ $(document).ready(function() {
   })
 
   // scroll to anchor
-  $('a[href^="#"]').click(function(e) {
+  $('.scrollto').click(function(e) {
     e.preventDefault();
     var sectionTo = $(this).attr('href');
-    if (sectionTo.length > 1) {
-      $('html, body').animate({
-        scrollTop: $(sectionTo).offset().top - 80
-      }, 800);
-    }
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top - 80
+    }, 800);
   });
 
 })

@@ -139,8 +139,8 @@ $(document).ready(function() {
         searchListp2r += '<img src="img/form-search/form-search-p2r.svg" alt="Icon">';
         searchListp2r += '</span>';
         searchListp2r += '<span class="form-search__p2r-text">';
-        searchListp2r += '<span><strong>' + searchText['result']['requisites'][lang] + '</strong></span>';
-        searchListp2r += '<a href="#" class="form-search__p2r-link">' + searchText['result']['link'][lang] + '</a>';
+        searchListp2r += '<a href="#" class="form-search__p2r-link"><strong>' + searchText['result']['requisites'][lang] + '</strong></a>';
+        searchListp2r += '<span>' + searchText['result']['link'][lang] + '</span>';
         searchListp2r += '</span>';
         searchListp2r += '</div>';
       
