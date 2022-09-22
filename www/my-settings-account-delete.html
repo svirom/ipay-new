@@ -305,33 +305,35 @@
                 <!-- account main widget -->
                 <div class="account-main" id="account-main-widget">
 
-                  <div class="row">
-                    <div class="col-lg-7 offset-lg-3 mt-2 mb-3">
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 mt-2 mb-3 d-lg-none">
                       <a href="#" class="btn btn-link btn-back">В мой профиль</a>
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-lg-7 offset-lg-3 mb-md-4">
-                      <h1>Удалить аккаунт</h1>
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                      <h1 class="mb-3">Удалить аккаунт</h1>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-12">
                       <!-- account edit widget -->
-                      <div class="account-edit" id="account-edit-widget">
+                      <div class="account-edit account-delete" id="account-edit-widget">
 
-                        <div class="row">
-                          <div class="col-lg-6 offset-lg-3">
-                            <p class="account-edit__approve">Вы уверены что хотите удалить аккаунт?</p>
-                            <p>Удаление аккаунта необратимо. Все ваши данные будут удалены немедленно, и вы не сможете их восстановить.</p>
-                            <p>Введите пароль для подтверждения удаления</p>
+                        <div class="row justify-content-center">
+                          <div class="col-md-10 col-lg-8 col-xl-7">
+                            <div class="alert alert-danger fade show" role="alert">
+                              Нам очень жаль, что вы хотите нас покинуть. Спасибо за использование iPay.ua!
+                            </div>
+                            <p class="account-edit__approve">Удаление аккаунта необратимо. Все ваши данные будут удалены немедленно, и вы не сможете их восстановить.</p>
+                            <p class="heading-color mb-2"><strong>Введите ваш пароль для подтверждения удаления</strong></p>
                           </div>
                         </div>
 
-                        <div class="row mb-3 mb-lg-5">
-                          <div class="col-lg-6 offset-lg-3">
+                        <div class="row justify-content-center mb-3 mb-lg-5">
+                          <div class="col-md-10 col-lg-8 col-xl-7">
                             <form action="">
                               <div class="form-group mb-0">
                                 <input type="password" class="form-control form-input" id="account-pass" name="form-pass" autocomplete="off" aria-required="true">
@@ -345,7 +347,8 @@
                               <div class="form-group">
                                 <div class="row justify-content-center">
                                   <div class="col-auto">
-                                    <a href="#" class="btn btn-outline btn-prev btn-block">Назад</a>
+                                    <a href="#" class="btn btn-outline btn-prev btn-empty d-sm-none"></a>
+                                    <a href="#" class="btn btn-outline btn-prev btn-block d-none d-sm-block">Назад</a>
                                   </div>
                                   <div class="col">
                                     <button type="submit" class="btn btn-red btn-block">Удалить</button>
@@ -353,6 +356,7 @@
                                 </div>
                               </div>
                             </form>
+                            <p class="small">Если вы зарегистрировались через Google, Facebook или Apple, сперва задайте пароль с помощью нажав “Напомнить пароль”</p>
                           </div>
                         </div>
                         
@@ -452,7 +456,7 @@
     </div><!-- footer -->
 
     <!-- mobile delete account -->
-    <div class="account-delete d-md-none" id="account-delete-widget">
+    <!-- <div class="account-delete d-md-none" id="account-delete-widget">
       <div class="account-delete__body-wrapper"></div>
       <div class="account-delete__mobile-wrapper text-center">
         <div class="account-delete__mobile-title">
@@ -478,7 +482,8 @@
           </form>
         </div>
       </div>
-    </div><!-- mobile delete account -->
+    </div> -->
+    <!-- mobile delete account -->
 
 
     <!-- Optional JavaScript -->
