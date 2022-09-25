@@ -9,6 +9,12 @@ $(document).ready(function() {
     $.fn.searchForm = function() {
       return this.each(function() {
 
+        const inputSearch = $(this).find('.input-search');
+        const searchApi = $(this).data('api');
+        const searchListWrapper = $(this).find('.form-search__list');
+      
+        const searchList = '<ul class="form-search__ul"></ul>';
+
         const searchText = {
           empty: {
             main: {
@@ -77,7 +83,6 @@ $(document).ready(function() {
           }
         }
       
-        // const currLang = 'uk-UA';
         const currLang = $(document.documentElement).attr('lang');
         let lang = 'ua';
       
@@ -92,12 +97,6 @@ $(document).ready(function() {
             lang = 'ua';
             break;
         }
-      
-        const inputSearch = $(this).find('.input-search');
-        const searchApi = $(this).data('api');
-        const searchListWrapper = $(this).find('.form-search__list');
-      
-        const searchList = '<ul class="form-search__ul"></ul>';
       
         // result list title
         let searchResultTitle = '';
@@ -158,10 +157,19 @@ $(document).ready(function() {
         let globalData = {};
         let cookieValue = [];
 
+        // get cookie by name
+        function getCookie(name) {
+          const value = `; ${document.cookie}`;
+          const parts = value.split(`; ${name}=`);
+          if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+        }
+
         if (document.cookie.split(';').filter(function(item) {
           return item.trim().indexOf('lastFiveBills=') == 0
         }).length) {
-          cookieValue = JSON.parse(document.cookie.replace(/(?:(?:^|.*;\s*)lastFiveBills\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
+          // cookieValue = JSON.parse(document.cookie.replace(/(?:(?:^|.*;\s*)lastFiveBills\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
+          cookieValue = getCookie('lastFiveBills');
+          cookieValue = JSON.parse(cookieValue);
         }
 
         // search cancel button, hide modal
@@ -218,16 +226,6 @@ $(document).ready(function() {
             const cookieValueUrl = cookieValue.map(function(el) {
               return el['url'];
             });
-            
-            // if (cookieValueUrl.indexOf(globalData[billId]['url']) > 0) {
-            //   let elem = '';
-            //   (cookieValue['url'] === globalData[billId]['url']) ? elem = cookieValue['url'] : '';
-            //   if (elem) {
-            //     cookieValue.unshift(globalData[billId]).splice(cookieValue[elem+1], 1);
-            //     console.log(elem, cookieValue);
-            //   }
-              
-            // }
   
             if (cookieValueUrl.indexOf(globalData[billId]['url']) === -1) {
               cookieValue.length === 5 ? cookieValue.pop() : '';
@@ -235,20 +233,29 @@ $(document).ready(function() {
               cookieValue.unshift(globalData[billId]);
               cookieValue[0]['id'] = billId;
             }
-  
-            document.cookie = 'lastFiveBills=' + JSON.stringify(cookieValue);
+
+            document.cookie = 'lastFiveBills=' + encodeURIComponent(JSON.stringify(cookieValue)) + '; path=/';
           }
 
           // delete cookie
           if ($(e.target).hasClass('form-search__recent-link')) {
             e.preventDefault();
-            document.cookie = 'lastFiveBills=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+            document.cookie = 'lastFiveBills=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
             cookieValue = [];
-            searchListWrapper.html('');            
+            // searchListWrapper.html('');            
           }
         })
       
         inputSearch.on('focus', function() {
+          if (document.cookie.split(';').filter(function(item) {
+            cookieValue = [];
+            return item.trim().indexOf('lastFiveBills=') == 0
+          }).length) {
+            cookieValue = getCookie('lastFiveBills');
+            cookieValue = JSON.parse(cookieValue);
+            // cookieValue = JSON.parse(document.cookie.replace(/(?:(?:^|.*;\s*)lastFiveBills\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
+          }
+
           if (searchListWrapper.is(':empty') && (inputSearch.val().length === 0) && (cookieValue.length === 0)) {
             // focus empty
             searchListWrapper.append(searchListEmpty);
@@ -268,19 +275,32 @@ $(document).ready(function() {
             })
           }
         })
-      
-        inputSearch.on('blur', function(e) {
-          if (searchListWrapper.children().hasClass('form-search__tip') && !$(e.relatedTarget).closest('.form-search__item').data('bill-id')) {
+
+        $('body').on('click', function(e) {
+          if (!$(e.target).hasClass('input-search') && searchListWrapper.children().hasClass('form-search__tip')) {
+            // if ($(e.target).hasClass('form-search__recent-link')) {
+            //   e.preventDefault();
+            //   document.cookie = 'lastFiveBills=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+            //   cookieValue = [];   
+            // }
             searchListWrapper.html('');
-          }
+          };
+        })
+      
+        // relatedTarget doesn't work on safari
+        // inputSearch.on('blur', function(e) {
+          // e.preventDefault();
+          // if (searchListWrapper.children().hasClass('form-search__tip') && !$(e.relatedTarget).closest('.form-search__item').data('bill-id')) {
+          //   searchListWrapper.html('');
+          // }
 
           // delete cookie
-          if ($(e.relatedTarget).hasClass('form-search__recent-link')) {
-            document.cookie = 'lastFiveBills=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-            cookieValue = [];
-            searchListWrapper.html('');            
-          }
-        })
+          // if ($(e.relatedTarget).hasClass('form-search__recent-link')) {
+          //   document.cookie = 'lastFiveBills=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+          //   cookieValue = [];
+          //   searchListWrapper.html('');            
+          // }          
+        // })
 
         inputSearch.on('keyup', function() {
           const searchValue = inputSearch.val();
