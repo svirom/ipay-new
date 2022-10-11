@@ -125,4 +125,28 @@
   margin: 0.5rem;
   font-weight: 700;
 }
+
+.provider-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid #F0F5FA;
+  border-radius: 0.5rem;
+}
+
+.provider-title img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: calc(100% - 8px);
+  max-height: calc(100% - 8px);
+}
 /*# sourceMappingURL=service-provider.css.map */

@@ -3142,7 +3142,7 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 }
 
 .modal-auth .modal-header--verification {
-  padding: 1.5rem;
+  padding: 1.5rem 4rem 1.5rem 1.5rem;
 }
 
 .modal-auth .modal-header-img {
@@ -3217,6 +3217,9 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   .modal-auth .modal-header, .modal-auth .modal-body {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+  .modal-auth .modal-header--verification {
+    padding-right: 3rem;
   }
   .modal-auth .modal-header--verification h4 {
     font-size: 1.3125rem;
@@ -4072,7 +4075,7 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   color: #fff;
 }
 
-.btn.btn-account:active, .btn.btn-account.active, .btn.btn-account[aria-expanded="true"] {
+.btn.btn-account:active:not(.btn-account--not-registered), .btn.btn-account.active:not(.btn-account--not-registered), .btn.btn-account[aria-expanded="true"] {
   color: #fff;
   background-color: #22D4A2;
   border-color: #22D4A2;
@@ -4083,6 +4086,11 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 .btn.btn-account:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.btn.btn-account.btn-account--not-registered {
+  padding-right: 1rem;
+  background-image: none;
 }
 
 /* mobile opener button */

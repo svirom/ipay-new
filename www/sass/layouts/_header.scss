@@ -661,7 +661,7 @@
       color: #fff;
     }
   
-    &:active, &.active, &[aria-expanded="true"] {
+    &:active:not(.btn-account--not-registered), &.active:not(.btn-account--not-registered), &[aria-expanded="true"] {
       color: #fff;
       background-color: $btn-green-hover;
       border-color: $btn-green-hover;
@@ -670,6 +670,11 @@
 
     &:focus {
       box-shadow: none;
+    }
+
+    &.btn-account--not-registered {
+      padding-right: 1rem;
+      background-image: none;
     }
   }
 }

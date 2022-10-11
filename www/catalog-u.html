@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
-    <link rel="stylesheet" href="/css/form-search.css">
+    <link rel="stylesheet" href="/css/search-form.css">
     <link rel="stylesheet" href="/css/catalog-page.css">
     <link rel="stylesheet" href="/css/catalog-templates.css">
 
@@ -256,19 +256,15 @@
 
           <div class="col-12 my-3 d-none d-lg-block">
             <div class="catalog-page-search">
-              <div class="form-search bill-search-widget">
+              <div class="form-search" id="form-search">
                 <div class="d-none d-lg-block">
                   <form action="">
                     <div class="form-group">
-                        <input type="text" class="form-control form-input input-search filled" id="searchbillform-search_tag3" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true" value="Киї">
+                        <input type="text" class="form-control form-input input-search filled" id="searchbillform-search_tag3" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
                         <label class="control-label form-label" for="searchbillform-search_tag3">Найдите сервис по названию</label>
                         <a href="#" class="form-search__cancel"></a>
                       </div>
-                      <div class="form-search__list">
-                        <div class="form-search__loading">
-                          <img src="img/form-search/form-search-loader.gif" alt="Loader">
-                        </div>
-                      </div>
+                      <div class="form-search__list"></div>
                   </form>
                 </div>
                 <a href="#" class="form-search__btn d-lg-none" data-toggle="modal" data-target="#searchModal">Найдите сервис по названию</a>
@@ -664,5 +660,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
+    <script src="/js/search-form.js"></script>
   </body>
 </html>

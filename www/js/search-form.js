@@ -77,7 +77,7 @@ $(document).ready(function() {
             },
             text: {
               ua: 'Авторизовані користувачі можуть зберігати шаблони платежів та не шукати сервіси повторно',
-              ru: 'Авторизованые пользователи могут сохранять шаблоны платежей и не искать сервисы повтроно',
+              ru: 'Авторизованые пользователи могут сохранять шаблоны платежей и не искать сервисы повторно',
               en: 'Authorized users can save payment templates and not look for services again'
             }
           }
@@ -167,14 +167,32 @@ $(document).ready(function() {
         if (document.cookie.split(';').filter(function(item) {
           return item.trim().indexOf('lastFiveBills=') == 0
         }).length) {
-          // cookieValue = JSON.parse(document.cookie.replace(/(?:(?:^|.*;\s*)lastFiveBills\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
+         // cookieValue = JSON.parse(decodeURIComponent(document.cookie.replace(/(?:(?:^|.*;\s*)lastFiveBills\s*\=\s*([^;]*).*$)|^.*$/, "$1")));
           cookieValue = getCookie('lastFiveBills');
           cookieValue = JSON.parse(cookieValue);
         }
 
+        // focus input on modal show
+        $('#searchModal').on('shown.bs.modal', function () {
+          $(this).find('.input-search').trigger('focus');
+        });
+
+        // prevent refresh page on Enter
+        $(document).on('keypress', function(e) {
+          if ((e.keyCode == '13') && inputSearch.is(':focus')) {
+            e.preventDefault();
+          }
+        });
+
         // search cancel button, hide modal
         inputSearch.closest('.form-group').find('.form-search__cancel').on('click', searchCancel);
-        $('#searchModal').on('hidden.bs.modal', searchCancel);
+        
+        // $('#searchModal').on('hidden.bs.modal', searchCancel);
+        $('#searchModal').on('hidden.bs.modal', function() {
+          $(this).find('.form-search__cancel').removeClass('active').end()
+            .find('.input-search').removeClass('filled').val('').end()
+            .find('.form-search__list').html('');
+        });
 
         function searchCancel(e) {
           e.preventDefault();
@@ -235,6 +253,7 @@ $(document).ready(function() {
             }
 
             document.cookie = 'lastFiveBills=' + encodeURIComponent(JSON.stringify(cookieValue)) + '; path=/';
+            // document.cookie = 'lastFiveBills=' + encodeURIComponent(JSON.stringify(cookieValue).replace(/\\'/g, "\\'")) + '; path=/';
           }
 
           // delete cookie
@@ -253,7 +272,7 @@ $(document).ready(function() {
           }).length) {
             cookieValue = getCookie('lastFiveBills');
             cookieValue = JSON.parse(cookieValue);
-            // cookieValue = JSON.parse(document.cookie.replace(/(?:(?:^|.*;\s*)lastFiveBills\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
+            // cookieValue = JSON.parse(decodeURIComponent(document.cookie.replace(/(?:(?:^|.*;\s*)lastFiveBills\s*\=\s*([^;]*).*$)|^.*$/, "$1")));
           }
 
           if (searchListWrapper.is(':empty') && (inputSearch.val().length === 0) && (cookieValue.length === 0)) {
@@ -325,6 +344,13 @@ $(document).ready(function() {
               success: function(data) {
                 const dataSize = Object.keys(data).length;
                 globalData = data;
+
+                // remove region from object to reduce volume of info to cookies
+                for (let prop in globalData) {
+                  if (globalData.hasOwnProperty(prop)) {
+                    globalData[prop]['region'] = {};
+                  }
+                }
 
                 searchListWrapper.html('');
 

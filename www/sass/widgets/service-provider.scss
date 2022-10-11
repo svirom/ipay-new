@@ -127,3 +127,19 @@
     font-weight: 700;
   }
 }
+
+.provider-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid $light-grey;
+  border-radius: 0.5rem;
+
+  img {
+    flex: 0 0 auto;
+    max-width: calc(100% - 8px);
+    max-height: calc(100% - 8px);
+  }
+}

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
-    <link rel="stylesheet" href="/css/form-search.css">
+    <link rel="stylesheet" href="/css/search-form.css">
     <link rel="stylesheet" href="/css/progressbar.css">
     <link rel="stylesheet" href="/css/service-provider.css">
     <link rel="stylesheet" href="/css/bill-fop.css">
@@ -254,13 +254,20 @@
                 <div class="bill-main bill-fop" id="bill-main-widget">
                   <div class="row">
 
-                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                    <div class="col-12 mt-lg-2 mb-3 d-lg-none">
                       <a href="#" class="btn btn-link btn-back">Платежи в бюджет</a>
                     </div>
 
                     <div class="col-12 mb-3">
                       <div class="bill-title">
-                        <h1>Оплата налогов ФОП</h1>
+                        <div class="row col-pad8">
+                          <h1 class="col text-break">Оплата налогов ФОП</h1>
+                          <div class="col-auto mb-2 d-lg-none">
+                            <div class="provider-title">
+                              <img src="img/providers/kyivgaz-img.png" alt="">
+                            </div>
+                          </div>
+                        </div>
                         <p>Оплата налогов за ФОП онлайн с помощью карт Visa/Mastercard</p>
                       </div>
                     </div>
@@ -585,5 +592,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>
     <script src="/js/select2-style.js"></script>
+    <script src="/js/search-form.js"></script>
   </body>
 </html>
