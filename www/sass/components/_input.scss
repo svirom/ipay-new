@@ -126,6 +126,10 @@
     background-color: $light-grey;
   }
 
+  &[readonly] {
+    pointer-events: none;
+  }
+
   &.input-icon-left {
     padding: 2.026rem 2.5rem 1.0775rem 3.75rem;
 
