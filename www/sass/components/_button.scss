@@ -413,6 +413,10 @@
   background-position: right 20px center;
   background-size: 31px;
 
+  &.btn-outline:not(:active) {
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.875 9.62305H23.625C25 9.62305 26.125 8.49805 26.125 7.12305V3.37305' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M27.375 15.248C27.375 21.8105 22.0625 27.123 15.5 27.123C8.9375 27.123 3.625 21.8105 3.625 15.248C3.625 8.68555 8.9375 3.37305 15.5 3.37305C19.6875 3.37305 23.3625 5.53555 25.475 8.79805' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
   @include until($md) {
     background-position: right 8px center;
   }
