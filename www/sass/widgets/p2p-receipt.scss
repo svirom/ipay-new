@@ -1,0 +1,99 @@
+// -------------------------------------------------------------------------------------
+// This file contains all styles related to the p2p send receipt widget of the site v2.0.
+// -------------------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.modal-receipt {
+  .modal-content {
+    border: 0;
+    border-radius: 0.5rem;
+  }
+
+  .modal-header {
+    padding: 1.5rem 5.125rem 1rem 1.5rem;
+    border-bottom: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0.625rem 0.8125rem;
+    border-top-right-radius: 0.5rem;
+    opacity: 1;
+  }
+
+  .modal-body {
+    padding: 0rem 1.5rem 1.5rem;
+
+    form {
+      margin-bottom: 0;
+    }
+
+    .form-label {
+      top: 1.0625rem;
+      font-size: 1rem;
+    }
+
+    .form-input {
+      font-size: 1rem;
+
+      &:focus, &.filled {
+        & ~ .form-label {
+          top: 10px;
+          font-size: 0.875rem;
+          line-height: 1.17;
+        }
+      }
+    }
+  }
+
+  &__sent {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: $light-green;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.62 19.5H3.38C2.34 19.5 1.5 18.66 1.5 17.62V6.38C1.5 5.34 2.34 4.5 3.38 4.5H20.62C21.66 4.5 22.5 5.34 22.5 6.38V17.62C22.5 18.66 21.66 19.5 20.62 19.5Z' stroke='%2309BC8A' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 6.49988L10.58 13.5799C11.36 14.3599 12.63 14.3599 13.41 13.5799L20.5 6.49988' stroke='%2309BC8A' stroke-width='0.670833' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 17.5L7.5 13.5' stroke='%2309BC8A' stroke-width='0.670833' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 13.5L20.5 17.5' stroke='%2309BC8A' stroke-width='0.670833' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: left 1rem top 0.375rem;
+    background-repeat: no-repeat;
+
+    p {
+      padding-left: 2rem;
+      color: $btn-green;
+      line-height: 1.17;
+    }
+  }
+
+  @include at-least($sm) {
+    .modal-dialog {
+      max-width: 400px;
+      margin-top: 5rem;
+    }
+  }
+
+  @include until($sm) {
+    &.modal {
+      background-color: #ffffff;
+    }
+
+    .modal-dialog {
+      margin: 0;
+    }
+
+    .modal-header {
+      padding-top: 2.75rem;
+      padding-right: 3.75rem;
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

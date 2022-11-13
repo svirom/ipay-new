@@ -1,0 +1,187 @@
+// -------------------------------------------------------------------------------------
+// This file contains all styles related to the p2p review widget of the site v2.0.
+// -------------------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.modal-review {
+  .modal-content {
+    border: 0;
+    border-radius: 0.5rem;
+  }
+
+  .modal-header {
+    padding: 1.5rem 5.125rem 1rem 1.5rem;
+    border-bottom: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0.625rem 0.8125rem;
+    border-top-right-radius: 0.5rem;
+    opacity: 1;
+  }
+
+  .modal-body {
+    padding: 0rem 1.5rem 1.5rem;
+
+    .form-label {
+      top: 1.0625rem;
+      font-size: 1rem;
+    }
+
+    .form-input {
+      font-size: 1rem;
+
+      &:focus, &.filled {
+        & ~ .form-label {
+          top: 10px;
+          font-size: 0.875rem;
+          line-height: 1.17;
+        }
+      }
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+
+    .rating-input {
+      flex: 0 0 auto;
+      margin-right: 1rem;
+      overflow: unset;
+
+      input {
+        width: 1px;
+        height: 1px;
+      }
+
+      label {
+        width: 2.125rem;
+        height: 2.125rem;
+        margin: 0 0.1875rem;
+        background-size: 2.125rem;
+
+        &:first-of-type {
+          margin-right: 0;
+        }
+
+        &:last-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .rating-result {
+      flex: 0 0 auto;
+      font-size: 0.875rem;
+
+      &.no-rating {
+        color: $main-blue;
+      }
+
+      &.rating-positive {
+        color: $dark-orange;
+      }
+    }
+  }
+
+  &__form {
+    .form-textarea {
+      padding-top: 1.5625rem;
+      border-width: 3px;
+      resize: none;
+      line-height: 1.17;
+
+      & ~ .form-label {
+        top: 3px;
+        left: 3px;
+        font-size: 0.875rem;
+        line-height: 1.17;
+      }
+    }
+
+    .has-success, .has-error {
+      .form-textarea {
+        & ~ .form-label {
+          top: 3px;
+          left: 3px;
+        }
+      }
+    }
+  }
+
+  &__rated {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: $light-yellow;
+
+    .modal-review__rated-text {
+      color: $dark-orange;
+
+      p {
+        @extend .modal-review__rated-text;
+      }
+    }
+
+    .modal-review__rating {
+      justify-content: center;
+
+      .rating-input__star {
+        width: 2.125rem;
+        height: 2.125rem;
+        margin-top: 0.125rem;
+        margin-bottom: 0;
+        background-size: 2.125rem;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      .rating-result {
+        font-size: 1rem;
+        color: $heading-color;
+    }
+    }
+  }
+
+  @include at-least($sm) {
+    .modal-dialog {
+      max-width: 400px;
+      margin-top: 5rem;
+    }
+  }
+
+  @include until($sm) {
+    &.modal {
+      background-color: #ffffff;
+    }
+
+    .modal-dialog {
+      margin: 0;
+    }
+
+    .modal-header {
+      padding-top: 2.75rem;
+      padding-right: 3rem;
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

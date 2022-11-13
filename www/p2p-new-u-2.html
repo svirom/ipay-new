@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/p2p-menu-mobile.css">
     <link rel="stylesheet" href="/css/p2p-logo-bank.css">
 
-    <title>P2P 2.0 Unregistered 1</title>
+    <title>P2P 2.0 Unregistered 2</title>
   </head>
   <body>
 
@@ -233,8 +233,8 @@
       <!-- main area & p2p main widget -->
       <main class="p2p-new" id="p2p-new-widget">
 
-        <!-- payment security -->
-        <div class="payment-security d-lg-none">
+        <!-- payment security mobile -->
+        <div class="payment-security d-sm-none">
           <span role="button" tabindex="0" class="p2p-popover" data-toggle="popover" data-content="На сторінці використовується асиметричне 256-бітне шифрування - один з найбезпечніших методів шифрування у світі" data-original-title="" title="">Цей платіж захищений</span>
         </div>
 
@@ -264,28 +264,49 @@
 
                 <div class="p2p-new__input-wrapper">
 
-                  <div class="p2p-new__popover-data" data-content-visa="Visa" data-content-mastercard="<p class='extra-small mb-0'>Основание</p><p class='small mb-2'>1966</p><p class='extra-small mb-0'>Расположение</p><p class='small mb-2'>США, Харрисон, Нью-Йорк</p><p class='extra-small mb-0'>Количесво карт в Украине</p><p class='small mb-2'>46,7 млн.</p><p class='small mb-0'>Cпасибо что выбрали оплату картой это уменьшает использование бумаги</p>" data-content-prostir="Prostir"></div>
+                  <div class="p2p-new__popover-data" data-content-visa="Visa" data-content-mastercard="<img src='img/p2p-new/popover-mastercard.svg' class='d-block mb-2' alt=''><p class='extra-small mb-0'>Основание</p><p class='small mb-2'>1966</p><p class='extra-small mb-0'>Расположение</p><p class='small mb-2'>США, Харрисон, Нью-Йорк</p><p class='extra-small mb-0'>Количесво карт в Украине</p><p class='small mb-2'>46,7 млн.</p><p class='small mb-0'>Cпасибо что выбрали оплату картой это уменьшает использование бумаги</p>" data-content-prostir="Prostir"></div>
 
-                  <div class="form-group p2p-new__card-target">
-                    <input type="tel" class="form-control form-input" id="p2pform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                  <div class="form-group p2p-new__card-target has-success">
+                    <input type="tel" class="form-control form-input filled" id="p2pform-target_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true" value="5555 5555 5555 5555">
                     <label class="control-label form-label" for="p2pform-target_card_pan">Карта получателя</label>
                     <a role="button" tabindex="0" class="p2p-new-popover p2p-new-popover--card p2p-popover" data-toggle="popover" data-title="" data-content=""></a>
                     <div class="help-block">Неверный номер карты</div>
                   </div>
 
-                  <div class="form-group p2p-new__card-amount">
-                    <input type="tel" class="form-control form-input" id="p2pform-invoice" name="P2pForm[invoice]" autocomplete="off" placeholder="0.00" aria-required="true">
+                  <div class="form-group p2p-new__card-amount has-success">
+                    <input type="tel" class="form-control form-input filled" id="p2pform-invoice" name="P2pForm[invoice]" autocomplete="off" placeholder="0.00" aria-required="true" value="100">
                     <label class="control-label form-label" for="p2pform-invoice">Сумма</label>
                     <a role="button" tabindex="0" class="p2p-new-popover p2p-new-popover--amount p2p-popover" data-toggle="popover" data-title="" data-content="Ви можете порахувати суму переказу безпосередньо в полі. Наприклад, 700+450-150"></a>
                     <div class="help-block">Сумма перевода должна быть больше 5</div>
-                    <p class="small heading-color mb-0 pt-1 pl-2">Комиссия 1% + 5грн: <span class="p2p-new__commission"><span id="commission">0.00</span> грн</span></p>
+                    <p class="small heading-color mb-0 pt-1 pl-2">Комиссия 1% + 5грн: <span class="p2p-new__commission"><span id="commission">6.00</span> грн</span></p>
                   </div>
 
-                  <div class="form-group">
-                    <input type="tel" class="form-control form-input" id="p2pform-sender_phone" name="P2pForm[sender_phone]" autocomplete="section-sender tel" required="required" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
+                  <div class="form-group has-success">
+                    <input type="tel" class="form-control form-input filled" id="p2pform-sender_phone" name="P2pForm[sender_phone]" autocomplete="section-sender tel" required="required" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00" value="+380 (66) 123 45 56">
                     <label class="control-label form-label" for="p2pform-sender_phone">Ваш номер телефона</label>
                     <a role="button" tabindex="0" class="p2p-new-popover p2p-new-popover--phone p2p-popover" data-toggle="popover" data-title="" data-content="Отримувач не побачить ваш телефон. Потрібен лише для зворонього зв’язку"></a>
                     <div class="help-block">Введите номер телефона</div>
+                  </div>
+
+                  <div class="p2p-new__welcome">
+                    <div class="alert alert-warning alert-face alert-dismissible fade show" role="alert">
+                      <p class="mb-1"><strong>С возвращением, Александр!</strong></p>
+                      <p class="mb-0"><a href="#">Войдите</a> и сохраняйте квитанции о переводах</p>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    </div>
+                  </div>
+
+                  <div class="p2p-new__result active">
+                    <div class="p2p-new__amount">
+                      <span>К переводу:</span>
+                      <span>106.00 грн</span>
+                    </div>
+                    <!-- payment security desktop -->
+                    <div class="payment-security payment-security--desktop">
+                      <span role="button" tabindex="0" class="p2p-popover" data-toggle="popover" data-content="На сторінці використовується асиметричне 256-бітне шифрування - один з найбезпечніших методів шифрування у світі" data-original-title="" title="">Цей платіж захищений</span>
+                    </div>
                   </div>
 
                   <div class="text-center mx-auto apple-google">

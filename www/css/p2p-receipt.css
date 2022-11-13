@@ -1,0 +1,84 @@
+.modal-receipt .modal-content {
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.modal-receipt .modal-header {
+  padding: 1.5rem 5.125rem 1rem 1.5rem;
+  border-bottom: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.modal-receipt .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0.625rem 0.8125rem;
+  border-top-right-radius: 0.5rem;
+  opacity: 1;
+}
+
+.modal-receipt .modal-body {
+  padding: 0rem 1.5rem 1.5rem;
+}
+
+.modal-receipt .modal-body form {
+  margin-bottom: 0;
+}
+
+.modal-receipt .modal-body .form-label {
+  top: 1.0625rem;
+  font-size: 1rem;
+}
+
+.modal-receipt .modal-body .form-input {
+  font-size: 1rem;
+}
+
+.modal-receipt .modal-body .form-input:focus ~ .form-label, .modal-receipt .modal-body .form-input.filled ~ .form-label {
+  top: 10px;
+  font-size: 0.875rem;
+  line-height: 1.17;
+}
+
+.modal-receipt__sent {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E9FCF3;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.62 19.5H3.38C2.34 19.5 1.5 18.66 1.5 17.62V6.38C1.5 5.34 2.34 4.5 3.38 4.5H20.62C21.66 4.5 22.5 5.34 22.5 6.38V17.62C22.5 18.66 21.66 19.5 20.62 19.5Z' stroke='%2309BC8A' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 6.49988L10.58 13.5799C11.36 14.3599 12.63 14.3599 13.41 13.5799L20.5 6.49988' stroke='%2309BC8A' stroke-width='0.670833' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.5 17.5L7.5 13.5' stroke='%2309BC8A' stroke-width='0.670833' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 13.5L20.5 17.5' stroke='%2309BC8A' stroke-width='0.670833' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: left 1rem top 0.375rem;
+  background-repeat: no-repeat;
+}
+
+.modal-receipt__sent p {
+  padding-left: 2rem;
+  color: #09BC8A;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 576px) {
+  .modal-receipt .modal-dialog {
+    max-width: 400px;
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .modal-receipt.modal {
+    background-color: #ffffff;
+  }
+  .modal-receipt .modal-dialog {
+    margin: 0;
+  }
+  .modal-receipt .modal-header {
+    padding-top: 2.75rem;
+    padding-right: 3.75rem;
+  }
+  .modal-receipt .modal-header h3 {
+    font-size: 1.25rem;
+  }
+}
+/*# sourceMappingURL=p2p-receipt.css.map */
