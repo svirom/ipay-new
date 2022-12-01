@@ -27,7 +27,7 @@ $(document).ready(function() {
       "opacity" : Math.random()+0.5,
       "transform" : "rotate("+Math.random()*360+"deg)"
     }).appendTo('.p2p-success');  
-    
+
     drop(i);
   }
   
@@ -36,7 +36,14 @@ $(document).ready(function() {
       top: "100%",
       left: "+="+Math.random()*15+"%"
     }, Math.random()*3000 + 3000, function() {
-      reset(x);
+      // reset(x);
+      setTimeout(function() {
+        for (var i = 0; i < 150; i++) {
+          $('.confetti-'+ i).fadeOut('slow', function() {
+            $('.confetti-'+ i).remove();
+          });
+        }
+      }, 3000);
     });
   }
   
@@ -45,7 +52,7 @@ $(document).ready(function() {
       "top" : -Math.random()*20+"%",
       "left" : "-="+Math.random()*15+"%"
     }, 0, function() {
-      drop(x);             
+      // drop(x);    
     });
   }
 

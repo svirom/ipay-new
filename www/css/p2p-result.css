@@ -81,8 +81,7 @@
 }
 
 .p2p-success__receipt .btn {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .p2p-success__receipt .btn span {
@@ -194,10 +193,6 @@
   .p2p-success__table-row span {
     font-size: 0.875rem;
   }
-  .p2p-success__receipt .btn {
-    padding-top: 0.375rem;
-    padding-bottom: 0.375rem;
-  }
   .p2p-success__footer .p2p-success__details, .p2p-success__footer .p2p-success__review {
     padding-left: 0;
     background-image: none;
@@ -218,6 +213,18 @@
     margin-bottom: 0.25rem;
     font-size: 0.875rem;
     color: #3B566E;
+  }
+  .p2p-success__receipt .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .p2p-success__receipt .row > [class^="col"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .p2p-success__receipt .btn {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
   }
 }
 

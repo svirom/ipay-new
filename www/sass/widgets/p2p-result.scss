@@ -82,8 +82,7 @@
     margin-top: 1.5rem;
     
     .btn {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
+      padding: 0.25rem 0.5rem;
 
       span {
         font-size: 1rem;
@@ -206,13 +205,6 @@
       }
     }
 
-    &__receipt {
-      .btn {
-        padding-top: 0.375rem;
-        padding-bottom: 0.375rem;
-      }
-    }
-
     &__footer {
       .p2p-success__details, .p2p-success__review {
         padding-left: 0;
@@ -234,6 +226,23 @@
             color: $text-color;
           }
         }
+      }
+    }
+
+    &__receipt {
+      .row {
+        margin-left: -8px;
+        margin-right: -8px;
+
+        & > [class^="col"] {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+      }
+      
+      .btn {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
       }
     }
   }

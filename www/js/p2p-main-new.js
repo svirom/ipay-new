@@ -4,8 +4,8 @@ $(document).ready(function() {
 
   // p2p popover
 	popoverOptions = {
-		// trigger: 'toggle',
-		trigger: 'click',
+		trigger: 'toggle',
+		// trigger: 'click',
 		html: true,
 		template: '<div class="popover popover-p2p" role="tooltip"><div class="arrow"></div><div class="popover-body"></div></div>'
 	}

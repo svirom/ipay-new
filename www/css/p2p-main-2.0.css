@@ -1945,4 +1945,123 @@ launch history styles
 .field-Тemplatep2p-target_card_guid {
   display: none;
 }
+
+.p2p-card-template ~ .form-group.has-success .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv),
+.p2p-card-template ~ .form-group.has-error .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv) {
+  background-image: none;
+}
+
+.p2p-card-template .p2p-card-dropdown {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  top: 1.125rem;
+  right: 1rem;
+  background: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.93182 8.51562L10.7932 13.377' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.7933 13.377L15.6546 8.51562' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  z-index: 100;
+}
+
+.p2p-card-template .p2p-card-dropdown[aria-expanded="true"] {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.p2p-card-template .dropdown-menu {
+  width: 100%;
+  top: auto !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  margin-top: 3.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+}
+
+.p2p-card-template .dropdown-menu .saved-card {
+  border-bottom: 1px solid #DEE7F3;
+}
+
+.p2p-card-template .dropdown-menu .saved-card:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.p2p-card-template .dropdown-menu .saved-card:last-of-type {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.saved-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4.625rem;
+  padding: 0 1rem 0 1.5rem;
+  cursor: pointer;
+}
+
+.saved-card .saved-card__title {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.17;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
+.saved-card .saved-card__mask {
+  font-size: 0.875rem;
+  color: #172A3A;
+}
+
+.saved-card .saved-card__type {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 0.5rem;
+  margin-bottom: 1px;
+  vertical-align: bottom;
+  border-radius: 2px;
+  background-color: #F0F5FA;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: calc(100% - 4px);
+}
+
+.saved-card .saved-card__type.type-card-mc {
+  background-image: url("../img/logo_mc.svg");
+}
+
+.saved-card .saved-card__type.type-card-visa {
+  background-image: url("../img/logo_visa.svg");
+}
+
+.saved-card .saved-card__type.type-card-cirus {
+  background-image: url("../img/logo_ms.png");
+}
+
+.saved-card .saved-card__type.type-card-prostir {
+  background-image: url("../img/logo_prostir.svg");
+}
 /*# sourceMappingURL=p2p-main-2.0.css.map */

@@ -18,8 +18,9 @@
     <link rel="stylesheet" href="/css/p2p-result.css">
     <link rel="stylesheet" href="/css/p2p-receipt.css">
     <link rel="stylesheet" href="/css/p2p-review.css">
+    <link rel="stylesheet" href="/css/p2p-save-card.css">
 
-    <title>P2P New Success</title>
+    <title>P2P New Success Save Card</title>
   </head>
   <body>
 
@@ -266,6 +267,16 @@
                             <h4 class="mb-1">Платеж успешен!</h4>
                             <p class="p2p-success__subtitle">Перевод с карты на карту</p>
                             <p class="p2p-success__amount">100.00 грн</p>
+                          </div>
+
+                          <div class="p2p-save-card">
+                            <div class="checkbox-control checkbox-switch mb-3" data-toggle="modal" data-target="#p2pSaveCard">
+                              <input class="checkbox-input" type="checkbox" id="checkbox-save-card">
+                              <label class="checkbox-label" for="checkbox-save-card">Сохранить карту получателя</label>
+                            </div>
+                            <div class="p2p-save-card__alert">
+                              <p class="mb-0">Карта получателя сохранена</p>
+                            </div>
                           </div>
 
                           <div class="p2p-success__table">
@@ -603,7 +614,7 @@
 
           <div class="modal-body">
 
-            <!-- <div class="modal-review__form">
+            <div class="modal-review__form">
               <p class="heading-color">Пожалуйста укажите вашу оценку качеству услуги</p>
               <div class="form-group modal-review__rating">
                 <div class="rating-input">
@@ -636,9 +647,9 @@
                 </div>
                 <button type="submit" class="btn btn-green btn-block" disabled>Отправить</button>
               </form>
-            </div> -->
+            </div>
 
-            <div class="modal-review__rated">
+            <!-- <div class="modal-review__rated">
               <div class="modal-review__rated-text text-center">
                 <h4>Благодарим за ваш отзыв!</h4>
                 <p>Он очень важен для нас</p>
@@ -653,9 +664,44 @@
                 </div>
                 <span class="rating-result rating-result--rated">5/5</span>
               </div>
-            </div>
+            </div> -->
 
-            <button type="button" class="btn btn-green btn-block mt-3" data-dismiss="modal" aria-label="Close">Закрыть</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal save card -->
+    <div class="modal fade modal-save-card" id="p2pSaveCard" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h2 class="mb-0">Сохранить карту получателя</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <form action="">
+              <div class="form-group">
+                <input type="tel" class="form-control form-input filled" id="save-card-name" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                <label class="control-label form-label" for="save-card-name">Название карты</label>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control form-input filled" id="save-card-number" name="form-login" autocomplete="off" placeholder="" aria-required="true" value="5168 66** **** 4567" disabled>
+                <label class="control-label form-label" for="save-card-number">Номер карты</label>
+              </div>
+              <button type="submit" class="btn btn-green btn-block">Сохранить</button>
+            </form>
 
           </div>
 
@@ -673,5 +719,6 @@
     <script src="/js/search-form.js"></script>
     <script src="/js/p2p-result.js"></script>
     <script src="/js/p2p-review.js"></script>
+    <script src="/js/p2p-save-card.js"></script>
   </body>
 </html>
