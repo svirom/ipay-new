@@ -10,6 +10,7 @@
 .p2p-save-card .checkbox-switch .checkbox-label {
   padding-right: 3.375rem;
   font-size: 1.125rem;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -64,6 +65,18 @@
   color: #0C6858;
   font-weight: 700;
   line-height: 1.25;
+}
+
+@media screen and (max-width: 767px) {
+  .p2p-save-card .checkbox-switch .checkbox-label {
+    font-size: 1rem;
+  }
+  .p2p-save-card .checkbox-switch .checkbox-label::before {
+    top: 0;
+  }
+  .p2p-save-card .checkbox-switch .checkbox-label::after {
+    top: 0.1875rem;
+  }
 }
 
 .modal-save-card .modal-content {

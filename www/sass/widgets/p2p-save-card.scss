@@ -17,6 +17,7 @@
     .checkbox-label {
       padding-right: 3.375rem;
       font-size: 1.125rem;
+      font-weight: 400;
       cursor: pointer;
 
       &::before {
@@ -72,6 +73,22 @@
       color: $dark-green;
       font-weight: 700;
       line-height: 1.25;
+    }
+  }
+
+  @include until($md) {
+    .checkbox-switch {
+      .checkbox-label {
+        font-size: 1rem;
+
+        &::before {
+          top: 0;
+        }
+
+        &::after {
+          top: 0.1875rem;
+        }
+      }
     }
   }
 }
