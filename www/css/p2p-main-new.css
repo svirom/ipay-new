@@ -12,23 +12,6 @@
 
 .p2p-new .form-input {
   padding: 2.1875rem 3rem 0.9375rem 0.8125rem;
-  font-weight: 700;
-}
-
-.p2p-new .form-input::-webkit-input-placeholder {
-  font-weight: 700;
-}
-
-.p2p-new .form-input:-ms-input-placeholder {
-  font-weight: 700;
-}
-
-.p2p-new .form-input::-ms-input-placeholder {
-  font-weight: 700;
-}
-
-.p2p-new .form-input::placeholder {
-  font-weight: 700;
 }
 
 .p2p-new .form-input:focus ~ .form-label,
@@ -171,6 +154,21 @@
   .p2p-new .form-label {
     top: 1.25rem;
     font-size: 1rem;
+  }
+  .p2p-new .form-input {
+    font-weight: 700;
+  }
+  .p2p-new .form-input::-webkit-input-placeholder {
+    font-weight: 700;
+  }
+  .p2p-new .form-input:-ms-input-placeholder {
+    font-weight: 700;
+  }
+  .p2p-new .form-input::-ms-input-placeholder {
+    font-weight: 700;
+  }
+  .p2p-new .form-input::placeholder {
+    font-weight: 700;
   }
   .p2p-new__title {
     max-width: 350px;
@@ -596,16 +594,6 @@ launch history styles
   }
 }
 
-.launch-header h2 {
-  font-size: 2.25rem;
-}
-
-.launch-header .launch-header__subtitle {
-  font-size: 1.375rem;
-  font-weight: 500;
-  line-height: 1.17;
-}
-
 .launch-header blockquote {
   position: relative;
   margin-top: 1.875rem;
@@ -653,21 +641,12 @@ launch history styles
 }
 
 @media screen and (max-width: 991px) {
-  .launch-header h2 {
-    font-size: 2rem;
-  }
   .launch-header blockquote {
     padding: 2.875rem 0.625rem 2.875rem 2.375rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .launch-header h2 {
-    font-size: 1.3125rem;
-  }
-  .launch-header .launch-header__subtitle {
-    font-size: 1rem;
-  }
   .launch-header blockquote {
     margin-top: 1rem;
     padding: 2.25rem 0 2.25rem 1.875rem;
@@ -990,11 +969,11 @@ launch history styles
 
 .p2p-card-template .p2p-card-dropdown {
   position: absolute;
-  width: 1.25rem;
-  height: 1.25rem;
-  top: 1.125rem;
-  right: 1rem;
-  background: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.93182 8.51562L10.7932 13.377' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.7933 13.377L15.6546 8.51562' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 1rem;
+  right: 0.875rem;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.16638 9.62891L12 15.4625' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 15.4619L17.8336 9.62831' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
