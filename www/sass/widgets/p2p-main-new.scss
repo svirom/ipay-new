@@ -84,6 +84,20 @@
     }
   }
 
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    .p2p-new__input-wrapper {
+      flex: 1 1 100%;
+      width: 100%;
+
+      &--target {
+        order: -1;
+      }
+    }
+  }
+
   .bank-card {
     padding: 2rem 1.875rem 0;
     border-radius: 1rem;
