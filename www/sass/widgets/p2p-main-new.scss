@@ -1111,3 +1111,185 @@ launch history styles
     }
   }
 }
+
+.save-card-functional {
+  display: flex;
+  align-items: center;
+  height: 3.375rem;
+  border-radius: 0.5rem;
+  background-color: $light-yellow;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__img {
+    position: relative;
+    flex: 0 0 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after, &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 2px solid $btn-red;
+      animation: animloader 2s linear infinite;
+    }
+
+    &::after {
+      animation-delay: -1s;
+    }
+  }
+
+  &__text {
+    color: $orange;
+    font-weight: 500;
+  }
+
+  @include until($lg) {
+    justify-content: center;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__img {
+      margin-left: 0;
+    }
+  }
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.modal-save-card-functional {
+  .modal-content {
+    border: 0;
+    border-radius: 0.625rem;
+  }
+
+  .modal-header {
+    justify-content: center;
+    padding: 2.5rem 1.5rem 0.25rem;
+    text-align: center;
+    border-bottom: 0;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+
+    p {
+      line-height: 1.1875;
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0.625rem 0.8125rem;
+    border-top-right-radius: 0.5rem;
+    opacity: 1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .modal-body {
+    padding: 1rem 2.5rem 1.5rem;
+  }
+
+  &__img {
+    position: relative;
+    margin-bottom: 1.25rem;
+    text-align: center;
+
+    img {
+      &:last-child {
+        margin-left: -84px;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-56px);
+
+      &::before {
+        content: url("../img/p2p-new/save-card-functional-arrow.png");
+      }
+    }
+  }
+
+  @include at-least($sm) {
+    .modal-dialog {
+      max-width: 730px;
+      margin-top: 5rem;
+    } 
+  }
+
+  @include until($sm) {
+    .modal-header {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+    }
+
+    .modal-body {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-bottom: 0.5rem;
+
+      p {
+        font-size: 0.875rem;
+      }
+    }
+
+    &__img {
+      margin-bottom: 3rem;
+
+      img {
+        max-width: 100%;
+
+        &:first-child {
+          margin-top: 6px;
+        }
+
+        &:last-child {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 186px;
+          margin-left: 0;
+        }
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

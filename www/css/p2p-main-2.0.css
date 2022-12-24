@@ -2064,4 +2064,213 @@ launch history styles
 .saved-card .saved-card__type.type-card-prostir {
   background-image: url("../img/logo_prostir.svg");
 }
+
+.save-card-functional {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.375rem;
+  width: 260px;
+  border-radius: 0.5rem;
+  background-color: #FEF7E0;
+}
+
+.save-card-functional:hover {
+  text-decoration: none;
+}
+
+.save-card-functional__img {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 3rem;
+          flex: 0 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.save-card-functional__img img {
+  position: relative;
+  z-index: 1;
+}
+
+.save-card-functional__img::after, .save-card-functional__img::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid #E84F35;
+  -webkit-animation: animloader 2s linear infinite;
+          animation: animloader 2s linear infinite;
+}
+
+.save-card-functional__img::after {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.save-card-functional__text {
+  color: #FFA727;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 991px) {
+  .save-card-functional {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .save-card-functional__img {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes animloader {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes animloader {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.modal-save-card-functional .modal-content {
+  border: 0;
+  border-radius: 0.625rem;
+}
+
+.modal-save-card-functional .modal-header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2.5rem 1.5rem 0.25rem;
+  text-align: center;
+  border-bottom: 0;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+
+.modal-save-card-functional .modal-header p {
+  line-height: 1.1875;
+}
+
+.modal-save-card-functional .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0.625rem 0.8125rem;
+  border-top-right-radius: 0.5rem;
+  opacity: 1;
+}
+
+.modal-save-card-functional .close:focus {
+  outline: none;
+}
+
+.modal-save-card-functional .modal-body {
+  padding: 1rem 2.5rem 1.5rem;
+}
+
+.modal-save-card-functional__img {
+  position: relative;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.modal-save-card-functional__img img:last-child {
+  margin-left: -84px;
+}
+
+.modal-save-card-functional__img span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-56px);
+          transform: translateX(-56px);
+}
+
+.modal-save-card-functional__img span::before {
+  content: url("../img/p2p/save-card-functional-arrow.png");
+}
+
+@media screen and (min-width: 576px) {
+  .modal-save-card-functional .modal-dialog {
+    max-width: 730px;
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .modal-save-card-functional .modal-header {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+  .modal-save-card-functional .modal-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.5rem;
+  }
+  .modal-save-card-functional .modal-body p {
+    font-size: 0.875rem;
+  }
+  .modal-save-card-functional__img {
+    margin-bottom: 3rem;
+  }
+  .modal-save-card-functional__img img {
+    max-width: 100%;
+  }
+  .modal-save-card-functional__img img:first-child {
+    margin-top: 6px;
+  }
+  .modal-save-card-functional__img img:last-child {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 186px;
+    margin-left: 0;
+  }
+  .modal-save-card-functional__img span {
+    display: none;
+  }
+}
 /*# sourceMappingURL=p2p-main-2.0.css.map */
