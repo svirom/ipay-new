@@ -1,0 +1,131 @@
+.statistics-header {
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: #E84F35;
+}
+
+.statistics-header__content h1, .statistics-header__content p {
+  color: #ffffff;
+}
+
+.statistics-header__content h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.statistics-header__content p {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+.snowflake {
+  position: relative;
+}
+
+.snowflake::before {
+  position: absolute;
+  content: '';
+  width: 37px;
+  height: 37px;
+  background: url("../img/account-statistics/snowflake.svg") center no-repeat;
+  -webkit-animation: 10s linear infinite showflake-rotate;
+          animation: 10s linear infinite showflake-rotate;
+}
+
+.snowflake.statistics-header__content::before {
+  top: -40px;
+  left: 110px;
+}
+
+.snowflake.statistics-header__img::before {
+  bottom: 68px;
+  left: -34px;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes showflake-rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes showflake-rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.progress-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.progress-card__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 4rem;
+          flex: 0 0 4rem;
+  max-width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.progress-card__progress {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.progress-card .progress-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.progress-card .progress-wrapper .progress {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.progress-card .progress-wrapper span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 51px;
+          flex: 0 0 51px;
+  max-width: 51px;
+  text-align: right;
+  line-height: 1.1875;
+}
+
+.progress-card:nth-of-type(4n-3) .progress-card__img {
+  background-color: #FF6A51;
+}
+
+.progress-card:nth-of-type(4n-2) .progress-card__img {
+  background-color: #FFA727;
+}
+
+.progress-card:nth-of-type(4n-1) .progress-card__img {
+  background-color: #64B3F7;
+}
+
+.progress-card:nth-of-type(4n) .progress-card__img {
+  background-color: #22D4A2;
+}
+/*# sourceMappingURL=account-statistics.css.map */
