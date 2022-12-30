@@ -2013,9 +2013,14 @@ launch history styles
   width: 260px;
   border-radius: 0.5rem;
   background-color: $light-yellow;
+  outline: none;
 
   &:hover {
     text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &__img {

@@ -1,3 +1,29 @@
+.account-statistics {
+  padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .account-statistics {
+    padding-bottom: 0;
+  }
+}
+
+.statistics-section {
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 991px) {
+  .statistics-section {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-section {
+    margin-top: 1.5rem;
+  }
+}
+
 .statistics-header {
   padding: 2.5rem;
   border-radius: 0.5rem;
@@ -18,6 +44,16 @@
   line-height: 1.4;
 }
 
+@media screen and (max-width: 767px) {
+  .statistics-header {
+    padding: 1.5rem;
+  }
+  .statistics-header__content h1 {
+    font-size: 1.625rem;
+    line-height: 1.23;
+  }
+}
+
 .snowflake {
   position: relative;
 }
@@ -28,8 +64,8 @@
   width: 37px;
   height: 37px;
   background: url("../img/account-statistics/snowflake.svg") center no-repeat;
-  -webkit-animation: 10s linear infinite showflake-rotate;
-          animation: 10s linear infinite showflake-rotate;
+  -webkit-animation: 10s linear infinite snowflake-rotate;
+          animation: 10s linear infinite snowflake-rotate;
 }
 
 .snowflake.statistics-header__content::before {
@@ -43,7 +79,13 @@
   animation-direction: reverse;
 }
 
-@-webkit-keyframes showflake-rotate {
+@media screen and (max-width: 767px) {
+  .snowflake::before {
+    display: none;
+  }
+}
+
+@-webkit-keyframes snowflake-rotate {
   from {
     -webkit-transform: rotate(0);
             transform: rotate(0);
@@ -54,7 +96,7 @@
   }
 }
 
-@keyframes showflake-rotate {
+@keyframes snowflake-rotate {
   from {
     -webkit-transform: rotate(0);
             transform: rotate(0);
@@ -62,6 +104,64 @@
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-cards [class^="col"] + [class^="col"] {
+    margin-top: 1.875rem;
+  }
+}
+
+.statistics-card {
+  height: 295px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+}
+
+.statistics-card p {
+  color: #172A3A;
+}
+
+.statistics-card__content {
+  padding-top: 1rem;
+}
+
+.statistics-card .statistics-card__amount {
+  margin-bottom: 0.3125rem;
+  color: #E84F35;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 143px;
+  }
+  .statistics-card > img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 72px;
+            flex: 0 0 72px;
+    width: 72px;
+  }
+  .statistics-card__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-top: 0;
+    padding-left: 1rem;
+  }
+  .statistics-card .statistics-card__amount {
+    font-size: 2rem;
   }
 }
 
@@ -73,9 +173,11 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  margin-top: 1.5rem;
 }
 
 .progress-card__img {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 4rem;
           flex: 0 0 4rem;
@@ -84,10 +186,119 @@
   border-radius: 50%;
 }
 
+.progress-card__img::before {
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../img/account-statistics/progress-card-sprite.png");
+  background-repeat: no-repeat;
+  background-size: 162px;
+}
+
+.progress-card--p2p .progress-card__img::before {
+  background-position: 0 0;
+}
+
+.progress-card--utility .progress-card__img::before {
+  background-position: -98px 0px;
+}
+
+.progress-card--internet .progress-card__img::before {
+  background-position: -33px -32px;
+}
+
+.progress-card--mobile .progress-card__img::before {
+  background-position: -130px -32px;
+}
+
+.progress-card--crossboard .progress-card__img::before {
+  background-position: -32px -64px;
+}
+
+.progress-card--p2r .progress-card__img::before {
+  background-position: -95px -64px;
+}
+
+.progress-card--by-email .progress-card__img::before {
+  background-position: 0px -96px;
+}
+
+.progress-card--by-phone .progress-card__img::before {
+  background-position: -66px -96px;
+}
+
+.progress-card--receive .progress-card__img::before {
+  background-position: -130px -96px;
+}
+
+.progress-card--kindergarten .progress-card__img::before {
+  background-position: -33px 0px;
+}
+
+.progress-card--tv .progress-card__img::before {
+  background-position: -130px 0px;
+}
+
+.progress-card--phone .progress-card__img::before {
+  background-position: -65px -32px;
+}
+
+.progress-card--security .progress-card__img::before {
+  background-position: 0px -64px;
+}
+
+.progress-card--transport .progress-card__img::before {
+  background-position: -62px -64px;
+}
+
+.progress-card--penalty .progress-card__img::before {
+  background-position: -127px -64px;
+}
+
+.progress-card--tourism .progress-card__img::before {
+  width: 33px;
+  height: 34px;
+  background-position: -33px -96px;
+}
+
+.progress-card--banks .progress-card__img::before {
+  background-position: -98px -96px;
+}
+
+.progress-card--education .progress-card__img::before {
+  background-position: 0px -129px;
+}
+
+.progress-card--business .progress-card__img::before {
+  background-position: -65px 0px;
+}
+
+.progress-card--charity .progress-card__img::before {
+  background-position: 0px -32px;
+}
+
+.progress-card--budget .progress-card__img::before {
+  background-position: -98px -32px;
+}
+
 .progress-card__progress {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  padding-left: 1.25rem;
+}
+
+.progress-card__progress > p {
+  color: #172A3A;
+}
+
+.progress-card__progress .progress-wrapper span {
+  font-weight: 700;
 }
 
 .progress-card .progress-wrapper {
@@ -102,6 +313,8 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
 }
 
 .progress-card .progress-wrapper span {
@@ -113,11 +326,26 @@
   line-height: 1.1875;
 }
 
+.progress-card .progress-wrapper .progress-bar {
+  font-size: 0;
+  line-height: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
 .progress-card:nth-of-type(4n-3) .progress-card__img {
   background-color: #FF6A51;
 }
 
+.progress-card:nth-of-type(4n-3) .progress-wrapper .progress-bar {
+  background-color: #E84F35;
+}
+
 .progress-card:nth-of-type(4n-2) .progress-card__img {
+  background-color: #FFA727;
+}
+
+.progress-card:nth-of-type(4n-2) .progress-wrapper .progress-bar {
   background-color: #FFA727;
 }
 
@@ -125,7 +353,307 @@
   background-color: #64B3F7;
 }
 
+.progress-card:nth-of-type(4n-1) .progress-wrapper .progress-bar {
+  background-color: #64B3F7;
+}
+
 .progress-card:nth-of-type(4n) .progress-card__img {
   background-color: #22D4A2;
+}
+
+.progress-card:nth-of-type(4n) .progress-wrapper .progress-bar {
+  background-color: #22D4A2;
+}
+
+@media screen and (max-width: 767px) {
+  .progress-card__img {
+    -ms-flex-preferred-size: 2.5rem;
+        flex-basis: 2.5rem;
+    max-width: 2.5rem;
+    height: 2.5rem;
+  }
+  .progress-card__img::before {
+    width: 16px;
+    height: 16px;
+    background-size: 81px;
+  }
+  .progress-card--p2p .progress-card__img::before {
+    background-position: 0 0;
+  }
+  .progress-card--utility .progress-card__img::before {
+    background-position: -49px 0px;
+  }
+  .progress-card--internet .progress-card__img::before {
+    background-position: -16px -16px;
+  }
+  .progress-card--mobile .progress-card__img::before {
+    background-position: -65px -16px;
+  }
+  .progress-card--crossboard .progress-card__img::before {
+    background-position: -16px -32px;
+  }
+  .progress-card--p2r .progress-card__img::before {
+    background-position: -47px -32px;
+  }
+  .progress-card--by-email .progress-card__img::before {
+    background-position: 0px -48px;
+  }
+  .progress-card--by-phone .progress-card__img::before {
+    background-position: -33px -48px;
+  }
+  .progress-card--receive .progress-card__img::before {
+    background-position: -65px -48px;
+  }
+  .progress-card--kindergarten .progress-card__img::before {
+    background-position: -16px 0px;
+  }
+  .progress-card--tv .progress-card__img::before {
+    background-position: -65px 0px;
+  }
+  .progress-card--phone .progress-card__img::before {
+    background-position: -32px -16px;
+  }
+  .progress-card--security .progress-card__img::before {
+    background-position: 0px -32px;
+  }
+  .progress-card--transport .progress-card__img::before {
+    background-position: -31px -32px;
+  }
+  .progress-card--penalty .progress-card__img::before {
+    background-position: -64px -32px;
+  }
+  .progress-card--tourism .progress-card__img::before {
+    width: 17px;
+    height: 18px;
+    background-position: -16px -48px;
+  }
+  .progress-card--banks .progress-card__img::before {
+    background-position: -49px -48px;
+  }
+  .progress-card--education .progress-card__img::before {
+    background-position: 0px -65px;
+  }
+  .progress-card--business .progress-card__img::before {
+    background-position: -32px 0px;
+  }
+  .progress-card--charity .progress-card__img::before {
+    background-position: 0px -16px;
+  }
+  .progress-card--budget .progress-card__img::before {
+    background-position: -49px -16px;
+  }
+}
+
+.statistics-fact {
+  border: 1px solid #DEE7F3;
+  border-radius: 0.5rem;
+}
+
+.statistics-fact--1 {
+  padding: 0.875rem 2.5rem 0 0.875rem;
+}
+
+.statistics-fact--2 .statistics-fact__content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-fact--1 {
+    padding: 0.875rem 1.5rem 2rem;
+    text-align: center;
+  }
+  .statistics-fact--1 .statistics-fact__content {
+    padding-top: 1rem;
+  }
+  .statistics-fact--2 {
+    padding: 0 1.5rem 1.5rem;
+  }
+  .statistics-fact--2 .statistics-fact__content {
+    padding-top: 1.875rem;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+}
+
+.statistics-method__img {
+  width: 10rem;
+  height: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.9375rem;
+  border-radius: 50%;
+  background-color: #F0F5FA;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.statistics-method__alert {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 542px;
+  min-height: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1rem 1rem 6rem;
+  border-radius: 0.5rem;
+  background-color: #FEF7E0;
+}
+
+.statistics-method__alert::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #FFD578;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.statistics-method__alert > * {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.statistics-method--custom .statistics-method__img {
+  background-image: url("../img/account-statistics/statistics-custom.svg");
+}
+
+.statistics-method--custom .statistics-method__alert::before {
+  background-image: url("../img/account-statistics/statistics-type-1.png");
+}
+
+.statistics-method--applepay .statistics-method__alert::before, .statistics-method--googlepay .statistics-method__alert::before, .statistics-method--saved .statistics-method__alert::before {
+  background-image: url("../img/account-statistics/statistics-type-2.png");
+}
+
+.statistics-method--applepay .statistics-method__img {
+  background-image: url("../img/account-statistics/statistics-applepay.svg");
+}
+
+.statistics-method--googlepay .statistics-method__img {
+  background-image: url("../img/account-statistics/statistics-googlepay.svg");
+}
+
+.statistics-method--saved .statistics-method__img {
+  background-image: url("../img/account-statistics/statistics-saved.svg");
+}
+
+.statistics-templates {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+}
+
+.statistics-templates__content .statistics-templates__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.statistics-templates__content .statistics-templates__amount span:first-child {
+  margin-right: 1rem;
+  color: #E84F35;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statistics-templates__content .statistics-templates__amount span:last-child {
+  color: #172A3A;
+}
+
+.statistics-templates__alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #FFE7E6;
+}
+
+.statistics-templates--single .statistics-templates__alert {
+  background-color: #F0F5FA;
+}
+
+.statistics-templates--many .statistics-templates__alert {
+  background-color: #E9FCF3;
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-templates {
+    padding: 2rem 1.5rem;
+  }
+  .statistics-templates__img {
+    padding-top: 1.625rem;
+    text-align: center;
+  }
+}
+
+.statistics-rank {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: #FEF7E0;
+}
+
+.statistics-rank__img {
+  width: 4rem;
+  height: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background-color: #FFD578;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+}
+
+.statistics-rank p {
+  max-width: 633px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statistics-rank--first .statistics-rank__img {
+  background-image: url("../img/account-statistics/statistics-rank-first.png");
+}
+
+.statistics-rank--second .statistics-rank__img {
+  background-image: url("../img/account-statistics/statistics-rank-second.png");
+}
+
+.statistics-rank--third .statistics-rank__img {
+  background-image: url("../img/account-statistics/statistics-rank-third.png");
+}
+
+.statistics-review__img {
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-review__img {
+    padding-top: 0.75rem;
+    text-align: center;
+  }
+  .statistics-review__img > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /*# sourceMappingURL=account-statistics.css.map */
