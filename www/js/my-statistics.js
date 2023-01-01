@@ -31,7 +31,15 @@ $(document).ready(function() {
 
               if ($element.hasClass('progress-card')) {
                 $element.find('.progress-wrapper > span').text(Math.ceil(now) + '%');
-                $element.find('.progress-bar').css('width', Math.ceil(now) + '%').attr('aria-valuenow', Math.ceil(now) + '%');
+                // $element.find('.progress-bar').css('width', Math.ceil(now) + '%').attr('aria-valuenow', Math.ceil(now) + '%');
+              }
+
+              if ($element.hasClass('statistics-templates__amount')) {
+                $element.find('> span:first-child').text(Math.ceil(now));
+              }
+
+              if ($element.hasClass('statistics-rank')) {
+                $element.find('h2 > span').text(Math.ceil(now));
               }
             },
             complete: function() {
@@ -40,6 +48,8 @@ $(document).ready(function() {
             },
           });
         // }
+
+        $element.find('.progress-bar').css('width', $element.data('amount') + '%').attr('aria-valuenow', $element.data('amount') + '%');
       }
       
     });

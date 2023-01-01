@@ -385,10 +385,8 @@
     }
 
     .progress-bar {
-      font-size: 0;
-      line-height: 0;
-      border-top-right-radius: 0.5rem;
-      border-bottom-right-radius: 0.5rem;
+      border-radius: 0.5rem;
+      transition: width 1.5s ease;
     }
   }
 
@@ -815,6 +813,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 32px;
+  }
+
+  h2 {
+    span {
+      display: inline-block;
+      width: 32px;
+      color: $heading-color;
+      font-family: $heading-font;
+      font-weight: 700;
+      text-align: right;
+    }
   }
 
   p {

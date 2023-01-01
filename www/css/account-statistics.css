@@ -327,10 +327,9 @@
 }
 
 .progress-card .progress-wrapper .progress-bar {
-  font-size: 0;
-  line-height: 0;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: width 1.5s ease;
+  transition: width 1.5s ease;
 }
 
 .progress-card:nth-of-type(4n-3) .progress-card__img {
@@ -621,6 +620,15 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 32px;
+}
+
+.statistics-rank h2 span {
+  display: inline-block;
+  width: 32px;
+  color: #172A3A;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: right;
 }
 
 .statistics-rank p {
