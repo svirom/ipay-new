@@ -1,0 +1,348 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account collection widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-collection {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+}
+
+.collection-card-new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 183px;
+  padding: 0.875rem;
+  border: 2px dashed $middle-grey;
+  border-radius: 0.5rem;
+  background-color: #fff;
+
+  p {
+    margin-top: 0.9375rem;
+    margin-bottom: 0;
+    @include font(1.125rem, 700, 1.167);
+    color: $heading-color;
+  }
+
+  &:hover {
+    text-decoration: none;
+    border-color: transparent;
+    box-shadow: 0px 5px 10px $card-shadow;
+  }
+
+  @include until($xl) {
+    height: 200px;
+  }
+
+  @include until($md) {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: auto;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.1543 1.52197V16.658' stroke='%233B566E' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.7097 9.09033H1.59863' stroke='%233B566E' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: right 0.875rem center;
+    background-repeat: no-repeat;
+
+    p {
+      margin-top: 0.125rem;
+      margin-left: 1.1875rem;
+    }
+  }
+}
+
+.collection-card {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 183px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 10px $box-shadow;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 17.8335L15.8336 11.9999' stroke='%233B566E' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.8335 12L9.99989 6.16639' stroke='%233B566E' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right 1rem bottom 1rem;
+  background-repeat: no-repeat;
+  transition: background-position 0.2s ease;
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0px 5px 10px $card-shadow;
+    background-position: right 0.75rem bottom 1rem;
+  }
+
+  &__header {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  &__img {
+    // position: relative;
+    flex: 0 0 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.25rem;
+    border: 2px solid $light-grey;
+    border-radius: 50%;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .collection-card__status {
+    position: relative;
+    padding: 0.25rem 0.5rem 0.25rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0.5625rem;
+      left: 0.5rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+    }
+
+    &--active {
+      color: $btn-green;
+      background-color: $light-green;
+
+      &::before {
+        background-color: $btn-green;
+      }
+    }
+
+    &--inactive {
+      color: $dark-orange;
+      background-color: $light-yellow;
+
+      &::before {
+        background-color: $dark-orange;
+      }
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .collection-card__title {
+    color: $heading-color;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;
+  }
+
+  &__amount {
+    p {
+      &:first-child {
+        font-size: 0.875rem;
+      }
+
+      &:last-child {
+        padding-right: 1.5rem;
+        color: $heading-color;
+
+        span {
+          color: $heading-color;
+
+          &:first-child {
+            font-weight: 700;
+          }
+
+          &:last-child {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include until($xl) {
+    height: 200px;
+
+    &__amount {
+      p {
+        &:last-child {
+          span {
+            &:last-child {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    height: auto;
+    min-height: 162px;
+
+    &__amount {
+      p {
+        &:last-child {
+          span {
+            &:last-child {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// .progress {
+//   width: 150px;
+//   height: 150px !important;
+//   float: left; 
+//   line-height: 150px;
+//   background: none;
+//   margin: 20px;
+//   box-shadow: none;
+//   position: relative;
+// }
+// .progress:after {
+//   content: "";
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 50%;
+//   border: 12px solid #fff;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+// .progress>span {
+//   width: 50%;
+//   height: 100%;
+//   overflow: hidden;
+//   position: absolute;
+//   top: 0;
+//   z-index: 1;
+// }
+// .progress .progress-left {
+//   left: 0;
+// }
+// .progress .progress-bar {
+//   width: 100%;
+//   height: 100%;
+//   background: none;
+//   border-width: 12px;
+//   border-style: solid;
+//   position: absolute;
+//   top: 0;
+// }
+// .progress .progress-left .progress-bar {
+//   left: 100%;
+//   border-top-right-radius: 80px;
+//   border-bottom-right-radius: 80px;
+//   border-left: 0;
+//   -webkit-transform-origin: center left;
+//   transform-origin: center left;
+// }
+// .progress .progress-right {
+//   right: 0;
+// }
+// .progress .progress-right .progress-bar {
+//   left: -100%;
+//   border-top-left-radius: 80px;
+//   border-bottom-left-radius: 80px;
+//   border-right: 0;
+//   -webkit-transform-origin: center right;
+//   transform-origin: center right;
+//   // animation: loading-1 1.8s linear forwards;
+// }
+// .progress .progress-value {
+//   width: 90%;
+//   height: 90%;
+//   border-radius: 50%;
+//   background: #000;
+//   font-size: 24px;
+//   color: #fff;
+//   line-height: 135px;
+//   text-align: center;
+//   position: absolute;
+//   top: 5%;
+//   left: 5%;
+// }
+// .progress.blue .progress-bar {
+//   border-color: #049dff;
+// }
+// .progress.blue .progress-left .progress-bar {
+//   animation: loading-2 1.5s linear forwards 1.8s;
+// }
+
+// @keyframes loading-1 {
+//   0% {
+//     -webkit-transform: rotate(0deg);
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     -webkit-transform: rotate(180deg);
+//     transform: rotate(180deg);
+//   }
+// }
+// @keyframes loading-2 {
+//   0% {
+//     -webkit-transform: rotate(0deg);
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     -webkit-transform: rotate(144deg);
+//     transform: rotate(144deg);
+//   }
+// }
+
+// .progress.yellow .progress-bar {
+//   border-color: #fdba04;
+// }
+// .progress.yellow .progress-right .progress-bar {
+//   // animation: loading-3 1.8s linear forwards;
+//   transform: rotate(135deg);
+// }
+// .progress.yellow .progress-left .progress-bar {
+//   animation: none;
+// }
+
+// @keyframes loading-3 {
+//   0% {
+//     -webkit-transform: rotate(0deg);
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     -webkit-transform: rotate(135deg);
+//     transform: rotate(135deg);
+//   }
+// }
