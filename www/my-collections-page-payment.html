@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
-    <link rel="stylesheet" href="/css/catalogue-account.css">
+    <link rel="stylesheet" href="/css/search-form.css">
     <link rel="stylesheet" href="/css/account-main.css">
     <link rel="stylesheet" href="/css/account-collection.css">
 
-    <title>Мои сборы</title>
+    <title>Платеж Mobile Payment конструктор</title>
   </head>
   <body>
 
@@ -26,17 +26,14 @@
             </div>
             <nav class="">
               <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги для оплаты</a>
+                </li>
                 <li class="main-nav__item">
                   <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
                     <span>Безопасность </span>
                     <span>плательщиков</span>
                   </a>
-                </li>
-                <li class="main-nav__item main-nav__item--bonuses">
-                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
-                    <span class="main-nav__bonus">1543 </span>
-                    <span>бонусов</span>
-                  </span>
                 </li>
                 <li class="main-nav__item main-nav__item--lang dropdown">
                   <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
@@ -47,24 +44,16 @@
                   </div>
                 </li>
                 <li class="main-nav__item dropdown">
-                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
-                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
-                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
-                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
-                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
-                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
-                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
                   </div>
                 </li>
               </ul>
               <ul class="main-nav__nav-mobile">
-                <li class="main-nav__item-account">
-                  <span class="main-nav__item-account--registered">Мой кабинет</span>
-                  <span>Альберт</span>
-                </li>
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
                 <li class="main-nav__item main-nav__item-mobile">
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
@@ -73,16 +62,14 @@
                     <div class="navbar-collapse__menu">
                       <ul>
                         <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
-                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
-                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
-                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
-                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
-                        <li><a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a></li>
-                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
-                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
                       <div class="mobile-lang">
                         <span>Язык:</span>
                         <ul class="mobile-lang__list">
@@ -228,8 +215,13 @@
                     <span>Мой кабинет</span>
                   </a>
                 </li>
+                <li>
+                  <a href="#">
+                    <span>Сбор средств</span>
+                  </a>
+                </li>
                 <li class="active" aria-current="page">
-                  <span>Мои карты</span>
+                  <span>На подарок Александре</span>
                 </li>
               </ul>
             </div>
@@ -240,67 +232,9 @@
       <!-- main content -->
       <div class="container main-content">
         <div class="row">
-          <!-- aside area -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="row">
-
-              <div class="col-12 mb-5">
-                <!-- account catalogue widget -->
-                <div class="catalogue-account" id="catalogue-account-widget">
-                  <ul class="catalogue-account__list">
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__account">
-                        <span>Мой кабинет</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__archive">
-                        <span>Архив платежей</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__templates active">
-                        <span>Мои сборы</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__templates">
-                        <span>Мои шаблоны</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__cards">
-                        <span>Мои карты</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
-                        <span>Мои бонусы</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__ipayplus">
-                        <span>iPay+</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="catalogue-account__item catalogue-account__settings">
-                        <span>Мой профиль</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div><!-- account catalogue widget -->
-              </div>
-
-              <div class="col-12 mb-2">
-                <div class="banner banner-w100"></div>
-              </div>
-
-            </div>
-            
-          </aside><!-- aside area -->
+          
           <!-- main area -->
-          <main class="col-lg-9">
+          <main class="col-12">
 
             <div class="row">
 
@@ -309,82 +243,61 @@
                 <div class="account-main" id="account-main-widget">
 
                   <div class="row">
-                    <div class="col-12 mt-2 mb-3 d-lg-none">
-                      <a href="#" class="btn btn-link btn-back">Мой кабинет</a>
+                    <div class="col-12 mt-lg-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Отчет о переводах</a>
                     </div>
                   </div>
 
-                  <!-- account collection widget -->
-                  <div class="account-collection" id="account-collection-widget">
+                  <div class="row">
+                    <div class="col-12">
+                      <!-- archive payment widget -->
+                      <div class="collection-payment" id="collection-payment-widget">
 
-                    <h1 class="mb-3 mb-md-4">Сбор денег карту</h1>
+                        <h1 class="mb-3">Детали перевода</h1>
 
-                    <p>Страница сбора денег - ваша персональная платежная страница для сбора денег с группы людей на личную банковскую карту.</p>
-
-                    <div class="account-collection__cards">
-                      <div class="row">
-
-                        <div class="col-md-4">
-                          <a href="#" class="collection-card-new">
-                            <img src="img/constructor/collection-card-new.svg" alt="Icon">
-                            <p class="mb-0">Создать сбор</p>
-                          </a>
+                        <div class="collection-payment__card">
+                          <div class="collection-payment__card-row">
+                            <span>Сумма</span>
+                            <span>250.00 грн</span>
+                          </div>
+                          <div class="collection-payment__card-row">
+                            <span>Дата платежа</span>
+                            <span>20/02/22 18:01</span>
+                          </div>
                         </div>
 
-                        <div class="col-12 d-md-none mt-4">
-                          <p><strong>Мои сборы</strong></p>
+                        <div class="collection-payment__table">
+                          <div class="collection-payment__table-row">
+                            <p>Телефон</p>
+                            <p>+380 (67) 123 44 67</p>
+                          </div>
+                          <div class="collection-payment__table-row">
+                            <p>ФИО</p>
+                            <p>Кузьменко Владислав Генадьевич</p>
+                          </div>
+                          <div class="collection-payment__table-row">
+                            <p>Никнейм</p>
+                            <p>kyzmenko1994</p>
+                          </div>
+                          <div class="collection-payment__table-row">
+                            <p>e-mail</p>
+                            <p>kyzmenko19942345@gmail.com</p>
+                          </div>
+                          <div class="collection-payment__table-row">
+                            <p>Номер артиркул</p>
+                            <p>2133425</p>
+                          </div>
+                          <div class="collection-payment__table-row">
+                            <p>Город</p>
+                            <p>Киев</p>
+                          </div>
                         </div>
 
-                        <div class="col-md-4">
-                          <a href="#" class="collection-card">
-                            <div class="collection-card__header">
-                              <div class="collection-card__img">
-                                <!-- <div class="progress yellow">
-                                  <span class="progress-left">
-                                    <span class="progress-bar"></span>
-                                  </span>
-                                  <span class="progress-right">
-                                    <span class="progress-bar"></span>
-                                  </span>
-                                  <div class="progress-value">90%</div>
-                                </div> -->
-                                <img src="img/constructor/collection-card/collection-card-1.svg" alt="Icon">
-                              </div>
-                              <span class="collection-status collection-status--active">Активный</span>
-                            </div>
-                            <div class="collection-card__content">
-                              <p class="collection-card__title">На подарок Александре</p>
-                              <div class="collection-card__amount">
-                                <p>Собрано</p>
-                                <p><span>20 000.00 грн</span><span></span></p>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <div class="col-md-4">
-                          <a href="#" class="collection-card">
-                            <div class="collection-card__header">
-                              <div class="collection-card__img">
-                                <img src="img/constructor/collection-card/collection-card-3.svg" alt="Icon">
-                              </div>
-                              <span class="collection-status collection-status--inactive">Не активный</span>
-                            </div>
-                            <div class="collection-card__content">
-                              <p class="collection-card__title">Сбор денег Дмитрию Александров</p>
-                              <div class="collection-card__amount">
-                                <p>Собрано</p>
-                                <p><span>20 000.00 грн</span><span> / 100 000 грн</span></p>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
+                        <a href="#" class="btn btn-outline btn-block">Назад к отчету</a>
 
                       </div>
                     </div>
-                        
-      
-                  </div><!-- account collection widget -->
+                  </div>
                   
                 </div><!-- account main widget -->
               </div>
@@ -477,6 +390,28 @@
       </div>
     </div><!-- footer -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__cancel"></a>
+              </div>
+              <div class="form-search__list"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -484,6 +419,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
-    <script src="/js/account-cards.js"></script>
+    <script src="/js/search-form.js"></script>
   </body>
 </html>
