@@ -2,16 +2,13 @@
   padding-top: 1.75rem;
   padding-bottom: 3.75rem;
 }
-
 .landing-wrapper h1 {
   font-size: 2.625rem;
   color: #ffffff;
 }
-
 .landing-wrapper h2 {
   line-height: 1.3;
 }
-
 .landing-wrapper .btn-landing {
   max-width: 15.625rem;
   padding: 0.75rem 1rem;
@@ -19,7 +16,6 @@
   border-color: #E84F35;
   background-color: #E84F35;
 }
-
 @media screen and (max-width: 991px) {
   .landing-wrapper {
     padding-top: 1rem;
@@ -28,7 +24,6 @@
     font-size: 1.75rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .landing-wrapper .btn-landing {
     display: block;
@@ -38,7 +33,6 @@
     font-size: 1.5rem;
   }
 }
-
 @media screen and (max-width: 575px) {
   .landing-wrapper {
     padding-bottom: 2.5rem;
@@ -59,10 +53,9 @@
   overflow: hidden;
   z-index: 2;
 }
-
 .landing-header::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 63px;
   right: -100px;
   width: 25rem;
@@ -72,72 +65,52 @@
   background-color: rgba(255, 181, 51, 0.04);
   z-index: -1;
 }
-
 .landing-header__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
 }
-
 .landing-header__content p {
   font-size: 1.5rem;
   color: #ffffff;
 }
-
 .landing-header__content .landing-header__date {
   color: #E84F35;
   font-weight: 700;
 }
-
 .landing-header__content .landing-header__subtitle {
   max-width: 33.75rem;
 }
-
 .landing-header__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
 .landing-header__logo-img {
   position: relative;
 }
-
 .landing-header__logo-img:last-of-type {
   margin-left: 2.25rem;
   padding-top: 0.25rem;
 }
-
 .landing-header__logo-img:last-of-type::before {
   position: absolute;
-  content: '';
+  content: "";
   top: -5px;
   left: -1.125rem;
   width: 0;
   height: calc(100% + 10px);
-  border-left: 0.61728px solid #F0F5FA;
+  border-left: 0.617284px solid #F0F5FA;
 }
-
 .landing-header__img {
   margin-left: -104px;
 }
-
 @media screen and (max-width: 1199px) {
   .landing-header__img {
     margin-left: -32px;
   }
 }
-
 @media screen and (max-width: 991px) {
   .landing-header__content p {
     font-size: 1rem;
@@ -150,7 +123,6 @@
     padding-top: 0.75rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .landing-header {
     padding-top: 2.8125rem;
@@ -158,8 +130,7 @@
   }
   .landing-header::before {
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     right: -270px;
   }
   .landing-header__content .landing-header__date {
@@ -180,12 +151,10 @@
 .landing-conditions {
   padding-top: 2.5rem;
 }
-
 .landing-conditions p {
   font-size: 1.125rem;
   color: #172A3A;
 }
-
 @media screen and (max-width: 767px) {
   .landing-conditions {
     padding-top: 1.5rem;
@@ -195,20 +164,13 @@
 .landing-condition {
   padding-bottom: 2.5rem;
 }
-
 .landing-condition__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 1rem;
 }
-
 .landing-condition__title span {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: 3rem;
   height: 3rem;
   margin-right: 1rem;
@@ -219,7 +181,6 @@
   border-radius: 50%;
   background-color: #E84F35;
 }
-
 @media screen and (max-width: 767px) {
   .landing-condition {
     padding-bottom: 1.5rem;
@@ -232,19 +193,16 @@
 .landing-prizes {
   padding-top: 2.5rem;
 }
-
 .landing-prizes__title {
   margin-bottom: 1rem;
   text-align: center;
   font-size: 2.125rem;
 }
-
 .landing-prizes__title span {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #E84F35;
 }
-
 @media screen and (max-width: 767px) {
   .landing-prizes {
     padding-top: 1.5rem;
@@ -258,54 +216,40 @@
 .landing-prize {
   text-align: center;
 }
-
 .landing-prize img {
   max-width: 100%;
 }
-
 .landing-prize__img {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
   height: 21.875rem;
   margin-bottom: 1rem;
 }
-
 .landing-prize__img::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0.75rem;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 13.25rem;
   height: 13.25rem;
   border-radius: 50%;
   background-color: #E84F35;
   z-index: -1;
 }
-
 .landing-prize--prize2 .landing-prize__img {
   padding-bottom: 1rem;
 }
-
 .landing-prize--prize3 .landing-prize__img {
   padding-bottom: 1.1875rem;
 }
-
 @media screen and (max-width: 1199px) {
   .landing-prize__img {
     height: 18.75rem;
   }
 }
-
 @media screen and (max-width: 991px) {
   .landing-prize__img {
     height: 13.125rem;
@@ -322,7 +266,6 @@
     font-size: 1rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .landing-prize {
     padding-top: 1.5rem;
@@ -335,42 +278,30 @@
 .landing-promo {
   padding-top: 105px;
 }
-
 .landing-promo__card {
   border-radius: 0.5rem;
   background-color: #172A3A;
 }
-
 .landing-promo__img {
   margin-top: -86px;
   margin-left: -26px;
   margin-bottom: -10px;
 }
-
 .landing-promo__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
   padding-right: 2.0625rem;
   font-size: 1.5rem;
 }
-
 .landing-promo__text p {
   color: #ffffff;
   font-size: 1.875rem;
 }
-
 .landing-promo__text .btn-landing {
   max-width: 13.75rem;
 }
-
 @media screen and (max-width: 991px) {
   .landing-promo {
     padding-top: 124px;
@@ -382,10 +313,7 @@
     text-align: center;
   }
   .landing-promo__text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     font-size: 1.5rem;
@@ -398,13 +326,11 @@
     margin-bottom: 2.125rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .landing-promo {
     padding-top: 84px;
   }
 }
-
 @media screen and (max-width: 575px) {
   .landing-promo__card {
     margin-left: -15px;
@@ -426,15 +352,12 @@
 .landing-bottom {
   padding-top: 3.625rem;
 }
-
 .landing-bottom .btn-landing {
   max-width: 21.875rem;
   margin: 0 auto;
 }
-
 @media screen and (max-width: 767px) {
   .landing-bottom {
     padding-top: 1.5rem;
   }
-}
-/*# sourceMappingURL=giftsForPayments-landing.css.map */
+}/*# sourceMappingURL=giftsForPayments-landing.css.map */

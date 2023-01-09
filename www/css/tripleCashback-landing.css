@@ -2,16 +2,13 @@
   padding-top: 1.75rem;
   padding-bottom: 3.75rem;
 }
-
 .landing-wrapper h1 {
   font-size: 2.625rem;
   color: #ffffff;
 }
-
 .landing-wrapper h2 {
   line-height: 1.3;
 }
-
 .landing-wrapper .btn-landing {
   max-width: 15.625rem;
   padding: 0.75rem 1rem;
@@ -19,7 +16,6 @@
   border-color: #E84F35;
   background-color: #E84F35;
 }
-
 @media screen and (max-width: 991px) {
   .landing-wrapper {
     padding-top: 1rem;
@@ -28,7 +24,6 @@
     font-size: 1.75rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .landing-wrapper .btn-landing {
     display: block;
@@ -38,7 +33,6 @@
     font-size: 1.5rem;
   }
 }
-
 @media screen and (max-width: 575px) {
   .landing-wrapper {
     padding-bottom: 2.5rem;
@@ -59,10 +53,9 @@
   overflow: hidden;
   z-index: 2;
 }
-
 .landing-header::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 63px;
   right: -100px;
   width: 25rem;
@@ -72,77 +65,56 @@
   background-color: rgba(255, 181, 51, 0.04);
   z-index: -1;
 }
-
 .landing-header__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   height: 100%;
 }
-
 .landing-header__content p {
   font-size: 1.5rem;
   color: #ffffff;
 }
-
 .landing-header__content .landing-header__date {
   color: #E84F35;
   font-weight: 700;
 }
-
 .landing-header__content .landing-header__subtitle {
   max-width: 33.75rem;
 }
-
 .landing-header__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
 .landing-header__logo-img {
   position: relative;
 }
-
 .landing-header__logo-img:last-of-type {
   margin-left: 2.25rem;
   padding-top: 0.25rem;
 }
-
 .landing-header__logo-img:last-of-type::before {
   position: absolute;
-  content: '';
+  content: "";
   top: -5px;
   left: -1.125rem;
   width: 0;
   height: calc(100% + 10px);
-  border-left: 0.61728px solid #F0F5FA;
+  border-left: 0.617284px solid #F0F5FA;
 }
-
 .landing-header__expl {
   position: absolute;
   bottom: 1.25rem;
   left: 0;
 }
-
 .landing-header__expl p {
   font-size: 0.75rem;
 }
-
 .landing-header__img {
   margin-left: -5.625rem;
 }
-
 @media screen and (max-width: 991px) {
   .landing-header__content p {
     font-size: 1rem;
@@ -157,7 +129,6 @@
     margin-left: 0;
   }
 }
-
 @media screen and (max-width: 767px) {
   .landing-header {
     padding-top: 3rem;
@@ -166,8 +137,7 @@
   }
   .landing-header::before {
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     right: -270px;
   }
   .landing-header__content .landing-header__date {
@@ -187,45 +157,36 @@
 .landing-conditions {
   padding-top: 3.75rem;
 }
-
 .landing-conditions .landing-conditions__subtitle {
   font-size: 1.5rem;
 }
-
 .landing-conditions__title {
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
 }
-
 .landing-conditions__card {
   height: 100%;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
 }
-
 .landing-conditions__card p {
   color: #172A3A;
 }
-
 .landing-conditions__card-title {
   margin-bottom: 0.75rem;
   font-size: 2.25rem;
   font-weight: 700;
 }
-
 .landing-conditions__card-title span {
   color: #E84F35;
   font-family: "Montserrat", sans-serif;
   font-size: 6.375rem;
   font-weight: 700;
 }
-
 .landing-conditions__card-subtitle {
   font-size: 1.25rem;
 }
-
 @media screen and (max-width: 991px) {
   .landing-conditions__card-title {
     font-size: 2rem;
@@ -234,7 +195,6 @@
     font-size: 5rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .landing-conditions {
     padding-top: 1.5rem;
@@ -257,54 +217,40 @@
 .landing-promo {
   padding-top: 133px;
 }
-
 .landing-promo__card {
   border-radius: 0.5rem;
   background-color: #172A3A;
 }
-
 .landing-promo__img {
   position: relative;
   margin-top: -133px;
   margin-left: 100px;
 }
-
 .landing-promo__img .image-2 {
   position: absolute;
   left: -72px;
   bottom: -18px;
-  -webkit-box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
-          box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
+  box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
   border-radius: 14.7669px;
 }
-
 .landing-promo__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
   padding-left: 1.5rem;
   padding-right: 2.0625rem;
   font-size: 1.5rem;
 }
-
 .landing-promo__text p {
   color: #ffffff;
   font-weight: 700;
 }
-
 @media screen and (max-width: 1199px) {
   .landing-promo__text {
     padding-left: 0;
   }
 }
-
 @media screen and (max-width: 991px) {
   .landing-promo {
     padding-top: 124px;
@@ -317,15 +263,11 @@
   }
   .landing-promo__img .image-2 {
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     bottom: -82px;
   }
   .landing-promo__text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     font-size: 1.5rem;
@@ -335,7 +277,6 @@
     margin-bottom: 2.125rem;
   }
 }
-
 @media screen and (max-width: 575px) {
   .landing-promo__card {
     margin-left: -15px;
@@ -354,15 +295,12 @@
 .landing-bottom {
   padding-top: 3.625rem;
 }
-
 .landing-bottom .btn-landing {
   max-width: 21.875rem;
   margin: 0 auto;
 }
-
 @media screen and (max-width: 767px) {
   .landing-bottom {
     padding-top: 1.5rem;
   }
-}
-/*# sourceMappingURL=tripleCashback-landing.css.map */
+}/*# sourceMappingURL=tripleCashback-landing.css.map */

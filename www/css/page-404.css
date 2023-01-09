@@ -1,22 +1,18 @@
 .page-404__title {
   color: #E84F35;
 }
-
 .page-404__subtitle {
   margin-bottom: 1.75rem;
   color: #172A3A;
 }
-
 .page-404__text {
   margin-bottom: 1.75rem;
 }
-
 @media screen and (max-width: 991px) {
   .page-404 {
     padding-top: 2.125rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .page-404__subtitle {
     margin-bottom: 0.5rem;
@@ -27,50 +23,33 @@
 }
 
 .page-maintenance {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
 }
-
 .page-maintenance__header, .page-maintenance__footer {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
 }
-
 .page-maintenance__content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  flex: 1 1 0;
 }
-
 .page-maintenance__header {
   padding-top: 0.75rem;
 }
-
 .page-maintenance__content {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-
 .page-maintenance__footer {
   padding-bottom: 3rem;
 }
-
 .page-maintenance__title {
   margin-bottom: 1rem;
   color: #172A3A;
 }
-
 .page-maintenance__img {
   padding-top: 4rem;
 }
-
 @media screen and (max-width: 767px) {
   .page-maintenance__content {
     padding-top: 2rem;
@@ -83,5 +62,4 @@
   .page-maintenance__widget {
     padding-top: 1.875rem;
   }
-}
-/*# sourceMappingURL=page-404.css.map */
+}/*# sourceMappingURL=page-404.css.map */

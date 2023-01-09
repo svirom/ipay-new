@@ -2,11 +2,9 @@
   position: relative;
   border-right: 1px solid #DEE7F3;
 }
-
 .catalogue li {
   margin-bottom: 5px;
 }
-
 .catalogue__item {
   display: block;
   position: relative;
@@ -18,282 +16,227 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .catalogue__item:hover {
   text-decoration: none;
   background-color: #F0F5FA;
 }
-
 .catalogue__item:active, .catalogue__item.active {
   color: #F0F5FA;
   text-decoration: none;
   background-color: #E84F35;
 }
-
 .catalogue__item:active span:not(.badge), .catalogue__item.active span:not(.badge) {
   color: #F0F5FA;
 }
-
 .catalogue__item span {
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 .catalogue__item span:not(.badge) {
   color: #172A3A;
 }
-
 .catalogue__item span.badge {
   position: absolute;
   right: 1rem;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 0.75rem;
 }
-
 .catalogue__item span.badge ~ span {
   padding-right: 3rem;
 }
-
 .catalogue__item::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0.625rem;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background-image: url("../img/menu-catalogue-2.0.png");
   background-size: 194px;
   background-repeat: no-repeat;
   z-index: 1;
 }
-
 .catalogue__item::after {
   position: absolute;
-  content: '';
+  content: "";
   left: -2px;
   top: 0;
   width: 3.125rem;
   height: 100%;
-  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
-          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
   border-radius: 0.5rem;
   background-color: #fff;
 }
-
 .catalogue__crossboard::before {
   width: 24px;
   height: 24px;
   background-position: -48px -49px;
 }
-
 .catalogue__crossboard:active::before, .catalogue__crossboard.active::before, .catalogue__crossboard--red::before {
   background-position: -72px -49px;
 }
-
 .catalogue__p2p::before {
   width: 24px;
   height: 24px;
   background-position: -122px -49px;
 }
-
 .catalogue__p2p:active::before, .catalogue__p2p.active::before, .catalogue__p2p--red::before {
   background-position: -122px -74px;
 }
-
 .catalogue__p2r::before {
   width: 24px;
   height: 24px;
   background-position: 0 -98px;
 }
-
 .catalogue__p2r:active::before, .catalogue__p2r.active::before, .catalogue__p2r--red::before {
   background-position: -24px -98px;
 }
-
 .catalogue__by-email::before {
   width: 26px;
   height: 24px;
   background-position: -48px -1px;
 }
-
 .catalogue__by-email:active::before, .catalogue__by-email.active::before, .catalogue__by-email--red::before {
   background-position: 0 -25px;
 }
-
 .catalogue__by-phone::before {
   width: 24px;
   height: 24px;
   background-position: -25px -25px;
 }
-
 .catalogue__by-phone:active::before, .catalogue__by-phone.active::before, .catalogue__by-phone--red::before {
   background-position: -49px -25px;
 }
-
 .catalogue__receive::before {
   width: 24px;
   height: 24px;
   background-position: 0 -50px;
 }
-
 .catalogue__receive:active::before, .catalogue__receive.active::before, .catalogue__receive--red::before {
   background-position: -24px -50px;
 }
-
 .catalogue__mobile::before {
   width: 24px;
   height: 24px;
   background-position: -72px -74px;
 }
-
 .catalogue__mobile:active::before, .catalogue__mobile.active::before, .catalogue__mobile--red::before {
   background-position: -96px -74px;
 }
-
 .catalogue__utility::before {
   width: 24px;
   height: 24px;
   background-position: -74px -124px;
 }
-
 .catalogue__utility:active::before, .catalogue__utility.active::before, .catalogue__utility--red::before {
   background-position: -97px -124px;
 }
-
 .catalogue__kindergarten::before {
   width: 24px;
   height: 24px;
   background-position: -97px -1px;
 }
-
 .catalogue__kindergarten:active::before, .catalogue__kindergarten.active::before, .catalogue__kindergarten--red::before {
   background-position: -97px -25px;
 }
-
 .catalogue__internet::before {
   width: 24px;
   height: 24px;
   background-position: -24px -74px;
 }
-
 .catalogue__internet:active::before, .catalogue__internet.active::before, .catalogue__internet--red::before {
   background-position: -48px -74px;
 }
-
 .catalogue__tv::before {
   width: 24px;
   height: 24px;
   background-position: -145px -98px;
 }
-
 .catalogue__tv:active::before, .catalogue__tv.active::before, .catalogue__tv--red::before {
   background-position: -50px -122px;
 }
-
 .catalogue__phone::before {
   width: 24px;
   height: 24px;
   background-position: -48px -99px;
 }
-
 .catalogue__phone:active::before, .catalogue__phone.active::before, .catalogue__phone--red::before {
   background-position: -72px -99px;
 }
-
 .catalogue__security::before {
   width: 24px;
   height: 24px;
   background-position: -96px -98px;
 }
-
 .catalogue__security:active::before, .catalogue__security.active::before, .catalogue__security--red::before {
   background-position: -120px -98px;
 }
-
 .catalogue__transport::before {
   width: 24px;
   height: 24px;
   background-position: -145px -49px;
 }
-
 .catalogue__transport:active::before, .catalogue__transport.active::before, .catalogue__transport--red::before {
   background-position: -145px -73px;
 }
-
 .catalogue__penalty::before {
   width: 24px;
   height: 24px;
   background-position: -145px 0;
 }
-
 .catalogue__penalty:active::before, .catalogue__penalty.active::before, .catalogue__penalty--red::before {
   background-position: -145px -25px;
 }
-
 .catalogue__tourism::before {
   width: 25px;
   height: 24px;
   background-position: 0 -123px;
 }
-
 .catalogue__tourism:active::before, .catalogue__tourism.active::before, .catalogue__tourism--red::before {
   background-position: -25px -123px;
 }
-
 .catalogue__banks::before {
   width: 24px;
   height: 24px;
   background-position: -121px 0;
 }
-
 .catalogue__banks:active::before, .catalogue__banks.active::before, .catalogue__banks--red::before {
   background-position: -121px -24px;
 }
-
 .catalogue__education::before {
   width: 24px;
   height: 24px;
   background-position: -97px -49px;
 }
-
 .catalogue__education:active::before, .catalogue__education.active::before, .catalogue__education--red::before {
   background-position: 0 -74px;
 }
-
 .catalogue__business::before {
   width: 24px;
   height: 24px;
   background-position: 0 0;
 }
-
 .catalogue__business:active::before, .catalogue__business.active::before, .catalogue__business--red::before {
   background-position: -24px 0;
 }
-
 .catalogue__charity::before {
   width: 24px;
   height: 24px;
   background-position: -73px 0;
 }
-
 .catalogue__charity:active::before, .catalogue__charity.active::before, .catalogue__charity--red::before {
   background-position: -73px -24px;
 }
-
 .catalogue__budget::before {
   width: 24px;
   height: 26px;
   background-position: -121px -122px;
 }
-
 .catalogue__budget:active::before, .catalogue__budget.active::before, .catalogue__budget--red::before {
   background-position: -145px -122px;
 }
-
 .catalogue__army::before {
   width: 24px;
   height: 24px;
@@ -306,67 +249,51 @@
   width: 100%;
   left: 0;
   top: 0;
-  -webkit-transform: translateX(100%);
   transform: translateX(100%);
   background-color: #fff;
   z-index: 2;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .catalogue-mobile.active {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .catalogue-mobile__back.dropdown-item {
   border-bottom: 1px dashed #DEE7F3;
 }
-
 .catalogue-mobile__back::before {
   width: 10px;
   height: 18px;
   background: url("../img/button-icon.png") 0px -36px no-repeat;
   background-size: auto;
 }
-
 .catalogue-mobile .catalogue {
   height: calc(100vh - 113px);
   border-right: 0;
   overflow: auto;
 }
-
 .catalogue-mobile .catalogue__item {
   padding: 0.938rem 1.5rem 0.938rem 3.65rem;
   font-size: 1rem;
   border-radius: 0;
 }
-
 .catalogue-mobile .catalogue__item::before {
   left: 1rem;
 }
-
 .catalogue-mobile .catalogue__item::after {
   display: none;
 }
-
 .catalogue-mobile .catalogue__item:active, .catalogue-mobile .catalogue__item.active {
   color: #172A3A;
   background-color: #ffffff;
 }
-
 .catalogue-mobile .catalogue__item:active span:not(.badge), .catalogue-mobile .catalogue__item.active span:not(.badge) {
   color: #172A3A;
   font-weight: bold;
 }
-
 .catalogue-mobile .catalogue li {
   margin-bottom: 0;
 }
-
 .catalogue-mobile .catalogue span {
   line-height: 1.1875;
-}
-/*# sourceMappingURL=catalogue.css.map */
+}/*# sourceMappingURL=catalogue.css.map */

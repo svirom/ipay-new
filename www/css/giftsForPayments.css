@@ -1,24 +1,17 @@
 .giftsForPayments-result {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 0.625rem;
   border-radius: 0.5rem;
   background-color: #172A3A;
 }
-
 .giftsForPayments-result p {
   margin-bottom: 0;
   color: #ffffff;
 }
-
 .giftsForPayments-result__img {
   position: relative;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: 2.875rem;
   height: 2.875rem;
   text-align: center;
@@ -26,15 +19,11 @@
   background: #3B566E url("../img/triple-cashback/giftsForPayments.png") center no-repeat;
   background-size: 1.5rem;
 }
-
 .giftsForPayments-result .giftsForPayments-result__content {
   padding-left: 0.625rem;
 }
-
 .giftsForPayments-result--registered {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-top: 1.5rem;
   margin-left: -1.375rem;
   margin-right: -1.375rem;
@@ -42,12 +31,8 @@
   border-radius: 0;
   text-align: left;
 }
-
 @media screen and (max-width: 767px) {
   .giftsForPayments-result--registered {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
-}
-/*# sourceMappingURL=giftsForPayments.css.map */
+}/*# sourceMappingURL=giftsForPayments.css.map */

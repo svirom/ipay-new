@@ -1,19 +1,16 @@
 .p2p-save-card {
   text-align: center;
 }
-
 .p2p-save-card .checkbox-switch {
   display: inline-block;
   padding-left: 0;
 }
-
 .p2p-save-card .checkbox-switch .checkbox-label {
   padding-right: 3.375rem;
   font-size: 1.125rem;
   font-weight: 400;
   cursor: pointer;
 }
-
 .p2p-save-card .checkbox-switch .checkbox-label::before {
   top: 0.0625rem;
   left: auto;
@@ -22,21 +19,17 @@
   height: 1.25rem;
   border-radius: 0.9375rem;
 }
-
 .p2p-save-card .checkbox-switch .checkbox-label::after {
   top: 0.25rem;
   left: auto;
-  right: calc(1.125rem + 0.1875rem);
+  right: 1.3125rem;
   width: 0.875rem;
   height: 0.875rem;
   border-radius: 50%;
 }
-
 .p2p-save-card .checkbox-switch .checkbox-input:checked ~ .checkbox-label::after {
-  -webkit-transform: translateX(1.125rem);
-          transform: translateX(1.125rem);
+  transform: translateX(1.125rem);
 }
-
 .p2p-save-card__alert {
   display: inline-block;
   position: relative;
@@ -45,10 +38,9 @@
   border-radius: 0.5rem;
   background-color: #E9FCF3;
 }
-
 .p2p-save-card__alert::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0.625rem;
   left: 0.625rem;
   width: 2rem;
@@ -59,14 +51,12 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .p2p-save-card__alert p {
   padding-left: 2.625rem;
   color: #0C6858;
   font-weight: 700;
   line-height: 1.25;
 }
-
 @media screen and (max-width: 767px) {
   .p2p-save-card .checkbox-switch .checkbox-label {
     font-size: 1rem;
@@ -83,14 +73,12 @@
   border: 0;
   border-radius: 0.5rem;
 }
-
 .modal-save-card .modal-header {
   padding: 1.5rem 5.125rem 1rem 1.5rem;
   border-bottom: 0;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
-
 .modal-save-card .close {
   position: absolute;
   right: 0;
@@ -100,40 +88,32 @@
   border-top-right-radius: 0.5rem;
   opacity: 1;
 }
-
 .modal-save-card .modal-body {
   padding: 0rem 1.5rem 1.5rem;
 }
-
 .modal-save-card .modal-body form {
   margin-bottom: 0;
 }
-
 .modal-save-card .modal-body .form-label {
   top: 1.0625rem;
   font-size: 1rem;
 }
-
 .modal-save-card .modal-body .form-input {
   font-size: 1rem;
 }
-
 .modal-save-card .modal-body .form-input:focus ~ .form-label, .modal-save-card .modal-body .form-input.filled ~ .form-label {
   top: 10px;
   font-size: 0.875rem;
   line-height: 1.17;
 }
-
 @media screen and (min-width: 576px) {
   .modal-save-card .modal-dialog {
     max-width: 566px;
     margin-top: 5rem;
   }
 }
-
 @media screen and (max-width: 575px) {
   .modal-save-card .modal-header {
     padding-right: 3.75rem;
   }
-}
-/*# sourceMappingURL=p2p-save-card.css.map */
+}/*# sourceMappingURL=p2p-save-card.css.map */

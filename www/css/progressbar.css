@@ -1,72 +1,55 @@
 .progress-payment {
   padding-top: 3.75rem;
 }
-
 .progress-payment .progress {
   position: relative;
   height: 3px;
   background-color: #F0F5FA;
   overflow: visible;
 }
-
 .progress-payment .progress-bar {
   background-color: #E84F35;
 }
-
 .progress-payment .progress-textline {
   position: absolute;
   left: 0;
   bottom: 48px;
   width: 100%;
 }
-
 .progress-payment .progress-textline .progress-text {
   position: absolute;
   max-width: 110px;
   font-size: 0.75rem;
   color: #DEE7F3;
 }
-
 .progress-payment .progress-textline .progress-text:nth-of-type(1) {
   left: 24px;
 }
-
 .progress-payment .progress-textline .progress-text:nth-of-type(2) {
   left: calc(25% + 24px);
 }
-
 .progress-payment .progress-textline .progress-text:nth-of-type(3) {
   left: calc(50% + 24px);
 }
-
 .progress-payment .progress-textline .progress-text:nth-of-type(4) {
   left: calc(75% + 24px);
 }
-
 .progress-payment .progress-textline .progress-text.in, .progress-payment .progress-textline .progress-text.active {
   color: #3B566E;
 }
-
 .progress-payment .progress-textline .progress-text.active {
   font-size: 0.875rem;
 }
-
 .progress-payment .progress-steps {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: absolute;
   left: 0;
   top: 1px;
   width: 100%;
   height: 24px;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
 .progress-payment .progress-step {
   display: block;
   width: 20px;
@@ -75,11 +58,9 @@
   border-radius: 50%;
   background-color: #F0F5FA;
 }
-
 .progress-payment .progress-step:first-of-type {
   margin-left: 0;
 }
-
 .progress-payment .progress-step.in {
   background-color: #E84F35;
   background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
@@ -87,45 +68,33 @@
   background-position: center;
   background-size: 12px 12px;
 }
-
 .progress-payment .progress-step.active {
-  -webkit-transform: scale(1.2);
   transform: scale(1.2);
   border: 5px solid #E84F35;
   background-color: #fff;
 }
-
 .progress-payment--three .progress-textline .progress-text:nth-of-type(2) {
   left: calc(33% + 24px);
 }
-
 .progress-payment--three .progress-textline .progress-text:nth-of-type(3) {
   left: calc(66% + 24px);
 }
-
 .progress-payment--three .progress-step {
   margin-left: calc(33% - 20px);
 }
 
 /* progressbar mobile */
 .progress-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .progress-mobile__circle {
   position: relative;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
   background: none;
 }
-
 .progress-mobile__circle::before {
   position: absolute;
   content: "";
@@ -135,10 +104,8 @@
   left: 0;
   border-radius: 50%;
   border: 3px solid #F0F5FA;
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
 .progress-mobile__circle::after {
   position: absolute;
   content: "";
@@ -149,17 +116,10 @@
   border-radius: 50%;
   border: 3px solid transparent;
 }
-
 .progress-mobile__value {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -170,89 +130,66 @@
   font-size: 0.625rem;
   font-weight: bold;
 }
-
 .progress-mobile__value > div {
   margin-top: 2px;
 }
-
 .progress-mobile__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding-left: 0.75rem;
 }
-
 .progress-mobile__current {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: #172A3A;
 }
-
 .progress-mobile__next {
   font-size: 0.875rem;
   color: #7C9CAC;
 }
-
 .progress-mobile--one-fourth .progress-mobile__circle::before {
   border-top-color: #E84F35;
 }
-
 .progress-mobile--two-fourth .progress-mobile__circle::before {
   border-top-color: #E84F35;
   border-right-color: #E84F35;
 }
-
 .progress-mobile--three-fourth .progress-mobile__circle::before {
   border-top-color: #E84F35;
   border-right-color: #E84F35;
   border-bottom-color: #E84F35;
 }
-
 .progress-mobile--four-fourth .progress-mobile__circle::before {
   border-top-color: #E84F35;
   border-right-color: #E84F35;
   border-bottom-color: #E84F35;
   border-left-color: #E84F35;
 }
-
 .progress-mobile--one-third .progress-mobile__circle::before {
   border-top-color: #E84F35;
 }
-
 .progress-mobile--one-third .progress-mobile__circle::after {
-  -webkit-transform: rotate(72deg);
   transform: rotate(72deg);
   border-top-color: #E84F35;
 }
-
 .progress-mobile--two-third .progress-mobile__circle::before {
   border-top-color: #E84F35;
   border-right-color: #E84F35;
 }
-
 .progress-mobile--two-third .progress-mobile__circle::after {
-  -webkit-transform: rotate(108deg);
   transform: rotate(108deg);
   border-top-color: #E84F35;
   border-right-color: #E84F35;
 }
-
 .progress-mobile--three-third .progress-mobile__circle::before {
   border-top-color: #E84F35;
   border-right-color: #E84F35;
   border-bottom-color: #E84F35;
 }
-
 .progress-mobile--three-third .progress-mobile__circle::after {
-  -webkit-transform: rotate(108deg);
   transform: rotate(108deg);
   border-top-color: #E84F35;
   border-right-color: #E84F35;
   border-bottom-color: #E84F35;
   border-left-color: #E84F35;
-}
-/*# sourceMappingURL=progressbar.css.map */
+}/*# sourceMappingURL=progressbar.css.map */

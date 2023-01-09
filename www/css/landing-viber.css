@@ -8,169 +8,125 @@
   background: linear-gradient(185.55deg, #655CAC 35.75%, #322A78 95.57%);
   overflow-x: hidden;
 }
-
 .viber-header h1, .viber-header p, .viber-header a {
   color: #ffffff;
 }
-
 .viber-header h1 {
   margin-bottom: 1rem;
 }
-
 .viber-header .btn-link.btn-back {
   background-image: url("data:image/svg+xml,%3Csvg width='26' height='27' viewBox='0 0 26 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5693 6.88428L9.24958 13.204' stroke='%23FFFFFF' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.24902 13.2041L15.5688 19.5238' stroke='%23FFFFFF' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
-
 .viber-header__left {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .viber-header__content {
   position: relative;
   z-index: 1;
 }
-
 .viber-header__content p {
   font-size: 1.25rem;
 }
-
 .viber-header__content h1 ~ p:last-of-type {
   margin-top: 2.5rem;
 }
-
 .viber-header__img-wrapper {
   position: relative;
 }
-
 .viber-header__img-wrapper::before, .viber-header__img-wrapper::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-
 .viber-header__img-wrapper::before {
   width: 33.75rem;
   height: 33.75rem;
   border: 2px solid #5C51B4;
 }
-
 .viber-header__img-wrapper::after {
   width: 27.25rem;
   height: 27.25rem;
   border: 6px solid #786DD1;
 }
-
 .viber-header__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
-
 .viber-header__img img {
   max-width: 100%;
   z-index: 1;
 }
-
 .viber-header__img::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 20.375rem;
   height: 20.375rem;
   border-radius: 50%;
   background-color: #E84F35;
 }
-
 .viber-header__partner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .viber-header__qr-wrapper {
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 15.125rem;
-          flex: 0 0 15.125rem;
+  flex: 0 0 15.125rem;
   height: 100%;
   padding: 1.8125rem;
   border: 1px solid #5C51B4;
   border-radius: 0.5rem;
 }
-
 .viber-header__qr-wrapper::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 13.125rem;
   height: 13.125rem;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border: 3px solid #7F73DA;
   border-radius: 0.5rem;
 }
-
 .viber-header__qr {
   padding: 0.625rem;
   border-radius: 0.5rem;
   background-color: #ffffff;
 }
-
 .viber-header__qr img {
   max-width: 100%;
 }
-
 .viber-header__logo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  flex: 1 0 auto;
   padding-left: 1.625rem;
 }
-
 .viber-header__logo p {
   margin-top: 0.75rem;
   margin-bottom: 0.125rem;
 }
-
 .viber-header__logo .btn-viber {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   color: #172A3A;
   background-color: #ffffff;
 }
-
 .viber-header__logo-viber {
   width: 11.375rem;
 }
-
 @media screen and (max-width: 991px) {
   .viber-header {
     padding-top: 2.5rem;
     padding-bottom: 2.375rem;
   }
   .viber-header__qr-wrapper {
-    -ms-flex-preferred-size: 9.5rem;
-        flex-basis: 9.5rem;
+    flex-basis: 9.5rem;
     padding: 1.125rem;
     border-radius: 0.3125rem;
   }
@@ -205,7 +161,6 @@
     height: 12.5rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .viber-header {
     padding-top: 1.5rem;
@@ -236,12 +191,10 @@
     width: 8.75rem;
   }
 }
-
 .viber-main {
   padding-top: 4.5rem;
   text-align: center;
 }
-
 .viber-main h2 {
   margin-bottom: 1.5rem;
   font-size: 1.3125rem;
@@ -252,22 +205,14 @@
 }
 
 .viber-bill {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 5.625rem;
   margin-bottom: 1.875rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   border-radius: 0.4375rem;
 }
-
 .viber-bill span {
   padding-left: 0.5rem;
   font-weight: 500;
@@ -282,13 +227,11 @@
   position: relative;
   padding-top: 5.5rem;
 }
-
 .viber-card img {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 991px) {
@@ -296,7 +239,6 @@
     padding-top: 2.5rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .viber-main h2 {
     text-align: left;
@@ -305,9 +247,7 @@
     margin-bottom: 1.5rem;
   }
   .viber-bill {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
     height: 3.5rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
@@ -327,38 +267,30 @@
   .viber-card img {
     width: 2.5rem;
     left: 0;
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
 }
-
 .viber-footer {
   padding-top: 5.5rem;
   padding-bottom: 4rem;
 }
-
 .viber-footer h2 {
   margin-bottom: 1rem;
   color: #000000;
   line-height: 1.3;
 }
-
 .viber-footer__title, .viber-footer__links {
   padding-top: 6.25rem;
 }
-
 .viber-footer__links p {
   margin-bottom: 2rem;
 }
-
 .viber-footer__links a {
   display: inline-block;
 }
-
 .viber-footer__links a:first-of-type {
   margin-bottom: 1rem;
 }
-
 .viber-footer__phone-wrapper {
   position: relative;
   width: 18rem;
@@ -369,42 +301,35 @@
   border-radius: 2.6875rem;
   background-color: #121515;
 }
-
 .viber-footer__phone-wrapper::before, .viber-footer__phone-wrapper::after {
   position: absolute;
-  content: '';
+  content: "";
   right: -5px;
   width: 2px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   background-color: #121515;
 }
-
 .viber-footer__phone-wrapper::before {
   top: 92px;
   height: 83px;
 }
-
 .viber-footer__phone-wrapper::after {
   top: 208px;
   height: 38px;
 }
-
 .viber-footer__phone {
   position: relative;
   padding: 5.125rem 1.125rem 4.125rem;
   border-radius: 2rem;
   background-color: #655CAC;
 }
-
 .viber-footer__phone::before, .viber-footer__phone::after {
   position: absolute;
-  content: '';
+  content: "";
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .viber-footer__phone::before {
   top: 0;
   width: 43px;
@@ -412,7 +337,6 @@
   background: url("../img/landing-viber/phone-camera.svg") top center no-repeat;
   background-size: 44px;
 }
-
 .viber-footer__phone::after {
   top: -9px;
   width: 32px;
@@ -420,12 +344,10 @@
   background: url("../img/landing-viber/phone-camera-top.svg") top center no-repeat;
   background-size: cover;
 }
-
 .viber-footer__phone p {
   font-size: 0.875rem;
   color: #ffffff;
 }
-
 .viber-footer__phone .btn-viber {
   display: block;
   padding: 0.75rem 0.5rem;
@@ -433,7 +355,6 @@
   margin-right: -0.4375rem;
   background-color: #ffffff;
 }
-
 .viber-footer__qr {
   width: 11.25rem;
   height: 11.25rem;
@@ -442,11 +363,9 @@
   border-radius: 0.5rem;
   background-color: #ffffff;
 }
-
 .viber-footer__qr img {
   max-width: 100%;
 }
-
 @media screen and (max-width: 991px) {
   .viber-footer {
     padding-top: 3.5rem;
@@ -499,7 +418,6 @@
     margin-bottom: 0.6875rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .viber-footer {
     padding-top: 2.5rem;
@@ -562,5 +480,4 @@
   .viber-footer__links:first-of-type {
     margin-bottom: 0.5rem;
   }
-}
-/*# sourceMappingURL=landing-viber.css.map */
+}/*# sourceMappingURL=landing-viber.css.map */

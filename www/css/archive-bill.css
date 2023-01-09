@@ -2,59 +2,44 @@
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-
 .archive-bill__row {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 1.657rem 0.9193rem;
   line-height: 1.1875rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #fff;
 }
-
 @media screen and (max-width: 767px) {
   .archive-bill__row {
     padding-top: 2rem;
   }
 }
-
 .archive-bill__title, .archive-bill__details {
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  flex-basis: auto;
   padding: 0 4rem 0 1rem;
 }
-
 .archive-bill__amount {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   font-size: 1.5rem;
 }
-
 @media screen and (max-width: 767px) {
   .archive-bill__amount {
     text-align: right;
   }
 }
-
 .archive-bill__details {
   position: relative;
   font-weight: normal;
   padding-right: 4rem;
   cursor: pointer;
 }
-
 .archive-bill__details::after {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   width: 3.5rem;
   height: 100%;
   top: 0;
@@ -63,21 +48,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
-.archive-bill__details[aria-expanded="true"]::after {
-  -webkit-transform: rotate(180deg);
+.archive-bill__details[aria-expanded=true]::after {
   transform: rotate(180deg);
 }
-
 @media screen and (max-width: 767px) {
   .archive-bill__details {
     display: none;
   }
 }
-
 .archive-bill__collapse {
   margin-top: -4px;
   padding: 0.85rem 1rem;
@@ -85,17 +65,14 @@
   border-bottom-right-radius: 0.5rem;
   background-color: #F0F5FA;
 }
-
 .archive-bill__collapse .table {
   margin-bottom: 0;
 }
-
 @media screen and (max-width: 767px) {
   .archive-bill__collapse {
     padding-bottom: 0;
   }
 }
-
 .archive-bill__mobile {
   display: none;
   margin-top: -4px;
@@ -105,15 +82,12 @@
   border-bottom-right-radius: 0.5rem;
   background-color: #F0F5FA;
 }
-
 .archive-bill__mobile .archive-bill__details {
   display: block;
   padding-left: 0;
 }
-
 @media screen and (max-width: 767px) {
   .archive-bill__mobile {
     display: block;
   }
-}
-/*# sourceMappingURL=archive-bill.css.map */
+}/*# sourceMappingURL=archive-bill.css.map */

@@ -1,7 +1,6 @@
 .crossborder {
   padding-bottom: 5rem;
 }
-
 .crossborder__connection {
   padding: 2px 0 2px 1.3625rem;
   font-size: 0.75rem;
@@ -10,11 +9,9 @@
   color: #09BC8A;
   background: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.04785 12.3331V10.9998' stroke='%2309BC8A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.04811 10.9998C8.41851 10.9998 8.71878 10.7014 8.71878 10.3332C8.71878 9.96498 8.41851 9.6665 8.04811 9.6665C7.67771 9.6665 7.37744 9.96498 7.37744 10.3332C7.37744 10.7014 7.67771 10.9998 8.04811 10.9998Z' stroke='%2309BC8A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.4072 7H3.68851C2.95077 7 2.34717 7.6 2.34717 8.33333V13C2.34717 13.7333 2.95077 14.3333 3.68851 14.3333H12.4072C13.145 14.3333 13.7486 13.7333 13.7486 13V8.33333C13.7486 7.6 13.145 7 12.4072 7Z' stroke='%2309BC8A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.35938 6.99984V5.33317C4.35938 3.3065 6.00923 1.6665 8.04807 1.6665C10.0869 1.6665 11.7368 3.3065 11.7368 5.33317V6.99984' stroke='%2309BC8A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left top no-repeat;
 }
-
 .crossborder__title p {
   color: #333333;
 }
-
 .crossborder__transfer {
   margin-top: 0.3125rem;
   margin-bottom: 2.6875rem;
@@ -23,287 +20,206 @@
   border-top: 3px solid #F0F5FA;
   border-bottom: 3px solid #F0F5FA;
 }
-
 .crossborder__transfer .crossborder__transfer-amount span {
   color: #172A3A;
   font-size: 1.75rem;
 }
-
 .crossborder__transfer .crossborder__commission span,
 .crossborder__transfer .crossborder__exchange-rate span {
   color: #172A3A;
   font-weight: 700;
 }
-
 .crossborder__transfer-currency .form-currency-amount {
   margin-bottom: 0.5rem;
 }
-
 .crossborder__transfer-currency .form-group.has-error {
   margin-bottom: 1.5rem;
 }
-
 .crossborder__transfer-currency .checkbox-input ~ label {
   margin-bottom: 2px;
 }
-
 .crossborder__transfer-currency .radio-control .btn-label span {
   padding-left: 0.375rem;
   font-weight: 700;
   color: #172A3A;
 }
-
 .crossborder__transfer-currency .radio-control .checkbox-input:checked ~ .btn-label {
   border-color: #172A3A;
   background-color: #172A3A;
 }
-
 .crossborder__transfer-currency .form-input.input-icon-right ~ .label-icon-right {
   top: 2px;
 }
-
 .crossborder__transfer-currency .currency-eur,
 .crossborder__transfer-currency .currency-pln {
   display: none;
 }
-
 .crossborder__transfer-currency .currency-eur.active,
 .crossborder__transfer-currency .currency-pln.active {
   display: block;
 }
-
 .crossborder__transfer-currency .col-left {
   padding-right: 0.75rem;
 }
-
 .crossborder__transfer-currency .col-right {
   padding-left: 0.75rem;
 }
-
 .crossborder__transfer-receive {
   padding-left: 5.75rem;
   background: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5581 32.52L28.1959 21.8822' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M28.1958 21.8823L17.558 11.2446' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left 0.25rem top 2rem no-repeat;
 }
-
 .crossborder__transfer-table {
   margin-top: 2.25rem;
   padding: 0.9375rem;
   border-radius: 0.5rem;
   background-color: #F0F5FA;
 }
-
 .crossborder__transfer-hr {
   margin-top: 7px;
   margin-bottom: 7px;
   height: 1px;
   background-color: #DEE7F3;
 }
-
 .crossborder__transfer-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  justify-content: space-between;
+  align-items: baseline;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
-
 .crossborder__transfer-row > span:last-child {
   color: #172A3A;
   font-size: 1.125rem;
 }
-
 .crossborder__transfer-row:first-child {
   padding-top: 0;
 }
-
 .crossborder__transfer-row:last-child {
   padding-bottom: 0;
 }
-
 .crossborder__form {
   padding-bottom: 2.75rem;
   border-bottom: 3px solid #F0F5FA;
 }
-
 .crossborder__form .alert {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
-
 .crossborder__form .alert p, .crossborder__form .alert a {
   color: #E84F35;
 }
-
 .crossborder__card-wrapper {
   width: 26.25rem;
 }
-
 .crossborder__card-wrapper--receiver {
   margin-left: auto;
 }
-
 .crossborder__card-title {
   margin-bottom: 0.75rem;
 }
-
 .crossborder__card {
   margin-bottom: 1.9375rem;
 }
-
 .crossborder .bank-card {
   position: relative;
   width: 100%;
   padding: 1.5rem 1.875rem 0;
   background-color: #172A3A;
 }
-
 .crossborder .bank-card__header {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 .crossborder .bank-card__type {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
 }
-
 .crossborder .bank-card__type .type-card {
   width: 100%;
   height: 100%;
   background-position: right center;
   background-repeat: no-repeat;
 }
-
 .crossborder .bank-card__type .type-card-mc {
   background-image: url("/img/crossborder/mastercard-logo.svg");
 }
-
 .crossborder .bank-card__type .type-card-visa {
   background-image: url("/img/crossborder/visa-logo.svg");
 }
-
 .crossborder .form-group.has-error .form-input {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .crossborder__subtitle {
   padding-top: 0.25rem;
   padding-bottom: 1rem;
 }
-
 .crossborder__subtitle h4, .crossborder__subtitle p {
   margin-bottom: 0;
 }
-
 .crossborder__security {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 0.875rem 2.5rem 0.875rem 1.375rem;
   border-radius: 0.5rem;
   background-color: #F0F5FA;
 }
-
 .crossborder__security-title {
   max-width: 7.375rem;
   font-size: 0.875rem;
 }
-
 .crossborder__security-img a {
   display: inline-block;
   margin-left: 0.375rem;
 }
-
 .crossborder__security-img img {
   width: auto;
   height: 1.5rem;
 }
-
 .crossborder__payment {
   padding-top: 1rem;
   padding-bottom: 1.5rem;
 }
-
 .crossborder__amount {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .crossborder__amount span {
   color: #172A3A;
 }
-
 .crossborder__amount-text {
   margin-top: 2px;
 }
-
 .crossborder__amount--send {
   padding-bottom: 0.5rem;
   border-bottom: 3px solid #F0F5FA;
 }
-
 .crossborder__amount--send span {
   font-weight: 700;
 }
-
 .crossborder__amount--send .crossborder__amount-amount {
   font-size: 1.625rem;
 }
-
 .crossborder__amount--receive {
   padding-top: 0.5rem;
 }
-
 .crossborder__amount--receive .crossborder__amount-text {
   color: #3B566E;
 }
-
 .crossborder__amount--receive .crossborder__amount-amount {
   font-size: 1.125rem;
 }
-
 .crossborder__submit .btn:disabled, .crossborder__submit .btn.disabled {
   opacity: 1;
   color: #ffffff;
 }
-
 .crossborder__oferta .checkbox-label::before, .crossborder__oferta .checkbox-label::after {
   top: 1px;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
-
 .crossborder-arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 4.5rem;
   height: 4.5rem;
   margin-top: 9.0625rem;
@@ -312,11 +228,9 @@
   border-radius: 50%;
   background-color: #F0F5FA;
 }
-
 .crossborder-arrow svg {
   stroke: #172A3A;
 }
-
 @media screen and (min-width: 768px) {
   .crossborder__card-wrapper .col-left {
     padding-right: 0.625rem;
@@ -325,7 +239,6 @@
     padding-left: 0.625rem;
   }
 }
-
 @media screen and (max-width: 1199px) {
   .crossborder__card-wrapper {
     width: 23.125rem;
@@ -334,7 +247,6 @@
     height: 1.25rem;
   }
 }
-
 @media screen and (max-width: 991px) {
   .crossborder__transfer {
     margin-bottom: 2rem;
@@ -355,7 +267,6 @@
     height: 1.5rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .crossborder {
     padding-bottom: 2.5rem;
@@ -374,28 +285,19 @@
     margin-bottom: 1.5rem;
   }
   .crossborder__security {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 0.5rem 0.75rem;
   }
   .crossborder__security-title {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
     max-width: none;
     width: 100%;
     margin-bottom: 0.875rem;
   }
   .crossborder__security-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    justify-content: space-between;
+    flex-basis: 100%;
     width: 100%;
   }
   .crossborder__security-img a {
@@ -405,7 +307,6 @@
     height: 1.75rem;
   }
 }
-
 @media screen and (max-width: 575px) {
   .crossborder__form .form-input {
     padding-left: 0.75rem;
@@ -421,8 +322,7 @@
     max-width: none;
     margin-top: 1rem;
     padding: 0.75rem 0.875rem 0;
-    -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
-            box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+    box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
   }
   .crossborder__card .bank-card .form-label {
     top: 1rem;
@@ -441,9 +341,7 @@
     background-size: auto 100%;
   }
   .crossborder__card .bank-card__header {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
     height: 2rem;
   }
   .crossborder__card .bank-card__number {
@@ -453,7 +351,6 @@
     width: 10.375rem;
   }
 }
-
 @media screen and (max-width: 359px) {
   .crossborder__card .bank-card__expires {
     -ms-flex: 1 0 auto;
@@ -477,7 +374,6 @@
   background: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 0C6.01664 0 4.56659 0.439867 3.33323 1.26398C2.09986 2.08809 1.13856 3.25943 0.570907 4.62987C0.00324965 6.00032 -0.145275 7.50832 0.144114 8.96318C0.433503 10.418 1.14781 11.7544 2.1967 12.8033C3.2456 13.8522 4.58197 14.5665 6.03683 14.8559C7.49168 15.1453 8.99968 14.9968 10.3701 14.4291C11.7406 13.8614 12.9119 12.9001 13.736 11.6668C14.5601 10.4334 15 8.98336 15 7.5C15 6.51508 14.806 5.53981 14.4291 4.62987C14.0522 3.71993 13.4997 2.89314 12.8033 2.1967C12.1069 1.50026 11.2801 0.947814 10.3701 0.570903C9.46019 0.193993 8.48492 0 7.5 0ZM8.25 12.75H6.75V11.25H8.25V12.75ZM9.8025 6.9375L9.1275 7.6275C8.82542 7.888 8.58867 8.21573 8.43626 8.58436C8.28386 8.95299 8.22007 9.35223 8.25 9.75H6.75V9.375C6.75142 8.57952 7.06677 7.81675 7.6275 7.2525L8.5575 6.3075C8.6985 6.16999 8.81036 6.00548 8.88638 5.82378C8.96241 5.6421 9.00105 5.44695 9 5.25C9 4.85217 8.84197 4.47064 8.56066 4.18934C8.27936 3.90803 7.89783 3.75 7.5 3.75C7.10218 3.75 6.72065 3.90803 6.43934 4.18934C6.15804 4.47064 6 4.85217 6 5.25H4.5C4.5 4.45435 4.81607 3.69129 5.37868 3.12868C5.94129 2.56607 6.70435 2.25 7.5 2.25C8.29565 2.25 9.05871 2.56607 9.62132 3.12868C10.1839 3.69129 10.5 4.45435 10.5 5.25C10.5004 5.88272 10.2495 6.4897 9.8025 6.9375Z' fill='%23172A3A'/%3E%3C/svg%3E") center no-repeat;
   cursor: pointer;
 }
-
 .crossborder-tooltip:focus {
   outline: none;
 }
@@ -489,39 +385,30 @@
   border-radius: 0.5rem;
   background-color: #3B566E;
 }
-
 .popover.popover-crossborder.bs-popover-auto[x-placement^=right], .popover.popover-crossborder.bs-popover-right {
   margin-left: 1rem;
 }
-
 .popover.popover-crossborder.bs-popover-auto[x-placement^=right] > .arrow::after, .popover.popover-crossborder.bs-popover-right > .arrow::after {
   border-right-color: #3B566E;
 }
-
 .popover.popover-crossborder.bs-popover-auto[x-placement^=bottom], .popover.popover-crossborder.bs-popover-bottom {
   margin-top: 1rem;
 }
-
 .popover.popover-crossborder.bs-popover-auto[x-placement^=bottom] > .arrow::after, .popover.popover-crossborder.bs-popover-bottom > .arrow::after {
   border-bottom-color: #3B566E;
 }
-
 .popover.popover-crossborder.bs-popover-auto[x-placement^=left], .popover.popover-crossborder.bs-popover-left {
   margin-right: 1rem;
 }
-
 .popover.popover-crossborder.bs-popover-auto[x-placement^=left] > .arrow::after, .popover.popover-crossborder.bs-popover-left > .arrow::after {
   border-left-color: #3B566E;
 }
-
 .popover.popover-crossborder.bs-popover-auto[x-placement^=top], .popover.popover-crossborder.bs-popover-top {
   margin-bottom: 1rem;
 }
-
 .popover.popover-crossborder.bs-popover-auto[x-placement^=top] > .arrow::after, .popover.popover-crossborder.bs-popover-top > .arrow::after {
   border-top-color: #3B566E;
 }
-
 .popover.popover-crossborder .popover-body {
   padding: 1rem 3.125rem 1rem 1rem;
   color: #ffffff;
@@ -529,7 +416,6 @@
   border-radius: 0.5rem;
   background: #3B566E url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.59668 1.72266L14.5967 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5967 1.72266L1.59668 14.7227' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") right 1rem top 1rem no-repeat;
 }
-
 .popover.popover-crossborder .popover-body a {
   color: #ffffff;
   text-decoration: underline;
@@ -540,19 +426,15 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-
 .crossborder-howto__title {
   padding-bottom: 2rem;
 }
-
 .crossborder-howto__cards {
   padding-top: 0.625rem;
 }
-
 .crossborder-howto__card {
   margin-top: 1.875rem;
 }
-
 .crossborder-howto__card-header {
   width: 3rem;
   height: 3rem;
@@ -565,13 +447,11 @@
   border-radius: 0.5rem;
   background-color: #DEE7F3;
 }
-
 .crossborder-howto__card-text {
   margin-bottom: 0;
   color: #000000;
   text-align: center;
 }
-
 @media screen and (max-width: 767px) {
   .crossborder-howto {
     padding-top: 1.875rem;
@@ -591,11 +471,9 @@
   padding-bottom: 2.125rem;
   background-color: #F0F5FA;
 }
-
 .crossborder-limitations__title {
   margin-bottom: 2.3125rem;
 }
-
 @media screen and (max-width: 991px) {
   .crossborder-limitations {
     padding-top: 2rem;
@@ -605,7 +483,6 @@
     margin-bottom: 0;
   }
 }
-
 @media screen and (max-width: 767px) {
   .crossborder-limitations {
     padding-top: 1rem;
@@ -616,40 +493,28 @@
 }
 
 .crossborder-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   height: 7.75rem;
   margin-bottom: 1.75rem;
   padding: 1.125rem 1.875rem 1.25rem 1.25rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #ffffff;
 }
-
 .crossborder-card__amount {
   padding-bottom: 0.5rem;
 }
-
 .crossborder-card__amount span {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: #E84F35;
 }
-
 .crossborder-card__text {
   padding-right: 2.5rem;
 }
-
 @media screen and (max-width: 1199px) {
   .crossborder-card__amount span {
     font-size: 1.125rem;
@@ -658,7 +523,6 @@
     padding-right: 1rem;
   }
 }
-
 @media screen and (max-width: 991px) {
   .crossborder-card {
     margin-bottom: 1.875rem;
@@ -678,7 +542,6 @@
     text-align: left;
   }
 }
-
 @media screen and (max-width: 767px) {
   .crossborder-card {
     height: 6.5rem;
@@ -699,31 +562,23 @@
   padding-top: 5rem;
   padding-bottom: 1.25rem;
 }
-
 .crossborder-countries__title {
   margin-bottom: 3.5rem;
 }
-
 .crossborder-countries__country {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   height: 2rem;
   margin-bottom: 1.25rem;
   padding-left: 4.4375rem;
 }
-
 .crossborder-countries__country span {
   font-size: 1.125rem;
 }
-
 .crossborder-countries__country::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 55px;
   height: 32px;
   left: 0;
@@ -732,211 +587,159 @@
   background-repeat: no-repeat;
   background-size: 335px;
 }
-
 .crossborder-countries__country--austria::before {
   background-position: 0 0;
 }
-
 .crossborder-countries__country--azerbaijan::before {
   background-position: 0 -66px;
 }
-
 .crossborder-countries__country--albania::before {
   background-position: -112px -66px;
 }
-
 .crossborder-countries__country--armenia::before {
   background-position: 0 -132px;
 }
-
 .crossborder-countries__country--belarus::before {
   background-position: -168px -33px;
 }
-
 .crossborder-countries__country--belgium::before {
   background-position: 0 -165px;
 }
-
 .crossborder-countries__country--bulgaria::before {
   background-position: -224px 0;
 }
-
 .crossborder-countries__country--bosnia-and-herzegovina::before {
   background-position: -224px -132px;
 }
-
 .crossborder-countries__country--great-britain::before {
   background-position: -112px -198px;
 }
-
 .crossborder-countries__country--hungary::before {
   background-position: -56px -231px;
 }
-
 .crossborder-countries__country--germany::before {
   background-position: -280px 0;
 }
-
 .crossborder-countries__country--greece::before {
   background-position: -280px -132px;
 }
-
 .crossborder-countries__country--georgia::before {
   background-position: 0 -264px;
 }
-
 .crossborder-countries__country--denmark::before {
   background-position: -56px 0;
 }
-
 .crossborder-countries__country--israel::before {
   background-position: -56px -66px;
 }
-
 .crossborder-countries__country--ireland::before {
   background-position: 0 -99px;
 }
-
 .crossborder-countries__country--iceland::before {
   background-position: -56px -132px;
 }
-
 .crossborder-countries__country--spain::before {
   background-position: -168px -66px;
 }
-
 .crossborder-countries__country--italy::before {
   background-position: -56px -165px;
 }
-
 .crossborder-countries__country--kazakhstan::before {
   background-position: -224px -33px;
 }
-
 .crossborder-countries__country--cyprus::before {
   background-position: -224px -165px;
 }
-
 .crossborder-countries__country--kyrgyzstan::before {
   background-position: -168px -198px;
 }
-
 .crossborder-countries__country--latvia::before {
   background-position: -112px -231px;
 }
-
 .crossborder-countries__country--lithuania::before {
   background-position: -280px -33px;
 }
-
 .crossborder-countries__country--liechtenstein::before {
   background-position: -280px -165px;
 }
-
 .crossborder-countries__country--luxembourg::before {
   background-position: -56px -264px;
 }
-
 .crossborder-countries__country--north-macedonia::before {
   background-position: 0 -33px;
 }
-
 .crossborder-countries__country--malta::before {
   background-position: -112px 0;
 }
-
 .crossborder-countries__country--moldova::before {
   background-position: -56px -99px;
 }
-
 .crossborder-countries__country--monaco::before {
   background-position: -112px -132px;
 }
-
 .crossborder-countries__country--netherlands::before {
   background-position: -168px -99px;
 }
-
 .crossborder-countries__country--norway::before {
   background-position: -112px -165px;
 }
-
 .crossborder-countries__country--poland::before {
   background-position: -224px -66px;
 }
-
 .crossborder-countries__country--portugal::before {
   background-position: 0 -198px;
 }
-
 .crossborder-countries__country--russia::before {
   background-position: -224px -198px;
 }
-
 .crossborder-countries__country--romania::before {
   background-position: -168px -231px;
 }
-
 .crossborder-countries__country--serbia::before {
   background-position: -280px -66px;
 }
-
 .crossborder-countries__country--slovakia::before {
   background-position: -280px -198px;
 }
-
 .crossborder-countries__country--slovenia::before {
   background-position: -112px -264px;
 }
-
 .crossborder-countries__country--tajikistan::before {
   background-position: -56px -33px;
 }
-
 .crossborder-countries__country--turkmenistan::before {
   background-position: -112px -33px;
 }
-
 .crossborder-countries__country--turkey::before {
   background-position: -112px -99px;
 }
-
 .crossborder-countries__country--uzbekistan::before {
   background-position: -168px 0;
 }
-
 .crossborder-countries__country--finland::before {
   background-position: -168px -132px;
 }
-
 .crossborder-countries__country--france::before {
   background-position: -168px -165px;
 }
-
 .crossborder-countries__country--croatia::before {
   background-position: -224px -99px;
 }
-
 .crossborder-countries__country--montenegro::before {
   background-position: -56px -198px;
 }
-
 .crossborder-countries__country--czechia::before {
   background-position: 0 -231px;
 }
-
 .crossborder-countries__country--switzerland::before {
   background-position: -224px -231px;
 }
-
 .crossborder-countries__country--sweden::before {
   background-position: -280px -99px;
 }
-
 .crossborder-countries__country--estonia::before {
   background-position: -280px -231px;
 }
-
 @media screen and (max-width: 991px) {
   .crossborder-countries__title {
     margin-bottom: 2rem;
@@ -945,7 +748,6 @@
     margin-bottom: 1.875rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   .crossborder-countries {
     padding-top: 2.5rem;
@@ -954,7 +756,6 @@
     margin-bottom: 0.875rem;
   }
 }
-
 @media screen and (max-width: 575px) {
   .crossborder-countries__country {
     margin-bottom: 0.75rem;
@@ -962,8 +763,7 @@
   }
   .crossborder-countries__country::before {
     top: -1px;
-    -webkit-transform: scale(0.625);
-            transform: scale(0.625);
+    transform: scale(0.625);
   }
   .crossborder-countries__country span {
     font-size: 0.875rem;
@@ -975,11 +775,9 @@
 .crossborder-faq {
   padding-top: 2.5rem;
 }
-
 .crossborder-faq__title {
   margin-bottom: 3.25rem;
 }
-
 @media screen and (max-width: 767px) {
   .crossborder-faq {
     padding-top: 0.625rem;
@@ -992,42 +790,31 @@
 .faq-card {
   border-bottom: 2px solid #DEE7F3;
 }
-
 .faq-card:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-
 .faq-card__header {
   cursor: pointer;
 }
-
 .faq-card__header h4 {
   position: relative;
   padding-right: 1.5rem;
 }
-
 .faq-card__header h4::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 1.5rem;
   height: 1.5rem;
   right: 0;
   top: 0;
   background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.6665 9.71704L12.5001 15.5507' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5 15.5507L18.3336 9.71705' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
-
-.faq-card__header h4[aria-expanded="true"]::after {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+.faq-card__header h4[aria-expanded=true]::after {
+  transform: rotate(180deg);
 }
-
 @media screen and (max-width: 767px) {
   .faq-card:not(:last-child) {
     margin-bottom: 1rem;
   }
-}
-/*# sourceMappingURL=crossborder.css.map */
+}/*# sourceMappingURL=crossborder.css.map */

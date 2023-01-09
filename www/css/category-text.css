@@ -1,7 +1,6 @@
 .category-text h2, .category-text h3, .category-text h4 {
   margin-bottom: 1rem;
 }
-
 .category-text .list {
   margin-left: 1.125rem;
 }
@@ -9,96 +8,77 @@
 .accordion-card {
   margin-bottom: 1rem;
 }
-
 .accordion-card__header {
   padding: 1rem 1rem 1.125rem;
   background-color: #F0F5FA;
 }
-
 .accordion-card__title {
   position: relative;
   padding: 1.0625rem 3.125rem 1.0625rem 1rem;
   background-color: #F0F5FA;
   cursor: pointer;
 }
-
 .accordion-card__title::before, .accordion-card__title::after {
   position: absolute;
-  content: '';
+  content: "";
   border-radius: 1px;
   background-color: #172A3A;
 }
-
 .accordion-card__title::before {
   right: 16px;
   top: 27px;
   height: 2px;
   width: 18px;
 }
-
 .accordion-card__title::after {
   right: 24px;
   top: 19px;
   height: 18px;
   width: 2px;
   opacity: 1;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
-.accordion-card__title[aria-expanded="true"] {
+.accordion-card__title[aria-expanded=true] {
   border-radius: 0.5rem;
 }
-
-.accordion-card__title[aria-expanded="true"]::after {
+.accordion-card__title[aria-expanded=true]::after {
   opacity: 0;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
-
 .accordion-card__body {
   padding: 1rem;
   font-family: "Roboto", sans-serif;
 }
-
 .accordion-card__body .table {
   margin-bottom: 0;
   font-size: 1rem;
 }
-
 .accordion-card__body .table td, .accordion-card__body .table th {
   padding: 1.5rem 0.9375rem;
   vertical-align: top;
 }
-
 .accordion-card__body .table td:first-child, .accordion-card__body .table th:first-child {
   min-width: 10rem;
   padding-left: 0;
   color: #172A3A;
 }
-
 .accordion-card__body .table tr {
   border-bottom: 1px solid #DEE7F3;
 }
-
 .accordion-card__body .table tr:first-child td, .accordion-card__body .table tr:first-child th {
   padding-top: 0.5rem;
 }
-
 .accordion-card__body .table tr:last-child {
   border-bottom: 0;
 }
-
 .accordion-card__body .table tr:last-child td, .accordion-card__body .table tr:last-child th {
   padding-bottom: 0;
 }
-
 @media screen and (max-width: 767px) {
   .accordion-card__body .table td:first-child, .accordion-card__body .table th:first-child {
     font-size: 1rem;
   }
 }
-
 @media screen and (max-width: 575px) {
   .accordion-card__body .table td:first-child, .accordion-card__body .table th:first-child {
     padding-top: 1rem;
@@ -110,5 +90,4 @@
     padding-top: 0.625rem;
     padding-left: 0;
   }
-}
-/*# sourceMappingURL=category-text.css.map */
+}/*# sourceMappingURL=category-text.css.map */

@@ -2,14 +2,12 @@
   border-bottom: 2px solid #F0F5FA;
   background-color: #F0F5FA;
 }
-
 .breadcrumb-wrapper .breadcrumb {
   margin-bottom: 0;
   padding: 0.25rem 0;
   font-size: 0.875rem;
   background-color: transparent;
 }
-
 .breadcrumb-wrapper .breadcrumb__home {
   display: inline-block;
   width: 17px;
@@ -22,7 +20,6 @@
   background-size: 17px;
   background-position: left top 4px;
 }
-
 @media screen and (max-width: 991px) {
   .breadcrumb-wrapper {
     border-bottom: none;
@@ -34,33 +31,28 @@
   color: #E84F35;
   line-height: 1.93;
 }
-
 .breadcrumb > .active span {
   color: #E84F35;
 }
-
 .breadcrumb > li + li {
   position: relative;
   height: 1.5rem;
   padding-left: 1.0625rem;
   line-height: 1.42;
 }
-
 .breadcrumb > li + li::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 16px;
   height: 16px;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.41895 12.3892L10.308 8.50008' stroke='%237C9CAC' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.3086 8.5L6.41952 4.61093' stroke='%237C9CAC' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 17px;
 }
-
 .breadcrumb a {
   display: inline-block;
   height: 1.5rem;
@@ -68,10 +60,8 @@
   border-radius: 0.25rem;
   color: #3B566E;
 }
-
 .breadcrumb a:hover {
   color: #3B566E;
   text-decoration: none;
   background-color: #DEE7F3;
-}
-/*# sourceMappingURL=breadcrumb.css.map */
+}/*# sourceMappingURL=breadcrumb.css.map */
