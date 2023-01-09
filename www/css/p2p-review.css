@@ -33,11 +33,17 @@
   line-height: 1.17;
 }
 .modal-review__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .modal-review__rating .rating-input {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   margin-right: 1rem;
   overflow: unset;
 }
@@ -58,7 +64,9 @@
   margin-left: 0;
 }
 .modal-review__rating .rating-result {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   font-size: 0.875rem;
 }
 .modal-review__rating .rating-result.no-rating {
@@ -92,7 +100,9 @@
   color: #DE7800;
 }
 .modal-review__rated .modal-review__rating {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .modal-review__rated .modal-review__rating .rating-input__star {
   width: 2.125rem;

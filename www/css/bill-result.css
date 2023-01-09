@@ -6,13 +6,15 @@
 .bill-result::before {
   top: -48px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .bill-result__row {
   position: relative;
   line-height: 1.1875rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #fff;
   z-index: 2;
 }
@@ -39,16 +41,27 @@
   }
 }
 .bill-result__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-top: 0.75rem;
   padding-bottom: 1.5rem;
 }
 .bill-result__buttons form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 1rem;
 }
 .bill-result__buttons form .form-group {
@@ -70,7 +83,10 @@
 }
 @media screen and (max-width: 767px) {
   .bill-result__buttons {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .bill-result__buttons form {
     padding-top: 1rem;
@@ -85,7 +101,8 @@
   }
 }
 .bill-result__success-message {
-  flex-basis: 31.75rem;
+  -ms-flex-preferred-size: 31.75rem;
+      flex-basis: 31.75rem;
   max-width: 31.75rem;
   margin-top: 0.5rem;
   padding: 0.5rem 0.5rem 0.5rem 2.25rem;
@@ -101,7 +118,8 @@
 }
 @media screen and (max-width: 767px) {
   .bill-result__success-message {
-    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
     max-width: none;
   }
 }
@@ -155,14 +173,22 @@
   margin-bottom: 0.5rem;
 }
 .template-add__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #3B566E;
 }
 .template-add__plus, .template-add__success, .template-add__unsuccess {
-  flex-shrink: 0;
-  align-self: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;

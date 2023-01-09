@@ -4,9 +4,16 @@
 }
 
 .find-payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 15.65rem;
   border-radius: 0.5rem;
   background-color: #172A3A;
@@ -17,8 +24,13 @@
   }
 }
 .find-payment__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1.25rem 1.25rem 0;
 }
 .find-payment__text p {
@@ -41,12 +53,20 @@
 }
 @media screen and (max-width: 575px) {
   .find-payment__text {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .find-payment__text p:first-child {
-    flex-basis: 33%;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
     font-size: 1.125rem;
   }
   .find-payment__text p:last-child {
@@ -62,9 +82,15 @@
   }
 }
 .find-payment__last-payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0.5rem 1.25rem 0.5rem;
   border-top: 1px solid #3B566E;
 }
@@ -75,7 +101,8 @@
   color: #fff;
 }
 .find-payment__last-payment span:first-child {
-  flex-basis: 33%;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
 }
 .find-payment__last-payment span.find-payment__time {
   margin-right: 6px;
@@ -101,18 +128,24 @@
   height: 1px;
   left: 0;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background-color: #DEE7F3;
 }
 
 .payment-box {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 16.5rem;
   padding: 0.5rem;
   border-radius: 0.3125rem;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #fff;
 }
 .payment-box::before {
@@ -121,9 +154,11 @@
   width: 0;
   height: 0;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 2px;
   border-style: solid;
+  -webkit-filter: drop-shadow(0px 4px 20px rgba(39, 97, 146, 0.15));
   filter: drop-shadow(0px 4px 20px rgba(39, 97, 146, 0.15));
 }
 .payment-box--top {
@@ -143,17 +178,33 @@
   border-color: transparent transparent #ffffff transparent;
 }
 .payment-box__left {
-  flex-shrink: 0;
-  flex-basis: 30%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
   max-width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .payment-box__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: right;
 }
 .payment-box__time {

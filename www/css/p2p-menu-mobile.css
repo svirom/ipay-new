@@ -11,12 +11,14 @@
 .nav-p2p .dropdown-menu {
   width: 100%;
   margin-top: 0;
-  transform: none !important;
+  -webkit-transform: none !important;
+          transform: none !important;
   padding-top: 0;
   padding-bottom: 0;
   border: 0;
   border-radius: 0;
-  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
 }
 .nav-p2p .nav-p2p-item {
   display: block;
@@ -31,6 +33,7 @@
   top: 50%;
   width: 24px;
   height: 24px;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background: url("data:image/svg+xml,%3Csvg width='23' height='20' viewBox='0 0 23 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.78076 8.02393L11.2498 12.8853' stroke='white' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.25 12.8853L16.719 8.02391' stroke='white' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
 }
@@ -62,6 +65,7 @@
   content: "";
   left: 1rem;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background-image: url("../img/menu-catalogue.png");
   background-size: 169px;

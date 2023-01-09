@@ -2,7 +2,9 @@
   border-bottom: 2px solid #DEE7F3;
 }
 .bill-tablist .nav {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .bill-tablist__item:not(:last-child) {
   margin-right: 1.125rem;
@@ -21,6 +23,7 @@
   left: 0;
   bottom: -2px;
   background-color: #E84F35;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
 .bill-tablist__link:hover {

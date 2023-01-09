@@ -3,17 +3,26 @@
 }
 
 .about-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 12.5rem;
   padding: 1.1875rem;
   border-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 .about-card__img {
-  align-self: flex-end;
-  flex-shrink: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;

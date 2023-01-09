@@ -28,7 +28,8 @@
   border-radius: 50%;
 }
 .p2p-save-card .checkbox-switch .checkbox-input:checked ~ .checkbox-label::after {
-  transform: translateX(1.125rem);
+  -webkit-transform: translateX(1.125rem);
+          transform: translateX(1.125rem);
 }
 .p2p-save-card__alert {
   display: inline-block;

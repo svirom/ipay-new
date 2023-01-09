@@ -2,8 +2,12 @@
   margin-bottom: 1rem;
 }
 .ipayplus-quest4 .quest4-menu__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   vertical-align: middle;
 }
 .ipayplus-quest4 .quest4-menu__link:hover .quest4-menu__text {
@@ -11,7 +15,8 @@
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62842 17.8336L15.462 12' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4624 12L9.6288 6.16639' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 .ipayplus-quest4 .quest4-menu__icon {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -36,7 +41,8 @@
   pointer-events: none;
 }
 .ipayplus-quest4 .quest4-menu__item--done .quest4-menu__icon {
-  box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+  -webkit-box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+          box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
   background-color: #09BC8A;
 }
 .ipayplus-quest4 .quest4-menu__item--done .quest4-menu__text {
@@ -62,7 +68,9 @@
 }
 @media screen and (max-width: 575px) {
   .ipayplus-quest4 .quest4-menu__link {
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .ipayplus-quest4 .quest4-menu__text {
     padding-left: 0.875rem;

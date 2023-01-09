@@ -19,30 +19,50 @@
   margin-left: 3px;
 }
 .mobile-charge__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .mobile-charge__phone {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   min-width: 17.625rem;
   margin-right: 0.625rem;
 }
 .mobile-charge__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .mobile-charge__number {
   position: relative;
 }
 .mobile-charge__buttons {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .mobile-charge__continue {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .mobile-charge__safety {
   padding-left: 1.3625rem;
@@ -58,8 +78,12 @@
   max-width: 16.25rem;
 }
 .mobile-charge__payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .mobile-charge__info .table td {
   padding-left: 0;
@@ -80,7 +104,10 @@
     max-width: 12.5rem;
   }
   .mobile-charge__payment {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .mobile-charge__info {
     max-width: 26.25rem;
@@ -103,18 +130,29 @@
     margin-right: 0.5rem;
   }
   .mobile-charge__input {
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding-bottom: 0.5rem;
   }
   .mobile-charge__phone {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     width: 100%;
     margin-right: 0;
   }
   .mobile-charge__continue {
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .mobile-charge__btn-continue {
     max-width: none;
@@ -136,7 +174,8 @@
 }
 
 .btn-mobile-amount {
-  flex-basis: 5rem;
+  -ms-flex-preferred-size: 5rem;
+      flex-basis: 5rem;
   width: 5rem;
   margin-left: 0.625rem;
   padding: 0.625rem 0;
@@ -148,7 +187,8 @@
   color: #fff;
   background-color: #09BC8A;
   border-color: #09BC8A;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   outline: none;
 }
 @media screen and (max-width: 1199px) {
@@ -166,7 +206,8 @@
   width: 26.25rem;
 }
 .mobile-card-wrapper .dropdown.show .mobile-card--checked {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: #F0F5FA;
 }
 .mobile-card-wrapper .dropdown.show .mobile-card--checked .mobile-card__header {
@@ -181,15 +222,18 @@
   width: 100%;
   top: auto !important;
   margin-top: -3rem;
+  -webkit-transform: none !important;
   transform: none !important;
   padding: 0;
   border: 0;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
 }
 .mobile-card-wrapper .dropdown-menu .mobile-card {
   border-radius: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
 }
 .mobile-card-wrapper .dropdown-menu .mobile-card:first-of-type {
@@ -212,12 +256,17 @@
 
 .mobile-card {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 26.25rem;
   padding: 0.6rem 0.75rem;
   border-radius: 1.25rem;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   z-index: 1;
   background-color: #fff;
 }
@@ -235,10 +284,18 @@
   color: #000000;
 }
 .mobile-card__header {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 9.75rem;
   height: 6.875rem;
   padding: 1rem 0.5rem;
@@ -246,28 +303,48 @@
   background-color: #F0F5FA;
 }
 .mobile-card__bank, .mobile-card__type {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .mobile-card__bank {
-  align-items: flex-end;
-  order: 1;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 .mobile-card__bank img {
   max-height: 1.125rem;
 }
 .mobile-card__type {
-  align-items: flex-start;
-  flex-shrink: 0;
-  justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .mobile-card__type img {
   max-height: 1.75rem;
 }
 .mobile-card__body {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-left: 1.9rem;
 }
 .mobile-card__number {
@@ -297,24 +374,35 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 26px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 10;
 }
 .mobile-card--checked {
-  flex-direction: column-reverse;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 11.25rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
 .mobile-card--checked .mobile-card__header {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   height: auto;
   background-color: #fff;
 }
 .mobile-card--checked .mobile-card__bank {
-  order: 0;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
 }
 .mobile-card--checked .mobile-card__bank img,
 .mobile-card--checked .mobile-card__type img {
@@ -325,14 +413,20 @@
 }
 @media screen and (max-width: 575px) {
   .mobile-card {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     width: 100%;
     max-width: 20rem;
     height: 8.5rem;
     padding: 0.75rem 1rem;
   }
   .mobile-card__header {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 100%;
     height: auto;
     padding: 0;
@@ -342,17 +436,32 @@
     max-height: 1.5rem;
   }
   .mobile-card__bank {
-    align-items: center;
-    order: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
   .mobile-card__type {
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .mobile-card__body {
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     padding-left: 0;
     padding-top: 1rem;

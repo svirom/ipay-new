@@ -43,7 +43,8 @@
   height: 4px;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   background-color: #E84F35;
 }
 .insurance-main .insurance-list li:last-child {
@@ -294,7 +295,8 @@
 }
 .insurance-get .insurance-get-img img {
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
 }
 @media screen and (max-width: 767px) {
   .insurance-get {
@@ -320,12 +322,20 @@
   margin-bottom: 2.625rem;
 }
 .insurance-documents .documents-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 229px;
   padding: 2.625rem 0.875rem 0;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
   border-radius: 0.5rem;
   background-color: #ffffff;
 }
@@ -415,6 +425,7 @@
 .insurance-electronic {
   padding: 5rem 0;
   border-bottom: 1px solid #284359;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #F0F5FA), color-stop(50%, #172A3A), to(#172A3A));
   background-image: linear-gradient(to right, #F0F5FA 50%, #172A3A 50%, #172A3A 100%);
   background-position: center;
   background-size: 100%;

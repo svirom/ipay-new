@@ -12,8 +12,13 @@
   padding-bottom: 0.75rem;
 }
 .disclosure-list__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 5.625rem;
   height: 100%;
 }
@@ -24,9 +29,16 @@
   min-height: 7.5rem;
 }
 .disclosure-list__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 4.875rem;
   height: 100%;
   padding-top: 1.5rem;
@@ -56,7 +68,9 @@
     border-bottom: none;
   }
   .disclosure-list__top {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     min-height: auto;
   }
   .disclosure-list__bottom {

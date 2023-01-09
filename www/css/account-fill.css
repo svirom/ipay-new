@@ -18,6 +18,7 @@
 .popover-account--templates::before, .popover-account--payments::before, .popover-account--menu::before {
   left: -6px;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   border-width: 6px 6px 6px 0;
   border-color: transparent #3B566E transparent #3B566E;
@@ -41,6 +42,7 @@
     left: 50%;
     top: auto;
     bottom: -6px;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     border-width: 6px 6px 0 6px;
     border-color: #3B566E transparent #3B566E transparent;
@@ -62,6 +64,7 @@
 #popover-account-templates {
   left: calc(100% + 20px);
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 @media screen and (max-width: 991px) {
@@ -69,6 +72,7 @@
     left: 0;
     top: auto;
     bottom: 1.875rem;
+    -webkit-transform: none;
     transform: none;
   }
 }
@@ -76,6 +80,7 @@
 #popover-account-payments {
   left: calc(100% + 20px);
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 @media screen and (max-width: 991px) {
@@ -83,6 +88,7 @@
     left: 0;
     top: auto;
     bottom: 1.875rem;
+    -webkit-transform: none;
     transform: none;
   }
 }
@@ -90,6 +96,7 @@
 #popover-account-menu {
   left: calc(100% + 5px);
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 @media screen and (max-width: 991px) {
@@ -97,12 +104,14 @@
     left: auto;
     right: 15px;
     top: 3.75rem;
+    -webkit-transform: none;
     transform: none;
   }
 }
 
 .popover-account {
   opacity: 0;
+  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 .popover-account.active {

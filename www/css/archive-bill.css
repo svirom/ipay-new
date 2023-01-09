@@ -4,12 +4,17 @@
 }
 .archive-bill__row {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.657rem 0.9193rem;
   line-height: 1.1875rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #fff;
 }
 @media screen and (max-width: 767px) {
@@ -18,11 +23,14 @@
   }
 }
 .archive-bill__title, .archive-bill__details {
-  flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
   padding: 0 4rem 0 1rem;
 }
 .archive-bill__amount {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 1.5rem;
 }
 @media screen and (max-width: 767px) {
@@ -48,9 +56,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .archive-bill__details[aria-expanded=true]::after {
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 @media screen and (max-width: 767px) {

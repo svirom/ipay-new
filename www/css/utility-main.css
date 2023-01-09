@@ -7,8 +7,10 @@
   border: none;
   border-radius: 0.5rem;
   background-color: #fff;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-  transform: none !important;
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-transform: none !important;
+          transform: none !important;
 }
 .filter-region .dropdown-menu::before, .filter-services .dropdown-menu::before, .filter-city .dropdown-menu::before {
   position: absolute;
@@ -18,12 +20,17 @@
   border-radius: 2px;
   border-style: solid;
   border-color: transparent transparent #ffffff transparent;
-  filter: drop-shadow(0px 4px 20px rgba(97, 144, 183, 0.15));
+  -webkit-filter: drop-shadow(0px 4px 20px rgba(97, 144, 183, 0.15));
+          filter: drop-shadow(0px 4px 20px rgba(97, 144, 183, 0.15));
 }
 
 .filter-region {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .filter-region__dropdown {
   display: inline-block;
@@ -48,12 +55,15 @@
   line-height: 1;
 }
 .filter-region .dropdown-menu {
-  -moz-column-count: 4;
-       column-count: 4;
-  -moz-column-gap: 0;
-       column-gap: 0;
-  -moz-column-fill: auto;
-       column-fill: auto;
+  -webkit-column-count: 4;
+     -moz-column-count: 4;
+          column-count: 4;
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0;
+  -webkit-column-fill: auto;
+     -moz-column-fill: auto;
+          column-fill: auto;
   height: 22.75rem;
   left: -2.25rem !important;
   margin-top: 2.75rem;
@@ -64,9 +74,16 @@
   border-width: 0 14px 14px 14px;
 }
 .filter-region__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   min-width: 11.875rem;
   height: 3.25rem;
@@ -122,16 +139,22 @@
 }
 @media screen and (max-width: 991px) {
   .filter-region {
-    flex-direction: column;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     text-align: right;
   }
   .filter-region__dropdown {
     padding-right: 0;
   }
   .filter-region .dropdown-menu {
-    -moz-column-count: 1;
-         column-count: 1;
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
     width: auto;
     height: auto;
     right: 0 !important;
@@ -142,9 +165,16 @@
     content: none;
   }
   .filter-region__item {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-width: 16rem;
     height: 2.75rem;
     border-radius: 0;
@@ -191,6 +221,7 @@
   position: absolute;
   content: "";
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background-repeat: no-repeat;
 }
@@ -218,6 +249,7 @@
   }
   .filter-services__dropdown::before {
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
   .filter-services__dropdown::after {
@@ -241,10 +273,17 @@
   }
 }
 .filter-services__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   min-width: 12.5rem;
   height: 2.625rem;
@@ -265,6 +304,7 @@
   content: "";
   left: 0.85rem;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background-image: url("../img/sprite-services.png");
   background-repeat: no-repeat;

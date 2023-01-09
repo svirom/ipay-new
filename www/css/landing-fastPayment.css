@@ -1,5 +1,4 @@
 .landing-top {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
@@ -224,8 +223,12 @@
   background-color: #FFA727;
 }
 .landing-promo__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   max-width: 43.5rem;
   padding-left: 0.9375rem;
@@ -296,7 +299,8 @@
   .landing-promo__img span {
     bottom: -27px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     padding: 0.6875rem 1.375rem;
     font-size: 1.625rem;
   }
@@ -335,16 +339,23 @@
 }
 .landing-prize img {
   max-width: 100%;
-  filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.35));
+  -webkit-filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.35));
+          filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.35));
 }
 .landing-prize h3 {
   color: #3B566E;
 }
 .landing-prize__img {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 21.875rem;
   margin-bottom: 0.75rem;
 }
@@ -360,29 +371,34 @@
   color: #ffffff;
   border: 3px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 10px 20px 40px rgba(25, 40, 60, 0.5);
+  -webkit-box-shadow: 10px 20px 40px rgba(25, 40, 60, 0.5);
+          box-shadow: 10px 20px 40px rgba(25, 40, 60, 0.5);
   z-index: 1;
 }
 .landing-prize--prize1 img {
   margin-top: 1.5rem;
-  filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.5));
+  -webkit-filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.5));
+          filter: drop-shadow(6px 20px 24px rgba(25, 40, 60, 0.5));
 }
 .landing-prize--prize1 .landing-prize__img span {
   top: 50%;
   left: 50%;
-  transform: translate(-118px, -76px);
+  -webkit-transform: translate(-118px, -76px);
+          transform: translate(-118px, -76px);
   background-color: #FFA727;
 }
 .landing-prize--prize2 .landing-prize__img span {
   top: 50%;
   left: 50%;
-  transform: translate(-155px, -75px);
+  -webkit-transform: translate(-155px, -75px);
+          transform: translate(-155px, -75px);
   background-color: #FFA727;
 }
 .landing-prize--prize3 .landing-prize__img span {
   top: 50%;
   right: 50%;
-  transform: translate(135px, -75px);
+  -webkit-transform: translate(135px, -75px);
+          transform: translate(135px, -75px);
   background-color: #E84F35;
 }
 @media screen and (max-width: 991px) {
@@ -398,21 +414,24 @@
     padding-right: 1.875rem;
   }
   .landing-prize--prize1 .landing-prize__img span {
-    transform: translate(-75px, -59px);
+    -webkit-transform: translate(-75px, -59px);
+            transform: translate(-75px, -59px);
   }
   .landing-prize--prize2 .landing-prize__img {
     padding-left: 1.1875rem;
     padding-right: 1.1875rem;
   }
   .landing-prize--prize2 .landing-prize__img span {
-    transform: translate(-93px, -59px);
+    -webkit-transform: translate(-93px, -59px);
+            transform: translate(-93px, -59px);
   }
   .landing-prize--prize3 .landing-prize__img {
     padding-left: 1.3125rem;
     padding-right: 1.3125rem;
   }
   .landing-prize--prize3 .landing-prize__img span {
-    transform: translate(76px, -59px);
+    -webkit-transform: translate(76px, -59px);
+            transform: translate(76px, -59px);
   }
 }
 @media screen and (max-width: 767px) {
@@ -431,7 +450,8 @@
     padding-right: 0;
   }
   .landing-prize--prize1 .landing-prize__img span {
-    transform: translate(-98px, -104px);
+    -webkit-transform: translate(-98px, -104px);
+            transform: translate(-98px, -104px);
   }
   .landing-prize--prize1 img {
     margin-top: 0;
@@ -441,14 +461,16 @@
     padding-right: 0;
   }
   .landing-prize--prize2 .landing-prize__img span {
-    transform: translate(-144px, -30px);
+    -webkit-transform: translate(-144px, -30px);
+            transform: translate(-144px, -30px);
   }
   .landing-prize--prize3 .landing-prize__img {
     padding-left: 0;
     padding-right: 0;
   }
   .landing-prize--prize3 .landing-prize__img span {
-    transform: translate(135px, -75px);
+    -webkit-transform: translate(135px, -75px);
+            transform: translate(135px, -75px);
   }
 }
 

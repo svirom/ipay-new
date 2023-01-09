@@ -2,8 +2,12 @@
   line-height: 1.17;
 }
 .account-bonuses .bonuses-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-radius: 0.5rem;
   background-color: #172A3A;
 }
@@ -19,11 +23,14 @@
   font-weight: 700;
 }
 .account-bonuses .bonuses-header__nav {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding: 1.5rem 1.5rem 0;
 }
 .account-bonuses .bonuses-header__nav .nav {
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .account-bonuses .bonuses-header__nav .nav li {
   margin-left: 1.5rem;
@@ -32,8 +39,12 @@
   margin-left: 0;
 }
 .account-bonuses .bonuses-header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 2.625rem;
   padding-bottom: 0.9375rem;
   color: #DEE7F3;
@@ -74,8 +85,13 @@
 }
 @media screen and (max-width: 767px) {
   .account-bonuses .bonuses-header {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .account-bonuses .bonuses-header__amount {
     padding-bottom: 0;
@@ -85,7 +101,8 @@
     display: block;
   }
   .account-bonuses .bonuses-header__nav {
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     padding: 1.5rem 1rem 0;
   }
 }
@@ -124,12 +141,17 @@
   background-color: #F0F5FA;
 }
 .account-bonuses .bonuses-howto__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .account-bonuses .bonuses-howto__img {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 2.625rem;
   text-align: center;
 }
@@ -151,7 +173,8 @@
   padding: 2.375rem 1rem 1.5rem;
   text-align: center;
   border-radius: 1.25rem;
-  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -165,9 +188,15 @@
   text-transform: uppercase;
 }
 .bonuses-card__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 11.25rem;
 }
 .bonuses-card__img img {
@@ -198,7 +227,8 @@
   font-size: 1rem;
   color: #ffffff;
   border-radius: 1.5625rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .bonuses-card--blue {
   background-image: url("/img/bonuses/bg-blue.png");
@@ -229,8 +259,13 @@
 }
 
 .gift-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 17.8125rem;
   padding: 1.5rem 1.25rem;
   border: 3px solid #DEE7F3;
@@ -240,10 +275,17 @@
   text-decoration: none;
 }
 .gift-card__img {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 10.5rem;
   margin-bottom: 0.5rem;
 }
@@ -277,7 +319,10 @@
 }
 @media screen and (max-width: 767px) {
   .gift-card {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: auto;
     padding: 1.5rem;
   }
@@ -285,7 +330,8 @@
     margin-bottom: 0;
     height: 5rem;
     width: 5rem;
-    flex-basis: 5rem;
+    -ms-flex-preferred-size: 5rem;
+        flex-basis: 5rem;
   }
   .gift-card__text {
     padding-left: 1rem;
@@ -376,15 +422,26 @@
   margin-bottom: 2rem;
 }
 .bonuses-info--disabled {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 12.5rem;
   margin-bottom: 1.5rem;
 }
 .bonuses-info--disabled img, .bonuses-info--disabled p {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .bonuses-info--disabled p {
   margin-top: 0.75rem;

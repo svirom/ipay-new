@@ -1,6 +1,10 @@
 .partners-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 6.25rem;
   padding: 0.8125rem 0.5rem;
   border: 4px solid #F0F5FA;
@@ -12,10 +16,17 @@
   color: #000;
 }
 .partners-card__img {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 2.875rem;
   height: 2.875rem;
 }

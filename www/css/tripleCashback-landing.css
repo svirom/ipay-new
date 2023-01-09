@@ -66,9 +66,16 @@
   z-index: -1;
 }
 .landing-header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   height: 100%;
 }
@@ -84,6 +91,8 @@
   max-width: 33.75rem;
 }
 .landing-header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -137,7 +146,8 @@
   }
   .landing-header::before {
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     right: -270px;
   }
   .landing-header__content .landing-header__date {
@@ -168,7 +178,8 @@
   height: 100%;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
 }
 .landing-conditions__card p {
   color: #172A3A;
@@ -230,13 +241,20 @@
   position: absolute;
   left: -72px;
   bottom: -18px;
-  box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
+  -webkit-box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
+          box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
   border-radius: 14.7669px;
 }
 .landing-promo__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   padding-left: 1.5rem;
   padding-right: 2.0625rem;
@@ -263,11 +281,15 @@
   }
   .landing-promo__img .image-2 {
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     bottom: -82px;
   }
   .landing-promo__text {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     font-size: 1.5rem;

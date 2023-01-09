@@ -1,4 +1,6 @@
 .tripleCashback-p2p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 26.25rem;
   margin-left: auto;
@@ -11,7 +13,8 @@
   color: #ffffff;
 }
 .tripleCashback-p2p__img {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 2.875rem;
   height: 2.875rem;
   border-radius: 50%;
@@ -33,9 +36,15 @@
 }
 
 .tripleCashback-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 1.5rem;
   margin-left: -1.375rem;
   margin-right: -1.375rem;
@@ -50,7 +59,8 @@
 }
 .tripleCashback-result__img {
   position: relative;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 2.875rem;
   height: 2.875rem;
   text-align: center;
@@ -83,6 +93,8 @@
 }
 @media screen and (max-width: 767px) {
   .tripleCashback-result {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }/*# sourceMappingURL=tripleCashback-p2p.css.map */

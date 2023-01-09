@@ -1,8 +1,10 @@
 .account-signup .help-list {
-  -moz-column-count: 2;
-       column-count: 2;
-  -moz-column-fill: auto;
-       column-fill: auto;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-fill: auto;
+     -moz-column-fill: auto;
+          column-fill: auto;
   height: 4.5rem;
 }
 .account-signup .help-list {
@@ -27,6 +29,7 @@
   content: "";
   top: 0;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 4rem;
   height: 4rem;
@@ -42,6 +45,7 @@
   content: "";
   bottom: 2px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 7.9375rem;
   height: 3px;

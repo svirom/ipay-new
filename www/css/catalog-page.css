@@ -1,7 +1,13 @@
 .catalog-page-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .catalog-page-alert.alert.alert-face {
   padding: 1rem 1rem 1rem 4.5rem;
@@ -45,8 +51,12 @@
   background-color: #F0F5FA;
 }
 .catalog-page-info__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 2.5rem;
 }
 .catalog-page-info__card span {

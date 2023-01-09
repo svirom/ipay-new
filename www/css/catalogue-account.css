@@ -41,6 +41,7 @@
   position: absolute;
   right: 1rem;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 0.75rem;
 }
@@ -52,6 +53,7 @@
   content: "";
   left: 0.625rem;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background-image: url("../img/dashboard-catalogue-new.png");
   background-size: 124px;
@@ -65,7 +67,8 @@
   top: 0;
   width: 3.125rem;
   height: 100%;
-  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
   border-radius: 0.5rem;
   background-color: #fff;
 }

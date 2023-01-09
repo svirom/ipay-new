@@ -39,7 +39,8 @@
 .homepage-fastPayment__leaderboard {
   padding: 1.625rem 1.5rem 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0px -11px 24px rgba(106, 124, 150, 0.05);
+  -webkit-box-shadow: 0px -11px 24px rgba(106, 124, 150, 0.05);
+          box-shadow: 0px -11px 24px rgba(106, 124, 150, 0.05);
 }
 .homepage-fastPayment__leaderboard h4 {
   line-height: 2;
@@ -49,8 +50,12 @@
   padding-bottom: 1.5625rem;
 }
 .homepage-fastPayment__table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   min-height: 4rem;
 }
@@ -61,12 +66,15 @@
   line-height: 1.5;
 }
 .homepage-fastPayment__table-row span:first-child {
-  flex-basis: 2.5rem;
+  -ms-flex-preferred-size: 2.5rem;
+      flex-basis: 2.5rem;
   text-align: center;
   color: #7C9CAC;
 }
 .homepage-fastPayment__table-row span:nth-child(2) {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   word-break: break-word;
 }
 .homepage-fastPayment__table-row span:last-child span {
@@ -83,6 +91,7 @@
   content: "";
   left: 0;
   width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(222, 231, 243, 0)), color-stop(0%, #DEE7F3));
   background-image: linear-gradient(to left, rgba(222, 231, 243, 0) 50%, #DEE7F3 0%);
   background-position: bottom;
   background-size: 6px 2px;
@@ -143,7 +152,8 @@
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .homepage-fastPayment__table-row {
     min-height: 3.75rem;

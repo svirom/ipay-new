@@ -29,7 +29,8 @@
   padding-top: 1.5rem;
 }
 .p2r-new .p2r-form .form-group.has-error .form-input {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .p2r-new .p2r-form .form-group.has-error .help-block {
   position: static;
@@ -115,6 +116,7 @@
   background-color: #7C9CAC;
   cursor: pointer;
   overflow: hidden;
+  -webkit-transition: all 1.2s ease;
   transition: all 1.2s ease;
   text-align: center;
   -webkit-clip-path: inset(0 100% 0 0);
@@ -218,7 +220,8 @@
     margin-bottom: 0;
     padding: 1rem 0.9375rem 0;
     border-radius: 0.75rem;
-    box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+    -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+            box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
   }
   .p2r-new .bank-card__header, .p2r-new .bank-card__bank, .p2r-new .bank-card__type {
     height: 2rem;
@@ -249,6 +252,7 @@
     top: 50%;
     left: 210px;
     left: 9.0625rem;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 1.125rem;
     font-weight: bold;
@@ -299,6 +303,7 @@
   top: 0;
   left: 0;
   background-color: #09BC8A;
+  -webkit-transition: width 0.8s ease;
   transition: width 0.8s ease;
 }
 .p2r-new-progressbar .p2r-progress.progress-1 {
@@ -398,9 +403,15 @@
   border-bottom: 1px solid #DEE7F3;
 }
 .p2r-new-protection__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 0.25rem;
 }
 .p2r-new-protection__card a:hover {
@@ -505,9 +516,16 @@
   border-radius: 0.5rem;
 }
 .p2r-new-provider__rating, .p2r-new-provider__payments {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .p2r-new-provider__rating {
   position: relative;
@@ -580,8 +598,10 @@
   height: 4.5rem;
   padding: 0.75rem;
   border: 0;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
 }
 .p2r-templates .bill-card__img {
   width: 3rem;
@@ -593,7 +613,8 @@
   padding-left: 0.75rem;
 }
 .p2r-templates .bill-card:hover {
-  box-shadow: 0px 4px 5px rgba(23, 42, 58, 0.1);
+  -webkit-box-shadow: 0px 4px 5px rgba(23, 42, 58, 0.1);
+          box-shadow: 0px 4px 5px rgba(23, 42, 58, 0.1);
 }
 @media screen and (max-width: 767px) {
   .p2r-templates .bill-card {
@@ -615,12 +636,19 @@
   padding: 0.25rem;
   text-align: center;
   border-radius: 0.5rem;
-  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
 }
 .p2r-templates-mobile .templates-mobile-card__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 2.25rem;
   padding-left: 1rem;
   padding-right: 1rem;

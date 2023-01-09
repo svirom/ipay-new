@@ -1,4 +1,6 @@
 .awards-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Montserrat", sans-serif;
   color: #172A3A;
@@ -11,7 +13,8 @@
   margin-bottom: 1rem;
 }
 .awards-article__img {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   min-width: 10.9375rem;
   text-align: center;
 }
@@ -34,6 +37,9 @@
 }
 @media screen and (max-width: 767px) {
   .awards-article {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }/*# sourceMappingURL=homepage-awards.css.map */

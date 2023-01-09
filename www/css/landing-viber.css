@@ -18,7 +18,8 @@
   background-image: url("data:image/svg+xml,%3Csvg width='26' height='27' viewBox='0 0 26 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5693 6.88428L9.24958 13.204' stroke='%23FFFFFF' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.24902 13.2041L15.5688 19.5238' stroke='%23FFFFFF' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 .viber-header__left {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .viber-header__content {
   position: relative;
@@ -38,7 +39,8 @@
   content: "";
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 .viber-header__img-wrapper::before {
@@ -52,9 +54,15 @@
   border: 6px solid #786DD1;
 }
 .viber-header__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 .viber-header__img img {
@@ -66,19 +74,26 @@
   content: "";
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 20.375rem;
   height: 20.375rem;
   border-radius: 50%;
   background-color: #E84F35;
 }
 .viber-header__partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .viber-header__qr-wrapper {
   position: relative;
-  flex: 0 0 15.125rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15.125rem;
+          flex: 0 0 15.125rem;
   height: 100%;
   padding: 1.8125rem;
   border: 1px solid #5C51B4;
@@ -91,7 +106,8 @@
   height: 13.125rem;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border: 3px solid #7F73DA;
   border-radius: 0.5rem;
 }
@@ -104,7 +120,9 @@
   max-width: 100%;
 }
 .viber-header__logo {
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   padding-left: 1.625rem;
 }
 .viber-header__logo p {
@@ -126,7 +144,8 @@
     padding-bottom: 2.375rem;
   }
   .viber-header__qr-wrapper {
-    flex-basis: 9.5rem;
+    -ms-flex-preferred-size: 9.5rem;
+        flex-basis: 9.5rem;
     padding: 1.125rem;
     border-radius: 0.3125rem;
   }
@@ -205,12 +224,19 @@
 }
 
 .viber-bill {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 5.625rem;
   margin-bottom: 1.875rem;
-  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   border-radius: 0.4375rem;
 }
 .viber-bill span {
@@ -231,7 +257,8 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media screen and (max-width: 991px) {
@@ -247,7 +274,9 @@
     margin-bottom: 1.5rem;
   }
   .viber-bill {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     height: 3.5rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
@@ -267,7 +296,8 @@
   .viber-card img {
     width: 2.5rem;
     left: 0;
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 .viber-footer {
@@ -328,7 +358,8 @@
   position: absolute;
   content: "";
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .viber-footer__phone::before {
   top: 0;

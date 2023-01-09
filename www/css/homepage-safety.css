@@ -7,7 +7,8 @@
   display: block;
   padding: 0.3125rem 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+  -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+          box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
   background-color: rgba(255, 255, 255, 0.8);
 }
 .safety-card__img {
@@ -50,7 +51,8 @@
   content: "";
   left: -1rem;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 0;
   height: 4.625rem;
   border-left: 1px solid #DEE7F3;
@@ -73,7 +75,9 @@
     padding: 0.625rem 0.875rem;
   }
   .safety-card__img {
-    flex: 0 0 2.5rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 2.5rem;
+            flex: 0 0 2.5rem;
     max-width: 2.5rem;
     margin-right: 0.5rem;
     margin-bottom: 0.625rem;

@@ -1,6 +1,10 @@
 .giftsForPayments-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.625rem;
   border-radius: 0.5rem;
   background-color: #172A3A;
@@ -11,7 +15,8 @@
 }
 .giftsForPayments-result__img {
   position: relative;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 2.875rem;
   height: 2.875rem;
   text-align: center;
@@ -23,7 +28,9 @@
   padding-left: 0.625rem;
 }
 .giftsForPayments-result--registered {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 1.5rem;
   margin-left: -1.375rem;
   margin-right: -1.375rem;
@@ -33,6 +40,8 @@
 }
 @media screen and (max-width: 767px) {
   .giftsForPayments-result--registered {
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }/*# sourceMappingURL=giftsForPayments.css.map */

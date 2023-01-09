@@ -1,25 +1,38 @@
 .fastPayment-rate__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid #DEE7F3;
   cursor: pointer;
 }
 .fastPayment-rate__row-img, .fastPayment-rate__row-arrow {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .fastPayment-rate__row-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 .fastPayment-rate__row-info {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-left: 0.875rem;
   padding-right: 0.875rem;
 }
@@ -31,10 +44,14 @@
   color: #172A3A;
 }
 .fastPayment-rate__row-arrow {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 .fastPayment-rate__row[aria-expanded=true] .fastPayment-rate__row-arrow {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .fastPayment-rate__collapse {
   padding-top: 1.5rem;
@@ -105,8 +122,12 @@
 }
 
 .fastPayment-leader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 4rem;
   margin-bottom: 0.875rem;
   padding-left: 0.875rem;
@@ -119,22 +140,27 @@
   font-weight: 700;
 }
 .fastPayment-leader__rate {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   color: #172A3A;
 }
 .fastPayment-leader__info {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-left: 2.75rem;
   padding-right: 0.5rem;
   color: #172A3A;
   word-break: break-word;
 }
 .fastPayment-leader__time {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   color: #DE7800;
 }
 .fastPayment-leader__img {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding-left: 1.5rem;
 }
 .fastPayment-leader__img img {

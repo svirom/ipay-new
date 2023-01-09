@@ -41,6 +41,7 @@
   position: absolute;
   right: 1rem;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 0.75rem;
 }
@@ -52,6 +53,7 @@
   content: "";
   left: 0.625rem;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   background-image: url("../img/menu-catalogue-2.0.png");
   background-size: 194px;
@@ -65,7 +67,8 @@
   top: 0;
   width: 3.125rem;
   height: 100%;
-  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
   border-radius: 0.5rem;
   background-color: #fff;
 }
@@ -249,13 +252,17 @@
   width: 100%;
   left: 0;
   top: 0;
+  -webkit-transform: translateX(100%);
   transform: translateX(100%);
   background-color: #fff;
   z-index: 2;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .catalogue-mobile.active {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .catalogue-mobile__back.dropdown-item {

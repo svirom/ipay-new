@@ -33,9 +33,15 @@
   padding: 0 3.75rem;
 }
 .fastPayment-rating__banner-record {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: -0.875rem;
   margin-right: -0.875rem;
   padding-top: 0.5rem;
@@ -59,13 +65,23 @@
   text-align: center;
 }
 .fastPayment-rating__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .fastPayment-rating__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 6.25rem;
   height: 3.5rem;
   border-radius: 0.5rem;
@@ -107,7 +123,9 @@
     padding: 0;
   }
   .fastPayment-rating__banner-record {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-left: 0;
     margin-right: 0;
   }

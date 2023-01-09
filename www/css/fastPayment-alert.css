@@ -27,12 +27,14 @@
 }
 .alert-fastPayment-time.alert.alert-dismissible .close {
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 @media screen and (max-width: 767px) {
   .alert-fastPayment-time.alert.alert-dismissible .close {
     top: 0.5rem;
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
   .alert-fastPayment h3 {
     font-size: 1.25rem;

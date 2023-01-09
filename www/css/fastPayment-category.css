@@ -1,4 +1,6 @@
 .fastPayment-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   border-radius: 0.5rem;
@@ -16,13 +18,15 @@
   top: -146px;
   left: -75px;
   background-color: #E84F35;
-  filter: blur(18.7005px);
+  -webkit-filter: blur(18.7005px);
+          filter: blur(18.7005px);
 }
 .fastPayment-category::after {
   top: 12px;
   right: -60px;
   background-color: #FFA727;
-  filter: blur(14.7005px);
+  -webkit-filter: blur(14.7005px);
+          filter: blur(14.7005px);
 }
 .fastPayment-category__circle {
   position: absolute;
@@ -35,7 +39,9 @@
   z-index: 1;
 }
 .fastPayment-category__content, .fastPayment-category__button {
-  flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   z-index: 1;
 }
 .fastPayment-category__content {
@@ -53,9 +59,16 @@
   color: #000000;
 }
 .fastPayment-category__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 0 3.5rem 1.0625rem 2.5rem;
   background: url("../img/fast-payment/category/fast-payment-category-1.png") right 72px bottom 51px no-repeat;
 }
@@ -77,7 +90,10 @@
 }
 @media screen and (max-width: 767px) {
   .fastPayment-category {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .fastPayment-category::before {
     top: 74px;
@@ -104,7 +120,9 @@
     font-size: 1.125rem;
   }
   .fastPayment-category__button {
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding-left: 1.8125rem;
     background: none;
   }

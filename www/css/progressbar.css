@@ -41,13 +41,18 @@
   font-size: 0.875rem;
 }
 .progress-payment .progress-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   left: 0;
   top: 1px;
   width: 100%;
   height: 24px;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .progress-payment .progress-step {
@@ -69,6 +74,7 @@
   background-size: 12px 12px;
 }
 .progress-payment .progress-step.active {
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
   border: 5px solid #E84F35;
   background-color: #fff;
@@ -85,12 +91,17 @@
 
 /* progressbar mobile */
 .progress-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .progress-mobile__circle {
   position: relative;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 30px;
   height: 30px;
   background: none;
@@ -104,6 +115,7 @@
   left: 0;
   border-radius: 50%;
   border: 3px solid #F0F5FA;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .progress-mobile__circle::after {
@@ -117,9 +129,15 @@
   border: 3px solid transparent;
 }
 .progress-mobile__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -134,8 +152,13 @@
   margin-top: 2px;
 }
 .progress-mobile__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 0.75rem;
 }
 .progress-mobile__current {
@@ -169,6 +192,7 @@
   border-top-color: #E84F35;
 }
 .progress-mobile--one-third .progress-mobile__circle::after {
+  -webkit-transform: rotate(72deg);
   transform: rotate(72deg);
   border-top-color: #E84F35;
 }
@@ -177,6 +201,7 @@
   border-right-color: #E84F35;
 }
 .progress-mobile--two-third .progress-mobile__circle::after {
+  -webkit-transform: rotate(108deg);
   transform: rotate(108deg);
   border-top-color: #E84F35;
   border-right-color: #E84F35;
@@ -187,6 +212,7 @@
   border-bottom-color: #E84F35;
 }
 .progress-mobile--three-third .progress-mobile__circle::after {
+  -webkit-transform: rotate(108deg);
   transform: rotate(108deg);
   border-top-color: #E84F35;
   border-right-color: #E84F35;
