@@ -321,7 +321,7 @@
 
                       <div class="collection-page__header-img">
                         <img src="img/constructor/collection-card/collection-card-1.svg" alt="Icon">
-                        <a href="#" class="collection-img-edit" role="button" data-toggle="modal" data-target="#collection-img-edit">
+                        <a href="#" class="collection-img-edit" role="button" data-toggle="modal" data-target="#collectionImgEdit">
                           <img src="img/constructor/collection-img-edit.svg" alt="Icon">
                         </a>
                       </div>
@@ -335,8 +335,8 @@
 
                         <div class="collection-page__header-info">
                           <p>Ми волонтерська ініціатива Front-U, тил із фінансового сектору.<br>
-                            Закуповуємо найнеобхідніше для наших воїнів: <a class="" data-toggle="collapse" href="#headerInfoCollapse" role="button" aria-expanded="false" aria-controls="headerInfoCollapse"><u>Показать больше</u></a></p>
-                          <div class="collapse" id="headerInfoCollapse">
+                            Закуповуємо найнеобхідніше для наших воїнів: <!--<a class="" data-toggle="collapse" href="#headerInfoCollapse" role="button" aria-expanded="false" aria-controls="headerInfoCollapse"><u>Показать больше</u></a>--></p>
+                          <!-- <div class="collapse" id="headerInfoCollapse">
                             <ul class="mb-3">
                               <li>🔥 дрони і БПЛА;</li>
                               <li>🔥 рації і супутникові телефони;</li>
@@ -345,16 +345,16 @@
                             </ul>
                             <p>😎 Кожен, хто робить значний донат від 15 тис грн, стає нашим Фронтменом, долучається до закритого комʼюніті та зʼявляється на нашому сайті (за згоди, звичайно ж).
                             Запалюй фінансову іскру до перемоги! Роби вогонь — донать! 🔥</p>
-                          </div>
+                          </div> -->
                         </div>
 
                         <div class="collection-page__header-buttons">
                           <div class="collection-page__buttons-dropdown dropdown">
                             <a href="#" class="btn-collection btn-collection-manage" role="button" id="dropdown-manage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Управление</a>
                             <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdown-manage">
-                              <a class="dropdown-item dropdown-collection-edit" href="#">Редактировать страницу</a>
+                              <a class="dropdown-item dropdown-collection-edit" href="#" role="button" data-toggle="modal" data-target="#collectionEdit">Редактировать страницу</a>
                               <a class="dropdown-item dropdown-collection-stop" href="#">Остановить сбор</a>
-                              <a class="dropdown-item dropdown-collection-delete" href="#">Удалить сбор</a>
+                              <a class="dropdown-item dropdown-collection-delete" href="#" role="button" data-toggle="modal" data-target="#collectionDelete">Удалить сбор</a>
                             </div>
                           </div>
                           <a href="#" class="btn-collection btn-collection-share" role="button" data-toggle="modal" data-target="#collectionShare">Поделиться страницей</a>
@@ -393,55 +393,131 @@
                             <span class="collection-table__title-info">Дополнительные данные</span>
                           </div>
 
-                          <div class="collection-table__card">
-                            <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">
-                              <div class="collection-table__card-img">
-                                <img src="img/constructor/collection-card/collection-card-7.svg" alt="">
+                          <div class="collection-table__card-wrapper">
+                            <div class="collection-table__card">
+                              <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">
+                                <div class="collection-table__card-img"></div>
+                                <span class="collection-table__card-time">20/02/21 18:01</span>
+                                <span class="collection-table__card-amount">1800.31</span>
+                                <span class="collection-table__card-info">--</span>
                               </div>
-                              <span class="collection-table__card-time">20/02/21 18:01</span>
-                              <span class="collection-table__card-amount">1800.31</span>
-                              <span class="collection-table__card-info">--</span>
-                            </div>
-                            <div id="archive-1" class="collapse">
-                              <div class="collection-table__collapse">
-                                <div class="">
-                                  Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                              <div id="archive-1" class="collapse">
+                                <div class="collection-table__collapse">
+                                  <div class="">
+                                    Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-
-                          <div class="collection-table__card">
-                            <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-2" aria-expanded="false">
-                              <div class="collection-table__card-img">
-                                <img src="img/constructor/collection-card/collection-card-1.svg" alt="">
+  
+                            <div class="collection-table__card">
+                              <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-2" aria-expanded="false">
+                                <div class="collection-table__card-img"></div>
+                                <span class="collection-table__card-time">20/02/21 18:01</span>
+                                <span class="collection-table__card-amount">1800.31</span>
+                                <span class="collection-table__card-info">--</span>
                               </div>
-                              <span class="collection-table__card-time">20/02/21 18:01</span>
-                              <span class="collection-table__card-amount">1800.31</span>
-                              <span class="collection-table__card-info">--</span>
-                            </div>
-                            <div id="archive-2" class="collapse">
-                              <div class="collection-table__collapse">
-                                <div class="">
-                                  Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                              <div id="archive-2" class="collapse">
+                                <div class="collection-table__collapse">
+                                  <div class="">
+                                    Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-
-                          <div class="collection-table__card">
-                            <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
-                              <div class="collection-table__card-img">
-                                <img src="img/constructor/collection-card/collection-card-2.svg" alt="">
+  
+                            <div class="collection-table__card">
+                              <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
+                                <div class="collection-table__card-img"></div>
+                                <span class="collection-table__card-time">20/02/21 18:01</span>
+                                <span class="collection-table__card-amount">1800.31</span>
+                                <span class="collection-table__card-info">--</span>
                               </div>
-                              <span class="collection-table__card-time">20/02/21 18:01</span>
-                              <span class="collection-table__card-amount">1800.31</span>
-                              <span class="collection-table__card-info">--</span>
+                              <div id="archive-3" class="collapse">
+                                <div class="collection-table__collapse">
+                                  <div class="">
+                                    Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div id="archive-3" class="collapse">
-                              <div class="collection-table__collapse">
-                                <div class="">
-                                  Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+
+                            <div class="collection-table__card">
+                              <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
+                                <div class="collection-table__card-img"></div>
+                                <span class="collection-table__card-time">20/02/21 18:01</span>
+                                <span class="collection-table__card-amount">1800.31</span>
+                                <span class="collection-table__card-info">--</span>
+                              </div>
+                              <div id="archive-3" class="collapse">
+                                <div class="collection-table__collapse">
+                                  <div class="">
+                                    Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="collection-table__card">
+                              <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
+                                <div class="collection-table__card-img"></div>
+                                <span class="collection-table__card-time">20/02/21 18:01</span>
+                                <span class="collection-table__card-amount">1800.31</span>
+                                <span class="collection-table__card-info">--</span>
+                              </div>
+                              <div id="archive-3" class="collapse">
+                                <div class="collection-table__collapse">
+                                  <div class="">
+                                    Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="collection-table__card">
+                              <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
+                                <div class="collection-table__card-img"></div>
+                                <span class="collection-table__card-time">20/02/21 18:01</span>
+                                <span class="collection-table__card-amount">1800.31</span>
+                                <span class="collection-table__card-info">--</span>
+                              </div>
+                              <div id="archive-3" class="collapse">
+                                <div class="collection-table__collapse">
+                                  <div class="">
+                                    Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="collection-table__card">
+                              <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
+                                <div class="collection-table__card-img"></div>
+                                <span class="collection-table__card-time">20/02/21 18:01</span>
+                                <span class="collection-table__card-amount">1800.31</span>
+                                <span class="collection-table__card-info">--</span>
+                              </div>
+                              <div id="archive-3" class="collapse">
+                                <div class="collection-table__collapse">
+                                  <div class="">
+                                    Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="collection-table__card">
+                              <div class="collection-table__card-row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
+                                <div class="collection-table__card-img"></div>
+                                <span class="collection-table__card-time">20/02/21 18:01</span>
+                                <span class="collection-table__card-amount">1800.31</span>
+                                <span class="collection-table__card-info">--</span>
+                              </div>
+                              <div id="archive-3" class="collapse">
+                                <div class="collection-table__collapse">
+                                  <div class="">
+                                    Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -453,9 +529,7 @@
                         <div class="collection-mobile">
 
                           <a href="my-archive-u-m-payment.html" class="collection-mobile__card">
-                            <div class="collection-mobile__icon">
-                              <img src="img/constructor/collection-card/collection-card-6.svg" alt="Icon">
-                            </div>
+                            <div class="collection-mobile__icon"></div>
                             <div class="collection-mobile__content">
                               <div class="collection-mobile__row">
                                 <span class="collection-mobile__time">20/02/20 18:01</span>
@@ -469,9 +543,7 @@
                           </a>
 
                           <a href="my-archive-u-m-payment.html" class="collection-mobile__card">
-                            <div class="collection-mobile__icon">
-                              <img src="img/constructor/collection-card/collection-card-6.svg" alt="Icon">
-                            </div>
+                            <div class="collection-mobile__icon"></div>
                             <div class="collection-mobile__content">
                               <div class="collection-mobile__row">
                                 <span class="collection-mobile__time">20/02/20 18:01</span>
@@ -485,9 +557,77 @@
                           </a>
 
                           <a href="my-archive-u-m-payment.html" class="collection-mobile__card">
-                            <div class="collection-mobile__icon">
-                              <img src="img/constructor/collection-card/collection-card-6.svg" alt="Icon">
+                            <div class="collection-mobile__icon"></div>
+                            <div class="collection-mobile__content">
+                              <div class="collection-mobile__row">
+                                <span class="collection-mobile__time">20/02/20 18:01</span>
+                                <span class="collection-mobile__amount">20.00 грн</span>
+                              </div>
+                              <div class="collection-mobile__title">
+                                <p class="mb-0">+380 (67) 123 44 67</p>
+                                <p class="mb-0">Кузьменко Владислав</p>
+                              </div>
                             </div>
+                          </a>
+
+                          <a href="my-archive-u-m-payment.html" class="collection-mobile__card">
+                            <div class="collection-mobile__icon"></div>
+                            <div class="collection-mobile__content">
+                              <div class="collection-mobile__row">
+                                <span class="collection-mobile__time">20/02/20 18:01</span>
+                                <span class="collection-mobile__amount">20.00 грн</span>
+                              </div>
+                              <div class="collection-mobile__title">
+                                <p class="mb-0">+380 (67) 123 44 67</p>
+                                <p class="mb-0">Кузьменко Владислав</p>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="my-archive-u-m-payment.html" class="collection-mobile__card">
+                            <div class="collection-mobile__icon"></div>
+                            <div class="collection-mobile__content">
+                              <div class="collection-mobile__row">
+                                <span class="collection-mobile__time">20/02/20 18:01</span>
+                                <span class="collection-mobile__amount">20.00 грн</span>
+                              </div>
+                              <div class="collection-mobile__title">
+                                <p class="mb-0">+380 (67) 123 44 67</p>
+                                <p class="mb-0">Кузьменко Владислав</p>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="my-archive-u-m-payment.html" class="collection-mobile__card">
+                            <div class="collection-mobile__icon"></div>
+                            <div class="collection-mobile__content">
+                              <div class="collection-mobile__row">
+                                <span class="collection-mobile__time">20/02/20 18:01</span>
+                                <span class="collection-mobile__amount">20.00 грн</span>
+                              </div>
+                              <div class="collection-mobile__title">
+                                <p class="mb-0">+380 (67) 123 44 67</p>
+                                <p class="mb-0">Кузьменко Владислав</p>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="my-archive-u-m-payment.html" class="collection-mobile__card">
+                            <div class="collection-mobile__icon"></div>
+                            <div class="collection-mobile__content">
+                              <div class="collection-mobile__row">
+                                <span class="collection-mobile__time">20/02/20 18:01</span>
+                                <span class="collection-mobile__amount">20.00 грн</span>
+                              </div>
+                              <div class="collection-mobile__title">
+                                <p class="mb-0">+380 (67) 123 44 67</p>
+                                <p class="mb-0">Кузьменко Владислав</p>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="my-archive-u-m-payment.html" class="collection-mobile__card">
+                            <div class="collection-mobile__icon"></div>
                             <div class="collection-mobile__content">
                               <div class="collection-mobile__row">
                                 <span class="collection-mobile__time">20/02/20 18:01</span>
@@ -598,8 +738,93 @@
       </div>
     </div><!-- footer -->
 
-    <!-- Modal share -->
-    <div class="modal fade modal-collection modal-share" id="collectionShare" tabindex="-1" aria-hidden="true">
+    <!-- Modal collection image edit -->
+    <div class="modal fade modal-collection modal-collection-img-edit" id="collectionImgEdit" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h3 class="mb-0">Выберите иконку</h3>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <form action="">
+              <input type="hidden" id="modal-collection-card" value="1">
+
+              <div class="row justify-content-center">
+                <div class="col-auto">
+                  <div class="modal-collection-card active" data-icon="1">
+                    <img src="img/constructor/collection-card/collection-card-1.svg" alt="Icon">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="modal-collection-card" data-icon="2">
+                    <img src="img/constructor/collection-card/collection-card-2.svg" alt="Icon">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="modal-collection-card" data-icon="3">
+                    <img src="img/constructor/collection-card/collection-card-3.svg" alt="Icon">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row justify-content-center">
+                <div class="col-auto">
+                  <div class="modal-collection-card" data-icon="4">
+                    <img src="img/constructor/collection-card/collection-card-4.svg" alt="Icon">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="modal-collection-card" data-icon="5">
+                    <img src="img/constructor/collection-card/collection-card-5.svg" alt="Icon">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="modal-collection-card" data-icon="6">
+                    <img src="img/constructor/collection-card/collection-card-6.svg" alt="Icon">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row justify-content-center mb-3">
+                <div class="col-auto">
+                  <div class="modal-collection-card" data-icon="7">
+                    <img src="img/constructor/collection-card/collection-card-7.svg" alt="Icon">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="modal-collection-card" data-icon="8">
+                    <img src="img/constructor/collection-card/collection-card-8.svg" alt="Icon">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="modal-collection-card" data-icon="9">
+                    <img src="img/constructor/collection-card/collection-card-9.svg" alt="Icon">
+                  </div>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-green btn-block">Сохранить</button>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal collection share -->
+    <div class="modal fade modal-collection modal-collection-share" id="collectionShare" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
 
@@ -650,6 +875,87 @@
       </div>
     </div>
 
+    <!-- Modal collection edit -->
+    <div class="modal fade modal-collection modal-collection-edit" id="collectionEdit" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h3 class="mb-0">Редактировать страницу</h3>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input filled" id="collection-title" name="collection-title" autocomplete="off" placeholder="" aria-required="true" value="Сбор денег">
+                <label class="control-label form-label" for="collection-title">Цель сбора</label>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control form-textarea" id="collection-textarea" rows="4" placeholder="Добавьте описание к вашей платежной форме, например, важную информацию для отправителя"></textarea>
+                <label class="control-label form-label" for="collection-textarea">Описание</label>
+              </div>
+              <div class="row col-pad8 mt-4">
+                <div class="col">
+                  <a href="#" class="btn btn-outline btn-block" data-dismiss="modal">Отмена</a>
+                </div>
+                <div class="col">
+                  <button type="submit" class="btn btn-green btn-block">Сохранить</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal collection delete -->
+    <div class="modal fade modal-collection modal-collection-delete" id="collectionDelete" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <p class="text-center heading-color">Вы уверены что хотите удалить страницу<br><strong>“На подарок Ивану Викторивичу на 50 летие работы”</strong>?</p>
+
+            <form action="">
+              <input type="hidden">
+              <div class="row col-pad8 mt-4 pt-sm-2">
+                <div class="col">
+                  <a href="#" class="btn btn-outline btn-block" data-dismiss="modal">Отмена</a>
+                </div>
+                <div class="col">
+                  <button type="submit" class="btn btn-red btn-block">Удалить</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -657,6 +963,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
-    <script src="/js/account-cards.js"></script>
+    <script src="/js/account-collection.js"></script>
   </body>
 </html>

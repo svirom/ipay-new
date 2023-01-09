@@ -577,21 +577,90 @@
   }
 
   &__card-img {
+    position: relative;
     flex: 0 0 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background-color: $middle-grey;
+    background-color: $light-grey;
     overflow: hidden;
 
-    img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/constructor/collection-table-icons.png");
+      background-size: 220px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .collection-table__card {
+    &:nth-of-type(8n-7) {
+      .collection-table__card-img {
+        &::after {
+          background-position: 0px 0px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-6) {
+      .collection-table__card-img {
+        &::after {
+          background-position: -45px 0px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-5) {
+      .collection-table__card-img {
+        &::after {
+          background-position: -90px 0px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-4) {
+      .collection-table__card-img {
+        &::after {
+          background-position: -135px 0px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-3) {
+      .collection-table__card-img {
+        &::after {
+          background-position: 0px -45px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-2) {
+      .collection-table__card-img {
+        &::after {
+          background-position: -45px -45px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-1) {
+      .collection-table__card-img {
+        &::after {
+          background-position: -90px -45px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n) {
+      .collection-table__card-img {
+        &::after {
+          background-position: -135px -45px;
+        }
+      }
     }
   }
 
@@ -641,24 +710,91 @@
     &:hover {
       text-decoration: none;
     }
+
+    &:nth-of-type(8n-7) {
+      .collection-mobile__icon {
+        &::after {
+          background-position: 0px 0px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-6) {
+      .collection-mobile__icon {
+        &::after {
+          background-position: -45px 0px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-5) {
+      .collection-mobile__icon {
+        &::after {
+          background-position: -90px 0px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-4) {
+      .collection-mobile__icon {
+        &::after {
+          background-position: -135px 0px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-3) {
+      .collection-mobile__icon {
+        &::after {
+          background-position: 0px -45px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-2) {
+      .collection-mobile__icon {
+        &::after {
+          background-position: -45px -45px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n-1) {
+      .collection-mobile__icon {
+        &::after {
+          background-position: -90px -45px;
+        }
+      }
+    }
+
+    &:nth-of-type(8n) {
+      .collection-mobile__icon {
+        &::after {
+          background-position: -135px -45px;
+        }
+      }
+    }
   }
 
   &__icon {
+    position: relative;
     flex: 0 0 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background-color: $middle-grey;
+    background-color: $light-grey;
     overflow: hidden;
 
-    img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/constructor/collection-table-icons.png");
+      background-size: 220px;
+      background-repeat: no-repeat;
     }
   }
 
@@ -767,7 +903,7 @@
   }
 
   .modal-header {
-    padding: 1.5rem 2.5rem 1rem;
+    padding: 1.5rem 2.5rem 1.5rem 1.5rem;
     border-bottom: 0;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -789,11 +925,99 @@
 
   .modal-body {
     padding: 0rem 1.5rem 1.5rem;
+
+    .form-input {
+      font-weight: 700;
+    }
+
+    .form-textarea {
+      padding-top: 1.5625rem;
+      border-width: 3px;
+      resize: none;
+      line-height: 1.17;
+  
+      & ~ .form-label {
+        top: 3px;
+        left: 3px;
+        font-size: 0.875rem;
+        line-height: 1.17;
+      }
+    }
+
+    .btn {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
   }
 
-  &.modal-share {
+  &.modal-collection-img-edit {
+    .modal-collection-card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5rem;
+      width: 5rem;
+      margin-top: 0.6875rem;
+      border: 1px solid $middle-grey;
+      border-radius: 0.625rem;
+      cursor: pointer;
+
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &.active {
+        &::after {
+          position: absolute;
+          content: '';
+          right: 5px;
+          bottom: 6px;
+          width: 23px;
+          height: 23px;
+          border-radius: 50%;
+          background-color: $btn-green;
+          background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.39307 5.11542L4.97428 7.51279' stroke='white' stroke-width='2.28019' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.97437 7.51312L9.91714 1.43885' stroke='white' stroke-width='2.28019' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &.modal-collection-share {
     .modal-header {
       justify-content: center;
+      padding: 1.5rem 2.5rem 1rem;
+
+      h3 {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &.modal-collection-edit {
+    .modal-header {
+      h3 {
+        font-size: 1.3125rem;
+      }
+    }
+  }
+
+  &.modal-collection-delete {
+    .modal-header {
+      padding-bottom: 0.75rem;
+    }
+  }
+
+  @include until($md) {
+    .modal-header {
+      h3 {
+        font-size: 1.125rem;
+      }
     }
   }
 
@@ -801,6 +1025,46 @@
     .modal-dialog {
       max-width: 398px;
       margin-top: 5rem;
+    }
+  }
+
+  @include until($sm) {
+    &.modal {
+      background-color: #fff;
+    }
+
+    .modal-dialog {
+      margin: 0;
+    }
+
+    &.modal-collection-img-edit {
+      .modal-header {
+        padding-bottom: 0;
+      }
+
+      .modal-body {
+        .row {
+          margin-left: -10px;
+          margin-right: -10px;
+
+          [class^="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
+
+      .modal-collection-card {
+        margin-top: 1rem;
+      }      
+    }
+
+    &.modal-collection-edit {
+      // .modal-header {
+      //   h3 {
+      //     font-size: 1.125rem;
+      //   }
+      // }
     }
   }
 }
