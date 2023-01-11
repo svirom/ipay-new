@@ -1,1 +1,240 @@
-/*# sourceMappingURL=constructor.css.map */
+.constructor {
+  padding-top: 2rem;
+}
+
+.constructor-hero {
+  position: relative;
+  padding-bottom: 11.875rem;
+}
+
+.constructor-steps {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #F0F5FA;
+}
+
+.constructor-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.constructor-step__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.5rem;
+          flex: 0 0 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.8125rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #DEE7F3;
+}
+.constructor-step.active .constructor-step__icon {
+  background-color: #E84F35;
+}
+.constructor-step.active > span {
+  font-weight: 500;
+  color: #172A3A;
+}
+
+.constructor-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+}
+.constructor-card__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 3.5rem;
+          flex: 0 0 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+.constructor-card__icon > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.constructor-card__content p:not(.constructor-card__title) {
+  font-size: 0.875rem;
+}
+.constructor-card__content p.constructor-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #172A3A;
+}
+.constructor-card .constructor-card__link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: auto;
+  height: 1.5rem;
+  padding-right: 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 17.8335L15.8336 11.9999' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.833 12L9.9994 6.16639' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.constructor-card .constructor-card__link > * {
+  color: #E84F35;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.constructor-card:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0px 3px 10px rgba(97, 144, 183, 0.15);
+          box-shadow: 0px 3px 10px rgba(97, 144, 183, 0.15);
+}
+
+.constructor-hero-alert {
+  position: relative;
+  top: 30px;
+  margin-bottom: -40px;
+  padding: 0.5rem 2.8125rem;
+  border-radius: 0.5rem;
+  background-color: #FEF7E0;
+}
+.constructor-hero-alert span {
+  display: inline-block;
+  padding-left: 2.125rem;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5C6.20101 1.5 1.5 6.20101 1.5 12C1.5 17.799 6.20101 22.5 12 22.5Z' stroke='%23FFA727' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 7.5C12.2761 7.5 12.5 7.27614 12.5 7C12.5 6.72386 12.2761 6.5 12 6.5C11.7239 6.5 11.5 6.72386 11.5 7C11.5 7.27614 11.7239 7.5 12 7.5Z' stroke='%23FFA727' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.5 10.5H11C11.2652 10.5 11.5196 10.6053 11.7071 10.7929C11.8946 10.9804 12 11.2348 12 11.5V17.5' stroke='%23FFA727' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.5 17.5H13.5' stroke='%23FFA727' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.constructor-info {
+  margin-bottom: 4.6875rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  border-radius: 0.5rem;
+}
+.constructor-info--light-grey {
+  padding-right: 2.25rem;
+  background-color: #F0F5FA;
+}
+.constructor-info--middle-grey {
+  background-color: #DEE7F3;
+}
+.constructor-info--light-green {
+  background-color: #E9FCF3;
+}
+.constructor-info__img {
+  padding-top: 1.5625rem;
+}
+.constructor-info .constructor-info__subtitle {
+  font-size: 1.5rem;
+}
+
+.constructor-purposes {
+  margin-bottom: 4.6875rem;
+  padding: 3.5rem 3.5rem 2.5rem;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  background-color: #172A3A;
+}
+.constructor-purposes .col {
+  margin-bottom: 1rem;
+}
+.constructor-purposes .purpose-projects {
+  -ms-flex-preferred-size: 17.73%;
+      flex-basis: 17.73%;
+}
+.constructor-purposes .purpose-public {
+  -ms-flex-preferred-size: 17.55%;
+      flex-basis: 17.55%;
+}
+.constructor-purposes .purpose-dinner {
+  -ms-flex-preferred-size: 11.53%;
+      flex-basis: 11.53%;
+}
+.constructor-purposes .purpose-school {
+  -ms-flex-preferred-size: 17.73%;
+      flex-basis: 17.73%;
+}
+.constructor-purposes .purpose-offertory {
+  -ms-flex-preferred-size: 17.73%;
+      flex-basis: 17.73%;
+}
+.constructor-purposes .purpose-contributions {
+  -ms-flex-preferred-size: 17.73%;
+      flex-basis: 17.73%;
+}
+.constructor-purposes .purpose-gifts {
+  -ms-flex-preferred-size: 14.72%;
+      flex-basis: 14.72%;
+}
+.constructor-purposes .purpose-debt {
+  -ms-flex-preferred-size: 14.46%;
+      flex-basis: 14.46%;
+}
+.constructor-purposes .purpose-charity {
+  -ms-flex-preferred-size: 16.8%;
+      flex-basis: 16.8%;
+}
+.constructor-purposes .purpose-repairs {
+  -ms-flex-preferred-size: 16.8%;
+      flex-basis: 16.8%;
+}
+.constructor-purposes .purpose-children {
+  -ms-flex-preferred-size: 16.8%;
+      flex-basis: 16.8%;
+}
+.constructor-purposes .purpose-donations {
+  -ms-flex-preferred-size: 8.29%;
+      flex-basis: 8.29%;
+}
+.constructor-purposes .purpose-ideas {
+  -ms-flex-preferred-size: 12.13%;
+      flex-basis: 12.13%;
+}
+
+.constructor-purpose {
+  height: 2.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-align: center;
+  border: 1px solid #3B566E;
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.constructor-purpose span {
+  color: #DEE7F3;
+  font-size: 0.875rem;
+  line-height: 2.5rem;
+  white-space: nowrap;
+}/*# sourceMappingURL=constructor.css.map */
