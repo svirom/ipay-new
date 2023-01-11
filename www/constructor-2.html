@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/progressbar.css">
     <link rel="stylesheet" href="/css/constructor.css">
 
-    <title>Constructor 1</title>
+    <title>Constructor 2</title>
   </head>
   <body>
 
@@ -239,7 +239,7 @@
             </div>
           </div>
 
-          <div class="row justify-content-center constructor-hero">
+          <div class="row justify-content-center constructor-hero-step2">
             <div class="col-lg-8">
               <h1 class="text-md-center">Создать страницу сбора денег на карту</h1>
               <p class="text-md-center">Сформируйте ссылку для получения перевода на свою карту для любой цели!</p>
@@ -248,13 +248,13 @@
 
                 <div class="row d-none d-sm-flex">
                   <div class="col-sm-4">
-                    <div class="constructor-step active">
+                    <div class="constructor-step done">
                       <div class="constructor-step__icon">1</div>
                       <span>Укажите цель</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <div class="constructor-step">
+                    <div class="constructor-step active">
                       <div class="constructor-step__icon">2</div>
                       <span>Настройте страницу</span>
                     </div>
@@ -272,7 +272,7 @@
                   <div class="progress-mobile progress-mobile--one-third">
                     <div class="progress-mobile__circle">
                       <div class="progress-mobile__value">
-                        <div>1/3</div>
+                        <div>2/3</div>
                       </div>
                     </div>
                     <div class="progress-mobile__text">
@@ -281,222 +281,117 @@
                     </div>
                   </div>
                 </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row justify-content-center constructor-form">
+            <div class="col-lg-6">
+              <form action="">
+
+                <div class="form-group">
+                  <input type="text" class="form-control form-input filled" id="collection-title" name="collection-title" autocomplete="off" placeholder="" aria-required="true" value="Сбор денег">
+                  <label class="control-label form-label" for="collection-title">Цель сбора</label>
+                </div>
+
+                <div class="constructor-form__description">
+                  <p class="mb-0 " role="button" data-toggle="collapse" data-target="#formTextarea" aria-expanded="false">✍️ Добавить описание</p>
+                  <div class="collapse" id="formTextarea">
+                    <div class="form-group">
+                      <textarea class="form-control form-textarea" id="collection-textarea" rows="3" placeholder="Добавьте описание к вашей платежной форме, например, важную информацию для отправителя"></textarea>
+                      <label class="control-label form-label" for="collection-textarea">Описание</label>
+                    </div>
+                  </div>
+                </div>
                 
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <a href="#" class="constructor-card">
-                    <div class="constructor-card__icon">
-                      <img src="img/constructor/collection-card/collection-card-1.svg" alt="Icon">
-                    </div>
-                    <div class="constructor-card__content">
-                      <p class="constructor-card__title mb-2">Платежи и переводы</p>
-                      <p class="mb-0 mb-md-3">Собирайте деньги на карту или IBAN с нескольких отправителей</p>
-                    </div>
-                    <p class="constructor-card__link mb-0"><span class="d-none d-md-inline">Выбрать</span></p>
-                  </a>
+                <div class="row">
+                  <div class="col">
+                    <p><strong>Получатель</strong></p>
+                  </div>
+                  <div class="col-auto">
+                    <ul class="nav nav-pills mb-3" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-card-tab" data-toggle="pill" data-target="#pills-card" type="button" role="tab" aria-controls="pills-card" aria-selected="true">Карта</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-iban-tab" data-toggle="pill" data-target="#pills-iban" type="button" role="tab" aria-controls="pills-iban" aria-selected="false">IBAN</button>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <a href="#" class="constructor-card">
-                    <div class="constructor-card__icon">
-                      <img src="img/constructor/collection-card/collection-card-3.svg" alt="Icon">
-                    </div>
-                    <div class="constructor-card__content">
-                      <p class="constructor-card__title mb-2">Донаты и сборы денег</p>
-                      <p class="mb-0 mb-md-3">Задавайте целевую сумму сбора или собирайте без ограничений</p>
-                    </div>
-                    <p class="constructor-card__link mb-0"><span class="d-none d-md-inline">Выбрать</span></p>
-                  </a>
-                </div>
-              </div>
 
-              <div class="constructor-hero-alert">
-                <span>Для создания страницы сбора денег необходимо <a href="#"><u>Войти или Зарегистироваться</u></a></span>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12">
-              <div class="constructor-info constructor-info--light-grey">
-                <div class="row align-items-center">
-                  <div class="col-lg">
-                    <div class="constructor-info__content">
-                      <h2 class="mb-4">Что такое страница сбора денег?</h2>
-                      <p class="constructor-info__subtitle mb-4">Страница сбора денег - ваша персональная платежная страница для сбора денег с группы людей.</p>
-                      <p class="mb-0">Создавайте платежные страницы самостоятельно. Указывайте карту, куда хотите получать зачисления и делитесь ссылкой на страницу.</p>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="pills-card" role="tabpanel" aria-labelledby="pills-card-tab">
+                    <div class="form-group">
+                      <input type="text" id="constructor-card" class="form-control form-input" name="constructor-card" placeholder="Введіть карту отримувача" aria-required="true" aria-invalid="true">
+                      <label class="control-label form-label" for="constructor-card">Карта</label>
                     </div>
                   </div>
-                  <div class="col-lg-auto align-self-end">
-                    <div class="constructor-info__img text-center">
-                      <img src="img/constructor/constructor-info/constructor-info-1.png" srcset="img/constructor/constructor-info/constructor-info-1.png 1x, img/constructor/constructor-info/constructor-info-1@2x.png 2x" alt="Image">
+                  <div class="tab-pane fade" id="pills-iban" role="tabpanel" aria-labelledby="pills-iban-tab">
+                    <div class="form-group">
+                      <input type="text" id="constructor-iban" class="form-control form-input" name="constructor-iban" placeholder="Введіть IBAN рахунок отримувача" aria-required="true" aria-invalid="true">
+                      <label class="control-label form-label" for="constructor-iban">IBAN</label>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-12">
-              <div class="constructor-purposes">
-                <h2 class="mb-4">Для чего используют страницы сбора денег</h2>
-                <div class="row col-pad8">
-                  <div class="col purpose-projects">
-                    <div class="constructor-purpose">
-                      <span>На развитие проектов</span>
-                    </div>
-                  </div>
-                  <div class="col purpose-public">
-                    <div class="constructor-purpose">
-                      <span>Общественные цели</span>
-                    </div>
-                  </div>
-                  <div class="col purpose-dinner">
-                    <div class="constructor-purpose">
-                      <span>За ужин</span>
-                      <img src="img/constructor/constructor-icons/noto_wine-glass.png" srcset="img/constructor/constructor-icons/noto_wine-glass.png 1x, img/constructor/constructor-icons/noto_wine-glass@2x.png 2x" alt="Icon">
-                    </div>
-                  </div>
-                  <div class="col purpose-school">
-                    <div class="constructor-purpose">
-                      <span>Сборы в школу</span>
-                    </div>
-                  </div>
-                  <div class="col purpose-offertory">
-                    <div class="constructor-purpose">
-                      <span>Пожертвования</span>
-                      <img src="img/constructor/constructor-icons/flat-color-icons_donate.png" srcset="img/constructor/constructor-icons/flat-color-icons_donate.png 1x, img/constructor/constructor-icons/flat-color-icons_donate@2x.png 2x" alt="Icon">
-                    </div>
-                  </div>
-                  <div class="col purpose-contributions">
-                    <div class="constructor-purpose">
-                      <span>Взносы</span>
-                    </div>
-                  </div>
+                <div class="form-group">
+                  <input type="text" id="constructor-name" class="form-control form-input" name="constructor-name" placeholder="" aria-required="true" aria-invalid="true">
+                  <label class="control-label form-label" for="constructor-name">ФИО или название получателя</label>
+                </div>
 
-                  <div class="col purpose-gifts">
-                    <div class="constructor-purpose">
-                      <span>На подарки</span>
-                      <img src="img/constructor/constructor-icons/noto_wrapped-gift.png" srcset="img/constructor/constructor-icons/noto_wrapped-gift.png 1x, img/constructor/constructor-icons/noto_wrapped-gift@2x.png 2x" alt="Icon">
-                    </div>
+                <div class="form-group">
+                  <input type="tel" id="constructor-invoice" class="form-control form-input input-icon-right" name="constructor-invoice" inputmode="decimal" placeholder="" aria-required="true" aria-invalid="true">
+                  <label class="control-label form-label" for="constructor-invoice">Сума</label>
+                  <label class="label-icon-right label-currency">грн</label>
+                </div>
+
+                <div class="checkbox-control checkbox-switch mb-3">
+                  <input class="checkbox-input" type="checkbox" id="checkbox-constructor-amount">
+                  <label class="checkbox-label" for="checkbox-constructor-amount">Указать общую сумму</label>
+                </div>
+
+                <div class="constructor-additional">
+                  <div class="constructor-additional__link" role="button" data-toggle="collapse" data-target="#additionalFields" aria-expanded="false">
+                    <span>Дополнительные поля</span>
+                    <span><span>1</span>/4</span>
                   </div>
-                  <div class="col purpose-debt">
-                    <div class="constructor-purpose">
-                      <span>Сбор долгов</span>
-                      <img src="img/constructor/constructor-icons/twemoji_money-with-wings.png" srcset="img/constructor/constructor-icons/twemoji_money-with-wings.png 1x, img/constructor/constructor-icons/twemoji_money-with-wings@2x.png 2x" alt="Icon">
+                  <div class="collapse" id="additionalFields">
+
+                    <div class="form-group">
+                      <input type="text" id="additional-input" class="form-control form-input" name="add-field" placeholder="" aria-required="true" aria-invalid="true">
+                      <label class="control-label form-label" for="additional-input">Название поля</label>
                     </div>
-                  </div>
-                  <div class="col purpose-charity">
-                    <div class="constructor-purpose">
-                      <span>Благотворительность</span>
+
+                    <div class="additional-fields">
+                      <div class="row justify-content-between">
+                        <div class="col-auto">
+                          <span>Добавленные поля</span>
+                        </div>
+                        <div class="col-auto">
+                          <span>макс. 4 полей</span>
+                        </div>
+                      </div>
+                      <ul class="additional-list">
+                        <li class="additional-list__item additional-list__item--empty">Нет добавленных полей</li>
+                      </ul>
                     </div>
-                  </div>
-                  <div class="col purpose-repairs">
-                    <div class="constructor-purpose">
-                      <span>Ремонты ЖКХ</span>
-                    </div>
-                  </div>
-                  <div class="col purpose-children">
-                    <div class="constructor-purpose">
-                      <span>Помощь детям</span>
-                      <img src="img/constructor/constructor-icons/noto_child.png" srcset="img/constructor/constructor-icons/noto_child.png 1x, img/constructor/constructor-icons/noto_child@2x.png 2x" alt="Icon">
-                    </div>
-                  </div>
-                  <div class="col purpose-donations">
-                    <div class="constructor-purpose">
-                      <span>Донаты</span>
-                    </div>
-                  </div>
-                  <div class="col purpose-ideas">
-                    <div class="constructor-purpose">
-                      <span>На идеи</span>
-                      <img src="img/constructor/constructor-icons/flat-color-icons_idea.png" srcset="img/constructor/constructor-icons/flat-color-icons_idea.png 1x, img/constructor/constructor-icons/flat-color-icons_idea@2x.png 2x" alt="Icon">
-                    </div>
+
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-12">
-              <div class="constructor-info constructor-info--middle-grey">
-                <div class="row align-items-center">
+                <div class="row col-pad8 flex-md-row-reverse">
                   <div class="col-md">
-                    <div class="constructor-info__content">
-                      <h2 class="mb-3">Создал. Отправил. Получил.</h2>
-                      <p class="mb-0">Платежная страница это простой инструмент, который позволит собрать любое количество денег на любые ваши цели, отследить кто переводил и вести учет.</p>
-                    </div>
+                    <button type="submit" class="btn btn-green btn-block">Создать ссылку</button>
                   </div>
-                  <div class="col-md-6 col-lg-5">
-                    <div class="constructor-info__img text-center">
-                      <img src="img/constructor/constructor-info/constructor-info-2.png" srcset="img/constructor/constructor-info/constructor-info-2.png 1x, img/constructor/constructor-info/constructor-info-2@2x.png 2x" alt="Image">
-                    </div>
+                  <div class="col-md-auto">
+                    <button type="button" class="btn btn-outline btn-block">Отменить</button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-7 col-xl-6">
-              <div class="constructor-how">
-                <h2 class="mb-5">Как это работает?</h2>
-                <div class="constructor-how__list">
-                  <div class="constructor-how__item">
-                    <div class="constructor-how__item-icon">
-                      <img src="img/constructor/constructor-icons/constructor-how-1.svg" alt="Icon">
-                    </div>
-                    <div class="constructor-how__item-content">
-                      <p class="mb-2">Выберите цель сбора</p>
-                      <p class="mb-0">На ремонт подъезда, школьные сборы, за ужин с друзьями, на корм в питомник, все что угодно!</p>
-                    </div>
-                  </div>
-                  <div class="constructor-how__item">
-                    <div class="constructor-how__item-icon">
-                      <img src="img/constructor/constructor-icons/constructor-how-2.svg" alt="Icon">
-                    </div>
-                    <div class="constructor-how__item-content">
-                      <p class="mb-2">Укажите номер карты и сумму</p>
-                      <p class="mb-0">Укажите 16 цифр карты для получения переводов и желаемую сумму.</p>
-                    </div>
-                  </div>
-                  <div class="constructor-how__item">
-                    <div class="constructor-how__item-icon">
-                      <img src="img/constructor/constructor-icons/constructor-how-3.svg" alt="Icon">
-                    </div>
-                    <div class="constructor-how__item-content">
-                      <p class="mb-2">Сгенерируйте ссылку и отправьте адресатам</p>
-                      <p class="mb-0">Одной ссылкой можно поделиться с неограниченным количеством плательщиков.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12">
-              <div class="constructor-info constructor-info--light-green">
-                <div class="row justify-content-between align-items-center">
-                  <div class="col-md-7 col-lg-6">
-                    <div class="constructor-info__content">
-                      <h2 class="mb-3">Статистика по платежам</h2>
-                      <p>Отслеживайте платежи по вашей платежной ссылке в личном кабинете iPay.ua. Контролируйте кто и сколько вам отправил</p>
-                      <p>*Для создания страницы сбора денег необходима регистрация на iPay.ua.</p>
-                      <a href="#" class="btn btn-green btn-block">Создать страницу</a>
-                    </div>
-                  </div>
-                  <div class="col-md-5">
-                    <div class="constructor-info__img text-center">
-                      <img src="img/constructor/constructor-info/constructor-info-3.png" srcset="img/constructor/constructor-info/constructor-info-3.png 1x, img/constructor/constructor-info/constructor-info-3@2x.png 2x" alt="Image">
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
 
