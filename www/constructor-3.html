@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/progressbar.css">
     <link rel="stylesheet" href="/css/constructor.css">
 
-    <title>Constructor 2</title>
+    <title>Constructor 3</title>
   </head>
   <body>
 
@@ -233,194 +233,37 @@
       <main class="constructor" id="constructor-widget">
         <div class="container">
 
-          <div class="row no-gutters mt-md-2 mb-3 d-lg-none">
-            <div class="col-auto">
-              <a href="#" class="btn btn-link btn-back">Назад</a>
-            </div>
-          </div>
-
-          <div class="row justify-content-center constructor-hero-step2">
+          <div class="row justify-content-center constructor-link">
             <div class="col-lg-8">
-              <h1 class="text-md-center">Создать страницу сбора денег на карту</h1>
-              <p class="text-md-center">Сформируйте ссылку для получения перевода на свою карту для любой цели!</p>
+              <h1 class="text-center">Ваша ссылка готова!</h1>
+              <p class="heading-color text-center">Покажите QR-код отправителю или скопируйте или поделитесь ссылкой</p>
 
-              <div class="constructor-steps">
-
-                <div class="row d-none d-sm-flex">
-                  <div class="col-sm-4">
-                    <div class="constructor-step done">
-                      <div class="constructor-step__icon">1</div>
-                      <span>Укажите цель</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="constructor-step active">
-                      <div class="constructor-step__icon">2</div>
-                      <span>Настройте страницу</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="constructor-step">
-                      <div class="constructor-step__icon">3</div>
-                      <span>Поделитесь ссылкой</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- steps mobile -->
-                <div class="d-sm-none">
-                  <div class="progress-mobile progress-mobile--one-third">
-                    <div class="progress-mobile__circle">
-                      <div class="progress-mobile__value">
-                        <div>2/3</div>
-                      </div>
-                    </div>
-                    <div class="progress-mobile__text">
-                      <span class="progress-mobile__current">Настройте страницу</span>
-                      <span class="progress-mobile__next">Далее: Поделитесь ссылкой</span>
-                    </div>
-                  </div>
-                </div>
-
+              <div class="constructor-link__qr text-center">
+                <img src="img/constructor/qr-code-2.png" alt="QR Code">
               </div>
 
-            </div>
-          </div>
-
-          <div class="row justify-content-center constructor-form mt-2 mt-md-0">
-            <div class="col-lg-6">
-              <form action="">
-
-                <div class="form-group">
-                  <input type="text" class="form-control form-input filled" id="collection-title" name="collection-title" autocomplete="off" placeholder="" aria-required="true" value="Сбор денег">
-                  <label class="control-label form-label" for="collection-title">Цель сбора</label>
+              <div class="constructor-link__share mb-3 mb-md-4">
+                <p class="heading-color text-center"><strong>Поделиться ссылкой</strong></p>
+                <div class="constructor-link__share-buttons">
+                  <div class="share-buttons">
+                    <a href="viber://forward?text=Успішний переказ на картку ****8908. Сумма: 100 грн. Дата переказу DD.MM.YYYY HH:MM. Переказано за допомогою сервісу миттевих переказів iPay.ua" class="share-buttons__button share-buttons__button--viber">
+                      <img src="img/constructor/icon-viber.svg" alt="Viber">
+                    </a>
+                    <a href="#" class="share-buttons__button share-buttons__button--telegram">
+                      <img src="img/constructor/icon-telegram.svg" alt="Telegram">
+                    </a>
+                    <a href="#" class="share-buttons__button share-buttons__button--messenger">
+                      <img src="img/constructor/icon-messenger.svg" alt="Messenger">
+                    </a>
+                  </div>
+                  <button type="button" class="btn btn-outline constructor-link__share-copy">Копировать ссылку</button>
                 </div>
+              </div>
 
-                <div class="constructor-form__description mb-4">
-                  <div class="constructor-form__description-add">
-                    <span role="button" data-toggle="collapse" data-target="#formTextarea" aria-expanded="false">✍️ Добавить описание</span>
-                  </div>
-                  <div class="collapse" id="formTextarea">
-                    <div class="form-group mb-0">
-                      <textarea class="form-control form-textarea" id="collection-textarea" rows="3" placeholder="Добавьте описание к вашей платежной форме, например, важную информацию для отправителя"></textarea>
-                      <label class="control-label form-label" for="collection-textarea">Описание</label>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="row align-items-center mb-3">
-                  <div class="col">
-                    <p class="heading-color mb-0"><strong>Получатель</strong></p>
-                  </div>
-                  <div class="col-auto constructor-form__pills">
-                    <ul class="nav nav-pills" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-card-tab" data-toggle="pill" data-target="#pills-card" type="button" role="tab" aria-controls="pills-card" aria-selected="true">Карта</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-iban-tab" data-toggle="pill" data-target="#pills-iban" type="button" role="tab" aria-controls="pills-iban" aria-selected="false">IBAN</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="tab-content">
-                  <div class="tab-pane fade show active" id="pills-card" role="tabpanel" aria-labelledby="pills-card-tab">
-                    <div class="form-group">
-                      <input type="text" id="constructor-card" class="form-control form-input" name="constructor-card" placeholder="Введіть карту отримувача" aria-required="true" aria-invalid="true">
-                      <label class="control-label form-label" for="constructor-card">Карта</label>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="pills-iban" role="tabpanel" aria-labelledby="pills-iban-tab">
-                    <div class="form-group">
-                      <input type="text" id="constructor-iban" class="form-control form-input" name="constructor-iban" placeholder="Введіть IBAN рахунок отримувача" aria-required="true" aria-invalid="true">
-                      <label class="control-label form-label" for="constructor-iban">IBAN</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <input type="text" id="constructor-name" class="form-control form-input" name="constructor-name" placeholder="" aria-required="true" aria-invalid="true">
-                  <label class="control-label form-label" for="constructor-name">ФИО или название получателя</label>
-                </div>
-
-                <div class="form-group">
-                  <input type="tel" id="constructor-invoice" class="form-control form-input input-icon-right" name="constructor-invoice" inputmode="decimal" placeholder="" aria-required="true" aria-invalid="true">
-                  <label class="control-label form-label" for="constructor-invoice">Сумма (необязательно)</label>
-                  <label class="label-icon-right label-currency">грн</label>
-                </div>
-
-                <div class="constructor-form__checkbox mb-3">
-                  <div class="checkbox-control checkbox-switch">
-                    <input class="checkbox-input" type="checkbox" id="checkbox-constructor-amount">
-                    <label class="checkbox-label" for="checkbox-constructor-amount">Указать общую сумму</label>
-                  </div>
-                </div>
-
-                <div class="constructor-additional">
-                  <div class="constructor-additional__link" role="button" data-toggle="collapse" data-target="#additionalFields" aria-expanded="false">
-                    <span>Дополнительные поля</span>
-                    <span><span>1</span>/4</span>
-                  </div>
-                  <div class="collapse" id="additionalFields">
-                    <div class="constructor-additional__collapse">
-
-                      <div class="form-group mb-0">
-                        <input type="text" id="additional-input" class="form-control form-input" name="add-field" placeholder="" aria-required="true" aria-invalid="true">
-                        <label class="control-label form-label" for="additional-input">Название поля</label>
-                        <ul class="constructor-additional__list">
-                          <!-- <li class="constructor-additional__item-add">Добавить поле <span>“Теле”</span></li>
-                          <li class="constructor-additional__item">Телефон</li>
-                          <li class="constructor-additional__item">Мобильный телефон</li> -->
-                        </ul>
-                      </div>
-
-                      <!-- <p class="constructor-additional__full text-center mb-0">Достигнут лимит в 4 поля</p> -->
-  
-                      <div class="additional-fields">
-
-                        <div class="row justify-content-between mb-2">
-                          <div class="col-auto">
-                            <span class="heading-color">Добавленные поля</span>
-                          </div>
-                          <div class="col-auto">
-                            <span class="main-blue-color">макс. 4 полей</span>
-                          </div>
-                        </div>
-
-                        <!-- <div class="additional-fields__empty"><span>Нет добавленных полей</span></div> -->
-
-                        <ul class="additional-list">
-                          <li class="additional-list__item">
-                            <span>Теле</span>
-                            <a href="#" class="additional-list__item-add"></a>
-                          </li>
-                          <li class="additional-list__item">
-                            <span>ФИО</span>
-                            <a href="#" class="additional-list__item-add"></a>
-                          </li>
-                          <li class="additional-list__item">
-                            <span>Комментарий</span>
-                            <a href="#" class="additional-list__item-add"></a>
-                          </li>
-                        </ul>
-
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row col-pad8 flex-md-row-reverse mt-4">
-                  <div class="col-md mb-3 mb-md-0">
-                    <button type="submit" class="btn btn-green btn-block">Создать ссылку</button>
-                  </div>
-                  <div class="col-md-auto">
-                    <button type="button" class="btn btn-outline btn-block">Отменить</button>
-                  </div>
-                </div>
-
-              </form>
+              <div class="constructor-link__message mx-auto mb-5">
+                <p class="mb-md-0">Следите за переводами по вашей ссылке в личном кабинете</p>
+                <a href="#" class="btn btn-green btn-block">Просмотреть в кабинете</a>
+              </div>
             </div>
           </div>
 

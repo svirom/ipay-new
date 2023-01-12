@@ -601,3 +601,440 @@
     }
   }
 }
+
+// step 2
+.constructor-form {
+  .form-label {
+    top: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.1875;
+  }
+
+  .form-input {
+    padding: 2.1875rem 3rem 0.9375rem 0.8125rem;
+
+    &:focus, &.filled {
+      color: $heading-color;
+
+      & ~ .form-label {
+        top: 0.5625rem;
+        left: 1rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  &__description {
+    .constructor-form__description-add {
+      text-align: center;
+
+      span {
+        font-size: 0.875rem;
+        line-height: 1.172;
+        color: $heading-color;
+        cursor: pointer;
+
+        &[aria-expanded="true"] {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .form-textarea {
+    padding-top: 1.5rem;
+    border-width: 3px;
+    resize: none;
+    line-height: 1.17;
+
+    & ~ .form-label {
+      top: 3px;
+      left: 3px;
+      padding-top: 0.25rem;
+      font-size: 0.875rem;
+      line-height: 1.17;
+    }
+  }
+
+  &__pills {
+    .nav-pills {
+      .nav-item {
+        & ~ .nav-item {
+          margin-left: 0.5rem;
+        }
+      }
+      .nav-link {
+        padding: 0.25rem 0.5rem;
+        color: $heading-color;
+        border: 0;
+        border-radius: 0.5rem;
+        background-color: $light-grey;
+
+        &:focus {
+          outline: none;
+        }
+
+        &.active {
+          color: $btn-red;
+          background-color: $danger;
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    .checkbox-switch {
+      display: inline-block;
+      padding-left: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      line-height: 1.25;
+
+      .checkbox-label {
+        padding-left: 3.375rem;
+        line-height: 1.25;
+        color: $heading-color;
+
+        &::before {
+          top: 0;
+          left: 0;
+          width: 2.375rem;
+          height: 1.25rem;
+          border-radius: 0.9375rem;
+        }
+
+        &::after {
+          top: 0.1875rem;
+          left: 0.1875rem;
+          width: 0.875rem;
+          height: 0.875rem;
+          border-radius: 50%;
+        }
+      }
+
+      .checkbox-input:checked {
+        & ~ .checkbox-label::after {
+          transform: translateX(1.125rem);
+        }
+      }
+    }
+  }
+}
+
+.constructor-additional {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 10px $template-shadow-hover;
+
+  &__link {
+    display: flex;
+    cursor: pointer;
+
+    span {
+      line-height: 1.5;
+    }
+
+    & > span {
+      &:first-child {
+        position: relative;
+        flex-grow: 1;
+        padding-left: 2rem;
+        color: $heading-color;
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.62842 17.8336L15.462 12' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.4624 12L9.62879 6.16639' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      &:last-child {
+        color: $main-blue;
+
+        & > * {
+          color: $main-blue;
+        }
+      }
+    }
+
+    &[aria-expanded="true"] {
+      & > span {
+        &:first-child {  
+          &::before {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__collapse {
+    padding-top: 1rem;
+  }
+
+  .constructor-additional__list {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+    background-color: #ffffff;
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  .constructor-additional__item-add {
+    padding: 1.125rem 1rem;
+    padding-left: 2.5rem;
+    line-height: 1.25;
+    color: $heading-color;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.10278 3.5144V13.6051' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.1398 8.55981H3.06567' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: left 1rem center;
+    background-repeat: no-repeat;
+
+    span {
+      font-weight: 700;
+      color: $heading-color;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+
+  .constructor-additional__item {
+    position: relative;
+    padding: 1.125rem 1rem;
+    padding-right: 3rem;
+    line-height: 1.25;
+    color: $heading-color;
+    border-top: 1px solid $light-grey;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 1rem;
+      right: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 2px solid $middle-grey;
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1.05005V10.95' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.9508 6H1.05078' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+      
+      &::after {
+        border: 1px solid $heading-color;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1.05005V10.95' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.9508 6H1.05078' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+  }
+}
+
+.additional-fields {
+  padding-top: 1rem;
+
+  &__empty {
+    padding: 0.625rem 1rem;
+    text-align: center;
+    border: 2px dashed $middle-grey;
+    border-radius: 0.5rem;
+    background-color: $light-grey;
+    user-select: none;
+
+    span {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.additional-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: $light-grey;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='24' viewBox='0 0 17 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.2222 3.44434H3.44444C2.09441 3.44434 1 4.53875 1 5.88878V18.111C1 19.461 2.09441 20.5554 3.44444 20.5554H13.2222' stroke='%237C9CAC' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M16 1L16 23' stroke='%237C9CAC' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M7.29262 16.4443V15.6924L8.26538 15.5253V8.64431H6.29598L6.12291 9.84983H5.23966V7.7551H12.4608V9.84983H11.5895L11.4105 8.64431H9.44105V15.5253L10.4138 15.6924V16.4443H7.29262Z' fill='%237C9CAC'/%3E%3C/svg%3E");
+    background-position: left 1rem center;
+    background-repeat: no-repeat;
+
+    & > span {
+      flex-grow: 1;
+      padding-left: 2.5rem;
+      line-height: 1.5;
+      color: $heading-color;
+    }
+
+    & + .additional-list__item {
+      margin-top: 0.5rem;
+    }
+
+    .additional-list__item-add {
+      flex: 0 0 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 2px solid $heading-color;
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='2' viewBox='0 0 12 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.9508 1H1.05078' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: center top 9px;
+      background-repeat: no-repeat;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// step 3
+.constructor-link {
+  &__qr {
+    margin-top: 1.6875rem;
+    margin-bottom: 1rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__share-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .constructor-link__share-copy {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+
+  &__message {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: $light-grey;
+
+    p {
+      flex-grow: 1;
+      padding-right: 1rem;
+      color: $heading-color;
+    }
+
+    .btn {
+      flex: 0 0 255px;
+      max-width: 255px;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+
+  @include until($lg) {
+    padding-top: 1.375rem;
+  }
+
+  @include until($md) {
+    &__qr {
+      margin-top: 1rem;
+    }
+
+    &__share-buttons {
+      flex-direction: column;
+      align-items: center;
+
+      .constructor-link__share-copy {
+        width: 100%;
+        max-width: 255px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &__message {
+      flex-direction: column;
+
+      p {
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .btn {
+        flex-basis: auto;
+      }
+    }
+  }
+
+  @include until($sm) {
+    &__qr {
+      img {
+        max-width: 160px;
+      }
+    }
+    
+    &__share-buttons {
+      .constructor-link__share-copy {
+        max-width: 475px;
+      }
+    }
+
+    &__message {
+      .btn {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+
+  .share-buttons__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+
+    &--viber {
+      background-color: #6757C7;
+    }
+
+    &--telegram {
+      background-color: #34A2DF;
+    }
+
+    &--messenger {
+      background-color: #0084FF;
+    }
+  }
+
+  @include until($md) {
+    margin-bottom: 1rem;
+
+    .share-buttons__button {
+      &--messenger {
+        margin-right: 0;
+      }
+    }
+  }
+}
