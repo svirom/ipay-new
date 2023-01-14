@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/constructor-payment.css">
+
+    <title>Constructor Payment 2</title>
+  </head>
+  <body>
+
+    <div class="payment-wrapper">
+
+      <header></header>
+
+      <main class="payment-main">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+              <div class="payment-form">
+
+                <div class="payment-form__icon">
+                  <svg width="88" height="88" viewBox="0 0 88 88" class="d-none d-md-block">
+                    <circle cx="44" cy="44" r="43" fill="none" stroke="#DEE7F3" stroke-width="2" />
+                    <circle class="percent" cx="44" cy="44" r="43" fill="none" stroke="#E84F35" stroke-width="2" pathLength="100" stroke-dashoffset="calc(100 - 35)" />
+                  </svg>
+                  <svg width="66" height="66" viewBox="0 0 66 66" class="d-md-none">
+                    <circle cx="33" cy="33" r="32" fill="none" stroke="#DEE7F3" stroke-width="2"></circle>
+                    <circle class="percent" cx="33" cy="33" r="32" fill="none" stroke="#E84F35" stroke-width="2" pathLength="100" stroke-dashoffset="calc(100 - 35)"></circle>
+                  </svg>
+                  <div class="payment-form__img">
+                    <img src="img/constructor/collection-card/collection-card-1.svg" alt="">
+                  </div>
+                </div>
+
+                <div class="payment-form__top">
+                  <h2 class="payment-form__top-title">Твій миттєвий донат до перемоги!</h2>
+                  <p class="payment-form__top-name mb-0">Ануфрієнков Олександр</p>
+                  <div class="payment-form__top-amount mt-3">
+                    <span>Зібрано: 2 650 ₴</span>
+                    <span>з 10 000 ₴</span>
+                  </div>
+                </div>
+
+                <!-- <div class="payment-form__descr mt-3">
+                  <p>Ми волонтерська ініціатива Front-U, тил із фінансового сектору.
+                    Закуповуємо найнеобхідніше для наших воїнів:
+                    🔥 дрони і БПЛА;
+                    🔥 рації і супутникові телефони;
+                    🔥 тепловізори та іншу оптику;
+                    🔥 планшети із ПЗ «Кропива».
+                    😎 Кожен, хто робить значний донат від 15 тис грн, стає нашим Фронтменом, долучається до закритого комʼюніті та зʼявляється на нашому сайті (за згоди, звичайно ж).
+                    Запалюй фінансову іскру до перемоги! Роби вогонь — донать! 🔥</p>
+                </div> -->
+
+                <form>
+
+                  <div class="payment-form__amount payment-amount">
+                    <p class="heading-color text-center">Введіть суму</p>
+  
+                    <div class="form-group payment-amount__input">
+                      <span id="size-calibration"></span>
+                      <input type="tel" class="payment-input" placeholder="100" value="200">
+                      <span class="payment-amount__currency">₴</span>
+                    </div>
+  
+                    <div class="payment-amount__buttons mt-3">
+                      <button type="button" class="btn" data-amount="100">+100₴</button>
+                      <button type="button" class="btn" data-amount="500">+500₴</button>
+                      <button type="button" class="btn" data-amount="1000">+1000₴</button>
+                    </div>
+                  </div>
+
+                  <div class="payment-form__summary active my-3">
+                    <div class="row justify-content-between">
+                      <div class="col-auto">
+                        <p class="heading-color mb-0">К переводу</p>
+                        <p class="small mb-0">с учетом комиссии</p>
+                      </div>
+                      <div class="col-auto">
+                        <p class="heading-color mb-0"><strong>106.00 грн</strong></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="payment-form__additional">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-input" id="add-1" placeholder="">
+                      <label for="add-1"- class="control-label form-label">Додаткове поле</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-input" id="add-2" placeholder="">
+                      <label for="add-2" class="control-label form-label">Додаткове поле</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-input" id="add-3" placeholder="">
+                      <label for="add-3" class="control-label form-label">Додаткове поле</label>
+                    </div>
+                  </div>
+
+                  <div class="apple-google mt-3">
+                    <button type="button" style="display:block; border-radius:0.5rem; height:56px; width:100%; background-color:#000000"></button>
+                  </div>
+
+                  <div class="payment-form__card mt-3">
+
+                    <a href="#payment-form-card" class="btn btn-outline btn-block payment-form__card-btn" data-toggle="collapse" aria-expanded="false" aria-controls="payment-form-card"><span>Ввести картку вручну</span></a>
+
+                    <div class="collapse" id="payment-form-card">
+                      <p class="heading-color text-center">или ввести данные карты</p>
+                      <div class="bank-card mx-auto">
+                        <div class="bank-card__header">
+                          <div class="bank-card__bank">
+                            <div id="sender-bank-card"></div>
+                          </div>
+                          <div class="bank-card__type">
+                            <div id="sender-type-card"></div>
+                          </div>
+                        </div>
+                        <div class="bank-card__body">
+                          <div class="bank-card__number">
+                            <div class="form-group">
+                              <input type="tel" class="form-control form-input" id="p2pform-sender_card_pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                              <label class="control-label form-label" for="p2pform-sender_card_pan">Номер карты</label>
+                              <div class="help-block"></div>
+                            </div>
+                          </div>
+                          <div class="bank-card__card-data">
+                            <div class="form-group bank-card__expires">
+                              <input type="text" class="form-control form-input" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                              <label class="control-label form-label" for="cardform-exp">Срок действия</label>
+                              <div class="help-block"></div>
+                            </div>
+                            <div class="form-group bank-card__cvv">
+                              <input type="tel" class="form-control form-input input-cvv" id="p2pform-sender_card_cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                              <label class="control-label form-label" for="p2pform-sender_card_cvv">CVV</label>
+                              <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты" data-original-title="" title=""></a>
+                              <div class="help-block"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-green btn-block mt-3">Перевести картой</button>
+                    </div>
+
+                    <p class="small text-center mt-3 mb-0">Совершая перевод, вы принимаете условия <a href="#"><u>пользовательского соглашения</u></a> и <a href="#"><u>политики конфидициальности</u></a></p>
+
+                  </div>
+
+                </form>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="payment-footer">
+        <div class="container-xl">
+          <div class="row justify-content-center justify-content-lg-between align-items-center payment-footer__inner">
+            <div class="col-lg-auto">
+              <div class="payment-footer__list">
+                <img src="img/constructor/payment/mastercard.svg" alt="Mastercard">
+                <img src="img/constructor/payment/visa.svg" alt="Visa">
+                <img src="img/constructor/payment/pci-dss.svg" alt="PCI-DSS">
+              </div>
+            </div>
+            <div class="col-md-auto text-center">
+              <a href="#" class="payment-footer__link"><u>Создать свой сбор средств</u></a>
+            </div>
+            <div class="col-md-auto text-center">
+              <p class="payment-footer__ipay mb-0">Платежі забезпечує <img src="img/constructor/payment/ipay-logo.svg" alt="iPay"></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/constructor-payment.js"></script>
+  </body>
+</html>

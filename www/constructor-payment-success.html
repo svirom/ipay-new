@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/constructor-payment.css">
+
+    <link rel="stylesheet" href="/css/p2p-receipt.css">
+    <link rel="stylesheet" href="/css/p2p-review.css">
+
+    <title>Constructor Payment Success</title>
+  </head>
+  <body>
+
+    <div class="payment-wrapper">
+
+      <header class="payment-header">
+        <img src="img/constructor/payment/ipay-logo.svg" alt="iPay">
+      </header>
+
+      <main class="payment-main payment-main--result">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+
+              <div class="payment-result">
+
+                <div class="payment-result__main">
+
+                  <div class="payment-result__title icon-success">
+                    <h4 class="mb-1">Платеж успешен!</h4>
+                    <p class="payment-result__subtitle">Денежный перевод</p>
+                    <p class="payment-result__amount">1000.00 грн</p>
+                  </div>
+
+                  <div class="payment-result__table">
+                    <div class="payment-result__table-row">
+                      <span>Номер платежа</span>
+                      <span>3768978978</span>
+                    </div>
+                    <div class="payment-result__table-row">
+                      <span>Получатель</span>
+                      <span>Ануфриенков Александр</span>
+                    </div>
+                  </div>
+
+                  <div class="payment-result__receipt">
+                    <div class="row justify-content-between">
+                      <div class="col-6">
+                        <a href="#" class="btn btn-outline btn-block btn-receipt" data-toggle="modal" data-target="#sendReceipt"><span>Квитанция</span></a>
+                      </div>
+                      <div class="col-6">
+                        <a href="#" class="btn btn-outline btn-block btn-repeat"><span>Повторить</span></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="payment-result__share">
+                    <p class="heading-color text-center">Поделиться платежом</p>
+                    <div class="share-buttons row col-pad8">
+                      <div class="col-4">
+                        <a href="viber://forward?text=Успішний переказ на картку ****8908. Сумма: 100 грн. Дата переказу DD.MM.YYYY HH:MM. Переказано за допомогою сервісу миттевих переказів iPay.ua" class="share-buttons__button share-buttons__button--viber">
+                          <img src="img/p2p-new/icon-viber.svg" alt="Viber">
+                        </a>
+                      </div>
+                      <div class="col-4">
+                        <a href="#" class="share-buttons__button share-buttons__button--telegram">
+                          <img src="img/p2p-new/icon-telegram.svg" alt="Telegram">
+                        </a>
+                      </div>
+                      <div class="col-4">
+                        <a href="#" class="share-buttons__button share-buttons__button--mail" data-toggle="modal" data-target="#sendReceipt">
+                          <img src="img/p2p-new/icon-mail.svg" alt="Email">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="payment-result__footer">
+                  <div class="row justify-content-between">
+                    <div class="col-auto">
+                      <a href="#payment-result-info" class="payment-result__details" data-toggle="collapse" aria-expanded="false" aria-controls="payment-result-info">Детали платежа</a>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="payment-result__review" data-toggle="modal" data-target="#reviewModal">Оставить отзыв</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="collapse" id="payment-result-info">
+                <div class="payment-result__collapse">
+                  <div class="payment-result__info">
+                    <div class="payment-result__info-row payment-result__info-row--title mb-3">
+                      <h3 class="mb-0">Детали платежа</h3>
+                      <a href="#payment-result-info" class="payment-result__info-close" data-toggle="collapse" aria-expanded="false" aria-controls="payment-result-info"></a>
+                    </div>
+                    <div class="payment-result__info-row payment-result__info-row--data mb-3 mb-sm-2">
+                      <span>Номер платежа</span>
+                      <span>376878978</span>
+                    </div>
+                    <div class="payment-result__info-row payment-result__info-row--data mb-3 mb-sm-2">
+                      <span>Отправитель</span>
+                      <span>5168 56** **** 5678</span>
+                    </div>
+                    <div class="payment-result__info-row payment-result__info-row--data mb-3 mb-sm-2">
+                      <span>Телефон отправителя</span>
+                      <span>+380 (66) 456 67 67</span>
+                    </div>
+                    <div class="payment-result__info-row payment-result__info-row--data mb-3">
+                      <span>Получатель</span>
+                      <span>5168 56** **** 5455</span>
+                    </div>
+                    <div class="payment-result__info-divider"></div>
+                    <div class="payment-result__info-row mt-3 mb-3 mb-sm-2">
+                      <span>Сумма перевода</span>
+                      <span>100.00 грн</span>
+                    </div>
+                    <div class="payment-result__info-row mb-3 mb-sm-2">
+                      <span>Комиссия</span>
+                      <span>6.00 грн</span>
+                    </div>
+                    <div class="payment-result__info-row">
+                      <span><strong>Оплачено</strong></span>
+                      <span><strong>106.00 грн</strong></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="payment-footer">
+        <div class="container-xl">
+          <div class="row justify-content-center justify-content-lg-between align-items-center payment-footer__inner">
+            <div class="col-lg-auto">
+              <div class="payment-footer__list">
+                <img src="img/constructor/payment/mastercard.svg" alt="Mastercard">
+                <img src="img/constructor/payment/visa.svg" alt="Visa">
+                <img src="img/constructor/payment/pci-dss.svg" alt="PCI-DSS">
+              </div>
+            </div>
+            <div class="col-md-auto text-center">
+              <a href="#" class="payment-footer__link"><u>Создать свой сбор средств</u></a>
+            </div>
+            <div class="col-md-auto text-center">
+              <p class="payment-footer__ipay mb-0">Платежі забезпечує <img src="img/constructor/payment/ipay-logo.svg" alt="iPay"></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Modal send receipt -->
+    <div class="modal fade modal-receipt" id="sendReceipt" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h3 class="mb-0">Отправить квитанцию на e-mail</h3>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <form action="">
+              <div class="form-group">
+                <input type="tel" class="form-control form-input" id="account-tel-email" name="form-login" autocomplete="off" placeholder="" aria-required="true">
+                <label class="control-label form-label" for="account-tel-email">Введите e-mail</label>
+              </div>
+              <div class="modal-receipt__sent">
+                <p class="mb-0">Квитанция отправлена на указанный e-mail</p>
+              </div>
+              <button type="submit" class="btn btn-green btn-block">Отправить</button>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal review form -->
+    <div class="modal fade modal-review" id="reviewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h3 class="mb-0">Оцените качество услуги</h3>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="modal-review__form">
+              <p class="heading-color">Пожалуйста укажите вашу оценку качеству услуги</p>
+              <div class="form-group modal-review__rating">
+                <div class="rating-input">
+                  <input id="star-5" type="radio" name="rating-input" data-vote="5">
+                  <label for="star-5"></label>
+          
+                  <input id="star-4" type="radio" name="rating-input" data-vote="4">
+                  <label for="star-4"></label>
+              
+                  <input id="star-3" type="radio" name="rating-input" data-vote="3">
+                  <label for="star-3"></label>
+              
+                  <input id="star-2" type="radio" name="rating-input" data-vote="2">
+                  <label for="star-2"></label>
+              
+                  <input id="star-1" type="radio" name="rating-input" data-vote="1">
+                  <label for="star-1" class="ml-0"></label>
+                </div>
+                <span class="rating-result no-rating" data-rating-1="Очень плохо" data-rating-2="Плохо" data-rating-3="Нормально" data-rating-4="Хорошо" data-rating-5="Отлично!">Укажите оценку</span>
+              </div>
+              <form action="/">
+                <div class="form-group modal-review__textarea">
+                  <textarea class="form-control form-textarea" id="form-textarea" rows="6" placeholder="Оставьте ваш отзыв или пожелание по сервису. Мы внимательно изучаем все ваши обращения, чтобы сделать сервис лучше."></textarea>
+                  <label class="control-label form-label" for="form-textarea">Введите ваш комментарий</label>
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control form-input" id="rating-contacts" name="rate-sender_phone" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
+                  <label class="control-label form-label" for="rating-contacts">Номер телефона</label>
+                  <div class="help-block">Введите номер телефона</div>
+                </div>
+                <button type="submit" class="btn btn-green btn-block" disabled>Отправить</button>
+              </form>
+            </div>
+
+            <!-- <div class="modal-review__rated">
+              <div class="modal-review__rated-text text-center">
+                <h4>Благодарим за ваш отзыв!</h4>
+                <p>Он очень важен для нас</p>
+              </div>
+              <div class="modal-review__rating">
+                <div class="rating-input">
+                  <span class="rating-input__star active"></span>
+                  <span class="rating-input__star active"></span>
+                  <span class="rating-input__star active"></span>
+                  <span class="rating-input__star active"></span>
+                  <span class="rating-input__star active"></span>
+                </div>
+                <span class="rating-result rating-result--rated">5/5</span>
+              </div>
+            </div> -->
+
+            <button type="button" class="btn btn-green btn-block mt-3" data-dismiss="modal" aria-label="Close">Закрыть</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/p2p-review.js"></script>
+  </body>
+</html>
