@@ -14,24 +14,44 @@
   min-height: 100vh;
   overflow: hidden;
 
-  &::before {
+  &::before, &::after {
     position: absolute;
     content: '';
     left: 50%;
     transform: translateX(-50%);
-    top: -649px;
     width: 1116px;
     height: 1116px;
-    background: rgba(240, 245, 250, 0.7);
     filter: blur(80px);
+    z-index: -1;
+  }
+
+  &::before {
+    top: -649px;
+    background: rgba(240, 245, 250, 0.7);
+  }
+
+  &--result {
+    &::after {
+      bottom: -649px;
+      background: rgba(240, 245, 250, 0.7);
+    }
   }
 
   @include until($md) {
-    &::before {
+    &::before, &::after {
       width: 510px;
       height: 510px;
-      top: -255px;
       filter: blur(32px);
+    }
+
+    &::before {
+      top: -255px;
+    }
+
+    &--result {
+      &::after {
+        display: none;
+      }
     }
   }
 }

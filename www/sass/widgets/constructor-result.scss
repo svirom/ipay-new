@@ -1,0 +1,235 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the constructor finished/stopped page of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.constructor-result-header {
+  position: relative;
+  padding-top: 3.75rem;
+  padding-bottom: 2.5rem;
+
+  .constructor-result-header__title {
+    margin-bottom: 1.25rem;
+  }
+
+  .constructor-result-header__subtitle {
+    img {
+      margin-left: 6px;
+      vertical-align: top;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 3.5rem;
+
+    .constructor-result-header__subtitle {
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.75rem;
+      }
+    }
+  }
+}
+
+.constructor-result-container {
+  flex-grow: 1;
+  padding-bottom: 4rem;
+
+  @include until($md) {
+    padding-bottom: 1rem;
+  }
+}
+
+.constructor-result-wrapper {
+  padding: 2.5rem 1.25rem;
+  border: 1px solid $middle-grey;
+  border-radius: 1.25rem;
+  background-color: #fff;
+
+  @include until($md) {
+    padding-top: 0;
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.constructor-result {
+  max-width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    position: relative;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    margin-right: 1.25rem;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg);
+
+      .percent {
+        stroke-dasharray: 100;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 34px;
+    padding: 3px;
+    border: 1px solid #F0F5FA;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__cards {
+    padding-top: 1.875rem;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .constructor-result__info-title {
+    margin-top: 1.875rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__info {
+    padding: 1.5rem;
+    border: 1px solid $light-grey;
+    border-radius: 0.75rem;
+    box-shadow: 0px 3px 10px $template-shadow-hover;
+  }
+
+  @include until($lg) {
+    max-width: 600px;
+  }
+
+  @include until($md) {
+    &__title {
+      & > span {
+        & > span {
+          display: block;
+        }
+      }
+    }
+
+    &__cards {
+      padding-top: 1.25rem;
+
+      & > .row {
+        margin-left: -4px;
+        margin-right: -4px;
+
+        & [class^="col"] {
+          padding-left: 4px;
+          padding-right: 4px;
+        }
+      }
+    }
+
+    .constructor-result__info-title {
+      margin-top: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.summary-card {
+  margin-bottom: 1.875rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 10px $template-shadow-hover;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.875rem;
+    border-radius: 50%;
+    background-color: $light-grey;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  p {
+    white-space: nowrap;
+  }
+
+  @include until($lg) {
+    margin-bottom: 1.25rem;
+  }
+
+  @include until($md) {
+    p {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.result-stopped {
+  flex-grow: 1;
+  display: flex;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  &__container {
+    & > img {
+      max-width: 100%;
+      margin-top: 4.5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.25rem;
+  }
+
+  &__subtitle {
+    img {
+      margin-left: 6px;
+      vertical-align: top;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    
+    .constructor-result-header__subtitle {
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.75rem;
+      }
+    }
+  }
+}
