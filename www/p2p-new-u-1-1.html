@@ -335,7 +335,40 @@
 
                   <div class="p2p-new__popover-data" data-content-visa="Visa" data-content-mastercard="<p class='extra-small mb-0'>Основание</p><p class='small mb-2'>1966</p><p class='extra-small mb-0'>Расположение</p><p class='small mb-2'>США, Харрисон, Нью-Йорк</p><p class='extra-small mb-0'>Количесво карт в Украине</p><p class='small mb-2'>46,7 млн.</p><p class='small mb-0'>Cпасибо что выбрали оплату картой это уменьшает использование бумаги</p>" data-content-prostir="Prostir"></div>
 
-                  <div class="form-group p2p-new__card-target">
+                  <div class="p2p-card-template dropdown">
+                    <a href="#" class="p2p-card-dropdown" id="dropdownP2pCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+
+                    <div class="dropdown-menu" id="saved-cards" aria-labelledby="dropdownP2pCard">
+                      <!-- <div class="saved-card" id="saved-card-1">
+                        <span class="saved-card__title">Белокур Евгений Вячеславович</span>
+                        <span class="saved-card__mask">5355 57** **** 3392<span class="saved-card__type card-title-mark type-card-mc" data-mask="5355 57** **** 3392"></span></span>
+                      </div>
+                      <div class="saved-card" id="saved-card-2">
+                        <span class="saved-card__title">Артем фриланс дизайн название карт</span>
+                        <span class="saved-card__mask">4355 57** **** 3392<span class="saved-card__type card-title-mark type-card-visa" data-mask="4355 57** **** 3392"></span></span>
+                      </div> -->
+                      <div class="saved-card-empty" role="button" data-target="#saveCardFunctionalModal" data-toggle="modal">
+                        <span class="saved-card-empty__text">
+                          <span class="d-block small mb-2">Войдите и сохраните эту карту для следующих переводов</span>
+                          <span class="d-block small red-color"><u>Войти или зарегистрироваться</u></span>
+                        </span>
+                        <span class="saved-card-empty__img">
+                          <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29.4419 5.8418L2.54832 5.85711C1.14277 5.85711 0 7.06682 0 8.55217L0.0072327 24.4826C0.0072327 25.9731 1.15241 27.1777 2.55797 27.1751L29.4516 27.1598C30.8619 27.1598 31.9999 25.9501 31.9999 24.4622L31.9926 8.53175C31.9926 7.04896 30.8475 5.8418 29.4419 5.8418Z" fill="#DEE7F3"/>
+                            <rect y="9.8418" width="32" height="5.33333" fill="#7C9CAC"/>
+                            <rect x="3" y="17.5083" width="9" height="3" fill="white"/>
+                          </svg>
+                        </span>
+                      </div>
+                      <!-- <div class="saved-card-empty saved-card-empty--0">
+                        <span class="saved-card-empty__text">
+                          <span class="small">Тут будут сохраненные карты получателей</span>
+                        </span>
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="form-group p2p-new__card-target p2p-recipient-cards">
                     <input type="tel" class="form-control form-input" id="p2pform-target_pan" name="target_pan" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
                     <label class="control-label form-label" for="p2pform-target_pan">Карта получателя</label>
                     <a role="button" tabindex="0" class="p2p-new-popover p2p-new-popover--card p2p-popover" data-toggle="popover" data-title="" data-content=""></a>

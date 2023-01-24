@@ -2078,10 +2078,12 @@ launch history styles
 }
 
 .p2p-new-link {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2122,6 +2124,7 @@ launch history styles
   padding-right: 0.5rem;
   color: #DE7800;
   line-height: 1.5;
+  white-space: nowrap;
 }
 .p2p-new-link__icon {
   -webkit-box-flex: 0;
@@ -2140,5 +2143,10 @@ launch history styles
             justify-content: center;
     width: 100%;
     max-width: 350px;
+  }
+  .p2p-new-link__text {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
   }
 }/*# sourceMappingURL=p2p-main-2.0.css.map */

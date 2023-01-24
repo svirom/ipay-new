@@ -2217,8 +2217,8 @@ launch history styles
 
 // new version link
 .p2p-new-link {
-  position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 3rem;
   width: 288px;
@@ -2227,25 +2227,8 @@ launch history styles
   background-color: $light-yellow;
   outline: none;
 
-  // &::after {
-  //   position: absolute;
-  //   content: '';
-  //   width: 25px;
-  //   height: 24px;
-  //   right: 0.5rem;
-  //   top: 0.75rem;
-  //   background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_527_28179)'%3E%3Cpath d='M17.0747 12L7.07471 12' stroke='%23DE7800' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0747 17L18.0747 12L12.0747 7' stroke='%23DE7800' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_527_28179'%3E%3Crect width='24' height='24' fill='white' transform='translate(0.75)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   transition: right 0.15s linear;
-  // }
-
   &:hover {
     text-decoration: none;
-
-    // &::after {
-    //   right: 0.375rem;
-    // }
   }
 
   &:focus {
@@ -2267,6 +2250,7 @@ launch history styles
     padding-right: 0.5rem;
     color: $dark-orange;
     line-height: 1.5;
+    white-space: nowrap;
   }
 
   &__icon {
@@ -2282,5 +2266,9 @@ launch history styles
     justify-content: center;
     width: 100%;
     max-width: 350px;
+
+    &__text {
+      flex-grow: 0;
+    }
   }
 }
