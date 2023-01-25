@@ -2,14 +2,20 @@ $(document).ready(function() {
 
   let heightMeasurement = function() {
     let heightSlider = [];
+    // let heightSlider2 = [];
 
-    $('.content-slider').find('li').each(function(index) {
+    $('.awards-slider').children().each(function(index) {
       heightSlider.push($(this).outerHeight());
+      // heightSlider2.push($(this).offsetHeight);
     });
-    // console.log(heightSlider, Math.max(...heightSlider));
+    console.log(heightSlider, Math.max(...heightSlider), $('.awards-slider').outerHeight());
+    // console.log(heightSlider2, Math.max(...heightSlider2));
   
-    $('.content-slider').outerHeight(Math.max(...heightSlider));
+    // $('.awards-slider').outerHeight(Math.max(...heightSlider2));
+    $('.awards-slider').css('height', Math.max(...heightSlider));
   }
+
+  // heightMeasurement();
 
   // slider
   let sliderOptions = {
@@ -37,10 +43,20 @@ $(document).ready(function() {
 
     onSliderLoad: function (el) {
       heightMeasurement();
+      // var maxHeight = 0,
+      //   container = $(el),
+      //   children = container.children();
+      // children.each(function () {
+      //   var childHeight = $(this).height();
+      //   if (childHeight > maxHeight) {
+      //     maxHeight = childHeight;
+      //   }
+      // });
+      // container.height(maxHeight);
     },
   };
 
-  $('.content-slider').lightSlider(sliderOptions);
+  $('.awards-slider').lightSlider(sliderOptions);
 
   $(document).resize(function() {
     heightMeasurement();
