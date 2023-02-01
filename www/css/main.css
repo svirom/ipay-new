@@ -3104,6 +3104,21 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.main-nav__item .dropdown-item--empty::after {
+  right: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #E84F35;
+}
+.main-nav__item .dropdown-item--empty.dropdown-templates::after {
+  left: 2rem;
+  top: calc(50% + 9px);
+}
+.main-nav__item .dropdown-item--empty.dropdown-cards::after {
+  left: 2.125rem;
+  top: calc(50% + 5px);
+}
 @media screen and (max-width: 991px) {
   .main-nav__item .dropdown-item:first-child {
     border-top-left-radius: 0;

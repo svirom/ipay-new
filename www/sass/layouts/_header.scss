@@ -107,6 +107,30 @@
         @include transform(translateY(-50%));
       }
 
+      &--empty {
+        &::after {
+          right: auto;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $btn-red;
+        }
+
+        &.dropdown-templates {
+          &::after {
+            left: 2rem;
+            top: calc(50% + 9px);
+          }
+        }
+
+        &.dropdown-cards {
+          &::after {
+            left: 2.125rem;
+            top: calc(50% + 5px);
+          }
+        }
+      }
+
       @include until($lg) {
         &:first-child {
           border-top-left-radius: 0;
