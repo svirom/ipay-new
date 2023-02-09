@@ -1,0 +1,634 @@
+// -----------------------------------------------------------------
+// This file contains all styles related to the landing sweet tv valentine page
+// -----------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.landing-wrapper {
+  position: relative;
+  color: #ffffff;
+
+  p, span, a {
+    color: #ffffff;
+  }
+
+  .footer-lang__item--current a {
+    color: $btn-red;
+  }
+
+  h1 {
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 1.5;    
+  }
+
+  @include until($lg) {
+    h2 {
+      margin-bottom: 1.875rem;
+      font-size: 2rem;
+    }
+  }
+
+  @include until($md) {
+    h1 {
+      font-size: 1.25rem;
+    }
+
+    h2 {
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+      line-height: 1.208333;
+    }
+  }
+}
+
+.landing-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 2.5rem;
+  z-index: 102;
+
+  .main-nav {
+    align-items: flex-start;
+
+    &__logo {
+      font-size: 0;
+
+      a {
+        display: inline-block;
+        font-size: 1rem;
+
+        img {
+          vertical-align: top;
+        }
+
+        &:first-child {
+          margin-right: 2.5rem;
+        }
+      }
+    }
+
+    &__lang {
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.95898 6.51758L8.89759 10.1636' stroke='%23FFFFFF' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.89746 10.1641L12.8361 6.51806' stroke='%23FFFFFF' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    &__item--lang.show .main-nav__lang {
+      background-color: transparent;
+    }
+  }
+
+  @include until($xl) {
+    padding-top: 1.6875rem;
+  }
+
+  @include until($lg) {
+    .main-nav__nav {
+      display: flex;
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1.5rem;
+
+    .main-nav {
+      &__logo {
+        a {
+          &:first-child {
+            img {
+              width: 104px;
+            }
+          }
+
+          &:last-child {
+            display: block;
+            margin-top: 0.625rem;
+
+            img {
+              width: 156px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.landing-hero-wrapper {
+  position: relative;
+
+  .hero-bkgr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      max-width: 100%;
+      left: calc(50% - 234px);
+      top: 0;
+      z-index: 2;
+    }
+  }
+
+  @include until($md) {
+    .hero-bkgr {
+      img {
+        left: calc(50% - 52px);
+        z-index: 5;
+      }
+    }
+  }
+}
+
+.landing-hero {
+  position: relative;
+  padding-top: 15.375rem;
+  background: linear-gradient(90deg, #31B8C5 0%, #49BCC4 15.61%, #11428B 100%);
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    z-index: 5;
+  }
+
+  .landing-hero__subtitle {
+    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  &__form {
+    position: relative;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    background-color: $heading-color;
+    z-index: 5;
+
+    .form-group {
+      margin-bottom: 0;
+
+      &.has-success .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv),
+      &.has-error .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv) {
+        background-image: none;
+      }
+
+      &.has-success .form-input,
+      &.has-error .form-input,
+      &.has-success .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv).form-control:focus,
+      &.has-error .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv).form-control:focus {
+        box-shadow: none;
+      }
+
+      &.has-error .form-input,
+      &.has-error .form-input:not([type='password']):not(.input-icon-right):not(.input-cvv).form-control:focus {
+        border-color: $btn-red-hover;
+      }
+
+      &.has-error .help-block {
+        padding-top: 3px;
+      }
+    }
+
+    .form-input {
+      height: 72px;
+      padding: 2.026rem 2.5rem 1.1rem 1.0775rem;
+      padding: 1.8125rem 2.5rem 0.5625rem 1.0775rem;
+      font-size: 1.5rem;
+      line-height: 1.172;
+
+      &.form-control:focus {
+        box-shadow: none;
+      }
+
+      & ~ .form-label {
+        top: 1.25rem;
+        font-size: 1.5rem;
+      }
+
+      &:focus ~ .form-label, &.filled ~ .form-label {
+        top: 0.625rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .btn {
+      width: 330px;
+      padding: 0.8125rem 1.125rem;
+      font-size: 1.5rem;
+
+      &:not(:disabled) {
+        border-color: #BF432D;
+        background-color: #BF432D;
+      }
+
+      &:hover:not(:disabled),
+      &:active:not(:disabled) {
+        border-color: $btn-red;
+        background-color: $btn-red;
+      }
+
+      &:active:disabled {
+        color: $main-blue;
+        border-color: $middle-grey;
+        background-color: $middle-grey;
+      }
+    }
+  }
+
+  &__form-sent {
+    height: 72px;
+
+    p {
+      position: relative;
+      padding-left: 60px;
+      font-size: 1.5rem;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: -4px;
+        left: 0;
+        width: 54px;
+        height: 50px;
+        background-image: url("data:image/svg+xml,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_169_19126)'%3E%3Ccircle cx='27' cy='23' r='18' fill='%2309BC8A'/%3E%3C/g%3E%3Cpath d='M21.0059 24.042L26.0415 27.7586' stroke='white' stroke-width='1.65517' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M26.041 27.7588L32.9911 18.342' stroke='white' stroke-width='1.65517' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_169_19126' x='0.724137' y='0.862069' width='52.5517' height='52.5517' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4.13793'/%3E%3CfeGaussianBlur stdDeviation='4.13793'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.0352941 0 0 0 0 0.737255 0 0 0 0 0.541176 0 0 0 0.5 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_169_19126'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_169_19126' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+        background-position: left top -3px;
+        background-repeat: no-repeat;
+      }
+
+      strong {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .landing-hero__note {
+    position: relative;
+    margin-top: 5.5rem;
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+    z-index: 55;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% + 24px);
+    text-align: center;
+    z-index: 4;
+  }
+
+  @include until($xl) {
+    padding-top: 9.9375rem;
+
+    .landing-hero__subtitle {
+      margin-bottom: 1.875rem;
+      font-size: 1.25rem;
+    }
+
+    &__form {
+      .form-input {
+        height: 56px;
+        font-size: 1.125rem;
+
+        & ~ .form-label {
+          top: 1rem;
+          font-size: 1.125rem;
+        }
+  
+        &:focus ~ .form-label, &.filled ~ .form-label {
+          top: 0.375rem;
+        }
+      }
+
+      .btn {
+        width: 100%;
+        height: 56px;
+        margin-top: 1rem;
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+        font-size: 1.25rem;
+      }
+    }
+
+    .landing-hero__note {
+      margin-top: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @include until($lg) {
+    &__img {
+      left: calc(50% + 48px);
+    }
+
+    &__form-sent {
+      height: auto;
+
+      p {
+        padding-left: 2.5rem;
+        font-size: 1.125rem;
+
+        &::before {
+          top: -2px;
+          width: 36px;
+          height: 32px;
+          background-size: 36px;
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    padding-top: 7.9375rem;
+
+    .landing-hero__subtitle {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .landing-hero__note {
+      margin-bottom: 6.6875rem;
+      padding-right: 0;
+    }
+
+    &__img {
+      display: none;
+    }
+  }
+}
+
+.landing-promo {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5.5rem;
+  background-color: #F0F5FA;
+  overflow: hidden;
+
+  .landing-promo-bkgr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      right: calc(50% - 64px);
+      top: 138px;
+      z-index: 105;
+    }
+  }
+
+  h2, p, a {
+    color: $heading-color;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 174px;
+    margin-bottom: 1.875rem;
+    padding: 1rem;
+    border-radius: 0.9375rem;
+    box-shadow: 0px 4px 29px rgba(75, 222, 230, 0.28);
+    background: linear-gradient(114.58deg, #33B8C1 2.97%, #39BEC7 100%);
+
+
+    &--bottom {
+      margin-bottom: 1.25rem;
+    }
+
+    .landing-promo__card-amount {
+      margin-bottom: 1rem;
+      color: #FFFFFF;
+      font-size: 2.8125rem;
+      line-height: 1.2;
+      font-weight: 700;
+      text-shadow: 5px 8px 12px rgba(76, 253, 242, 0.45);
+    }
+
+    .landing-promo__card-text {
+      font-size: 1.75rem;
+      font-weight: 500;
+    }
+  }
+
+  .landing-promo__note {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+  }
+
+  @include until($xl) {
+    .landing-promo-bkgr {
+      img {
+        width: 512px;
+        right: calc(50% + 34px);
+        top: 228px;
+      }
+    }
+
+    .landing-promo__note {
+      font-size: 1rem;
+    }
+  }
+
+  @include until($lg) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    .landing-promo-bkgr {
+      img {
+        display: none;
+      }
+    }
+  }
+
+  @include until($md) {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+
+    &::before {
+      background-size: 326px;
+      background-position: left calc(50% + 14px) top 80px;
+    }
+
+    &__card {
+      height: 112px;
+      margin-bottom: 1.25rem;
+      padding: 1.25rem 1.5rem;
+
+      .landing-promo__card-amount {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+      }
+
+      .landing-promo__card-text {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+.landing-faq {
+  position: relative;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  background: linear-gradient(0deg, rgba(13, 35, 89, 0.33), rgba(13, 35, 89, 0.33)), linear-gradient(90.13deg, rgba(107, 186, 243, 0.85) -5.72%, rgba(51, 184, 193, 0.85) 52.42%, rgba(36, 139, 171, 0.85) 99.9%);
+  z-index: 105;
+
+  .bkgr-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-4deg);
+      opacity: 0.1;
+      background-image: url('../img/sweettv/faq-bkgr.png');
+      background-position: right top;
+      background-repeat: repeat;
+      filter: blur(3px);
+    }
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  &__card {
+    display: flex;
+    margin-top: 2.5rem;
+
+    .landing-faq__number {
+      flex: 0 0 2.5rem;
+      max-width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: 0px 34px 20px -11px rgba(0, 0, 0, 0.11);
+      background-color: #39BEC7;
+    }
+
+    .landing-faq__text {
+      padding-left: 1rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  @include until($lg) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    &__card {
+      margin-top: 3rem;
+    }
+
+    .landing-faq__text {
+      font-size: 1.75rem;
+    }
+  }
+
+  @include until($md) {
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    &__card {
+      margin-top: 2rem;
+
+      & + .landing-faq__card {
+        margin-top: 1.5rem;
+      }
+
+      .landing-faq__number {
+        flex-basis: 2.5rem;
+        max-width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+      }
+
+      .landing-faq__text {
+        font-size: 1.25rem;
+        padding-right: 0;
+      }
+    }
+
+    .bkgr-container {
+      &::before {
+        transform: none;
+        opacity: 0.1;
+        background-position: left -142px top 6px;
+        background-size: auto 96%;
+      }
+    }
+  }
+}
+
+// images
+.parallax {
+  position: absolute;
+  z-index: 104;
+}
+
+.parallax-1 {
+  top: 156px;
+  left: -140px;
+  width: 138px;
+  transform: rotate(-90deg);
+}
+
+.parallax-2 {
+  top: -156px;
+  left: calc(50% + 216px);
+  width: 86px;
+  transform: rotate(-56deg);
+}
+
+.parallax-3 {
+  top: -136px;
+  left: calc(50% + 198px);
+  width: 136px;
+  transform: rotate(-45deg);
+
+  &.parallax-3-hero {
+    top: -56px;
+  }
+}
+
+@include until($lg) {
+  .parallax {
+    display: none;
+  }
+}
