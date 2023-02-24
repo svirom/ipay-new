@@ -1,0 +1,218 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the credits online page.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.credits-online {
+  &__title {
+    margin-bottom: 2.25rem;
+  }
+}
+
+.company-card {
+  margin-bottom: 2.25rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 2px 8px 1px rgba(15, 53, 85, 0.1);
+  background-color: #ffffff;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .company-card__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  &__img {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 140px;
+    padding: 8px;
+    border: 1px solid $light-grey;
+    border-radius: 0.5rem;
+    border-radius: 0.5rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  &__conditions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__conditions-item {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    & + .company-card__conditions-item {
+      margin-left: 1.5rem;
+    }
+  }
+
+  .company-checklist {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+      margin-top: 0.25rem;
+      padding-left: 1.75rem;
+      padding-top: 1px;
+      background-position: left top;
+      background-repeat: no-repeat;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      &.checklist-plus {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='0.5' width='20' height='20' rx='10' fill='%2309BC8A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.42857 14.5L4.5 10.6612L5.60786 9.5787L8.42857 12.3273L14.3921 6.5L15.5 7.59021L8.42857 14.5Z' fill='white'/%3E%3C/svg%3E");
+      }
+
+      &.checklist-minus {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='0.5' width='20' height='20' rx='10' fill='%23DEE7F3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.8571 6.5L14 7.64283L11.1427 10.5L14 13.3572L12.8571 14.5L9.99988 11.6428L7.14286 14.4998L6 13.357L8.85702 10.5L6.00001 7.64307L7.14286 6.50024L9.99988 9.35719L12.8571 6.5Z' fill='white'/%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 277px;
+  }
+
+  .company-card__buttons-link {
+    display: inline-block;
+    height: 2.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    line-height: 1.3;
+    text-align: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    span:last-child {
+      position: relative;
+      padding-left: 28px;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        right: 0;
+        top: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.63867 8.02386L10.5 12.8852' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.5 12.8852L15.3613 8.02385' stroke='%233B566E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &[aria-expanded=false] {
+      .company-card__buttons-show {
+        display: inline;
+      }
+
+      .company-card__buttons-hide {
+        display: none;
+      }
+    }
+
+    &[aria-expanded=true] {
+      span:last-child {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+      
+      .company-card__buttons-show {
+        display: none;
+      }
+
+      .company-card__buttons-hide {
+        display: inline;
+      }
+    }
+  }
+
+  &__collapse {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-top: 1px solid $light-grey;
+  }
+
+  &__collapse-info {
+    & + .company-card__collapse-info {
+      margin-top: 1.25rem;
+    }
+
+    & > p {
+      &:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  @include until($xl) {
+    &__buttons {
+      width: 220px;
+    }
+  }
+
+  @include until($lg) {
+    &__row {
+      // flex-wrap: wrap;
+    }
+
+    &__buttons {
+      flex: 1 1 100%;
+      width: 100%;
+      margin-top: 24px;
+
+      .btn-block {
+        max-width: 300px;
+      }
+    }
+  }
+}
