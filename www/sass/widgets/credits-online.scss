@@ -41,9 +41,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 140px;
-    padding: 8px;
+    width: 12.5rem;
+    height: 8.75rem;
+    padding: 0.5rem;
     border: 1px solid $light-grey;
     border-radius: 0.5rem;
     border-radius: 0.5rem;
@@ -181,6 +181,13 @@
     }
   }
 
+  .bank-card__cvv-button.question-popover {
+    position: relative;
+    top: 1px;
+    right: auto;
+    margin-top: 0;
+  }
+
   &__collapse {
     margin-top: 1.5rem;
     padding-top: 1.25rem;
@@ -263,7 +270,7 @@
 
     &__img {
       width: 100%;
-      height: 197px;
+      height: 12.3125rem;
     }
 
     &__content {
@@ -296,6 +303,87 @@
       &--license, & + .company-card__collapse-info {
         margin-top: 0.75rem;
       }
+    }
+  }
+}
+
+.credits-info {
+  padding: 2.25rem 3rem;
+  border-radius: 0.75rem;
+  background-color: $light-grey;
+
+  .list {
+    padding-left: 0.5rem;
+  }
+
+  &__contents {
+    position: relative;
+
+    .credits-info__button {
+      display: block;
+      position: relative;
+      padding: 1rem;
+      color: $heading-color;
+      border-radius: 0.5rem;
+      background-color: $middle-grey;
+  
+      &:hover {
+        text-decoration: none;
+      }
+  
+      &::after {
+        position: absolute;
+        content: '';
+        top: 1rem;
+        right: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.1665 9.62866L12.0001 15.4623' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 15.4623L17.8336 9.62867' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease;
+      }
+  
+      &[aria-expanded=true] {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .dropdown-menu {
+      width: 100%;
+      margin-top: 0;
+      padding: 1rem;
+      border: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      background-color: $middle-grey;
+      z-index: 999;
+
+      li {
+        & + li {
+          margin-top: 1rem;
+        }
+
+        a {
+          color: $heading-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.25rem;
     }
   }
 }
