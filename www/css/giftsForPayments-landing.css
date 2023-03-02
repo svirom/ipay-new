@@ -66,16 +66,12 @@
   z-index: -1;
 }
 .landing-header__content {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
   height: 100%;
 }
 .landing-header__content p {
@@ -90,7 +86,6 @@
   max-width: 33.75rem;
 }
 .landing-header__logo {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 5px;
@@ -175,12 +170,10 @@
   padding-bottom: 2.5rem;
 }
 .landing-condition__title {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   margin-bottom: 1rem;
 }
 .landing-condition__title span {
@@ -236,15 +229,12 @@
 }
 .landing-prize__img {
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: end;
+      align-items: flex-end;
   height: 21.875rem;
   margin-bottom: 1rem;
 }
@@ -310,15 +300,12 @@
   margin-bottom: -10px;
 }
 .landing-promo__text {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   height: 100%;
   padding-right: 2.0625rem;
   font-size: 1.5rem;
@@ -341,10 +328,8 @@
     text-align: center;
   }
   .landing-promo__text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     font-size: 1.5rem;

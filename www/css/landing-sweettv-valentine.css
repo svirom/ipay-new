@@ -44,9 +44,8 @@
   z-index: 102;
 }
 .landing-header .main-nav {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
 }
 .landing-header .main-nav__logo {
   font-size: 0;
@@ -77,7 +76,6 @@
 }
 @media screen and (max-width: 991px) {
   .landing-header .main-nav__nav {
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
@@ -126,7 +124,6 @@
 .landing-hero {
   position: relative;
   padding-top: 15.375rem;
-  background: -webkit-gradient(linear, left top, right top, from(#31B8C5), color-stop(15.61%, #49BCC4), to(#11428B));
   background: linear-gradient(90deg, #31B8C5 0%, #49BCC4 15.61%, #11428B 100%);
   overflow: hidden;
 }
@@ -142,8 +139,7 @@
   position: relative;
   padding: 1.25rem;
   border-radius: 0.625rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   background-color: #172A3A;
   z-index: 5;
 }
@@ -154,8 +150,7 @@
   background-image: none;
 }
 .landing-hero__form .form-group.has-success .form-input, .landing-hero__form .form-group.has-error .form-input, .landing-hero__form .form-group.has-success .form-input:not([type=password]):not(.input-icon-right):not(.input-cvv).form-control:focus, .landing-hero__form .form-group.has-error .form-input:not([type=password]):not(.input-icon-right):not(.input-cvv).form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .landing-hero__form .form-group.has-error .form-input, .landing-hero__form .form-group.has-error .form-input:not([type=password]):not(.input-icon-right):not(.input-cvv).form-control:focus {
   border-color: #FF6A51;
@@ -171,8 +166,7 @@
   line-height: 1.172;
 }
 .landing-hero__form .form-input.form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .landing-hero__form .form-input ~ .form-label {
   top: 1.25rem;
@@ -327,19 +321,15 @@
   color: #172A3A;
 }
 .landing-promo__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   height: 174px;
   margin-bottom: 1.875rem;
   padding: 1rem;
   border-radius: 0.9375rem;
-  -webkit-box-shadow: 0px 4px 29px rgba(75, 222, 230, 0.28);
-          box-shadow: 0px 4px 29px rgba(75, 222, 230, 0.28);
+  box-shadow: 0px 4px 29px rgba(75, 222, 230, 0.28);
   background: linear-gradient(114.58deg, #33B8C1 2.97%, #39BEC7 100%);
 }
 .landing-promo__card--bottom {
@@ -438,15 +428,13 @@
   margin-bottom: 4rem;
 }
 .landing-faq__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 2.5rem;
 }
 .landing-faq__card .landing-faq__number {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 2.5rem;
-          flex: 0 0 2.5rem;
+  -ms-flex: 0 0 2.5rem;
+      flex: 0 0 2.5rem;
   max-width: 2.5rem;
   height: 2.5rem;
   font-size: 1.5rem;
@@ -454,8 +442,7 @@
   font-weight: 700;
   text-align: center;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 34px 20px -11px rgba(0, 0, 0, 0.11);
-          box-shadow: 0px 34px 20px -11px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 34px 20px -11px rgba(0, 0, 0, 0.11);
   background-color: #39BEC7;
 }
 .landing-faq__card .landing-faq__text {

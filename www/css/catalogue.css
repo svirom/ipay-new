@@ -67,8 +67,7 @@
   top: 0;
   width: 3.125rem;
   height: 100%;
-  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
-          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
   border-radius: 0.5rem;
   background-color: #fff;
 }
@@ -245,6 +244,13 @@
   height: 24px;
   background-position: -169px 0;
 }
+.catalogue__credits::before {
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons/icon-loans.svg");
+  background-position: center;
+  background-size: 24px;
+}
 
 /* catalogue mobile */
 .catalogue-mobile {
@@ -256,13 +262,11 @@
   transform: translateX(100%);
   background-color: #fff;
   z-index: 2;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .catalogue-mobile.active {
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .catalogue-mobile__back.dropdown-item {

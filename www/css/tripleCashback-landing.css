@@ -66,16 +66,12 @@
   z-index: -1;
 }
 .landing-header__content {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
   position: relative;
   height: 100%;
 }
@@ -91,7 +87,6 @@
   max-width: 33.75rem;
 }
 .landing-header__logo {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 5px;
@@ -178,8 +173,7 @@
   height: 100%;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
 }
 .landing-conditions__card p {
   color: #172A3A;
@@ -241,20 +235,16 @@
   position: absolute;
   left: -72px;
   bottom: -18px;
-  -webkit-box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
-          box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
+  box-shadow: 0px 3.69172px 14.7669px rgba(97, 144, 183, 0.25);
   border-radius: 14.7669px;
 }
 .landing-promo__text {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   height: 100%;
   padding-left: 1.5rem;
   padding-right: 2.0625rem;
@@ -286,10 +276,8 @@
     bottom: -82px;
   }
   .landing-promo__text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     font-size: 1.5rem;

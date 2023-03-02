@@ -2,9 +2,8 @@
   border-bottom: 2px solid #DEE7F3;
 }
 .bill-tablist .nav {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .bill-tablist__item:not(:last-child) {
   margin-right: 1.125rem;
@@ -23,7 +22,6 @@
   left: 0;
   bottom: -2px;
   background-color: #E84F35;
-  -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
 .bill-tablist__link:hover {
@@ -67,17 +65,14 @@
 .utility-card__row {
   padding: 1.5rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #ffffff;
 }
 .utility-card__inner {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .utility-card__inner p {
   margin-bottom: 0;
@@ -87,15 +82,13 @@
   padding-top: 1px;
 }
 .utility-card__inner-text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
   padding-right: 1.5rem;
 }
 .utility-card__inner-field {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
   max-width: 10.3125rem;
 }
 .utility-card__inner-field .form-group {
@@ -154,7 +147,6 @@
   width: 100%;
   height: 2px;
   top: 7px;
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(222, 231, 243, 0)), color-stop(0%, #DEE7F3));
   background-image: linear-gradient(to left, rgba(222, 231, 243, 0) 50%, #DEE7F3 0%);
   background-position: bottom;
   background-size: 8px 2px;
@@ -196,12 +188,10 @@
   background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.5 6.5L17.5 17.5' stroke='%23172A3A' stroke-width='1.01' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.5 17.5L17.5 6.50003' stroke='%23172A3A' stroke-width='1.01' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
 }
 .utility-card__footer {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   position: relative;
   padding-top: 1rem;
 }
@@ -211,7 +201,6 @@
   width: 100%;
   height: 1px;
   top: 0;
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(222, 231, 243, 0)), color-stop(0%, #DEE7F3));
   background-image: linear-gradient(to left, rgba(222, 231, 243, 0) 50%, #DEE7F3 0%);
   background-position: bottom;
   background-size: 8px 1px;
@@ -244,8 +233,7 @@
 .utility-card.disabled .utility-card__row {
   padding: 1.3125rem;
   border: 3px solid #DEE7F3;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .utility-card.disabled .utility-card__inner .checkbox-control {
   pointer-events: all;
@@ -263,10 +251,8 @@
     padding: 1rem;
   }
   .utility-card__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .utility-card__inner-field {
     max-width: none;
@@ -287,13 +273,10 @@
     font-size: 0.875rem;
   }
   .utility-card__footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
     padding-top: 1.5rem;
   }
   .utility-card__footer .btn-utility-requisites {

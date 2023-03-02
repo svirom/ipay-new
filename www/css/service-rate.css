@@ -7,12 +7,10 @@
   border-color: #FFD578;
 }
 .service-rate__rating {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .service-rate__rating::after {
   content: "";
@@ -70,9 +68,8 @@
   background-color: #F0F5FA;
 }
 .service-rate__rated .service-rate__rating {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .service-rate__rated .service-rate__rating .rating-input__star {
   width: 2.125rem;
@@ -106,10 +103,8 @@
     padding: 1rem;
   }
   .service-rate__rating {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .service-rate__rating .rating-input {
     margin-right: 0;
@@ -132,10 +127,8 @@
     min-height: 144px;
   }
   .service-rate__rated .service-rate__rating {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
   }
   .service-rate__rated .service-rate__rating .rating-input {
     margin-right: 0.875rem;

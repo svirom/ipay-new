@@ -11,8 +11,7 @@
   position: relative;
   padding: 1rem 1rem 0.6875rem 1rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #172A3A;
   cursor: pointer;
 }
@@ -24,7 +23,6 @@
   width: 1.5rem;
   height: 1.5rem;
   background: url('data:image/svg+xml,%3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M6.1665 9.62866L12.0001 15.4623" stroke="%23FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M12 15.4623L17.8336 9.62867" stroke="%23FFFFFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E') center no-repeat;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .upsale-mobile__title h4 {
@@ -88,8 +86,7 @@
   cursor: pointer;
 }
 .upsale-mobile__add-item .upsale-mobile__add.upsale-mobile__add--remove {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border-color: #172A3A;
   background-color: #172A3A;
 }
@@ -112,8 +109,7 @@
 /* carousel of goods */
 .carousel-goods {
   margin-bottom: 0.875rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   border-radius: 0.5rem;
 }
 .carousel-goods .carousel-item {
@@ -182,19 +178,14 @@
   background-color: #3B566E;
 }
 .carousel-goods__item {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -229,16 +220,12 @@
 /* upsale table payment info */
 @media screen and (max-width: 575px) {
   .upsale-table__item {
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
   }
 }
 .table .upsale-table__item {
@@ -259,7 +246,6 @@
 }
 .table td.upsale-table__content {
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
@@ -286,15 +272,12 @@
   outline: none;
 }
 .upsale-table__img {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: end;
+      align-items: flex-end;
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.75rem;
@@ -366,8 +349,7 @@
 .upsale-mobile__info {
   padding: 1.5rem 0.75rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background: #FFFFFF;
 }
 .upsale-mobile__info h4 {

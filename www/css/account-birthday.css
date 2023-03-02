@@ -1,0 +1,85 @@
+.account-birthday {
+  position: relative;
+  border-radius: 1.25rem;
+  background: linear-gradient(97.15deg, #EA9F48 0.38%, #E34F0F 107.11%);
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.account-birthday__confetti {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+.account-birthday__content {
+  position: relative;
+  padding: 2.75rem;
+}
+.account-birthday__content p {
+  color: #ffffff;
+}
+.account-birthday__content p.account-birthday__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.account-birthday__content p.account-birthday__greeting {
+  max-width: 530px;
+  margin-bottom: 2.75rem;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.account-birthday__content p.account-birthday__date {
+  margin-bottom: 0;
+  padding-left: 1.625rem;
+  font-weight: 500;
+  background: url("../img/account/birthday/birthday-date.svg") left top -1px no-repeat;
+}
+.account-birthday__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.account-birthday__img img {
+  max-width: 100%;
+}
+@media screen and (max-width: 1199px) {
+  .account-birthday__content p.account-birthday__greeting {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account-birthday__confetti {
+    right: -15%;
+  }
+  .account-birthday__content {
+    padding: 1.25rem;
+  }
+  .account-birthday__content p.account-birthday__title {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+  .account-birthday__content p.account-birthday__greeting {
+    max-width: 400px;
+    margin-bottom: 1.875rem;
+    font-size: 0.875rem;
+  }
+  .account-birthday__content p.account-birthday__date {
+    padding-left: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    background-size: 18px;
+  }
+  .account-birthday__img {
+    bottom: 5px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .account-birthday__content p.account-birthday__greeting {
+    max-width: 244px;
+  }
+}/*# sourceMappingURL=account-birthday.css.map */

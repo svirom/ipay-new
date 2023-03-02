@@ -62,19 +62,15 @@
   margin-top: 2rem;
 }
 .account-settings__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 1rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
 }
 .account-settings__card .connected {
   display: none;
@@ -86,16 +82,13 @@
   color: #E84F35;
 }
 .account-settings__card-title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
   max-width: 100%;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   padding-right: 0.25rem;
 }
 .account-settings__card-title p, .account-settings__card-title span {
@@ -107,9 +100,8 @@
   padding-left: 0.5rem;
 }
 .account-settings__card-status {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: auto;
   max-width: 100%;
   line-height: 1.3;

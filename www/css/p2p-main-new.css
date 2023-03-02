@@ -50,24 +50,19 @@
   font-weight: 700;
 }
 .p2p-new__form {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 .p2p-new__form .p2p-new__input-wrapper {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
   width: 100%;
 }
 .p2p-new__form .p2p-new__input-wrapper--target {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+  -ms-flex-order: -1;
+      order: -1;
 }
 .p2p-new .bank-card {
   padding: 2rem 1.875rem 0;
@@ -82,9 +77,8 @@
 .p2p-new .bank-card__expires {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   max-width: 100%;
   margin-right: 1.875rem;
 }
@@ -111,24 +105,20 @@
   display: block;
 }
 .p2p-new__amount {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 0.75rem 1rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   background-color: #F0F5FA;
 }
 .p2p-new__amount span {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: auto;
   max-width: 100%;
   font-size: 1.125rem;
@@ -178,8 +168,7 @@
     max-width: 26.25rem;
     height: 15.75rem;
     padding: 1rem 1rem 0;
-    -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
-            box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+    box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
   }
   .p2p-new .bank-card__header, .p2p-new .bank-card__bank, .p2p-new .bank-card__type {
     height: 2rem;
@@ -342,15 +331,12 @@
 
 /* p2p new security */
 .p2p-new-security {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: 2.75rem;
   margin-bottom: 2.75rem;
 }
@@ -367,16 +353,12 @@
   border-radius: 0.5rem;
 }
 .p2p-new-provider__rating, .p2p-new-provider__payments {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .p2p-new-provider__rating {
   position: relative;
@@ -431,14 +413,12 @@
   padding: 0;
   border: 0;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
-          box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+  box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
 }
 .p2p-masterpass .dropdown-menu .masterpass-card {
   border-bottom: 1px solid #DEE7F3;
   border-radius: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .p2p-masterpass .dropdown-menu .masterpass-card:first-of-type {
   border-top-left-radius: 0.5rem;
@@ -452,23 +432,19 @@
 
 .masterpass-card {
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 4rem;
   padding: 0.75rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
-          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
   cursor: pointer;
 }
 .masterpass-card__logo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 3.5rem;
-          flex: 0 0 3.5rem;
+  -ms-flex: 0 0 3.5rem;
+      flex: 0 0 3.5rem;
   max-width: 3.5rem;
   height: 2.5rem;
   background-position: center;
@@ -476,17 +452,13 @@
   background-size: contain;
 }
 .masterpass-card__body {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   width: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   padding-left: 1rem;
   padding-right: 1.5rem;
 }
@@ -513,7 +485,6 @@
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.1665 9.6286L12.0001 15.4622' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 15.4623L17.8336 9.62867' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 10;
 }
@@ -619,17 +590,14 @@ launch history styles
 }
 
 .launch-card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 7rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #ffffff;
 }
 .launch-card__amount {
@@ -652,10 +620,8 @@ launch history styles
   .launch-card {
     height: 6.5rem;
     margin-bottom: 1rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     text-align: center;
   }
   .launch-card__amount {
@@ -674,7 +640,6 @@ launch history styles
   padding-top: 4.5rem;
 }
 .launch-p2p__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 3.75rem;
@@ -682,15 +647,12 @@ launch history styles
 .launch-p2p__img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 3rem;
   height: 3rem;
   margin-right: 0.75rem;
@@ -739,10 +701,8 @@ launch history styles
     padding-top: 1rem;
   }
   .launch-p2p__card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     margin-bottom: 1.5rem;
   }
   .launch-p2p__img {
@@ -762,28 +722,21 @@ launch history styles
   background-color: #345467;
 }
 .launch-footer__right {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   padding-bottom: 1rem;
 }
 .launch-footer__img {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: -34px;
   padding-right: 1.875rem;
 }
@@ -817,9 +770,8 @@ launch history styles
     margin-right: auto;
   }
   .launch-footer__right {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     padding-top: 1.125rem;
     padding-right: 2.5rem;
   }
@@ -892,7 +844,6 @@ launch history styles
   right: 0.875rem;
   background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.16638 9.62891L12 15.4625' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 15.4619L17.8336 9.62831' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
@@ -911,8 +862,7 @@ launch history styles
   padding: 0;
   border: 0;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
-          box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+  box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
 }
 .p2p-card-template .dropdown-menu .saved-card {
   border-bottom: 1px solid #DEE7F3;
@@ -928,16 +878,12 @@ launch history styles
 
 .saved-card {
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
   height: 4.625rem;
   padding: 1rem 1rem 1rem 1.5rem;
   cursor: pointer;
@@ -987,7 +933,6 @@ launch history styles
 }
 
 .saved-card-empty {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 1rem 1rem 0.875rem;
@@ -1001,9 +946,8 @@ launch history styles
           user-select: none;
 }
 .saved-card-empty__img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: auto;
 }
 .saved-card-empty .saved-card-empty__text {
@@ -1011,18 +955,15 @@ launch history styles
 }
 
 .p2p-new-services .p2p-new-services__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 3.5rem;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem 0.5rem 3rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-position: left 1rem center;
   background-repeat: no-repeat;
 }
@@ -1049,12 +990,10 @@ launch history styles
 }
 
 .save-card-functional {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 3.375rem;
   border-radius: 0.5rem;
   background-color: #FEF7E0;
@@ -1068,18 +1007,14 @@ launch history styles
 }
 .save-card-functional__img {
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 3rem;
-          flex: 0 0 3rem;
-  display: -webkit-box;
+  -ms-flex: 0 0 3rem;
+      flex: 0 0 3rem;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 3rem;
   height: 3rem;
   margin-left: 0.75rem;
@@ -1111,9 +1046,8 @@ launch history styles
 }
 @media screen and (max-width: 991px) {
   .save-card-functional {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
@@ -1153,9 +1087,8 @@ launch history styles
   border-radius: 0.625rem;
 }
 .modal-save-card-functional .modal-header {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   padding: 2.5rem 1.5rem 0.25rem;
   text-align: center;
   border-bottom: 0;
@@ -1241,15 +1174,12 @@ launch history styles
 }
 
 .p2p-new-link {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 100%;
   height: 3rem;
   padding: 0.75rem 0.5rem;
@@ -1264,18 +1194,14 @@ launch history styles
   outline: none;
 }
 .p2p-new-link__img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 0.75rem;
-          flex: 0 0 0.75rem;
-  display: -webkit-box;
+  -ms-flex: 0 0 0.75rem;
+      flex: 0 0 0.75rem;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 0.75rem;
   height: 1rem;
 }
@@ -1287,9 +1213,8 @@ launch history styles
   white-space: nowrap;
 }
 .p2p-new-link__icon {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25px;
-          flex: 0 0 25px;
+  -ms-flex: 0 0 25px;
+      flex: 0 0 25px;
   width: 25px;
   height: 24px;
   background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_527_28179)'%3E%3Cpath d='M17.0747 12L7.07471 12' stroke='%23DE7800' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0747 17L18.0747 12L12.0747 7' stroke='%23DE7800' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_527_28179'%3E%3Crect width='24' height='24' fill='white' transform='translate(0.75)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");

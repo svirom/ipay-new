@@ -1,13 +1,10 @@
 .catalog-page-alert {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .catalog-page-alert.alert.alert-face {
   padding: 1rem 1rem 1rem 4.5rem;
@@ -51,12 +48,10 @@
   background-color: #F0F5FA;
 }
 .catalog-page-info__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 2.5rem;
 }
 .catalog-page-info__card span {
@@ -156,6 +151,9 @@
 }
 .catalog-page-list .catalogue__budget:hover::before {
   background-position: -145px -122px;
+}
+.catalog-page-list .catalogue__credits:hover::before {
+  background-image: url("../img/icons/icon-loans-red.svg");
 }
 .catalog-page-list--first {
   margin-top: 1rem;

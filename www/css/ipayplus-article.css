@@ -7,15 +7,12 @@
   height: auto;
 }
 .ipayplus-article__time {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   margin-bottom: 1.5rem;
   padding: 1rem 2rem 0.9375rem 1.375rem;
   border-radius: 0.5rem;
@@ -41,13 +38,10 @@
 }
 @media screen and (max-width: 575px) {
   .ipayplus-article__time {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
     padding-top: 1.0625rem;
     padding-bottom: 1.125rem;
   }

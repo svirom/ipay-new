@@ -1,12 +1,9 @@
 .payment-wrapper {
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -46,9 +43,8 @@
 }
 
 .payment-main {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   padding-top: 5rem;
   padding-bottom: 4rem;
 }
@@ -106,15 +102,12 @@
 }
 .payment-form__img {
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   top: 4px;
   left: 4px;
   width: 80px;
@@ -143,7 +136,6 @@
   background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.81775 1.77173C8.4905 1.77173 7.41455 2.84768 7.41455 4.17492C7.41455 5.50217 8.4905 6.57812 9.81775 6.57812C11.145 6.57812 12.2209 5.50217 12.2209 4.17492C12.2209 2.84768 11.145 1.77173 9.81775 1.77173ZM6.41455 4.17492C6.41455 2.29539 7.93821 0.771729 9.81775 0.771729C11.6973 0.771729 13.2209 2.29539 13.2209 4.17492C13.2209 6.05446 11.6973 7.57812 9.81775 7.57812C7.93821 7.57812 6.41455 6.05446 6.41455 4.17492Z' fill='%23E84F35'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.81766 7.57812C8.65865 7.57812 7.59886 7.99743 6.77977 8.69322C6.56932 8.872 6.25378 8.84632 6.075 8.63586C5.89622 8.42541 5.9219 8.10987 6.13236 7.93109C7.1254 7.08752 8.41269 6.57812 9.81766 6.57812C12.963 6.57812 15.5129 9.12795 15.5129 12.2733C15.5129 12.5495 15.289 12.7733 15.0129 12.7733C14.7367 12.7733 14.5129 12.5495 14.5129 12.2733C14.5129 9.68023 12.4107 7.57812 9.81766 7.57812Z' fill='%23E84F35'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.455078 11.5093C0.455078 11.2331 0.678936 11.0093 0.955078 11.0093H6.91427C7.19041 11.0093 7.41427 11.2331 7.41427 11.5093C7.41427 11.7854 7.19041 12.0093 6.91427 12.0093H0.955078C0.678936 12.0093 0.455078 11.7854 0.455078 11.5093Z' fill='%23E84F35'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.34615 7.94706C4.54142 7.7518 4.858 7.7518 5.05326 7.94706L8.54014 11.4339L5.05326 14.9208C4.858 15.1161 4.54142 15.1161 4.34615 14.9208C4.15089 14.7256 4.15089 14.409 4.34615 14.2137L7.12593 11.4339L4.34615 8.65417C4.15089 8.4589 4.15089 8.14232 4.34615 7.94706Z' fill='%23E84F35'/%3E%3C/svg%3E") left center no-repeat;
 }
 .payment-form__top-amount {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -157,9 +149,8 @@
   background-color: #F0F5FA;
 }
 .payment-form__top-amount > span {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
   max-width: 100%;
 }
 .payment-form__top-amount > span:first-child {
@@ -184,8 +175,7 @@
   background: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.0833 11.4178L2.91667 11.4178C2 11.4178 1.25 10.6678 1.25 9.75114L1.25 2.25114C1.25 1.33447 2 0.584473 2.91667 0.584473L17.0833 0.584473C18 0.584473 18.75 1.33447 18.75 2.25114V9.75114C18.75 10.6678 18 11.4178 17.0833 11.4178Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.75 2.9834L1.25 2.9834L1.25 4.9029L18.75 4.9029V2.9834Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center no-repeat;
 }
 .payment-form__card .payment-form__card-btn:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .payment-form__card .payment-form__card-btn:active {
   color: #172A3A;
@@ -202,8 +192,7 @@
   width: 100%;
   max-width: 410px;
   padding: 2rem 1.875rem 0;
-  -webkit-box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
-          box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
 }
 .payment-form__card .bank-card__header, .payment-form__card .bank-card__bank, .payment-form__card .bank-card__type {
   height: 2.5rem;
@@ -258,8 +247,7 @@
     height: 15.75rem;
     padding: 1rem 1rem 0;
     border-radius: 1rem;
-    -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
-            box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+    box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
   }
   .payment-form__card .bank-card__header, .payment-form__card .bank-card__bank, .payment-form__card .bank-card__type {
     height: 2rem;
@@ -349,14 +337,12 @@
   color: #172A3A;
 }
 .payment-amount__buttons {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .payment-amount__buttons .btn {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   display: block;
   padding: 0.4375rem 0.625rem 0.1875rem;
   border: 0;
@@ -366,8 +352,7 @@
   background-color: #DEE7F3;
 }
 .payment-amount__buttons .btn:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .payment-amount__buttons .btn + .btn {
   margin-left: 0.5rem;
@@ -439,8 +424,7 @@
 .payment-result {
   padding: 1rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 9px 20px rgba(97, 144, 183, 0.2);
-          box-shadow: 0px 9px 20px rgba(97, 144, 183, 0.2);
+  box-shadow: 0px 9px 20px rgba(97, 144, 183, 0.2);
   background-color: #fff;
 }
 .payment-result__main {
@@ -482,15 +466,12 @@
   color: #172A3A;
 }
 .payment-result__table-row {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-top: 1px solid #DEE7F3;
@@ -571,15 +552,12 @@
   background-repeat: no-repeat;
 }
 .payment-result__info-row {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .payment-result__info-row h3 {
   font-size: 1.125rem;
@@ -607,13 +585,10 @@
 }
 @media screen and (max-width: 575px) {
   .payment-result__info-row--data {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
   }
   .payment-result__info-row--data span:first-child {
     margin-bottom: 0.25rem;
@@ -635,15 +610,12 @@
 }
 
 .share-buttons .share-buttons__button {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 3.5rem;
   width: 100%;
   border-radius: 0.5rem;

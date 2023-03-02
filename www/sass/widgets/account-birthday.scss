@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the account birthday widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-birthday {
+  position: relative;
+  border-radius: 1.25rem;
+  background: linear-gradient(97.15deg, #EA9F48 0.38%, #E34F0F 107.11%);
+  overflow: hidden;
+  user-select: none;
+
+  &__confetti {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    padding: 2.75rem;
+
+    p {
+      color: #ffffff;
+
+      &.account-birthday__title {
+        font-family: $heading-font;
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+
+      &.account-birthday__greeting {
+        max-width: 530px;
+        margin-bottom: 2.75rem;
+        font-size: 1.25rem;
+        font-style: italic;
+      }
+
+      &.account-birthday__date {
+        margin-bottom: 0;
+        padding-left: 1.625rem;
+        font-weight: 500;
+        background: url("../img/account/birthday/birthday-date.svg") left top -1px no-repeat;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @include until($xl) {
+    &__content {
+      p {
+        &.account-birthday__greeting {
+          max-width: 480px;
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    &__confetti {
+      right: -15%;
+    }
+
+    &__content {
+      padding: 1.25rem;
+
+      p {  
+        &.account-birthday__title {
+          margin-bottom: 0.75rem;
+          font-size: 1rem;
+        }
+  
+        &.account-birthday__greeting {
+          max-width: 400px;
+          margin-bottom: 1.875rem;
+          font-size: 0.875rem;
+        }
+  
+        &.account-birthday__date {
+          padding-left: 1.5rem;
+          font-size: 0.875rem;
+          font-weight: 400;
+          background-size: 18px;
+        }
+      }
+    }
+
+    &__img {
+      bottom: 5px;
+    }
+  }
+
+  @include until($sm) {
+    &__content {
+      p {
+        &.account-birthday__greeting {
+          max-width: 244px;
+        }
+      }
+    }
+  }
+}

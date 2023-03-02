@@ -68,12 +68,10 @@
   padding-top: 1rem;
 }
 .p2p .bank-card__invoice {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
 }
 .p2p .bank-card__descr {
   padding-left: 1.1875rem;
@@ -115,15 +113,12 @@
   top: 0.625rem;
 }
 .p2p__security {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 1rem 2.5rem 1rem 1.375rem;
   border-radius: 0.5rem;
   background-color: #F0F5FA;
@@ -141,15 +136,12 @@
   height: 1.5rem;
 }
 .p2p__bonuses {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   height: 5rem;
   margin-top: -1.25rem;
   padding-top: 1.25rem;
@@ -165,22 +157,18 @@
   max-width: 50%;
 }
 .p2p__bonuses-amount {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .p2p__bonuses-count {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .p2p__bonuses-number {
   font-size: 1.5rem;
@@ -207,18 +195,15 @@
   margin-top: 2rem;
 }
 .p2p__notification-row {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
   padding-bottom: 1rem;
   border-bottom: 2px solid #DEE7F3;
   cursor: pointer;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 .p2p__notification-row::after {
   display: block;
@@ -228,8 +213,6 @@
   height: 1.5rem;
   right: 1rem;
   background: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27881 8.44434L10.1402 13.3057' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.1401 13.3057L15.0015 8.44432' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
-  -webkit-transition: transform 0.3s ease;
-  -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
@@ -240,12 +223,9 @@
 }
 .p2p__notification-row[aria-expanded=true] {
   border-bottom-color: transparent;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  transition-delay: 0s;
 }
 .p2p__notification-row[aria-expanded=true]::after {
-  -webkit-transition: transform 0.3s ease;
-  -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
@@ -255,15 +235,12 @@
 .p2p__notification-img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.5rem;
@@ -285,15 +262,12 @@
   font-size: 0.875rem;
 }
 .p2p__payment {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   padding-top: 1rem;
 }
 .p2p__payment span {
@@ -324,7 +298,6 @@
   background-color: #7C9CAC;
   cursor: pointer;
   overflow: hidden;
-  -webkit-transition: all 1.2s ease;
   transition: all 1.2s ease;
   text-align: center;
   -webkit-clip-path: inset(0 100% 0 0);
@@ -400,15 +373,12 @@
   }
 }
 .p2p-arrow {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 4.5rem;
   height: 4.5rem;
   margin-top: 10.5rem;
@@ -423,8 +393,7 @@
 .p2p-arrow.filled {
   -webkit-filter: drop-shadow(0px 9px 20px rgba(9, 188, 138, 0.3));
           filter: drop-shadow(0px 9px 20px rgba(9, 188, 138, 0.3));
-  -webkit-box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
-          box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
+  box-shadow: 0px 9px 20px rgba(9, 188, 138, 0.3);
   background-color: #09BC8A;
 }
 .p2p-arrow.filled svg {
@@ -478,10 +447,8 @@
     display: none;
   }
   .p2p__security {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     padding: 1rem;
   }
   .p2p__security-title {
@@ -491,7 +458,6 @@
     text-align: center;
   }
   .p2p__security-img {
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
@@ -520,8 +486,7 @@
     height: 16rem;
     margin-bottom: 0;
     padding: 1rem 0.9375rem 0;
-    -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
-            box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+    box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
   }
   .p2p__card .bank-card__header, .p2p__card .bank-card__bank, .p2p__card .bank-card__type {
     height: 2rem;
@@ -556,10 +521,8 @@
     margin-bottom: 0.25rem;
   }
   .p2p__bonuses-amount {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .p2p__bonuses-text {
     max-width: none;
@@ -638,21 +601,17 @@
   margin-left: 0.625rem;
 }
 .p2p__tabs .p2p-tablist__link {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 3rem;
   width: 186px;
   padding: 0.25rem 0.125rem;
   border: 3px solid #DEE7F3;
   border-radius: 0.5rem;
-  -webkit-transition: background-color 0.3s ease-out, border 0.3s ease-out;
   transition: background-color 0.3s ease-out, border 0.3s ease-out;
 }
 .p2p__tabs .p2p-tablist__link span {
@@ -686,9 +645,8 @@
 }
 @media screen and (max-width: 991px) {
   .p2p__tabs .p2p-tablist__item {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
     max-width: 100%;
@@ -702,13 +660,10 @@
     margin-left: 0.5rem;
   }
   .p2p__tabs .p2p-tablist__link {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     height: 4rem;
     font-size: 0.75rem;
   }
@@ -730,14 +685,12 @@
   padding: 0;
   border: 0;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
 }
 .p2p-masterpass .dropdown-menu .masterpass-card {
   border-bottom: 1px solid #DEE7F3;
   border-radius: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .p2p-masterpass .dropdown-menu .masterpass-card:first-of-type {
   border-top-left-radius: 0.5rem;
@@ -756,31 +709,24 @@
 
 .masterpass-card {
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 0.625rem 0.5rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   cursor: pointer;
 }
 .masterpass-card__header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   width: 9.75rem;
   height: 6.875rem;
   padding: 1rem 0.5rem;
@@ -788,48 +734,38 @@
   background-color: #F0F5FA;
 }
 .masterpass-card__bank, .masterpass-card__type {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .masterpass-card__bank {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  -ms-flex-order: 1;
+      order: 1;
 }
 .masterpass-card__bank img {
   max-height: 1.125rem;
 }
 .masterpass-card__type {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 .masterpass-card__type img {
   max-height: 1.75rem;
 }
 .masterpass-card__body {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   padding-left: 1.9rem;
 }
 .masterpass-card__number {
@@ -859,23 +795,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 10;
 }
 @media screen and (max-width: 575px) {
   .masterpass-card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     padding: 0.75rem 1rem;
   }
   .masterpass-card__header {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
     width: 100%;
     height: auto;
     padding: 0;
@@ -885,38 +816,29 @@
     max-height: 2.75rem;
   }
   .masterpass-card__bank {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-order: 0;
+        order: 0;
   }
   .masterpass-card__type {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
   }
   .masterpass-card__type img {
     max-height: 1.25rem;
   }
   .masterpass-card__body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
     width: 100%;
     padding-left: 0;
     padding-top: 1rem;
@@ -924,29 +846,23 @@
 }
 
 .masterpass-empty {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 0.625rem 1.5rem 0.625rem 0.5rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
 }
 .masterpass-empty__header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 9.75rem;
   height: 6.875rem;
   padding: 0.25rem;
@@ -954,22 +870,16 @@
   background-color: #F0F5FA;
 }
 .masterpass-empty__body {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
   padding-left: 1.25rem;
 }
 .masterpass-empty__body p {
@@ -977,16 +887,13 @@
 }
 @media screen and (max-width: 575px) {
   .masterpass-empty {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     padding: 1rem;
   }
   .masterpass-empty__header {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
     width: 100%;
     height: auto;
     padding: 0;
@@ -1002,17 +909,14 @@
 }
 
 .pay-card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 5.625rem;
   padding: 1.125rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
 }
 .pay-card span {
   margin-left: 1rem;
@@ -1105,16 +1009,12 @@
   padding-bottom: 3.125rem;
 }
 .p2p-promo__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .p2p-promo__card--last .p2p-promo__content {
   max-width: 10rem;
@@ -1122,21 +1022,17 @@
 .p2p-promo__img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 4.5rem;
   height: 4.5rem;
   margin-bottom: 1.25rem;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
 }
 .p2p-promo__content {
   text-align: center;
@@ -1157,10 +1053,8 @@
     padding-bottom: 1.5rem;
   }
   .p2p-promo__card {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
     margin-bottom: 1.5rem;
     padding-left: 0.9375rem;
   }
@@ -1186,13 +1080,10 @@
   margin-bottom: 1.5rem;
 }
 .p2p-limitations .launch-card {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
@@ -1251,15 +1142,12 @@
   margin-bottom: 4rem;
 }
 .p2p-protection__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .p2p-protection__card a:hover {
   text-decoration: none;
@@ -1289,10 +1177,8 @@
     padding-bottom: 1.5rem;
   }
   .p2p-protection__card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .p2p-protection__card a:not(:last-child) {
     margin-bottom: 1.875rem;
@@ -1330,15 +1216,12 @@ launch history styles
   padding-bottom: 1.875rem;
 }
 .launch-header__img {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: -27px;
   border-bottom-right-radius: 0.5rem;
 }
@@ -1379,9 +1262,8 @@ launch history styles
     padding-right: 0;
   }
   .launch-header__img {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     margin-top: 0;
     margin-left: 0;
   }
@@ -1491,17 +1373,14 @@ launch history styles
 }
 
 .launch-card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 7rem;
   padding: 1.25rem 1.875rem 1.25rem 1.25rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #ffffff;
 }
 .launch-card__amount {
@@ -1523,10 +1402,8 @@ launch history styles
 @media screen and (max-width: 767px) {
   .launch-card {
     margin-bottom: 1rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     padding: 1rem;
     text-align: center;
   }
@@ -1546,7 +1423,6 @@ launch history styles
   padding-top: 4rem;
 }
 .launch-p2p__card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 3.75rem;
@@ -1554,15 +1430,12 @@ launch history styles
 .launch-p2p__img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 3rem;
   height: 3rem;
   margin-right: 0.75rem;
@@ -1611,10 +1484,8 @@ launch history styles
     padding-top: 1rem;
   }
   .launch-p2p__card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     margin-bottom: 1.5rem;
   }
   .launch-p2p__img {
@@ -1634,28 +1505,21 @@ launch history styles
   background-color: #345467;
 }
 .launch-footer__right {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   padding-bottom: 1rem;
 }
 .launch-footer__img {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: -34px;
   padding-right: 1.875rem;
 }
@@ -1689,9 +1553,8 @@ launch history styles
     margin-right: auto;
   }
   .launch-footer__right {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     padding-top: 1.125rem;
     padding-right: 2.5rem;
   }
@@ -1765,7 +1628,6 @@ launch history styles
   right: 1rem;
   background: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.93182 8.51562L10.7932 13.377' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.7933 13.377L15.6546 8.51562' stroke='%233B566E' stroke-width='2.02' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
@@ -1784,8 +1646,7 @@ launch history styles
   padding: 0;
   border: 0;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
-          box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+  box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
 }
 .p2p-card-template .dropdown-menu .saved-card {
   border-bottom: 1px solid #DEE7F3;
@@ -1801,16 +1662,12 @@ launch history styles
 
 .saved-card {
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
   height: 4.625rem;
   padding: 0 1rem 0 1.5rem;
   cursor: pointer;
@@ -1860,7 +1717,6 @@ launch history styles
 }
 
 .saved-card-empty {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 1rem 1rem 0.875rem;
@@ -1874,9 +1730,8 @@ launch history styles
           user-select: none;
 }
 .saved-card-empty__img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: auto;
 }
 .saved-card-empty .saved-card-empty__text {
@@ -1884,12 +1739,10 @@ launch history styles
 }
 
 .save-card-functional {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   height: 3.375rem;
   width: 260px;
   border-radius: 0.5rem;
@@ -1904,18 +1757,14 @@ launch history styles
 }
 .save-card-functional__img {
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 3rem;
-          flex: 0 0 3rem;
-  display: -webkit-box;
+  -ms-flex: 0 0 3rem;
+      flex: 0 0 3rem;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 3rem;
   height: 3rem;
   margin-left: 0.75rem;
@@ -1947,9 +1796,8 @@ launch history styles
 }
 @media screen and (max-width: 991px) {
   .save-card-functional {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     width: 100%;
     max-width: 350px;
     margin-left: auto;
@@ -1990,9 +1838,8 @@ launch history styles
   border-radius: 0.625rem;
 }
 .modal-save-card-functional .modal-header {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   padding: 2.5rem 1.5rem 0.25rem;
   text-align: center;
   border-bottom: 0;
@@ -2078,15 +1925,12 @@ launch history styles
 }
 
 .p2p-new-link {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   height: 3rem;
   width: 288px;
   padding: 0.75rem 0.5rem;
@@ -2101,25 +1945,20 @@ launch history styles
   outline: none;
 }
 .p2p-new-link__img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 0.75rem;
-          flex: 0 0 0.75rem;
-  display: -webkit-box;
+  -ms-flex: 0 0 0.75rem;
+      flex: 0 0 0.75rem;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 0.75rem;
   height: 1rem;
 }
 .p2p-new-link__text {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   padding-left: 0.8125rem;
   padding-right: 0.5rem;
   color: #DE7800;
@@ -2127,9 +1966,8 @@ launch history styles
   white-space: nowrap;
 }
 .p2p-new-link__icon {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25px;
-          flex: 0 0 25px;
+  -ms-flex: 0 0 25px;
+      flex: 0 0 25px;
   width: 25px;
   height: 24px;
   background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_527_28179)'%3E%3Cpath d='M17.0747 12L7.07471 12' stroke='%23DE7800' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0747 17L18.0747 12L12.0747 7' stroke='%23DE7800' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_527_28179'%3E%3Crect width='24' height='24' fill='white' transform='translate(0.75)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
@@ -2138,14 +1976,12 @@ launch history styles
 }
 @media screen and (max-width: 991px) {
   .p2p-new-link {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     width: 100%;
   }
   .p2p-new-link__text {
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
+    -ms-flex-positive: 0;
+        flex-grow: 0;
   }
 }/*# sourceMappingURL=p2p-main-2.0.css.map */

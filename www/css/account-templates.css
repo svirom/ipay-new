@@ -31,70 +31,55 @@
 }
 
 .bill-card.new-template-card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
   height: 7.5rem;
   padding: 1rem;
   border: 0;
-  -webkit-box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
 }
 .bill-card.new-template-card:hover {
-  -webkit-box-shadow: 0 4px 5px rgba(23, 42, 58, 0.1);
-          box-shadow: 0 4px 5px rgba(23, 42, 58, 0.1);
+  box-shadow: 0 4px 5px rgba(23, 42, 58, 0.1);
 }
 .bill-card.new-template-card .new-template-card__row {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: 100%;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .bill-card.new-template-card .new-template-card__img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 2.625rem;
-          flex: 0 0 2.625rem;
+  -ms-flex: 0 0 2.625rem;
+      flex: 0 0 2.625rem;
   max-width: 2.625rem;
   height: 2.625rem;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   border: 2px solid #F0F5FA;
   border-radius: 0.5rem;
   background-color: #fff;
 }
 .bill-card.new-template-card .new-template-card__img img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   max-width: calc(100% - 8px);
   max-height: calc(100% - 8px);
 }
 .bill-card.new-template-card .new-template-card__content {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   padding-left: 0.5rem;
   padding-right: 2.625rem;
   font-weight: 500;
@@ -110,25 +95,19 @@
 .bill-card.new-template-card .new-template-card__payment {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   padding-top: 0.5rem;
 }
 .bill-card.new-template-card .new-template-card__payment p {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   width: auto;
   max-width: 100%;
   margin-bottom: 0;

@@ -13,8 +13,7 @@
   position: relative;
   line-height: 1.1875rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #fff;
   z-index: 2;
 }
@@ -41,27 +40,22 @@
   }
 }
 .bill-result__buttons {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 0.75rem;
   padding-bottom: 1.5rem;
 }
 .bill-result__buttons form {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   padding-left: 1rem;
 }
 .bill-result__buttons form .form-group {
@@ -83,10 +77,8 @@
 }
 @media screen and (max-width: 767px) {
   .bill-result__buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .bill-result__buttons form {
     padding-top: 1rem;
@@ -173,15 +165,12 @@
   margin-bottom: 0.5rem;
 }
 .template-add__link {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   color: #3B566E;
 }
 .template-add__plus, .template-add__success, .template-add__unsuccess {

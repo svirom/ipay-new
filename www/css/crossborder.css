@@ -81,15 +81,12 @@
   background-color: #DEE7F3;
 }
 .crossborder__transfer-row {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: baseline;
+      align-items: baseline;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
@@ -133,9 +130,8 @@
   background-color: #172A3A;
 }
 .crossborder .bank-card__header {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 .crossborder .bank-card__type {
   -ms-flex-preferred-size: 100%;
@@ -154,8 +150,7 @@
   background-image: url("/img/crossborder/visa-logo.svg");
 }
 .crossborder .form-group.has-error .form-input {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .crossborder__subtitle {
   padding-top: 0.25rem;
@@ -165,15 +160,12 @@
   margin-bottom: 0;
 }
 .crossborder__security {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 0.875rem 2.5rem 0.875rem 1.375rem;
   border-radius: 0.5rem;
   background-color: #F0F5FA;
@@ -195,15 +187,12 @@
   padding-bottom: 1.5rem;
 }
 .crossborder__amount {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .crossborder__amount span {
   color: #172A3A;
@@ -240,15 +229,12 @@
           transform: translateY(0);
 }
 .crossborder-arrow {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   width: 4.5rem;
   height: 4.5rem;
   margin-top: 9.0625rem;
@@ -314,10 +300,8 @@
     margin-bottom: 1.5rem;
   }
   .crossborder__security {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     padding: 0.5rem 0.75rem;
   }
   .crossborder__security-title {
@@ -328,12 +312,10 @@
     margin-bottom: 0.875rem;
   }
   .crossborder__security-img {
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     width: 100%;
@@ -360,8 +342,7 @@
     max-width: none;
     margin-top: 1rem;
     padding: 0.75rem 0.875rem 0;
-    -webkit-box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
-            box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
+    box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
   }
   .crossborder__card .bank-card .form-label {
     top: 1rem;
@@ -380,9 +361,8 @@
     background-size: auto 100%;
   }
   .crossborder__card .bank-card__header {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+        align-items: flex-end;
     height: 2rem;
   }
   .crossborder__card .bank-card__number {
@@ -534,22 +514,17 @@
 }
 
 .crossborder-card {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
   height: 7.75rem;
   margin-bottom: 1.75rem;
   padding: 1.125rem 1.875rem 1.25rem 1.25rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
-          box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
   background-color: #ffffff;
 }
 .crossborder-card__amount {
@@ -615,12 +590,10 @@
   margin-bottom: 3.5rem;
 }
 .crossborder-countries__country {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
   height: 2rem;
   margin-bottom: 1.25rem;
@@ -862,7 +835,6 @@
   right: 0;
   top: 0;
   background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.6665 9.71704L12.5001 15.5507' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5 15.5507L18.3336 9.71705' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
-  -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
