@@ -164,3 +164,392 @@
     background: url("data:image/svg+xml,%3Csvg width='19' height='21' viewBox='0 0 19 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.35449 4.27081H17.6462' stroke='%23E84F35' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.8543 9.06245V14.8124M9.50016 8.94745V14.8124V8.94745ZM6.146 9.06245V14.8124V9.06245Z' stroke='%23E84F35' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.8962 4.27081H7.10449V2.35415C7.10449 1.82706 7.53574 1.39581 8.06283 1.39581H10.9378C11.4649 1.39581 11.8962 1.82706 11.8962 2.35415V4.27081Z' stroke='%23E84F35' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.7293 4.27081V17.6875C15.7293 18.7416 14.8668 19.6041 13.8127 19.6041H5.18766C4.1335 19.6041 3.271 18.7416 3.271 17.6875V4.27081' stroke='%23E84F35' stroke-width='0.958333' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center no-repeat;
   }
 }
+
+// vkp cards (lviv vodokanal)
+.vkp-card {
+  border: 2px solid $middle-grey;
+  border-radius: 0.5rem;
+
+  &__header {
+    padding: 1.375rem 1.375rem 1.25rem;
+  }
+
+  &__body {
+    padding: 0.9375rem 1.375rem;
+    border-top: 1px solid $middle-grey;
+    border-bottom: 1px solid $middle-grey;
+  }
+
+  &__body-row {
+    display: flex;
+    justify-content: space-between;
+
+    & + .vkp-card__body-row {
+      margin-top: 1rem;
+    }
+
+    span {
+      font-size: 0.875rem;
+
+      &:last-child {
+        font-weight: 700;
+        color: $heading-color;
+      }
+    }
+  }
+
+  &__counters {
+    padding: 1.375rem;
+  }
+
+  &__counter {
+    & > p {
+      &:first-child {
+        margin-bottom: 1.375rem;
+      }
+    }
+
+    & + .vkp-card__counter {
+      margin-top: 1.375rem;
+    }
+  }
+
+  &__counter-data {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__data-row {
+    display: flex;
+
+    span {
+      font-size: 0.875rem;
+    }
+
+    & > span {
+      color: $heading-color;
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      &.vertical-line {
+        position: relative;
+        padding-left: 1.5rem;
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: -5px;
+          width: 0;
+          height: 28px;
+          border-left: 2px solid $middle-grey;
+
+        }
+      }
+
+      & > span {
+        padding-left: 0.5rem;
+        color: #000000;
+      }
+    }
+  }
+
+  &__summary {
+    padding: 1.375rem;
+    border-top: 1px solid $middle-grey;
+  }
+
+  @include until($md) {
+    // & + .vkp-card {
+    //   margin-top: 1.5rem;
+    // }
+  }
+}
+
+.vkp-table {
+  &__row {
+    display: flex;
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 0.875rem;
+
+      &:last-child {
+        margin-left: 0.75rem;
+        font-weight: 700;
+        color: $heading-color;
+      }
+    }
+  }
+
+  @include until($md) {
+    &__row {
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+
+      span {  
+        &:last-child {
+          margin-left: 0;
+          margin-top: 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+.vkp-pay {
+  margin-top: 2rem;
+  padding: 1.375rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+
+  & > .row {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    [class^=col] {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  .vkp-pay__back {
+    background-color: $light-grey;
+
+    svg {
+      margin-top: -4px;
+      stroke: $heading-color;
+    }
+
+    span {
+      padding-right: 4px;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+    }
+
+    &:active {
+      background-color: $heading-color;
+
+      svg {
+        stroke: #ffffff;
+      }
+    }
+  }
+
+  .vkp-pay__submit {
+    width: 300px;
+
+    &[disabled] {
+      span {
+        color: $main-blue;
+      }
+    }
+  }
+
+  @include until($md) {
+    margin-top: 1.5rem;
+
+    .vkp-pay__submit {
+      width: 100%;
+    }
+  }
+}
+
+// lviv energo
+.energo-card {
+  border: 2px solid $middle-grey;
+  border-radius: 0.5rem;
+
+  &__header {
+    padding: 1.375rem 1.375rem 1.25rem;
+  }
+
+  &__body {
+    padding: 0.9375rem 1.375rem;
+    border-top: 1px solid $middle-grey;
+    border-bottom: 1px solid $middle-grey;
+  }
+
+  &__body-row {
+    display: flex;
+    justify-content: space-between;
+
+    & + .energo-card__body-row {
+      margin-top: 1rem;
+    }
+
+    span {
+      font-size: 0.875rem;
+
+      &:last-child {
+        font-weight: 700;
+        color: $heading-color;
+      }
+    }
+  }
+
+  &__counters {
+    padding: 1.375rem 1.375rem 0;
+
+    & > p {
+      margin-bottom: 1.3125rem;
+    }
+  }
+
+  &__counter {
+    border-bottom: 1px solid $middle-grey;
+
+    & + .energo-card__counter {
+      .energo-card__counter-title {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .energo-card__counter-title {
+    margin-bottom: 1.3125rem;
+    font-weight: 700;
+    color: $btn-red;
+  }
+
+  &__counter-data {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.3125rem;
+  }
+
+  &__data-row {
+    display: flex;
+
+    &:not(:last-of-type) {
+      margin-right: 1.5rem;
+    }
+
+    span {
+      font-size: 0.875rem;
+    }
+
+    & > span {
+      color: $heading-color;
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      &.vertical-line {
+        position: relative;
+        padding-left: 1.5rem;
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: -5px;
+          width: 0;
+          height: 28px;
+          border-left: 2px solid $middle-grey;
+
+        }
+      }
+
+      & > span {
+        padding-left: 0.5rem;
+        color: #000000;
+      }
+    }
+  }
+
+  &__summary {
+    padding: 1rem 1.375rem;
+  }
+
+  &--additional {
+    margin-top: 2rem;
+    padding: 1.25rem 1.375rem;
+
+    .checkbox-control {
+      padding-left: 0;
+    }
+
+    .checkbox-label {
+      padding-left: 2.5rem;
+      line-height: 1.5;
+      font-weight: 700;
+      color: $heading-color;
+
+      &::before, &::after {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        background-size: 14px;
+      }
+    }
+  }
+
+  @include until($xl) {
+    &__data-row {
+      flex-grow: 1;
+      
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+
+      & > span {  
+        &.vertical-line {
+          padding-left: 0;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    &__counters {
+      & > p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__counter-data {
+      margin-bottom: 1rem;
+    }
+
+    .energo-card__counter-title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include until($sm) {
+    &__data-row {
+      flex-direction: column;
+      flex: 0 1 50%;
+      max-width: 50%;
+
+      &:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-right: 1rem;
+      }
+
+      & > span {
+        & + span {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
