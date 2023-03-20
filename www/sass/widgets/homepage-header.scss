@@ -19,33 +19,25 @@
 }
 
 .homepage-form-search {
-  // .form-search__search {
-  //   position: relative;
-  //   display: block;
-  //   width: 100%;
-  //   left: auto;
-  //   padding: 1.563rem 3.75rem;
-  //   font-size: 1.125rem;
-  //   line-height: 1.25;
-  //   color: $heading-color;
-  //   border-radius: $border-radius;
-  //   box-shadow: 0 4px 20px $card-shadow;
-  //   background-color: #ffffff;
-  //   background-position: left 1rem center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
-  //   &:hover {
-  //     text-decoration: none;
-  //     background-color: $light-grey;
-  //   }
-  // }
+  .form-search {
+    .form-input {
+      &.input-search {
+        border-color: $middle-grey;
 
-  // @include until($lg) {
-  //   .form-search__search {
-  //     padding: 1.063rem 1rem 1.063rem 2.75rem;
-  //     font-size: 1rem;
-  //     background-position: left 0.75rem center;
-  //   }
-  // }
+        &:focus, &.filled {
+          border-color: $middle-grey;
+        }
+      }
+    }
+  }
+  
+  @include until($sm) {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .homepage-services {

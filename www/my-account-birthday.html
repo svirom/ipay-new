@@ -391,93 +391,131 @@
 
                   <div class="row">
                     <div class="col-md-6 col-xl-4 mb-4">
-                      <a href="#" class="template-add__button"><span>+</span> Новый шаблон</a>
+                      <a href="#" class="template-add__button template-add__button--new"><span>+</span> Новый шаблон</a>
                     </div>
                     <div class="col-md-6 col-xl-4 mb-4">
                       <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/yasno.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата электроэнергии Yasno</span>
-                            <span class="template-card__amount">100.00 грн</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
+                        <a href="#" class="bill-card new-template-card">
+                          <div class="new-template-card__row">
+                            <span class="new-template-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="new-template-card__content">Nashnet</span>
                           </div>
-                        </div>
+                          <div class="new-template-card__payment">
+                            <p><span>Сумма: </span><span>100.00 грн.</span></p>
+                            <p><span>Остання оплата:</span> <span>12.05.2021</span></p>
+                          </div>
+                          <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+                          <div class="dropdown-menu">
+                            <form id="edit-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                            </form>                            
+                            <form id="delete-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Видалити</button>
+                            </form>                        
+                          </div>
+                        </a>
                       </div>
                     </div>
                     <div class="col-md-6 col-xl-4 mb-4">
                       <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/kyivgas.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата за газ</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
+                        <a href="#" class="bill-card new-template-card">
+                          <div class="new-template-card__row">
+                            <span class="new-template-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="new-template-card__content">Nashnet</span>
                           </div>
-                        </div>
+                          <div class="new-template-card__payment">
+                            <p><span>Сумма: </span><span>100.00 грн.</span></p>
+                            <p><span>Остання оплата:</span> <span class="template-date-recent">12.05.2021</span></p>
+                          </div>
+                          <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+                          <div class="dropdown-menu">
+                            <form id="edit-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                            </form>                            
+                            <form id="delete-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Видалити</button>
+                            </form>                        
+                          </div>
+                        </a>
                       </div>
                     </div>
                     <div class="col-md-6 col-xl-4 mb-4">
                       <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/kyivgasenergy.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата за воду</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate3">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
+                        <a href="#" class="bill-card new-template-card">
+                          <div class="new-template-card__row">
+                            <span class="new-template-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="new-template-card__content">Nashnet</span>
                           </div>
-                        </div>
+                          <div class="new-template-card__payment">
+                            <p><span>Сумма: </span><span>100.00 грн.</span></p>
+                            <p><span>Остання оплата:</span> <span class="template-date-old">12.05.2021</span></p>
+                          </div>
+                          <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+                          <div class="dropdown-menu">
+                            <form id="edit-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                            </form>                            
+                            <form id="delete-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Видалити</button>
+                            </form>                        
+                          </div>
+                        </a>
                       </div>
                     </div>
                     <div class="col-md-6 col-xl-4 mb-4">
                       <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/yasno.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата детсад малому</span>
-                            <span class="template-card__amount">100.00 грн</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate1">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
+                        <a href="#" class="bill-card new-template-card">
+                          <div class="new-template-card__row">
+                            <span class="new-template-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="new-template-card__content">Nashnet</span>
                           </div>
-                        </div>
+                          <div class="new-template-card__payment">
+                            <p><span>Сумма: </span><span>100.00 грн.</span></p>
+                            <p><span>Остання оплата:</span> <span class="template-date-old">12.05.2021</span></p>
+                          </div>
+                          <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+                          <div class="dropdown-menu">
+                            <form id="edit-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                            </form>                            
+                            <form id="delete-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Видалити</button>
+                            </form>                        
+                          </div>
+                        </a>
                       </div>
                     </div>
                     <div class="col-md-6 col-xl-4 mb-4">
                       <div class="template-card-wrapper dropdown">
-                        <div class="bill-card template-card">
-                          <span class="bill-card__img">
-                            <img src="img/providers/kyivgas.png" alt="">
-                          </span>
-                          <span class="bill-card__content">
-                            <span class="template-card__text">Оплата за газ</span>
-                          </span>
-                          <a href="#" class="template-card__button" id="dropdownTemplate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownTemplate2">
-                            <a href="#" class="dropdown-item">Редактировать</a>
-                            <a href="#" class="dropdown-item">Удалить</a>
+                        <a href="#" class="bill-card new-template-card">
+                          <div class="new-template-card__row">
+                            <span class="new-template-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+                            <span class="new-template-card__content">Nashnet</span>
                           </div>
-                        </div>
+                          <div class="new-template-card__payment">
+                            <p><span>Сумма: </span><span>100.00 грн.</span></p>
+                            <p><span>Остання оплата:</span> <span class="template-date-old">12.05.2021</span></p>
+                          </div>
+                          <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+                          <div class="dropdown-menu">
+                            <form id="edit-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                            </form>                            
+                            <form id="delete-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item">Видалити</button>
+                            </form>                        
+                          </div>
+                        </a>
                       </div>
                     </div>
                     <div class="col-12 d-md-none">
