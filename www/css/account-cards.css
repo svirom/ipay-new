@@ -20,7 +20,7 @@
   -ms-flex-pack: justify;
       justify-content: space-between;
   max-width: 22.5rem;
-  height: 163px;
+  height: 10.1875rem;
   padding: 1.5rem;
   font-family: "Roboto", sans-serif;
   border-radius: 1.25rem;
@@ -54,6 +54,9 @@
   margin-right: 0.5rem;
   background-position: left center;
 }
+.account-card .account-card__bank {
+  background-size: contain;
+}
 .account-card__type {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -72,6 +75,8 @@
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-align: end;
+      align-items: flex-end;
 }
 .account-card__purpose {
   margin-bottom: 0.25rem;
@@ -89,12 +94,64 @@
   border: 1px solid #F0F5FA;
   border-radius: 0.375rem;
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='18' viewBox='0 0 6 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3.00003' cy='2.57132' r='2.14286' fill='%237C9CAC'/%3E%3Ccircle cx='3.00003' cy='9.00003' r='2.14286' fill='%237C9CAC'/%3E%3Ccircle cx='3.00003' cy='15.4285' r='2.14286' fill='%237C9CAC'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='4.28' height='16.84' viewBox='0 0 4.28 16.84' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2.14' cy='2.14' r='2.14' fill='%237C9CAC'/%3E%3Ccircle cx='2.14' cy='8.42' r='2.14' fill='%237C9CAC'/%3E%3Ccircle cx='2.14' cy='14.7' r='2.14' fill='%237C9CAC'/%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
   transition: background-color 0.3s ease;
 }
 .account-card .account-card__edit:hover {
   background-color: #F0F5FA;
+}
+.account-card .account-card__main-label {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: auto;
+  margin-bottom: 0.25rem;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  color: #DE7800;
+  border-radius: 0.5rem;
+  background-color: #FEF7E0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.account-card .dropdown-menu {
+  width: 100%;
+  margin-top: 10.4375rem;
+  left: 0;
+  right: 0;
+  -webkit-transform: none !important;
+          transform: none !important;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+}
+.account-card .dropdown-item {
+  padding: 0.75rem 0.5rem 0.75rem 2.5rem;
+  color: #172A3A;
+  border-radius: 0.5rem;
+  background-repeat: no-repeat;
+}
+.account-card .dropdown-item:hover, .account-card .dropdown-item:active {
+  background-color: #F0F5FA;
+}
+.account-card .dropdown-item.dropdown-card-edit {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0.661012L12.456 5.80802L12.9073 5.59269L12.456 5.80802C12.6018 6.11353 12.8923 6.32455 13.2279 6.36878L18.8819 7.11409L14.7458 11.0404C14.5003 11.2735 14.3893 11.6149 14.451 11.9478L15.4893 17.5554L10.477 14.835C10.1795 14.6735 9.8205 14.6735 9.52298 14.835L4.51068 17.5554L5.54905 11.9478C5.61068 11.6149 5.49974 11.2735 5.25423 11.0404L1.11809 7.11409L6.77214 6.36878C7.10775 6.32455 7.39819 6.11353 7.54397 5.80802L10 0.661012Z' stroke='%23172A3A'/%3E%3C/svg%3E");
+  background-position: left 0.5rem center;
+}
+.account-card .dropdown-item.dropdown-card-edit.default {
+  color: #DE7800;
+  background-color: #FEF7E0;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0.661012L12.456 5.80802L12.9073 5.59269L12.456 5.80802C12.6018 6.11353 12.8923 6.32455 13.2279 6.36878L18.8819 7.11409L14.7458 11.0404C14.5003 11.2735 14.3893 11.6149 14.451 11.9478L15.4893 17.5554L10.477 14.835C10.1795 14.6735 9.8205 14.6735 9.52298 14.835L4.51068 17.5554L5.54905 11.9478C5.61068 11.6149 5.49974 11.2735 5.25423 11.0404L1.11809 7.11409L6.77214 6.36878C7.10775 6.32455 7.39819 6.11353 7.54397 5.80802L10 0.661012Z' stroke='%23DE7800'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.account-card .dropdown-item.dropdown-card-delete {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 3.5H17.5' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5 8.49988V14.4999M9 8.37988V14.4999V8.37988ZM5.5 8.49988V14.4999V8.49988Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.5 3.5H6.5V1.5C6.5 0.95 6.95 0.5 7.5 0.5H10.5C11.05 0.5 11.5 0.95 11.5 1.5V3.5Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.5 3.5V17.5C15.5 18.6 14.6 19.5 13.5 19.5H4.5C3.4 19.5 2.5 18.6 2.5 17.5V3.5' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: left 0.5625rem center;
 }
 
 .card-add__button {
@@ -104,7 +161,7 @@
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  height: 8.125rem;
+  height: 10.1875rem;
   max-width: 22.5rem;
   border: 2px dashed #DEE7F3;
   border-radius: 1.25rem;
@@ -134,5 +191,49 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-radius: 0.5rem;
+  }
+}
+
+.modal-cards .modal-content {
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 20px rgba(97, 144, 183, 0.35);
+}
+.modal-cards .modal-header {
+  padding: 1.5rem 2.5rem 0.75rem 1.5rem;
+  border-bottom: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.modal-cards .modal-header .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0.625rem 0.8125rem;
+  border-top-right-radius: 0.5rem;
+  opacity: 1;
+}
+.modal-cards .modal-body {
+  padding: 0rem 1.5rem 1.5rem;
+}
+.modal-cards .btn-cards-cancel {
+  width: 140px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.modal-cards .modal-cardAlias, .modal-cards .modal-cardMask {
+  color: #172A3A;
+  font-weight: 700;
+}
+@media screen and (min-width: 576px) {
+  .modal-cards .modal-dialog {
+    max-width: 398px;
+    margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .modal-cards .btn-cards-cancel {
+    width: 100%;
   }
 }/*# sourceMappingURL=account-cards.css.map */

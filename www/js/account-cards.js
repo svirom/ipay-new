@@ -24,7 +24,14 @@ $(document).ready(function() {
       }
     }
 
-
+    $('#modalCardDefault [type="submit"]').on('click', function(e) {
+      e.preventDefault();
+      $('#modalCardDefault').modal('hide');
+      
+      setTimeout(function() {
+        $('#modalCardDefaultSuccess').modal('show');
+      }, 350);
+    })
 
   })
 

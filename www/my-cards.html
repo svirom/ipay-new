@@ -323,7 +323,7 @@
                         <div class="row">
 
                           <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="account-card">
+                            <div class="account-card dropdown">
                               <div class="account-card__header">
                                 <div class="account-card__bank">
                                   <img src="img/banks/otp.png" alt="">
@@ -332,108 +332,23 @@
                                   <img src="img/banks/mastercard.png" alt="">
                                 </div>
                               </div>
+                              <span class="account-card__main-label">Основная</span>
                               <div class="account-card__body">
                                 <div class="account-card__number">
                                   <div class="account-card__purpose">Зарплатная</div>
                                   <div class="account-card__card">5168 **** **** **06</div>
                                 </div>
-                                <!-- <div class="account-card__delete">
-                                  <a href="#" class="account-card__delete-button"></a>
-                                </div> -->
-                                <a href="#" class="account-card__edit" role="button" id="dropdown-manage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <!-- <span></span> -->
-                                </a>
-                              </div>
-
-
-
-                              <!-- Modal desktop -->
-                              <!-- <div class="account-card__confirm">
-                                <h4>Удалить карту?</h4>
-                                <a href="#" class="account-card__confirm-cancel"></a>
-                                <div class="account-card__confirm-purpose">Зарплатная</div>
-                                <div class="account-card__confirm-card">5168 **** **** **06</div>
-                                <div class="account-card__confirm-delete">
-                                  <a href="#" class="btn account-card__confirm-btn">Да, удалить</a>
-                                </div>
-                              </div> -->
-                              <!-- Modal desktop -->
-                              <!-- Modal mobile -->
-                              <!-- <div class="account-card__mobile">
-                                <div class="account-card__mobile-wrapper">
-                                  <div class="account-card__mobile-title">
-                                    <h4>Удалить карту</h4>
-                                  </div>
-                                  <div class="account-card__mobile-text">
-                                    <span>Вы уверены что хотите удалить карту</span> 
-                                    <span>“Зарплатная”?</span></div>
-                                  <div class="account-card__mobile-delete">
-                                    <a href="#" class="btn account-card__mobile-btn">Удалить</a>
-                                    <a href="#" class="btn account-card__mobile-cancel">Отмена</a>
-                                  </div>
-                                </div>
-                              </div> -->
-                              <!-- mobile -->
-                            </div>
-
-                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdown-manage">
-                              <a class="dropdown-item dropdown-card-edit" href="#" role="button" data-toggle="modal" data-target="#collectionEdit">Редактировать страницу</a>
-                              <a class="dropdown-item dropdown-card-delete" href="#" role="button" data-toggle="modal" data-target="#collectionDelete">Удалить сбор</a>
-                            </div>
-
-
-
-                          </div>
-
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="account-card">
-                              <div class="account-card__header">
-                                <div class="account-card__bank">
-                                  <img src="img/banks/otp.png" alt="">
-                                </div>
-                                <div class="account-card__type">
-                                  <img src="img/banks/mastercard.png" alt="">
+                                <a href="#" class="account-card__edit" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item dropdown-card-edit default" href="#" role="button" data-toggle="modal" data-target="#modalCardDefault">Это основная карта</a>
+                                  <a class="dropdown-item dropdown-card-delete" href="#" role="button" data-toggle="modal" data-target="#modalCardDelete">Удалить карту</a>
                                 </div>
                               </div>
-                              <div class="account-card__body">
-                                <div class="account-card__number">
-                                  <div class="account-card__purpose">Зарплатная</div>
-                                  <div class="account-card__card">5168 **** **** **06</div>
-                                </div>
-                                <div class="account-card__delete">
-                                  <a href="#" class="account-card__delete-button"></a>
-                                </div>
-                              </div>
-                              <!-- Modal desktop -->
-                              <div class="account-card__confirm">
-                                <h4>Удалить карту?</h4>
-                                <a href="#" class="account-card__confirm-cancel"></a>
-                                <div class="account-card__confirm-purpose">Зарплатная</div>
-                                <div class="account-card__confirm-card">5168 **** **** **06</div>
-                                <div class="account-card__confirm-delete">
-                                  <a href="#" class="btn account-card__confirm-btn">Да, удалить</a>
-                                </div>
-                              </div><!-- Modal desktop -->
-                              <!-- Modal mobile -->
-                              <div class="account-card__mobile">
-                                <div class="account-card__mobile-wrapper">
-                                  <div class="account-card__mobile-title">
-                                    <h4>Удалить карту</h4>
-                                  </div>
-                                  <div class="account-card__mobile-text">
-                                    <span>Вы уверены что хотите удалить карту</span> 
-                                    <span>“Зарплатная”?</span></div>
-                                  <div class="account-card__mobile-delete">
-                                    <a href="#" class="btn account-card__mobile-btn">Удалить</a>
-                                    <a href="#" class="btn account-card__mobile-cancel">Отмена</a>
-                                  </div>
-                                </div>
-                              </div><!-- mobile -->
                             </div>
                           </div>
 
                           <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="account-card">
+                            <div class="account-card dropdown">
                               <div class="account-card__header">
                                 <div class="account-card__bank">
                                   <img src="img/banks/otp.png" alt="">
@@ -442,40 +357,43 @@
                                   <img src="img/banks/mastercard.png" alt="">
                                 </div>
                               </div>
+                              <!-- <span class="account-card__main-label">Основная</span> -->
                               <div class="account-card__body">
                                 <div class="account-card__number">
                                   <div class="account-card__purpose">Зарплатная</div>
                                   <div class="account-card__card">5168 **** **** **06</div>
                                 </div>
-                                <div class="account-card__delete">
-                                  <a href="#" class="account-card__delete-button"></a>
+                                <a href="#" class="account-card__edit" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item dropdown-card-edit" href="#" role="button" data-toggle="modal" data-target="#modalCardDefault">Установить как основную</a>
+                                  <a class="dropdown-item dropdown-card-delete" href="#" role="button" data-toggle="modal" data-target="#modalCardDelete">Удалить карту</a>
                                 </div>
                               </div>
-                              <!-- Modal desktop -->
-                              <div class="account-card__confirm">
-                                <h4>Удалить карту?</h4>
-                                <a href="#" class="account-card__confirm-cancel"></a>
-                                <div class="account-card__confirm-purpose">Зарплатная</div>
-                                <div class="account-card__confirm-card">5168 **** **** **06</div>
-                                <div class="account-card__confirm-delete">
-                                  <a href="#" class="btn account-card__confirm-btn">Да, удалить</a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-xl-4 mb-4">
+                            <div class="account-card dropdown">
+                              <div class="account-card__header">
+                                <div class="account-card__bank">
+                                  <img src="img/banks/otp.png" alt="">
                                 </div>
-                              </div><!-- Modal desktop -->
-                              <!-- Modal mobile -->
-                              <div class="account-card__mobile">
-                                <div class="account-card__mobile-wrapper">
-                                  <div class="account-card__mobile-title">
-                                    <h4>Удалить карту</h4>
-                                  </div>
-                                  <div class="account-card__mobile-text">
-                                    <span>Вы уверены что хотите удалить карту</span> 
-                                    <span>“Зарплатная”?</span></div>
-                                  <div class="account-card__mobile-delete">
-                                    <a href="#" class="btn account-card__mobile-btn">Удалить</a>
-                                    <a href="#" class="btn account-card__mobile-cancel">Отмена</a>
-                                  </div>
+                                <div class="account-card__type">
+                                  <img src="img/banks/mastercard.png" alt="">
                                 </div>
-                              </div><!-- mobile -->
+                              </div>
+                              <!-- <span class="account-card__main-label">Основная</span> -->
+                              <div class="account-card__body">
+                                <div class="account-card__number">
+                                  <div class="account-card__purpose">Зарплатная</div>
+                                  <div class="account-card__card">5168 **** **** **06</div>
+                                </div>
+                                <a href="#" class="account-card__edit" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item dropdown-card-edit" href="#" role="button" data-toggle="modal" data-target="#modalCardDefault">Установить как основную</a>
+                                  <a class="dropdown-item dropdown-card-delete" href="#" role="button" data-toggle="modal" data-target="#modalCardDelete">Удалить карту</a>
+                                </div>
+                              </div>
                             </div>
                           </div>
 
@@ -486,6 +404,99 @@
                           </div>
 
                         </div>
+
+                        <!-- modal card delete -->
+                        <div class="modal fade modal-cards modal-cards-delete" id="modalCardDelete" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="modal-body">
+                                <p class="text-center heading-color">Вы уверены что хотите удалить карту<br><span class="modal-cardAlias">Зарплатная</span> <span class="modal-cardMask">5168 **** **45 5678</span>?</p>
+                                <form action="">
+                                  <input type="hidden">
+                                  <div class="row col-pad8 mt-4 pt-sm-2">
+                                    <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                                      <a href="#" class="btn btn-outline btn-block btn-cards-cancel" data-dismiss="modal">Скасувати</a>
+                                    </div>
+                                    <div class="col">
+                                      <button type="submit" class="btn btn-red btn-block">Так, видалити</button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div><!-- modal card delete -->
+
+                        <!-- modal card default -->
+                        <div class="modal fade modal-cards modal-cards-delete" id="modalCardDefault" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="modal-body">
+                                <p class="text-center heading-color">Установить карту<br><span class="modal-cardAlias">Зарплатная</span> <span class="modal-cardMask">5168 **** **45 5678</span> как основную?</p>
+                                <form action="">
+                                  <input type="hidden">
+                                  <div class="row col-pad8 mt-4 pt-sm-2">
+                                    <div class="col-12 col-sm-auto mb-3 mb-sm-0">
+                                      <a href="#" class="btn btn-outline btn-block btn-cards-cancel" data-dismiss="modal">Отмена</a>
+                                    </div>
+                                    <div class="col">
+                                      <button type="submit" class="btn btn-green btn-block">Установить</button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div><!-- modal card default -->
+
+                        <!-- modal card default success -->
+                        <div class="modal fade modal-cards modal-cards-delete" id="modalCardDefaultSuccess" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="modal-body">
+                                <p class="text-center heading-color">Карта<br><strong>“Зарплатная 5168 **** **45 5678”</strong> установлена как основная</p>
+                                <div class="row">
+                                  <div class="col">
+                                    <button type="button" data-dismiss="modal" class="btn btn-green btn-block">Закрыть</button>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div><!-- modal card default success -->
       
                       </div><!-- account cards widget -->
                     </div>
