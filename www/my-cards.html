@@ -337,12 +337,18 @@
                                   <div class="account-card__purpose">Зарплатная</div>
                                   <div class="account-card__card">5168 **** **** **06</div>
                                 </div>
-                                <div class="account-card__delete">
+                                <!-- <div class="account-card__delete">
                                   <a href="#" class="account-card__delete-button"></a>
-                                </div>
+                                </div> -->
+                                <a href="#" class="account-card__edit" role="button" id="dropdown-manage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <!-- <span></span> -->
+                                </a>
                               </div>
+
+
+
                               <!-- Modal desktop -->
-                              <div class="account-card__confirm">
+                              <!-- <div class="account-card__confirm">
                                 <h4>Удалить карту?</h4>
                                 <a href="#" class="account-card__confirm-cancel"></a>
                                 <div class="account-card__confirm-purpose">Зарплатная</div>
@@ -350,9 +356,10 @@
                                 <div class="account-card__confirm-delete">
                                   <a href="#" class="btn account-card__confirm-btn">Да, удалить</a>
                                 </div>
-                              </div><!-- Modal desktop -->
+                              </div> -->
+                              <!-- Modal desktop -->
                               <!-- Modal mobile -->
-                              <div class="account-card__mobile">
+                              <!-- <div class="account-card__mobile">
                                 <div class="account-card__mobile-wrapper">
                                   <div class="account-card__mobile-title">
                                     <h4>Удалить карту</h4>
@@ -365,8 +372,17 @@
                                     <a href="#" class="btn account-card__mobile-cancel">Отмена</a>
                                   </div>
                                 </div>
-                              </div><!-- mobile -->
+                              </div> -->
+                              <!-- mobile -->
                             </div>
+
+                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdown-manage">
+                              <a class="dropdown-item dropdown-card-edit" href="#" role="button" data-toggle="modal" data-target="#collectionEdit">Редактировать страницу</a>
+                              <a class="dropdown-item dropdown-card-delete" href="#" role="button" data-toggle="modal" data-target="#collectionDelete">Удалить сбор</a>
+                            </div>
+
+
+
                           </div>
 
                           <div class="col-md-6 col-xl-4 mb-4">
