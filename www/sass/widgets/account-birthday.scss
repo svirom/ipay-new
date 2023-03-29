@@ -18,35 +18,103 @@
     position: absolute;
     top: 0;
     right: 0;
-    max-height: 100%;
+    height: 100%;
     max-width: 100%;
   }
 
   &__content {
     position: relative;
-    padding: 2.75rem;
+    padding: 1.75rem 2.75rem 2rem 2.75rem;
 
     p {
       color: #ffffff;
 
       &.account-birthday__title {
+        margin-bottom: 0.5rem;
         font-family: $heading-font;
         font-size: 1.75rem;
         font-weight: 700;
       }
 
-      &.account-birthday__greeting {
-        max-width: 530px;
-        margin-bottom: 2.75rem;
-        font-size: 1.25rem;
-        font-style: italic;
-      }
-
       &.account-birthday__date {
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
         padding-left: 1.625rem;
         font-weight: 500;
         background: url("../img/account/birthday/birthday-date.svg") left top -1px no-repeat;
+      }
+    }
+
+    .account-birthday__greeting {
+      max-width: 530px;
+      margin-bottom: 1.5rem;
+
+      p {
+        font-style: italic;
+      }
+    }
+  }
+
+  &__promo {
+    display: flex;
+    align-items: center;
+
+    .account-birthday__click {
+      position: relative;
+      margin-bottom: 0;
+      padding-left: 1.0625rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+
+      &::after {
+        position: absolute;
+        content: url("../img/account/birthday/birthday-arrow.svg");
+        bottom: calc(-100% - 2px);
+        left: 0.625rem;
+      }
+    }
+  }
+
+  &__code {
+    position: relative;
+    flex: 1 1 auto;
+    max-width: 280px;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    .account-birthday__code-main {
+      display: block;
+      height: 56px;
+      padding: 18px 45px;
+      font-size: 15px;
+      line-height: 1.2;
+      color: $heading-color;
+      border: 3px solid $middle-grey;
+      border-radius: 0.5rem;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5 10.5V20.5C20.5 21.6 19.6 22.5 18.5 22.5H10.5C9.4 22.5 8.5 21.6 8.5 20.5V7.5C8.5 6.4 9.4 5.5 10.5 5.5H15.5L20.5 10.5Z' stroke='%2394ADBB' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.5 3.5C15.5 2.4 14.6 1.5 13.5 1.5H6.5C5.4 1.5 4.5 2.4 4.5 3.5V16.5C4.5 17.6 5.4 18.5 6.5 18.5' stroke='%2394ADBB' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.5 10.5H16.5C15.95 10.5 15.5 10.05 15.5 9.5V5.5' stroke='%2394ADBB' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: left 13px center;
+      background-repeat: no-repeat;
+      transition: background-color 0.3s ease-in-out;
+
+      &.copied {
+        background-color: $main-blue;
+      }
+    }
+
+    .account-birthday__code-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      pointer-events: none;
+      transition: opacity 3s ease;
+
+      &.opened {
+        opacity: 0;
       }
     }
   }
@@ -63,10 +131,8 @@
 
   @include until($xl) {
     &__content {
-      p {
-        &.account-birthday__greeting {
-          max-width: 480px;
-        }
+      .account-birthday__greeting {
+        max-width: 480px;
       }
     }
   }
@@ -85,12 +151,6 @@
           font-size: 1rem;
         }
   
-        &.account-birthday__greeting {
-          max-width: 400px;
-          margin-bottom: 1.875rem;
-          font-size: 0.875rem;
-        }
-  
         &.account-birthday__date {
           padding-left: 1.5rem;
           font-size: 0.875rem;
@@ -98,20 +158,38 @@
           background-size: 18px;
         }
       }
+
+      .account-birthday__greeting {
+        padding-right: 2.625rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    &__promo {
+      flex-wrap: wrap;
+
+      .account-birthday__click {
+        flex: 100%;
+        padding-left: 0;
+        text-align: center;
+        font-size: 0.875rem;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__code {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1rem;
     }
 
     &__img {
-      bottom: 5px;
-    }
-  }
-
-  @include until($sm) {
-    &__content {
-      p {
-        &.account-birthday__greeting {
-          max-width: 244px;
-        }
-      }
+      width: 84px;
+      top: 27px;
+      right: -24px;
     }
   }
 }
