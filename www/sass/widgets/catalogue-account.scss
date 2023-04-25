@@ -63,6 +63,13 @@
         &:not(.badge) {
           color: $light-grey;
         }
+
+        &.badge {  
+          &.badge-new {
+            color: $btn-red;
+            background-color: #ffffff;
+          }
+        }
       }
     }
 
@@ -78,12 +85,19 @@
 
       &.badge {
         position: absolute;
-        right: 1rem;
+        right: 0.5rem;
         top: 50%;
         @include transform(translateY(-50%));
         font-size: 0.75rem;
 
-        &~span {
+        &.badge-new {
+          padding: 0.25rem;
+          text-transform: capitalize;
+          color: #ffffff;
+          background-color: $btn-red;
+        }
+
+        & ~ span {
           padding-right: 3rem;
         }
       }
@@ -238,6 +252,20 @@
     &:active, &.active, &--red {
       &::before {
         background-position: -124px -25px;
+      }
+    }
+  }
+
+  &__recurrent {
+    &::before {
+      width: 24px;
+			height: 24px;
+      background-position: -150px 0px;
+    }
+
+    &:active, &.active, &--red {
+      &::before {
+        background-position: -150px -26px;
       }
     }
   }

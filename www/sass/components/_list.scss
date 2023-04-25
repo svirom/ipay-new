@@ -39,7 +39,7 @@
     }
 
     &.list--grey {
-      li{
+      li {
         &::before {
           background-color: $text-color;
         }
@@ -70,6 +70,15 @@
       top: 0;
       color: $btn-red;
       font-weight: bold;
+    }
+  }
+
+  &.list--grey {
+    li {
+      &::before {
+        color: $text-color;
+        font-weight: 400;
+      }
     }
   }
 }

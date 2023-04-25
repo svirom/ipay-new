@@ -1,0 +1,205 @@
+.account-recurrent .alert.alert-secondary p, .account-recurrent .alert.alert-secondary span, .account-recurrent .alert.alert-secondary a {
+  line-height: 1.17;
+}
+.account-recurrent .alert.alert-secondary .heading-color {
+  color: #172A3A;
+}
+
+.recurrent-card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 4.625rem;
+  margin-bottom: 1rem;
+  padding: 1rem 5rem 1rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 15.5C12.1421 15.5 15.5 12.1421 15.5 8C15.5 3.85786 12.1421 0.5 8 0.5C3.85786 0.5 0.5 3.85786 0.5 8C0.5 12.1421 3.85786 15.5 8 15.5Z' stroke='%230C6858' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.59131 11.4091L8.0004 8.68182V4.25' stroke='%230C6858' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right 3.5rem top 29px;
+  background-repeat: no-repeat;
+}
+.recurrent-card__img {
+  -ms-flex: 0 0 2.625rem;
+      flex: 0 0 2.625rem;
+  max-width: 2.625rem;
+  height: 2.625rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  border: 2px solid #F0F5FA;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+.recurrent-card__img img {
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+  max-width: calc(100% - 8px);
+  max-height: calc(100% - 8px);
+}
+.recurrent-card__title {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 500;
+  color: #172A3A;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+}
+.recurrent-card__payment {
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+  margin-right: 3.75rem;
+}
+.recurrent-card__payment span {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.172;
+}
+.recurrent-card__payment span:first-child {
+  margin-bottom: 0.25rem;
+}
+.recurrent-card__payment span:last-child {
+  color: #172A3A;
+}
+.recurrent-card .recurrent-card__button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: absolute;
+  top: 1.4375rem;
+  right: 1rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0;
+  border-radius: 0.25rem;
+  outline: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='5' height='16' viewBox='0 0 5 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.97168 12C3.50211 12 4.01082 12.2107 4.38589 12.5858C4.76097 12.9609 4.97168 13.4696 4.97168 14C4.97168 14.5304 4.76097 15.0391 4.38589 15.4142C4.01082 15.7893 3.50211 16 2.97168 16C2.44125 16 1.93254 15.7893 1.55747 15.4142C1.18239 15.0391 0.97168 14.5304 0.97168 14C0.97168 13.4696 1.18239 12.9609 1.55747 12.5858C1.93254 12.2107 2.44125 12 2.97168 12ZM2.97168 6C3.50211 6 4.01082 6.21071 4.38589 6.58579C4.76097 6.96086 4.97168 7.46957 4.97168 8C4.97168 8.53043 4.76097 9.03914 4.38589 9.41421C4.01082 9.78929 3.50211 10 2.97168 10C2.44125 10 1.93254 9.78929 1.55747 9.41421C1.18239 9.03914 0.97168 8.53043 0.97168 8C0.97168 7.46957 1.18239 6.96086 1.55747 6.58579C1.93254 6.21071 2.44125 6 2.97168 6ZM2.97168 0C3.50211 0 4.01082 0.210714 4.38589 0.585786C4.76097 0.960859 4.97168 1.46957 4.97168 2C4.97168 2.53043 4.76097 3.03914 4.38589 3.41421C4.01082 3.78929 3.50211 4 2.97168 4C2.44125 4 1.93254 3.78929 1.55747 3.41421C1.18239 3.03914 0.97168 2.53043 0.97168 2C0.97168 1.46957 1.18239 0.960859 1.55747 0.585786C1.93254 0.210714 2.44125 0 2.97168 0Z' fill='%237C9CAC'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.recurrent-card .recurrent-card__button:hover {
+  background-color: #F0F5FA;
+}
+.recurrent-card .dropdown-menu {
+  width: 300px;
+  margin-top: 4.875rem;
+  right: 0;
+  left: auto !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  padding: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.1);
+}
+.recurrent-card .dropdown-menu .dropdown-item {
+  position: relative;
+  padding: 0.8125rem 1rem 0.75rem 3.5rem;
+  color: #3B566E;
+}
+.recurrent-card .dropdown-menu .dropdown-item:hover {
+  text-decoration: underline;
+  background-color: #fff;
+}
+.recurrent-card .dropdown-menu .dropdown-item:active {
+  color: #3B566E;
+  background-color: #fff;
+}
+.recurrent-card .dropdown-menu .dropdown-item:focus {
+  outline: none;
+}
+.recurrent-card .dropdown-menu form:first-of-type .dropdown-item {
+  border-bottom: 1px solid #DEE7F3;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.5717 5.52433L12.0674 3.02002L3.05186 12.0355L5.55617 14.5399L14.5717 5.52433Z' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.0703 3.02201L13.0691 2.02326C13.6216 1.47076 14.5211 1.47076 15.0736 2.02326L15.5766 2.52618C16.1291 3.07868 16.1291 3.97826 15.5766 4.53076L14.5778 5.52951' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.05314 12.0391L1.79939 14.8582C1.53731 15.4532 2.13939 16.0624 2.73439 15.7932L5.55356 14.5395' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: left 1rem center;
+  background-repeat: no-repeat;
+}
+.recurrent-card .dropdown-menu form:last-of-type .dropdown-item {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 20 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.63477 4.42676H18.6348' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.6348 9.42664V15.4266M10.1348 9.30664V15.4266V9.30664ZM6.63477 9.42664V15.4266V9.42664Z' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.6348 4.42676H7.63477V2.42676C7.63477 1.87676 8.08477 1.42676 8.63477 1.42676H11.6348C12.1848 1.42676 12.6348 1.87676 12.6348 2.42676V4.42676Z' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.6348 4.42676V18.4268C16.6348 19.5268 15.7348 20.4268 14.6348 20.4268H5.63477C4.53477 20.4268 3.63477 19.5268 3.63477 18.4268V4.42676' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: left 1rem center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+}
+@media screen and (max-width: 1199px) {
+  .recurrent-card__payment {
+    margin-right: 2.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recurrent-card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 7.625rem;
+    padding-right: 3.5rem;
+    background-position: right 1.25rem bottom 1.25rem;
+  }
+  .recurrent-card__payment {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+  }
+  .recurrent-card__payment span:first-child {
+    margin-bottom: 0;
+    margin-right: 0.25rem;
+  }
+  .recurrent-card .dropdown-menu {
+    width: 100%;
+    margin-top: 7.875rem;
+  }
+}
+
+.recurrent-add__button {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+  height: 4.625rem;
+  border: 2px dashed #DEE7F3;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.667;
+  color: #7C9CAC;
+  background-color: #fff;
+}
+.recurrent-add__button span {
+  padding-right: 0.625rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.667;
+  color: #7C9CAC;
+}
+.recurrent-add__button:hover {
+  text-decoration: none;
+  color: #3B566E;
+}
+.recurrent-add__button:hover span {
+  color: #3B566E;
+}
+@media screen and (max-width: 767px) {
+  .recurrent-add__button {
+    height: 3.5rem;
+  }
+}/*# sourceMappingURL=account-recurrent.css.map */

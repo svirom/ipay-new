@@ -310,6 +310,7 @@
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
                     <a class="dropdown-item dropdown-archive dropdown-archive--new" href="#">Архив платежей</a>
                     <a class="dropdown-item dropdown-templates dropdown-item--empty" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-recurrent" href="#">Автоплатежі</a>
                     <a class="dropdown-item dropdown-cards dropdown-item--empty" href="#">Мои карты</a>
                     <a class="dropdown-item dropdown-getpayment" href="#">Збір коштів на картку</a>
                     <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
@@ -336,6 +337,7 @@
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
                         <a class="dropdown-item dropdown-archive dropdown-archive--new" href="#">Архив платежей</a>
                         <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
+                        <li><a class="dropdown-item dropdown-recurrent" href="#">Автоплатежі</a></li>
                         <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
                         <li><a class="dropdown-item dropdown-getpayment" href="#">Збір коштів на картку</a></li>
                         <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
@@ -1993,6 +1995,16 @@
             <code>&lt;ol class="list list-ordered">&lt;/ol></code>
           </div>
         </div>
+        <div class="col-md-4 mt-3">
+          <ol class="list list--grey list-ordered">
+            <li>Приветствуем</li>
+            <li>Приветствуем</li>
+            <li>Приветствуем</li>
+          </ol>
+          <div class="mt-3 mb-3">
+            <code>&lt;ol class="list list--grey list-ordered">&lt;/ol></code>
+          </div>
+        </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-4 mt-3">
@@ -3430,6 +3442,7 @@
                 <p><span>Сумма: </span><span>100.00 грн.</span></p>
                 <p><span>Остання оплата:</span> <span>12.05.2021</span></p>
               </div>
+              <span class="template-card-recurrent" data-toggle="tooltip" data-html="true" data-original-title="На цей шаблон налаштовано автоплатіж"></span>
               <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
               <div class="dropdown-menu">
                 <form id="edit-form" action="templates" method="post">
@@ -3440,6 +3453,7 @@
                 </form>                        
               </div>
             </a>
+            <!-- <a href="#" class="template-card-recurrent" data-toggle="tooltip" data-html="true" data-original-title="На цей шаблон налаштовано автоплатіж"></a> -->
           </div>
         </div>
         <div class="col-md-5 col-lg-4 mb-3">
@@ -3921,14 +3935,20 @@
                   <span>Мои шаблоны</span>
                 </a>
               </li>
+              <li>
+                <a href="#" class="catalogue-account__item catalogue-account__recurrent">
+                  <span class="badge badge-new">Новое</span>
+                  <span>Автоплатежі</span>
+                </a>
+              </li>
               <li class="item-empty">
                 <a href="#" class="catalogue-account__item catalogue-account__cards">
                   <span>Мои карты</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="catalogue-account__item catalogue-account__getpayment" title="Збір коштів на картку">
-                  <span>Збір коштів на картку</span>
+                <a href="#" class="catalogue-account__item catalogue-account__getpayment" title="Мої збори">
+                  <span>Мої збори</span>
                 </a>
               </li>
               <li>

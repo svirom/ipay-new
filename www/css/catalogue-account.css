@@ -46,6 +46,10 @@
 .catalogue-account__item:active span:not(.badge), .catalogue-account__item.active span:not(.badge) {
   color: #F0F5FA;
 }
+.catalogue-account__item:active span.badge.badge-new, .catalogue-account__item.active span.badge.badge-new {
+  color: #E84F35;
+  background-color: #ffffff;
+}
 .catalogue-account__item span {
   display: block;
   overflow: hidden;
@@ -57,11 +61,17 @@
 }
 .catalogue-account__item span.badge {
   position: absolute;
-  right: 1rem;
+  right: 0.5rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 0.75rem;
+}
+.catalogue-account__item span.badge.badge-new {
+  padding: 0.25rem;
+  text-transform: capitalize;
+  color: #ffffff;
+  background-color: #E84F35;
 }
 .catalogue-account__item span.badge ~ span {
   padding-right: 3rem;
@@ -162,4 +172,12 @@
 }
 .catalogue-account__getpayment:active::before, .catalogue-account__getpayment.active::before, .catalogue-account__getpayment--red::before {
   background-position: -124px -25px;
+}
+.catalogue-account__recurrent::before {
+  width: 24px;
+  height: 24px;
+  background-position: -150px 0px;
+}
+.catalogue-account__recurrent:active::before, .catalogue-account__recurrent.active::before, .catalogue-account__recurrent--red::before {
+  background-position: -150px -26px;
 }/*# sourceMappingURL=catalogue-account.css.map */

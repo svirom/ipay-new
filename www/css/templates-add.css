@@ -282,13 +282,13 @@
   text-decoration: underline;
 }
 .templates-add__delete-btn {
-  padding-left: 2rem;
+  padding-left: 2.25rem;
   padding-right: 0;
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 1;
   color: #E84F35;
-  background: url("data:image/svg+xml,%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79297 7.33301H27.4596' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.7923 13.9998V21.9998M16.1257 13.8398V21.9998V13.8398ZM11.459 13.9998V21.9998V13.9998Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.4596 7.33301H12.793V4.66634C12.793 3.93301 13.393 3.33301 14.1263 3.33301H18.1263C18.8596 3.33301 19.4596 3.93301 19.4596 4.66634V7.33301Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24.7923 7.33301V25.9997C24.7923 27.4663 23.5923 28.6663 22.1257 28.6663H10.1257C8.65898 28.6663 7.45898 27.4663 7.45898 25.9997V7.33301' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center no-repeat;
+  background: url("data:image/svg+xml,%3Csvg width='33' height='32' viewBox='0 0 33 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.79297 7.33301H27.4596' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.7923 13.9998V21.9998M16.1257 13.8398V21.9998V13.8398ZM11.459 13.9998V21.9998V13.9998Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.4596 7.33301H12.793V4.66634C12.793 3.93301 13.393 3.33301 14.1263 3.33301H18.1263C18.8596 3.33301 19.4596 3.93301 19.4596 4.66634V7.33301Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24.7923 7.33301V25.9997C24.7923 27.4663 23.5923 28.6663 22.1257 28.6663H10.1257C8.65898 28.6663 7.45898 27.4663 7.45898 25.9997V7.33301' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left top 2px no-repeat;
   background-size: 32px;
 }
 .templates-add__delete-btn:hover {
@@ -312,8 +312,14 @@
   background: url("data:image/svg+xml,%3Csvg width='31' height='30' viewBox='0 0 31 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8691 15L8.80747 15' stroke='%23DEE7F3' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.6191 21.25L22.1191 15L14.6191 8.75' stroke='%23DEE7F3' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") right center no-repeat;
   background-size: 33px;
 }
+.templates-add .templates-add__list {
+  overflow-y: initial;
+}
 .templates-add .form-search .form-group {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1rem;
+}
+.templates-add .form-search .form-group.has-error {
+  margin-bottom: 2.375rem;
 }
 .templates-add .form-search__list {
   position: static;
@@ -353,6 +359,14 @@
 .templates-add .form-search__item--added .form-search__add:hover {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09277 6.35742L4.91777 10.1824C5.49527 10.7599 6.44027 10.7599 7.01777 10.1824L15.3428 1.85742' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
+.templates-add .form-search__item.templates-add__item {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+}
+.templates-add .form-search__item.templates-add__item:hover {
+  background-color: initial;
+}
 .templates-add .form-search__link {
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -373,6 +387,75 @@
 .templates-add .form-search__add:hover {
   border-color: #7C9CAC;
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1.0498V10.9498' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.9508 6H1.05078' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.templates-add__recurrent {
+  border: 1px solid #DEE7F3;
+  border-radius: 0.5rem;
+}
+.templates-add__recurrent .checkbox-switch {
+  padding-left: 0;
+}
+.templates-add__recurrent .checkbox-switch .checkbox-label {
+  display: block;
+  height: 4rem;
+  padding: 1.375rem 4rem 1.3125rem 4.0625rem;
+  color: #172A3A;
+  border-radius: 0.5rem;
+}
+.templates-add__recurrent .checkbox-switch .checkbox-label::before {
+  top: 1.3125rem;
+  left: 0.6875rem;
+  width: 2.375rem;
+  height: 1.25rem;
+  border-radius: 0.9375rem;
+}
+.templates-add__recurrent .checkbox-switch .checkbox-label::after {
+  top: 1.5rem;
+  left: 0.875rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+}
+.templates-add__recurrent .checkbox-switch .checkbox-input:checked ~ .checkbox-label::after {
+  -webkit-transform: translateX(1.125rem);
+          transform: translateX(1.125rem);
+}
+.templates-add__recurrent .checkbox-switch .checkbox-input[disabled] {
+  pointer-events: none;
+}
+.templates-add__recurrent .checkbox-switch .checkbox-input[disabled] ~ .checkbox-label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.templates-add__recurrent .checkbox-switch::after {
+  position: absolute;
+  content: "";
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background: #FEF7E0 url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z' stroke='%23DE7800' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.36353 12.6364L8.99989 9.72727V5' stroke='%23DE7800' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+  z-index: -1;
+}
+.templates-add__recurrent-add {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
+}
+.templates-add__recurrent-add .templates-add__collapse-add {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding-left: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='14' viewBox='0 0 23 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 13.5H3C1.9 13.5 1 12.6 1 11.5V2.5C1 1.4 1.9 0.5 3 0.5H20C21.1 0.5 22 1.4 22 2.5V11.5C22 12.6 21.1 13.5 20 13.5Z' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 3.37891H1V5.6823H22V3.37891Z' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.templates-add__collapse {
+  padding: 0.3125rem 0.6875rem 0.6875rem;
 }
 .templates-add__card {
   max-width: 255px;
@@ -434,4 +517,97 @@
   .templates-add__address-input {
     display: block;
   }
+}
+
+/* p2p masterpass */
+.p2p-masterpass .dropdown [aria-expanded=true] .masterpass-card--active::after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.p2p-masterpass .dropdown-menu {
+  width: 100%;
+  top: auto !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  margin-top: 0.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(23, 42, 58, 0.1);
+}
+.p2p-masterpass .dropdown-menu .masterpass-card {
+  border-bottom: 1px solid #DEE7F3;
+  border-radius: 0;
+  box-shadow: none;
+}
+.p2p-masterpass .dropdown-menu .masterpass-card:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.p2p-masterpass .dropdown-menu .masterpass-card:last-of-type {
+  border-bottom: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.masterpass-card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 4rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+  cursor: pointer;
+}
+.masterpass-card__logo {
+  -ms-flex: 0 0 3.5rem;
+      flex: 0 0 3.5rem;
+  max-width: 3.5rem;
+  height: 2.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.masterpass-card__body {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  width: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+}
+.masterpass-card__body .masterpass-card__title {
+  margin-bottom: 0.125rem;
+  margin-bottom: 3px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.masterpass-card__body .masterpass-card__mask, .masterpass-card__body .masterpass-card__mask span {
+  line-height: 1;
+  color: #172A3A;
+}
+.masterpass-card--active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1.5rem;
+  height: 100%;
+  top: 0;
+  right: 0.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.1665 9.6286L12.0001 15.4622' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 15.4623L17.8336 9.62867' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.masterpass-card--active .masterpass-card__title.invisible {
+  display: none;
 }/*# sourceMappingURL=templates-add.css.map */
