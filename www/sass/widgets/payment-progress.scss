@@ -1,0 +1,235 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the payment progress widget.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.payment-progress {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid $middle-grey;
+
+  @include until($md) {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @include until($sm) {
+    display: none;
+  }
+}
+
+.payment-step {
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  &__icon {
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    padding: 0.375rem 0;
+    font-family: $heading-font;
+    font-size: 0.875rem;
+    font-weight: 700;
+    // line-height: 1.2;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 0.25rem;
+    background-color: $middle-grey;
+  }
+
+  & > span {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 0.25rem 0.5rem;
+    line-height: 1.5;
+    color: $heading-color;
+    border-radius: 0.25rem;
+  }
+
+  &.active {
+    .payment-step__icon {
+      background-color: $btn-red;
+    }
+
+    & > span {
+      font-weight: 700;
+    } 
+  }
+
+  &.done {
+    .payment-step__icon {
+      background-color: $heading-color;
+    }
+  }
+
+  &:not(.done) {
+    pointer-events: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    & > span {
+      background-color: $light-grey;
+    }
+  }
+}
+
+.payment-progress-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid $middle-grey;
+
+  span {
+    color: $heading-color;
+    font-weight: 700;
+  }
+
+  & > span {
+    font-family: $heading-font;
+    font-size: 1.125rem;
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.25rem;
+
+    svg {
+      position: absolute;
+      left: 0.125rem;
+      top: 0.125rem;
+      transform: rotate(-90deg);
+
+      .circle-full {
+        stroke: $light-grey;
+      }
+
+      .percent {
+        stroke: $btn-red;
+        stroke-dasharray: 100;
+        stroke-linecap: round;
+      }
+    }
+
+    & > span {
+      font-size: 0.625rem;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &[aria-expanded=true] {
+      background-color: $light-grey;
+
+      svg {
+        .circle-full {
+          stroke: $middle-grey;
+        }
+      }
+    }
+  }
+
+  &--13 {
+    svg {
+      .percent {
+        stroke-dashoffset: calc(100 - 33);
+      }
+    }
+  }
+
+  &--23 {
+    svg {
+      .percent {
+        stroke-dashoffset: calc(100 - 66);
+      }
+    }
+  }
+
+  &--12 {
+    svg {
+      .percent {
+        stroke-dashoffset: calc(100 - 50);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 19.125rem;
+    margin-top: 0.125rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 20px $card-shadow;
+  }
+
+  .dropdown-item {
+    position: relative;
+    padding: 1rem 1.25rem 1rem 2.5rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: #172A3A;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    &:hover, &.active {
+      background-color: $light-grey;
+    }
+
+    &:not(.done) {
+      pointer-events: none;
+    }
+
+    &.dropdown-progress-payer {
+      background-position: left 10px center;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 20.5V20.13C0.5 18.53 1.45 17.09 2.92 16.46L7.5 14.5V13.5L6.88 12.88C6 12 5.5 10.8 5.5 9.54V4.98C5.5 3.92 6.06 2.93 6.98 2.4C7.78 1.93 9 2.5 8.5 1.5C7.98 0.46 12.22 1.93 13.02 2.4C13.94 2.94 14.5 3.92 14.5 4.98V9.55C14.5 10.8 14 12 13.12 12.89L12.5 13.5V14.5L17.08 16.46C18.55 17.09 19.5 18.53 19.5 20.13V20.5' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    &.dropdown-progress-data {
+      background-position: left 12px center;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='22' viewBox='0 0 16 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 2.498V19.496C15.5 20.6 14.606 21.494 13.502 21.494H2.498C1.394 21.494 0.5 20.6 0.5 19.496V2.498C0.5 1.394 1.394 0.5 2.498 0.5H13.496C14.606 0.5 15.5 1.394 15.5 2.498Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.99799 15.5H7.99998' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.99799 11H12.002' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.99799 6.5H12.002' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    &.dropdown-progress-payment {
+      background-position: left 7px center;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.956 2.82601L18.45 19.758C18.546 20.856 17.736 21.828 16.632 21.924L7.668 22.716C6.57 22.812 5.598 22.002 5.502 20.898L4.008 3.96601C3.912 2.86201 4.722 1.89601 5.826 1.80001L14.79 1.00801C15.888 0.912013 16.86 1.72201 16.956 2.82601Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.458 1.53L19.65 1.836C20.748 1.938 21.558 2.916 21.45 4.014L19.836 20.94C19.734 22.038 18.756 22.848 17.658 22.74L12.462 22.242' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.384 19.29L12.198 17.154' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.006 15.018L11.82 12.888' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.634 10.752L11.442 8.61598' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.256 6.48001L11.07 4.35001' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.322 7.07398L14.058 4.08598' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.372 19.026L15.288 18.03' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99799 16.866L8.18999 19.002' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    &:not(.done):not(.active) {
+      color: $main-blue;
+
+      &.dropdown-progress-payer {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 20.5V20.13C0.5 18.53 1.45 17.09 2.92 16.46L7.5 14.5V13.5L6.88 12.88C6 12 5.5 10.8 5.5 9.54V4.98C5.5 3.92 6.06 2.93 6.98 2.4C7.78 1.93 9 2.5 8.5 1.5C7.98 0.46 12.22 1.93 13.02 2.4C13.94 2.94 14.5 3.92 14.5 4.98V9.55C14.5 10.8 14 12 13.12 12.89L12.5 13.5V14.5L17.08 16.46C18.55 17.09 19.5 18.53 19.5 20.13V20.5' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+  
+      &.dropdown-progress-data {
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='22' viewBox='0 0 16 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 2.498V19.496C15.5 20.6 14.606 21.494 13.502 21.494H2.498C1.394 21.494 0.5 20.6 0.5 19.496V2.498C0.5 1.394 1.394 0.5 2.498 0.5H13.496C14.606 0.5 15.5 1.394 15.5 2.498Z' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.99799 15.5H7.99998' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.99799 11H12.002' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.99799 6.5H12.002' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+  
+      &.dropdown-progress-payment {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.956 2.82601L18.45 19.758C18.546 20.856 17.736 21.828 16.632 21.924L7.668 22.716C6.57 22.812 5.598 22.002 5.502 20.898L4.008 3.96601C3.912 2.86201 4.722 1.89601 5.826 1.80001L14.79 1.00801C15.888 0.912013 16.86 1.72201 16.956 2.82601Z' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.458 1.53L19.65 1.836C20.748 1.938 21.558 2.916 21.45 4.014L19.836 20.94C19.734 22.038 18.756 22.848 17.658 22.74L12.462 22.242' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.384 19.29L12.198 17.154' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.006 15.018L11.82 12.888' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.634 10.752L11.442 8.61598' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.256 6.48001L11.07 4.35001' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.322 7.07398L14.058 4.08598' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.372 19.026L15.288 18.03' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99799 16.866L8.18999 19.002' stroke='%2394ADBB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  @include at-least($sm) {
+    display: none;
+  }
+}

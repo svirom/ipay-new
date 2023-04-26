@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/css/datepicker-style.css">
     <link rel="stylesheet" href="/css/form-search.css">
     <link rel="stylesheet" href="/css/account-templates.css">
+    <link rel="stylesheet" href="/css/payment-progress.css">
 
     <style>
       .catalogue-mobile__backR {
@@ -2430,6 +2431,10 @@
           </div>
         </div>
       </div>
+
+      <div class="w-100"><hr></div>
+
+      <!-- progressbar -->
       <div class="row mt-3">
         <div class="col-12">
           <h3 class="pl-3 pt-3 mb-0">Progressbar (widget)</h3>
@@ -2663,6 +2668,222 @@
                 <div class="progress-mobile__text">
                   <span class="progress-mobile__current">Подтверждение платежа</span>
                   <span class="progress-mobile__next">Далее: Успех!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100"><hr></div>
+
+      <!-- progressbar 2.0 -->
+      <div class="row mt-3">
+        <div class="col-12">
+          <h3 class="pl-3 pt-3 mb-0">Progressbar 2.0 (widget)</h3>
+        </div>
+        <div class="col-md-9 mt-3">
+          <div class="payment-progress">
+            <div class="row align-items-center">
+              <div class="col-sm-4">
+                <a href="#" class="payment-step active">
+                  <div class="payment-step__icon">1</div>
+                  <span>Данные плательщика</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="payment-step">
+                  <div class="payment-step__icon">2</div>
+                  <span>Данные платежа</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="payment-step">
+                  <div class="payment-step__icon">3</div>
+                  <span>Оплата</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-5">
+          <div class="payment-progress">
+            <div class="row align-items-center">
+              <div class="col-sm-4">
+                <a href="#" class="payment-step done">
+                  <div class="payment-step__icon">1</div>
+                  <span>Данные плательщика</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="payment-step active">
+                  <div class="payment-step__icon">2</div>
+                  <span>Данные платежа</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="payment-step">
+                  <div class="payment-step__icon">3</div>
+                  <span>Оплата</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-5">
+          <div class="payment-progress">
+            <div class="row align-items-center">
+              <div class="col-sm-4">
+                <a href="#" class="payment-step done">
+                  <div class="payment-step__icon">1</div>
+                  <span>Данные плательщика</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="payment-step done">
+                  <div class="payment-step__icon">2</div>
+                  <span>Данные платежа</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="payment-step active">
+                  <div class="payment-step__icon">3</div>
+                  <span>Оплата</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2 steps -->
+        <div class="col-md-9 mt-5">
+          <div class="payment-progress">
+            <div class="row align-items-center">
+              <div class="col-sm-4">
+                <a href="#" class="payment-step active">
+                  <div class="payment-step__icon">1</div>
+                  <span>Данные плательщика</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="payment-step">
+                  <div class="payment-step__icon">2</div>
+                  <span>Оплата</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mt-5">
+          <div class="payment-progress">
+            <div class="row align-items-center">
+              <div class="col-sm-4">
+                <a href="#" class="payment-step done">
+                  <div class="payment-step__icon">1</div>
+                  <span>Данные плательщика</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#" class="payment-step active">
+                  <div class="payment-step__icon">2</div>
+                  <span>Оплата</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="pl-3 pt-3 mb-0">Progressbar 2.0 (mobile)</h3>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile payment-progress-mobile--13 dropdown" style="display:flex;">
+                <span>Данные плательщика</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>1/3</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer active" href="#">Данные плательщика</a>
+                  <a class="dropdown-item dropdown-progress-data" href="#">Данные платежа</a>
+                  <a class="dropdown-item dropdown-progress-payment" href="#">Оплата</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile payment-progress-mobile--23 dropdown" style="display:flex;">
+                <span>Данные платежа</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>2/3</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer done" href="#">Данные плательщика</a>
+                  <a class="dropdown-item dropdown-progress-data active" href="#">Данные платежа</a>
+                  <a class="dropdown-item dropdown-progress-payment" href="#">Оплата</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile dropdown" style="display:flex;">
+                <span>Оплата</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>3/3</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer done" href="#">Данные плательщика</a>
+                  <a class="dropdown-item dropdown-progress-data done" href="#">Данные платежа</a>
+                  <a class="dropdown-item dropdown-progress-payment active" href="#">Оплата</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 mt-3 mt-sm-0">
+          <div class="row">
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile payment-progress-mobile--12 dropdown" style="display:flex;">
+                <span>Данные плательщика</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>1/2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer active" href="#">Данные плательщика</a>
+                  <a class="dropdown-item dropdown-progress-payment" href="#">Оплата</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile dropdown" style="display:flex;">
+                <span>Оплата</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>2/2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer done" href="#">Данные плательщика</a>
+                  <a class="dropdown-item dropdown-progress-payment active" href="#">Оплата</a>
                 </div>
               </div>
             </div>
