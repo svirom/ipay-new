@@ -1,0 +1,74 @@
+// -------------------------------------------------------------------------------
+// This file contains all styles related to the account collection fullname widget
+// -------------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.modal-collection-fullname {
+  .modal-content {
+    border: 0;
+    border-radius: 0.5rem;
+  }
+
+  .modal-header {
+    padding: 1.5rem 5.125rem 1rem 1.5rem;
+    border-bottom: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0.625rem 0.8125rem;
+    border-top-right-radius: 0.5rem;
+    opacity: 1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .modal-body {
+    padding: 0rem 1.5rem 1.5rem;
+
+    .form-label {
+      top: 1.0625rem;
+      font-size: 1rem;
+    }
+
+    .form-input {
+      font-size: 1rem;
+
+      &:focus, &.filled {
+        & ~ .form-label {
+          top: 10px;
+          font-size: 0.875rem;
+          line-height: 1.17;
+        }
+      }
+    }
+  }
+
+  @include at-least($sm) {
+    .modal-dialog {
+      max-width: 540px;
+      margin-top: 5rem;
+    }
+  }
+
+  @include until($md) {
+    .modal-body {
+      padding: 0 0.9375rem 0.9375rem;
+    }
+
+    h3 {
+      font-size: 1.125rem;
+    }
+  }
+}

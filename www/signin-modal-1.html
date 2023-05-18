@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/search-form.css">
+    <link rel="stylesheet" href="/css/account-collection-fullname.css">
 
     <title>Sign In Modal 1</title>
   </head>
@@ -317,6 +318,15 @@
                 <div class="col-auto mr-3 mb-3">
                   <h3>Modal safety settings</h3>
                   <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-15">Modal Auth 15</a>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal collection fullname</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-16">Modal Auth 16</a>
+                </div>
+                <div class="col-auto mr-3 mb-3">
+                  <h3>Modal collection fullname success</h3>
+                  <a href="#" class="btn btn-green" data-toggle="modal" data-target="#modal-auth-17">Modal Auth 17</a>
                 </div>
               </div>
             </div>
@@ -1263,6 +1273,79 @@
 
             </form>
 
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal collection fullname (modal auth 16) -->
+    <div class="modal fade modal-collection-fullname" id="modal-auth-16" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="text-center">
+              <img src="img/modal/collection-fullname.svg" alt="Icon">
+              <h3 class="mt-4 mb-2">Добавьте полное имя</h3>
+              <p class="mb-4 mb-md-3">Укажите ваш Фамилию Имя и Отчество и мы сможем предзаполнять их в формы оплаты где необходимо, чтобы ваша оплата проходила комфортнее.</p>
+            </div>
+            <div class="modal-collection-fullname__form">
+              <form action="">
+                <div class="form-group">
+                  <input type="text" class="form-control form-input" id="collection-lastname" name="collection-lastname" autocomplete="off" placeholder="" aria-required="true">
+                  <label class="control-label form-label" for="collection-lastname">Ваша фамилия</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control form-input" id="collection-firstname" name="collection-firstname" autocomplete="off" placeholder="" aria-required="true">
+                  <label class="control-label form-label" for="collection-firstname">Ваше имя</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control form-input" id="collection-secondtname" name="collection-secondname" autocomplete="off" placeholder="" aria-required="true">
+                  <label class="control-label form-label" for="collection-secondname">Ваше отчество</label>
+                </div>
+  
+                <button type="submit" class="btn btn-green btn-block">Сохранить</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal collection fullname (modal auth 17) -->
+    <div class="modal fade modal-collection-fullname" id="modal-auth-17" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="text-center">
+              <img src="img/modal/collection-fullname.svg" alt="Icon">
+              <h3 class="mt-4 mb-2">Добавьте полное имя</h3>
+              <p class="mb-4 mb-md-3">Укажите ваш Фамилию Имя и Отчество и мы сможем предзаполнять их в формы оплаты где необходимо, чтобы ваша оплата проходила комфортнее.</p>
+            </div>
+            <div class="modal-collection-fullname__form">
+              <button type="button" class="btn btn-green btn-block mt-4" data-dismiss="modal" aria-label="Close">Успех!</button>
+            </div>
           </div>
 
         </div>
