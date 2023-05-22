@@ -2419,21 +2419,17 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  width: 26.25rem;
+  max-width: 26.25rem;
   height: 18.125rem;
-  padding: 1.625rem 1.875rem 3.25rem;
+  padding: 2rem 1.875rem 0;
   border-radius: 1.25rem;
   box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
 }
 @media screen and (max-width: 575px) {
   .bank-card {
     width: 100%;
-    max-width: 20rem;
-    height: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 0 0 2rem;
-    box-shadow: none;
+    height: 16rem;
+    padding: 1rem 0.9375rem 0;
   }
 }
 .bank-card .form-group.has-error {
@@ -2442,7 +2438,7 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 .bank-card__header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  height: 3.5rem;
+  height: 2.5rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -2450,29 +2446,27 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 }
 @media screen and (max-width: 575px) {
   .bank-card__header {
-    height: 2.5rem;
+    height: 2rem;
   }
 }
+
 .bank-card__bank, .bank-card__type {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  height: 3.5rem;
+  height: 2.5rem;
   background-repeat: no-repeat;
-  background-size: auto 2.75rem;
+  background-size: auto 2.5rem;
 }
 .bank-card__bank img, .bank-card__type img {
-  max-height: 2.75rem;
+  max-height: 100%;
   width: auto;
 }
 @media screen and (max-width: 575px) {
   .bank-card__bank, .bank-card__type {
-    height: 2.5rem;
-    background-size: auto 1.5rem;
-  }
-  .bank-card__bank img, .bank-card__type img {
-    max-height: 2.75rem;
+    height: 2rem;
+    background-size: auto 2rem;
   }
 }
 .bank-card__bank {
@@ -2498,10 +2492,15 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
       flex-direction: column;
   -ms-flex-pack: start;
       justify-content: flex-start;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 .bank-card__body .has-error .form-input.form-control {
   background-color: #FFFCFC;
+}
+@media screen and (max-width: 575px) {
+  .bank-card__body {
+    padding-top: 0.5rem;
+  }
 }
 .bank-card__number {
   padding-bottom: 1.25rem;
@@ -2515,6 +2514,11 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   font-size: 0.75rem;
   color: #7C9CAC;
 }
+@media screen and (max-width: 575px) {
+  .bank-card__number {
+    padding-bottom: 0.75rem;
+  }
+}
 .bank-card__card-data {
   display: -ms-flexbox;
   display: flex;
@@ -2526,6 +2530,11 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 }
 .bank-card__expires {
   width: 11rem;
+}
+@media screen and (max-width: 575px) {
+  .bank-card__expires {
+    margin-right: 0.5rem;
+  }
 }
 .bank-card__cvv {
   height: 3.5rem;

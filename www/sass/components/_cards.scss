@@ -388,20 +388,23 @@
 .bank-card {
   display: flex;
   flex-direction: column;
-  width: 26.25rem;
+  // width: 26.25rem;
+  // width: auto;
+  max-width: 26.25rem;
   height: 18.125rem;
-  padding: 1.625rem 1.875rem 3.25rem;
+  padding: 2rem 1.875rem 0;
   border-radius: 1.25rem;
   box-shadow: 0px 5px 20px rgba(97, 144, 183, 0.35);
 
   @include until($sm) {
     width: 100%;
-    max-width: 20rem;
-    height: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 0 0 2rem;
-    box-shadow: none;
+    height: 16rem;
+    // max-width: 20rem;
+    // height: auto;
+    // margin-top: 1rem;
+    // margin-bottom: 1rem;
+    padding: 1rem 0.9375rem 0;
+    // box-shadow: none;
   }
 
   .form-group {
@@ -412,34 +415,30 @@
 
   &__header {
     flex-shrink: 0;
-    height: 3.5rem;
+    height: 2.5rem;
     display: flex;
     justify-content: space-between;
 
     @include until($sm) {
-      height: 2.5rem;
+      height: 2rem;
     }
   }
 
   &__bank, &__type {
     display: flex;
     align-items: center;
-    height: 3.5rem;
+    height: 2.5rem;
     background-repeat: no-repeat;
-    background-size: auto 2.75rem;
+    background-size: auto 2.5rem;
 
     img {
-      max-height: 2.75rem;
+      max-height: 100%;
       width: auto;
     }
 
     @include until($sm) {
-      height: 2.5rem;
-      background-size: auto 1.5rem;
-
-      img {
-        max-height: 2.75rem;
-      }
+      height: 2rem;
+      background-size: auto 2rem;
     }
   }
 
@@ -460,12 +459,16 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
 
     .has-error {
       .form-input.form-control {
         background-color: $light-pink;
       }
+    }
+
+    @include until($sm) {
+      padding-top: 0.5rem;
     }
   }
 
@@ -483,6 +486,10 @@
         color: $main-blue;
       }
     }
+
+    @include until($sm) {
+      padding-bottom: 0.75rem;
+    }
   }
 
   &__card-data {
@@ -496,6 +503,10 @@
 
   &__expires {
     width: 11rem;
+
+    @include until($sm) {
+      margin-right: 0.5rem;
+    }
   }
 
   &__cvv {
