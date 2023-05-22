@@ -16,4 +16,8 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.credits-form__submit').on('click', function() {
+		console.log($('.js-example-basic-single').val());
+	})
+
 })
