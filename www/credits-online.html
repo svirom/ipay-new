@@ -273,28 +273,28 @@
                   <div class="row col-pad8">
                     <div class="col-12 col-sm col-md-auto credits-form__field">
                       <div class="form-group">
-                        <input type="tel" class="form-control form-input" id="credits-amount" name="credit-amount" placeholder="Сума займу, грн">
+                        <input type="tel" class="form-control form-input" id="credits-amount" name="credits-amount" placeholder="Сума займу, грн" maxlength="5">
                         <label for="credits-amount" class="control-label form-label">Сума займу, грн</label>
                       </div>
                     </div>
                     <div class="col-12 col-sm col-md-auto credits-form__field">
                       <div class="form-group select-input-wrapper" data-label="Термін">
-                        <select class="form-control form-input js-example-basic-single" name="select">
+                        <select class="form-control form-input js-example-basic-single" name="select" id="credits-period">
                           <option value=""></option>
-                          <option value="1">до 1 недели</option>
-                          <option value="2">до 2 недель</option>
-                          <option value="3">до 3 недель</option>
-                          <option value="4">до 1 месяца</option>
-                          <option value="5">до 2 месяцев</option>
-                          <option value="6">до 3 месяцев</option>
-                          <option value="7">до 4 месяцев</option>
-                          <option value="8">до 5 месяцев</option>
-                          <option value="9">до 6 месяцев</option>
+                          <option value="7">до 1 недели</option>
+                          <option value="14">до 2 недель</option>
+                          <option value="21">до 3 недель</option>
+                          <option value="30">до 1 месяца</option>
+                          <option value="60">до 2 месяцев</option>
+                          <option value="90">до 3 месяцев</option>
+                          <option value="120">до 4 месяцев</option>
+                          <option value="150">до 5 месяцев</option>
+                          <option value="180">до 6 месяцев</option>
                         </select>
                       </div>
                     </div>
                     <div class="col-12 col-md-auto">
-                      <button type="button" class="btn btn-green btn-block credits-form__submit">Застосувати</button>
+                      <button type="button" class="btn btn-green btn-block" id="credits-form-submit">Застосувати</button>
                     </div>
                   </div>
                 </div>
@@ -321,7 +321,7 @@
                       </ul>
                     </div>
                     <div class="col-auto d-none d-sm-block">
-                      <a href="#">Сбросить выбор</a>
+                      <a href="#" id="credit-reset">Сбросить выбор</a>
                     </div>
                   </div>
                 </div>
@@ -335,7 +335,7 @@
               <div class="col-12 tab-content">
 
                 <div class="tab-pane fade show active" id="credits-all" role="tabpanel" aria-labelledby="credits-all-tab">
-                  <div class="company-card">
+                  <div class="company-card" data-amount="25000" data-period="30">
 
                     <span class="company-card__top-service">Топ-послуга</span>
 
@@ -359,7 +359,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">10-30</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -445,7 +445,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="16000" data-period="60">
 
                     <span class="company-card__top-service">Топ-послуга</span>
   
@@ -461,7 +461,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">16000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -469,7 +469,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">10-60</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -555,7 +555,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="15000" data-period="120">
 
                     <span class="company-card__top-service">Топ-послуга</span>
   
@@ -571,7 +571,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">15000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -579,7 +579,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">10-120</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -665,7 +665,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="20000" data-period="15">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">Credit7.ua</p>
@@ -679,7 +679,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">20000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -687,7 +687,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">15</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -773,7 +773,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="20000" data-period="20">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">СreditPlus</p>
@@ -787,7 +787,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">20000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -795,7 +795,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">20</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -881,7 +881,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="15000" data-period="30">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">Zecredit</p>
@@ -896,7 +896,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">15000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -904,7 +904,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">10-30</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -990,7 +990,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="25000" data-period="30">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">BananaCredit</p>
@@ -1012,7 +1012,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">10-30</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -1098,7 +1098,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="50000" data-period="300">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">Sloncredit</p>
@@ -1112,7 +1112,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">50000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -1120,7 +1120,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">10-300</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -1206,7 +1206,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="25000" data-period="360">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">Loany</p>
@@ -1314,7 +1314,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="25000" data-period="360">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">AvansCredit</p>
@@ -1422,7 +1422,7 @@
   
                   </div>
 
-                  <div class="company-card">
+                  <div class="company-card" data-amount="5000" data-period="30">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">E-groshi</p>
@@ -1436,7 +1436,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">5000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -1444,7 +1444,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">30</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -1530,7 +1530,7 @@
   
                   </div>
 
-                  <div class="company-card">
+                  <div class="company-card" data-amount="8000" data-period="21">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">CreditKasa</p>
@@ -1544,7 +1544,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">8000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -1552,7 +1552,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">1-21</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -1638,7 +1638,7 @@
   
                   </div>
 
-                  <div class="company-card">
+                  <div class="company-card" data-amount="25000" data-period="30">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">КАЧАЙ гроші</p>
@@ -1660,7 +1660,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">30</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -1746,7 +1746,7 @@
   
                   </div>
 
-                  <div class="company-card">
+                  <div class="company-card" data-amount="20000" data-period="60">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">Credos</p>
@@ -1760,7 +1760,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">20000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -1768,7 +1768,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">60</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -1854,7 +1854,7 @@
   
                   </div>
 
-                  <div class="company-card">
+                  <div class="company-card" data-amount="4000" data-period="14">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">Швидко Гроші</p>
@@ -1868,7 +1868,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">4000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -1876,12 +1876,12 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">14</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
                           <ul class="company-checklist">
-                            <li class="heading-color checklist-minus">Видача готівкою</li>
+                            <li class="heading-color checklist-plus">Видача готівкою</li>
                             <li class="heading-color checklist-plus">Переказ на картку</li>
                             <li class="heading-color checklist-plus">Видача за 5 хвилин</li>
                           </ul>
@@ -1962,7 +1962,7 @@
   
                   </div>
 
-                  <div class="company-card">
+                  <div class="company-card" data-amount="25000" data-period="30">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">Mycredit</p>
@@ -1984,7 +1984,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">30</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -2070,7 +2070,7 @@
   
                   </div>
 
-                  <div class="company-card">
+                  <div class="company-card" data-amount="30000" data-period="90">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">SOS Credit</p>
@@ -2084,7 +2084,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">30000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -2092,7 +2092,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">90</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -2178,7 +2178,7 @@
   
                   </div>
 
-                  <div class="company-card">
+                  <div class="company-card" data-amount="50000" data-period="120">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">Bizpozyka</p>
@@ -2192,7 +2192,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">50000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -2200,7 +2200,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">120</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -2288,7 +2288,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="credits-card" role="tabpanel" aria-labelledby="credits-card-tab">
-                  <div class="company-card">
+                  <div class="company-card" data-amount="25000" data-period="30">
 
                     <span class="company-card__top-service">Топ-послуга</span>
 
@@ -2312,7 +2312,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">30</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -2398,7 +2398,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="25000" data-period="30">
 
                     <span class="company-card__top-service">Топ-послуга</span>
   
@@ -2422,7 +2422,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">10-30</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -2508,7 +2508,7 @@
   
                   </div>
   
-                  <div class="company-card">
+                  <div class="company-card" data-amount="30000" data-period="60">
 
                     <span class="company-card__top-service">Топ-послуга</span>
   
@@ -2524,7 +2524,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">30000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -2532,7 +2532,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">60</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
@@ -2620,7 +2620,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="credits-cash" role="tabpanel" aria-labelledby="credits-cash-tab">
-                  <div class="company-card">
+                  <div class="company-card" data-amount="8000" data-period="21">
   
                     <div class="company-card__row">
                       <p class="company-card__title heading-color d-md-none">AvansCredit</p>
@@ -2634,7 +2634,7 @@
                         <div class="company-card__conditions">
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Максимальна сума</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Данная максимальная сумма действительна для первого кредита. Для повторно кредита сумма может быть больше."></a></p>
-                            <p class="mb-0">до <span class="h3 heading-color">25000</span> грн</p>
+                            <p class="mb-0">до <span class="h3 heading-color">8000</span> грн</p>
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2"><span>Ставка на день</span> <a role="button" tabindex="0" class="company-card__question question-popover" data-toggle="popover" data-title="" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
@@ -2642,7 +2642,7 @@
                           </div>
                           <div class="company-card__conditions-item">
                             <p class="mb-2">Термін кредиту</p>
-                            <p class="mb-0"><span class="h3 heading-color">10-360</span> днів</p>
+                            <p class="mb-0"><span class="h3 heading-color">1-21</span> днів</p>
                           </div>
                         </div>
                         <div class="company-card__checklist">
