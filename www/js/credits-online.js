@@ -38,6 +38,11 @@ $(document).ready(function() {
 		$(this).val(creditsAmount);
 	});
 
+	// disable paste values
+	$('#credits-amount').on('paste', function() {
+		return false;
+	});
+
 	$('#credits-form-submit').on('click', function() {
 		const amount = $('#credits-amount').val(); // input max amount of credit
 		const period = $('#credits-period').val(); // input max period of credit
