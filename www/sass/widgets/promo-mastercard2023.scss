@@ -40,6 +40,7 @@
   }
 
   &--step1 {
+    line-height: 1.125;
     border-color: #DEF0FF;
     background-color: #F0F8FF;
 
@@ -49,6 +50,7 @@
   }
 
   &--secure {
+    line-height: 1.125;
     border-color: #FFF1C3;
     background-color: #FEF7E0;
 
@@ -58,6 +60,7 @@
   }
 
   &--success {
+    align-items: center;
     border-color: #D4EDFF;
     background-color: #D4EDFF;
 
@@ -71,27 +74,32 @@
   }
 
   &--account {
+    align-items: center;
     border-color: #F0F8FF;
     background-color: #F0F8FF;
 
     .alert-promo-mastercard2023__counter {
       display: flex;
-      align-items: center;
+      // align-items: center;
       margin-bottom: 0.625rem;
+    }
+
+    .alert-promo-mastercard2023__counter-amount {
+      padding: 0.6875rem 0.625rem 0.5625rem;
+      line-height: 1;
+      border-radius: 0.5rem;
+      background-color: #D1EAFF;
 
       & > span {
         font-size: 1.125rem;
         line-height: 1.16667;
         color: $heading-color;
-      }
-    }
 
-    .alert-promo-mastercard2023__counter-amount {
-      margin-left: 0.625rem;
-      padding: 0.625rem;
-      font-weight: 700;
-      border-radius: 0.5rem;
-      background-color: #D1EAFF;
+        &:last-child {
+          font-weight: 700;
+          margin-left: 0.625rem;
+        }
+      }
     }
 
     .alert-promo-mastercard2023__links {
@@ -104,19 +112,50 @@
       }
     }
 
-    .alert-promo-mastercard2023__img {
+    .alert-promo-mastercard2023__logo {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      margin-right: 0.5rem;
 
       & > span {
         &:last-child {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-top: 0.5rem;
+          position: relative;
+          margin-left: 1.25rem;
+          margin-right: 0.5rem;
+
+          &::before, &::after {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 0;
+            top: 0;
+            border-left: 1px solid $middle-grey;
+          }
+
+          &::before {
+            left: -0.5rem;
+          }
+
+          &::after {
+            right: -0.5rem;
+          }
         }
       }
     }
+
+    // .alert-promo-mastercard2023__img {
+    //   display: flex;
+    //   flex-direction: column;
+
+    //   & > span {
+    //     &:last-child {
+    //       display: flex;
+    //       justify-content: space-between;
+    //       align-items: center;
+    //       margin-top: 0.5rem;
+    //     }
+    //   }
+    // }
   }
 
   @include until($md) {
@@ -128,20 +167,45 @@
       }
     }
 
+    &--success {
+      align-items: flex-start;
+    }
+
     &--account {
       flex-direction: column;
-      align-items: center;
+      // align-items: center;
 
       .alert-promo-mastercard2023__content {
-        order: 1;
+        width: 100%;
         margin-top: 1rem;
       }
 
       .alert-promo-mastercard2023__counter {
         justify-content: center;
+        margin-bottom: 1rem;
       }
 
-      .alert-promo-mastercard2023__img {}
+      .alert-promo-mastercard2023__links {
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      .alert-promo-mastercard2023__ldp {
+        order: -1;
+      }
+
+      .alert-promo-mastercard2023__logo {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include until($sm) {
+    &--account {
+      .alert-promo-mastercard2023__counter-amount {
+        flex-grow: 1;
+        text-align: center;
+      }
     }
   }
 }
@@ -154,10 +218,11 @@
   }
 
   .modal-header {
-    padding: 1.5rem 5.125rem 1rem 1.5rem;
+    padding: 0;
     border-bottom: 0;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    overflow: hidden;
   }
 
   .close {
@@ -175,18 +240,19 @@
   }
 
   .modal-body {
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 1rem 1.5rem;
 
     p, li {
       color: $heading-color;
     }
+
+    .modal-promo-mastercard2023__title {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
   }
 
   &__list {
-    margin: 1.5rem -1.5rem;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
-    background-color: $light-grey;
     counter-reset: counterlist;
 
     ol {
@@ -219,25 +285,51 @@
   }
 
   .modal-footer {
+    margin: 0 1.5rem 1.5rem;
     padding: 1.5rem;
-    border-top-color: $light-grey;
+    border-top: 0;
+    border-radius: 0.5rem;
+    background-color: $light-grey;
+
+    & > * {
+      margin: 0;
+    }
+
+    p {
+      color: $heading-color;
+    }
   }
 
   @include at-least($sm) {
     .modal-dialog {
-      max-width: 630px;
-      // margin-top: 5rem;
+      max-width: 560px;
     }
   }
 
-  @include until($md) {
-    .modal-body {
-      padding: 0 0.9375rem 0.9375rem;
+  @include at-least($md) {
+    .modal-dialog {
+      max-width: 630px;
+    }
+  }
+
+  @include until($sm) {
+    .modal-dialog {
+      margin: 0;
     }
 
-    &__list {
-      margin-left: -0.9375rem;
-      margin-right: -0.9375rem;
+    .modal-content, .modal-header {
+      border-radius: 0;
+    }
+
+    .modal-body {
+      .modal-promo-mastercard2023__title {
+        font-size: 1rem;
+      }
+    }
+
+    .modal-footer {
+      margin: 0;
+      border-radius: 0;
     }
   }
 }

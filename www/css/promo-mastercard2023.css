@@ -26,6 +26,7 @@
   margin-top: -1px;
 }
 .alert-promo-mastercard2023--step1 {
+  line-height: 1.125;
   border-color: #DEF0FF;
   background-color: #F0F8FF;
 }
@@ -33,6 +34,7 @@
   background-color: #DFF0FF;
 }
 .alert-promo-mastercard2023--secure {
+  line-height: 1.125;
   border-color: #FFF1C3;
   background-color: #FEF7E0;
 }
@@ -40,6 +42,8 @@
   background-color: #FFECAC;
 }
 .alert-promo-mastercard2023--success {
+  -ms-flex-align: center;
+      align-items: center;
   border-color: #D4EDFF;
   background-color: #D4EDFF;
 }
@@ -50,27 +54,30 @@
   margin-left: 0.5rem;
 }
 .alert-promo-mastercard2023--account {
+  -ms-flex-align: center;
+      align-items: center;
   border-color: #F0F8FF;
   background-color: #F0F8FF;
 }
 .alert-promo-mastercard2023--account .alert-promo-mastercard2023__counter {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
   margin-bottom: 0.625rem;
 }
-.alert-promo-mastercard2023--account .alert-promo-mastercard2023__counter > span {
+.alert-promo-mastercard2023--account .alert-promo-mastercard2023__counter-amount {
+  padding: 0.6875rem 0.625rem 0.5625rem;
+  line-height: 1;
+  border-radius: 0.5rem;
+  background-color: #D1EAFF;
+}
+.alert-promo-mastercard2023--account .alert-promo-mastercard2023__counter-amount > span {
   font-size: 1.125rem;
   line-height: 1.16667;
   color: #172A3A;
 }
-.alert-promo-mastercard2023--account .alert-promo-mastercard2023__counter-amount {
-  margin-left: 0.625rem;
-  padding: 0.625rem;
+.alert-promo-mastercard2023--account .alert-promo-mastercard2023__counter-amount > span:last-child {
   font-weight: 700;
-  border-radius: 0.5rem;
-  background-color: #D1EAFF;
+  margin-left: 0.625rem;
 }
 .alert-promo-mastercard2023--account .alert-promo-mastercard2023__links {
   display: -ms-flexbox;
@@ -79,20 +86,31 @@
 .alert-promo-mastercard2023--account .alert-promo-mastercard2023__links > a ~ a {
   margin-left: 1.25rem;
 }
-.alert-promo-mastercard2023--account .alert-promo-mastercard2023__img {
+.alert-promo-mastercard2023--account .alert-promo-mastercard2023__logo {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-.alert-promo-mastercard2023--account .alert-promo-mastercard2023__img > span:last-child {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+.alert-promo-mastercard2023--account .alert-promo-mastercard2023__logo > span:last-child {
+  position: relative;
+  margin-left: 1.25rem;
+  margin-right: 0.5rem;
+}
+.alert-promo-mastercard2023--account .alert-promo-mastercard2023__logo > span:last-child::before, .alert-promo-mastercard2023--account .alert-promo-mastercard2023__logo > span:last-child::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0;
+  top: 0;
+  border-left: 1px solid #DEE7F3;
+}
+.alert-promo-mastercard2023--account .alert-promo-mastercard2023__logo > span:last-child::before {
+  left: -0.5rem;
+}
+.alert-promo-mastercard2023--account .alert-promo-mastercard2023__logo > span:last-child::after {
+  right: -0.5rem;
 }
 @media screen and (max-width: 767px) {
   .alert-promo-mastercard2023--registered .alert-promo-mastercard2023__icon {
@@ -101,20 +119,41 @@
     margin-right: 0;
     margin-left: 1rem;
   }
+  .alert-promo-mastercard2023--success {
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
   .alert-promo-mastercard2023--account {
     -ms-flex-direction: column;
         flex-direction: column;
-    -ms-flex-align: center;
-        align-items: center;
   }
   .alert-promo-mastercard2023--account .alert-promo-mastercard2023__content {
-    -ms-flex-order: 1;
-        order: 1;
+    width: 100%;
     margin-top: 1rem;
   }
   .alert-promo-mastercard2023--account .alert-promo-mastercard2023__counter {
     -ms-flex-pack: center;
         justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .alert-promo-mastercard2023--account .alert-promo-mastercard2023__links {
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .alert-promo-mastercard2023--account .alert-promo-mastercard2023__ldp {
+    -ms-flex-order: -1;
+        order: -1;
+  }
+  .alert-promo-mastercard2023--account .alert-promo-mastercard2023__logo {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .alert-promo-mastercard2023--account .alert-promo-mastercard2023__counter-amount {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    text-align: center;
   }
 }
 
@@ -124,10 +163,11 @@
   text-align: left;
 }
 .modal-promo-mastercard2023 .modal-header {
-  padding: 1.5rem 5.125rem 1rem 1.5rem;
+  padding: 0;
   border-bottom: 0;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  overflow: hidden;
 }
 .modal-promo-mastercard2023 .close {
   position: absolute;
@@ -142,16 +182,16 @@
   outline: none;
 }
 .modal-promo-mastercard2023 .modal-body {
-  padding: 1rem 1.5rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 .modal-promo-mastercard2023 .modal-body p, .modal-promo-mastercard2023 .modal-body li {
   color: #172A3A;
 }
+.modal-promo-mastercard2023 .modal-body .modal-promo-mastercard2023__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
 .modal-promo-mastercard2023__list {
-  margin: 1.5rem -1.5rem;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  background-color: #F0F5FA;
   counter-reset: counterlist;
 }
 .modal-promo-mastercard2023__list ol li {
@@ -178,21 +218,41 @@
   background-color: #E84F35;
 }
 .modal-promo-mastercard2023 .modal-footer {
+  margin: 0 1.5rem 1.5rem;
   padding: 1.5rem;
-  border-top-color: #F0F5FA;
+  border-top: 0;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
+}
+.modal-promo-mastercard2023 .modal-footer > * {
+  margin: 0;
+}
+.modal-promo-mastercard2023 .modal-footer p {
+  color: #172A3A;
 }
 @media screen and (min-width: 576px) {
+  .modal-promo-mastercard2023 .modal-dialog {
+    max-width: 560px;
+  }
+}
+@media screen and (min-width: 768px) {
   .modal-promo-mastercard2023 .modal-dialog {
     max-width: 630px;
   }
 }
-@media screen and (max-width: 767px) {
-  .modal-promo-mastercard2023 .modal-body {
-    padding: 0 0.9375rem 0.9375rem;
+@media screen and (max-width: 575px) {
+  .modal-promo-mastercard2023 .modal-dialog {
+    margin: 0;
   }
-  .modal-promo-mastercard2023__list {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
+  .modal-promo-mastercard2023 .modal-content, .modal-promo-mastercard2023 .modal-header {
+    border-radius: 0;
+  }
+  .modal-promo-mastercard2023 .modal-body .modal-promo-mastercard2023__title {
+    font-size: 1rem;
+  }
+  .modal-promo-mastercard2023 .modal-footer {
+    margin: 0;
+    border-radius: 0;
   }
 }
 
