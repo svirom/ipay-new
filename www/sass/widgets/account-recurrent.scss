@@ -19,6 +19,18 @@
   }
 }
 
+.recurrent-card-wrapper {
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+
+    .recurrent-card {
+      box-shadow: 0px 1px 4px rgba($heading-color, 10%);
+    }
+  }
+}
+
 .recurrent-card {
   position: relative;
   display: flex;
@@ -68,9 +80,6 @@
   }
 
   &__payment {
-    flex: 0 0 auto;
-    margin-right: 3.75rem;
-
     span {
       display: block;
       font-size: 0.875rem;
@@ -82,6 +91,29 @@
 
       &:last-child {
         color: $heading-color;
+      }
+    }
+
+    &--amount {
+      flex: 0 0 6.8125rem;
+    }
+
+    &--next {
+      position: relative;
+      flex: 0 0 12.5rem;
+      margin-right: 2.25rem;
+
+      .badge.badge-danger {
+        position: absolute;
+        right: 0.3125rem;
+        bottom: -0.125rem;
+        padding: 0.125rem 0.25rem;
+        font-size: 0.75rem;
+        line-height: 1.3333333;
+        color: $btn-red;
+        text-transform: none;
+        border-radius: 0.25rem;
+        background-color: $pink;
       }
     }
   }
@@ -162,20 +194,23 @@
     }
   }
 
-  @include until($xl) {
-    &__payment {
-      margin-right: 2.5rem;
-    }
+  &--false {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8.82517 9.69194L9.06638 3.32524H6.95261L7.19382 9.69194H8.82517ZM7.20017 10.9488C6.99705 11.1434 6.89548 11.3825 6.89548 11.6661C6.89548 11.9538 6.99705 12.195 7.20017 12.3897C7.4033 12.5801 7.67201 12.6753 8.00632 12.6753C8.3364 12.6753 8.60089 12.5801 8.79978 12.3897C9.00291 12.195 9.10447 11.9538 9.10447 11.6661C9.10447 11.3825 9.00291 11.1434 8.79978 10.9488C8.60089 10.7541 8.3364 10.6568 8.00632 10.6568C7.67201 10.6568 7.4033 10.7541 7.20017 10.9488Z' fill='%23E84F35'/%3E%3C/svg%3E");
   }
 
   @include until($md) {
     flex-wrap: wrap;
-    height: 7.625rem;
+    height: auto;
     padding-right: 3.5rem;
     background-position: right 1.25rem bottom 1.25rem;
 
+    &__title {
+      padding-right: 0;
+    }
+
     &__payment {
       display: flex;
+      flex-basis: 100%;
       width: 100%;
       margin-right: 0;
 
@@ -190,6 +225,21 @@
     .dropdown-menu {
       width: 100%;
       margin-top: 7.875rem;
+    }
+
+    &--false {
+      .recurrent-card__payment {
+        &--next {
+          flex-wrap: wrap;
+          padding-bottom: 28px;
+  
+          .badge.badge-danger {
+            right: unset;
+            left: 0;
+            bottom: 0;
+          }
+        }
+      }
     }
   }
 }

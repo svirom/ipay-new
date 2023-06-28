@@ -332,7 +332,7 @@
                         <div class="row mb-4">
 
                           <div class="col-12">
-                            <div class="recurrent-card-wrapper dropdown">
+                            <a href="#" class="recurrent-card-wrapper dropdown">
                               <div class="recurrent-card">
                                 
                                 <span class="recurrent-card__img">
@@ -341,12 +341,12 @@
 
                                 <span class="recurrent-card__title">Пополнение интернета</span>
                                 
-                                <div class="recurrent-card__payment mt-2 mt-md-0">
+                                <div class="recurrent-card__payment recurrent-card__payment--amount mt-2 mt-md-0">
                                   <span>Сумма: </span><span>100.00 грн.</span>
                                 </div>
 
-                                <div class="recurrent-card__payment mt-2 mt-md-0">
-                                  <span>Следующая оплата:</span> <span>12.05.2023</span>
+                                <div class="recurrent-card__payment recurrent-card__payment--next mt-2 mt-md-0">
+                                  <span>Следующая оплата:</span> <span class="heading-color">12.05.2023</span>
                                 </div>
 
                                 <button class="recurrent-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
@@ -359,9 +359,9 @@
                                   </form>                        
                                 </div>
                               </div>
-                            </div>
+                            </a>
 
-                            <div class="recurrent-card-wrapper dropdown">
+                            <a href="#" class="recurrent-card-wrapper dropdown">
                               <div class="recurrent-card">
                                 
                                 <span class="recurrent-card__img">
@@ -370,25 +370,55 @@
 
                                 <span class="recurrent-card__title">Пополнение интернета</span>
                                 
-                                <div class="recurrent-card__payment mt-2 mt-md-0">
+                                <div class="recurrent-card__payment recurrent-card__payment--amount mt-2 mt-md-0">
                                   <span>Сумма: </span><span>100.00 грн.</span>
                                 </div>
 
-                                <div class="recurrent-card__payment mt-2 mt-md-0">
-                                  <span>Следующая оплата:</span> <span>12.05.2023</span>
+                                <div class="recurrent-card__payment recurrent-card__payment--next mt-2 mt-md-0">
+                                  <span>Следующая оплата:</span> <span class="heading-color">12.05.2023</span>
                                 </div>
 
                                 <button class="recurrent-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
                                 <div class="dropdown-menu">
-                                  <form id="edit-form" action="templates" method="post">
+                                  <form id="edit-form-2" action="templates" method="post">
                                     <button type="submit" id="" class="dropdown-item">Редагувати</button>
                                   </form>                            
-                                  <form id="delete-form" action="templates" method="post">
+                                  <form id="delete-form-2" action="templates" method="post">
                                     <button type="submit" id="" class="dropdown-item">Видалити</button>
                                   </form>                        
                                 </div>
                               </div>
-                            </div>
+                            </a>
+
+                            <a href="#" class="recurrent-card-wrapper dropdown">
+                              <div class="recurrent-card recurrent-card--false">
+                                
+                                <span class="recurrent-card__img">
+                                  <img src="img/providers/yasno.png" alt="">
+                                </span>
+
+                                <span class="recurrent-card__title">Пополнение интернета</span>
+                                
+                                <div class="recurrent-card__payment recurrent-card__payment--amount mt-2 mt-md-0">
+                                  <span>Сумма: </span><span>100.00 грн.</span>
+                                </div>
+
+                                <div class="recurrent-card__payment recurrent-card__payment--next mt-2 mt-md-0">
+                                  <span>Следующая оплата:</span> <span class="heading-color">12.05.2023</span> 
+                                  <span class="badge badge-danger">Платеж не прошел</span>
+                                </div>
+
+                                <button class="recurrent-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+                                <div class="dropdown-menu">
+                                  <form id="edit-form-3" action="templates" method="post">
+                                    <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                                  </form>                            
+                                  <form id="delete-form-3" action="templates" method="post">
+                                    <button type="submit" id="" class="dropdown-item">Видалити</button>
+                                  </form>                        
+                                </div>
+                              </div>
+                            </a>
                           </div>
 
                           <div class="col-12">
