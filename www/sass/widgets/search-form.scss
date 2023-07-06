@@ -20,12 +20,14 @@
       padding: 1.9375rem 3.25rem 0.75rem 4.3125rem;
       font-size: 1.25rem;
       line-height: 1.15;
-      border-color: $light-grey;
+      // border-color: $light-grey;
+      border-color: $middle-grey;
       @include placeholder {
         color: rgba($main-blue, 0);
         font-weight: normal;
       }
       background: #ffffff url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3195 24.7298C19.6213 24.7298 24.7299 19.6212 24.7299 13.3195C24.7299 7.01774 19.6213 1.90918 13.3195 1.90918C7.01777 1.90918 1.90918 7.01774 1.90918 13.3195C1.90918 19.6212 7.01777 24.7298 13.3195 24.7298Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M28.0914 28.0911L21.3945 21.3943' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E") left 0.875rem center no-repeat;
+      user-select: none;
 
       & ~ .form-label {
         left: 4.5rem;
@@ -36,7 +38,8 @@
       }
 
       &:focus, &.filled {
-        border-color: $light-grey;
+        // border-color: $light-grey;
+        border-color: $middle-grey;
         box-shadow: none;
         @include placeholder {
           color: rgba($main-blue, 1);
@@ -312,9 +315,9 @@
     padding: 1.125rem 1rem 1.125rem 4.3125rem;
     font-size: 1.25rem;
     color: $heading-color;
-    border: 3px solid #ffffff;
+    border: 3px solid $middle-grey;
     border-radius: 0.5rem;
-    box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+    // box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
     background: #ffffff url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3195 24.7298C19.6213 24.7298 24.7299 19.6212 24.7299 13.3195C24.7299 7.01774 19.6213 1.90918 13.3195 1.90918C7.01777 1.90918 1.90918 7.01774 1.90918 13.3195C1.90918 19.6212 7.01777 24.7298 13.3195 24.7298Z' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M28.0914 28.0911L21.3945 21.3943' stroke='%23E84F35' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E") left 0.875rem center no-repeat;
 
     &:hover {

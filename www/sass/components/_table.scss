@@ -104,3 +104,42 @@
     }
   }
 }
+
+.table-bill {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color:$light-grey;
+
+  &__row {
+    display: flex;
+    // margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    span {
+      font-size: 0.875rem;
+
+      &:last-child {
+        margin-left: 0.75rem;
+        font-weight: 700;
+        color: $heading-color;
+      }
+    }
+  }
+
+  @include until($md) {
+    &__row {
+      flex-direction: column;
+      // margin-bottom: 0.5rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+
+      span {  
+        &:last-child {
+          margin-left: 0;
+          margin-top: 0.25rem;
+        }
+      }
+    }
+  }
+}

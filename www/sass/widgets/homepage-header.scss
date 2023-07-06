@@ -561,4 +561,12 @@
       }
     }
   }
+
+  @include until($sm) {
+    &__signup {
+      .btn {
+        max-width: none;
+      }
+    }
+  }
 }
