@@ -304,4 +304,70 @@
   .tabletochki-form .tabletochki-form__form .btn-tabletochki-submit {
     width: 100%;
   }
+}
+
+.btn.btn-promo-mastercard2023 {
+  position: relative;
+  width: 100%;
+  max-width: 309px;
+  padding: 13px 69px 13px 16px;
+  border: 0;
+  background-color: #FFD578;
+}
+.btn.btn-promo-mastercard2023 .promo-popover {
+  display: block;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  right: 5px;
+  top: 8px;
+  background: url("../img/promo-mastercard/icon-hand-popover.svg") center no-repeat;
+}
+.btn.btn-promo-mastercard2023 .promo-popover::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2.5rem;
+  top: 0;
+  left: -12px;
+  border-left: 1px solid #FEBD2D;
+}
+.btn.btn-promo-mastercard2023:hover {
+  box-shadow: 0 2px 6px rgba(219, 143, 31, 0.37);
+}
+@media screen and (max-width: 767px) {
+  .btn.btn-promo-mastercard2023 {
+    max-width: none;
+  }
+}
+
+.btn-promo-mastercard2023 .popover.popover-main {
+  max-width: 309px;
+  left: auto !important;
+  right: 0;
+  top: 0;
+  -webkit-transform: none !important;
+          transform: none !important;
+  background: #3B566E url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 5.5L18.5 18.5' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.5 5.5L5.5 18.5' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 1rem top 1rem no-repeat;
+}
+.btn-promo-mastercard2023 .popover.popover-main.bs-popover-bottom {
+  margin-top: 66px;
+}
+.btn-promo-mastercard2023 .popover.popover-main.bs-popover-top {
+  top: auto !important;
+  bottom: 0 !important;
+  margin-bottom: 66px;
+}
+.btn-promo-mastercard2023 .popover.popover-main.bs-popover-bottom > .arrow, .btn-promo-mastercard2023 .popover.popover-main.bs-popover-top > .arrow {
+  left: auto !important;
+  right: 1rem;
+}
+.btn-promo-mastercard2023 .popover.popover-main .popover-body {
+  padding: 1rem 3.125rem 1rem 1rem;
+}
+.btn-promo-mastercard2023 .popover.popover-main .popover-body .btn-promo-mastercard2023__modal {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: underline;
 }/*# sourceMappingURL=promo-mastercard2023.css.map */

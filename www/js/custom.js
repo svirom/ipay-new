@@ -142,4 +142,35 @@ $(document).ready(function() {
     }, 800);
   });
 
+  // add bank logo and card type if value
+  if ( $('.method-card-number input').val() ) {    
+    checkTargetPan('.method-card-number input');
+  }
+
+  $('.method-card-number input').on('keyup change focusout', function() {
+    checkTargetPan(this);
+  })
+
+  function checkTargetPan(elem) {
+    const currentPan = $(elem).val();
+
+    if (currentPan.length > 0) {
+      $(elem).siblings('.method-card-type').removeClass('method-card-type--mastercard method-card-type--visa method-card-type--prostir');
+
+      if (currentPan[0] == '4') {
+        $(elem).siblings('.method-card-type').removeClass('method-card-type--card').addClass('method-card-type--visa');
+      } else if (currentPan[0] == '5') {
+        $(elem).siblings('.method-card-type').removeClass('method-card-type--card').addClass('method-card-type--mastercard');
+      } else if (currentPan[0] == '9') {
+        $(elem).siblings('.method-card-type').removeClass('method-card-type--card').addClass('method-card-type--prostir');
+      } else if (currentPan.substring(0, 4) == '6262') {
+        $(elem).siblings('.method-card-type').removeClass('method-card-type--card').addClass('method-card-type--prostir');
+      } else {
+        $(elem).siblings('.method-card-type').removeClass('method-card-type--mastercard method-card-type--visa method-card-type--prostir').addClass('method-card-type--card');
+      }
+    } else {
+      $(elem).siblings('.method-card-type').removeClass('method-card-type--mastercard method-card-type--visa method-card-type--prostir').addClass('method-card-type--card');
+    }
+  }
+
 })
