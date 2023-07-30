@@ -399,8 +399,7 @@
 .btn {
   &.btn-promo-mastercard2023 {
     position: relative;
-    width: 100%;
-    max-width: 309px;
+    width: 309px;
     padding: 13px 69px 13px 16px;
     border: 0;
     background-color:#FFD578;
@@ -432,7 +431,7 @@
 
   @include until($md) {
     &.btn-promo-mastercard2023 {
-      max-width: none;
+      width: 100%;
     }
   }
 }
