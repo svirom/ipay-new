@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/charger.css">
+
+    <title>Charger Yasno</title>
+  </head>
+  <body>
+
+    <!-- charger wrapper -->
+    <div class="charger-wrapper">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-12">
+            <div class="charger-container">
+
+              <form>
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+  
+                    <div class="charger-container__left">
+                      <img src="img/charger/logo-yasno.svg" alt="Yasno">
+                      <div class="charger-table">
+                        <p class="mb-2">ТОВ «ДОНЕЦЬКІ ЕНЕРГЕТИЧНІ ПОСЛУГИ» UA293001190000026002044322002 Код ЄДРПОУ 39592941</p>
+                        <p class="mb-1 charger-table__title">Призначення</p>
+                        <p class="mb-2 font-weight-bold heading-color">Оплата за світло або борг за світло</p>
+                        <p class="mb-1 charger-table__title">Особовий рахунок</p>
+                        <p class="mb-2 font-weight-bold heading-color">000000000000</p>
+                        <p class="mb-1 charger-table__title">Адреса споживача</p>
+                        <p class="mb-2 font-weight-bold heading-color">вул. Дніпробудівська 123, 34</p>
+                        <p class="mb-1 charger-table__title">Період сплати</p>
+                        <p class="mb-2 font-weight-bold heading-color">Липень 2023</p>
+                        <p class="mb-1 charger-table__title">Сума заборгованості</p>
+                        <p class="mb-0 font-weight-bold heading-color">454.00 грн</p>
+                      </div>
+                      <div class="form-group method-card-field has-success">
+                        <input type="tel" class="form-control form-input filled" id="method-card-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="450">
+                        <label class="control-label form-label" for="method-card-amount">Сума до сплати</label>
+                      </div>
+                      <div class="charger-commission">
+                        <div class="row justify-content-between">
+                          <div class="col-auto">
+                            <span>Комісія</span>
+                          </div>
+                          <div class="col-auto">
+                            <span class="font-weight-bold heading-color">5.00 грн</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="charger-amount">
+                        <div class="row justify-content-between">
+                          <div class="col-auto">
+                            <span>До оплати</span>
+                          </div>
+                          <div class="col-auto">
+                            <span class="font-weight-bold heading-color">455.00 грн</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 col-lg-5 col-xl-6">
+
+                    <div class="charger-container__right">
+                      <p class="charger-container__title text-center">Оплатити швидко за допомогою</p>
+                      <button type="button" style="display: block;width:100%;height:48px;margin-bottom:10px;background-color:#000;border-radius:4px;border:0"></button>
+                      <button type="button" style="display: block;width:100%;height:48px;margin-bottom:16px;background-color:#000;border-radius:4px;border:0"></button>
+                      <p class="charger-container__title text-center mt-3 mb-3">Або введіть дані картки</p>
+                      <div class="form-group method-card-field">
+                        <input type="tel" class="form-control form-input" id="method-card-number" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                        <label class="control-label form-label" for="method-card-number">Номер картки</label>
+                        <div class="help-block"></div>
+                      </div>
+                      <div class="method-card-data">
+                        <div class="form-group method-card-field method-card-expires">
+                          <input type="text" class="form-control form-input" id="method-card-expires" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                          <label class="control-label form-label" for="method-card-expires">Термін дії</label>
+                          <div class="help-block"></div>
+                        </div>
+                        <div class="form-group method-card-field method-card-cvv">
+                          <input type="tel" class="form-control form-input input-cvv" id="method-card-cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                          <label class="control-label form-label" for="method-card-cvv">CVV</label>
+                          <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты" data-original-title="" title=""></a>
+                          <div class="help-block"></div>
+                        </div>
+                      </div>
+                      <div class="form-group method-card-field mt-3">
+                        <input type="text" class="form-control form-input" id="form-name-que" name="name" autocomplete="off" placeholder="Телефон відправника" aria-required="true">
+                        <label class="control-label form-label" for="form-name-que">Телефон відправника</label>
+                      </div>
+                      <button type="submit" class="btn btn-green btn-block" disabled>Оплатити <span>42 920</span> грн</button>
+                      <div class="row justify-content-between align-items-center mt-3">
+                        <div class="col-auto">
+                          <span class="heading-color">Платежі забезпечені</span>
+                        </div>
+                        <div class="col-auto">
+                          <img src="img/charger/logo-ipay.svg" alt="iPay">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </form>
+
+              <div class="charger-footer">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-md-auto">
+                    <div class="charger-footer__logos">
+                      <img src="img/charger/logo-mastersecure.svg" alt="Mastercard Secure">
+                      <img src="img/charger/logo-visasecure.svg" alt="Visa Verified">
+                      <img src="img/charger/logo-ipay.svg" alt="iPay">
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <div class="charger-footer__links">
+                      <span class="main-blue-color mb-1 mb-md-0">Треба допомога?</span>
+                      <a href="tel:0800601160" class="font-weight-bold ml-md-3">0 800 60 11 60</a>
+                      <a href="mailto:help@ipay.ua" class="font-weight-bold ml-4 ml-md-3">help@ipay.ua</a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- ./charger-footer -->
+
+            </div> <!-- /.charger-container -->
+          </div>
+        </div>
+      </div>
+    </div><!-- charger wrapper --> 
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
