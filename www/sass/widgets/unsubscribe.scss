@@ -1,0 +1,143 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the unsubscribe page of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.unsubscribe-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.unsubscribe-header, .unsubscribe-footer {
+  flex: 0 0 auto;
+}
+
+.unsubscribe-main {
+  flex-grow: 1;
+}
+
+.unsubscribe-header {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.unsubscribe-main {
+  padding-bottom: 1.5rem;
+}
+
+.unsubscribe-card {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: $danger;
+
+  .unsubscribe-card__title-confirm {
+    font-family: $heading-font;
+    font-size: 1.625rem;
+    line-height: 1.2188;
+    color: $btn-red;
+  }
+
+  .unsubscribe-card__subtitle-confirm {
+    font-family: $heading-font;
+    font-size: 1.25rem;
+    line-height: 1.219;
+    font-weight: 700;
+    color: $heading-color;
+  }
+
+  .unsubscribe-card__email {
+    font-size: 1.25rem;
+    color: $btn-red;
+  }
+
+  .unsubscribe-card__buttons {
+    .btn {
+      padding-left: calc(1.25rem - 3px);
+      padding-right: calc(1.25rem - 3px);
+    }
+  }
+}
+
+.unsubscribe-content {
+  p {
+    color: $heading-color;
+  }
+
+  .list {
+    li {
+      margin-bottom: 1rem;
+
+      p {
+        &:first-child {
+          line-height: 1.171875;
+        }
+  
+        &:last-child {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+.unsubscribe-footer {
+  margin-top: 1.5rem;
+  padding-bottom: 2.375rem;
+}
+
+.footer-card {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(#276192, 15%);
+
+  // &:hover {
+  //   text-decoration: none;
+  //   box-shadow: 0px 4px 20px rgba(#276192, 25%);
+  // }
+
+  &__icon {
+    flex: 0 0 auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--utilities {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.002 12.6943H7.99795V15.6943H4.00195V12.4063C4.00195 10.3543 5.66395 8.69226 7.71595 8.69226H12V4.69626' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.002 4.69626V8.69226H22.002' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.002 4.69626H18' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99795 20.6922C7.99795 19.5882 5.99995 17.6922 5.99995 17.6922C5.99995 17.6922 4.00195 19.5882 4.00195 20.6922C4.00195 21.7962 4.89595 22.6902 5.99995 22.6902C7.10395 22.6902 7.99795 21.7962 7.99795 20.6922Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    &--mobile {
+      background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.3334 20.1942C13.1618 20.1942 13.8334 19.5226 13.8334 18.6942C13.8334 17.8658 13.1618 17.1942 12.3334 17.1942C11.5049 17.1942 10.8334 17.8658 10.8334 18.6942C10.8334 19.5226 11.5049 20.1942 12.3334 20.1942Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.8794 9.14821C19.4374 6.70621 16.0594 5.19421 12.3334 5.19421C8.60735 5.19421 5.22935 6.70621 2.78735 9.14821' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.61328 11.9742C7.33528 10.2522 9.70528 9.19019 12.3333 9.19019C14.9613 9.19019 17.3313 10.2522 19.0533 11.9742' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.0533 11.9742C17.3313 10.2522 14.9613 9.19019 12.3333 9.19019C9.70528 9.19019 7.33528 10.2522 5.61328 11.9742' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.44543 14.8062C9.44143 13.8102 10.8154 13.1982 12.3334 13.1982C13.8514 13.1982 15.2254 13.8162 16.2214 14.8062' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    &--p2p {
+      background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.6226 3.52021L19.1166 20.4522C19.2126 21.5502 18.4026 22.5222 17.2986 22.6182L8.33459 23.4102C7.23659 23.5062 6.26459 22.6962 6.16859 21.5922L4.67459 4.66021C4.57859 3.55621 5.38859 2.59021 6.49259 2.49421L15.4566 1.70221C16.5546 1.60621 17.5266 2.41621 17.6226 3.52021Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.1246 2.22421L20.3166 2.53021C21.4146 2.63221 22.2246 3.61021 22.1166 4.70821L20.5026 21.6342C20.4006 22.7322 19.4226 23.5422 18.3246 23.4342L13.1286 22.9362' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.0506 19.9842L12.8646 17.8482' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.6727 15.7122L12.4867 13.5822' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.3006 11.4462L12.1086 9.31021' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.9227 7.17422L11.7367 5.04422' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.9887 7.76821L14.7247 4.78021' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.0387 19.7202L15.9547 18.7242' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.66461 17.5602L8.85661 19.6962' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding-left: 0.5rem;
+    color: $heading-color;
+  }
+}
+
+@include until($md) {
+  .unsubscribe-header {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+  }
+
+  .unsubscribe-footer {
+    margin-top: 0;
+    padding-bottom: 3.125rem;
+  }
+}
