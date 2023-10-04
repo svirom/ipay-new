@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded&display=swap");
+.qr-payment {
+  margin-bottom: 1rem;
+}
+.qr-payment__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.qr-payment__header > span:first-child {
+  font-size: 1rem;
+  line-height: 1.21875;
+  font-weight: 700;
+  color: #172A3A;
+}
+.qr-payment__header > span:nth-child(2) {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.1428571;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  background-color: #0D9C46;
+}
+.qr-payment__header > span:nth-child(3) {
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  color: #3B566E;
+}
+.qr-payment .qr-payment__button {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: #000;
+}
+.qr-payment .qr-payment__button:hover {
+  text-decoration: none;
+  background-color: #3c4043;
+}
+.qr-payment .qr-payment__button::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -1.5rem;
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #E2EAF5;
+}
+.qr-payment .qr-payment__button > span {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Unbounded", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+.qr-payment .qr-payment__button-icon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.qr-payment .qr-payment__button-icon > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: imagechange-1 8s linear alternate infinite;
+          animation: imagechange-1 8s linear alternate infinite;
+}
+.qr-payment .qr-payment__button-icon > img:not(:first-child) {
+  opacity: 0;
+}
+.qr-payment .qr-payment__button-icon > img:nth-child(2) {
+  -webkit-animation: imagechange-2 8s linear infinite;
+          animation: imagechange-2 8s linear infinite;
+}
+.qr-payment .qr-payment__button-icon > img:nth-child(3) {
+  -webkit-animation: imagechange-2 8s linear infinite;
+          animation: imagechange-2 8s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.qr-payment .qr-payment__button-icon > img:nth-child(4) {
+  -webkit-animation: imagechange-2 8s linear infinite;
+          animation: imagechange-2 8s linear infinite;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.qr-payment__secured {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.qr-payment__secured > span {
+  font-size: 0.875rem;
+  line-height: 1.3;
+  color: #3B566E;
+}
+.qr-payment__secured > img {
+  margin-left: 0.625rem;
+}
+.qr-payment__secured > img:first-of-type {
+  width: 62px;
+}
+
+@-webkit-keyframes imagechange-1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes imagechange-1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes imagechange-2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes imagechange-2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes imagechange-3 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes imagechange-3 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes imagechange-4 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes imagechange-4 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.modal-qr-payment .modal-content {
+  border-width: 0;
+  border-radius: 1rem;
+}
+.modal-qr-payment .modal-header {
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  -ms-flex-align: center;
+      align-items: center;
+  padding-right: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom-width: 0;
+}
+.modal-qr-payment .modal-header .close {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0;
+  padding: 0.25rem 0.4375rem;
+  opacity: 0.8;
+}
+.modal-qr-payment .modal-title {
+  font-size: 1.375rem;
+  line-height: 1.22;
+  color: #172A3A;
+  text-align: center;
+}
+.modal-qr-payment .modal-body {
+  padding: 0 2.5rem 1.5rem;
+}
+.modal-qr-payment .modal-body ol, .modal-qr-payment .modal-body li {
+  list-style: auto;
+}
+.modal-qr-payment .modal-body ol {
+  padding-left: 1rem;
+}
+.modal-qr-payment .modal-body p, .modal-qr-payment .modal-body li {
+  color: #172A3A;
+  font-size: 1rem;
+  line-height: 1.171875;
+}
+.modal-qr-payment__code {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.modal-qr-payment .modal-footer {
+  -ms-flex-pack: center;
+      justify-content: center;
+  border-top-color: #F4F8FD;
+}
+
+@media screen and (max-width: 575px) {
+  .modal-qr-payment .modal-body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}/*# sourceMappingURL=qr-payment.css.map */

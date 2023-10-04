@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    <link rel="stylesheet" href="/css/qr-banks.css">
+
+    <title>Оплата за QR кодом</title>
+  </head>
+  <body>
+
+    <div class="qr-banks-wrapper">
+
+      <header class="qr-header">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+              <a href="#" class="logo-color">
+                <img src="/img/qr-banks/ipay-logo.svg" alt="iPay">
+              </a>
+            </div>
+            <div class="col-auto">
+              <div class="product-label">
+                <span class="product-label__title">Український продукт</span>
+                <span class="product-label__icon">
+                  <img src="img/qr-banks/ua-flag.svg" alt="UA">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="qr-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+
+              <p class="qr-main__title"><strong>Нажміть на ваш банк</strong></p>
+              <p class="qr-main__subtitle">Оплата через додаток банку - без картки</p>
+
+              <div class="qr-main__search">
+                <input type="text" class="form-control" placeholder="Знайти по назві" id="qr-bank-search">
+              </div>
+
+              <div class="row qr-banks">
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <a href="#" class="qr-bank" data-bank="Приватбанк">
+                    <img src="/img/qr-banks/banks/privatbank.svg" alt="Приватбанк">
+                  </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <a href="#" class="qr-bank" data-bank="Монобанк">
+                    <img src="/img/qr-banks/banks/monobank.svg" alt="Монобанк">
+                  </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <a href="#" class="qr-bank" data-bank="ПУМБ">
+                    <img src="/img/qr-banks/banks/pumb.svg" alt="ПУМБ">
+                  </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <a href="#" class="qr-bank" data-bank="А-Банк">
+                    <img src="/img/qr-banks/banks/a-bank.svg" alt="А-Банк">
+                  </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <a href="#" class="qr-bank" data-bank="Сенс Банк">
+                    <img src="/img/qr-banks/banks/sense-bank.svg" alt="Сенс Банк">
+                  </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <a href="#" class="qr-bank" data-bank="Укргазбанк">
+                    <img src="/img/qr-banks/banks/ukrgasbank.svg" alt="Укргазбанк">
+                  </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <a href="#" class="qr-bank" data-bank="Кредит Дніпро">
+                    <img src="/img/qr-banks/banks/kredyt-dnipro.svg" alt="Кредит Дніпро">
+                  </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                  <a href="#" class="qr-bank" data-bank="Асвіо Банк">
+                    <img src="/img/qr-banks/banks/asvio.svg" alt="Асвіо Банк">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="qr-footer">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-12">
+              <div class="qr-secured">
+                <span>Платежі забезпечені</span>
+                <img src="/img/qr-banks/ipay-logo.svg" alt="iPay">
+                <img src="/img/qr-banks/ua-flag.svg" alt="UA">
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/qr-banks.js"></script>
+  </body>
+</html>
