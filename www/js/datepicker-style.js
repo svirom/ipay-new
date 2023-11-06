@@ -7,6 +7,7 @@ $(document).ready(function() {
     $this.datepicker({
       classes: 'datepicker-wrapper',
       autoClose: true,
+      clearButton: true,
       onSelect: function onSelect() {
         $(this).addClass('filled');
       }
@@ -25,6 +26,13 @@ $(document).ready(function() {
         !datepicker._prevOnSelectValue ? thisBlur.removeClass('filled') : '';
       }, 200);
         
+    })
+
+    $this.on('keydown', function(event) {
+      console.log(event.keyCode);
+      if (event.keyCode !== 8) { // backspace
+        return false;
+      }
     })
   })
 
