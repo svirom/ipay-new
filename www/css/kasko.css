@@ -1,0 +1,464 @@
+.col-pad10.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.col-pad10.row > [class^=col] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.kasko-wrapper {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section {
+  margin-top: 5rem;
+}
+
+.kasko-buy {
+  padding: calc(3.125rem - 1px);
+  border: 1px solid #DEE7F3;
+  border-radius: 1.25rem;
+}
+.kasko-buy .kasko-buy__title {
+  font-size: 2.75rem;
+}
+.kasko-buy .kasko-buy__subtitle {
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  color: #172A3A;
+}
+
+.kasko-form .kasko-input {
+  height: 3.5rem;
+  padding: 0.5rem 2rem 0.5rem 4rem;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  color: #172A3A;
+  text-align: center;
+  border: 2px solid #2387E0;
+  border-radius: 0.5rem;
+}
+.kasko-form .kasko-input:focus {
+  color: #172A3A;
+}
+.kasko-form .car-number {
+  position: absolute;
+  height: 3.5rem;
+  width: 2.125rem;
+  top: 0;
+  left: 0;
+  padding-top: 0.5625rem;
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-align: center;
+  border-right: 2px solid #2387E0;
+  border-top-left-radius: calc(0.5rem - 1px);
+  border-bottom-left-radius: calc(0.5rem - 1px);
+  background: #2387E0 url("data:image/svg+xml,%3Csvg width='22' height='13' viewBox='0 0 22 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' width='21' height='6.5' fill='%237DC9F4'/%3E%3Crect x='0.5' y='6.5' width='21' height='6.5' fill='%23FFE76A'/%3E%3C/svg%3E") bottom 0.375rem center no-repeat;
+}
+.kasko-form__logo {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.kasko-form__result {
+  margin-top: 2.5rem;
+}
+
+.kasko-result .kasko-result__title {
+  margin-bottom: 0.875rem;
+  font-size: 1.5rem;
+  line-height: 1.172;
+}
+.kasko-result .kasko-result__title span {
+  white-space: nowrap;
+}
+.kasko-result__table {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #F0F5FA;
+}
+.kasko-result__table > .row > [class^=col]:nth-of-type(n+5) {
+  margin-top: 1.25rem;
+}
+.kasko-result__table-card > p:first-child {
+  margin-bottom: 0.125rem;
+  font-size: 0.75rem;
+}
+.kasko-result__summary {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: #FEF7E0;
+}
+.kasko-result__summary p {
+  font-size: 1.125rem;
+}
+.kasko-result__summary .kasko-result__summary-info {
+  padding: 0.625rem;
+  line-height: 1.1716667;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  background-color: #FFD578;
+}
+
+.kasko-package {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 100%;
+  min-height: 24.625rem;
+  padding: 1.875rem 1.5625rem;
+  font-size: 0.875rem;
+  border-radius: 1rem;
+}
+.kasko-package--go {
+  background-color: #ACDCFF;
+}
+.kasko-package--ride {
+  background-color: #9EE2AD;
+}
+.kasko-package--drive {
+  background-color: #FFD159;
+}
+.kasko-package p, .kasko-package span, .kasko-package li {
+  color: #172A3A;
+}
+.kasko-package .kasko-package__title {
+  margin-bottom: 1.25rem;
+}
+.kasko-package .kasko-package__amount {
+  margin-bottom: 1.25rem;
+}
+.kasko-package .list {
+  margin-bottom: 0.9375rem;
+}
+.kasko-package .list li {
+  margin-bottom: 0.3125rem;
+  padding-left: 0.5rem;
+}
+.kasko-package .btn-package {
+  margin-top: auto;
+  padding: 0.75rem;
+  background-color: #fff;
+}
+
+.promo-card {
+  border-radius: 1rem;
+}
+.promo-card__content {
+  padding: 3.75rem 2.5rem;
+}
+.promo-card__img img {
+  max-width: 100%;
+}
+.promo-card__icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+}
+.promo-card .promo-card__title {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #141414;
+}
+.promo-card .promo-card__title ~ p {
+  font-size: 1.125rem;
+}
+.promo-card--passed {
+  background-color: #FFFAD4;
+}
+.promo-card--passed .promo-card__img {
+  padding-top: 0.75rem;
+}
+.promo-card--passed .promo-card__icon {
+  background-color: #F19F00;
+}
+.promo-card--saved, .promo-card--free {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  height: 31.25rem;
+  margin-top: 1.25rem;
+}
+.promo-card--saved .promo-card__content, .promo-card--free .promo-card__content {
+  padding-right: 1.875rem;
+}
+.promo-card--saved .promo-card__title, .promo-card--free .promo-card__title {
+  white-space: nowrap;
+}
+.promo-card--saved {
+  background: url("../img/kasko-insurance/promo-image2.svg"), linear-gradient(#D9FDE1 0%, #A8F1B8 100%);
+  background-position: top right 3rem, top left;
+  background-repeat: no-repeat;
+}
+.promo-card--saved .promo-card__icon {
+  background-color: #0C6858;
+}
+.promo-card--free {
+  background: url("../img/kasko-insurance/promo-image3.svg"), linear-gradient(#EAF3FD 0%, #D6E9FF 100%);
+  background-position: top 4.5625rem left 8rem, top left;
+  background-repeat: no-repeat;
+}
+.promo-card--free .promo-card__icon {
+  background-color: #313036;
+}
+
+.kasko-works__cards {
+  margin-top: 2.5rem;
+}
+
+.works-card {
+  height: 100%;
+  padding-bottom: 3.75rem;
+  border-bottom: 1px solid #DEE7F3;
+}
+.works-card .works-card__title {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+.works-card .works-card__title span {
+  display: block;
+  line-height: 1.6;
+}
+
+.kasko-telematics__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 100%;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background-color: #F0F5FA;
+}
+.kasko-telematics__content .kasko-telematics__title {
+  margin-bottom: 2.5rem;
+}
+.kasko-telematics__content .kasko-telematics__title ~ p {
+  line-height: 1.6;
+}
+.kasko-telematics__img img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.kasko-cards__row {
+  margin-top: 2.5rem;
+}
+
+.kasko-card {
+  height: 100%;
+  padding: calc(2.5rem - 1px);
+  border: 1px solid #DEE7F3;
+  border-radius: 1rem;
+}
+.kasko-card__icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-color: #F0F5FA;
+}
+.kasko-card .kasko-card__title {
+  font-size: 1.5rem;
+}
+.kasko-card .kasko-card__title ~ p {
+  line-height: 1.6;
+}
+
+.kasko-info {
+  padding-bottom: 3.375rem;
+}
+.kasko-info h3, .kasko-info h4 {
+  margin-top: 3.125rem;
+}
+.kasko-info .list li {
+  margin-bottom: 0.5rem;
+}
+.kasko-info .list li:last-child {
+  margin-bottom: 0;
+}
+.kasko-info .list--circle li::before {
+  width: 4px;
+  height: 4px;
+  top: 7px;
+  left: 8px;
+}
+
+@media screen and (max-width: 1199px) {
+  .promo-card--saved .promo-card__content, .promo-card--free .promo-card__content {
+    padding-left: 1.875rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .section {
+    margin-top: 2.5rem;
+  }
+  .kasko-result__table > .row > [class^=col]:nth-of-type(n+3) {
+    margin-top: 0.9375rem;
+  }
+  .kasko-result__packages > .row > [class^=col]:last-child {
+    margin-top: 1.875rem;
+  }
+  .promo-card__content {
+    padding: 1.875rem;
+  }
+  .promo-card .promo-card__title {
+    font-size: 1.75rem;
+  }
+  .promo-card--saved {
+    background-position: top right -1.75rem, top left;
+  }
+  .promo-card--free {
+    background-position: top 4rem left 2rem, top left;
+  }
+  .kasko-telematics__content {
+    padding: 1.875rem;
+  }
+  .kasko-card {
+    padding: calc(1.875rem - 1px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .kasko-wrapper {
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+  .kasko-buy {
+    padding: 0;
+    border: 0;
+  }
+  .kasko-buy .kasko-buy__title {
+    font-size: 1.5rem;
+  }
+  .kasko-buy .kasko-buy__subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  .kasko-form__logo {
+    margin-top: 1.5rem;
+  }
+  .kasko-form__result {
+    margin-top: 1.5rem;
+  }
+  .kasko-form__result .kasko-result__title {
+    font-size: 1.125rem;
+  }
+  .kasko-form__result .kasko-result__title span {
+    font-size: 1.625rem;
+  }
+  .kasko-result__table > .row > [class^=col]:nth-of-type(n+2) {
+    margin-top: 0.9375rem;
+  }
+  .kasko-result__packages .kasko-result__title {
+    font-size: 1.5rem;
+  }
+  .kasko-result__packages > .row > [class^=col]:nth-of-type(2) {
+    margin-top: 1.875rem;
+  }
+  .kasko-package {
+    min-height: auto;
+  }
+  .kasko-package .kasko-package__title {
+    font-size: 1.125rem;
+  }
+  .kasko-package .kasko-package__amount {
+    font-size: 1.625rem;
+  }
+  .promo-card__content {
+    padding: 1.5rem;
+  }
+  .promo-card .promo-card__title {
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
+    font-size: 1.5rem;
+  }
+  .promo-card--passed .promo-card__content {
+    padding: 1rem;
+  }
+  .promo-card--passed .promo-card__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .promo-card--saved, .promo-card--free {
+    height: 22.5rem;
+    background-size: 70%, auto;
+  }
+  .promo-card--saved {
+    background-size: 208px auto, auto;
+    background-position: top right, top left;
+  }
+  .promo-card--free {
+    background-size: 235px auto, auto;
+    background-position: top 2.3125rem right 1.125rem, top left;
+  }
+  .kasko-works h2 {
+    font-size: 1.5625rem;
+  }
+  .kasko-works__cards [class^=col]:not(:last-of-type) {
+    margin-bottom: 1.875rem;
+  }
+  .works-card {
+    padding-bottom: 1.5rem;
+  }
+  .works-card .works-card__title {
+    font-size: 1.25rem;
+    line-height: 1.172;
+  }
+  .works-card .works-card__title span {
+    display: inline;
+    line-height: 1.172;
+  }
+  .kasko-telematics__content {
+    padding: 1.5rem;
+  }
+  .kasko-telematics__content .kasko-telematics__title {
+    margin-bottom: 1.5rem;
+  }
+  .kasko-telematics__img {
+    margin-top: 1.875rem;
+  }
+  .kasko-cards h2 {
+    font-size: 1.5rem;
+  }
+  .kasko-cards__row {
+    margin-top: 1.5rem;
+  }
+  .kasko-cards__row [class^=col]:not(:last-of-type) {
+    margin-bottom: 1.875rem;
+  }
+  .kasko-card {
+    padding: calc(2.5rem - 1px);
+  }
+  .kasko-card .kasko-card__title {
+    font-size: 1.25rem;
+  }
+  .kasko-info h3, .kasko-info h4 {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+  }
+}/*# sourceMappingURL=kasko.css.map */
