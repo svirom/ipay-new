@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!--  fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- plugins -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/breadcrumb.css" />
+    <link rel="stylesheet" href="css/catalogue.css" />
+    <link rel="stylesheet" href="css/search-form.css" />
+    <link rel="stylesheet" href="css/p2p-menu-mobile.css" />
+    <!--  <link rel="stylesheet" href="css/p2p-main-2.0.css">-->
+    <link rel="stylesheet" href="css/p2p-main-new-2.0.css" />
+    <link rel="stylesheet" href="css/crossborder2.0.css" />
+
+    <title>Международные переводы с карты на карту</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav>
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a
+                    href="#"
+                    class="main-nav__p2p"
+                    role="button"
+                    id="dropdown-p2p"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    ><span>Перевод денег</span></a
+                  >
+                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                    <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a
+                    href="#"
+                    class="main-nav__lang"
+                    role="button"
+                    id="dropdown-lang"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >РУС</a
+                  >
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a
+                    href="#"
+                    class="btn btn-account"
+                    role="button"
+                    id="dropdown-account"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Мой кабинет</a
+                  >
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button
+                    class="navbar-toggler collapsed main-nav__opener"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#dropdown-account-mobile"
+                    aria-controls="main-menu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span>
+                        <span>или зарегистрироваться</span>
+                      </a>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- catalogue widget -->
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-wrapper">
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li><a href="/catalog-u.html" tabindex="-1">Каталог услуг</a></li>
+                <li class="active">Международные переводы</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- breadcrumb widget -->
+      <!-- main area -->
+      <main class="p2p-crossborder" id="p2p-new-widget">
+        <div class="crossborder__main">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h1>Международные переводы с карты на карту</h1>
+                <p class="mb-0">Переводите деньги из-за рубежа в Украину и из Украины в Европу и мир.</p>
+              </div>
+              <div class="col-12 mt-4">
+                <form action="/">
+                  <div class="row justify-content-between">
+                    <div class="col-lg-5">
+                      <div class="crossborder__card-wrapper">
+                        <h3 class="d-lg-none mb-3">С карты</h3>
+                        <div class="d-none d-lg-block">
+                          <h4>Отправить из</h4>
+
+                          <div class="crossborder__dropdown dropdown">
+                            <input type="hidden" id="sender_country" name="sender-country" value="Poland" />
+                            <button
+                              class="heading-color crossborder__dropdown-btn crossborder__dropdown-poland dropdown-toggle text-left"
+                              type="button"
+                              id="dropdownCountryButton"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              Польша
+                            </button>
+                            <div
+                              class="crossborder__dropdown-menu dropdown-menu overflow-auto mt-0"
+                              aria-labelledby="dropdownCountryButton"
+                            >
+                              <a aria-country="Czech" class="crossborder__dropdown-item dropdown-item"
+                                >Чешская Республика</a
+                              >
+                              <a aria-country="France" class="crossborder__dropdown-item dropdown-item">Франция</a>
+                              <a aria-country="Germany" class="crossborder__dropdown-item dropdown-item">Германия</a>
+                              <a aria-country="Belgium" class="crossborder__dropdown-item dropdown-item">Бельгия</a>
+                              <a aria-country="Austria" class="crossborder__dropdown-item dropdown-item">Австрия</a>
+                              <a aria-country="Lithuania" class="crossborder__dropdown-item dropdown-item">Литва</a>
+                              <a aria-country="Latvia" class="crossborder__dropdown-item dropdown-item">Латвия</a>
+                              <a aria-country="Estonia" class="crossborder__dropdown-item dropdown-item">Эстония</a>
+                              <a aria-country="Romania" class="crossborder__dropdown-item dropdown-item">Румыния</a>
+                              <a aria-country="Norway" class="crossborder__dropdown-item dropdown-item">Норвегия</a>
+                              <a aria-country="Ireland" class="crossborder__dropdown-item dropdown-item">Ирландия</a>
+                              <a aria-country="Poland" class="crossborder__dropdown-item dropdown-item">Польша</a>
+                            </div>
+                          </div>
+
+                          <!--                        <div class="form-group select-input-wrapper" data-label="Польша">-->
+                          <!--                          <select class="select-search form-control form-input js-example-basic-single" name="select">-->
+                          <!--                            <option value=""></option>-->
+                          <!--                            <option value="1">Чешская Республика</option>-->
+                          <!--                            <option value="2">Франция</option>-->
+                          <!--                            <option value="3">Германия</option>-->
+                          <!--                            <option value="4">Австрия</option>-->
+                          <!--                            <option value="5">Литва</option>-->
+                          <!--                            <option value="6">Латвия</option>-->
+                          <!--                            <option value="7">Эстония</option>-->
+                          <!--                          </select>-->
+                          <!--                        </div>-->
+                        </div>
+                        <div class="bank-card">
+                          <div class="bank-card__top">
+                            <div class="crossborder__dropdown-mobile d-lg-none">
+                              <div class="crossborder__dropdown dropdown">
+                                <input
+                                  type="hidden"
+                                  id="sender_country_mobile"
+                                  name="sender-country-mobile"
+                                  value="Poland"
+                                />
+                                <button
+                                  class="heading-color crossborder__dropdown-btn crossborder__dropdown-poland dropdown-toggle text-left text-break"
+                                  type="button"
+                                  id="dropdownCountryButtonMobile"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  Польша
+                                </button>
+                                <div
+                                  class="crossborder__dropdown-menu dropdown-menu overflow-auto mt-0"
+                                  aria-labelledby="dropdownCountryButtonMobile"
+                                >
+                                  <a aria-country="Czech" class="crossborder__dropdown-item dropdown-item"
+                                    >Чешская Республика</a
+                                  >
+                                  <a aria-country="France" class="crossborder__dropdown-item dropdown-item">Франция</a>
+                                  <a aria-country="Germany" class="crossborder__dropdown-item dropdown-item"
+                                    >Германия</a
+                                  >
+                                  <a aria-country="Belgium" class="crossborder__dropdown-item dropdown-item">Бельгия</a>
+                                  <a aria-country="Austria" class="crossborder__dropdown-item dropdown-item">Австрия</a>
+                                  <a aria-country="Lithuania" class="crossborder__dropdown-item dropdown-item">Литва</a>
+                                  <a aria-country="Latvia" class="crossborder__dropdown-item dropdown-item">Латвия</a>
+                                  <a aria-country="Estonia" class="crossborder__dropdown-item dropdown-item">Эстония</a>
+                                  <a aria-country="Romania" class="crossborder__dropdown-item dropdown-item">Румыния</a>
+                                  <a aria-country="Norway" class="crossborder__dropdown-item dropdown-item">Норвегия</a>
+                                  <a aria-country="Ireland" class="crossborder__dropdown-item dropdown-item"
+                                    >Ирландия</a
+                                  >
+                                  <a aria-country="Poland" class="crossborder__dropdown-item dropdown-item">Польша</a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--                          <div class="form-group select-input-wrapper select-mobile d-lg-none" data-label="Польша">-->
+                            <!--                            <select class="select-search form-control form-input js-example-basic-single"-->
+                            <!--                              name="select">-->
+                            <!--                              <option value=""></option>-->
+                            <!--                              <option value="1">Чешская Республика</option>-->
+                            <!--                              <option value="2">Франция</option>-->
+                            <!--                              <option value="3">Германия</option>-->
+                            <!--                              <option value="4">Австрия</option>-->
+                            <!--                              <option value="5">Литва</option>-->
+                            <!--                              <option value="6">Латвия</option>-->
+                            <!--                              <option value="7">Эстония</option>-->
+                            <!--                            </select>-->
+                            <!--                          </div>-->
+
+                            <img src="img/banks/mastercard.png" alt="mastercard" />
+                          </div>
+                          <div class="bank-card__body">
+                            <div class="bank-card__number">
+                              <div class="form-group">
+                                <input
+                                  type="tel"
+                                  class="form-control form-input"
+                                  id="card-number"
+                                  name="name"
+                                  autocomplete="off"
+                                  placeholder="0000 0000 0000 0000"
+                                  aria-required="true"
+                                />
+                                <label class="control-label form-label" for="card-number">Номер карты</label>
+                                <div class="help-block"></div>
+                              </div>
+                            </div>
+                            <div class="bank-card__card-data">
+                              <div class="form-group bank-card__expires">
+                                <input
+                                  type="text"
+                                  class="form-control form-input"
+                                  id="card-expires"
+                                  name="name"
+                                  autocomplete="off"
+                                  placeholder="ММ / ГГ"
+                                  aria-required="true"
+                                />
+                                <label class="control-label form-label" for="card-expires">Срок действия</label>
+                                <div class="help-block"></div>
+                              </div>
+                              <div class="form-group bank-card__cvv">
+                                <input
+                                  type="tel"
+                                  class="form-control form-input input-cvv"
+                                  id="card-cvv"
+                                  name="name"
+                                  autocomplete="off"
+                                  placeholder="***"
+                                  aria-required="true"
+                                />
+                                <label class="control-label form-label" for="card-cvv">CVV</label>
+                                <a
+                                  role="button"
+                                  tabindex="0"
+                                  class="bank-card__cvv-button"
+                                  id="cvv-popover"
+                                  data-toggle="popover"
+                                  data-title="CVV"
+                                  data-content="Трехзначный код на оборотной стороне банковской карты"
+                                ></a>
+                                <div class="help-block"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="crossborder__transfer-card mt-3">
+                          <div class="row col-pad8">
+                            <div class="col-sm-8 col-7">
+                              <div class="form-group has-success">
+                                <input
+                                  type="tel"
+                                  class="form-control form-input"
+                                  id="form-icon-r-success"
+                                  name="name"
+                                  autocomplete="off"
+                                  placeholder="0.00"
+                                  aria-required="true"
+                                  value="100"
+                                />
+                                <label class="control-label form-label" for="form-icon-r-success">Сумма перевода</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-4 col-5">
+                              <div class="form-group select-input-wrapper" data-label="EUR">
+                                <select class="form-control form-input js-example-basic-single" name="select">
+                                  <option value=""></option>
+                                  <option value="1">EUR</option>
+                                  <option value="2">USD</option>
+                                  <option value="3">PLN</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="position-relative">
+                            <span class="heading-color px-2"
+                              >Будет списано: <span class="heading-color">106.00 EUR</span>
+                            </span>
+                            <a
+                              role="button"
+                              tabindex="-1"
+                              class="transfer-card-button question-popover"
+                              data-toggle="popover"
+                              data-content="Комиссия за перевод составляет 1,5% + 40 грн (минимально - эквивалент 2 EUR) от суммы перевода."
+                              data-placement="top"
+                              data-original-title=""
+                              title=""
+                            ></a>
+                          </div>
+                        </div>
+                        <div class="crossborder__userdata">
+                          <div class="collapse show" id="username-card">
+                            <div class="row mt-4">
+                              <div class="col-12">
+                                <h4 class="mb-0">Данные отправителя</h4>
+                              </div>
+                            </div>
+                            <div class="dropdown mt-3">
+                              <input type="hidden" id="user_name" name="user-name" value="YAKOVENKO MUKOLA" />
+                              <input type="hidden" id="user_country" name="user-country" value="POLAND" />
+                              <input
+                                type="hidden"
+                                id="user_address"
+                                name="user-address"
+                                value="000000, Krakow, Welykoweska, 23"
+                              />
+                              <div id="dropdownCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="username-card username-card--active" id="sender-title-card-active">
+                                  <p class="username-card__title mb-2" data-user-name>YAKOVENKO MUKOLA</p>
+                                  <p class="username-card__country mb-2" data-user-country>POLAND</p>
+                                  <p class="username-card__address mb-0" data-user-address>
+                                    000000, Krakow, Welykoweska, 23
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="dropdown-menu" aria-labelledby="dropdownCard">
+                                <div class="username-card">
+                                  <p class="username-card__title mb-2" data-user-name>YAKOVENKO IVAN</p>
+                                  <p class="username-card__country mb-2" data-user-country>CHECH REPUBLIK</p>
+                                  <p class="username-card__address mb-0" data-user-address>
+                                    000000, Brno, Welykoweska, 23
+                                  </p>
+                                </div>
+                                <div class="username-card">
+                                  <p class="username-card__title mb-2" data-user-name>YAKOVENKO OLEG</p>
+                                  <p class="username-card__country mb-2" data-user-country>FRANCE</p>
+                                  <p class="username-card__address mb-0" data-user-address>
+                                    000000, Paris, Welykoweska, 23
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <button
+                              class="btn btn-outline btn-block mt-3"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#username-card, #username-input"
+                              aria-expanded="false"
+                              aria-controls="username-input"
+                            >
+                              Другой отправитель
+                            </button>
+                          </div>
+                          <div class="collapse" id="username-input">
+                            <div class="row mt-4">
+                              <div class="col-md-6">
+                                <h4 class="mb-0">Данные отправителя</h4>
+                              </div>
+                              <div class="col-md-6 text-md-right">
+                                <a
+                                  id="open-saves"
+                                  href="#username-card"
+                                  data-toggle="collapse"
+                                  data-target="#username-card, #username-input"
+                                  aria-expanded="false"
+                                  aria-controls="username-card, username-input"
+                                  >Мои сохранения</a
+                                >
+                              </div>
+                            </div>
+                            <div class="row col-pad8 mt-3">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input
+                                    type="text"
+                                    class="form-control form-input"
+                                    id="form-name-sender"
+                                    name="name"
+                                    autocomplete="off"
+                                    placeholder="Имя"
+                                    aria-required="true"
+                                  />
+                                  <label class="control-label form-label" for="form-name-sender">Имя</label>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input
+                                    type="text"
+                                    class="form-control form-input"
+                                    id="form-surname-sender"
+                                    name="surname"
+                                    autocomplete="off"
+                                    placeholder="Фамилия"
+                                    aria-required="true"
+                                  />
+                                  <label class="control-label form-label" for="form-surname-sender">Фамилия</label>
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-group">
+                                  <input
+                                    type="text"
+                                    class="form-control form-input"
+                                    id="form-city-sender"
+                                    name="city"
+                                    autocomplete="off"
+                                    placeholder="Город"
+                                    aria-required="true"
+                                  />
+                                  <label class="control-label form-label" for="form-city-sender">Город</label>
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-group">
+                                  <input
+                                    type="text"
+                                    class="form-control form-input"
+                                    id="form-index-sender"
+                                    name="index"
+                                    autocomplete="off"
+                                    placeholder="Индекс"
+                                    aria-required="true"
+                                  />
+                                  <label class="control-label form-label" for="form-index-sender">Индекс</label>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="form-group">
+                                  <input
+                                    type="text"
+                                    class="form-control form-input"
+                                    id="form-address-sender"
+                                    name="address"
+                                    autocomplete="off"
+                                    placeholder="Адрес"
+                                    aria-required="true"
+                                  />
+                                  <label class="control-label form-label" for="form-address-sender">Адрес</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg d-none d-lg-block">
+                      <div class="crossborder__arrow text-center">
+                        <img src="img/crossborder2.0/half-arrow-right.svg" alt="half-arrow-right" />
+                      </div>
+                    </div>
+                    <div class="col-lg-5">
+                      <div class="crossborder__card-wrapper">
+                        <h3 class="d-lg-none mb-3">На карту</h3>
+                        <div class="d-none d-lg-block">
+                          <h4>Отправить в</h4>
+
+                          <!-- <div class="crossborder__dropdown dropdown">
+                            <input type="hidden" id="sender_country" name="sender-country" value="Poland" />
+                            <button
+                              class="heading-color crossborder__dropdown-btn crossborder__dropdown-ukraine dropdown-toggle text-left"
+                              type="button"
+                              id="dropdownCountryButton"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              Украина
+                            </button>
+                            <div
+                              class="crossborder__dropdown-menu dropdown-menu overflow-auto mt-0"
+                              aria-labelledby="dropdownCountryButton"
+                            >
+                              <a aria-country="Czech" class="crossborder__dropdown-item dropdown-item"
+                                >Чешская Республика</a
+                              >
+                              <a aria-country="France" class="crossborder__dropdown-item dropdown-item">Франция</a>
+                              <a aria-country="Germany" class="crossborder__dropdown-item dropdown-item">Германия</a>
+                              <a aria-country="Belgium" class="crossborder__dropdown-item dropdown-item">Бельгия</a>
+                              <a aria-country="Austria" class="crossborder__dropdown-item dropdown-item">Австрия</a>
+                              <a aria-country="Lithuania" class="crossborder__dropdown-item dropdown-item">Литва</a>
+                              <a aria-country="Latvia" class="crossborder__dropdown-item dropdown-item">Латвия</a>
+                              <a aria-country="Estonia" class="crossborder__dropdown-item dropdown-item">Эстония</a>
+                              <a aria-country="Romania" class="crossborder__dropdown-item dropdown-item">Румыния</a>
+                              <a aria-country="Norway" class="crossborder__dropdown-item dropdown-item">Норвегия</a>
+                              <a aria-country="Ireland" class="crossborder__dropdown-item dropdown-item">Ирландия</a>
+                              <a aria-country="Poland" class="crossborder__dropdown-item dropdown-item">Польша</a>
+                            </div>
+                          </div> -->
+
+                          <div class="form-group select-input-wrapper" data-label="Украина">
+                            <select class="select-search form-control form-input js-example-basic-single" name="select">
+                              <option value=""></option>
+                              <option value="1">Чешская Республика</option>
+                              <option value="2">Франция</option>
+                              <option value="3">Германия</option>
+                              <option value="4">Австрия</option>
+                              <option value="5">Литва</option>
+                              <option value="6">Латвия</option>
+                              <option value="7">Эстония</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="bank-card">
+                          <div class="bank-card__top">
+                            <!-- <div class="crossborder__dropdown-mobile d-lg-none">
+                              <div class="crossborder__dropdown dropdown">
+                                <input
+                                  type="hidden"
+                                  id="sender_country_mobile"
+                                  name="sender-country-mobile"
+                                  value="Ukraine"
+                                />
+                                <button
+                                  class="heading-color crossborder__dropdown-btn crossborder__dropdown-ukraine dropdown-toggle text-left text-break"
+                                  type="button"
+                                  id="dropdownCountryButtonMobile"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  Украина
+                                </button>
+                                <div
+                                  class="crossborder__dropdown-menu dropdown-menu overflow-auto mt-0"
+                                  aria-labelledby="dropdownCountryButtonMobile"
+                                >
+                                  <a aria-country="Czech" class="crossborder__dropdown-item dropdown-item"
+                                    >Чешская Республика</a
+                                  >
+                                  <a aria-country="France" class="crossborder__dropdown-item dropdown-item">Франция</a>
+                                  <a aria-country="Germany" class="crossborder__dropdown-item dropdown-item"
+                                    >Германия</a
+                                  >
+                                  <a aria-country="Belgium" class="crossborder__dropdown-item dropdown-item">Бельгия</a>
+                                  <a aria-country="Austria" class="crossborder__dropdown-item dropdown-item">Австрия</a>
+                                  <a aria-country="Lithuania" class="crossborder__dropdown-item dropdown-item">Литва</a>
+                                  <a aria-country="Latvia" class="crossborder__dropdown-item dropdown-item">Латвия</a>
+                                  <a aria-country="Estonia" class="crossborder__dropdown-item dropdown-item">Эстония</a>
+                                  <a aria-country="Romania" class="crossborder__dropdown-item dropdown-item">Румыния</a>
+                                  <a aria-country="Norway" class="crossborder__dropdown-item dropdown-item">Норвегия</a>
+                                  <a aria-country="Ireland" class="crossborder__dropdown-item dropdown-item"
+                                    >Ирландия</a
+                                  >
+                                  <a aria-country="Poland" class="crossborder__dropdown-item dropdown-item">Польша</a>
+                                </div>
+                              </div>
+                            </div> -->
+
+                            <div class="form-group select-input-wrapper select-mobile d-lg-none" data-label="Украина">
+                              <select
+                                class="select-search form-control form-input js-example-basic-single"
+                                name="select"
+                              >
+                                <option value=""></option>
+                                <option value="1">Чешская Республика</option>
+                                <option value="2">Франция</option>
+                                <option value="3">Германия</option>
+                                <option value="4">Австрия</option>
+                                <option value="5">Литва</option>
+                                <option value="6">Латвия</option>
+                                <option value="7">Эстония</option>
+                              </select>
+                            </div>
+                            <img src="img/banks/mastercard.png" alt="mastercard" />
+                          </div>
+                          <div class="bank-card__body">
+                            <div class="bank-card__number">
+                              <div class="form-group">
+                                <input
+                                  type="tel"
+                                  class="form-control form-input"
+                                  id="card-number5"
+                                  name="name"
+                                  autocomplete="off"
+                                  placeholder="0000 0000 0000 0000"
+                                  aria-required="true"
+                                />
+                                <label class="control-label form-label" for="card-number5">Номер карты</label>
+                                <div class="help-block"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-4">
+                          <div class="col-md-6">
+                            <h4 class="mb-0">Данные получателя</h4>
+                          </div>
+                          <div class="col-md-6 text-md-right">
+                            <i class="main-blue-color">Заполнять латиницей</i>
+                          </div>
+                        </div>
+                        <div class="row col-pad8 mt-3">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control form-input"
+                                id="form-name-recipient"
+                                name="name"
+                                autocomplete="off"
+                                placeholder="Имя"
+                                aria-required="true"
+                              />
+                              <label class="control-label form-label" for="form-name-recipient">Имя</label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control form-input"
+                                id="form-surname-recipient"
+                                name="surname"
+                                autocomplete="off"
+                                placeholder="Фамилия"
+                                aria-required="true"
+                              />
+                              <label class="control-label form-label" for="form-surname-recipient">Фамилия</label>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control form-input"
+                                id="form-city-recipient"
+                                name="city"
+                                autocomplete="off"
+                                placeholder="Город"
+                                aria-required="true"
+                              />
+                              <label class="control-label form-label" for="form-city-recipient">Город</label>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control form-input"
+                                id="form-address-recipient"
+                                name="address"
+                                autocomplete="off"
+                                placeholder="Адрес"
+                                aria-required="true"
+                              />
+                              <label class="control-label form-label" for="form-address-recipient">Адрес</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="checkbox-control mt-2">
+                          <input class="checkbox-input" type="checkbox" id="checkbox-agree" />
+                          <label class="checkbox-label" for="checkbox-agree"
+                            >Я согласен с условиями
+                            <a href="https://www.ipay.ua/media/files/public-offer.pdf" download>публичного договора</a>
+                            и
+                            <a href="https://www.ipay.ua/media/files/Privacy-policy.pdf" download
+                              >политикой конфиденциальности</a
+                            ></label
+                          >
+                        </div>
+                        <button class="btn btn-green btn-block mt-4" type="submit">Перевести 106 EUR</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="crossborder__limits">
+          <div class="container">
+            <div class="crossborder__limits-border">
+              <h2 class="mb-3">Лимиты и ограничения</h2>
+              <div class="row mt-4">
+                <div class="col-lg-6">
+                  <div class="crossborder__limits-left pr-lg-3 pr-xl-4 mb-4 mb-xl-0">
+                    <img src="img/crossborder2.0/from-Ukraine.svg" alt="from-Ukraine" />
+                    <h4 class="my-4">Переводы с карты на карту из Украину за рубеж:</h4>
+                    <div class="crossborder__limits-card d-flex align-items-start">
+                      <div class="cards-icon">
+                        <p class="mb-2 font-weight-bold">29 999 UAH</p>
+                        <p>Максимальная сумма перевода одной транзакцией</p>
+                      </div>
+                    </div>
+                    <div class="crossborder__limits-card d-flex align-items-start mt-3">
+                      <div class="calendar-icon">
+                        <p class="mb-2 font-weight-bold">360 000 UAH</p>
+                        <p>Максимальная сумма переводов в месяц</p>
+                      </div>
+                    </div>
+                    <div class="crossborder__limits-card d-flex align-items-start my-3">
+                      <div class="mastercard-icon">
+                        <p class="mb-2 font-weight-bold">Mastercard</p>
+                        <p>Перевод возможен только с валютных карт Mastercard</p>
+                      </div>
+                    </div>
+                    <h5 class="mt-4">Відправити гроші за межі України можна у такі країни:</h5>
+                    <p>
+                      Австрія, Азербайджан, Албанія, Ангола, Вірменія, Бангладеш, Бельгія, Бенін, Болгарія, Боснія і
+                      Герцеговина, Бутан, Великобританія, Угорщина, В'єтнам, Габон, Гвінея, Німеччина, Гонконг, Греція,
+                      Грузія, Данія, Замбія, Ізраїль, Індія, Індонезія, Ірландія, Ісландія, Іспанія, Італія, Ємен,
+                      Казахстан, Камбоджа, Камерун, Канада Катар, Кенія, Кіпр, Киргизія, Тайвань, провінція Китаю,
+                      Кувейт, Лаоська Народно-Демократична Республіка, Латвія, Литва, Ліхтенштейн, Люксембург,
+                      Мадагаскар, Maкау, Македонія, Мальта, Марокко, Мозамбік, Молдова, Монако, Монголія, Непал,
+                      Нігерія, Нідерланди, Норвегія, Об'єднані Арабські Емірати, Оман, Папуа-Нова Гвінея, Польща,
+                      Португалія, Конго, Республіка Корея, Румунія, Саудівська Аравія, Сербія, Сінгапур, Словаччина,
+                      Словенія, Таджикистан, Таїланд, Танзанія, Об'єднана Республіка Туніс, Туркменістан, Туреччина,
+                      Уганда, Узбекистан, Філіппіни, Фінляндія, Франція, Хорватія, Чорногорія, Чеська Республіка,
+                      Швейцарія, Швеція, Шрі Ланка, Екваторіальна Гвінея, Естонія, ПАР, Японія.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="crossborder__limits-right pl-lg-3 pl-xl-4">
+                    <img src="img/crossborder2.0/in-Ukraine.svg" alt="in-Ukraine" />
+                    <h4 class="my-4">Переводы с карты на карту в Украину из-за рубежа:</h4>
+                    <div class="crossborder__limits-card">
+                      <div class="cards-icon">
+                        <p class="mb-2 font-weight-bold">29 999 UAH</p>
+                        <p>Максимальная сумма перевода одной транзакцией</p>
+                      </div>
+                    </div>
+                    <div class="crossborder__limits-card d-flex align-items-start mt-3">
+                      <div class="calendar-icon">
+                        <p class="mb-2 font-weight-bold">360 000 UAH</p>
+                        <p>Максимальная сумма переводов в месяц</p>
+                      </div>
+                    </div>
+                    <div class="crossborder__limits-card d-flex align-items-start my-3">
+                      <div class="mastercard-icon">
+                        <p class="mb-2 font-weight-bold">Mastercard</p>
+                        <p>Перевод возможен только с карт Mastercard</p>
+                      </div>
+                    </div>
+                    <h5 class="mt-4">Надіслати кошти в Україну можна з таких країн:</h5>
+                    <p>
+                      Австралія, Австрія, Азербайджан, Албанія, Вірменія, Бельгія, Болгарія, Боснія і Герцеговина,
+                      Великобританія, Угорщина, Німеччина, Греція, Грузія, Данія, Єгипет, Ізраїль, Ірландія, Ісландія,
+                      Іспанія, Італія, Казахстан, Кіпр, Киргизія, Латвія, Литва, Ліхтенштейн, Люксембург, Македонія,
+                      Мальта, Молдова, Монако, Нідерланди, Норвегія, Польща, Португалія, Республіка Корея, Румунія,
+                      Сербія, Словаччина, Словенія, Таджикистан, Туркменістан, Туреччина, Узбекистан, Фінляндія,
+                      Франція, Хорватія, Чорногорія, Чеська Республіка, Швейцарія, Швеція, Естонія.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="crossborder__questions">
+          <div class="container">
+            <h2>Частые вопросы</h2>
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="accordion" id="accordionQuestions">
+                  <div class="crossborder__questions-card">
+                    <div class="crossborder__questions-header" id="headingOne">
+                      <h4 class="mb-0">
+                        <button
+                          class="btn btn-block"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Какие карты можно использовать для перевода?
+                        </button>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionQuestions"
+                    >
+                      <p class="mb-4">
+                        Для перевода вы можете использовать любые карты Mastercard, которые поддерживают технологию 3D
+                        Secure. Карта получателя должна быть оформлена в украинском банке в иностранной валюте.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="crossborder__questions-card">
+                    <div class="crossborder__questions-header" id="headingTwo">
+                      <h4 class="mb-0">
+                        <button
+                          class="btn btn-block collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          Как быстро деньги зачисляются на счет получателя?
+                        </button>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionQuestions"
+                    >
+                      <p class="mb-4">
+                        Как правило, деньги зачисляются на карту получателя в течение нескольких минут. В редких случаях
+                        (менее 3%) банк получателя может зачислить деньги в течение 24 часов.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="crossborder__questions-card">
+                    <div class="crossborder__questions-header" id="headingThree">
+                      <h4 class="mb-0">
+                        <button
+                          class="btn btn-block collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          Какую валюту можно перевести?
+                        </button>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      class="collapse"
+                      aria-labelledby="headingThree"
+                      data-parent="#accordionQuestions"
+                    >
+                      <p class="mb-4">
+                        Отправитель указывает сумму в EUR, USD или UAH, которая должна быть зачислена получателю. При
+                        этом с карты отправителя будет списана сумма в Валюте его карты согласно с курсом платежной
+                        системы.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="crossborder__questions-card">
+                    <div class="crossborder__questions-header" id="headingFour">
+                      <h4 class="mb-0">
+                        <button
+                          class="btn btn-block collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                        >
+                          Какая комиссия за перевод?
+                        </button>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapseFour"
+                      class="collapse"
+                      aria-labelledby="headingFour"
+                      data-parent="#accordionQuestions"
+                    >
+                      <p class="mb-4">
+                        Комиссию за перевод оплачивает Отправитель, она составляет 1,5% + 40 грн (минимально -
+                        эквивалент 2 EUR) от суммы перевода.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="crossborder__questions-card">
+                    <div class="crossborder__questions-header" id="headingFive">
+                      <h4 class="mb-0">
+                        <button
+                          class="btn btn-block collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          Нужно ли регистрироваться для отправки перевода?
+                        </button>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapseFive"
+                      class="collapse"
+                      aria-labelledby="headingFive"
+                      data-parent="#accordionQuestions"
+                    >
+                      <p class="mb-4">
+                        Нет, для перевода денег не обязательно быть зарегистрированным пользователем. Но при регистрации
+                        вы можете сохранить данные об отправителе и получатее, чтобы совершать платежи быстрее
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-none d-lg-block">
+          <div class="container">
+            <div class="lorem-text">
+              <p class="mb-0">Lorem ipsum dolor sit amet:</p>
+              <ul class="list list--circle small--circle">
+                <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+                <li>
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  <ul class="list list--minus small--minus">
+                    <li>
+                      Кажется вы уже платили за услуги в этой категории. Не хотите повторить? к последним платежам.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="list list--circle">
+                <li>
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  <ul class="list list--minus">
+                    <li>
+                      Кажется вы уже платили за услуги в этой категории. Не хотите повторить? к последним платежам.
+                    </li>
+                    <li>
+                      Кажется вы уже платили за услуги в этой категории. Не хотите повторить? к последним платежам.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Semper auctor neque vitae tempus quam pellentesque. Ridiculus mus mauris vitae
+                ultricies. Donec et odio pellentesque diam volutpat commodo sed egestas egestas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- main area -->
+
+      <!-- footer -->
+      <div class="main-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="row no-gutters">
+                <div class="col-md-6 col-lg-3">
+                  <div class="footer-widget">
+                    <p>0 800 60-11-60</p>
+                    <p class="small">Бесплатно с мобильного</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mt-3 mt-md-0">
+                  <div class="footer-widget">
+                    <p>+38 044 502 11 60</p>
+                    <p class="small">Для звонков из-за границы</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                  <div class="footer-widget">
+                    <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                    <p class="small">Пишите на e-mail</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mt-3 mt-lg-0">
+                  <div class="footer-widget">
+                    <p>График работы</p>
+                    <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                    <p class="small">Сб - Нд 9:00 - 21:00</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="footer-lang">
+                    <a href="#" class="footer-lang__fb"></a>
+                    <span class="small">Язык:</span>
+                    <ul class="footer-lang__list">
+                      <li class="footer-lang__item footer-lang__item--current">
+                        <a href="#" class="footer-lang__link">РУС</a>
+                      </li>
+                      <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                      <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="row">
+                <div class="col-6 mt-5 mt-lg-0">
+                  <div class="footer-widget">
+                    <ul class="footer-widget__list">
+                      <li><a href="#">О Компании</a></li>
+                      <li><a href="#">Новости и Акции</a></li>
+                      <li><a href="#">Найти платеж</a></li>
+                      <li><a href="#">Для бизнеса</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 mt-5 mt-lg-0">
+                  <div class="footer-widget">
+                    <ul class="footer-widget__list">
+                      <li><a href="#">Безопасность</a></li>
+                      <li><a href="#">Вопросы и ответы</a></li>
+                      <li><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-100 footer-hr">
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+              <p class="footer-copyright extra-small">
+                Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська,
+                буд. 82 А, корпус Б, офіс 309
+              </p>
+              <p class="footer-copyright extra-small">
+                Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна
+                система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А
+              </p>
+              <p class="footer-copyright extra-small">
+                Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/select2-style.js"></script>
+    <script src="/js/crossborder2.0.js"></script>
+  </body>
+</html>
