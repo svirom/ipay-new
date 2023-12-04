@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/search-form.css">
+    <link rel="stylesheet" href="/css/bill-result.css">
+    <link rel="stylesheet" href="/css/bill-message.css">
+    <link rel="stylesheet" href="/css/service-rate.css">
+    <link rel="stylesheet" href="/css/discount-wheel.css">
+
+    <title>Dicount Wheel Success</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__icon--search">
+                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                    <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <a class="dropdown-item dropdown-login-mobile" href="#">
+                        <span>Войти</span> 
+                        <span>или зарегистрироваться</span>
+                      </a>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="#" class="form-search__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Услуги</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Коммунальные услуги</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Оплата коммунальных услуг</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- main area -->
+          <main class="col-lg-8">
+            <div class="row">
+
+              <div class="col-12">
+                <!-- bill main widget -->
+                <div class="bill-main" id="bill-main-widget">
+                  <div class="row">
+
+                    <div class="col-12 mt-lg-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
+                    </div>
+      
+                    <div class="col-12 mb-3">
+                      <div class="bill-title">
+                        <h1>Оплата Коммунальной услуги по всем городам Украины </h1>
+                      </div>
+                    </div>
+      
+                    <div class="col-12 mt-1 mt-lg-3">
+      
+                      <div class="row">
+                        <div class="col-12 mt-4">
+                          <!-- bill result widget -->
+                          <div class="bill-result icon-success" id="bill-result-widget">
+                            <div class="bill-result__row">
+                              <div class="bill-result__header">
+                                <h3>Платеж успешен!</h3>
+                                <p>Платеж №37473537</p>
+
+                                <!-- promo discount wheel -->
+                                <div class="discount-wheel-widget mt-3">
+
+                                  <div class="discount-wheel-banner">
+                                    <div class="discount-wheel-banner__container">
+                                      <div class="row text-left">
+                                        <div class="col-8 col-md-7">
+                                          <p class="discount-wheel-banner__title">Оберніть колесо та заберіть гарантовану знижку від mta</p>
+                                          <div class="row align-items-md-center">
+                                            <div class="col-md">
+                                              <a href="#" class="btn btn-red" data-toggle="modal" data-backdrop="static" data-target="#modal-discount-wheel">Обернути</a>
+                                            </div>
+                                            <div class="col-md-auto">
+                                              <img src="img/discount-wheel/mta-logo.svg" alt="MTA">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="modal fade modal-discount-wheel" id="modal-discount-wheel" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                              
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                              <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                          </button>
+                                        </div>
+                              
+                                        <div class="modal-body">
+
+                                          <div class="discount-wheel-wrapper" id="discount-wheel-wrapper">
+                                            <p class="modal-discount-wheel__title mb-2 text-center">Обертайте колесо</p>
+                                            <p class="mb-2 heading-color text-center">забирайте гарантовану знижку на mta</p>
+  
+                                            <div class="discount-wheel-section hidden" id="discount-wheel-section">
+  
+                                              <div class="discount-wheel-container" id="discount-wheel-container"></div>
+  
+                                              <button class="btn btn-red btn-spin mb-3" id="btn-spin">Обернути колесо</button>
+  
+                                              <div class="w-100">
+                                                <img src="img/discount-wheel/mta-logo.svg" alt="MTA">
+                                              </div>
+                                              
+                                            </div>
+                                          </div>
+
+                                          <div class="discount-result-wrapper hidden" id="discount-result-wrapper">
+
+                                            <p class="heading-color font-weight-bold text-center mb-0">Ви отримали</p>
+                                            <span class="discount-result-entry text-center" id="discount-result-entry"></span>
+                                            <p class="discount-result-info mb-3" id="discount-result-info" data-result-info-1="При покупці від 2000 грн в інтернет-магазині техніки" data-result-info-2="При покупці від 5000 грн в інтернет-магазині техніки" data-result-info-3="При покупці від 10000 грн в інтернет-магазині техніки" data-result-info-4="на аксесуари (на чохол, скло, тримачі, рюкзаки, тощо) в інтернет-магазині техніки" data-result-info-5="на гаджети (на power bank, навушники, смарт-годинники, тощо) в інтернет-магазині техніки" data-result-info-6="на побутову техніку (на всю техніку для дому, кухні та для догляду) в інтернет-магазині техніки" data-result-before="до"><span class="heading-color" id="discount-result-text"></span> <u>mta</u>!</p>
+
+                                            <div class="discount-result-form text-left">
+                                              <p class="heading-color mb-2">Введіть email, щоб ми відправили вашу знижку</p>
+                                              <form action="">
+                                                <div class="row">
+                                                  <div class="col">
+                                                    <div class="form-group">
+                                                      <input type="email" class="form-control form-input" name="name" id="discount-email">
+                                                      <label class="control-label form-label" for="discount-email">Введіть e-mail</label>
+                                                      <div class="help-block">Якась фігня</div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-auto">
+                                                    <button type="submit" class="btn btn-red btn-empty">
+                                                      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.875 10.4441L13.0089 16.875L28.75 2.5L1.875 10.4441Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                                                        <path d="M19.6037 28.125L13.125 17.0336L28.75 2.5L19.6037 28.125Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                                                      </svg>
+                                                    </button>
+                                                  </div>
+                                                </div>
+
+                                                <!-- <p class="discount-result-success mt-2 mb-0">Знижка відправлена на вказаний email, якщо не бачите листа, перевірте папку “спам”</p> -->
+                                              </form>
+                                            </div>
+
+                                            <p class="discount-result-question" role="button" data-toggle="collapse" data-target="#discount-result-question" aria-expanded="false">
+                                              <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 0.5C6.41775 0.5 4.87103 0.969192 3.55544 1.84824C2.23985 2.72729 1.21447 3.97672 0.608967 5.43853C0.00346629 6.90034 -0.15496 8.50887 0.153721 10.0607C0.462403 11.6126 1.22433 13.038 2.34315 14.1569C3.46197 15.2757 4.88743 16.0376 6.43928 16.3463C7.99113 16.655 9.59966 16.4965 11.0615 15.891C12.5233 15.2855 13.7727 14.2602 14.6518 12.9446C15.5308 11.629 16 10.0822 16 8.5C16 7.44942 15.7931 6.40914 15.391 5.43853C14.989 4.46793 14.3997 3.58601 13.6569 2.84315C12.914 2.10028 12.0321 1.511 11.0615 1.10896C10.0909 0.706926 9.05058 0.5 8 0.5ZM8.8 14.1H7.2V12.5H8.8V14.1ZM10.456 7.9L9.736 8.636C9.41378 8.91387 9.16124 9.26345 8.99868 9.65665C8.83612 10.0499 8.76807 10.4757 8.8 10.9H7.2V10.5C7.20152 9.65148 7.53789 8.83786 8.136 8.236L9.128 7.228C9.2784 7.08132 9.39771 6.90584 9.47881 6.71204C9.5599 6.51823 9.60112 6.31008 9.6 6.1C9.6 5.67565 9.43143 5.26869 9.13137 4.96863C8.83132 4.66857 8.42435 4.5 8 4.5C7.57566 4.5 7.16869 4.66857 6.86863 4.96863C6.56857 5.26869 6.4 5.67565 6.4 6.1H4.8C4.8 5.25131 5.13715 4.43737 5.73726 3.83726C6.33738 3.23714 7.15131 2.9 8 2.9C8.8487 2.9 9.66263 3.23714 10.2627 3.83726C10.8629 4.43737 11.2 5.25131 11.2 6.1C11.2004 6.7749 10.9328 7.42235 10.456 7.9Z" fill="#E84F35"/>
+                                              </svg>
+                                              <span>Як отримати більшу знижку?</span>
+                                            </p>
+                                            <div id="discount-result-question" class="collapse">
+                                              <p class="discount-result-question__collapse heading-color mb-3">
+                                                Робіть додаткові оплати на iPay.ua, та обертайте колесо на кожному успіху платежу, щоб мати можливість отримати більшу знижку.                
+                                              </p>
+                                            </div>
+
+                                            <div class="discount-result-list">
+                                              <p><strong>Як це працює?</strong></p>
+                                              <ul class="list list--regular">
+                                                <li>Заходьте в магазин <a href='https://mta.ua/' tabindex='0' rel="nofollow" target="_blank"><u>mta.ua</u></a></li>
+                                                <li>замовляйте бажану техніку</li>
+                                                <li>та додайте промокод до вашого кошика товарів, щоб застосувати знижку</li>
+                                              </ul>
+                                            </div>
+
+                                            <div class="text-center mt-4">
+                                              <img src="img/discount-wheel/mta-logo.svg" alt="MTA">
+                                            </div>
+
+                                          </div>
+                                        </div>
+                              
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                              <div class="bill-result__footer">
+                                <h4 class="text-center mt-3">Квитанция</h4>
+                                <div class="bill-result__buttons">
+                                  <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
+                                  <form>
+                                    <div class="form-group">
+                                      <input type="email" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="qwerty@email.com" aria-required="true">
+                                      <label class="control-label form-label" for="form-name">Отправить на e-mail</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="archive-1" class="collapse">
+                              <div class="bill-result__collapse">
+                                <div class="table-responsive">
+                                  <table class="table">
+                                    <tbody>
+                                      <tr>
+                                        <td>Назначение</td>
+                                        <td>Оплата коммунальной услуги</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Сумма пополнения</td>
+                                        <td>75.00 грн.</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Комиссия</td>
+                                        <td>2.00 грн.</td>
+                                      </tr>
+                                      <tr class="table-summary">
+                                        <td>К оплате</td>
+                                        <td>77.00 грн.</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>                          
+                              </div>
+                            </div>
+                            <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">
+                              <span class="bill-result__info-show">Информация о платеже</span>
+                              <span class="bill-result__info-hide">Скрыть информацию о платеже</span>
+                            </div>
+                          </div><!-- bill result widget -->
+                        </div>
+                      </div>
+      
+                    </div>
+
+                    <div class="col-12 mt-5 mb-5 mb-lg-3">
+                      <!-- service rate widget -->
+                      <div class="service-rate" id="service-rate-widget">
+
+                        <h3 class="mb-3 text-center text-sm-left">Оцените качество услуги</h3>
+                        <div class="service-rate__form service-rate__form--success">
+                          <p class="heading-color text-center text-sm-left">Пожалуйста укажите вашу оценку качеству услуги</p>
+                          <div class="form-group service-rate__rating">
+                            <div class="rating-input">
+                              <input id="star-5" type="radio" name="rating-input" data-vote="5">
+                              <label for="star-5"></label>
+                      
+                              <input id="star-4" type="radio" name="rating-input" data-vote="4">
+                              <label for="star-4"></label>
+                          
+                              <input id="star-3" type="radio" name="rating-input" data-vote="3">
+                              <label for="star-3"></label>
+                          
+                              <input id="star-2" type="radio" name="rating-input" data-vote="2">
+                              <label for="star-2"></label>
+                          
+                              <input id="star-1" type="radio" name="rating-input" data-vote="1">
+                              <label for="star-1" class="ml-0"></label>
+                            </div>
+                            <span class="rating-result no-rating" data-rating-1="Очень плохо" data-rating-2="Плохо" data-rating-3="Нормально" data-rating-4="Хорошо" data-rating-5="Отлично!">Укажите оценку</span>
+                          </div>
+                          <form action="/">
+                            <div class="form-group service-rate__textarea">
+                              <textarea class="form-control form-textarea" id="form-textarea" rows="3" placeholder="Оставьте ваш отзыв или пожелание по сервису. Мы внимательно изучаем все ваши обращения, чтобы сделать сервис лучше."></textarea>
+                              <label class="control-label form-label" for="form-textarea">Введите ваш комментарий</label>
+                            </div>
+                            <div class="form-group">
+                              <input type="tel" class="form-control form-input" id="rate-sender_phone" name="rate-sender_phone" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
+                              <label class="control-label form-label" for="rate-sender_phone">Номер телефона</label>
+                              <div class="help-block">Введите номер телефона</div>
+                            </div>
+                            <div class="service-rate__submit">
+                              <button type="submit" class="btn btn-green btn-block" disabled>Отправить</button>
+                            </div>
+                          </form>
+                        </div>
+
+                        <!-- <div class="service-rate__rated service-rate__rated--success">
+                          <div class="service-rate__rated-text text-center">
+                            <h4>Благодарим за ваш отзыв!</h4>
+                            <p>Он очень важен для нас</p>
+                          </div>
+                          <div class="service-rate__rating">
+                            <div class="rating-input">
+                              <span class="rating-input__star active"></span>
+                              <span class="rating-input__star active"></span>
+                              <span class="rating-input__star active"></span>
+                              <span class="rating-input__star active"></span>
+                              <span class="rating-input__star active"></span>
+                            </div>
+                            <span class="rating-result rating-result--rated">5/5</span>
+                          </div>
+                        </div> -->
+
+                      </div><!-- service rate widget -->
+                    </div>
+
+                  </div>
+                </div><!-- bill main widget -->
+              </div>
+            
+            </div>
+
+
+            <!-- aside mobile area -->
+            <div class="row d-lg-none">
+
+              <div class="col-12 mb-3">
+                <!-- success message-widget -->
+                <div id="success-message-widget">
+                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
+                    Загляните в меню!<br>
+                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                </div><!-- success message-widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <!-- services more widget -->
+                <div id="services-more-widget">
+                  <h4 class="mb-3">Также могут заинтересовать</h4>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Перевод с карты на карту</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київводоканал</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київгаз</span>
+                  </a>
+                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                </div><!-- services more widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
+              </div>
+
+            </div><!-- aside mobile area -->
+
+          </main><!-- main area -->
+
+          <!-- aside area -->
+          <aside class="col-lg-4 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-3">
+                <!-- success message-widget -->
+                <div id="success-message-widget">
+                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
+                    Загляните в меню!<br>
+                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                </div><!-- success message-widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <!-- services more widget -->
+                <div id="services-more-widget">
+                  <h4 class="mb-3">Также могут заинтересовать</h4>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Перевод с карты на карту</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київводоканал</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київгаз</span>
+                  </a>
+                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                </div><!-- services more widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
+              </div>
+
+            </div>
+          </aside><!-- aside area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__cancel"></a>
+              </div>
+              <div class="form-search__list"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/service-rate.js"></script>
+    <script src="/js/search-form.js"></script>
+    <script src="/js/discount-wheel.js"></script>
+  </body>
+</html>
