@@ -1,0 +1,872 @@
+// ------------------------------------------------------------------------------
+// This file contains all styles related to the account statistics widget
+// ------------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.account-statistics {
+  padding-bottom: 5rem;
+
+  @include until($md) {
+    padding-bottom: 0;
+  }
+}
+
+.statistics-section {
+  margin-top: 2rem;
+
+  @include until($md) {
+    margin-top: 1.5rem;
+  }
+}
+
+.statistics-header {
+  padding: 0 2.5rem 2.5rem;
+  border-radius: 0.5rem;
+  background: #0C6858 url("../img/account-statistics/2023/header-bkgr.png") right bottom no-repeat;
+
+  & > .row {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    [class^=col] {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  &__content {
+    padding-top: 2.5rem;
+
+    h1, p {
+      color: #ffffff;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+  
+    p {
+      font-size: 1.125rem;
+      line-height: 1.4;
+    }
+  }
+
+  @include until($md) {
+    padding: 1.5rem;
+    background-position: right -10px bottom;
+
+    &__content {
+      padding-top: 0;
+
+      h1 {
+        font-size: 1.625rem;
+        line-height: 1.23;
+      }
+    }
+
+    &__img {
+      text-align: center;
+    }
+  }
+}
+
+.snowflake {
+  position: relative;
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    width: 37px;
+    height: 37px;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: 10s linear infinite snowflake-rotate;
+  }
+
+  &.statistics-header__content {
+    &::before, &::after {
+      background-image: url("../img/account-statistics/2023/snowflake-green.svg");
+    }
+
+    &::before {
+      bottom: -70px;
+      left: 110px;
+      animation-direction: reverse;
+    }
+
+    &::after {
+      bottom: -58px;
+      right: 114px;
+    }
+  }
+
+  &.statistics-header__img {
+    &::before, &::after {
+      background-image: url("../img/account-statistics/2023/snowflake.svg");
+    }
+
+    &::before {
+      bottom: 94px;
+      left: -18px;
+      animation-direction: reverse;
+    }
+
+    &::after {
+      top: 40px;
+      right: 36px;
+    }
+  }
+
+  @include until($xl) {
+    &.statistics-header__content {
+      &::before {
+        bottom: -28px;
+        left: 62px;
+      }
+
+      &::after {
+        bottom: -32px;
+        right: 64px;
+      }
+    }
+  }
+
+  @include until($md) {
+    &::before, &:after {
+      display: none;
+    }
+  }
+}
+
+@keyframes snowflake-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.statistics-cards {
+  & > .row {
+    margin-left: -16px;
+    margin-right: -16px;
+
+    [class^="col"] {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+.statistics-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 462px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+
+  & > img {
+    align-self: center;
+    max-width: 100%;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: $heading-color;
+  }
+
+  .statistics-card__promo,
+  .statistics-card__amount {
+   font-size: 2rem;
+   font-weight: 700;
+   color: $btn-red;
+  }
+
+  .statistics-card__help,
+  .statistics-card__link {
+    font-size: 1rem;
+  }
+
+  &--days {
+    background-color: #F0F5FA;
+  }
+
+  &--payments {
+    background-color: #E9FCF3;
+
+    .statistics-card__promo,
+    .statistics-card__amount {
+      color: #0C6858;
+    }
+  }
+
+  &--hours, &--templates {
+    height: 562px;
+  }
+
+  &--hours {
+    background-color: #FEF7E0;
+
+    .statistics-card__promo,
+    .statistics-card__amount {
+      font-size: 2.5625rem;
+    }
+  }
+
+  &--templates {
+    padding-bottom: 0;
+    background-color: #FBF0F0;
+
+    .statistics-card__promo,
+    .statistics-card__amount {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+  &--templates-1 {
+    padding-bottom: 2.3125rem;
+    background-color: #F0F8FF;
+  }
+
+  &--templates-4 {
+    padding-bottom: 3.625rem;
+    background-color: #E9FCF3;
+
+    .statistics-card__promo,
+    .statistics-card__amount {
+      color: #0C6858;
+    }
+  }
+
+  @include until($md) {
+    height: auto;
+    padding: 2.5rem 1rem;
+
+    &__content {
+      text-align: center;
+    }
+
+    .statistics-card__promo,
+    .statistics-card__amount {
+      font-size: 1.5rem;
+    }
+
+    &--templates {
+      padding-bottom: 0;
+
+      .statistics-card__content {
+        text-align: left;
+      }
+
+      .statistics-card__promo {
+        display: flex;
+        align-items: center;
+      }
+
+      .statistics-card__amount {
+        font-size: 3rem;
+      }
+
+      .statistics-card__promo-mobile {
+        margin-left: 1rem;
+        color: $heading-color;
+        font-weight: 700;
+      }
+    }
+
+    &--templates-1 {
+      padding-bottom: 2.3125rem;
+    }
+  
+    &--templates-4 {
+      padding-bottom: 3.625rem;
+    }
+  }
+}
+
+.statistics-progress {
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
+
+  @include until($md) {
+    padding: 1rem;
+  }
+}
+
+.progress-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+
+  &__img {
+    position: relative;
+    flex: 0 0 4rem;
+    max-width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 32px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("../img/account-statistics/progress-card-sprite.png");
+      background-repeat: no-repeat;
+      background-size: 162px;
+    }
+  }
+
+  &--p2p {
+    .progress-card__img {
+      &::before {
+        background-position: 0 0;
+      }
+    }
+  }
+
+  &--utility {
+    .progress-card__img {
+      &::before {
+        background-position: -98px 0px;
+      }
+    }
+  }
+
+  &--internet {
+    .progress-card__img {
+      &::before {
+        background-position: -33px -32px;
+      }
+    }
+  }
+
+  &--mobile {
+    .progress-card__img {
+      &::before {
+        background-position: -130px -32px;
+      }
+    }
+  }
+
+  &--crossboard {
+    .progress-card__img {
+      &::before {
+        background-position: -32px -64px;
+      }
+    }
+  }
+
+  &--p2r {
+    .progress-card__img {
+      &::before {
+        background-position: -95px -64px;
+      }
+    }
+  }
+
+  &--by-email {
+    .progress-card__img {
+      &::before {
+        background-position: 0px -96px;
+      }
+    }
+  }
+
+  &--by-phone {
+    .progress-card__img {
+      &::before {
+        background-position: -66px -96px;
+      }
+    }
+  }
+
+  &--receive {
+    .progress-card__img {
+      &::before {
+        background-position: -130px -96px;
+      }
+    }
+  }
+
+  &--kindergarten {
+    .progress-card__img {
+      &::before {
+        background-position: -33px 0px;
+      }
+    }
+  }
+
+  &--tv {
+    .progress-card__img {
+      &::before {
+        background-position: -130px 0px;
+      }
+    }
+  }
+
+  &--phone {
+    .progress-card__img {
+      &::before {
+        background-position: -65px -32px;
+      }
+    }
+  }
+
+  &--security {
+    .progress-card__img {
+      &::before {
+        background-position: 0px -64px;
+      }
+    }
+  }
+
+  &--transport {
+    .progress-card__img {
+      &::before {
+        background-position: -62px -64px;
+      }
+    }
+  }
+
+  &--penalty {
+    .progress-card__img {
+      &::before {
+        background-position: -127px -64px;
+      }
+    }
+  }
+
+  &--tourism {
+    .progress-card__img {
+      &::before {
+        width: 33px;
+        height: 34px;
+        background-position: -33px -96px;
+      }
+    }
+  }
+
+  &--banks {
+    .progress-card__img {
+      &::before {
+        background-position: -98px -96px;
+      }
+    }
+  }
+
+  &--education {
+    .progress-card__img {
+      &::before {
+        background-position: 0px -129px;
+      }
+    }
+  }
+
+  &--business {
+    .progress-card__img {
+      &::before {
+        background-position: -65px 0px;
+      }
+    }
+  }
+
+  &--charity {
+    .progress-card__img {
+      &::before {
+        background-position: 0px -32px;
+      }
+    }
+  }
+
+  &--budget {
+    .progress-card__img {
+      &::before {
+        background-position: -98px -32px;
+      }
+    }
+  }
+
+  &__progress {
+    flex-grow: 1;
+    padding-left: 1.25rem;
+
+    & > p {
+      color: $heading-color;
+    }
+
+    .progress-wrapper {
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .progress-wrapper {
+    display: flex;
+  
+    .progress {
+      flex-basis: 0;
+      flex-grow: 1;
+      border-radius: 0.5rem;
+      background-color: #DEE7F3;
+    }
+  
+    span {
+      flex: 0 0 51px;
+      max-width: 51px;
+      text-align: right;
+      line-height: 1.1875;
+    }
+
+    .progress-bar {
+      border-radius: 0.5rem;
+      transition: width 1.5s ease;
+    }
+  }
+
+  &:nth-of-type(4n-3) {
+    .progress-card__img {
+      background-color: $btn-red-hover;
+    }
+
+    .progress-wrapper {
+      .progress-bar {
+        background-color: $btn-red;
+      }
+    }
+  }
+
+  &:nth-of-type(4n-2) {
+    .progress-card__img {
+      background-color: $orange;
+    }
+
+    .progress-wrapper {
+      .progress-bar {
+        background-color: $orange;
+      }
+    }
+  }
+
+  &:nth-of-type(4n-1) {
+    .progress-card__img {
+      background-color: $blue;
+    }
+
+    .progress-wrapper {
+      .progress-bar {
+        background-color: $blue;
+      }
+    }
+  }
+
+  &:nth-of-type(4n) {
+    .progress-card__img {
+      background-color: $btn-green-hover;
+    }
+
+    .progress-wrapper {
+      .progress-bar {
+        background-color: $btn-green-hover;
+      }
+    }
+  }
+
+  @include until($md) {
+    &__img {
+      flex-basis: 2.5rem;
+      max-width: 2.5rem;
+      height: 2.5rem;
+
+      &::before {
+        width: 16px;
+        height: 16px;
+        background-size: 81px;
+      }
+    }
+  
+    &--p2p {
+      .progress-card__img {
+        &::before {
+          background-position: 0 0;
+        }
+      }
+    }
+  
+    &--utility {
+      .progress-card__img {
+        &::before {
+          background-position: -49px 0px;
+        }
+      }
+    }
+  
+    &--internet {
+      .progress-card__img {
+        &::before {
+          background-position: -16px -16px;
+        }
+      }
+    }
+  
+    &--mobile {
+      .progress-card__img {
+        &::before {
+          background-position: -65px -16px;
+        }
+      }
+    }
+  
+    &--crossboard {
+      .progress-card__img {
+        &::before {
+          background-position: -16px -32px;
+        }
+      }
+    }
+  
+    &--p2r {
+      .progress-card__img {
+        &::before {
+          background-position: -47px -32px;
+        }
+      }
+    }
+  
+    &--by-email {
+      .progress-card__img {
+        &::before {
+          background-position: 0px -48px;
+        }
+      }
+    }
+  
+    &--by-phone {
+      .progress-card__img {
+        &::before {
+          background-position: -33px -48px;
+        }
+      }
+    }
+  
+    &--receive {
+      .progress-card__img {
+        &::before {
+          background-position: -65px -48px;
+        }
+      }
+    }
+  
+    &--kindergarten {
+      .progress-card__img {
+        &::before {
+          background-position: -16px 0px;
+        }
+      }
+    }
+  
+    &--tv {
+      .progress-card__img {
+        &::before {
+          background-position: -65px 0px;
+        }
+      }
+    }
+  
+    &--phone {
+      .progress-card__img {
+        &::before {
+          background-position: -32px -16px;
+        }
+      }
+    }
+  
+    &--security {
+      .progress-card__img {
+        &::before {
+          background-position: 0px -32px;
+        }
+      }
+    }
+  
+    &--transport {
+      .progress-card__img {
+        &::before {
+          background-position: -31px -32px;
+        }
+      }
+    }
+  
+    &--penalty {
+      .progress-card__img {
+        &::before {
+          background-position: -64px -32px;
+        }
+      }
+    }
+  
+    &--tourism {
+      .progress-card__img {
+        &::before {
+          width: 17px;
+          height: 18px;
+          background-position: -16px -48px;
+        }
+      }
+    }
+  
+    &--banks {
+      .progress-card__img {
+        &::before {
+          background-position: -49px -48px;
+        }
+      }
+    }
+  
+    &--education {
+      .progress-card__img {
+        &::before {
+          background-position: 0px -65px;
+        }
+      }
+    }
+  
+    &--business {
+      .progress-card__img {
+        &::before {
+          background-position: -32px 0px;
+        }
+      }
+    }
+  
+    &--charity {
+      .progress-card__img {
+        &::before {
+          background-position: 0px -16px;
+        }
+      }
+    }
+  
+    &--budget {
+      .progress-card__img {
+        &::before {
+          background-position: -49px -16px;
+        }
+      }
+    }
+  }
+}
+
+.statistics-charity {
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: #F0F8FF;
+
+  &__content {
+    p {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $heading-color;
+    }
+  }
+
+  &__img {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @include until($md) {
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+}
+
+.statistics-rank {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #FFE7E6;
+
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $btn-red;
+  }
+
+  h2 {
+    span {
+      display: inline-block;
+      width: 32px;
+      color: $heading-color;
+      font-family: $heading-font;
+      font-weight: 700;
+      text-align: right;
+    }
+  }
+
+  p {
+    max-width: 633px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .statistics-rank__share {
+    padding: 0.25rem 0 0.25rem 2rem;
+    font-weight: 700;
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z' fill='%23E84F35'/%3E%3C/svg%3E") left center no-repeat;
+  }
+
+  @include until($md) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .statistics-rank__share {
+      padding: 0;
+      font-size: 1.25rem;
+      background-image: none;
+    }
+  }
+}
+
+.statistics-review {
+  padding: 2.5rem 3rem 3.75rem;
+  border-radius: 0.5rem;
+  background-color: #0C6858;
+  background-image: url("../img/account-statistics/2023/review-bkgr-1.png"), url("../img/account-statistics/2023/review-bkgr-2.png");
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
+
+  h3, p, span {
+    color: #ffffff;
+  }
+
+  &__form {
+    .form-textarea {
+      height: 226px;
+    }
+  }
+
+  @include until($md) {
+    padding: 1rem;
+    background-image: url("../img/account-statistics/2023/review-bkgr-1.png"), none;
+
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}

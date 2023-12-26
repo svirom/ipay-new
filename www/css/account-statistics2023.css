@@ -1,0 +1,584 @@
+.account-statistics {
+  padding-bottom: 5rem;
+}
+@media screen and (max-width: 767px) {
+  .account-statistics {
+    padding-bottom: 0;
+  }
+}
+
+.statistics-section {
+  margin-top: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .statistics-section {
+    margin-top: 1.5rem;
+  }
+}
+
+.statistics-header {
+  padding: 0 2.5rem 2.5rem;
+  border-radius: 0.5rem;
+  background: #0C6858 url("../img/account-statistics/2023/header-bkgr.png") right bottom no-repeat;
+}
+.statistics-header > .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.statistics-header > .row [class^=col] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.statistics-header__content {
+  padding-top: 2.5rem;
+}
+.statistics-header__content h1, .statistics-header__content p {
+  color: #ffffff;
+}
+.statistics-header__content h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+.statistics-header__content p {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+@media screen and (max-width: 767px) {
+  .statistics-header {
+    padding: 1.5rem;
+    background-position: right -10px bottom;
+  }
+  .statistics-header__content {
+    padding-top: 0;
+  }
+  .statistics-header__content h1 {
+    font-size: 1.625rem;
+    line-height: 1.23;
+  }
+  .statistics-header__img {
+    text-align: center;
+  }
+}
+
+.snowflake {
+  position: relative;
+}
+.snowflake::before, .snowflake::after {
+  position: absolute;
+  content: "";
+  width: 37px;
+  height: 37px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: 10s linear infinite snowflake-rotate;
+          animation: 10s linear infinite snowflake-rotate;
+}
+.snowflake.statistics-header__content::before, .snowflake.statistics-header__content::after {
+  background-image: url("../img/account-statistics/2023/snowflake-green.svg");
+}
+.snowflake.statistics-header__content::before {
+  bottom: -70px;
+  left: 110px;
+  animation-direction: reverse;
+}
+.snowflake.statistics-header__content::after {
+  bottom: -58px;
+  right: 114px;
+}
+.snowflake.statistics-header__img::before, .snowflake.statistics-header__img::after {
+  background-image: url("../img/account-statistics/2023/snowflake.svg");
+}
+.snowflake.statistics-header__img::before {
+  bottom: 94px;
+  left: -18px;
+  animation-direction: reverse;
+}
+.snowflake.statistics-header__img::after {
+  top: 40px;
+  right: 36px;
+}
+@media screen and (max-width: 1199px) {
+  .snowflake.statistics-header__content::before {
+    bottom: -28px;
+    left: 62px;
+  }
+  .snowflake.statistics-header__content::after {
+    bottom: -32px;
+    right: 64px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .snowflake::before, .snowflake:after {
+    display: none;
+  }
+}
+
+@-webkit-keyframes snowflake-rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes snowflake-rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.statistics-cards > .row {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+.statistics-cards > .row [class^=col] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.statistics-card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  height: 462px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.statistics-card > img {
+  -ms-flex-item-align: center;
+      align-self: center;
+  max-width: 100%;
+}
+.statistics-card p {
+  font-size: 1.5rem;
+  color: #172A3A;
+}
+.statistics-card .statistics-card__promo,
+.statistics-card .statistics-card__amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #E84F35;
+}
+.statistics-card .statistics-card__help,
+.statistics-card .statistics-card__link {
+  font-size: 1rem;
+}
+.statistics-card--days {
+  background-color: #F0F5FA;
+}
+.statistics-card--payments {
+  background-color: #E9FCF3;
+}
+.statistics-card--payments .statistics-card__promo,
+.statistics-card--payments .statistics-card__amount {
+  color: #0C6858;
+}
+.statistics-card--hours, .statistics-card--templates {
+  height: 562px;
+}
+.statistics-card--hours {
+  background-color: #FEF7E0;
+}
+.statistics-card--hours .statistics-card__promo,
+.statistics-card--hours .statistics-card__amount {
+  font-size: 2.5625rem;
+}
+.statistics-card--templates {
+  padding-bottom: 0;
+  background-color: #FBF0F0;
+}
+.statistics-card--templates .statistics-card__promo,
+.statistics-card--templates .statistics-card__amount {
+  font-size: 3rem;
+  line-height: 1;
+}
+.statistics-card--templates-1 {
+  padding-bottom: 2.3125rem;
+  background-color: #F0F8FF;
+}
+.statistics-card--templates-4 {
+  padding-bottom: 3.625rem;
+  background-color: #E9FCF3;
+}
+.statistics-card--templates-4 .statistics-card__promo,
+.statistics-card--templates-4 .statistics-card__amount {
+  color: #0C6858;
+}
+@media screen and (max-width: 767px) {
+  .statistics-card {
+    height: auto;
+    padding: 2.5rem 1rem;
+  }
+  .statistics-card__content {
+    text-align: center;
+  }
+  .statistics-card .statistics-card__promo,
+  .statistics-card .statistics-card__amount {
+    font-size: 1.5rem;
+  }
+  .statistics-card--templates {
+    padding-bottom: 0;
+  }
+  .statistics-card--templates .statistics-card__content {
+    text-align: left;
+  }
+  .statistics-card--templates .statistics-card__promo {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .statistics-card--templates .statistics-card__amount {
+    font-size: 3rem;
+  }
+  .statistics-card--templates .statistics-card__promo-mobile {
+    margin-left: 1rem;
+    color: #172A3A;
+    font-weight: 700;
+  }
+  .statistics-card--templates-1 {
+    padding-bottom: 2.3125rem;
+  }
+  .statistics-card--templates-4 {
+    padding-bottom: 3.625rem;
+  }
+}
+
+.statistics-progress {
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
+}
+@media screen and (max-width: 767px) {
+  .statistics-progress {
+    padding: 1rem;
+  }
+}
+
+.progress-card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.progress-card__img {
+  position: relative;
+  -ms-flex: 0 0 4rem;
+      flex: 0 0 4rem;
+  max-width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.progress-card__img::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../img/account-statistics/progress-card-sprite.png");
+  background-repeat: no-repeat;
+  background-size: 162px;
+}
+.progress-card--p2p .progress-card__img::before {
+  background-position: 0 0;
+}
+.progress-card--utility .progress-card__img::before {
+  background-position: -98px 0px;
+}
+.progress-card--internet .progress-card__img::before {
+  background-position: -33px -32px;
+}
+.progress-card--mobile .progress-card__img::before {
+  background-position: -130px -32px;
+}
+.progress-card--crossboard .progress-card__img::before {
+  background-position: -32px -64px;
+}
+.progress-card--p2r .progress-card__img::before {
+  background-position: -95px -64px;
+}
+.progress-card--by-email .progress-card__img::before {
+  background-position: 0px -96px;
+}
+.progress-card--by-phone .progress-card__img::before {
+  background-position: -66px -96px;
+}
+.progress-card--receive .progress-card__img::before {
+  background-position: -130px -96px;
+}
+.progress-card--kindergarten .progress-card__img::before {
+  background-position: -33px 0px;
+}
+.progress-card--tv .progress-card__img::before {
+  background-position: -130px 0px;
+}
+.progress-card--phone .progress-card__img::before {
+  background-position: -65px -32px;
+}
+.progress-card--security .progress-card__img::before {
+  background-position: 0px -64px;
+}
+.progress-card--transport .progress-card__img::before {
+  background-position: -62px -64px;
+}
+.progress-card--penalty .progress-card__img::before {
+  background-position: -127px -64px;
+}
+.progress-card--tourism .progress-card__img::before {
+  width: 33px;
+  height: 34px;
+  background-position: -33px -96px;
+}
+.progress-card--banks .progress-card__img::before {
+  background-position: -98px -96px;
+}
+.progress-card--education .progress-card__img::before {
+  background-position: 0px -129px;
+}
+.progress-card--business .progress-card__img::before {
+  background-position: -65px 0px;
+}
+.progress-card--charity .progress-card__img::before {
+  background-position: 0px -32px;
+}
+.progress-card--budget .progress-card__img::before {
+  background-position: -98px -32px;
+}
+.progress-card__progress {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding-left: 1.25rem;
+}
+.progress-card__progress > p {
+  color: #172A3A;
+}
+.progress-card__progress .progress-wrapper span {
+  font-weight: 700;
+}
+.progress-card .progress-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+}
+.progress-card .progress-wrapper .progress {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  border-radius: 0.5rem;
+  background-color: #DEE7F3;
+}
+.progress-card .progress-wrapper span {
+  -ms-flex: 0 0 51px;
+      flex: 0 0 51px;
+  max-width: 51px;
+  text-align: right;
+  line-height: 1.1875;
+}
+.progress-card .progress-wrapper .progress-bar {
+  border-radius: 0.5rem;
+  transition: width 1.5s ease;
+}
+.progress-card:nth-of-type(4n-3) .progress-card__img {
+  background-color: #FF6A51;
+}
+.progress-card:nth-of-type(4n-3) .progress-wrapper .progress-bar {
+  background-color: #E84F35;
+}
+.progress-card:nth-of-type(4n-2) .progress-card__img {
+  background-color: #FFA727;
+}
+.progress-card:nth-of-type(4n-2) .progress-wrapper .progress-bar {
+  background-color: #FFA727;
+}
+.progress-card:nth-of-type(4n-1) .progress-card__img {
+  background-color: #64B3F7;
+}
+.progress-card:nth-of-type(4n-1) .progress-wrapper .progress-bar {
+  background-color: #64B3F7;
+}
+.progress-card:nth-of-type(4n) .progress-card__img {
+  background-color: #22D4A2;
+}
+.progress-card:nth-of-type(4n) .progress-wrapper .progress-bar {
+  background-color: #22D4A2;
+}
+@media screen and (max-width: 767px) {
+  .progress-card__img {
+    -ms-flex-preferred-size: 2.5rem;
+        flex-basis: 2.5rem;
+    max-width: 2.5rem;
+    height: 2.5rem;
+  }
+  .progress-card__img::before {
+    width: 16px;
+    height: 16px;
+    background-size: 81px;
+  }
+  .progress-card--p2p .progress-card__img::before {
+    background-position: 0 0;
+  }
+  .progress-card--utility .progress-card__img::before {
+    background-position: -49px 0px;
+  }
+  .progress-card--internet .progress-card__img::before {
+    background-position: -16px -16px;
+  }
+  .progress-card--mobile .progress-card__img::before {
+    background-position: -65px -16px;
+  }
+  .progress-card--crossboard .progress-card__img::before {
+    background-position: -16px -32px;
+  }
+  .progress-card--p2r .progress-card__img::before {
+    background-position: -47px -32px;
+  }
+  .progress-card--by-email .progress-card__img::before {
+    background-position: 0px -48px;
+  }
+  .progress-card--by-phone .progress-card__img::before {
+    background-position: -33px -48px;
+  }
+  .progress-card--receive .progress-card__img::before {
+    background-position: -65px -48px;
+  }
+  .progress-card--kindergarten .progress-card__img::before {
+    background-position: -16px 0px;
+  }
+  .progress-card--tv .progress-card__img::before {
+    background-position: -65px 0px;
+  }
+  .progress-card--phone .progress-card__img::before {
+    background-position: -32px -16px;
+  }
+  .progress-card--security .progress-card__img::before {
+    background-position: 0px -32px;
+  }
+  .progress-card--transport .progress-card__img::before {
+    background-position: -31px -32px;
+  }
+  .progress-card--penalty .progress-card__img::before {
+    background-position: -64px -32px;
+  }
+  .progress-card--tourism .progress-card__img::before {
+    width: 17px;
+    height: 18px;
+    background-position: -16px -48px;
+  }
+  .progress-card--banks .progress-card__img::before {
+    background-position: -49px -48px;
+  }
+  .progress-card--education .progress-card__img::before {
+    background-position: 0px -65px;
+  }
+  .progress-card--business .progress-card__img::before {
+    background-position: -32px 0px;
+  }
+  .progress-card--charity .progress-card__img::before {
+    background-position: 0px -16px;
+  }
+  .progress-card--budget .progress-card__img::before {
+    background-position: -49px -16px;
+  }
+}
+
+.statistics-charity {
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: #F0F8FF;
+}
+.statistics-charity__content p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #172A3A;
+}
+.statistics-charity__img img {
+  max-width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .statistics-charity {
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+}
+
+.statistics-rank {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #FFE7E6;
+}
+.statistics-rank h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #E84F35;
+}
+.statistics-rank h2 span {
+  display: inline-block;
+  width: 32px;
+  color: #172A3A;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: right;
+}
+.statistics-rank p {
+  max-width: 633px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.statistics-rank .statistics-rank__share {
+  padding: 0.25rem 0 0.25rem 2rem;
+  font-weight: 700;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z' fill='%23E84F35'/%3E%3C/svg%3E") left center no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .statistics-rank {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .statistics-rank .statistics-rank__share {
+    padding: 0;
+    font-size: 1.25rem;
+    background-image: none;
+  }
+}
+
+.statistics-review {
+  padding: 2.5rem 3rem 3.75rem;
+  border-radius: 0.5rem;
+  background-color: #0C6858;
+  background-image: url("../img/account-statistics/2023/review-bkgr-1.png"), url("../img/account-statistics/2023/review-bkgr-2.png");
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+.statistics-review h3, .statistics-review p, .statistics-review span {
+  color: #ffffff;
+}
+.statistics-review__form .form-textarea {
+  height: 226px;
+}
+@media screen and (max-width: 767px) {
+  .statistics-review {
+    padding: 1rem;
+    background-image: url("../img/account-statistics/2023/review-bkgr-1.png"), none;
+  }
+  .statistics-review h3 {
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=account-statistics2023.css.map */

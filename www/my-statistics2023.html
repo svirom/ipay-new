@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/catalogue-account.css">
+    <link rel="stylesheet" href="/css/account-statistics2023.css">
+
+    <title>Мой 2023 год</title>
+  </head>
+  <body>
+
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--bonuses">
+                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
+                    <span class="main-nav__bonus">1543 </span>
+                    <span>бонусов</span>
+                  </span>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-statistics" href="#">Мой 2023 год</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item-account">
+                  <span class="main-nav__item-account--registered">Мой кабинет</span>
+                  <span>Альберт</span>
+                </li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
+                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
+                        <li><a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a></li>
+                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-statistics" href="#">Мой 2023 год</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
+                      </ul>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue" id="catalogue-widget">
+                        <ul class="catalogue__list">
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__crossboard">
+                              <span>Международные переводы</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2p">
+                              <span>Переводы с карты на карту</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__p2r">
+                              <span>Перевод по реквизитам</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-email">
+                              <span>Переводы с карты на e-mail</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__by-phone">
+                              <span>Перевод с карты на телефон</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__receive">
+                              <span>Получить перевод</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__mobile">
+                              <span>Мобильная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__utility">
+                              <span>Коммунальные услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__kindergarten">
+                              <span>Детские сады</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__internet">
+                              <span>Интернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tv">
+                              <span>Телевидение</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__phone">
+                              <span>Телефонная связь</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__security">
+                              <span>Охрана</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__transport">
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__penalty">
+                              <span>Оплатить Штраф ГАИ</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__tourism">
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__banks">
+                              <span>Банки и Страхование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__education">
+                              <span>Образование</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__business">
+                              <span>Бизнес-услуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__charity">
+                              <span>Благотворительность</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Мой кабинет</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>iPay+</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- aside area -->
+          <aside class="col-lg-3 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-5">
+                <!-- account catalogue widget -->
+                <div class="catalogue-account" id="catalogue-account-widget">
+                  <ul class="catalogue-account__list">
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__account">
+                        <span>Мой кабинет</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__archive">
+                        <span>Архив платежей</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__templates">
+                        <span>Мои шаблоны</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__cards">
+                        <span>Мои карты</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
+                        <span>Мои бонусы</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__ipayplus">
+                        <span>iPay+</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__settings">
+                        <span>Мой профиль</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__statistics active">
+                        <span>Мой 2023 год</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div><!-- account catalogue widget -->
+              </div>
+
+            </div>
+            
+          </aside><!-- aside area -->
+          <!-- main area -->
+          <main class="col-lg-9">
+
+            <div class="row">
+
+              <div class="col-12">
+
+                <div class="row">
+                  <div class="col-12 mt-2 mb-3 d-lg-none">
+                    <a href="#" class="btn btn-link btn-back">Мой кабинет</a>
+                  </div>
+                </div>
+
+                <!-- account statistics widget -->
+                <div class="account-statistics" id="account-statistics-widget">
+
+                  <div class="statistics-header">
+                    <div class="row">
+                      <div class="col">
+                        <div class="statistics-header__content snowflake">
+                          <h1 class="mb-4">Ваш обзор года с iPay.ua</h1>
+                          <p class="mb-4">Николай спасибо что были с iPay.ua в 2023, надеемся что вы останетесь с нами и в 2024 году, ведь ваше участие помогает нам делать оплату регулярных услуг лучше с каждым днем.</p>
+                          <p class="mb-4 mb-md-0">Специально для вас мы собрали небольшой обзор вашего года с iPay.ua</p>
+                        </div>
+                      </div>
+                      <div class="col-md-auto">
+                        <div class="statistics-header__img snowflake">
+                          <img src="img/account-statistics/2023/statistics-header.png" srcset="img/account-statistics/2023/statistics-header.png 1x, img/account-statistics/2023/statistics-header@2x.png 2x" alt="Image">
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- /.statistics-header -->
+
+                  <div class="statistics-cards statistics-section">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="statistics-card statistics-card--days has-animation" data-amount="765">
+                          <div class="statistics-card__content">
+                            <p class="statistics-card__promo mb-0"><span class="statistics-card__amount">756</span> дней назад</p>
+                            <p class="font-weight-bold">Вы присоединились к iPay.ua</p>
+                          </div>
+                          <img src="img/account-statistics/2023/card-days.png" srcset="img/account-statistics/2023/card-days.png 1x, img/account-statistics/2023/card-days@2x.png 2x" alt="Icon">
+                        </div>
+                      </div>
+                      <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="statistics-card statistics-card--payments has-animation" data-amount="115">
+                          <div class="statistics-card__content">
+                            <p class="statistics-card__promo mb-0"><span class="statistics-card__amount">115</span> платежей</p>
+                            <p class="font-weight-bold">вы совершили за 2023 год</p>
+                          </div>
+                          <img src="img/account-statistics/2023/card-payments.png" srcset="img/account-statistics/2023/card-payments.png 1x, img/account-statistics/2023/card-payments@2x.png 2x" alt="Icon">
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- /.statistics-cards -->
+
+                  <div class="statistics-progress statistics-section">
+                    <h2>Ваши любимые категории платежей</h2>
+
+                    <div class="progress-card progress-card--p2p has-animation" data-amount="10">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Денежные переводы</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>0%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--utility has-animation" data-amount="30">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Коммунальные услуги</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="30%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>0%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--internet has-animation" data-amount="50">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Интернет</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="50%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>0%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--mobile has-animation" data-amount="10">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Мобильный телефон</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>0%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--  -->
+                    <!-- <div class="progress-card progress-card--crossboard">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Міжнародні перекази</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--p2r">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Перекази по реквізитам</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--by-email">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Перекази з карти на email</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--by-phone">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Перекази з карти на телефон</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--receive">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Отримати переказ</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--kindergarten">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Дитячі садочки</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--tv">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Телебачення</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--phone">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Телефонний зв’язок</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--security">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Охорона</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--transport">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Транспорт</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--penalty">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Оплатити штраф ДАІ</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--tourism">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Туризм</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--banks">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Банки та страхування</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--education">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Освіта</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--business">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Бізнес послуги</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--charity">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Благочинність</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="progress-card progress-card--budget">
+                      <div class="progress-card__img"></div>
+                      <div class="progress-card__progress">
+                        <p class="mb-2">Платежі у бюджет</p>
+                        <div class="progress-wrapper">
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10%" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>10%</span>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!--  -->
+
+                  </div> <!-- /.statistics-progress -->
+
+                  <div class="statistics-cards statistics-section">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="statistics-card statistics-card--hours has-animation" data-amount="345">
+                          <div class="statistics-card__content">
+                            <p class="mb-0 mb-md-4 font-weight-bold">Оплачивая онлайн с iPay.ua вы сэкономили</p>
+                            <p class="statistics-card__promo mb-1">около <span class="statistics-card__amount">345</span> часов </p>
+                            <p class="font-weight-bold">не стоя в очередях в банках</p>
+                          </div>
+                          <img src="img/account-statistics/2023/card-hours.png" srcset="img/account-statistics/2023/card-hours.png 1x, img/account-statistics/2023/card-hours@2x.png 2x" alt="Icon">
+                        </div>
+                      </div>
+                      <div class="col-md-6 mt-4 mt-md-0">
+
+                        <!-- 0 templates -->
+                        <div class="statistics-card statistics-card--templates has-animation" data-amount="0">
+                          <div class="statistics-card__content">
+                            <p class="statistics-card__promo">
+                              <span class="statistics-card__amount">0</span>
+                              <span class="statistics-card__promo-mobile d-md-none">шаблона вы создали</span>
+                            </p>
+                            <p class="d-none d-md-block mb-2 font-weight-bold">Столько шаблонов вы создали за все время</p>
+                            <p class="statistics-card__help">Шаблоны помогают экономить время и делать платежи быстрее, не вводя каждый раз номера счетов.</p>
+                            <a href="#" class="statistics-card__link" target="_blank">Создайте первый</a>
+                          </div>
+                          <img src="img/account-statistics/2023/card-templates.png" srcset="img/account-statistics/2023/card-templates.png 1x, img/account-statistics/2023/card-templates@2x.png 2x" alt="Icon">
+                        </div>
+
+                        <!-- 1-3 templates -->
+                        <!-- <div class="statistics-card statistics-card--templates statistics-card--templates-1 has-animation" data-amount="1">
+                          <div class="statistics-card__content">
+                            <p class="statistics-card__promo"><span class="statistics-card__amount">1</span></p>
+                            <p class="mb-2 font-weight-bold">Столько шаблонов вы создали за все время</p>
+                            <p class="statistics-card__help">Шаблоны помогают экономить время и делать платежи быстрее, не вводя каждый раз номера счетов.</p>
+                          </div>
+                          <img src="img/account-statistics/2023/card-templates.png" srcset="img/account-statistics/2023/card-templates.png 1x, img/account-statistics/2023/card-templates@2x.png 2x" alt="Icon">
+                        </div> -->
+
+                        <!-- 4+ templates -->
+                        <!-- <div class="statistics-card statistics-card--templates statistics-card--templates-4 has-animation" data-amount="10">
+                          <div class="statistics-card__content">
+                            <p class="statistics-card__promo"><span class="statistics-card__amount">10</span></p>
+                            <p class="mb-2 font-weight-bold">Столько шаблонов вы создали за все время</p>
+                            <p class="statistics-card__help">Невероятно! Вы просто гуру эффективности по платежам</p>
+                          </div>
+                          <img src="img/account-statistics/2023/card-templates.png" srcset="img/account-statistics/2023/card-templates.png 1x, img/account-statistics/2023/card-templates@2x.png 2x" alt="Icon">
+                        </div> -->
+
+                      </div>
+                    </div>
+                  </div> <!-- /.statistics-cards -->
+
+                  <div class="statistics-charity statistics-section">
+                    <div class="row align-items-center">
+                      <div class="col-md-auto">
+                        <div class="statistics-charity__img">
+                          <img src="img/account-statistics/2023/tabletochki.png" srcset="img/account-statistics/2023/tabletochki.png 1x, img/account-statistics/2023/tabletochki@2x.png 2x" alt="Image">
+                        </div>
+                      </div>
+                      <div class="col-md order-md-first mt-3 mt-md-0">
+                        <div class="statistics-charity__content">
+                          <p class="mb-0">Вы участовали в сборе на помощь детям с БФ “Таблеточки” и помогли нам передать деньги на оздоровление детям</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="statistics-rank statistics-section has-animation" data-amount="10">
+                    <img src="img/account-statistics/2023/statistics-rank-1.svg" alt="Icon">
+                    <h3 class="my-3">Вы гуру онлайн платежей!</h3>
+                    <h2 class="mb-3">Вы в топ <span>10</span>%!</h2>
+                    <p class="heading-color text-center">Совершая платежи авторизованно, вы стали эффективнее чем 90% пользователей. Экономьте свое время, платите, эффективно, экологично и надежно с iPay.ua</p>
+                    <a href="#" class="statistics-rank__share">Поделиться</a>
+                  </div>
+                  <!-- /.statistics-rank -->
+
+                  <!-- <div class="statistics-rank statistics-section has-animation" data-amount="20">
+                    <img src="img/account-statistics/2023/statistics-rank-2.svg" alt="Icon">
+                    <h3 class="my-3">Вы эксперт в онлайн платежах</h3>
+                    <h2 class="mb-3">Вы в топ <span>20</span>%!</h2>
+                    <p class="heading-color text-center">Совершая платежи авторизованно, вы стали эффективнее чем 80% пользователей. Экономьте свое время, платите, эффективно, экологично и надежно с iPay.ua</p>
+                    <a href="#" class="statistics-rank__share">Поделиться</a>
+                  </div> -->
+                  <!-- /.statistics-rank -->
+
+                  <!-- <div class="statistics-rank statistics-section has-animation" data-amount="30">
+                    <img src="img/account-statistics/2023/statistics-rank-3.svg" alt="Icon">
+                    <h3 class="my-3">Вы знаете толк в онлайн платежах</h3>
+                    <h2 class="mb-3">Вы эффективнее <span>30</span>% пользователей</h2>
+                    <p class="heading-color text-center">Совершая платежи авторизованно, вы стали эффективнее чем 30% пользователей. Экономьте свое время, платите, эффективно, экологично и надежно с iPay.ua</p>
+                    <a href="#" class="statistics-rank__share">Поделиться</a>
+                  </div> -->
+                  <!-- /.statistics-rank -->
+
+                  <!-- <div class="statistics-rank statistics-section has-animation" data-amount="50">
+                    <img src="img/account-statistics/2023/statistics-rank-3.svg" alt="Icon">
+                    <h3 class="my-3">Вы знаете толк в онлайн платежах</h3>
+                    <h2 class="mb-3">Вы эффективнее <span>50</span>% пользователей</h2>
+                    <p class="heading-color text-center">Совершая платежи авторизованно, вы стали эффективнее чем 50% пользователей. Экономьте свое время, платите, эффективно, экологично и надежно с iPay.ua</p>
+                    <a href="#" class="statistics-rank__share">Поделиться</a>
+                  </div> -->
+                  <!-- /.statistics-rank -->
+
+                  <!-- <div class="statistics-rank statistics-section has-animation" data-amount="70">
+                    <img src="img/account-statistics/2023/statistics-rank-3.svg" alt="Icon">
+                    <h3 class="my-3">Вы знаете толк в онлайн платежах</h3>
+                    <h2 class="mb-3">Вы эффективнее <span>70</span>% пользователей</h2>
+                    <p class="heading-color text-center">Совершая платежи авторизованно, вы стали эффективнее чем 70% пользователей. Экономьте свое время, платите, эффективно, экологично и надежно с iPay.ua</p>
+                    <a href="#" class="statistics-rank__share">Поделиться</a>
+                  </div> -->
+                  <!-- /.statistics-rank -->
+
+                  <div class="statistics-review statistics-section">
+                    <h3 class="mb-md-3">Николай, спасибо вам от всей команды iPay.ua!</h3>
+                    <p class="mb-4">В этот волшебный период хотим поблагодарить вас за то, что выбираете iPay.ua для управления своими платежами по коммунальным услугам.</p>
+                    <p class="mb-4">Пусть год 2023 принесет вам уверенность в каждом платеже, легкость в онлайн-транзакциях и максимум удобства в использовании нашего сервиса. Пусть каждый ваш платеж станет звеном в цепи комфортной и беззаботной повседневной жизни.</p>
+                    <p class="mb-4">С праздниками! Благодарим за ваше доверие и будем раді если ві поделитесь, что бы вы хотели увидеть на iPay.ua в 2024 году.</p>
+                    <p class="mb-4">С любовью, команда iPay.ua.</p>
+
+                    <div class="statistics-review__form">
+                      <form action="">
+                        <div class="form-group">
+                          <textarea class="form-control form-textarea" id="form-textarea" rows="5" placeholder="Напишіть текст побажання"></textarea>
+                          <label class="control-label form-label" for="form-textarea">Ваше побажання</label>
+                        </div>
+                        <button type="submit" class="btn btn-green btn-block">Відправити</button>
+                      </form>
+                    </div>
+                  </div> <!-- /.statistics-review -->
+
+                </div><!-- account statistics widget -->
+                  
+              </div>
+
+            </div>
+
+          </main><!-- main area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/my-statistics.js"></script>
+  </body>
+</html>
