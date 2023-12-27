@@ -61,8 +61,11 @@
     font-weight: 700;
   }
 
-  &__img {
+  &__img-wrapper {
     flex: 0 0 auto;
+  }
+
+  &__img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,8 +97,6 @@
   }
 
   &__conditions-item {
-    // flex: 0 0 auto;
-    // width: auto;
     flex-grow: 1;
     max-width: 100%;
 
@@ -109,10 +110,6 @@
         }
       }
     }
-
-    // span {
-    //   font-weight: 700;
-    // }
 
     &:not(:last-of-type) {
       margin-right: 1.5rem;
@@ -267,11 +264,9 @@
 
   @include until($lg) {
     &__conditions-item {
-      margin-top: 0.5rem;
       margin-bottom: 0.75rem;
 
       &:last-of-type {
-        margin-top: 0;
         margin-bottom: 0.5rem;
       }
     }
@@ -313,23 +308,39 @@
   @include until($md) {
     margin-bottom: 1.5rem;
     padding-top: 1rem;
+    box-shadow: 0px 4px 20px 0 rgba(39, 97, 146, 0.15);
 
     .company-card__top-service {
-      left: auto;
-      right: 0.625rem;
+      left: 1.5rem;
+      top: 0;
+      padding: 0.25rem 0.25rem 0.25rem 1.25rem;
+      font-size: 0.75rem;
+      border-radius: 0 0 0.25rem 0.25rem;
+      background-position: left 0.25rem center;
+      background-size: 0.75rem;
     }
 
     .company-card__title {
-      margin-bottom: 0.75rem;
+      padding-left: 0.75rem;
+      word-break: break-word;
     }
 
     &__row {
       flex-direction: column;
     }
 
-    &__img {
+    &__img-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       width: 100%;
-      height: 12.3125rem;
+      margin-bottom: 1rem;
+    }
+
+    &__img {
+      width: 8.5625rem;
+      height: 4rem;
+      padding: 1.125rem;
     }
 
     &__content {
@@ -338,33 +349,26 @@
       padding-right: 0;
 
       .company-card__checklist {
-        margin-top: 0.25rem;
-
         li {
-          margin-top: 1rem;
+          margin-top: 0.5rem;
         }
       }
     }
 
     &__conditions-item {
-      margin-top: 1.25rem;
-      margin-bottom: 0;
+      margin-bottom: 0.5rem;
 
       .h3 {
         font-size: 1.25rem;
       }
 
       &:not(:last-of-type) {
-        margin-right: 1rem;
-      }
-
-      &:last-of-type {
-        margin-top: 1.25rem;
+        margin-right: 0.5rem;
       }
     }
 
     &__buttons {
-      margin-top: 1.25rem;
+      margin-top: 1rem;
     }
     
     &__collapse-info {
