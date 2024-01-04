@@ -2816,6 +2816,37 @@
             </div>
           </div>
         </div>
+        <!-- 4 steps -->
+        <div class="col-md-9 mt-5">
+          <div class="payment-progress">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <a href="#" class="payment-step done">
+                  <div class="payment-step__icon">1</div>
+                  <span>Держ. номер</span>
+                </a>
+              </div>
+              <div class="col-auto">
+                <a href="#" class="payment-step active">
+                  <div class="payment-step__icon">2</div>
+                  <span>Дані авто</span>
+                </a>
+              </div>
+              <div class="col-auto">
+                <a href="#" class="payment-step">
+                  <div class="payment-step__icon">3</div>
+                  <span>Дані страхувальника</span>
+                </a>
+              </div>
+              <div class="col-auto">
+                <a href="#" class="payment-step">
+                  <div class="payment-step__icon">4</div>
+                  <span>Оплата</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row mt-5">
         <div class="col-12">
@@ -2908,6 +2939,83 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                   <a class="dropdown-item dropdown-progress-payer done" href="#">Данные плательщика</a>
+                  <a class="dropdown-item dropdown-progress-payment active" href="#">Оплата</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <hr>
+          <div class="row">
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile payment-progress-mobile--14 dropdown" style="display:flex;">
+                <span>Держ. номер</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>1/4</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer active" href="#">Держ. номер</a>
+                  <a class="dropdown-item dropdown-progress-data" href="#">Дані авто</a>
+                  <a class="dropdown-item dropdown-progress-payment" href="#">Дані страхувальника</a>
+                  <a class="dropdown-item dropdown-progress-payment" href="#">Оплата</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile payment-progress-mobile--12 dropdown" style="display:flex;">
+                <span>Дані авто</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>2/4</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer done" href="#">Держ. номер</a>
+                  <a class="dropdown-item dropdown-progress-data active" href="#">Дані авто</a>
+                  <a class="dropdown-item dropdown-progress-payment" href="#">Дані страхувальника</a>
+                  <a class="dropdown-item dropdown-progress-payment" href="#">Оплата</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile payment-progress-mobile--34 dropdown" style="display:flex;">
+                <span>Дані страхувальника</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>3/4</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer done" href="#">Держ. номер</a>
+                  <a class="dropdown-item dropdown-progress-data done" href="#">Дані авто</a>
+                  <a class="dropdown-item dropdown-progress-payment active" href="#">Дані страхувальника</a>
+                  <a class="dropdown-item dropdown-progress-payment" href="#">Оплата</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 mt-3">
+              <div class="payment-progress-mobile dropdown" style="display:flex;">
+                <span>Оплата</span>
+                <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
+                    <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
+                  </svg>
+                  <span>4/4</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item dropdown-progress-payer done" href="#">Держ. номер</a>
+                  <a class="dropdown-item dropdown-progress-data done" href="#">Дані авто</a>
+                  <a class="dropdown-item dropdown-progress-payment done" href="#">Дані страхувальника</a>
                   <a class="dropdown-item dropdown-progress-payment active" href="#">Оплата</a>
                 </div>
               </div>

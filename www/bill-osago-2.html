@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/kasko.css"> -->
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/search-form.css">
+    <link rel="stylesheet" href="/css/bill-osago.css">
+<!--    <link rel="stylesheet" href="/css/insurance.css">-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>ОСАГО Онлайн - step 2</title>
+</head>
+<body>
+
+<!-- header -->
+<header class="main-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 main-nav">
+                <div class="main-nav__logo logo-color">
+                    <a href="#"></a>
+                </div>
+                <nav class="">
+                    <ul class="main-nav__nav">
+                        <li class="main-nav__item main-nav__icon--search">
+                            <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                        </li>
+                        <li class="main-nav__item main-nav__item--p2p dropdown">
+                            <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
+                                <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
+                                <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
+                                <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
+                                <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
+                            </div>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                                <span>Безопасность </span>
+                                <span>плательщиков</span>
+                            </a>
+                        </li>
+                        <li class="main-nav__item main-nav__item--lang dropdown">
+                            <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                                <a class="dropdown-item" href="#">УКР</a>
+                                <a class="dropdown-item active" href="#">РУС</a>
+                                <a class="dropdown-item" href="#">ENG</a>
+                            </div>
+                        </li>
+                        <li class="main-nav__item dropdown">
+                            <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                                <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                                <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                                <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="main-nav__nav-mobile">
+                        <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                        <li class="main-nav__item main-nav__item-mobile">
+                            <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="nav-opener"><span></span></span>
+                            </button>
+                            <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                                <div class="navbar-collapse__menu">
+                                    <ul>
+                                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                                    </ul>
+                                    <a class="dropdown-item dropdown-login-mobile" href="#">
+                                        <span>Войти</span>
+                                        <span>или зарегистрироваться</span>
+                                    </a>
+                                    <div class="mobile-lang">
+                                        <span>Язык:</span>
+                                        <ul class="mobile-lang__list">
+                                            <li class="active"><a href="#">РУС</a></li>
+                                            <li><a href="#">УКР</a></li>
+                                            <li><a href="#">ENG</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="catalogue-mobile">
+                                    <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                                    <!-- catalogue widget -->
+                                    <div class="catalogue" id="catalogue-widget">
+                                        <ul class="catalogue__list">
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__crossboard">
+                                                    <span>Международные переводы</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__p2p">
+                                                    <span>Переводы с карты на карту</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__p2r">
+                                                    <span>Перевод по реквизитам</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__by-email">
+                                                    <span>Переводы с карты на e-mail</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__by-phone">
+                                                    <span>Перевод с карты на телефон</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__receive">
+                                                    <span>Получить перевод</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__mobile">
+                                                    <span>Мобильная связь</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__utility">
+                                                    <span>Коммунальные услуги</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__kindergarten">
+                                                    <span>Детские сады</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__internet">
+                                                    <span>Интернет</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__tv">
+                                                    <span>Телевидение</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__phone">
+                                                    <span>Телефонная связь</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__security">
+                                                    <span>Охрана</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__transport">
+                                                    <span>Транспорт</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__penalty">
+                                                    <span>Оплатить Штраф ГАИ</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__tourism">
+                                                    <span>Туризм</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__banks">
+                                                    <span>Банки и Страхование</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__education">
+                                                    <span>Образование</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__business">
+                                                    <span>Бизнес-услуги</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="catalogue__item catalogue__charity">
+                                                    <span>Благотворительность</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div><!-- catalogue widget -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header><!-- header -->
+
+<!-- main wrapper -->
+<div class="main-wrapper">
+
+    <!-- breadcrumb widget -->
+    <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a class="breadcrumb__home" href="/">
+                                <span class="d-none">Головна</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Каталог послуг</span>
+                            </a>
+                        </li>
+                        <li class="active" aria-current="page">
+                            <span>Оформити автоцивілку (ОСАГО)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav><!-- breadcrumb widget -->
+
+    <!-- main content / main area -->
+    <main class="main-content">
+
+        <div class="osago-result">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Електрона автоцивілка (ОСАГО) для Land Rover 2013</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between">
+                            <div class="osago-result__filter-title d-none d-lg-block">Фільтри</div>
+                            <div class="osago-result__sort text-color d-none d-lg-block"><small>Сортувати від дорожчого до дешевшого</small></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="osago-result__filter mt-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="heading-color"><small><strong>Моє авто</strong></small></p>
+                                        <button class="btn btn-result btn-result-filter d-lg-none collapsed" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                            Деталі
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-lg-none">
+                                    <p class="extra-small mt-2">Марка</p>
+                                    <p class="small mb-2">Land Rover Discovery Sport</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="collapse d-lg-none" id="collapseExample2">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-none d-lg-block">
+                                                    <p class="extra-small mt-2">Марка</p>
+                                                    <p class="small mb-2">Land Rover Discovery Sport</p>
+                                                </div>
+                                                <p class="extra-small">Державний номер</p>
+                                                <p class="small">АА456ЕІ</p>
+                                                <p class="extra-small mt-2">Рік випуску</p>
+                                                <p class="small mb-2">2016</p>
+                                                <p class="extra-small">Термін страхування</p>
+                                                <p class="small">12 місяців</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-lg-block">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-none d-lg-block">
+                                                    <p class="extra-small mt-2">Марка</p>
+                                                    <p class="small mb-2">Land Rover Discovery Sport</p>
+                                                </div>
+                                                <p class="extra-small">Державний номер</p>
+                                                <p class="small">АА456ЕІ</p>
+                                                <p class="extra-small mt-2">Рік випуску</p>
+                                                <p class="small mb-2">2016</p>
+                                                <p class="extra-small">Термін страхування</p>
+                                                <p class="small">12 місяців</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-outline w-100 mt-3 d-none d-lg-block">Змінити</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="osago-result__filter">
+                            <p><strong>Франшиза</strong></p>
+                            <div class="mt-3">
+                                <div class="row">
+                                    <div class="col-12 d-none d-lg-block">
+                                        <div class="checkbox-control">
+                                            <input class="checkbox-input" type="checkbox" id="checkbox-1000">
+                                            <label class="checkbox-label" for="checkbox-1000">1000</label>
+                                        </div>
+                                        <div class="checkbox-control">
+                                            <input class="checkbox-input" type="checkbox" id="checkbox-2600">
+                                            <label class="checkbox-label" for="checkbox-2600">2600</label>
+                                        </div>
+                                        <div class="checkbox-control">
+                                            <input class="checkbox-input" type="checkbox" id="checkbox-3200">
+                                            <label class="checkbox-label" for="checkbox-3200">3200</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-lg-none">
+                                        <div class="dropdown">
+                                            <button class="btn btn-block dropdown-toggle dropdown-toggle-filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Виберіть опцію
+                                            </button>
+                                            <div class="dropdown-menu overflow-auto" aria-labelledby="dropdownMenuButton" id="dropdownMenuData">
+                                              <a class="dropdown-item dropdown-item-filter">1000</a>
+                                              <a class="dropdown-item dropdown-item-filter">2600</a>
+                                              <a class="dropdown-item dropdown-item-filter">3200</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="osago-result__sort text-color text-center mt-3 d-lg-none"><small>Сортувати від дорожчого до дешевшого</small></div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="osago-result__card mt-3">
+                            <span class="osago-result__top-service">Топ-послуга</span>
+                            <div class="osago-result__card-row">
+                                <div class="osago-result__card-company">
+                                    <div class="osago-result__card-img">
+                                        <img src="img/osago/interplus-card.png" srcset="img/osago/interplus-card.png 1x, img/osago/interplus-card@2x.png 2x" alt="interplus">
+                                    </div>
+                                    <div class="osago-result__card-mtsbu d-none d-md-flex">
+                                        <span class="heading-color extra-small">Рейтинг</span>
+                                        <div class="">
+                                            <img src="img/osago/icons/icon-rating-mtsbu.svg" alt="rating-mtsbu">
+                                            <img src="img/osago/icons/icon-mtsbu-small.svg" alt="mtsbu" class="ml-1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="osago-result__card-content">
+                                    <div class="osago-result__card-content-title">Автостраховка Інтер полис</div>
+                                    <div class="d-flex d-md-block justify-content-between align-items-center">
+                                        <div class="osago-result__franchise mb-0 mb-md-1">Франшиза</div>
+                                        <p class="osago-result__card-bold-text">2600 грн</p>
+                                    </div>
+                                    <div class="osago-result__card-checklist d-none d-md-block mt-3">
+                                        <ul class="osago-result__checklist">
+                                            <li class="heading-color checklist-plus">Электронный полис</li>
+                                            <li class="heading-color checklist-minus">Поддержка 24/7</li>
+                                            <li class="heading-color checklist-plus">Прямое урегулировнаие</li>
+                                        </ul>
+                                    </div>
+                                    <div class="osago-result__card-details d-md-none">
+                                        <button class="btn btn-result" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                            Детальніше про поліс
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="osago-result__card-buttons">
+                                    <p class="mb-1">Вартість</p>
+                                    <p class="osago-result__card-bold-text">1820.00 грн</p>
+                                    <button class="btn btn-green w-100" type="button"><a href="/step_3_1.html" class="text-white">Оформити</a></button>
+                                    <div class="mt-2 d-flex justify-content-center">
+                                        <img src="/img/osago/icons/icon-mastercard.svg" alt="mastercard">
+                                        <img src="img/osago/icons/icon-visa.svg" alt="visa">
+                                        <img src="img/osago/icons/icon-prostir.svg" alt="prostir">
+                                        <img src="img/osago/icons/icon-gpay.svg" alt="google-pay">
+                                        <img src="img/osago/icons/icon-apay.svg" alt="apple-pay">
+                                    </div>
+                                    <div class="d-none d-md-block">
+                                        <button class="btn btn-result" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                            Детальніше про поліс
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="osago-result__card-collapse collapse" id="collapseExample">
+                                <div class="osago-result__card-row justify-content-between">
+                                    <div class="osago-result__card-padding">
+                                        <p class="mb-2 osago-result__card-bold-text">Юридична особа:</p>
+                                        <div>Повна назва юрособи</div>
+                                        <div class="osago-result__card-mtsbu-wrapper">
+                                            <p class="osago-result__card-bold-text osago__badge-mtsbu mb-2">Рейтинг</p>
+                                            <div class="mb-3"><small>На основі квартального звіту MTCБУ по ОСЦВП</small></div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <p>Загальна оцінка МТСБУ</p>
+                                                <span class="osago-result__card-mtsbu-rating">Високий</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <p>Якість врегулювання збиткі</p>
+                                                <span class="osago-result__card-mtsbu-rating">Високий</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <p>Відсутність скарг</p>
+                                                <span class="osago-result__card-mtsbu-rating">Високий</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="osago-result__card-padding">
+                                        <p class="osago-result__card-bold-text">Опції</p>
+                                        <div class="osago-result__card-checklist mt-3">
+                                            <ul class="osago-result__checklist">
+                                                <li class="heading-color checklist-plus">Покриття відповідальності до 160000 грн</li>
+                                                <li class="heading-color checklist-plus">Покриття за здоров’ям до 320000 грн</li>
+                                                <li class="heading-color checklist-plus">Організація медичної допомоги</li>
+                                            </ul>
+                                        </div>
+                                        <p class="mt-4 osago-result__card-bold-text">Додаткові опціїї</p>
+                                        <div class="osago-result__card-checklist mt-3">
+                                            <ul class="osago-result__checklist">
+                                                <li class="heading-color checklist-plus">Покриття відповідальності до 160000 грн</li>
+                                                <li class="heading-color checklist-plus">Покриття за здоров’ям до 320000 грн</li>
+                                                <li class="heading-color checklist-plus">Організація медичної допомоги</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</div><!-- main wrapper -->
+
+<!-- footer -->
+<div class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row no-gutters">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <p>0 800 60-11-60</p>
+                            <p class="small">Бесплатно с мобильного</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                        <div class="footer-widget">
+                            <p>+38 044 502 11 60</p>
+                            <p class="small">Для звонков из-за границы</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                        <div class="footer-widget">
+                            <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                            <p class="small">Пишите на e-mail</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                        <div class="footer-widget">
+                            <p>График работы</p>
+                            <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                            <p class="small">Сб - Нд 9:00 - 21:00</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="footer-lang">
+                            <a href="#" class="footer-lang__fb"></a>
+                            <span class="small">Язык:</span>
+                            <ul class="footer-lang__list">
+                                <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                                <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                                <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-6 mt-5 mt-lg-0">
+                        <div class="footer-widget">
+                            <ul class="footer-widget__list">
+                                <li><a href="#">О Компании</a></li>
+                                <li><a href="#">Новости и Акции</a></li>
+                                <li><a href="#">Найти платеж</a></li>
+                                <li><a href="#">Для бизнеса</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-5 mt-lg-0">
+                        <div class="footer-widget">
+                            <ul class="footer-widget__list">
+                                <li><a href="#">Безопасность</a></li>
+                                <li><a href="#">Вопросы и ответы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+            <div class="col-12">
+                <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+                <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+                <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+                <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+            </div>
+        </div>
+    </div>
+</div><!-- footer -->
+
+<!-- Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Поиск</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="form-search">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                        <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                        <a href="#" class="form-search__cancel"></a>
+                    </div>
+                    <div class="form-search__list"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script src="/js/osago.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/search-form.js"></script>
+<script src="/js/select2-style.js"></script>
+</body>
+</html>
