@@ -1,18 +1,18 @@
 .bill-tablist {
   border-bottom: 2px solid #DEE7F3;
 }
-.bill-tablist .nav {
-  -ms-flex-pack: center;
-      justify-content: center;
-}
 .bill-tablist__item:not(:last-child) {
-  margin-right: 1.125rem;
+  margin-right: 0.5rem;
 }
 .bill-tablist__link {
   display: inline-block;
   position: relative;
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.625rem;
+  line-height: 1.171875;
   color: #3B566E;
+  border-radius: 0.5rem;
+  background-color: #F0F5FA;
 }
 .bill-tablist__link::after {
   position: absolute;
@@ -20,7 +20,7 @@
   width: 0;
   height: 2px;
   left: 0;
-  bottom: -2px;
+  bottom: -0.625rem;
   background-color: #E84F35;
   transition: width 0.2s;
 }
@@ -31,6 +31,7 @@
 .bill-tablist__link.active {
   color: #172A3A;
   font-weight: 700;
+  background-color: #FFE7E6;
 }
 .bill-tablist__link.active::after {
   width: 100%;

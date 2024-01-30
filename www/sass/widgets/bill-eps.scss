@@ -11,18 +11,22 @@
   border-bottom: 2px solid $middle-grey;
 
   .nav {
-    justify-content: center;
+    // justify-content: center;
   }
 
   &__item:not(:last-child) {
-    margin-right: 1.125rem;
+    margin-right: 0.5rem;
   }
 
   &__link {
     display: inline-block;
     position: relative;
-    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.625rem;
+    line-height: 1.171875;
     color: $text-color;
+    border-radius: 0.5rem;
+    background-color: $light-grey;
 
     &::after {
       position: absolute;
@@ -30,7 +34,7 @@
       width: 0;
       height: 2px;
       left: 0;
-      bottom: -2px;
+      bottom: -0.625rem;
       background-color: $btn-red;
       transition: width 0.2s;
     }
@@ -43,6 +47,7 @@
     &.active {
       color: $heading-color;
       font-weight: 700;
+      background-color: $danger;
 
       &::after {
         width: 100%;
