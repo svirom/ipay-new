@@ -22,14 +22,14 @@
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 410px);
+  min-height: calc(100vh - 413px);
 
   & > #operations {
     flex-grow: 1;
   }
 
   @include until($xl) {
-    min-height: calc(100vh - 424px);
+    min-height: calc(100vh - 445px);
   }
 
   @include until($lg) {
