@@ -118,209 +118,6 @@
 .catalog-page-list {
   margin-bottom: 2rem;
 
-  .catalogue__item {
-    padding-top: 0.844rem;
-    padding-bottom: 0.844rem;
-
-    &:hover {
-      background-color: #ffffff;
-
-      span {
-        color: $btn-red;
-      }
-    }
-
-    &:active, &.active {
-      background-color: #ffffff;
-
-      span {
-        color: $heading-color;
-      }
-    }
-  }
-
-  .catalogue {
-    &__crossboard {  
-      &:hover {
-        &::before {
-          background-position: -72px -49px;
-        }
-      }
-    }
-  
-    &__p2p {
-      &:hover {
-        &::before {
-          background-position: -122px -74px;
-        }
-      }
-    }
-  
-    &__p2r {  
-      &:hover {
-        &::before {
-          background-position: -24px -98px;
-        }
-      }
-    }
-  
-    &__by-email {
-      &:hover {
-        &::before {
-          background-position: 0 -25px;
-        }
-      }
-    }
-  
-    &__by-phone {
-      &:hover {
-        &::before {
-          background-position: -49px -25px;
-        }
-      }
-    }
-  
-    &__receive {  
-      &:hover {
-        &::before {
-          background-position: -24px -50px;
-        }
-      }
-    }
-  
-    &__mobile {
-      &:hover {
-        &::before {
-          background-position: -96px -74px;
-        }
-      }
-    }
-  
-    &__utility {
-      &::before {
-        width: 23px;
-      }
-
-      &:hover {
-        &::before {
-          background-position: -98px -124px;
-        }
-      }
-    }
-  
-    &__kindergarten {
-      &:hover {
-        &::before {
-          background-position: -97px -25px;
-        }
-      }
-    }
-  
-    &__internet {
-      &:hover {
-        &::before {
-          background-position: -48px -74px;
-        }
-      }
-    }
-  
-    &__tv {
-      &:hover {
-        &::before {
-          background-position: -50px -122px;
-        }
-      }
-    }
-  
-    &__phone {
-      &:hover {
-        &::before {
-          background-position: -72px -99px;
-        }
-      }
-    }
-  
-    &__security {
-      &:hover {
-        &::before {
-          background-position: -120px -98px;
-        }
-      }
-    }
-  
-    &__transport {
-      &:hover {
-        &::before {
-          background-position: -145px -73px;
-        }
-      }
-    }
-  
-    &__penalty {
-      &:hover {
-        &::before {
-          background-position: -145px -25px;
-        }
-      }
-    }
-  
-    &__tourism {  
-      &:hover {
-        &::before {
-          background-position: -25px -123px;
-        }
-      }
-    }
-  
-    &__banks {
-      &:hover {
-        &::before {
-          background-position: -121px -24px;
-        }
-      }
-    }
-  
-    &__education {
-      &:hover {
-        &::before {
-          background-position: 0 -74px;
-        }
-      }
-    }
-  
-    &__business {
-      &:hover {
-        &::before {
-          background-position: -24px 0;
-        }
-      }
-    }
-  
-    &__charity {
-      &:hover {
-        &::before {
-          background-position: -73px -24px;
-        }
-      }
-    }
-  
-    &__budget {
-      &:hover {
-        &::before {
-          background-position: -145px -122px;
-        }
-      }
-    }
-
-    &__credits {
-      &:hover {
-        &::before {
-          background-image: url("../img/icons/icon-loans-red.svg");
-        }
-      }
-    }
-  }
-
   &--first {
     margin-top: 1rem;
   }
@@ -328,27 +125,78 @@
   @include until($md) {
     margin-bottom: 1.5rem;
 
-    .catalogue__item {
-      padding-top: 0.9375rem;
-      padding-bottom: 0.9375rem;
-      padding-left: 2.625rem;
-      font-size: 1rem;
-
-      &::before {
-        left: 0;
-      }
-
-      &::after {
-        display: none;
-      }
-    }
-
     &--first {
       margin-top: 0.5rem;
     }
 
     &--last {
       margin-bottom: 0;
+    }
+  }
+}
+
+.catalog-page {
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 3.125rem;
+    padding: 0 1.5rem 0 0;
+    font-size: 1.125rem;
+    line-height: 1.1667;
+    color: $heading-color;
+    border-radius: calc(0.5rem + 2px);
+
+    span:last-child {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      line-height: 1.667;
+      color: $heading-color;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: $light-grey;
+    }
+
+    &:active, &.active {
+      color: $light-grey;
+      text-decoration: none;
+
+      span {
+        color: $heading-color;
+      }
+    }
+  }
+
+  &__item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 3.125rem;
+    max-width: 3.125rem;
+    height: 100%;
+    margin-right: 0.875rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+    background-color: #ffffff;
+  }
+
+  @include until($md) {
+    &__item {
+      &:hover {
+        .catalog-page__item-icon {
+          background-color: $light-grey;
+        }
+      }
+    }
+    &__item-icon {
+      flex-basis: 1.5rem;
+      max-width: 1.5rem;
+      margin-left: 0.5rem;
+      box-shadow: none;
     }
   }
 }

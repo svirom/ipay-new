@@ -6,6 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/category-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css">
     <!-- <link rel="stylesheet" href="/css/kasko.css"> -->
@@ -33,18 +34,15 @@
                 </div>
                 <nav class="">
                     <ul class="main-nav__nav">
-                        <li class="main-nav__item main-nav__icon--search">
-                            <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
-                        </li>
-                        <li class="main-nav__item main-nav__item--p2p dropdown">
-                            <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
-                                <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
-                                <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
-                                <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
-                                <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
-                            </div>
-                        </li>
+                        <li class="main-nav__item main-nav__item--search">
+                            <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"><span>Пошук</span></a>
+                          </li>
+                          <li class="main-nav__item main-nav__item--p2p">
+                            <a href="#" class="main-nav__link main-nav__p2p"><span>Переказ</span></a>
+                          </li>
+                          <li class="main-nav__item main-nav__item--mobile">
+                            <a href="#" class="main-nav__link"><span>Поповнення мобільного</span></a>
+                          </li>
                         <li class="main-nav__item">
                             <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
                                 <span>Безопасность </span>
@@ -69,6 +67,9 @@
                         </li>
                     </ul>
                     <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"></a>
+                </li>
                         <li class="main-nav__item-account"><span>Мой кабинет</span></li>
                         <li class="main-nav__item main-nav__item-mobile">
                             <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">

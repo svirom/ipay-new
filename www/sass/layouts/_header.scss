@@ -550,8 +550,7 @@
   }
 
   &__search {
-    padding-left: 2.8125rem;
-    padding-right: 0.8125rem;
+    padding-left: 2.5rem;
     // padding: 1px 0 1px 1.75rem;
     color: $heading-color;
     // background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.87256 18.4326C14.7727 18.4326 18.7451 14.5302 18.7451 9.71632C18.7451 4.90243 14.7727 1 9.87256 1C4.97238 1 1 4.90243 1 9.71632C1 14.5302 4.97238 18.4326 9.87256 18.4326Z' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M21.3587 21.0005L16.1513 15.8848' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
@@ -623,8 +622,8 @@
   }
 
   &__item-account {
-    margin-right: 7px;
-    margin-top: 3px;
+    // margin-right: 7px;
+    margin-top: 2px;
     font-size: 0.875rem;
     text-align: right;
     text-transform: uppercase;
@@ -699,9 +698,10 @@
   &__opener {
     display: block;
     position: relative;
-    width: 44px;
-    height: 39px;
-    padding: 11px;
+    width: 42px;
+    height: 42px;
+    padding: 11px 10px;
+    border: 0;
 
     &:focus {
       outline: none;
@@ -776,9 +776,9 @@
 .nav-opener {
   position: absolute;
   width: 22px;
-  height: 17px;
+  height: 19px;
   top: 11px;
-  left: 11px;
+  left: 10px;
   border-radius: 0;
   background: transparent;
 
@@ -797,17 +797,19 @@
 
   &:before {
     content: '';
-    top: 7px;
+    top: 8px;
   }
 
   &:after {
     content: '';
-    top: 14px;
+    top: 16px;
   }
 }
 
-.main-nav__opener[aria-expanded="true"] {
+.main-nav__opener[aria-expanded=true] {
   .nav-opener {
+    width: 24px;
+
     span {
       opacity: 0;
     }
@@ -815,18 +817,18 @@
     &:before {
       top: 7px;
       @include transform(rotate(45deg));
-      background: $btn-red;
+      // background: $btn-red;
     }
 
     &:after {
       top: 7px;
       @include transform(rotate(-45deg));
-      background: $btn-red;
+      // background: $btn-red;
     }
   }
 }
 
-/* p2p element */
+// /* p2p element */
 // .main-nav__item, .nav-p2p {
 //   .dropdown-p2p {
 //     &::before {

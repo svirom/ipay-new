@@ -3469,8 +3469,7 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   line-height: 1.25;
 }
 .main-nav__search {
-  padding-left: 2.8125rem;
-  padding-right: 0.8125rem;
+  padding-left: 2.5rem;
   color: #172A3A;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.9342 20.3683C15.8684 20.3683 19.8684 16.3683 19.8684 11.4341C19.8684 6.49995 15.8684 2.5 10.9342 2.5C5.99997 2.5 2 6.49995 2 11.4341C2 16.3683 5.99997 20.3683 10.9342 20.3683Z' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M22.4994 22.9994L17.2559 17.7559' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -3533,8 +3532,7 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   background-position: center;
 }
 .main-nav__item-account {
-  margin-right: 7px;
-  margin-top: 3px;
+  margin-top: 2px;
   font-size: 0.875rem;
   text-align: right;
   text-transform: uppercase;
@@ -3597,9 +3595,10 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 .main-nav__opener {
   display: block;
   position: relative;
-  width: 44px;
-  height: 39px;
-  padding: 11px;
+  width: 42px;
+  height: 42px;
+  padding: 11px 10px;
+  border: 0;
 }
 .main-nav__opener:focus {
   outline: none;
@@ -3657,9 +3656,9 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 .nav-opener {
   position: absolute;
   width: 22px;
-  height: 17px;
+  height: 19px;
   top: 11px;
-  left: 11px;
+  left: 10px;
   border-radius: 0;
   background: transparent;
 }
@@ -3676,13 +3675,16 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 }
 .nav-opener:before {
   content: "";
-  top: 7px;
+  top: 8px;
 }
 .nav-opener:after {
   content: "";
-  top: 14px;
+  top: 16px;
 }
 
+.main-nav__opener[aria-expanded=true] .nav-opener {
+  width: 24px;
+}
 .main-nav__opener[aria-expanded=true] .nav-opener span {
   opacity: 0;
 }
@@ -3690,16 +3692,13 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   top: 7px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  background: #E84F35;
 }
 .main-nav__opener[aria-expanded=true] .nav-opener:after {
   top: 7px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  background: #E84F35;
 }
 
-/* p2p element */
 .main-footer {
   padding: 1.875rem 0 1.75rem;
   background-color: #172A3A;

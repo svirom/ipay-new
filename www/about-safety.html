@@ -6,6 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/category-icons.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
@@ -26,17 +27,14 @@
             </div>
             <nav class="">
               <ul class="main-nav__nav">
-                <li class="main-nav__item main-nav__icon--search">
-                  <a href="#" class="main-nav__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"><span>Пошук</span></a>
                 </li>
-                <li class="main-nav__item main-nav__item--p2p dropdown">
-                  <a href="#" class="main-nav__p2p" role="button" id="dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перевод денег</span></a>
-                  <div class="dropdown-menu" aria-labelledby="dropdown-p2p">
-                    <a class="dropdown-item dropdown-p2p active" href="#">Перевод денег с карты на карту</a>
-                    <a class="dropdown-item dropdown-p2p-tel" href="#">Перевод денег по номеру телефона</a>
-                    <a class="dropdown-item dropdown-p2p-email" href="#">Перевод денег по E-mail адресу</a>
-                    <a class="dropdown-item dropdown-p2p-crossboard" href="#">Перевод денег из Европы</a>
-                  </div>
+                <li class="main-nav__item main-nav__item--p2p">
+                  <a href="#" class="main-nav__link main-nav__p2p"><span>Переказ</span></a>
+                </li>
+                <li class="main-nav__item main-nav__item--mobile">
+                  <a href="#" class="main-nav__link"><span>Поповнення мобільного</span></a>
                 </li>
                 <li class="main-nav__item">
                   <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
@@ -73,6 +71,9 @@
                 </li>
               </ul>
               <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"></a>
+                </li>
                 <li class="main-nav__item-account">
                   <span class="main-nav__item-account--registered">Мой кабинет</span>
                   <span>Альберт</span>
@@ -107,106 +108,185 @@
                     <div class="catalogue-mobile">
                       <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
                       <!-- catalogue widget -->
-                      <div class="catalogue" id="catalogue-widget">
+                      <div class="catalogue catalogue--icons">
                         <ul class="catalogue__list">
+                          <li class="catalogue__list-title">Грошові перекази</li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__crossboard">
-                              <span>Международные переводы</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-p2p"></i>
+                              </span>
+                              <span>Перекази з картки на картку</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__p2p">
-                              <span>Переводы с карты на карту</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-p2r"></i>
+                              </span>
+                              <span>Переказ за реквізитами</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__p2r">
-                              <span>Перевод по реквизитам</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-sbor"></i>
+                              </span>
+                              <span>Створити збір грошей</span>
+                            </a>
+                          </li>
+                          <li class="catalogue__list-title">Платежі</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <!-- <i class="icon-army"></i> -->
+                                <img src="img/icons/icon-army.svg">
+                              </span>
+                              <span>Підтримай армію</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__by-email">
-                              <span>Переводы с карты на e-mail</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-mobile"></i>
+                              </span>
+                              <span>Мобільний зв'язок</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__by-phone">
-                              <span>Перевод с карты на телефон</span>
+                            <a href="#" class="catalogue__item active">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-utility"></i>
+                              </span>
+                              <span>Комунальні послуги</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__receive">
-                              <span>Получить перевод</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-podatku"></i>
+                              </span>
+                              <span>Податки та платежі в бюджет</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__mobile">
-                              <span>Мобильная связь</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-kinders"></i>
+                              </span>
+                              <span>Дитячі садки</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__utility">
-                              <span>Коммунальные услуги</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-internet"></i>
+                              </span>
+                              <span>Інтернет</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__kindergarten">
-                              <span>Детские сады</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-tv"></i>
+                              </span>
+                              <span>Телебачення</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__internet">
-                              <span>Интернет</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-phone"></i>
+                              </span>
+                              <span>Телефонний зв'язок</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__tv">
-                              <span>Телевидение</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-security"></i>
+                              </span>
+                              <span>Охорона</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__phone">
-                              <span>Телефонная связь</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" class="catalogue__item catalogue__security">
-                              <span>Охрана</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" class="catalogue__item catalogue__transport">
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-transport"></i>
+                              </span>
                               <span>Транспорт</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__penalty">
-                              <span>Оплатить Штраф ГАИ</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-fees"></i>
+                              </span>
+                              <span>Оплата штрафів</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__tourism">
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-tourism"></i>
+                              </span>
                               <span>Туризм</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__banks">
-                              <span>Банки и Страхование</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-insurance"></i>
+                              </span>
+                              <span>Страхування</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__education">
-                              <span>Образование</span>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-credits-refresh"></i>
+                              </span>
+                              <span>Погашення кредитів</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__business">
-                              <span>Бизнес-услуги</span>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-credits-online"></i>
+                              </span>
+                              <span>Кредити онлайн</span>
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="catalogue__item catalogue__charity">
-                              <span>Благотворительность</span>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-credits-by-cash"></i>
+                              </span>
+                              <span>Кредити готівкою</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-education"></i>
+                              </span>
+                              <span>Освіта</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-business"></i>
+                              </span>
+                              <span>Бізнес-послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="icon-charity"></i>
+                              </span>
+                              <span>Благодійність</span>
                             </a>
                           </li>
                         </ul>
