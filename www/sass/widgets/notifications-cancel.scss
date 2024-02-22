@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the notifications cancel widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.notif-cancel {
+  &-wrapper {
+    min-height: 100vh;
+    background-color: #ffffff;
+  }
+
+  &-header {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &-card {
+    max-width: 444px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: #FFE7E6;
+
+    & > img {
+      &:first-child {
+        margin-bottom: 2.1875rem;
+      }
+    }
+
+    .notif-cancel-card__email {
+      font-size: 1.25rem;
+      color: #E84F35;
+    }
+
+    .btn {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}
+
+@include until($md) {
+  .notif-cancel {
+    &-header {
+      padding-top: 0.875rem;
+      padding-bottom: 0.875rem;
+    }
+
+    &-card {
+      .h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
