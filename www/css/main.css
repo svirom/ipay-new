@@ -3222,6 +3222,10 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   left: 2.125rem;
   top: calc(50% + 5px);
 }
+.main-nav__item .dropdown-item--empty.dropdown-notifications::after {
+  left: 1.875rem;
+  top: 1.25rem;
+}
 @media screen and (max-width: 991px) {
   .main-nav__item .dropdown-item:first-child {
     border-top-left-radius: 0;

@@ -130,6 +130,13 @@
             top: calc(50% + 5px);
           }
         }
+
+        &.dropdown-notifications {
+          &::after {
+            left: 1.875rem;
+            top: 1.25rem;
+          }
+        }
       }
 
       @include until($lg) {
