@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/category-icons.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/catalogue-account.css">
+    <link rel="stylesheet" href="/css/account-main.css">
+    <link rel="stylesheet" href="/css/account-templates.css">
+    <link rel="stylesheet" href="/css/account-recurrent.css">
+
+    <title>Мои шаблоны</title>
+  </head>
+  <body>
+
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--bonuses">
+                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
+                    <span class="main-nav__bonus">1543 </span>
+                    <span>бонусов</span>
+                  </span>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"></a>
+                </li>
+                <li class="main-nav__item-account">
+                  <span class="main-nav__item-account--registered">Мой кабинет</span>
+                  <span>Альберт</span>
+                </li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
+                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
+                        <li><a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a></li>
+                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
+                      </ul>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue catalogue--icons">
+                        <ul class="catalogue__list">
+                          <li class="catalogue__list-title">Грошові перекази</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-p2p"></i>
+                              </span>
+                              <span>Перекази з картки на картку</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-p2r"></i>
+                              </span>
+                              <span>Переказ за реквізитами</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-sbor"></i>
+                              </span>
+                              <span>Створити збір грошей</span>
+                            </a>
+                          </li>
+                          <li class="catalogue__list-title">Платежі</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <!-- <i class="category-icon-army"></i> -->
+                                <img src="img/icons/icon-army.svg">
+                              </span>
+                              <span>Підтримай армію</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-mobile"></i>
+                              </span>
+                              <span>Мобільний зв'язок</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item active">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-utility"></i>
+                              </span>
+                              <span>Комунальні послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-podatku"></i>
+                              </span>
+                              <span>Податки та платежі в бюджет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-kinders"></i>
+                              </span>
+                              <span>Дитячі садки</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-internet"></i>
+                              </span>
+                              <span>Інтернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-tv"></i>
+                              </span>
+                              <span>Телебачення</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-phone"></i>
+                              </span>
+                              <span>Телефонний зв'язок</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-security"></i>
+                              </span>
+                              <span>Охорона</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-transport"></i>
+                              </span>
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-fees"></i>
+                              </span>
+                              <span>Оплата штрафів</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-tourism"></i>
+                              </span>
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-insurance"></i>
+                              </span>
+                              <span>Страхування</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-refresh"></i>
+                              </span>
+                              <span>Погашення кредитів</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-online"></i>
+                              </span>
+                              <span>Кредити онлайн</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-by-cash"></i>
+                              </span>
+                              <span>Кредити готівкою</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-education"></i>
+                              </span>
+                              <span>Освіта</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-business"></i>
+                              </span>
+                              <span>Бізнес-послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-charity"></i>
+                              </span>
+                              <span>Благодійність</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Мой кабинет</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- aside area -->
+          <aside class="col-lg-3 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-5">
+                <!-- account catalogue widget -->
+                <div class="catalogue-account" id="catalogue-account-widget">
+                  <ul class="catalogue-account__list">
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__account">
+                        <span>Мой кабинет</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__archive">
+                        <span>Архив платежей</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__templates active">
+                        <span>Мои шаблоны</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__cards">
+                        <span>Мои карты</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
+                        <span>Мои бонусы</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__ipayplus">
+                        <span>iPay+</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__settings">
+                        <span>Мой профиль</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div><!-- account catalogue widget -->
+              </div>
+
+            </div>
+            
+          </aside><!-- aside area -->
+          <!-- main area -->
+          <main class="col-lg-9">
+
+            <!-- <div class="row"> -->
+
+              <!-- <div class="col-12"> -->
+                <!-- account main widget -->
+                <div class="account-main" id="account-main-widget">
+
+                  <div class="row">
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Мой кабинет</a>
+                    </div>
+                  </div>
+
+                  <h1 class="mb-4">Автоплатежі</h1>
+
+                  <div class="account-tabs">
+                    <ul class="templates-nav">
+                      <li class="templates-nav__item">
+                        <a class="templates-nav__link" href="#">Платежи</a>
+                      </li>
+                      <li class="templates-nav__item">
+                        <a class="templates-nav__link" href="#">Переводы</a>
+                      </li>
+                      <li class="templates-nav__item">
+                        <a class="templates-nav__link active" href="#">Автоплатежи</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="account-recurrent" id="account-recurrent-widget">
+      
+                    <div class="row mt-4 mb-4">
+
+                      <div class="col-12">
+                        <div class="recurrent-card-wrapper dropdown">
+                          <div class="recurrent-card">
+                            
+                            <span class="recurrent-card__img">
+                              <img src="img/providers/yasno.png" alt="">
+                            </span>
+
+                            <span class="recurrent-card__title">Пополнение интернета</span>
+                            
+                            <div class="recurrent-card__payment recurrent-card__payment--amount mt-2 mt-md-0">
+                              <span>Сумма: </span><span>100.00 грн.</span>
+                            </div>
+
+                            <div class="recurrent-card__payment recurrent-card__payment--next mt-2 mt-md-0">
+                              <span>Следующая оплата:</span> <span>12.05.2023</span>
+                            </div>
+
+                            <button class="recurrent-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+                            <div class="dropdown-menu">
+                              <form id="edit-form" action="templates" method="post">
+                                <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                              </form>                            
+                              <form id="delete-form" action="templates" method="post">
+                                <button type="submit" id="" class="dropdown-item">Видалити</button>
+                              </form>                        
+                            </div>
+                          </div>
+                        </div>
+
+                        <a href="#" class="recurrent-card recurrent-card--pay"><!-- recurrent card new -->
+                            
+                          <span class="recurrent-card__img">
+                            <img src="img/providers/yasno.png" alt="">
+                          </span>
+
+                          <span class="recurrent-card__title">Пополнение интернета</span>
+                          
+                          <div class="recurrent-card__payment recurrent-card__payment--amount">
+                            <span>Сумма </span><span>100.00 грн.</span>
+                          </div>
+
+                          <div class="recurrent-card__payment recurrent-card__payment--next">
+                            <span>Следующая оплата</span> <span class="heading-color">12.05.2023</span>
+                          </div>
+
+                          <div class="recurrent-card__payment recurrent-card__payment--card">
+                            <span>Карта</span> <span>Google Pay **** 6605</span>
+                          </div>
+
+                          <div class="recurrent-card__delete">
+                            <form action="/">
+                              <input type="hidden">
+                              <button type="submit" class="recurrent-card__delete-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M3.5 5.5H20.5" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M15.5 10.4999V16.4999M12 10.3799V16.4999V10.3799ZM8.5 10.4999V16.4999V10.4999Z" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M14.5 5.5H9.5V3.5C9.5 2.95 9.95 2.5 10.5 2.5H13.5C14.05 2.5 14.5 2.95 14.5 3.5V5.5Z" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M18.5 5.5V19.5C18.5 20.6 17.6 21.5 16.5 21.5H7.5C6.4 21.5 5.5 20.6 5.5 19.5V5.5" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </button>
+                            </form>
+                          </div>
+
+                        </a><!-- /recurrent card new -->
+
+                        <a href="#" class="recurrent-card recurrent-card--pay"><!-- recurrent card new false -->
+                            
+                          <span class="recurrent-card__img">
+                            <img src="img/providers/yasno.png" alt="">
+                          </span>
+
+                          <span class="recurrent-card__title">Пополнение интернета</span>
+                          
+                          <div class="recurrent-card__payment recurrent-card__payment--amount">
+                            <span>Сумма </span><span>100.00 грн.</span>
+                          </div>
+
+                          <div class="recurrent-card__payment recurrent-card__payment--next">
+                            <span>Следующая оплата</span> <span class="heading-color">12.05.2023</span>
+                            <span class="recurrent-card__payment-false"><span class="badge badge-danger">Платеж не прошел</span></span>
+                          </div>
+
+                          <div class="recurrent-card__payment recurrent-card__payment--card">
+                            <span>Карта</span> <span>Google Pay **** 6605</span>
+                          </div>
+
+                          <div class="recurrent-card__delete">
+                            <form action="/">
+                              <input type="hidden">
+                              <button type="submit" class="recurrent-card__delete-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M3.5 5.5H20.5" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M15.5 10.4999V16.4999M12 10.3799V16.4999V10.3799ZM8.5 10.4999V16.4999V10.4999Z" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M14.5 5.5H9.5V3.5C9.5 2.95 9.95 2.5 10.5 2.5H13.5C14.05 2.5 14.5 2.95 14.5 3.5V5.5Z" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M18.5 5.5V19.5C18.5 20.6 17.6 21.5 16.5 21.5H7.5C6.4 21.5 5.5 20.6 5.5 19.5V5.5" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </button>
+                            </form>
+                          </div>
+
+                        </a><!-- /recurrent card new false -->
+                          
+                      </div>
+
+                      <div class="col-12">
+                        <a href="#" class="recurrent-add__button"><span>+</span> Новый шаблон</a>
+                      </div>
+
+                    </div>
+
+                    <div class="row col-pad8">
+                      <div class="col-12 col-md">
+                        <p class="heading-color"><strong>Автоплатежи для рутинных оплат с Apple Pay и Google Pay</strong></p>
+                        <p>Автоматизируйте регулярные платежи на фиксированную сумму с помощью функции «автоплатеж».</p>
+                        <p>Как настроить автоплатеж c Apple Pay или Google Pay?</p>
+                        <ol class="list list--grey list-ordered mb-3">
+                          <li>Выберите шаблон или создайте новый на нужную услугу.</li>
+                          <li>Включите ползунок в настройках шаблона «включить автоплатеж» и выберите частоту списания и карту для оплаты.</li>
+                          <li>В выбранный день шаблон будет оплачен на нужную сумму автоматически.</li>
+                        </ol>
+                        <p>Вы всегда можете удалить «автоплатеж». Все списания будут отображаться в архиве платежей.</p>
+                        <div class="alert alert-secondary alert-secondary--small">
+                          <p class="heading-color mb-1"><strong>На заметку</strong></p>
+                          <p class="mb-0">Функция «автоплатеж» доступна только для услуг пополнения мобильного, интернета, телевидения и платежей по реквизитам проведенным с помощью Apple pay и Google Pay</p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-auto text-center">
+                        <img src="img/account/recurrent-success.svg" alt="Icon">
+                      </div>
+                    </div>
+  
+                  </div>
+                  
+                </div><!-- account main widget -->
+              <!-- </div> -->
+
+            <!-- </div> -->
+
+          </main><!-- main area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/account-cards.js"></script>
+  </body>
+</html>

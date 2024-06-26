@@ -383,15 +383,15 @@
                     </div>
                   </div>
 
-                  <h1 class="mb-4">Мои шаблоны</h1>
+                  <h1 class="mb-4">Шаблони рахунків</h1>
 
                   <div class="account-tabs">
                     <ul class="templates-nav">
                       <li class="templates-nav__item">
-                        <a class="templates-nav__link active" href="#">Платежи</a>
+                        <a class="templates-nav__link" href="#">Платежи</a>
                       </li>
                       <li class="templates-nav__item">
-                        <a class="templates-nav__link" href="#">Переводы</a>
+                        <a class="templates-nav__link active" href="#">Переводы</a>
                       </li>
                       <li class="templates-nav__item">
                         <a class="templates-nav__link" href="#">Автоплатежи</a>
@@ -399,201 +399,90 @@
                     </ul>
                   </div>
 
-                  <div class="templates-groups mt-4">
+                  <div class="user-templates" id="user-card-templates-widget">
+                    <div class="row mt-4">
 
-                    <div class="row justify-content-between mb-3">
-                      <div class="col-auto">
-                        <p class="templates-groups__title mb-0">Мої групи</p>
-                      </div>
-                      <div class="col-auto">
-                        <p class="templates-groups__popover mb-0">
-                          <span>Що це?</span> 
-                          <a role="button" tabindex="0" class="templates-groups__question question-popover" data-toggle="popover" data-content="Процентная ставка в 0,01% действует только для первого выданного кредита"></a></p>
-                      </div>
-                    </div>
-
-                    <div class="row col-pad8">
-                      <div class="col-md-6">
-                        <a href="#" class="templates-groups__card">
-                          <div class="templates-groups__card-img"></div>
-                          <div class="templates-groups__card-content">
-                            <p class="templates-groups__card-address mb-1">Київ, вул. Дегтярівська 16б, 678</p>
-                            <p class="templates-groups__card-counter mb-0">Рахунків: 0 шт.</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="col-md-6">
-                        <a href="#" class="templates-groups__add-card">
-                          <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.75" y="0.5" width="32" height="32" rx="16" fill="white"/>
-                            <path d="M6.75 12.238C6.75 11.6389 7.01851 11.0714 7.48168 10.6916L14.9817 4.54025C15.7191 3.93545 16.7809 3.93545 17.5183 4.54025L25.0183 10.6916C25.4815 11.0714 25.75 11.6389 25.75 12.238V23.5C25.75 24.6046 24.8546 25.5 23.75 25.5H8.75C7.64543 25.5 6.75 24.6046 6.75 23.5V12.238Z" fill="#DEE7F3"/>
-                            <path d="M16.25 14V20" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19.25 17H13.25" stroke="#172A3A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                          <span>Додати групу</span>
-                        </a>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <div class="row">
-                    <div class="col-12 mt-3 mt-md-4">
-                      <!-- account templates widget -->
-                      <div class="account-templates" id="account-templates-widget">
-
-                        <div class="row justify-content-between">
-                          <div class="col-auto">
-                            <p class="account-templates__title mb-0">Всі рахунки</p>
-                          </div>
-                          <div class="col-auto"></div>
-                        </div>
-      
-                        <div class="row">
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <a href="#" class="template-add__button template-add__button--new"><span>+</span> Новый шаблон</a>
-                          </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <a href="#" class="bill-card new-template-card">
-                                <div class="new-template-card__row">
-                                  <span class="new-template-card__img">
-                                    <img src="img/providers/yasno.png" alt="">
-                                  </span>
-                                  <span class="new-template-card__content">Nashnet</span>
-                                </div>
-                                <div class="new-template-card__payment">
-                                  <p><span>Сумма: </span><span>100.00 грн.</span></p>
-                                  <p><span>Остання оплата:</span> <span>12.05.2021</span></p>
-                                </div>
-                                <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                                <div class="dropdown-menu">
-                                  <form id="edit-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Редагувати</button>
-                                  </form>                            
-                                  <form id="delete-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Видалити</button>
-                                  </form>                        
-                                </div>
-                              </a>
+                      <div class="col-md-6 col-xl-4 mb-3">
+                        <div class="template-card-wrapper dropdown">
+                          
+                          <div class="bill-card template-card user-card-template">
+                            <a id="use-card-template-1" href="#" class="bill-card__content account-card">
+                              <span class="user-card-template__text">Белокур Евгений Андреевич</span>
+                              <span class="user-card-template__text">5168 66** **** 4567
+                                <span class="account-card__type account-card__card card-title-mark" data-mask="5168 66** **** 4567"></span>
+                              </span>
+                            </a>
+                            <a href="#" class="template-card__button" id="dropdownTemplate-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownTemplate-1">
+                              <form id="edit-form" action="templates" method="post">
+                                <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                              </form>                            
+                              <form id="delete-form" action="templates" method="post">
+                                <button type="submit" id="" class="dropdown-item">Видалити</button>
+                              </form> 
                             </div>
-                          </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <a href="#" class="bill-card new-template-card">
-                                <div class="new-template-card__row">
-                                  <span class="new-template-card__img">
-                                    <img src="img/providers/yasno.png" alt="">
-                                  </span>
-                                  <span class="new-template-card__content">Nashnet</span>
-                                </div>
-                                <div class="new-template-card__payment">
-                                  <p><span>Сумма: </span><span>100.00 грн.</span></p>
-                                  <p><span>Остання оплата:</span> <span class="template-date-recent">12.05.2021</span></p>
-                                </div>
-                                <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                                <div class="dropdown-menu">
-                                  <form id="edit-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Редагувати</button>
-                                  </form>                            
-                                  <form id="delete-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Видалити</button>
-                                  </form>                        
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <a href="#" class="bill-card new-template-card">
-                                <div class="new-template-card__row">
-                                  <span class="new-template-card__img">
-                                    <img src="img/providers/yasno.png" alt="">
-                                  </span>
-                                  <span class="new-template-card__content">Nashnet</span>
-                                </div>
-                                <div class="new-template-card__payment">
-                                  <p><span>Сумма: </span><span>100.00 грн.</span></p>
-                                  <p><span>Остання оплата:</span> <span class="template-date-old">12.05.2021</span></p>
-                                </div>
-                                <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                                <div class="dropdown-menu">
-                                  <form id="edit-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Редагувати</button>
-                                  </form>                            
-                                  <form id="delete-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Видалити</button>
-                                  </form>                        
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <a href="#" class="bill-card new-template-card">
-                                <div class="new-template-card__row">
-                                  <span class="new-template-card__img">
-                                    <img src="img/providers/yasno.png" alt="">
-                                  </span>
-                                  <span class="new-template-card__content">Nashnet</span>
-                                </div>
-                                <div class="new-template-card__payment">
-                                  <p><span>Сумма: </span><span>100.00 грн.</span></p>
-                                  <p><span>Остання оплата:</span> <span class="template-date-old">12.05.2021</span></p>
-                                </div>
-                                <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                                <div class="dropdown-menu">
-                                  <form id="edit-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Редагувати</button>
-                                  </form>                            
-                                  <form id="delete-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Видалити</button>
-                                  </form>                        
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-xl-4 mb-4">
-                            <div class="template-card-wrapper dropdown">
-                              <a href="#" class="bill-card new-template-card">
-                                <div class="new-template-card__row">
-                                  <span class="new-template-card__img">
-                                    <img src="img/providers/yasno.png" alt="">
-                                  </span>
-                                  <span class="new-template-card__content">Nashnet</span>
-                                </div>
-                                <div class="new-template-card__payment">
-                                  <p><span>Сумма: </span><span>100.00 грн.</span></p>
-                                  <p><span>Остання оплата:</span> <span class="template-date-old">12.05.2021</span></p>
-                                </div>
-                                <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                                <div class="dropdown-menu">
-                                  <form id="edit-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Редагувати</button>
-                                  </form>                            
-                                  <form id="delete-form" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item">Видалити</button>
-                                  </form>                        
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="col-12 d-md-none">
-                            <a href="#" class="btn btn-green btn-block">Все шаблоны</a>
                           </div>
                         </div>
-      
-                      </div><!-- account templates widget -->
-                    </div>
-                  </div>
+                      </div>
 
-                  <div class="row align-items-center mt-3 mt-md-5">
-                    <div class="col-md-auto text-center">
-                      <img src="img/account/templates-advice.png" alt="" class="account-main__templates-img img-fluid">
+                      <div class="col-md-6 col-xl-4 mb-3">
+                        <div class="template-card-wrapper dropdown">
+                          
+                          <div class="bill-card template-card user-card-template">
+                            <a id="use-card-template-2" href="#" class="bill-card__content account-card">
+                              <span class="user-card-template__text">Белокур Евгений Андреевич</span>
+                              <span class="user-card-template__text">4168 66** **** 4567
+                                <span class="account-card__type account-card__card card-title-mark" data-mask="4168 66** **** 4567"></span>
+                              </span>
+                            </a>
+                            <a href="#" class="template-card__button" id="dropdownTemplate-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownTemplate-2">
+                              <form id="edit-form" action="templates" method="post">
+                                <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                              </form>                            
+                              <form id="delete-form" action="templates" method="post">
+                                <button type="submit" id="" class="dropdown-item">Видалити</button>
+                              </form> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-xl-4 mb-3">
+                        <div class="template-card-wrapper dropdown">
+                          
+                          <div class="bill-card template-card user-card-template">
+                            <a id="use-card-template-3" href="#" class="bill-card__content account-card">
+                              <span class="user-card-template__text">Белокур Евгений Андреевич</span>
+                              <span class="user-card-template__text">9168 66** **** 4567
+                                <span class="account-card__type account-card__card card-title-mark" data-mask="9168 66** **** 4567"></span>
+                              </span>
+                            </a>
+                            <a href="#" class="template-card__button" id="dropdownTemplate-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownTemplate-3">
+                              <form id="edit-form" action="templates" method="post">
+                                <button type="submit" id="" class="dropdown-item">Редагувати</button>
+                              </form>                            
+                              <form id="delete-form" action="templates" method="post">
+                                <button type="submit" id="" class="dropdown-item">Видалити</button>
+                              </form> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
+                 </div>
+
+                  <div class="row align-items-center mt-3">
                     <div class="col-md account-main__templates-text mt-3 mt-md-0">
-                      <p>Шаблоны - ваш помощник по быстрой оплате</p>
-                      <p>Создавайте шаблоны ваших платежей и платите быстрее, без поиска поставщика и ввода данных об услуге</p>
+                      <p class="heading-color">Переводите деньги быстро</p>
+                      <p>Переводите с карты на карту и сохраняйте карты получателя перевода для более быстрых повторных оплат</p>
+                      <p>Для сохранения, выберите опцию «сохранить карту получателя» и на странице успеха перевода.</p>
+                      <p><i>Шаблоны переводов хранятся 12 месяцев.</i></p>
+                    </div>
+                    <div class="col-md-auto text-center mt-4 mt-md-0">
+                      <img src="img/account/templates-transfers.svg" alt="" class="account-main__templates-img img-fluid">
                     </div>
                   </div>
                   
@@ -695,5 +584,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
+    <script src="/js/account-cards.js"></script>
   </body>
 </html>
