@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/css/account-main.css">
     <link rel="stylesheet" href="/css/account-templates.css">
 
-    <title>Группа шаблона</title>
+    <title>Редактировать группу</title>
   </head>
   <body>
 
@@ -318,7 +318,7 @@
                   </a>
                 </li>
                 <li class="active" aria-current="page">
-                  <span>Київ, вул. Дегтярівська 16б, кв.87</span>
+                  <span>Редагувати групу</span>
                 </li>
               </ul>
             </div>
@@ -391,50 +391,59 @@
                 </div>
               </div>
 
-              <div class="templates-group">
+              <div class="templates-groups-add">
 
-                <div class="row justify-content-between align-items-md-center col-pad8">
-                  <div class="col">
-                    <h2 class="templates-group__title mb-0">Київ, вул. Дегтярівська 16б, кв.87</h2>
-                  </div>
-                  <div class="col-auto">
-                    <div class="templates-group__filter dropdown" data-toggle="dropdown" aria-expanded="false">
-                      <span class="d-none d-md-inline">Редагувати</span>
-                      <button class="templates-group__filter-button" type="button">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5053 8.42105H18.9474C19.5263 8.42105 20 8.89474 20 9.47368V10.5263C20 11.1053 19.5263 11.5789 18.9474 11.5789H18.5053C18.0526 11.5789 17.6842 11.8842 17.5474 12.3158C17.4 12.8 17.2 13.2632 16.9684 13.7053C16.7474 14.1158 16.8526 14.6211 17.1789 14.9474L17.4421 15.2105C17.8526 15.6211 17.8526 16.2842 17.4421 16.6947L16.6947 17.4421C16.2842 17.8526 15.6211 17.8526 15.2105 17.4421L14.9474 17.1789C14.6211 16.8526 14.1158 16.7474 13.7053 16.9684C13.2632 17.2 12.8 17.4 12.3158 17.5474C11.8947 17.6842 11.5789 18.0526 11.5789 18.5053V18.9474C11.5789 19.5263 11.1053 20 10.5263 20H9.47368C8.89474 20 8.42105 19.5263 8.42105 18.9474V18.5053C8.42105 18.0526 8.11579 17.6842 7.68421 17.5474C7.2 17.4 6.73684 17.2 6.29474 16.9684C5.88421 16.7474 5.37895 16.8526 5.05263 17.1789L4.78947 17.4421C4.37895 17.8526 3.71579 17.8526 3.30526 17.4421L2.55789 16.6947C2.14737 16.2842 2.14737 15.6211 2.55789 15.2105L2.82105 14.9474C3.14737 14.6211 3.25263 14.1158 3.03158 13.7053C2.8 13.2632 2.6 12.8 2.45263 12.3158C2.31579 11.8947 1.94737 11.5789 1.49474 11.5789H1.05263C0.473684 11.5789 0 11.1053 0 10.5263V9.47368C0 8.89474 0.473684 8.42105 1.05263 8.42105H1.49474C1.94737 8.42105 2.31579 8.11579 2.45263 7.68421C2.6 7.18947 2.8 6.72632 3.03158 6.29474C3.25263 5.88421 3.14737 5.37895 2.82105 5.05263L2.55789 4.78947C2.14737 4.37895 2.14737 3.71579 2.55789 3.30526L3.30526 2.55789C3.71579 2.14737 4.37895 2.14737 4.78947 2.55789L5.05263 2.82105C5.37895 3.14737 5.88421 3.25263 6.29474 3.03158C6.73684 2.8 7.2 2.6 7.68421 2.45263C8.10526 2.31579 8.42105 1.94737 8.42105 1.49474V1.05263C8.42105 0.473684 8.89474 0 9.47368 0H10.5263C11.1053 0 11.5789 0.473684 11.5789 1.05263V1.49474C11.5789 1.94737 11.8842 2.31579 12.3158 2.45263C12.8 2.6 13.2632 2.8 13.7053 3.03158C14.1158 3.25263 14.6211 3.14737 14.9474 2.82105L15.2105 2.55789C15.6211 2.14737 16.2842 2.14737 16.6947 2.55789L17.4421 3.30526C17.8526 3.71579 17.8526 4.37895 17.4421 4.78947L17.1789 5.05263C16.8526 5.37895 16.7474 5.88421 16.9684 6.29474C17.2 6.73684 17.4 7.2 17.5474 7.68421C17.6842 8.10526 18.0526 8.42105 18.5053 8.42105ZM13.6843 9.99998C13.6843 12.0347 12.0349 13.6842 10.0001 13.6842C7.96539 13.6842 6.31592 12.0347 6.31592 9.99998C6.31592 7.96524 7.96539 6.31577 10.0001 6.31577C12.0349 6.31577 13.6843 7.96524 13.6843 9.99998Z" fill="#E84F35"/>
-                        </svg>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <form id="edit-form" action="templates" method="post">
-                          <button type="submit" id="" class="dropdown-item dropdown-item--edit">Редагувати групу</button>
-                        </form>                            
-                        <form id="delete-form" action="templates" method="post">
-                          <button type="submit" id="" class="dropdown-item dropdown-item--delete">Видалити групу</button>
-                        </form> 
+                <div class="row justify-content-center">
+                  <div class="col-md-8 col-xl-7">
+                    <h3 class="text-md-center">Редагувати адресу для групування</h3>
+                    <p class="mb-4 text-md-center">Впливає на назву групи</p>
+    
+                    <form action="">
+                      <div class="form-group select-input-wrapper mb-3" data-label="Місто">
+                        <select class="select-period form-control form-input js-example-basic-single" name="select">
+                         <option value=""></option>
+                         <option value="1">Київ</option>
+                         <option value="2">Житомир</option>
+                         <option value="3">Тернопіль</option>
+                         <option value="4">Івано-Франківськ</option>
+                         <option value="5">Луцьк</option>
+                         <option value="6">Полтава</option>
+                         <option value="7">Ужгород</option>
+                        </select>
+                       </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control form-input" id="template-street" name="name" autocomplete="off" placeholder="Улица" aria-required="true">
+                        <label class="control-label form-label" for="template-street">Улица</label>
                       </div>
-                    </div>
+                      <div class="row col-pad8 mb-2">
+                        <div class="col-4">
+                          <div class="form-group">
+                            <input type="text" class="form-control form-input" id="template-house" name="name" autocomplete="off" placeholder="0" aria-required="true">
+                            <label class="control-label form-label" for="template-house">Дом</label>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="form-group">
+                            <input type="tel" class="form-control form-input" id="template-app" name="name" autocomplete="off" placeholder="0" aria-required="true">
+                            <label class="control-label form-label" for="template-app">№ кв.</label>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="form-group">
+                            <input type="tel" class="form-control form-input" id="template-corp" name="name" autocomplete="off" placeholder="0" aria-required="true">
+                            <label class="control-label form-label" for="template-corp">Корпус</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-green btn-block mb-3">Додати адресу</button>
+                        <a href="#" class="">Скасувати</a>
+                      </div>
+                    </form>
                   </div>
                 </div>
 
-                <div class="templates-group__empty text-center">
-                  <img src="img/account/account-group-empty.svg" alt="Icon">
-                  <p class="small">Тут будуть відсортовані ваші рахунки по вказаній адресі</p>
-                </div>
-
-                <div class="templates-group__add templates-group__add--empty text-center">
-                  <div class="dropdown">
-                    <a href="#" class="btn templates-group__add-btn" data-toggle="dropdown" aria-expanded="false">
-                      <span>Додати рахунок</span>
-                    </a>
-                    <div class="dropdown-menu">
-                      <button type="button" id="" class="dropdown-item">Додати існучий шаблон</button>
-                      <button type="button" id="" class="dropdown-item">Додати новий рахунок</button>
-                    </div>
-                  </div>
-                </div>
-
-              </div><!-- /.templates-group -->
+              </div>
 
             </div><!-- account main widget -->
 
