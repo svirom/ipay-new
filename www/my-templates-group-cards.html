@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/css/account-main.css">
     <link rel="stylesheet" href="/css/account-templates.css">
 
-    <title>Группа шаблона</title>
+    <title>Группа шаблона (непустая)</title>
   </head>
   <body>
 
@@ -409,9 +409,9 @@
                         <form id="edit-form" action="templates" method="post">
                           <button type="submit" id="" class="dropdown-item dropdown-item--edit">Редагувати групу</button>
                         </form>                            
-                        <form id="delete-form" action="templates" method="post">
-                          <button type="submit" id="" class="dropdown-item dropdown-item--delete">Видалити групу</button>
-                        </form> 
+                        <!-- <form id="delete-form" action="templates" method="post"> -->
+                          <button type="button" id="" class="dropdown-item dropdown-item--delete" data-toggle="modal"  data-target="#modal-group-delete">Видалити групу</button>
+                        <!-- </form>  -->
                       </div>
                     </div>
                   </div>
@@ -565,11 +565,87 @@
                       <span>Додати рахунок</span>
                     </a>
                     <div class="dropdown-menu">
-                      <button type="button" id="" class="dropdown-item">Додати існучий шаблон</button>
+                      <button type="button" id="" class="dropdown-item" data-toggle="modal"  data-target="#modal-group-template-add">Додати існучий шаблон</button>
                       <button type="button" id="" class="dropdown-item">Додати новий рахунок</button>
                     </div>
                   </div>
                 </div>
+
+                <!-- modal group delete -->
+                <div class="modal fade modal-group modal-group--delete" id="modal-group-delete" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+            
+                      <div class="modal-header">
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </button>
+                      </div>
+            
+                      <div class="modal-body text-center">
+                        <div class="modal-group__icon mx-auto"></div>
+                        <p class="heading-color mb-2">Видалити групу?</p>
+                        <p class="heading-color font-weight-bold mb-2">Київ, вул. Дегтярівська 16б, кв.87</p>
+                        <p class="small mb-0">Додані шаблони не будуть видалені та будуть доступні в розділі “Мої шаблони” - “Рахунки”</p>
+                        <div class="modal-group__submit">
+                          <button class="btn btn-red btn-block" type="button">Видалити</button>
+                        </div>
+                      </div>
+            
+                    </div>
+                  </div>
+                </div><!-- /.modal group delete -->
+
+                <!-- modal group template add -->
+                <div class="modal fade modal-group modal-group--template-add" id="modal-group-template-add" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+            
+                      <div class="modal-header">
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </button>
+                      </div>
+            
+                      <div class="modal-body">
+                        <div class="modal-group__icon mx-auto"></div>
+                        <p class="heading-color mb-2 text-center">Додати існуючі рахунки в</p>
+                        <p class="heading-color font-weight-bold mb-4 text-center">Київ, вул. Дегтярівська 16б, кв.87</p>
+
+                        <form action="">
+                          <div class="bill-card new-template-card">
+                            <div class="new-template-card__row">
+                              <span class="new-template-card__img">
+                                <img src="img/providers/yasno.png" alt="">
+                              </span>
+                              <span class="new-template-card__content">Nashnet</span>
+                            </div>
+                            <div class="new-template-card__payment">
+                              <p><span>Сумма: </span><span>100.00 грн.</span></p>
+                              <p><span>Остання оплата:</span> <span class="template-date-old">12.05.2021</span></p>
+                            </div>
+                            <div class="checkbox-control">
+                              <input class="checkbox-input" type="checkbox" id="checkbox-inp2" checked="">
+                              <label class="checkbox-label" for="checkbox-inp2"></label>
+                            </div>
+                          </div>
+                        </form>
+                        <div class="modal-group__submit">
+                          <button class="btn btn-green btn-block" type="button">Додати шаблони</button>
+                        </div>
+                      </div>
+            
+                    </div>
+                  </div>
+                </div><!-- /.modal-group--template-add -->
 
               </div><!-- /.templates-group -->
 
@@ -670,5 +746,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>.
     <script src="/js/select2-style.js"></script>
+    <script src="/js/template-group.js"></script>
   </body>
 </html>
