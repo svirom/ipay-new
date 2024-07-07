@@ -13,5 +13,20 @@ $(document).ready(function () {
     }
   })
 
+  // create template, choose group
+  $('.templates-add__dropdown-group, .templates-add__dropdown-initial').on('click', function(e) {
+    e.preventDefault();
+    const groupAddress = $(this).text();
+
+    $(this).parents('.templates-add__group').find('.templates-add__group-btn').text(groupAddress);
+  });
+
+  // $('.templates-add__dropdown-initial').on('click', function(e) {
+  //   e.preventDefault();
+  //   const groupAddress = $(this).text();
+
+  //   $(this).parents('.templates-add__group').find('.templates-add__group-btn').text(groupAddress);
+  // });
+
 });
 
