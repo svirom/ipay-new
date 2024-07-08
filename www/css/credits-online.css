@@ -1,10 +1,5 @@
 .credits-online__title {
-  margin-bottom: 1.5rem;
-}
-@media screen and (max-width: 767px) {
-  .credits-online__title {
-    margin-bottom: 1.5rem;
-  }
+  margin-bottom: 1rem;
 }
 .credits-online .tab-content {
   padding-top: 2.25rem;
@@ -386,8 +381,12 @@
 }
 
 .credits-nav {
-  padding-bottom: 0.5625rem;
-  border-bottom: 2px solid #F0F5FA;
+  padding-bottom: 0.4375rem;
+  border-bottom: 2px solid #DEE7F3;
+  overflow-x: auto;
+}
+.credits-nav::-webkit-scrollbar {
+  display: none;
 }
 .credits-nav__item ~ .credits-nav__item {
   margin-left: 0.5rem;
@@ -404,7 +403,7 @@
 .credits-nav .credits-nav__link::after {
   position: absolute;
   content: "";
-  bottom: -0.5625rem;
+  bottom: -0.5rem;
   left: 0;
   width: 100%;
   height: 0;
