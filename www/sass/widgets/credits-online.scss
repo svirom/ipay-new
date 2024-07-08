@@ -14,7 +14,7 @@
 
   @include until($md) {
     &__title {
-      // margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -460,18 +460,41 @@
   }
 }
 
+.credits-nav-wrapper {
+  // overflow: auto;
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
 .credits-nav {
-  padding-bottom: 0.4375rem;
-  border-bottom: 2px solid $middle-grey;
-  overflow-x: auto;
+  // padding-bottom: 0.4375rem;
+  // border-bottom: 2px solid $middle-grey;
+  overflow: auto;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
+  .nav {
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $middle-grey;
+  }
+
   &__item {
+    flex: 0 0 auto;
+
     & ~ .credits-nav__item {
       margin-left: 0.5rem;
+
+      .credits-nav__link {
+        &::before {
+          left: -0.5rem;
+          width: 0.5rem;
+        }
+      }
     }
   }
 
@@ -484,14 +507,17 @@
     border-radius: 0.5rem;
     background-color: $light-grey;
 
-    &::after {
+    &::before, &::after {
       position: absolute;
       content: '';
-      bottom: -0.5rem;
-      left: 0;
-      width: 100%;
+      bottom: -0.625rem;
       height: 0;
       border-bottom: 2px solid $middle-grey;
+    }
+
+    &::after {
+      left: 0;
+      width: 100%;
     }
 
     &:hover {
