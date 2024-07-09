@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the yapomoga payment page.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.yapomoga-payment {
+  .yapomoga-payment__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $heading-color;
+  }
+
+  .yapomoga-payment__btn {
+    display: block;
+    width: 6.4375rem;
+    height: 3.5rem;
+    padding: 0.875rem 0.5rem;
+    color: #fff;
+    background-color: #64B3F7;
+  }
+
+  .row.col-pad6 {
+    margin-left: -6px;
+    margin-right: -6px;
+
+    & > [class^=col] {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+
+  &__logos {
+    img {
+      display: block;
+    }
+  }
+}
