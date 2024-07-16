@@ -9,9 +9,16 @@
 
 .yapomoga-payment {
   .yapomoga-payment__title {
+    font-family: $heading-font;
     font-size: 1.125rem;
     font-weight: 700;
     color: $heading-color;
+  }
+
+  &__form {
+    .form-input {
+      padding-right: 1.5rem;
+    }
   }
 
   .yapomoga-payment__btn {
@@ -33,9 +40,37 @@
     }
   }
 
+  .row.col-pad4 {
+    margin-left: -4px;
+    margin-right: -4px;
+
+    & > [class^=col] {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+
   &__logos {
     img {
       display: block;
+    }
+  }
+
+  @include at-least($sm) {
+    .row.col-sm-pad6 {
+      margin-left: -6px;
+      margin-right: -6px;
+  
+      & > [class^=col] {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+    }
+  }
+
+  @include until($sm) {
+    .yapomoga-payment__btn {
+      width: 6.3125rem;
     }
   }
 }

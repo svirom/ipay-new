@@ -1,7 +1,11 @@
 .yapomoga-payment .yapomoga-payment__title {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #172A3A;
+}
+.yapomoga-payment__form .form-input {
+  padding-right: 1.5rem;
 }
 .yapomoga-payment .yapomoga-payment__btn {
   display: block;
@@ -19,6 +23,29 @@
   padding-left: 6px;
   padding-right: 6px;
 }
+.yapomoga-payment .row.col-pad4 {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.yapomoga-payment .row.col-pad4 > [class^=col] {
+  padding-left: 4px;
+  padding-right: 4px;
+}
 .yapomoga-payment__logos img {
   display: block;
+}
+@media screen and (min-width: 576px) {
+  .yapomoga-payment .row.col-sm-pad6 {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .yapomoga-payment .row.col-sm-pad6 > [class^=col] {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .yapomoga-payment .yapomoga-payment__btn {
+    width: 6.3125rem;
+  }
 }/*# sourceMappingURL=yapomoga-payment.css.map */

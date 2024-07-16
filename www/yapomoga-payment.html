@@ -6,7 +6,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/category-icons.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
@@ -329,19 +328,23 @@
               <img src="img/yapomoga/yapomoga-payment-img.svg" alt="Yapomoga">
               <p class="yapomoga-payment__title mt-3">Додати кілька гривень на допомогу притулкам для тварин?</p>
 
-              <form action="">                
+              <form action="" class="yapomoga-payment__form">                
                 <div class="row col-pad6">
                   <div class="col">
                     <div class="form-group">
-                      <input type="tel" class="form-control form-input" id="template-house" name="name" autocomplete="off" placeholder="0" aria-required="true">
-                      <label class="control-label form-label" for="template-house">Сума</label>
+                      <input type="tel" class="form-control form-input yapomoga-payment__input-amount" id="yapomoga-amount" name="name" autocomplete="off" placeholder="0" aria-required="true">
+                      <label class="control-label form-label" for="yapomoga-amount">Сума</label>
                     </div>
                   </div>
                   <div class="col-auto">
-                    <button type="button" class="btn yapomoga-payment__btn" data-price="50">50 грн</button>
-                  </div>
-                  <div class="col-auto">
-                    <button type="button" class="btn yapomoga-payment__btn" data-price="100">100 грн</button>
+                    <div class="row col-pad4 col-sm-pad6">
+                      <div class="col-auto">
+                        <button type="button" class="btn yapomoga-payment__btn" data-price="50">50 грн</button>
+                      </div>
+                      <div class="col-auto">
+                        <button type="button" class="btn yapomoga-payment__btn" data-price="100">100 грн</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="text-center">
@@ -351,7 +354,7 @@
               </form>
 
               <p class="mb-2">Кошти будуть додані до загального чеку та відправлені до благодійного фонду “Япомога”, який опікується притулками Києва та області та допомагає з закупкою кормів, ліків та облаштуванням будиночків для тварин. </p>
-              <a href="#">Сторінка проекту</a>
+              <a href="https://yapomoga.com/" target="_blank">Сторінка проекту</a>
               <div class="yapomoga-payment__logos row col-pad8 align-items-center mt-3 mb-5">
                 <div class="col-auto">
                   <img src="img/yapomoga/ipay-logo.svg" class="pt-1" alt="iPay">
@@ -455,8 +458,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/js/custom.js"></script>.
-    <script src="/js/select2-style.js"></script>
+    <script src="/js/yapomoga-payment.js"></script>
   </body>
 </html>
