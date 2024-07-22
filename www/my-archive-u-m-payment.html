@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/search-form.css">
     <link rel="stylesheet" href="/css/account-main.css">
     <link rel="stylesheet" href="/css/archive-payment.css">
+    <link rel="stylesheet" href="/css/bill-result.css">
 
     <title>Архив платежей Mobile Payment</title>
   </head>
@@ -359,15 +360,15 @@
                         </div>
 
                         <div class="archive-payment__repeat">
-                          <a href="#" class="btn btn-green btn-again">Повторить</a>
+                          <a href="#" class="btn btn-green btn-again"><span>Повторить</span></a>
                         </div>
 
                         <div class="archive-payment__download">
-                          <a href="/img/logo-red.svg" class="btn btn-green" download>Скачать квитанцию</a>
+                          <a href="/img/logo-red.svg" class="btn btn-green" download><span>Квитанция</span></a>
                         </div>
 
                         <div class="archive-payment__email">
-                          <p class="text-center">или отправить на e-mail</p>
+                          <!-- <p class="text-center">или отправить на e-mail</p> -->
                           <form>
                             <div class="form-group">
                               <input type="email" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="qwerty@email.com" aria-required="true">
@@ -375,6 +376,7 @@
                             </div>
                             <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
                           </form>
+                          <div class="bill-result__success-message">Квитанція відправлена на вказаний e-mail</div>
                         </div>
 
                       </div>

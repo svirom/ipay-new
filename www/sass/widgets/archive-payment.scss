@@ -104,11 +104,44 @@
     .btn-again {
       width: 100%;
     }
+
+    & > .btn {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      background-image: none;
+
+      span {
+        padding-left: 1.75rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_4555_2388)'%3E%3Cpath d='M12.9167 6.25016H15.4167C16.3334 6.25016 17.0834 5.50016 17.0834 4.5835V2.0835' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.9167 10.0002C17.9167 14.3752 14.375 17.9168 10 17.9168C5.62504 17.9168 2.08337 14.3752 2.08337 10.0002C2.08337 5.62516 5.62504 2.0835 10 2.0835C12.7917 2.0835 15.2417 3.52516 16.65 5.70016' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4555_2388'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        background-position: left center;
+        background-repeat: no-repeat;
+      }
+    }
   }
 
   &__download {
-    .btn {
-      width: 256px;
+    & > .btn {
+      width: 100%;
+      color: $heading-color;
+      border-color: $middle-grey;
+      background-color: $middle-grey;
+
+      span {
+        padding-right: 1.75rem;
+        color: $heading-color;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99976 14.4756V4.35596' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.30139 10.1387L9.49382 14.2733C9.77573 14.548 10.2311 14.548 10.5058 14.2733L14.6982 10.1387' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.85583 16.644H16.144' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+      }
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      &::after {
+        display: none;
+      }
     }
   }
 
@@ -121,7 +154,8 @@
       align-items: flex-start;
 
       .form-group {
-        margin-right: 0.75rem;
+        flex-grow: 1;
+        margin-right: 0.5rem;
       }
     }
   }

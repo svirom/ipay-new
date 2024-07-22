@@ -681,170 +681,116 @@
                       <!-- archive table widget -->
                       <div id="archive-table-widget">
 
-                        <!-- archive table desktop -->
-                        <div class="archive archive--col-9">
-
-                          <div class="archive-title">
-                            <span class="archive-title__time">Дата</span>
-                            <span class="archive-title__purpose">Назначение</span>
-                            <span class="archive-title__bonus">Бонусы</span>
-                            <span class="archive-title__amount">Сумма, грн.</span>
-                            <span class="archive-title__commission">Комиссия, грн.</span>
-                          </div>
-
+                        <!-- new archive table card -->
+                        <div class="archive">
                           <div class="archive-card">
-                            <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">
-                              <div class="archive-card__time">
-                                <span class="archive-card__time--date">20/02/20</span>
-                                <span class="archive-card__time--hours">18:01</span>
-                              </div>
+                            <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-new-1" aria-expanded="false">
+                              <span class="archive-card__time">20/02/24 18:01</span>
                               <div class="archive-card__icon">
-                                <img src="img/providers/kyivgas.png" alt="">
+                                <img src="img/providers/kyivstar.png" alt="">
                               </div>
-                              <div class="archive-card__title">Пополнение мобильного</div>
-                              <div class="archive-card__bonus icon-bonus"><span>23</span></div>
-                              <div class="archive-card__amount"><span>20.00</span></div>
-                              <div class="archive-card__commission"><span>5.00</span></div>
+                              <span class="archive-card__title">Пополнение мобильного</span>
+                              <span class="archive-card__amount">1800.31 ₴</span>
                             </div>
-                            <div id="archive-1" class="collapse">
+                            <div id="archive-new-1" class="collapse">
                               <div class="archive-card__collapse">
                                 <div class="archive-card__description">
-                                  Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  <p class="mb-0 font-weight-bold">Призначення</p>
+                                  <p>Поповнення мобільного телефону +38066879887 на суму 1800.00 грн</p>
                                 </div>
                                 <div class="archive-card__send">
-                                  <a href="#" class="btn btn-green btn-again btn-block">Повторить</a>
-                                  <div class="archive-card__buttons">
-                                    <div class="bill-result__buttons">
-                                      <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
-                                      <form class="">
-                                        <div class="form-group field-another-post">
-                                          <input type="email" class="form-control form-input" id="form-archive1" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
-                                          <label class="control-label form-label" for="form-archive1">Отправить на e-mail</label>
-                                        </div>
-                                        <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
-                                      </form>
-                                      <div class="bill-result__success-message">Квитанція відправлена на вказаний e-mail</div>
+                                  <a href="#" class="btn btn-green btn-again"><span>Повторить</span></a>
+                                  <div class="archive-card__buttons"> 
+                                    <div data-pjax-container>
+                                      <div class="bill-result__buttons">
+                                        <a href="#" class="btn btn-green btn-download" download><span>Квитанция</span></a>
+                                        <form>
+                                          <div class="form-group">
+                                            <input type="email" class="form-control form-input" id="form-archive" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
+                                            <label class="control-label form-label" for="form-archive">Отправить на e-mail</label>
+                                          </div>
+                                          <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                        </form>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-
                           <div class="archive-card">
-                            <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-2" aria-expanded="false">
-                              <div class="archive-card__time">
-                                <span class="archive-card__time--date">16/04/20</span>
-                                <span class="archive-card__time--hours">15:35</span>
-                              </div>
+                            <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-new-2" aria-expanded="false">
+                              <span class="archive-card__time">20/02/24 18:01</span>
                               <div class="archive-card__icon">
-                                <img src="img/providers/yasno.png" alt="">
+                                <img src="img/providers/kyivstar.png" alt="">
                               </div>
-                              <div class="archive-card__title">Пополнение карты</div>
-                              <div class="archive-card__bonus icon-bonus"><span>23</span></div>
-                              <div class="archive-card__amount"><span>2000.00</span></div>
-                              <div class="archive-card__commission"><span>125.00</span></div>
+                              <span class="archive-card__title">Пополнение мобильного</span>
+                              <span class="archive-card__amount">1800.31 ₴</span>
                             </div>
-                            <div id="archive-2" class="collapse">
+                            <div id="archive-new-2" class="collapse">
                               <div class="archive-card__collapse">
                                 <div class="archive-card__description">
-                                  Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  <p class="mb-0 font-weight-bold">Призначення</p>
+                                  <p>Поповнення мобільного телефону +38066879887 на суму 1800.00 грн</p>
                                 </div>
                                 <div class="archive-card__send">
-                                  <a href="#" class="btn btn-green btn-again btn-block">Повторить</a>
-                                  <div class="archive-card__buttons">
-                                    <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
-                                    <form class="form-inline">
-                                      <div class="form-group">
-                                        <input type="email" class="form-control form-input" id="form-archive1" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
-                                        <label class="control-label form-label" for="form-archive1">Отправить на e-mail</label>
-                                        <label class="label-icon-left label-mail"></label>
+                                  <a href="#" class="btn btn-green btn-again"><span>Повторить</span></a>
+                                  <div class="archive-card__buttons"> 
+                                    <div data-pjax-container>
+                                      <div class="bill-result__buttons">
+                                        <a href="#" class="btn btn-green btn-download" download><span>Квитанция</span></a>
+                                        <form>
+                                          <div class="form-group">
+                                            <input type="email" class="form-control form-input" id="form-archive" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
+                                            <label class="control-label form-label" for="form-archive">Отправить на e-mail</label>
+                                          </div>
+                                          <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                        </form>
+                                        <div class="bill-result__success-message">Квитанція відправлена на вказаний e-mail</div>
                                       </div>
-                                      <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
-                                    </form>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-
                           <div class="archive-card">
-                            <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-3" aria-expanded="false">
-                              <div class="archive-card__time">
-                                <span class="archive-card__time--date">20/02/20</span>
-                                <span class="archive-card__time--hours">18:01</span>
-                              </div>
+                            <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-new-3" aria-expanded="false">
+                              <span class="archive-card__time">20/02/24 18:01</span>
                               <div class="archive-card__icon">
-                                <img src="img/providers/kyivgas.png" alt="">
+                                <img src="img/providers/kyivstar.png" alt="">
                               </div>
-                              <div class="archive-card__title">Пополнение мобильного</div>
-                              <div class="archive-card__bonus icon-bonus"><span>23</span></div>
-                              <div class="archive-card__amount"><span>20.00</span></div>
-                              <div class="archive-card__commission"><span>5.00</span></div>
+                              <span class="archive-card__title">Пополнение мобильного</span>
+                              <span class="archive-card__amount">1800.31 ₴</span>
                             </div>
-                            <div id="archive-3" class="collapse">
+                            <div id="archive-new-3" class="collapse">
                               <div class="archive-card__collapse">
                                 <div class="archive-card__description">
-                                  Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
+                                  <p class="mb-0 font-weight-bold">Призначення</p>
+                                  <p>Поповнення мобільного телефону +38066879887 на суму 1800.00 грн</p>
                                 </div>
                                 <div class="archive-card__send">
-                                  <a href="#" class="btn btn-green btn-again btn-block">Повторить</a>
-                                  <div class="archive-card__buttons">
-                                    <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
-                                    <form class="form-inline">
-                                      <div class="form-group">
-                                        <input type="email" class="form-control form-input" id="form-archive1" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
-                                        <label class="control-label form-label" for="form-archive1">Отправить на e-mail</label>
-                                        <label class="label-icon-left label-mail"></label>
+                                  <a href="#" class="btn btn-green btn-again"><span>Повторить</span></a>
+                                  <div class="archive-card__buttons"> 
+                                    <div data-pjax-container>
+                                      <div class="bill-result__buttons">
+                                        <a href="#" class="btn btn-green btn-download" download><span>Квитанция</span></a>
+                                        <form>
+                                          <div class="form-group">
+                                            <input type="email" class="form-control form-input" id="form-archive" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
+                                            <label class="control-label form-label" for="form-archive">Отправить на e-mail</label>
+                                          </div>
+                                          <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                        </form>
                                       </div>
-                                      <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
-                                    </form>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-
-                          <div class="archive-card">
-                            <div class="archive-card__row" role="button" data-toggle="collapse" data-target="#archive-4" aria-expanded="false">
-                              <div class="archive-card__time">
-                                <span class="archive-card__time--date">16/04/20</span>
-                                <span class="archive-card__time--hours">15:35</span>
-                              </div>
-                              <div class="archive-card__icon">
-                                <img src="img/providers/yasno.png" alt="">
-                              </div>
-                              <div class="archive-card__title">Пополнение карты</div>
-                              <div class="archive-card__bonus icon-bonus"><span>23</span></div>
-                              <div class="archive-card__amount"><span>2000.00</span></div>
-                              <div class="archive-card__commission"><span>125.00</span></div>
-                            </div>
-                            <div id="archive-4" class="collapse">
-                              <div class="archive-card__collapse">
-                                <div class="archive-card__description">
-                                  Пополнение мобильного телефона +380(67)123-45-67 на сумму 20.00 грн. И еще какая-то информация из назначения платежа
-                                </div>
-                                <div class="archive-card__send">
-                                  <a href="#" class="btn btn-green btn-again btn-block">Повторить</a>
-                                  <div class="archive-card__buttons">
-                                    <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
-                                    <form class="form-inline">
-                                      <div class="form-group">
-                                        <input type="email" class="form-control form-input" id="form-archive1" name="name" autocomplete="off" placeholder="your@email.com" aria-required="true">
-                                        <label class="control-label form-label" for="form-archive1">Отправить на e-mail</label>
-                                        <label class="label-icon-left label-mail"></label>
-                                      </div>
-                                      <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
                         </div><!-- archive table desktop -->
 
-                        <!-- archive table mobile -->
                         <div class="archive-mobile">
 
                           <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
@@ -853,41 +799,39 @@
                             </div>
                             <div class="archive-mobile__content">
                               <div class="archive-mobile__row">
-                                <span class="archive-mobile__time">20/02/20 18:01</span>
-                                <span class="archive-mobile__amount">20.00 грн</span>
+                                <span class="archive-mobile__time">31/05/2024 22:26</span>
+                                <span class="archive-mobile__amount">152.82 грн</span>
                               </div>
                               <div class="archive-mobile__title">
-                                <span>Оплата интернета LocalNet</span>
+                                <span> Sweet.tv</span>
                               </div>
                             </div>
                           </a>
-  
                           <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
                             <div class="archive-mobile__icon">
                               <img src="img/providers/kyivgas.png" alt="">
                             </div>
                             <div class="archive-mobile__content">
                               <div class="archive-mobile__row">
-                                <span class="archive-mobile__time">20/02/20 18:01</span>
-                                <span class="archive-mobile__amount">20.00 грн</span>
+                                <span class="archive-mobile__time">31/05/2024 22:26</span>
+                                <span class="archive-mobile__amount">152.82 грн</span>
                               </div>
                               <div class="archive-mobile__title">
-                                <span>Поддержать Коло.ТБ (средства идут на подключение интернета в бомбоубежища)</span>
+                                <span> Sweet.tv</span>
                               </div>
                             </div>
                           </a>
-  
                           <a href="my-archive-u-m-payment.html" class="archive-mobile__card">
                             <div class="archive-mobile__icon">
                               <img src="img/providers/kyivgas.png" alt="">
                             </div>
                             <div class="archive-mobile__content">
                               <div class="archive-mobile__row">
-                                <span class="archive-mobile__time">20/02/20 18:01</span>
-                                <span class="archive-mobile__amount">20000.00 грн</span>
+                                <span class="archive-mobile__time">31/05/2024 22:26</span>
+                                <span class="archive-mobile__amount">152.82 грн</span>
                               </div>
                               <div class="archive-mobile__title">
-                                <span>Оплата интернета LocalNet</span>
+                                <span> Sweet.tv</span>
                               </div>
                             </div>
                           </a>

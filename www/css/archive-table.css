@@ -55,6 +55,7 @@
 }
 
 .archive-card {
+  position: relative;
   font-family: "Roboto", sans-serif;
   border-top: 1px solid #DEE7F3;
   background-color: #fff;
@@ -64,6 +65,12 @@
 }
 .archive-card:last-of-type:hover {
   border-bottom-color: transparent;
+}
+.archive-card:hover {
+  z-index: 2;
+}
+.archive-card:hover + .archive-card {
+  border-top-color: transparent;
 }
 .archive-card:hover, .archive-card.opened {
   border-color: transparent;
@@ -161,142 +168,145 @@
 .archive-card__collapse {
   padding: 1rem;
 }
-.archive-card__buttons {
+.archive-card__description {
+  margin-bottom: 1rem;
+}
+.archive-card__description p, .archive-card__description span {
+  line-height: 1.171875;
+  color: #172A3A;
+}
+.archive-card__send {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  width: 100%;
   padding-top: 1rem;
+  border-top: 1px solid #F0F5FA;
 }
-.archive-card__buttons > a {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.archive-card__send > .btn {
+  margin-right: 1rem;
+  padding-left: 1.3125rem;
+  padding-right: 1.3125rem;
+  background-image: none;
 }
-.archive-card__buttons .form-inline {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+.archive-card__send > .btn span {
+  padding-left: 1.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_4555_2388)'%3E%3Cpath d='M12.9167 6.25016H15.4167C16.3334 6.25016 17.0834 5.50016 17.0834 4.5835V2.0835' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.9167 10.0002C17.9167 14.3752 14.375 17.9168 10 17.9168C5.62504 17.9168 2.08337 14.3752 2.08337 10.0002C2.08337 5.62516 5.62504 2.0835 10 2.0835C12.7917 2.0835 15.2417 3.52516 16.65 5.70016' stroke='white' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4555_2388'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-position: left center;
+  background-repeat: no-repeat;
 }
-.archive-card__buttons .form-inline .form-group {
-  margin-right: 0.5rem;
+.archive-card__send .archive-card__buttons {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
 }
-@media screen and (max-width: 991px) {
-  .archive-card__commission {
-    -ms-flex-preferred-size: 120px;
-        flex-basis: 120px;
-    max-width: 120px;
-  }
-  .archive-card__collapse {
-    -ms-flex-direction: column;
-        flex-direction: column;
-  }
-  .archive-card__buttons {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-  }
-}
-
-.archive--col-9 .archive-card__collapse {
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-.archive--col-9 .archive-card__description {
+.archive-card__send .archive-card__buttons > div {
   width: 100%;
 }
-.archive--col-9 .archive-card__send {
+.archive-card__send .archive-card__buttons .bill-result__buttons {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   -ms-flex-align: start;
       align-items: flex-start;
-  width: 100%;
-  padding-top: 0.5rem;
-}
-.archive--col-9 .archive-card__send > .btn-again {
-  -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
-  width: auto;
-  max-width: 100%;
-}
-.archive--col-9 .archive-card__send .archive-card__buttons {
-  width: 100%;
-}
-.archive--col-9 .archive-card__send .archive-card__buttons > div {
-  width: 100%;
-}
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons {
-  -ms-flex-align: start;
-      align-items: flex-start;
-  margin-left: 0.5rem;
   padding-top: 0;
   padding-bottom: 0;
 }
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form {
+.archive-card__send .archive-card__buttons .bill-result__buttons > .btn {
+  color: #172A3A;
+  border-color: #DEE7F3;
+  background-color: #DEE7F3;
+}
+.archive-card__send .archive-card__buttons .bill-result__buttons > .btn span {
+  padding-right: 1.75rem;
+  color: #172A3A;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99976 14.4756V4.35596' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.30139 10.1387L9.49382 14.2733C9.77573 14.548 10.2311 14.548 10.5058 14.2733L14.6982 10.1387' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.85583 16.644H16.144' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+.archive-card__send .archive-card__buttons .bill-result__buttons > .btn:hover {
+  box-shadow: none;
+}
+.archive-card__send .archive-card__buttons .bill-result__buttons > .btn::after {
+  display: none;
+}
+.archive-card__send .archive-card__buttons .bill-result__buttons form {
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: start;
       align-items: flex-start;
   -ms-flex-positive: 1;
       flex-grow: 1;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post {
+.archive-card__send .archive-card__buttons .bill-result__buttons form > .form-group {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  margin-right: 1rem;
+  padding-right: 0;
+}
+.archive-card__send .archive-card__buttons .bill-result__buttons form > .form-group .form-label {
+  top: 0.95rem;
+}
+.archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
   width: auto;
   max-width: 100%;
   padding-right: 0.5rem;
 }
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post .form-input:focus ~ .form-label,
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post .form-input.filled ~ .form-label,
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post.has-success .form-label,
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post.has-error .form-label {
+.archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post .form-input:focus ~ .form-label,
+.archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post .form-input.filled ~ .form-label,
+.archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post.has-success .form-label,
+.archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.field-another-post.has-error .form-label {
   top: 0.45rem;
 }
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.has-error .help-block {
+.archive-card__send .archive-card__buttons .bill-result__buttons form .form-group.has-error .help-block {
   position: static;
 }
-.archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons .bill-result__success-message {
+.archive-card__send .archive-card__buttons .bill-result__buttons form > .btn {
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+}
+.archive-card__send .archive-card__buttons .bill-result__buttons .bill-result__success-message {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
   width: auto;
   max-width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 2.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #09BC8A;
+  border-radius: 0.5rem;
+  background-color: #E9FCF3;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.09277 6.35742L4.91777 10.1824C5.49527 10.7599 6.44027 10.7599 7.01777 10.1824L15.3428 1.85742' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 0.5rem center;
+  background-size: 18px;
 }
-.archive--col-9 .archive-card__buttons {
-  -ms-flex: 0 1 auto;
-  /* ie11 fix */
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  padding-top: 0;
+.archive-card__buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
 }
-.archive--col-9 .archive-card__buttons h4 {
-  display: none;
+.archive-card__buttons > a {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
-.archive--col-9 .archive-card__buttons .bill-result__buttons {
-  padding-bottom: 0.5rem;
-}
-.archive--col-9 .archive-card__buttons .bill-result__buttons form .form-group .form-label {
-  top: 0.95rem;
-}
-@media screen and (max-width: 1199px) {
-  .archive--col-9 .archive-card__send {
+@media screen and (max-width: 991px) {
+  .archive-card__send {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .archive--col-9 .archive-card__send > .btn-again {
-    -ms-flex: 1 0 220px;
-        flex: 1 0 220px;
-    max-width: 220px;
-    margin-bottom: 1rem;
-  }
-  .archive--col-9 .archive-card__send .archive-card__buttons .bill-result__buttons {
-    margin-left: 0;
-  }
-  .archive--col-9 .archive-card__buttons .btn-download {
-    -ms-flex: 1 0 220px;
-        flex: 1 0 220px;
-    max-width: 220px;
-    margin-left: 0;
+  .archive-card__buttons {
+    margin-top: 1rem;
   }
 }
+
 @media screen and (max-width: 767px) {
   .archive {
     display: none;
