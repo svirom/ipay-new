@@ -31,6 +31,30 @@ $(document).ready(function() {
     width: '100%'
   });
 
+  if ($('.select-month').length) {
+    $('.select-month').select2({
+      placeholder: $('.select-month').data('localization'),
+      allowClear: false,
+      dropdownCssClass: 'select-dropdown',
+      selectionCssClass: 'select-selection',
+      minimumResultsForSearch: Infinity,
+      dropdownParent: $('.select-input-wrapper-month'),
+      width: '100%',
+    });
+  }
+
+  if ($('.select-year').length) {
+    $('.select-year').select2({
+      placeholder: '2024',
+      allowClear: false,
+      dropdownCssClass: 'select-dropdown',
+      selectionCssClass: 'select-selection',
+      minimumResultsForSearch: Infinity,
+      dropdownParent: $('.select-input-wrapper-year'),
+      width: '100%',
+    });
+  }
+
   $(".select-input-wrapper").each(function () {
 
     var lang = $('html').attr('lang');

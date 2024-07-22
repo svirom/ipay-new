@@ -208,6 +208,8 @@
 .archive-card__send .archive-card__buttons .bill-result__buttons {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-align: start;
       align-items: flex-start;
   padding-top: 0;
@@ -422,5 +424,66 @@
 @media screen and (max-width: 767px) {
   .archive-mobile {
     display: block;
+  }
+}
+
+#periodChange {
+  display: -ms-flexbox;
+  display: flex;
+}
+#periodChange .select2-container.select2-container--default .select2-selection {
+  padding-right: 2rem;
+  font-size: 1rem;
+}
+#periodChange .select2-container.select2-container--default .select2-dropdown {
+  font-size: 1rem;
+}
+#periodChange .select-input-wrapper-month .select2-container {
+  min-width: 11.25rem;
+  max-width: 11.25rem;
+  margin-right: 0.75rem;
+}
+#periodChange .select-input-wrapper-year .select2-container {
+  min-width: 8rem;
+}
+@media screen and (max-width: 575px) {
+  #periodChange .select-input-wrapper-year {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+  }
+}
+
+.archive-search {
+  width: 18.125rem;
+}
+.archive-search .form-input {
+  font-size: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.9342 19.8683C15.8684 19.8683 19.8684 15.8683 19.8684 10.9341C19.8684 5.99995 15.8684 2 10.9342 2C5.99997 2 2 5.99995 2 10.9341C2 15.8683 5.99997 19.8683 10.9342 19.8683Z' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3Cpath d='M22.4999 22.4999L17.2563 17.2563' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-position: right 0.8125rem center;
+  background-repeat: no-repeat;
+}
+.archive-search .form-label {
+  font-size: 1rem;
+}
+.archive-search__list {
+  position: absolute;
+  width: 360px;
+  right: 0;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 20px rgba(39, 97, 146, 0.15);
+  background: #ffffff;
+  z-index: 102;
+}
+.archive-search__list .archive-mobile__card:last-child {
+  border-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .archive-search {
+    width: 100%;
+  }
+  .archive-search__list {
+    left: 0;
+    width: 100%;
   }
 }/*# sourceMappingURL=archive-table.css.map */
