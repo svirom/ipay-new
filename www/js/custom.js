@@ -173,4 +173,12 @@ $(document).ready(function() {
     }
   }
 
+  // archive card collapse
+  $('.archive-card .collapse').on('show.bs.collapse', function() {
+    $(this).parents('.archive-card').addClass('opened');
+  });
+  $('.archive-card .collapse').on('hide.bs.collapse', function() {
+    $(this).parents('.archive-card').removeClass('opened');
+  });
+
 })
