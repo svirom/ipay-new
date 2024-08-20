@@ -35,7 +35,7 @@ $(document).ready(function() {
   }
 
   // catalogue mobile
-  $('.catalogue-mobile__next').on('click', catalogueMobile);
+  $('.main-nav__mobile-next').on('click', catalogueMobile);
   $('.catalogue-mobile__back').on('click', catalogueMobileHide);
 
   function catalogueMobile(e) {
@@ -47,6 +47,14 @@ $(document).ready(function() {
     e.preventDefault();
     $(this).closest('.navbar-collapse').find('.catalogue-mobile').removeClass('active');
   }
+
+  // hide login button on mobile menu show
+  $('.main-nav__opener').on('click',function() {
+    const accountItem = $(this).parents('.main-nav__nav-mobile').find('.main-nav__item-account');
+    if (!accountItem.hasClass('logged-in')) {
+      accountItem.toggleClass('d-none');
+    }
+  })
 
   // resolve issue with height and mobile bottom bar
   var vh = window.innerHeight * 0.01;

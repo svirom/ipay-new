@@ -48,27 +48,27 @@
   &__item {
     display: block;
     position: relative;
-    padding: 0.937rem 1.5rem 0.938rem 4.25rem;
+    height: 3.125rem;
+    margin-right: 0.5rem;
+    padding: 0.875rem 1.5rem 0.875rem 4.125rem;
     font-size: 1.125rem;
     color: $heading-color;
     line-height: 1.1667;
-    border-radius: $border-radius;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 0.5rem;
 
     &:hover {
       text-decoration: none;
       background-color: $light-grey;
     }
 
-    &:active, &.active {
-      color: $light-grey;
+    &.active {
+      color: $btn-red;
       text-decoration: none;
-      background-color: $btn-red;
+      background-color: $danger;
 
       span {
         &:not(.badge) {
-          color: $light-grey;
+          color: $btn-red;
         }
 
         &.badge {  
@@ -121,18 +121,6 @@
       background-repeat: no-repeat;
       z-index: 1;
     }
-
-    &::after {
-      position: absolute;
-      content: '';
-      left: -2px;
-      top: 0;
-      width: 3.125rem;
-      height: 100%;
-      box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
-      border-radius: $border-radius;
-      background-color: #fff;
-    }
   }
 
   &__account {
@@ -142,7 +130,7 @@
       background-position: -75px 0;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: -75px -25px;
       }
@@ -156,7 +144,7 @@
       background-position: 0 0;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: -25px 0;
       }
@@ -170,7 +158,7 @@
       background-position: -50px -50px;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: -100px 0;
       }
@@ -184,7 +172,7 @@
       background-position: -25px -25px;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: -50px -25px;
       }
@@ -198,7 +186,7 @@
       background-position: -50px 0;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: 0 -25px;
       }
@@ -212,7 +200,7 @@
       background-position: -100px -50px;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: -100px -25px;
       }
@@ -226,7 +214,7 @@
       background-position: 0 -50px;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: -25px -50px;
       }
@@ -242,7 +230,7 @@
       background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.61521 23.9999H2.17791C0.977475 23.9999 0 23.0645 0 21.9158V8.40198C0 7.25326 0.977475 6.31787 2.17791 6.31787H2.61521C3.81565 6.31787 4.79312 7.25326 4.79312 8.40198V21.9158C4.79312 23.0645 3.81565 23.9999 2.61521 23.9999Z' fill='%23172A3A'/%3E%3Cpath d='M12.2187 23.9997H11.7814C10.581 23.9997 9.60352 23.0643 9.60352 21.9156V12.1925C9.60352 11.0438 10.581 10.1084 11.7814 10.1084H12.2187C13.4192 10.1084 14.3966 11.0438 14.3966 12.1925V21.9156C14.3966 23.0643 13.4192 23.9997 12.2187 23.9997Z' fill='%23172A3A'/%3E%3Cpath d='M21.8223 24H21.385C20.1846 24 19.207 23.0646 19.207 21.9159V2.0841C19.207 0.935382 20.1846 0 21.385 0H21.8223C23.0227 0 24.0002 0.935382 24.0002 2.0841V21.9159C24.0002 23.0646 23.0227 24 21.8223 24Z' fill='%23172A3A'/%3E%3C/svg%3E");
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.61521 23.9999H2.17791C0.977475 23.9999 0 23.0645 0 21.9158V8.40198C0 7.25326 0.977475 6.31787 2.17791 6.31787H2.61521C3.81565 6.31787 4.79312 7.25326 4.79312 8.40198V21.9158C4.79312 23.0645 3.81565 23.9999 2.61521 23.9999Z' fill='%23E84F35'/%3E%3Cpath d='M12.2187 23.9997H11.7814C10.581 23.9997 9.60352 23.0643 9.60352 21.9156V12.1925C9.60352 11.0438 10.581 10.1084 11.7814 10.1084H12.2187C13.4192 10.1084 14.3966 11.0438 14.3966 12.1925V21.9156C14.3966 23.0643 13.4192 23.9997 12.2187 23.9997Z' fill='%23E84F35'/%3E%3Cpath d='M21.8223 24H21.385C20.1846 24 19.207 23.0646 19.207 21.9159V2.0841C19.207 0.935382 20.1846 0 21.385 0H21.8223C23.0227 0 24.0002 0.935382 24.0002 2.0841V21.9159C24.0002 23.0646 23.0227 24 21.8223 24Z' fill='%23E84F35'/%3E%3C/svg%3E");
       }
@@ -256,7 +244,7 @@
       background-position: -124px 0px;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: -124px -25px;
       }
@@ -270,7 +258,7 @@
       background-position: -150px 0px;
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-position: -150px -26px;
       }
@@ -286,7 +274,7 @@
       background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 3C12.2761 3 12.5 2.77614 12.5 2.5C12.5 2.22386 12.2761 2 12 2C11.7239 2 11.5 2.22386 11.5 2.5C11.5 2.77614 11.7239 3 12 3Z' stroke='%23172A3A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21 19.5H3C3.45 19.5 5.5 17.7273 5.5 15C5.5 12.2727 4.8 4.5 12 4.5C19.2 4.5 18.5 12.2727 18.5 15C18.5 17.7273 20.1 19.5 21 19.5Z' stroke='%23172A3A' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M10 21C10 21.5 10.6667 22.5 12 22.5C13.3333 22.5 14 21.5 14 21' stroke='%23172A3A' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
     }
 
-    &:active, &.active, &--red {
+    &.active, &--red {
       &::before {
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 3C12.2761 3 12.5 2.77614 12.5 2.5C12.5 2.22386 12.2761 2 12 2C11.7239 2 11.5 2.22386 11.5 2.5C11.5 2.77614 11.7239 3 12 3Z' stroke='%23E84F35' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21 19.5H3C3.45 19.5 5.5 17.7273 5.5 15C5.5 12.2727 4.8 4.5 12 4.5C19.2 4.5 18.5 12.2727 18.5 15C18.5 17.7273 20.1 19.5 21 19.5Z' stroke='%23E84F35' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M10 21C10 21.5 10.6667 22.5 12 22.5C13.3333 22.5 14 21.5 14 21' stroke='%23E84F35' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
       }

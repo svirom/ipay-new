@@ -58,34 +58,82 @@
                 <li class="main-nav__item main-nav__item--search">
                   <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"></a>
                 </li>
-                <li class="main-nav__item-account"><span>Мой кабинет</span></li>
+                <li class="main-nav__item-account">
+                   <a href="#" class="btn btn-red">Увійти</a>
+                </li>
                 <li class="main-nav__item main-nav__item-mobile">
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="nav-opener"><span></span></span>
                   </button>
                   <div class="navbar-collapse collapse" id="dropdown-account-mobile">
                     <div class="navbar-collapse__menu">
-                      <ul>
-                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                      <a href="#" class="btn btn-green main-nav__mobile-next">Каталог</a>
+                      <!-- <ul>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
                         <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul> -->
+                      <div class="mobile-login text-center">
+                        <p class="heading-color">Увійдіть, щоб зберігати історію ваших платежів та зберігати рахунки</p>
+                        <a href="#" class="btn btn-green btn-block">Увійти або зареєструватись</a>
+                      </div>
+                      <p class="main-nav__mobile-title heading-color mt-4">Підтримка</p>
+                      <ul class="mobile-nav-support">
+                        <li>
+                          <a href="#" class="mobile-nav-support__item mobile-nav-support__item--viber">Техпідтримка у Viber</a>
+                        </li>
+                        <li>
+                          <a href="#" class="mobile-nav-support__item mobile-nav-support__item--telegram">Техпідтримка у Telegram</a>
+                        </li>
                       </ul>
-                      <a class="dropdown-item dropdown-login-mobile" href="#">
-                        <span>Войти</span> 
-                        <span>или зарегистрироваться</span>
-                      </a>
+                      <p class="main-nav__mobile-title heading-color mt-4">Корисні матеріали</p>
+                      <ul class="mobile-nav-list">
+                        <li>
+                          <a href="#">Питання та відповіді</a>
+                        </li>
+                        <li>
+                          <a href="#">Новини та Акцій</a>
+                        </li>
+                        <li>
+                          <a href="#">Знайти квитанцію</a>
+                        </li>
+                        <li>
+                          <a href="#">Платіжний чат-бот</a>
+                        </li>
+                        <li>
+                          <a href="#">Безпека платежів</a>
+                        </li>
+                      </ul>
+                      <p class="main-nav__mobile-title heading-color mt-4">Для бізнесу</p>
+                      <ul class="mobile-nav-list">
+                        <li>
+                          <a href="#">Про компанію</a>
+                        </li>
+                        <li>
+                          <a href="#">Підключення оплат</a>
+                        </li>
+                        <li>
+                          <a href="#">Контакти</a>
+                        </li>
+                      </ul>
                       <div class="mobile-lang">
-                        <span>Язык:</span>
+                        <span>Мова:</span>
                         <ul class="mobile-lang__list">
-                          <li class="active"><a href="#">РУС</a></li>
-                          <li><a href="#">УКР</a></li>
+                          <li class="active"><a href="#">УКР</a></li>
+                          <li><a href="#">РУС</a></li>
                           <li><a href="#">ENG</a></li>
                         </ul>
                       </div>
+                      <p class="main-nav__mobile-title heading-color mt-3">Ми в соцмережах</p>
+                      <ul class="mobile-nav-social mb-4">
+                        <li><a href="#"><img src="img/icons/icon-facebook-grey.svg" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-viber-grey.svg" alt="Viber"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-instagram-grey.svg" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-linkedin-grey.svg" alt="LinkedIn"></a></li>
+                      </ul>
                     </div>
                     <div class="catalogue-mobile">
-                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <a class="catalogue-mobile__back" href="#">Назад</a>
                       <!-- catalogue widget -->
                       <div class="catalogue catalogue--icons">
                         <ul class="catalogue__list">
@@ -266,6 +314,14 @@
                                 <i class="category-icon-charity"></i>
                               </span>
                               <span>Благодійність</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__item--online-payment my-3">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-business"></i>
+                              </span>
+                              <span>Підключити онлайн оплати</span>
                             </a>
                           </li>
                         </ul>
