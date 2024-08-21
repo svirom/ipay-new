@@ -23,6 +23,45 @@
   color: #64B3F7;
 }
 
+.diia-verif-account {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #F0F5FA;
+}
+.diia-verif-account__icon {
+  -ms-flex: 0 0 2.5rem;
+      flex: 0 0 2.5rem;
+  margin-right: 1rem;
+}
+.diia-verif-account__content {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+.diia-verif-account__title, .diia-verif-account a {
+  line-height: 1.171875;
+}
+
+.diia-verif-bills > .row {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.diia-verif-bills > .row [class^=col] {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.diia-verif-bills .diia-verif-bills__item {
+  display: block;
+  height: 2.75rem;
+  padding: 0.675rem 1.25rem;
+  font-weight: 700;
+  border: 1px solid #94ADBB;
+  border-radius: 3rem;
+  color: #172A3A;
+  text-decoration: none;
+}
+
 .modal .modal-header.modal-header--diia-call {
   -ms-flex-direction: column-reverse;
       flex-direction: column-reverse;

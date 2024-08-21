@@ -41,6 +41,49 @@
   }
 }
 
+.diia-verif-account {
+  display: flex;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: $light-grey;
+
+  &__icon {
+    flex: 0 0 2.5rem;
+    margin-right: 1rem;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__title, a {
+    line-height: 1.171875;
+  }
+}
+
+.diia-verif-bills {
+  & > .row {
+    margin-left: -4px;
+    margin-right: -4px;
+
+    [class^=col] {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+
+  .diia-verif-bills__item {
+    display: block;
+    height: 2.75rem;
+    padding: 0.675rem 1.25rem;
+    font-weight: 700;
+    border: 1px solid #94ADBB;
+    border-radius: 3rem;
+    color: $heading-color;
+    text-decoration: none;
+  }
+}
+
 .modal {
   .modal-header {
     &.modal-header--diia-call {
