@@ -43,6 +43,22 @@
   line-height: 1.171875;
 }
 
+.diia-verif-success--page {
+  padding-top: 1.75rem;
+  padding-bottom: 2.75rem;
+}
+.diia-verif-success .diia-verif-success__skip {
+  color: #64B3F7;
+}
+@media screen and (max-width: 767px) {
+  .diia-verif-success--page h2 {
+    font-size: 1.125rem;
+  }
+}
+
+.diia-verif-bills {
+  margin-bottom: 1.5rem;
+}
 .diia-verif-bills > .row {
   margin-left: -4px;
   margin-right: -4px;
@@ -54,7 +70,7 @@
 .diia-verif-bills .diia-verif-bills__item {
   display: block;
   height: 2.75rem;
-  padding: 0.675rem 1.25rem;
+  padding: 0.5625rem 1.25rem;
   font-weight: 700;
   border: 1px solid #94ADBB;
   border-radius: 3rem;
@@ -86,6 +102,12 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-bottom: 2rem;
+}
+.modal .modal-body.modal-body--diia-success {
+  padding: 0 1.25rem 1.25rem;
+}
+.modal .modal-body.modal-body--diia-success .diia-verif-bills {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 575px) {
   .modal .modal-header .close {

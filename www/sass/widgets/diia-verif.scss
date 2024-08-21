@@ -61,7 +61,28 @@
   }
 }
 
+.diia-verif-success {
+  &--page {
+    padding-top: 1.75rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .diia-verif-success__skip {
+    color: #64B3F7;
+  }
+
+  @include until($md) {
+    &--page {
+      h2 {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
 .diia-verif-bills {
+  margin-bottom: 1.5rem;
+
   & > .row {
     margin-left: -4px;
     margin-right: -4px;
@@ -75,7 +96,7 @@
   .diia-verif-bills__item {
     display: block;
     height: 2.75rem;
-    padding: 0.675rem 1.25rem;
+    padding: 0.5625rem 1.25rem;
     font-weight: 700;
     border: 1px solid #94ADBB;
     border-radius: 3rem;
@@ -111,6 +132,14 @@
       padding-left: 1.25rem;
       padding-right: 1.25rem;
       padding-bottom: 2rem;
+    }
+
+    &.modal-body--diia-success {
+      padding: 0 1.25rem 1.25rem;
+
+      .diia-verif-bills {
+        margin-bottom: 0;
+      }
     }
   }
 
