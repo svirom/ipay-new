@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var params = {
     dpaId: "6bc8ee6a-ebd5-417c-8117-377ece9bce77", // required DPA Identifier, generated during registration.
     // dpaId: "6bc8ee6a-Ebd5-417c-8117-377ece9bce77_dpa0", // required DPA Identifier, generated during registration.
-    dpaId: "SRC", // required DPA Identifier, generated during registration.
     dpaData: {
      dpaName: "Testdpa0"       //required
     },
@@ -21,9 +20,12 @@ document.addEventListener("DOMContentLoaded", function() {
      // upon successful resolution, other methods, e.g. getCards(), may be called
      console.log(result);
     } 
-     catch (error) {
+    //  catch (error) {
+     catch ({name, message}) {
       // handle error
-      console.log(error);
+      // console.log(error);
+      console.log(name);
+      console.log(message);
      }
   }
 
