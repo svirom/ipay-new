@@ -14,65 +14,53 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const initPromise = mcCheckoutService.init(params) //  returns a promise
 
-  initPromise
-    .then(function(initResult) {
-      console.log('initResult', initResult);
-      const getCardsPromise = mcCheckoutService.getCards();
-      console.log('getCardsPromise', getCardsPromise);
-      return getCardsPromise;
-    })
-    .then(function(cardsArray) {
-      console.log(`Cards: ${cardsArray}`);
+  const button = document.getElementById('api-mastercard-getCards').querySelector('src-button');
 
-      if (!cardsArray.length) {
-       
-        // idLookupHandler();
-        const sampleiDLookupParams = {"email": 'svia.rom@gmail.com'};
-     
-        const promiseResolvedPayload = mcCheckoutService.idLookup(sampleiDLookupParams);
-        console.log('hello', promiseResolvedPayload);
-        return promiseResolvedPayload;
-      }
-    })
-    .then(function(isIdLookup) {
-      console.log(isIdLookup);
-      if (isIdLookup.consumerPresent) {
-        console.log(isIdLookup);
-      } else {
-        console.log('false');
-      }
-    })
-    .catch(promiseRejectedHandler)
-  
-
-  function promiseResolvedHandler (cards) {
-    // add success handler logic here
-    // console.log('61: ' + cards);
-    // console.log(typeof cards);
-
-    console.log('initPromise: ', initPromise);
-    const getCardsPromise = mcCheckoutService.getCards();
-    console.log('getCardsPromise: ', getCardsPromise);
-
-    return getCardsPromise;
-  }
-  function promiseRejectedHandler ({name, message}) {
-    // add error handler logic here
-    console.log(`${name}: ${message}`);
-  }
-
-  // const button = document.getElementById('api-mastercard-getCards').querySelector('src-button');
-
-  // button.addEventListener('click', function() {
+  button.addEventListener('click', function() {
     
-  //   const getCardsPromise = window.mcCheckoutService.getCards(); //returns a promise
-  //   getCardsPromise
-  //     .then(promiseResolvedHandler)
-  //     .catch(promiseRejectedHandler);
-  //   console.log(getCardsPromise);
-  //   // getCardsHandler();
+    initPromise
+      .then(function() {
+        // console.log('initResult', initResult);
+        const getCardsPromise = mcCheckoutService.getCards();
+        // console.log('getCardsPromise', getCardsPromise);
+        return getCardsPromise;
+      })
+      .then(function(cardsArray) {
+        console.log(`Cards: ${cardsArray}`);
 
-  // })
+        if (!cardsArray.length) {
+        
+          $('#modal-ucs').modal('show');
+          // idLookupHandler();
+          
+        }
+      })
+      .catch(error);
+
+  });
+
+  const buttonEmailSubmit = document.getElementById('ucs-email-submit');
+
+  buttonEmailSubmit.addEventListener('click', idLookupHandler);
+
+  function idLookupHandler() {
+    
+    const buttonEmailInput = document.getElementById('ucs-email');
+    const iDLookupParams = {"email": buttonEmailInput.value};
+
+    console.log(iDLookupParams);
+      
+    const idLookupPromise = mcCheckoutService.idLookup(iDLookupParams);
+    idLookupPromise
+      .then(function(isIdLookup) {
+        if (isIdLookup.consumerPresent) {
+          console.log(isIdLookup);
+        } else {
+          console.log('false');
+        }
+      })
+      .catch(error)
+  }
 
 
 });
