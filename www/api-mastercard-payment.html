@@ -465,14 +465,17 @@
                                 
                                 <div id="api-mastercard-getCards">
                                   <src-button></src-button>
+
+                                  <div class="ucs-payment-card" id="ucs-payment-card"></div>
   
-                                  <div class="modal fade modal-ucs" id="modal-ucs" tabindex="-1" aria-hidden="true">
+                                  <!-- modal-ucs-email -->
+                                  <div class="modal fade modal-auth modal-ucs-email" id="modal-ucs-email" tabindex="-1" aria-hidden="true">
                                     <div class="modal-dialog">
                                       <div class="modal-content">
                               
                                         <div class="modal-header">
   
-                                          <p class="modal-title mb-0"><strong>Перевірте, чи ваш email зареєстрований у системі Unified Checkout Solution</strong></p>
+                                          <p class="modal-title heading-color text-left mb-0"><strong>Перевірте, чи ваш email зареєстрований у системі Unified Checkout Solution</strong></p>
                                           
                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -485,13 +488,60 @@
                                         <div class="modal-body">
                                           <div class="form-group">
                                             <input type="email" class="form-control form-input" id="ucs-email">
+                                            <label class="control-label form-label" for="ucs-email">Введіть email</label>
                                           </div>
-                                          <div class="text-center mt-3">
-                                            <a href="#" class="btn btn-green"- id="ucs-email-submit">Продовжити</a>
+                                          <div class="text-center">
+                                            <button type="button" class="btn btn-green btn-block" id="ucs-email-submit">Продовжити</button>
                                           </div>
                                         </div>
                               
                                       </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- modal-ucs-card -->
+                                <div class="modal fade modal-auth modal-ucs-card" id="modal-ucs-card" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                            
+                                      <div class="modal-header">
+
+                                        <p class="modal-title heading-color text-left mb-0"><strong>Введіть дані картки, яку буде зареєстровано у системі Unified Checkout Solution</strong></p>
+                                        
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </svg>
+                                        </button>
+                                      </div>
+                            
+                                      <div class="modal-body">
+                                        <div class="form-group method-card-field method-card-number">
+                                          <input type="tel" class="form-control form-input" id="ucs-card-number" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
+                                          <label class="control-label form-label" for="ucs-card-number">Номер картки</label>
+                                          <span class="method-card-type method-card-type--card"></span>
+                                          <div class="help-block"></div>
+                                        </div>
+                                        <div class="method-card-data">
+                                          <div class="form-group method-card-field method-card-expires">
+                                            <input type="text" class="form-control form-input" id="ucs-card-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
+                                            <label class="control-label form-label" for="ucs-card-exp">Термін дії</label>
+                                            <div class="help-block"></div>
+                                          </div>
+                                          <div class="form-group method-card-field method-card-cvv">
+                                            <input type="tel" class="form-control form-input input-cvv" id="ucs-card-cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
+                                            <label class="control-label form-label" for="ucs-card-cvv">CVV</label>
+                                            <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты" data-original-title="" title=""></a>
+                                            <div class="help-block"></div>
+                                          </div>
+                                        </div>
+                                        <div class="text-center">
+                                          <button type="button" class="btn btn-green btn-block" id="ucs-card-submit">Продовжити</button>
+                                        </div>
+                                      </div>
+                            
                                     </div>
                                   </div>
                                 </div>
