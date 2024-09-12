@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(function() {
         // console.log('initResult', initResult);
         const getCardsPromise = mcCheckoutService.getCards();
-        // console.log('getCardsPromise', getCardsPromise);
+        console.log('getCardsPromise', getCardsPromise);
         return getCardsPromise;
       })
       .then(function(cardsArray) {
@@ -135,27 +135,28 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log('cardData.encryptedCard: ', cardData.encryptedCard);
         console.log('cardData.cardBrand: ', cardData.cardBrand);
 
-        const checkoutWithNewCardparams = {
-          windowRef: {
-            'width': 800,
-            'height': 400
-          }, // required.
+        const checkoutWithNewCardParams = {
+          // windowRef: {
+          //   width: '480px',
+          //   height: '700px'
+          // }, // required.
+          windowRef: window.open('/', 'example', 'width=480,height=700'), // required.
           encryptedCard: cardData.encryptedCard, // required
           cardBrand: cardData.cardBrand, // required
-          consumer: {
-            emailAddress: 'svia.rom@gmail.com'
-          }, // optional
+          // consumer: {
+          //   emailAddress: 'svia.rom@gmail.com'
+          // }, // optional
           // dpaTransactionOptions: DpaTransactionOptions, // optional.
           // DPA-specific preferences and transaction configuration parameters.
-        }
+        };
 
-        const checkoutWithNewCardPromise = mcCheckoutService.checkoutWithNewCard(checkoutWithNewCardparams); //  returns a promise
+        const checkoutWithNewCardPromise = mcCheckoutService.checkoutWithNewCard(checkoutWithNewCardParams); //  returns a promise
         checkoutWithNewCardPromise
           .then(function(data) {
             console.log('CheckoutWithNewCard: ', data);
           })
           .catch(function(error) {
-            console.log('Name: ', error.name);
+            console.log('Name checkout: ', error.name);
             console.log('Reason: ', error.reason);
             console.log('Details: ', error.details);
             console.log('Message: ', error.message);
@@ -166,7 +167,8 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log('Reason: ', error.reason);
         console.log('Details: ', error.details);
         console.log('Message: ', error.message);
-      })
+      }
+    )
   }
 
   // -----------------------------------------------------------

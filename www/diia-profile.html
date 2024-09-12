@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/category-icons.min.css">
+    <link rel="stylesheet" href="/css/datepicker.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/catalogue-account.css">
+    <link rel="stylesheet" href="/css/account-main.css">
+    <link rel="stylesheet" href="/css/account-settings.css">
+    <link rel="stylesheet" href="/css/account-templates.css">
+    <link rel="stylesheet" href="/css/diia-verif.css">
+
+    <title>Мой профиль New</title>
+  </head>
+  <body>
+
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безопасность </span>
+                    <span>плательщиков</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--bonuses">
+                  <span class="extra-small main-nav__icon main-nav__icon--bonus icon-bonus">
+                    <span class="main-nav__bonus">1543 </span>
+                    <span>бонусов</span>
+                  </span>
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">РУС</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"></a>
+                </li>
+                <li class="main-nav__item-account">
+                  <span class="main-nav__item-account--registered">Мой кабинет</span>
+                  <span>Альберт</span>
+                </li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <ul>
+                        <li><a class="dropdown-item dropdown-catalogue catalogue-mobile__next" href="#">Каталог</a></li>
+                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a></li>
+                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li>
+                        <li><a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a></li>
+                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
+                      </ul>
+                      <div class="mobile-lang">
+                        <span>Язык:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">РУС</a></li>
+                          <li><a href="#">УКР</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="dropdown-item catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue catalogue--icons">
+                        <ul class="catalogue__list">
+                          <li class="catalogue__list-title">Грошові перекази</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-p2p"></i>
+                              </span>
+                              <span>Перекази з картки на картку</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-p2r"></i>
+                              </span>
+                              <span>Переказ за реквізитами</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-sbor"></i>
+                              </span>
+                              <span>Створити збір грошей</span>
+                            </a>
+                          </li>
+                          <li class="catalogue__list-title">Платежі</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <!-- <i class="category-icon-army"></i> -->
+                                <img src="img/icons/icon-army.svg">
+                              </span>
+                              <span>Підтримай армію</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-mobile"></i>
+                              </span>
+                              <span>Мобільний зв'язок</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item active">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-utility"></i>
+                              </span>
+                              <span>Комунальні послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-podatku"></i>
+                              </span>
+                              <span>Податки та платежі в бюджет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-kinders"></i>
+                              </span>
+                              <span>Дитячі садки</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-internet"></i>
+                              </span>
+                              <span>Інтернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-tv"></i>
+                              </span>
+                              <span>Телебачення</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-phone"></i>
+                              </span>
+                              <span>Телефонний зв'язок</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-security"></i>
+                              </span>
+                              <span>Охорона</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-transport"></i>
+                              </span>
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-fees"></i>
+                              </span>
+                              <span>Оплата штрафів</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-tourism"></i>
+                              </span>
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-insurance"></i>
+                              </span>
+                              <span>Страхування</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-refresh"></i>
+                              </span>
+                              <span>Погашення кредитів</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-online"></i>
+                              </span>
+                              <span>Кредити онлайн</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-by-cash"></i>
+                              </span>
+                              <span>Кредити готівкою</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-education"></i>
+                              </span>
+                              <span>Освіта</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-business"></i>
+                              </span>
+                              <span>Бізнес-послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-charity"></i>
+                              </span>
+                              <span>Благодійність</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Мой кабинет</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Мой профиль</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content">
+        <div class="row">
+          <!-- aside area -->
+          <aside class="col-lg-3 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-5">
+                <!-- account catalogue widget -->
+                <div class="catalogue-account" id="catalogue-account-widget">
+                  <ul class="catalogue-account__list">
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__account">
+                        <span>Мой кабинет</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__archive">
+                        <span>Архив платежей</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__templates">
+                        <span>Мои шаблоны</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__cards">
+                        <span>Мои карты</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__getpayment" title="Збір коштів на картку">
+                        <span>Збір коштів на картку</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__bonus">
+                        <span>Мои бонусы</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__ipayplus">
+                        <span>iPay+</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="catalogue-account__item catalogue-account__settings active">
+                        <span>Мой профиль</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div><!-- account catalogue widget -->
+              </div>
+
+              <div class="col-12 mb-2">
+                <div class="banner banner-w100"></div>
+              </div>
+
+            </div>
+            
+          </aside><!-- aside area -->
+          <!-- main area -->
+          <main class="col-lg-9">
+
+            <div class="row">
+
+              <div class="col-12">
+                <!-- account main widget -->
+                <div class="account-main" id="account-main-widget">
+
+                  <div class="row">
+                    <div class="col-12 mt-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Мой кабинет</a>
+                    </div>
+                  </div>
+
+                  <div class="row mb-2 mb-md-4">
+                    <div class="col-12">
+                      <h1>Мой профиль</h1>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <!-- account settings widget -->
+                      <div class="account-settings" id="account-settings-widget">
+
+                        <div class="account-settings__main">
+
+                          <!-- diia approved -->
+                           <div class="alert alert-success diia-approved-alert mb-md-4">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 5.5C12 6.80854 11.4415 7.98663 10.5498 8.80888C10.9975 9.04633 11.4217 9.32911 11.8079 9.64776C11.2525 10.0407 10.7436 10.4949 10.2911 11.0007C9.42276 10.3642 8.38634 10 7.5 10C6.52587 10 5.37046 10.4399 4.45613 11.1977C3.54304 11.9546 3 12.9147 3 13.875V15C3 16.1046 3.89543 17 5 17H8C8 17.6874 8.07706 18.3568 8.22302 19H5C2.79086 19 1 17.2091 1 15V13.875C1 12.1428 1.96427 10.6654 3.17983 9.6579C3.56926 9.33511 3.9978 9.04885 4.45016 8.80888C3.55852 7.98663 3 6.80854 3 5.5C3 3.01472 5.01472 1 7.5 1C9.98528 1 12 3.01472 12 5.5ZM7.5 3C6.11929 3 5 4.11929 5 5.5C5 6.88071 6.11929 8 7.5 8C8.88071 8 10 6.88071 10 5.5C10 4.11929 8.88071 3 7.5 3Z" fill="#0C6858"/>
+                              <path d="M20.2071 16.2071C20.5976 15.8166 20.5976 15.1834 20.2071 14.7929C19.8166 14.4024 19.1834 14.4024 18.7929 14.7929L16 17.5858L14.7071 16.2929C14.3166 15.9024 13.6834 15.9024 13.2929 16.2929C12.9024 16.6834 12.9024 17.3166 13.2929 17.7071L15.2929 19.7071C15.6834 20.0976 16.3166 20.0976 16.7071 19.7071L20.2071 16.2071Z" fill="#0C6858"/>
+                              <path d="M10 17C10 13.134 13.134 10 17 10C20.866 10 24 13.134 24 17C24 20.866 20.866 24 17 24C13.134 24 10 20.866 10 17ZM17 12C14.2386 12 12 14.2386 12 17C12 19.7614 14.2386 22 17 22C19.7614 22 22 19.7614 22 17C22 14.2386 19.7614 12 17 12Z" fill="#0C6858"/>
+                            </svg>
+                            <span>Аккаунт верифицирован с Дія</span>
+                           </div>
+
+                          <form action="">
+                            <div class="row">
+                              <div class="col-md-6 col-lg-5">
+                                <h3 class="mb-3">Личные данные</h3>
+                                <!-- <div class="alert alert-warning alert-face alert-settings-personal fade show" role="alert">
+                                  Укажите ваше имя чтобы мы знали как к вам обращаться
+                                </div> -->
+                                <div class="form-group has-success">
+                                  <input type="text" class="form-control form-input" id="form-name" name="first-name" autocomplete="off" placeholder="Имя" aria-required="true" value="Василь">
+                                  <label class="control-label form-label" for="form-name">Имя</label>
+                                </div>
+                                <div class="form-group has-success">
+                                  <input type="text" class="form-control form-input" id="form-surname" name="last-name" autocomplete="off" placeholder="Фамилия" aria-required="true" value="Васильцев">
+                                  <label class="control-label form-label" for="form-surname">Фамилия</label>
+                                </div>
+                                <div class="form-group">
+                                  <a role="button" tabindex="-1" class="bank-card__cvv-button question-popover" data-toggle="popover" data-content="Чтобы мы могли поздравить вас с днем рождения. Это всегда приятно)" data-placement="top"></a>
+                                  <input type="text" class="form-control form-input datepicker-input" id="form-icon-d2" name="datepicker" autocomplete="off" placeholder="" aria-required="true">
+                                  <label class="control-label form-label" for="form-icon-d2">День рождения</label>
+                                </div>
+                                <div class="form-group pb-1 pb-md-0 pt-3">
+                                  <div class="row">
+                                    <div class="col-auto">
+                                      <div class="checkbox-control radio-control">
+                                        <input type="radio" id="sex-male" name="sex-radio" class="checkbox-input" checked>
+                                        <label class="checkbox-label" for="sex-male">Мужчина</label> 
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <div class="checkbox-control radio-control">
+                                        <input type="radio" id="sex-female" name="sex-radio" class="checkbox-input">
+                                        <label class="checkbox-label" for="sex-female">Женщина</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-lg-7 mt-3 mt-md-0">
+                                <h3 class="mb-3">Мой адрес</h3>
+                                <!-- <div class="alert alert-warning alert-face alert-settings-address fade show" role="alert">
+                                Укажите ваш адрес и сможем предлагать вам релевантные услуги!
+                              </div> -->
+                                <div class="form-group select-input-wrapper">
+                                  <select class="select-address form-control form-input" name="select-address">
+                                    <option value="1">г. Киев</option>
+                                    <option value="2">Волынская</option>
+                                    <option value="3">Житомирская</option>
+                                    <option value="4">Киевская</option>
+                                    <option value="5">Хмельницкая</option>
+                                    <option value="6">Черкасская</option>
+                                  </select>
+                                </div>
+                                <div class="form-group has-success">
+                                  <input type="text" class="form-control form-input" id="account-city" name="form-city" autocomplete="off" placeholder="Город" aria-required="true" value="Киев">
+                                  <label class="control-label form-label" for="account-city">Город</label>
+                                </div>
+                                <div class="form-group has-success">
+                                  <input type="text" class="form-control form-input" id="account-street" name="form-street" autocomplete="off" placeholder="Улица" aria-required="true" value="Проспект Победы">
+                                  <label class="control-label form-label" for="account-street">Улица</label>
+                                </div>
+                                <div class="row col-pad8">
+                                  <div class="col">
+                                    <div class="form-group has-success">
+                                      <input type="text" class="form-control form-input" id="account-house" name="form-house" autocomplete="off" placeholder="0" aria-required="true" value="15">
+                                      <label class="control-label form-label" for="account-house">Дом</label>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group has-success">
+                                      <input type="tel" class="form-control form-input" id="account-appartment" name="form-appartment" autocomplete="off" placeholder="0" aria-required="true" value="123">
+                                      <label class="control-label form-label" for="account-appartment">Квартира</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="account-settings__main-submit">
+                                  <div class="row justify-content-between align-items-center">
+                                    <div class="col-md-auto">
+                                      <button type="submit" class="btn btn-green">Сохранить изменения</button>
+                                    </div>
+                                    <div class="col-md-auto">
+                                      <!-- <p class="account-settings__saved text-center mt-3 mt-md-0 mb-0">Изменения сохранены</p> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="account-settings__diia diia-document pb-4">
+                          <h3 class="mb-3">Документы</h3>
+                          <p>Документи були отримані за допомогою Дія Верифікації. Ви можете переглянути або видалити документ. Видалення всіх документів розверифікує акаунт</p>
+                          <div class="diia-document__cards">
+                            <div class="row">
+                              <div class="col-sm-6 mb-3">
+                                <div class="template-card-wrapper dropdown">
+                                  <a href="#" class="bill-card new-template-card diia-card">
+                                    <div class="diia-card__header py-2">
+                                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="4.5" y="3.5" width="15" height="17.5" rx="1" stroke="#E84F35"/>
+                                        <path d="M7 17.5H13" stroke="#E84F35" stroke-linecap="round"/>
+                                        <path d="M7 15H17" stroke="#E84F35" stroke-linecap="round"/>
+                                        <circle cx="9.75" cy="8.25" r="1.75" stroke="#E84F35"/>
+                                        <path d="M7 12C7.2037 11.3333 8.03889 10 9.75 10C11.4611 10 12.2963 11.3333 12.5 12" stroke="#E84F35" stroke-linecap="round"/>
+                                      </svg>
+                                      <span class="diia-card__header-title">Паспорт</span>
+                                    </div>
+                                    <div class="diia-card__content pt-2 pl-1">
+                                      <p class="diia-card__content-title heading-color font-weight-bold mb-1">Власенко Олександр Володимирович</p>
+                                      <p class="small mb-2">12.10.1986</p>
+                                      <p class="small main-blue-color mb-1">Номер та серія:</p>
+                                      <p class="small heading-color mb-0">001122345</p>
+                                    </div>
+                                    <button class="template-card__button" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+                                    <div class="dropdown-menu">
+                                      <div id="edit-form">
+                                        <button type="button" class="dropdown-item" data-toggle="modal" data-target="#modal-diia-view">Посмотреть</button>
+                                      </div>                       
+                                      <div id="delete-form">
+                                        <button type="button" class="dropdown-item" data-toggle="modal" data-target="#modal-diia-delete">Видалити</button>
+                                      </div>                        
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  modal diia view (modal-diia-view) -->
+                          <div class="modal fade modal-auth modal-diia-view" id="modal-diia-view" tabindex="-1" aria-hidden="true" data-backdrop="static">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+
+                                <div class="modal-header modal-header--diia-view pb-0">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </button>
+                                </div>
+
+                                <div class="modal-body modal-body--diia-view">
+
+                                  <div class="modal-diia-view__header mb-3">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <rect x="4.5" y="3.5" width="15" height="17.5" rx="1" stroke="#E84F35"/>
+                                      <path d="M7 17.5H13" stroke="#E84F35" stroke-linecap="round"/>
+                                      <path d="M7 15H17" stroke="#E84F35" stroke-linecap="round"/>
+                                      <circle cx="9.75" cy="8.25" r="1.75" stroke="#E84F35"/>
+                                      <path d="M7 12C7.2037 11.3333 8.03889 10 9.75 10C11.4611 10 12.2963 11.3333 12.5 12" stroke="#E84F35" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Паспорт</span>
+                                  </div>
+
+                                  <div class="modal-diia-view__body pl-1">
+                                    <p class="modal-diia-view__title heading-color font-weight-bold mb-2">Власенко Олександр Володимирович</p>
+                                    <p class="modal-diia-view__title-eng heading-color text-uppercase mb-2">VLASENKO OLEKSANDR</p>
+                                    <p class="modal-diia-view__title-number heading-color text-uppercase font-weight-bold">FF124567</p>
+  
+                                    <div class="modal-diia-view__table">
+                                      <div class="modal-diia-view__table-row">
+                                        <span>Дата народження</span>
+                                        <span>12.10.1986</span>
+                                      </div>
+                                      <div class="modal-diia-view__table-row">
+                                        <span>Стать</span>
+                                        <span>М</span>
+                                      </div>
+                                      <div class="modal-diia-view__table-row">
+                                        <span>Громадянство</span>
+                                        <span>Україна</span>
+                                      </div>
+                                      <div class="modal-diia-view__table-row">
+                                        <span>Дата видачі</span>
+                                        <span>15.06.2020</span>
+                                      </div>
+                                      <div class="modal-diia-view__table-row">
+                                        <span>Дійсний до</span>
+                                        <span>15.06.2030</span>
+                                      </div>
+                                      <div class="modal-diia-view__table-row">
+                                        <span>Орган що видав</span>
+                                        <span>8023</span>
+                                      </div>
+                                      <div class="modal-diia-view__table-row">
+                                        <span>РНОКПП (ІПН)</span>
+                                        <span>0000000000</span>
+                                      </div>
+                                      <div class="modal-diia-view__table-row">
+                                        <span>Адреса проживання</span>
+                                        <span>Україна, м.Київ, вулю Шулявська буд.43, кв.34</span>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <a href="#" class="btn btn-green btn-block" data-dismiss="modal">Закрити</a>
+
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  modal diia delete (modal-diia-delete) -->
+                          <div class="modal fade modal-auth modal-diia-view" id="modal-diia-delete" tabindex="-1" aria-hidden="true" data-backdrop="static">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+
+                                <div class="modal-header modal-header--diia-view pb-0">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </button>
+                                </div>
+
+                                <div class="modal-body modal-body--diia-view">
+
+                                  <div class="modal-diia-view__body">
+                                    <p class="modal-diia-view__title-delete heading-color font-weight-bold mb-2">Ви дійсно хочете видалити паспорт громадянина України?</p>
+                                    <p class="heading-color">Видалення всіх документів розверифікує ваш акаунт. Ви зможете верифікуватись повторно</p>
+                                  </div>
+                                  <div class="row col-pad8">
+                                    <div class="col-6">
+                                      <a href="#" class="btn btn-outline btn-block" data-dismiss="modal">Відміна</a>
+                                    </div>
+                                    <div class="col-6">
+                                      <a href="#" class="btn btn-red btn-block">Видалити</a>
+                                    </div>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="account-settings__auth">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-5">
+                              <h3 class="mb-3">Данные входа и контакты</h3>
+                              <div class="form-group">
+                                <input type="tel" class="form-control form-input filled" id="account-phone" name="form-phone" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380(67)999-88-77" disabled>
+                                <label class="control-label form-label" for="account-phone">Номер телефона</label>
+                              </div>
+                              <a href="#" class="btn btn-outline btn-block">Изменить пароль</a>
+                              <div class="account-settings__social">
+                                <p class="heading-color mb-2"><strong>Дополнительные методы входа</strong></p>
+                                <p>Свяжите аккаунт iPay.ua с аккаунтами Google, Facebook или Apple и заходите в один клик с помощью кнопок быстрого входа</p>
+                                <!-- <div class="alert alert-warning fade show" role="alert">
+                                  Ваш пароль не задан, и мы не можем отключить вас от аккаунта Facebook. Если вы хотите отключиться, сначала <a href="#">восстановите пароль</a>.
+                                </div> -->
+                                <div class="account-settings__card active">
+                                  <div class="account-settings__card-title">
+                                    <img src="img/account/icon-fb.svg" alt="Icon">
+                                    <p>Facebook <span class="connected">подключен</span></p>
+                                  </div>
+                                  <a href="#" class="account-settings__card-status">Отключить</a>
+                                </div>
+                                <div class="account-settings__card mt-3">
+                                  <div class="account-settings__card-title">
+                                    <img src="img/account/icon-google.svg" alt="Icon">
+                                    <p>Google <span class="connected">подключен</span></p>
+                                  </div>
+                                  <a href="#" class="account-settings__card-status">Подключить</a>
+                                </div>
+                                <div class="account-settings__card mt-3">
+                                  <div class="account-settings__card-title">
+                                    <img src="img/account/icon-apple.svg" alt="Icon">
+                                    <p>Apple ID <span class="connected">подключен</span></p>
+                                  </div>
+                                  <a href="#" class="account-settings__card-status">Подключить</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-7">
+                              <h3>E-mail</h3>
+                              <p>Добавьте e-mail для возможности получения квитанций после каждой оплаты, напоминаний о приближающихся сроках, а также получения важных новостей сервиса</p>
+                              <div class="account-settings__email">
+                                <form action="">
+                                  <div class="row col-pad8">
+                                    <div class="col-lg">
+                                      <div class="form-group">
+                                        <input type="email" class="form-control form-input" id="account-email" name="form-email" autocomplete="off" placeholder="your@email.com" aria-required="true" value="qwerty@gmail.com">
+                                        <label class="control-label form-label" for="account-email">Мой e-mail</label>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-auto">
+                                      <div class="form-group">
+                                        <button type="submit" class="btn btn-green btn-block" disabled>Сохранить</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="alert alert-warning fade show mb-0 email-not-confirmed" role="alert">
+                                Ваш e-mail не подтвержден. <a href="#">Подвердить</a>
+                              </div>
+                              <!-- <div class="alert alert-success fade show mb-0 email-confirmed" role="alert">
+                                Подтверждение отправлено на указанный e-mail <strong>qwerty@gmail.com</strong>. Если подтверждение не пришло проверьте папку СПАМ
+                              </div> -->
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="account-settings__notifications">
+                          <h3 class="mb-3">Настройки уведомлений</h3>
+                          <form action="">
+                            <div class="checkbox-control mb-3">
+                              <input class="checkbox-input" type="checkbox" id="account-checkbox-1">
+                              <label class="checkbox-label" for="account-checkbox-1">Получать новости от iPay.ua</label>
+                            </div>
+                            <div class="checkbox-control mb-3">
+                              <input class="checkbox-input" type="checkbox" id="account-checkbox-2" checked>
+                              <label class="checkbox-label" for="account-checkbox-2">Получать уведомления о приближении срока оплаты</label>
+                            </div>
+                            <div class="checkbox-control mb-3">
+                              <input class="checkbox-input" type="checkbox" id="account-checkbox-3">
+                              <label class="checkbox-label" for="account-checkbox-3">Подписаться на рассылку новостей</label>
+                            </div>
+                            <div class="form-group pt-3">
+                              <button type="submit" class="btn btn-green" disabled>Сохранить настройки</button>
+                            </div>
+                          </form>
+                        </div>
+
+                      </div><!-- account settings widget -->
+                    </div>
+                  </div>
+                  
+                </div><!-- account main widget -->
+              </div>
+
+            </div>
+
+          </main><!-- main area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="/js/datepicker.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/select2-style.js"></script>
+    <script src="/js/datepicker-style.js"></script>
+    <script src="/js/diia-verif.js"></script>
+  </body>
+</html>

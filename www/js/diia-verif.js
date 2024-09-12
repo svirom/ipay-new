@@ -46,4 +46,10 @@ $(document).ready(function () {
     }, 1000);
   }
 
+  $('.diia-card .dropdown-item').on('click', function(e) {
+    if ($(e.target).attr('data-toggle') === 'modal') {
+      e.preventDefault();
+    }
+  })
+
 })

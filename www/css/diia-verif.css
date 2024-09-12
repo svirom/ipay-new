@@ -98,6 +98,14 @@
   padding: 0.25rem 0.4375rem;
   opacity: 0.8;
 }
+.modal .modal-header.modal-header--diia-view {
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 1rem 1.25rem 0;
+  border-bottom-width: 0;
+}
 .modal .modal-body.modal-body--diia-call {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -109,8 +117,118 @@
 .modal .modal-body.modal-body--diia-success .diia-verif-bills {
   margin-bottom: 0;
 }
+.modal .modal-body.modal-body--diia-view {
+  padding: 0 1.5rem 1.5rem;
+}
 @media screen and (max-width: 575px) {
   .modal .modal-header .close {
     margin-bottom: 1.5rem;
   }
+}
+
+.diia-document {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #DEE7F3;
+}
+
+.diia-card.bill-card.new-template-card {
+  height: auto;
+  min-height: 10.5625rem;
+}
+.diia-card.bill-card.new-template-card .diia-card__header {
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding-right: 1.875rem;
+}
+.diia-card.bill-card.new-template-card .diia-card__header-title {
+  padding-top: 2px;
+  padding-left: 0.625rem;
+  font-size: 0.875rem;
+  color: #E84F35;
+}
+.diia-card.bill-card.new-template-card .diia-card__content-title {
+  line-height: 1.171875;
+}
+
+.modal-diia-view__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: -0.75rem;
+  padding-right: 1.25rem;
+}
+.modal-diia-view__header > span {
+  padding-top: 2px;
+  padding-left: 0.625rem;
+  font-size: 0.875rem;
+  color: #E84F35;
+}
+.modal-diia-view .modal-diia-view__title {
+  font-size: 1.125rem;
+  line-height: 1.172;
+}
+.modal-diia-view .modal-diia-view__title-delete {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+.modal-diia-view .modal-diia-view__title-number {
+  font-size: 1.25rem;
+}
+.modal-diia-view__table {
+  border-top: 1px solid #DEE7F3;
+}
+.modal-diia-view__table-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.modal-diia-view__table-row > span {
+  font-size: 0.875rem;
+}
+.modal-diia-view__table-row > span:first-child {
+  color: #7C9CAC;
+}
+.modal-diia-view__table-row > span:last-child {
+  color: #172A3A;
+}
+.modal-diia-view__table-row:first-child {
+  padding-top: 0.5rem;
+}
+.modal-diia-view__table-row:last-child {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+.modal-diia-view__table-row:last-child > span:first-child {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding-bottom: 0.25rem;
+}
+.modal-diia-view .btn {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.diia-approved-alert.alert {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0.25rem 0.5rem;
+}
+.diia-approved-alert.alert > span {
+  padding-top: 2px;
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+  color: #0C6858;
 }/*# sourceMappingURL=diia-verif.css.map */
