@@ -149,6 +149,24 @@
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
+
+        &.dropdown-templates {
+          &::after {
+            left: 1rem;
+          }
+        }
+
+        &.dropdown-cards {
+          &::after {
+            left: 1.125rem;
+          }
+        }
+
+        &.dropdown-notifications {
+          &::after {
+            left: 0.875rem;
+          }
+        }
       }
     }
 
