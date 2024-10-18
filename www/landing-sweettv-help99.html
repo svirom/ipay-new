@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/landing-sweettv-help99.css">
+
+    <title>Landing Sweet TV Help99</title>
+  </head>
+  <body>
+
+    <section class="landing-wrapper" id="help99-drones" data-drones-amount="390000" data-drones-purpose="780000">
+
+      <header class="landing-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 main-nav">
+              <div class="main-nav__logo">
+                <a href="https://www.ipay.ua/">
+                  <img src="img/sweettv/help99/ipay-logo.svg" alt="iPay">
+                </a>
+                <a href="https://www.help99.co/" rel="nofollow">
+                  <img src="img/sweettv/help99/help99-logo.svg" alt="Help99">
+                </a>
+                <a href="https://sweet.tv" rel="nofollow">
+                  <img src="img/sweettv/help99/sweettv-logo.svg" alt="SweetTV">
+                </a>
+              </div>
+              <a href="https://www.ipay.ua/" class="btn btn-red landing-header__btn">На iPay.ua</a>
+            </div>
+          </div>
+        </div>
+      </header><!-- /.landing-header -->
+
+      <div class="landing-hero">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-8 col-lg-7">
+              <div class="landing-hero__content">
+                <h1 class="mb-3 mb-md-4">Збираємо на <span>50 дронів</span> для 505 батальйону морської піхоти з iPay.ua та Sweet.tv</h1>
+                <p class="landing-hero__subtitle mb-2">Донать та отримуй промокод на 1 місяць пакету L на SWEET.TV в подарунок</p>
+                <p class="landing-hero__promo">Доєднуйся до перемоги, допоможи прискорити збір.</p>
+              </div>
+              
+              <div class="landing-hero__form" id="landing-drones-form">
+
+                <div class="donate-progress mb-3 mb-md-4 has-animation">
+                  <div class="row justify-content-between mb-2">
+                    <div class="col-auto">
+                      <div class="donate-progress__amount">
+                        <p class="donate-progress__amount-label mb-0">Зібрано</p>
+                        <p class="donate-progress__amount-number mb-0 drones-amount-result" id="drones-amount-result">0 ₴</p>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="donate-progress__amount">
+                        <p class="donate-progress__amount-label mb-0">Мета</p>
+                        <p class="donate-progress__amount-number mb-0">780 000 ₴</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="donate-progress__progressbar">
+                    <div class="donate-progress__progressbar-filled" id="drones-amount-progress" style="width:0%"></div>
+                    <span class="donate-progress__progressbar-percent" id="drones-amount-percent">0%</span>
+                  </div>
+                </div>
+
+                <form action="">
+                  <p class="landing-hero__form-text">Оберіть суму донату або введіть свою</p>
+                  <div class="landing-hero__form-btns form-buttons mb-3">
+                    <div class="row col-pad8">
+                      <div class="col">
+                        <button type="button" class="btn btn-block form-buttons__btn" data-btn-amount="100">100 ₴</button>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-block form-buttons__btn" data-btn-amount="500">500 ₴</button>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-block form-buttons__btn" data-btn-amount="1000">1000 ₴</button>
+                      </div>
+                      <div class="col d-none d-sm-block">
+                        <button type="button" class="btn btn-block form-buttons__btn" data-btn-amount="3000">3000 ₴</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" class="form-control form-input filled" id="bill-amount" name="amount" autocomplete="off" placeholder="0.00" aria-required="true">
+                    <label class="control-label form-label" for="bill-amount">Сума</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control form-input filled" id="bill-name" name="name" autocomplete="off" placeholder="" aria-required="true">
+                    <label class="control-label form-label" for="bill-name">ПІБ</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" class="form-control form-input filled" id="bill-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380">
+                    <label class="control-label form-label" for="bill-phone">Номер телефону</label>
+                  </div>
+                  <button type="submit" class="btn btn-red btn-block">Задонатити</button>
+                  <p class="landing-hero__form-info mt-3 mb-0">Промокод буде надіслано на вказаний номер телефону. На один і той самий номер може буде надіслано лише один промокод.</p>
+                </form>
+                <!-- <div class="row justify-content-center align-items-center landing-hero__form-sent">
+                  <div class="col-auto">
+                    <p class="mb-0">Промокод отправлен на <strong>+380 67 676 67 67</strong></p>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="col-md-4 col-lg-5 d-none d-md-block">
+              <div class="landing-hero__img">
+                <img src="img/sweettv/help99/military-drone-new.png" class="parallax parallax-1" srcset="img/sweettv/help99/military-drone-new.png 1304w" sizes="652px" data-speed="0.35" alt="">
+                <img src="img/sweettv/help99/military-drone-new.png" class="parallax parallax-2" srcset="img/sweettv/help99/military-drone-new.png 1304w" sizes="250px" data-speed="0.45" alt="">
+                <img src="img/sweettv/help99/military-drone-new.png" class="parallax parallax-3" srcset="img/sweettv/help99/military-drone-new.png 1304w" sizes="342px" data-speed="0.35" alt="">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div><!-- /.landing-hero -->
+
+      <div class="landing-purpose landing-section">
+        <div class="container">
+          <h2 class="mb-4">Наша ціль</h2>
+          <p class="mb-md-4">Благодійний фонд «ХЕЛП99 Україна» разом з сервісом онлайн-платежів iPay.ua і національний онлайн-кінотеатр SWEET.TV оголошують збір коштів на 50 FPV-дронів для 505 окремого батальйону морської піхоти.</p>
+          <p class="mb-md-4">Ці дрони допоможуть нашим героям виконувати бойові завдання, знищувати ворожу техніку, склади та живу силу противника, зберігаючи життя українських захисників.</p>
+          <p class="mb-md-4">Кожен донат — це не просто внесок у перемогу, а й можливість отримати подарунок! За будь-яку суму внеску ви отримаєте безкоштовний промокод на пакет «L» для перегляду кіно на SWEET.TV</p>
+          <div class="info-video embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" id="help99-video" src="https://www.youtube.com/embed/BOf346PX4SM?si=CtrgNY4zdLZ-lqFX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <button class="info-video__button" id="help99-video-button">
+              <svg width="57" height="59" viewBox="0 0 57 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="57" height="59" rx="28.5" fill="#E84F35"></rect>
+                <path d="M34.9224 31.4039L24.2298 37.7057C23.9025 37.8986 23.5311 38.0001 23.1532 38C22.7753 37.9999 22.404 37.8983 22.0767 37.7054C21.7494 37.5125 21.4776 37.235 21.2886 36.9009C21.0996 36.5667 21.0001 36.1877 21 35.8019V23.1981C21.0001 22.8123 21.0996 22.4333 21.2886 22.0991C21.4776 21.765 21.7494 21.4875 22.0767 21.2946C22.404 21.1017 22.7753 21.0001 23.1532 21C23.5311 20.9999 23.9025 21.1014 24.2298 21.2943L34.9224 27.5961C35.25 27.7889 35.5221 28.0663 35.7112 28.4006C35.9004 28.7348 36 29.114 36 29.5C36 29.886 35.9004 30.2652 35.7112 30.5994C35.5221 30.9337 35.25 31.2111 34.9224 31.4039Z" fill="white"></path>
+              </svg>
+            </button>
+            <div class="info-video__bkgr"></div>
+          </div>
+        </div>
+      </div><!-- /.landing-purpose --> 
+
+      <div class="landing-opendatabot landing-section">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="landing-opendatabot__content">
+                <h2 class="mb-4"><span>Благодійний</span> Фонд-представник</h2>
+                <p class="mb-4">Закупівлею обладнання займається благодійний фонд “ХЕЛП99 Україна”, зареєстрований на території України.</p>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="landing-opendatabot__link">
+                <img src="img/sweettv/help99/help99-logo.svg" srcset="img/sweettv/help99/help99-logo.svg 103w" sizes="280px" alt="Help99">
+                <a href="https://opendatabot.ua/c/45221003" class="btn btn-red btn-block mt-1" rel="nofollow">Переглянути в Opendatabot</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.landing-opendatabot --> 
+
+      <div class="landing-info-wrapper landing-section">
+        <div class="container">
+          <div class="landing-info">
+            <div class="row align-items-center">
+              <div class="col-md-6 col-xl-auto">
+                <div class="landing-info__img text-center">
+                  <img src="img/sweettv/help99/fpv-drone.png" srcset="img/sweettv/help99/fpv-drone.png 1x, img/sweettv/help99/fpv-drone@2x.png 2x" alt="FPV Drone">
+                </div>
+              </div>
+              <div class="col">
+                <div class="landing-info__content">
+                  <h2 class="mb-4">Що таке <span>FPV дрони</span>?</h2>
+                  <p class="mb-0">FPV-дрон — це дрон з камерою від першої особи, який дозволяє оператору бачити відео в реальному часі. Він використовується для розвідки, штурмових операцій та ефективного знищення ворожої техніки, мінімізуючи ризики для військових.</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.landing-info --> 
+        </div>
+      </div><!-- /.landing-info-wrapper --> 
+
+      <div class="landing-donate landing-section">
+        <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="landing-donate__header">
+                  <img src="img/sweettv/help99/sweettv-logo.svg" alt="SweetTV">
+                  <h2>За донат даруємо промокод<br>на онлайн кіно і ТВ від SWEET.TV</h2>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="landing-donate__content">
+                  <p class="mb-4">Промокод включає</p>
+                  <div class="row mb-4">
+                    <div class="col-md-6">
+                      <ul>
+                        <li><span>370 телеканалів</span></li>
+                        <li><span>10000 рейтингових фільмів</span></li>
+                        <li><span>2000 мультфільмів</span></li>
+                        <li><span>1000 серіалів</span></li>
+                        <li><span>Керування прямим ефіром</span></li>
+                        <li><span>Перегляд на до 5 девайсів</span></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul>
+                        <li><span>Національне телебачення в HD</span></li>
+                        <li><span>Регіональні канали</span></li>
+                        <li><span>Фільмові канали</span></li>
+                        <li><span>Преміум канали</span></li>
+                        <li><span>Дитячі канали</span></li>
+                        <li><span>Спортивні канали</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#landing-drones-form" class="btn btn-red landing-donate__btn scrollto">Долучитись до збору</a>
+                </div>
+              </div>
+              <div class="col-lg">
+                <div class="landing-donate__img">
+                  <img src="img/sweettv/help99/donate-img.png" srcset="img/sweettv/help99/donate-img.png 1x, img/sweettv/help99/donate-img@2x.png 2x" alt="Image">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div><!-- /.landing-donate -->
+
+      <div class="landing-promocode landing-section">
+
+        <div class="promocode-bkgr"></div>
+
+        <div class="container">
+
+          <h2 class="landing-promocode__title">Як отримати та використати промокод?</h2>
+            
+          <div class="row landing-promocode__cards">
+            <div class="col-md-6 col-lg-3">
+              <div class="landing-promocode__card">
+                <span class="landing-promocode__number">1</span>
+                <span class="landing-promocode__text">Зробіть внесок та отримайте унікальний промокод в SMS на вказаний номер телефону</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="landing-promocode__card">
+                <span class="landing-promocode__number">2</span>
+                <span class="landing-promocode__text">Зареєструйтесь на <a href="https://sweet.tv" rel="nofollow"><u>SWEET.TV</u></a></span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="landing-promocode__card">
+                <span class="landing-promocode__number">3</span>
+                <span class="landing-promocode__text">Введіть промокод в особистому кабінеті в розділі “Промокод”</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="landing-promocode__card">
+                <span class="landing-promocode__number">4</span>
+                <span class="landing-promocode__text">Отримайте доступ на 1 місяць перегляду кіно, ТВ та мультфільмів, включених в пакет L</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="landing-promocode__info mb-0">Пропозиція діє для нових користувачів SWEET.TV. Якщо ви вже маєте передплату, промокод можна буде використати після закінчення поточної передплати</p>
+          
+        </div>
+      </div><!-- /.landing-promocode -->
+
+      <div class="landing-result landing-section">
+        <div class="container">
+          
+          <h2 class="landing-result__title text-center">Скільки вже зібрано</h2>
+
+          <div class="donate-progress donate-progress--drones col-pad8 has-animation">
+            <div class="row justify-content-between flex-nowrap mb-2">
+              <div class="col-auto">
+                <div class="donate-progress__amount">
+                  <p class="donate-progress__amount-label mb-0">Зібрано</p>
+                  <p class="donate-progress__amount-number donate-progress__amount-number--result mb-0 drones-amount-result" id="drones-amount-result-fpv">0 ₴</p>
+                </div>
+              </div>
+              <div class="col-auto align-self-end">
+                <div class="donate-progress__amount">
+                  <p class="donate-progress__amount-label mb-0">Мета</p>
+                  <p class="donate-progress__amount-number donate-progress__amount-number--purpose mb-0">780 000 ₴ <a role="button" tabindex="0" class="donate-progress__question question-popover" data-container=".donate-progress__amount-number--purpose" data-toggle="popover" data-title="" data-content="Кожен дрон вартує орієнтовно від 15 тис грн. Ми збираємо на 50 штук біля 780000 грн.  Всі звітності закупки та витрати ми закріпимо на сторінці збору"></a></p>
+                </div>
+              </div>
+            </div>
+            <div class="donate-progress__progressbar">
+              <div class="donate-progress__progressbar-filled" style="width:2%"></div>
+              <span class="donate-progress__progressbar-percent">0%</span>
+            </div>
+          </div>
+
+          <a href="#landing-drones-form" class="btn btn-red btn-block landing-result__join scrollto">Долучитись до збору</a>
+
+          <div class="landing-result__fpv row" id="drones-amount-fpv">
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+            <div class="col">
+              <div class="fpv-drone"></div>
+            </div>
+          </div>
+  
+        </div>
+      </div><!-- /.landing-result -->
+
+      <div class="landing-faqs landing-section">
+        <div class="container">
+          <h2 class="mb-4">Питання та відповіді</h2>
+
+          <div class="faqs-accordion" id="faqs-accordion-widget">
+
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading1" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Реквізити фонду</p>
+              <div id="collapse1" class="collapse" aria-labelledby="heading1">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Збір офіційно проводиться на сторінці сервісу онлайн-платежів iPay.ua на реквізити Благодійного фонду «ХЕЛП99 Україна»</p>
+                  <p class="mb-0">Місцезнаходження: 01033, місто Київ, вул. Володимирська, будинок 101, офіс 1</p>
+                  <p class="mb-0">Код ЄДРПОУ: 45221003</p>
+                  <p class="mb-0">IBАN: UA743052990000026002000130045</p>
+                  <p class="mb-0">АТ КБ «ПриватБанк», Код банку: 305299</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading2" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Як мої кошти допоможуть морським піхотинцям?</p>
+              <div id="collapse2" class="collapse" aria-labelledby="heading2">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Усі зібрані кошти будуть спрямовані на закупівлю FPV-дронів для 505 окремого батальйону морської піхоти. Дрони допоможуть виконувати бойові завдання, знищувати ворожу техніку та захищати життя наших захисників.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Яка мінімальна сума для донату?</p>
+              <div id="collapse3" class="collapse" aria-labelledby="heading3">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Відповідь: Ви можете зробити внесок на будь-яку суму. Кожен внесок важливий, оскільки наближає нас до мети — забезпечити 505 батальйон необхідними FPV-дронами.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading4" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Як я отримаю промокод на перегляд кіно від Sweet.TV?</p>
+              <div id="collapse4" class="collapse" aria-labelledby="heading4">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Відповідь: Після здійснення донату вам на телефон буде надіслано SMS з промокодом на пакет «L» від SWEET.TV, який ви зможете активувати для безкоштовного перегляду кіно.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading5" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Як використати промокод?</p>
+              <div id="collapse5" class="collapse" aria-labelledby="heading5">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Після отримання промокоду потрібно зареєструватися або увійти на SWEET.TV https://sweet.tv/uk та ввести промокод у розділі «Промокод».</p>
+                  <p class="mb-0">Пропозиція діє для нових користувачів SWEET.TV. Якщо ви вже маєте передплату, промокод можна буде використати після закінчення поточної передплати</p>
+                </div>
+              </div>
+            </div>
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading6" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">Як я можу бути впевненим, що мої кошти будуть використані за призначенням?</p>
+              <div id="collapse6" class="collapse" aria-labelledby="heading6">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Благодійний фонд «ХЕЛП99 Україна» публікує звіти про використання зібраних коштів на своєму офіційному сайті та в соціальних мережах. Ви зможете бачити прогрес збору та закупівлю дронів цій сторінці.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading7" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">Чи можу я допомогти ще якось, окрім фінансової підтримки?</p>
+              <div id="collapse7" class="collapse" aria-labelledby="heading7">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Так, ви можете допомогти, поширюючи інформацію про цей збір у соціальних мережах або серед своїх друзів та знайомих. Підтримка у вигляді поширення інформації також дуже важлива!</p>
+                </div>
+              </div>
+            </div>
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading8" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">Скільки потрібно зібрати для закупівлі 50 FPV-дронів?</p>
+              <div id="collapse8" class="collapse" aria-labelledby="heading8">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Загальна вартість закупівлі 50 FPV-дронів становить 780 000 грн. Кожен дрон коштує приблизно 50 000 грн, і кожен ваш внесок наближає нас до мети.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading9" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">Як я можу бути впевненим, що мої кошти будуть використані за призначенням?</p>
+              <div id="collapse9" class="collapse" aria-labelledby="heading9">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Благодійний фонд «ХЕЛП99 Україна» публікує звіти про використання зібраних коштів на своєму офіційному сайті та в соціальних мережах. Ви зможете бачити прогрес збору та закупівлю дронів цій сторінці.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faqs-card">
+              <p class="faqs-card__header collapsed" id="heading10" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">Чи буде звітність?</p>
+              <div id="collapse10" class="collapse" aria-labelledby="heading10">
+                <div class="faqs-card__collapse">
+                  <p class="mb-0">Обов’язково. Звіти по закупках будуть надані та прикріплені після покупки дронів на цій сторінці. </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /.landing-faqs -->
+
+      <div class="landing-social landing-section">
+        <div class="container">
+          <h2 class="text-md-center mb-4">Поширюй у соціальних мережах</h2>
+          <div class="d-flex justify-content-center align-items-center">
+            <a href="#"><img src="img/sweettv/help99/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="img/sweettv/help99/telegram.svg" alt="Telegram"></a>
+            <a href="#"><img src="img/sweettv/help99/x-twitter.svg" alt="X Twitter"></a>
+          </div>
+        </div>
+      </div><!-- /.landing-social -->
+
+      <footer class="landing-footer">
+        <div class="container">
+          <ul class="landing-footer-list">
+            <li><a href="#">Про компанію</a></li>
+            <li><a href="#">Безпека платежів</a></li>
+            <li><a href="#">Новини та Акцій</a></li>
+            <li><a href="#">Підключення оплат</a></li>
+            <li><a href="#">Контакти</a></li>
+            <li class="w-100 d-lg-none"></li>
+            <li class="landing-footer-list__dropdown dropup">
+              <a href="#" class="footer-list__dropdown-link" data-display="static" role="button" id="dropdown-footer-list" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Підтримка клієнтів</a>
+              <ul class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdown-footer-list">
+                <li>
+                  <a class="dropdown-item dropdown-item--phone" href="tel:0800601160">
+                    <span class="font-weight-bold">0 800 60 11 60</span>
+                    <span class="extra-small">Безкоштовно з мобільного</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item--phone" href="tel:+380445021160">
+                    <span class="font-weight-bold">+380 44 502 11 60</span>
+                    <span class="extra-small">Для дзвінків з-за кордону</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item--viber" href="#">
+                    <span>Техпідтримка у Viber</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item--telegram" href="#">
+                    <span>Техпідтримка у Telegram</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item--email" href="mailto:help@ipay.ua">
+                    <span class="font-weight-bold">help@ipay.ua</span>
+                    <span class="extra-small">Для письмових звернень</span>
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown-item dropdown-item--schedule">
+                    <span class="mb-2">Графік роботи підтримки</span>
+                    <span>Пн - Нд 09:00 - 21:00</span>
+                  </span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="row justify-content-between align-items-center">
+            <div class="col-md-auto">
+              <div class="landing-footer-social">
+                <p class="font-weight-bold mb-0">Ми в соцмережах</p>
+                <ul class="landing-footer-social__list">
+                  <li>
+                    <a href="https://www.facebook.com/iPay.ua" rel="nofollow">
+                      <img src="img/sweettv/help99/social-facebook.svg" alt="Facebook">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://chats.viber.com/ipayua" rel="nofollow">
+                      <img src="img/sweettv/help99/social-viber.svg" alt="Viber">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/ipay.ua" rel="nofollow">
+                      <img src="img/sweettv/help99/social-instagram.svg" alt="Instagram">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/ipayua" rel="nofollow">
+                      <img src="img/sweettv/help99/social-linkedin.svg" alt="Linkedin">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-auto">
+              <div class="landing-footer-secure">
+                  <img src="img/sweettv/help99/pci-dss.svg" alt="PCI DSS">
+                  <img src="img/sweettv/help99/mastercard-securecode.svg" alt="Mastercard">
+                  <img src="img/sweettv/help99/verified-by-visa.svg" alt="Visa">
+                  <img src="img/sweettv/help99/prostir.svg" alt="Prostir">
+              </div>
+            </div>
+          </div>
+          <div class="landing-footer-copyright">
+            <div class="row">
+              <div class="col-md">
+                <div class="landing-footer-copyright__text">
+                  <p class="mb-0">&copy; 2009—2024 іPay.ua</p>
+                  <p class="mb-0">Внутрішньодержавна небанківська платіжна система «Фінансовий світ», 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+                  <p class="mb-0">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення»,04080, м. Київ, вулиця Нижньоюрківська, будинок 45-А</p>
+                  <p class="mb-0">Власник торговельної марки iPay.ua товариство з обмеженою відповідальністю «Універсальний Дата Центр», 04080, м. Київ, вулиця Нижньоюрківська, будинок 45-А</p>
+                </div>
+              </div>
+              <div class="col-md-auto">
+                <div class="landing-footer-copyright__dropdown dropup">
+                  <a href="#" class="landing-footer-copyright__dropdown-link" data-display="static" role="button" id="dropdown-lang-footer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Українська</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-lang-footer" >
+                    <a class="dropdown-item active" href="/ru">Українська</a>
+                    <a class="dropdown-item" href="/en">English</a>
+                    <a class="dropdown-item" href="/ru">Рус</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer><!-- /.landing-footer --> 
+
+    </section><!-- /.landing-wrapper --> 
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/landing-sweettv-help99.js"></script>
+  </body>
+</html>
