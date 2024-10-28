@@ -709,7 +709,7 @@
 .landing-social a img {
   max-width: 100%;
 }
-.landing-social a + a {
+.landing-social a ~ a {
   margin-left: 2.375rem;
 }
 @media screen and (max-width: 767px) {
@@ -717,7 +717,7 @@
     -ms-flex-preferred-size: 3.125rem;
         flex-basis: 3.125rem;
   }
-  .landing-social a + a {
+  .landing-social a ~ a {
     margin-left: 1.5rem;
   }
 }

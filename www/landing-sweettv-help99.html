@@ -9,9 +9,31 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/landing-sweettv-help99.css">
 
+    <meta property="og:url" content="https://ipay.svirom.work/landing-sweettv-help99.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="iPay.ua">
+    <meta property="og:title" content="Збір на FPV-дрони з HELP99, iPay.ua та Sweet.tv">
+    <meta property="og:description" content="➤ Зробіть свій внесок у збір коштів на 50 FPV-дронів &amp;#128640; для &amp;#128170;505 батальйону морської піхоти&amp;#128170; та отримайте в подарунок місячний пакет від Sweet.tv.">
+    <meta property="og:image" content="https://ipay.svirom.work/img/sweettv/help99/OG-image.png">
+
     <title>Landing Sweet TV Help99</title>
   </head>
   <body>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+   
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '1967982273722530', // you need to create an facebook app
+          status           : true,
+          xfbml            : true,
+          version          : 'v3.3'
+        });
+      };
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
     <section class="landing-wrapper" id="help99-drones" data-drones-amount="390000" data-drones-purpose="780000">
 
@@ -554,7 +576,36 @@
         <div class="container">
           <h2 class="text-md-center mb-4">Поширюй у соціальних мережах</h2>
           <div class="d-flex justify-content-center align-items-center">
-            <a href="#"><img src="img/sweettv/help99/facebook.svg" alt="Facebook"></a>
+
+            <!-- <a href="#"><img src="img/sweettv/help99/facebook.svg" alt="Facebook"></a> -->
+            <a href="#" id="ogBtn"><img src="img/sweettv/help99/facebook.svg" alt="Facebook"></a>
+			
+            <script>
+              document.getElementById('ogBtn').onclick = function(e) {
+                // FB.ui({
+                // 	// app_id: '676867082416131',
+                // 	display: 'popup',
+                // 	method: 'share_open_graph',
+                // 	action_type: 'og.likes',
+                // 		href: 'https://developers.facebook.com/docs/',
+                // 	action_properties: JSON.stringify({
+                // 		object:'https://ipay.ua/<?= Yii::$app->params['lang']; ?>/help99-fpv-drons-for-505-batalion',
+                // 	})
+                // }, function(response){});
+                e.preventDefault();
+                FB.ui({
+                  // app_id: '676867082416131',
+                  display: 'popup',
+                  method: 'share',
+                  // href: 'https://ipay.ua/<?= Yii::$app->params['lang']; ?>/help99-fpv-drons-for-505-batalion',
+                }, function(response){});
+                // FB.ui({
+                // 	method: 'share',
+                // 	href: 'https://developers.facebook.com/docs/',
+                // }, function(response){});
+              }
+            </script>
+
             <a href="#"><img src="img/sweettv/help99/telegram.svg" alt="Telegram"></a>
             <a href="#"><img src="img/sweettv/help99/x-twitter.svg" alt="X Twitter"></a>
           </div>
