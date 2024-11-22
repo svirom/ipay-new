@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header notifications widget of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.header-notifications {
+  .header-notifications__link {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='28' viewBox='0 0 24 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7959 1.5V4.16667' stroke='%23172A3A' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M11.7956 4.16602C7.37729 4.16602 3.79557 7.74774 3.79557 12.166V20.166C2.46224 20.166 1.12891 21.4993 1.12891 22.8327H11.7956M11.7956 4.16602C16.2138 4.16602 19.7956 7.74774 19.7956 12.166V20.166C21.1289 20.166 22.4622 21.4993 22.4622 22.8327H11.7956' stroke='%23172A3A' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M9.12891 24.166C9.12891 25.6388 10.3228 26.8327 11.7956 26.8327C13.2684 26.8327 14.4622 25.6388 14.4622 24.166' stroke='%23172A3A' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+      position: absolute;
+      content: '';
+      right: 0.1875rem;
+      top: 0.25rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 50%;
+      background-color: #E84F35;
+    }
+
+    &:hover,
+    &[aria-expanded=true] {
+      background-color: #F1F6FB;
+    }
+
+    & ~ .dropdown-menu {
+      width: 21.875rem;
+      right: 0;
+      margin-top: 1.125rem;
+      margin-right: -2.625rem;
+      padding: 0.5rem;
+      box-shadow: none;
+      filter: drop-shadow(0px 4px 20px rgba(39, 97, 146, 0.15));
+
+      &::before {
+        right: 2.8125rem;
+        top: -12px;
+        border-width: 0 13px 13px 13px;
+      }
+    }
+
+    &--empty {
+      &::before {
+        display: none;
+      }
+
+      & ~ .dropdown-menu {
+        height: 5.375rem;
+      }
+    }
+  }
+
+  .header-notifications__card {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #FFF5F4;
+    }
+
+    &-icon {
+      flex: 0 0 2.875rem;
+      height: 2.875rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.25rem;
+      border-radius: 50%;
+      background-color: #FFD0CE;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+      }
+    }
+
+    &-content {
+      flex-grow: 1;
+      width: 0;
+      padding-left: 0.5rem;
+      color: #000000;
+
+      p {
+        font-size: 0.875rem;
+        color: #000000;
+
+        &.red-color {
+          color: #E84F35;
+        }
+      }
+    }
+
+    &--all {
+      justify-content: center;
+    }
+  }
+
+  .header-notifications__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    user-select: none;
+  }
+}

@@ -194,4 +194,11 @@ $(document).ready(function() {
     $(this).parents('.archive-card').removeClass('opened');
   });
 
+  // sticky menu (footer)
+  $('#sticky-footer-catalog-link').on('click', function(e) {
+    e.preventDefault();
+    $('.main-nav__mobile-next').trigger('click');
+    $('.main-nav__opener').trigger('click');
+  })
+
 })
