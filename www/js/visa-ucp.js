@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
         
       let consumerIdentity = {
         // identityProvider: "iPayDPA-iPaySRC",
-        // identityValue: "svia.rom@gmail.com",
-        identityValue: "svirom@yahoo.com",
+        identityValue: "svia.rom@gmail.com",
+        // identityValue: "svirom@yahoo.com",
         identityType: "EMAIL_ADDRESS"
       };
       
@@ -60,8 +60,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // If cards status is "PENDING_CONSUMER_IDV", call getCards again with validationData
         case 'PENDING_CONSUMER_IDV':
-          const validationDataInput = { consumerIdentity, validationData: "931734" }; // Replace with your actual validation data
-          cards = await Vsb.getCards(validationDataInput);
+          // const validationDataInput = { consumerIdentity, validationData: "931734" }; // Replace with your actual validation data
+          // cards = await Vsb.getCards(validationDataInput);
+          console.log('PENDING_CONSUMER_IDV');
           break;
 
         case 'ERROR':
