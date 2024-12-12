@@ -143,6 +143,14 @@
           
           // Log the checkout response
           console.log(checkoutResponse);
+
+          checkoutResponse
+            .then(function(res) {
+              console.log(res);
+            })
+            .catch(function(err) {
+              console.log(err);
+            })
         })
 
         if (actionCode === 'ADD_CARD') {
@@ -153,12 +161,6 @@
         console.log(err);
       });;
   });
-
-
-  
-
-
-
 
   // window.onload = async function () {
 
