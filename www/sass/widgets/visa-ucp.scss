@@ -1,0 +1,36 @@
+// -------------------------------------------------------------------------------------------
+// This file contains all styles related to the visa unified click to pay widget of the site.
+// -------------------------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.ucp-add-card {
+  .checkbox-control {
+    padding-left: 1.25rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 1px;
+      left: 0.5rem;
+      height: calc(100% - 2px);
+      width: 0;
+      border-left: 1px solid #DEE7F3;
+    }
+  }
+
+  .checkbox-label {
+    padding-left: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1;
+
+    &::before, &::after {
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}

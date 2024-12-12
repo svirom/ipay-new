@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/payment-progress.css">
     <link rel="stylesheet" href="/css/service-provider.css">
     <link rel="stylesheet" href="/css/archive-bill.css">
+    <link rel="stylesheet" href="/css/visa-ucp.css">
 
     <title>Visa Unified Click to Pay Payment</title>
   </head>
@@ -568,7 +569,7 @@
                           <form action="/" id="utility-form">
 
                             <div class="row justify-content-center">
-                              <div class="col-sm-9 col-md-7 col-xl-6">
+                              <div class="col-sm-10 col-md-8 col-xl-7">
                                 <div class="form-group method-card-field">
                                   <a role="button" tabindex="-1" class="bank-card__cvv-button question-popover" data-toggle="popover" data-content="Увійдіть або зареєструйтесь, щоб не вводити дані ПІБ при кожній оплаті та мати можливість зберегти картку до гаманця та платити в один клік." data-placement="right"></a>
                                   <input type="text" class="form-control form-input" id="form-name-que" name="name" autocomplete="off" placeholder="ПІБ власника картки" aria-required="true">
@@ -591,6 +592,13 @@
                                     <label class="control-label form-label" for="method-card-cvv">CVV</label>
                                     <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты"></a>
                                     <div class="help-block"></div>
+                                  </div>
+                                </div>
+                                <div class="ucp-add-card d-flex align-items-center mb-3">
+                                  <img src="img/click-to-pay/click-to-pay-icon.svg" alt="Icon">
+                                  <div class="checkbox-control">
+                                    <input class="checkbox-input" type="checkbox" id="checkbox-ucp">
+                                    <label class="checkbox-label" for="checkbox-ucp">Зберегти мої дані картки в Click to Pay для швидких та безпечних повторних оплат</label>
                                   </div>
                                 </div>
                                 <button type="submit" class="btn btn-green btn-block" id="ucp-pay-button">Сплатити карткою</button>
