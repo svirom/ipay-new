@@ -553,12 +553,64 @@
                           <!-- .ucs-payment -->
                           <div class="ucs-payment">
                             <div class="row justify-content-center">
-                              <div class="col-sm-9 col-md-7 col-xl-6 text-center mb-4">
+                              <div class="col-sm-10 col-md-8 col-xl-7 mb-4">
                                 
-                                <div id="api-visa-getCards">
-                                  
-                                  <div class="btn btn-outline" id="api-visa-button">Click me!</div>
+                                <div class="dropdown" id="ucp-getCards">
+                                  <div class="" id="dropdownCardsUcp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="payment-card payment-card--active">
+                                      <div class="payment-card__header account-card__header">
+                                        <div id="sender-bank-card-first" class="payment-card__bank sender-mp-bank-card bank-card__bank alpha" style="background-size: contain;"></div>
+                                        <div class="payment-card__type">
+                                          <div id="sender-card-type" class="card-title-mark"></div>
+                                        </div>
+                                      </div>
+                                      <div class="payment-card__body">
+                                        <div class="payment-card__number">
+                                          <div id="main-card-purpose" class="payment-card__purpose">Моя</div>
+                                          <span>Mastercard</span>
+                                          <div id="main-card-card" class="payment-card__card">5355 57** **** **26</div>
+                                        </div>
+                                      </div>
+                                      <input type="hidden" id="cardform-masterpass_uid" name="CardForm[masterpass_uid]" value="783A51C681997187697A292920A609BA7119C076258C25D499C5459693D6F286">
+                                    </div>
+                                  </div>
+                                  <div id="ucp-cards" class="dropdown-menu" aria-labelledby="dropdownCardsUcp">
+                                    <div class="payment-card payment-card--active">
+                                      <div class="payment-card__header account-card__header">
+                                        <div class="payment-card__bank sender-mp-bank-card bank-card__bank alpha" style="background-size: contain;"></div>
+                                        <div class="payment-card__type">
+                                          <div class="card-title-mark"></div>
+                                        </div>
+                                      </div>
+                                      <div class="payment-card__body">
+                                        <div class="payment-card__number">
+                                          <div class="payment-card__purpose">Моя</div>
+                                          <span>Mastercard</span>
+                                          <div class="payment-card__card">5355 57** **** **26</div>
+                                        </div>
+                                        <input class="payment-card__uid" type="hidden" value="783A51C681997187697A292920A609BA7119C076258C25D499C5459693D6F286">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
 
+                                <div class="ucp-pending-alert" id="ucp-pending-alert">
+                                  <div class="d-flex align-items-center mb-3">
+                                    <img src="img/click-to-pay/click-to-pay-icon.svg" srcset="img/click-to-pay/click-to-pay-icon.svg 32w" sizes="20px" alt="Icon">
+                                    <p class="heading-color small font-weight-bold ml-1 mb-0" style="padding-top:2px">Click to Pay</p>
+                                  </div>
+                                  <p class="mb-2">На номер +380*****6767 відправлено SMS з кодом підтвердження для доступа до карток</p>
+                                  <div class="row col-pad8">
+                                    <div class="col form-group">
+                                      <input type="tel" class="form-control form-input" id="ucp-pending-otp" name="name" autocomplete="off" placeholder="0000" aria-required="true">
+                                      <label class="control-label form-label" for="ucp-pending-otp">Код з SMS</label>
+                                      <div class="help-block"></div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="button" class="btn btn-green btn-next btn-empty" id="ucp-otp-submit"></button>
+                                    </div>
+                                  </div>
+                                  <a href="#" class="ucp-pending-send"><u>Відправити ще раз</u></a>
                                 </div>
 
 
@@ -594,6 +646,7 @@
                                     <div class="help-block"></div>
                                   </div>
                                 </div>
+
                                 <div class="ucp-add-card d-flex align-items-center mb-3">
                                   <img src="img/click-to-pay/click-to-pay-icon.svg" alt="Icon">
                                   <div class="checkbox-control">
@@ -601,6 +654,7 @@
                                     <label class="checkbox-label" for="checkbox-ucp">Зберегти мої дані картки в Click to Pay для швидких та безпечних повторних оплат</label>
                                   </div>
                                 </div>
+                                
                                 <button type="submit" class="btn btn-green btn-block" id="ucp-pay-button">Сплатити карткою</button>
                                 <p class="mt-3 text-center small">Оплачуючи, ви погоджуєтеся з умовами <a href="/media/files/public-offer.pdf" class="red-link" data-pjax="false" target="_blank"><u>публічного договору</u></a> та <a href="/media/files/Privacy-policy.pdf" class="red-link" data-pjax="false" target="_blank"><u>політикою конфіденційності</u></a></p>
                               </div>

@@ -1,0 +1,47 @@
+{
+  "actionCode": "SUCCESS",
+  "profiles": [
+    {
+      "maskedCards": [
+        {
+          "countryCode": "",
+          "dateOfCardCreated": "2024-09-11T13:48:42.598Z",
+          "dcf": {
+            "logoUri": "http://mastercard.com/",
+            "name": "mastercard",
+            "uri": "https://sandbox.src.mastercard.com/pay/"
+          },
+          "digitalCardData": {
+            "artUri": "https://sbx.assets.mastercard.com/card-art/combined-image-asset/HIGH-MASK-3x.png",
+            "authenticationMethods": [
+              {
+                "authenticationMethodType": "FIDO2"
+              }
+            ],
+            "descriptorName": "",
+            "presentationName": "",
+            "status": "ACTIVE"
+          },
+          "digitalCardFeatures": {},
+          "maskedBillingAddress": {},
+          "panBin": "518600",
+          "panExpirationMonth": "05",
+          "panExpirationYear": "2025",
+          "panLastFour": "8785",
+          "paymentCardDescriptor": "mastercard",
+          "paymentCardType": "PREPAID",
+          "srcDigitalCardId": "T8-t-UxQQQ-gDsmqZaXIMQ000000000000US"
+        }
+      ]
+    },
+    {
+      "maskedConsumer": {
+        "maskedConsumerIdentity": {
+          "identityType": "EMAIL_ADDRESS",
+          "maskedIdentityValue": "s*****m@gmail.com"
+        },
+        "maskedEmailAddress": "s*****m@gmail.com"
+      }
+    }
+  ]
+}
