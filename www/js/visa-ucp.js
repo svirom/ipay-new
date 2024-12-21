@@ -84,9 +84,52 @@
               ucpOtpSubmit.setAttribute('disabled', true);
 
               cards
-                .then(function(res) {
-                  // console.log(res['profiles'][0]['maskedCards'][0]['panBin']);
-                  console.log(res);
+                .then(function(result) {
+                  console.log(result);
+                  renderCards(result);
+
+                  ucpPayButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    const ucpCardActiveId = document.getElementById('cardform-ucp_id');
+                    srcDigitalCardId = ucpCardActiveId.value;
+
+                    const checkoutParameters = {
+                      // srcDigitalCardId: srcDigitalCardId,
+                      srcDigitalCardId: 'T8-t-UxQQQ-gDsmqZaXIMQ000000000000US',
+                      dpaBillingPreference: 'NONE',
+                      // consumer: {
+                      //   consumerIdentity: {
+                      //     identityValue: identityEmail,
+                      //     identityType: "EMAIL_ADDRESS"
+                      //   },
+                      //   fullName: 'SVIATOSLAV ROMANIUK',
+                      //   mobileNumber: {
+                      //     countryCode: '+380',
+                      //     phoneNumber: '677593208'
+                      //   }
+                      // },
+                      // windowRef: "",
+                      // windowRef: window.open('/', 'example', 'width=480,height=700'),
+                    };
+
+                    console.log('checkoutParameters:', checkoutParameters);
+                  
+                    // Call checkout
+                    const checkoutResponse = Vsb.checkout(checkoutParameters);
+                    
+                    // Log the checkout response
+                    console.log(checkoutResponse);
+          
+                    checkoutResponse
+                      .then(function(res) {
+                        console.log('result', res);
+                      })
+                      .catch(function(err) {
+                        console.log('error', err);
+                      })
+                  }) 
+
                 })
                 .catch(function(err) {
                   console.log(err);
@@ -174,86 +217,75 @@
       });;
   });
 
-  // window.onload = async function () {
+  // ---------------------------------------------------------------
 
-  //   // Create a shorthand reference to the Visa Checkout SDK
-  //   const Vsb = window.VSDK;
+  function renderCards(result) {
 
-  //   // Define your DpaTransactionOptions
-  //   const dpaTransactionOptions = {
-  //       // Fill in your specific options here
-  //       // dpaLocale: 'en_US'
-  //   };
+    const resultProfile = result.hasOwnProperty('profiles') ? result['profiles'] : [];
+    const maskedCards = resultProfile.filter(function(cards) {
+      return cards.hasOwnProperty('maskedCards');
+    })
 
-  //   // Initialize the Visa Checkout SDK with your DpaTransactionOptions
-  //   try {
-  //     await Vsb.initialize({
-  //       dpaTransactionOptions: dpaTransactionOptions
-  //     });
+    const cardsList = maskedCards[0]['maskedCards'];
+    // console.log(resultProfile);
+    console.log(cardsList);
 
-  //     //Invoke getCards and other apis here onwards
-        
-  //     let consumerIdentity = {
-  //       // identityProvider: "iPayDPA-iPaySRC",
-  //       // identityValue: "svia.rom@gmail.com",
-  //       identityValue: "svirom@yahoo.com",
-  //       identityType: "EMAIL_ADDRESS"
-  //     };
-      
-  //     let cards = await Vsb.getCards({ consumerIdentity });
+    const ucpPayment = document.getElementById('ucp-payment');
+    const ucpCards = document.querySelector('.ucp-cards');
+    const ucpCardsSelect = document.querySelector('.ucp-cards-select');
+    const ucpCardActiveId = document.getElementById('cardform-ucp_id');
 
-  //     console.log('Cards', cards);
+    const ucpCardsMenu = document.createElement('div');
 
-  //     return cards;
+    // card active
 
-  //   } catch (error) {
-  //     console.error('Error initializing SDK:', error);
-  //   }
-  // };
+  
+    // cards dropdown menu
+    ucpCardsMenu.id = 'ucp-cards-menu';
+    ucpCardsMenu.classList.add('dropdown-menu');
+    ucpCardsMenu.setAttribute('ariaLabelledby', 'ucp-cards-select');
+  
+    // ucpPayment.append(ucpCards);
+  
+    ucpCards.append(ucpCardsMenu);
 
-  // console.log(cardsRes);
+    for (let [index, card] of cardsList.entries()) {
+      const ucpCard = document.createElement('div');
+      const ucpCardHeader = document.createElement('div');
+      const ucpCardBody = document.createElement('div');
+      const ucpCardBodyTitle = document.createElement('span');
+      const ucpCardBodyMask = document.createElement('span');
+      const ucpCardId = document.createElement('input');
 
-  // initFunc();
+      ucpCard.classList.add('ucp-card');
+      ucpCardsMenu.append(ucpCard);
+      // (index === 0) ? ucpCardsSelect.append(ucpCard) : '';
 
+      ucpCardHeader.classList.add('ucp-card__header');
+      ucpCard.append(ucpCardHeader);
 
-  // ucpButton.addEventListener('click', function() {
+      ucpCardBody.classList.add('ucp-card__body');
+      ucpCardBodyTitle.classList.add('ucp-card__body-title');
+      ucpCardBodyTitle.textContent = card['dcf']['name'];
+      ucpCardBodyMask.classList.add('ucp-card__body-mask');
+      ucpCardBodyMask.textContent = '**** ' + card['panLastFour'];
+      ucpCardBody.append(ucpCardBodyTitle);
+      ucpCardBody.append(ucpCardBodyMask);
+      ucpCard.append(ucpCardBody);
 
-  //   const getCardResult = async function() {
-  //     const cards = await initFunc().catch((err) => {
-  //       console.log(err);
-  //     });
-  //     const { actionCode } = cards;
+      if (index === 0) {
+        const ucpCardActive = ucpCard.cloneNode(true);
+        ucpCardsSelect.append(ucpCardActive);
+        ucpCardActiveId.value = card['srcDigitalCardId'];
+      }
 
-  //     console.log(cards);
-
-  //     switch (actionCode) {
-
-  //       case 'SUCCESS':
-  //         //handle getCards response in UI
-  //         console.log('Handle getCards response in the UI ', cards);
-  //         break;
-
-  //       // If cards status is "PENDING_CONSUMER_IDV", call getCards again with validationData
-  //       case 'PENDING_CONSUMER_IDV':
-  //         // const validationDataInput = { consumerIdentity, validationData: "931734" }; // Replace with your actual validation data
-  //         // cards = await Vsb.getCards(validationDataInput);
-  //         console.log('PENDING_CONSUMER_IDV');
-  //         break;
-
-  //       case 'ERROR':
-  //         console.log('Handle error cases:');
-  //         break;
-
-  //       default:
-  //         console.log('No cards found >> ', cards.actionCode);
-  //         break;
-  //     }
-  //   }
-  //   getCardResult();
-
-  // });
-
-  // -------------------------------------------------------------------
+      ucpCardId.classList.add('ucp-card__id');
+      ucpCardId.type = 'hidden';
+      ucpCardId.value = card['srcDigitalCardId'];
+      ucpCardId.setAttribute('elemValue', index);
+      ucpCard.append(ucpCardId);
+    }
+  }
 
 
   // ---------------------------------------------------------------

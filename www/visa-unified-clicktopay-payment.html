@@ -550,49 +550,49 @@
 
                         <div class="col-12 mt-4 mt-sm-5">
 
-                          <!-- .ucs-payment -->
-                          <div class="ucs-payment">
+                          <!-- .ucp-payment -->
+                          <div class="ucp-payment" id="ucp-payment">
                             <div class="row justify-content-center">
                               <div class="col-sm-10 col-md-8 col-xl-7 mb-4">
-                                
-                                <div class="dropdown" id="ucp-getCards">
-                                  <div class="" id="dropdownCardsUcp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <div class="payment-card payment-card--active">
-                                      <div class="payment-card__header account-card__header">
-                                        <div id="sender-bank-card-first" class="payment-card__bank sender-mp-bank-card bank-card__bank alpha" style="background-size: contain;"></div>
-                                        <div class="payment-card__type">
-                                          <div id="sender-card-type" class="card-title-mark"></div>
-                                        </div>
-                                      </div>
-                                      <div class="payment-card__body">
-                                        <div class="payment-card__number">
-                                          <div id="main-card-purpose" class="payment-card__purpose">Моя</div>
-                                          <span>Mastercard</span>
-                                          <div id="main-card-card" class="payment-card__card">5355 57** **** **26</div>
-                                        </div>
-                                      </div>
-                                      <input type="hidden" id="cardform-masterpass_uid" name="CardForm[masterpass_uid]" value="783A51C681997187697A292920A609BA7119C076258C25D499C5459693D6F286">
-                                    </div>
+
+                                <div class="ucp-cards dropdown mb-4">
+
+                                  <div class="ucp-cards-select" id="ucp-cards-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <input type="hidden" id="cardform-ucp_id" name="CardForm[ucp_uid]" value="">
                                   </div>
-                                  <div id="ucp-cards" class="dropdown-menu" aria-labelledby="dropdownCardsUcp">
-                                    <div class="payment-card payment-card--active">
-                                      <div class="payment-card__header account-card__header">
-                                        <div class="payment-card__bank sender-mp-bank-card bank-card__bank alpha" style="background-size: contain;"></div>
-                                        <div class="payment-card__type">
-                                          <div class="card-title-mark"></div>
-                                        </div>
-                                      </div>
-                                      <div class="payment-card__body">
-                                        <div class="payment-card__number">
-                                          <div class="payment-card__purpose">Моя</div>
-                                          <span>Mastercard</span>
-                                          <div class="payment-card__card">5355 57** **** **26</div>
-                                        </div>
-                                        <input class="payment-card__uid" type="hidden" value="783A51C681997187697A292920A609BA7119C076258C25D499C5459693D6F286">
+
+                                  <!-- <div class="ucp-cards-select" id="ucp-cards-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="ucp-card ucp-card--active">
+                                      <div class="ucp-card__header"></div>
+                                      <div class="ucp-card__body">
+                                        <span class="ucp-card__body-title">Mastercard **** 1234</span>
+                                        <span class="ucp-card__body-mask">**** 1234</span>
                                       </div>
                                     </div>
+                                    <input type="hidden" id="cardform-ucp_id" name="CardForm[ucp_uid]" value="783A51C681997">
                                   </div>
-                                </div>
+
+                                  <div id="ucp-cards-menu" class="dropdown-menu" aria-labelledby="ucp-cards-select">
+                                    <div class="ucp-card ucp-card--active">
+                                      <div class="ucp-card__header"></div>
+                                      <div class="ucp-card__body">
+                                        <span class="ucp-card__body-title">Mastercard **** 1234</span>
+                                        <span class="ucp-card__body-mask">**** 1234</span>
+                                        <input class="ucp-card__id" type="hidden" value="783A51C681997187697A292920A609">
+                                      </div>
+                                    </div>
+
+                                    <div class="ucp-card">
+                                      <div class="ucp-card__header"></div>
+                                      <div class="ucp-card__body">
+                                        <span class="ucp-card__body-title">Visa NEW</span>
+                                        <span class="ucp-card__body-mask">**** 7890</span>
+                                        <input class="ucp-card__uid" type="hidden" value="783A51C681997187697A292920A609">
+                                      </div>
+                                    </div>
+                                  </div>  -->
+
+                                </div> <!-- /.ucp-cards -->
 
                                 <div class="ucp-pending-alert" id="ucp-pending-alert">
                                   <div class="d-flex align-items-center mb-3">
@@ -616,7 +616,7 @@
 
                               </div>
                             </div>
-                          </div><!-- /.ucs-payment -->
+                          </div><!-- /.ucp-payment -->
 
                           <form action="/" id="utility-form">
 
