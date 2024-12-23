@@ -2,8 +2,8 @@
 
   const ucpButton = document.getElementById('api-visa-button');
   const ucpPayButton = document.getElementById('ucp-pay-button');
-  // const identityEmail = 'svia.rom@gmail.com';
-  const identityEmail = 'svirom@yahoo.com';
+  const identityEmail = 'svia.rom@gmail.com';
+  // const identityEmail = 'svirom@yahoo.com';
   const ucpCheckbox = document.getElementById('checkbox-ucp');
   const ucpOtp = document.getElementById('ucp-pending-otp');
   const ucpOtpSubmit = document.getElementById('ucp-otp-submit');
@@ -30,6 +30,11 @@
           transactionAmount: '99.95',
           transactionCurrencyCode: 'UAH'
         },
+        // payloadTypeIndicator: "FULL",
+        // authenticationPreferences: {
+        //   payloadRequested: 'NON_AUTHENTICATED'
+        // },
+        // dpaShippingPreference: 'NONE'
         // merchantOrderId: '8e15ce5c-58a3-4748-acab-71c67432dfa7',
       };
   
@@ -97,7 +102,6 @@
                     const checkoutParameters = {
                       // srcDigitalCardId: srcDigitalCardId,
                       srcDigitalCardId: 'T8-t-UxQQQ-gDsmqZaXIMQ000000000000US',
-                      dpaBillingPreference: 'NONE',
                       // consumer: {
                       //   consumerIdentity: {
                       //     identityValue: identityEmail,
@@ -109,8 +113,11 @@
                       //     phoneNumber: '677593208'
                       //   }
                       // },
-                      // windowRef: "",
+                      windowRef: "",
                       // windowRef: window.open('/', 'example', 'width=480,height=700'),
+                      dpaTransactionOptions: {
+                        dpaBillingPreference: 'NONE',
+                      }
                     };
 
                     console.log('checkoutParameters:', checkoutParameters);
@@ -173,10 +180,10 @@
               },
               complianceSettings: {
                 complianceResources: [
-                  // {
-                  //   complianceType: 'REMEMBER_ME',
-                  //   uri: 'www.ipay.ua/media/files/Privacy-policy.pdf'
-                  // },
+                  {
+                    complianceType: 'REMEMBER_ME',
+                    uri: 'www.ipay.ua/media/files/Privacy-policy.pdf'
+                  },
                   {
                     complianceType: 'TERMS_AND_CONDITIONS',
                     uri: 'www.ipay.ua/media/files/public-offer.pdf'
@@ -189,13 +196,42 @@
               },
               // windowRef: "",
               // windowRef: window.open('/', 'example', 'width=480,height=700'),
+              // payloadTypeIndicatorCheckout: 'FULL',
+              // dpaTransactionOptions: {
+              //   dpaBillingPreference: 'NONE',
+              //   consumerNationalIdentifierRequested: false,
+              //   paymentOptions: [
+              //     {
+              //       dpaDynamicDataTtlMinutes: 2,
+              //       dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
+              //     }
+              //   ]
+              // },
+              // authenticationReasons: [
+              //   'TRANSACTION_AUTHENTICATION'
+              // ],
+              // authenticationMethod: {
+              //   authenticationMethodType: 'SMS_OTP',
+              //   authenticationSubject: 'CARDHOLDER',
+              // },
+              // assuranceData: {
+              //   verificationData: [
+              //     {
+              //       verificationType: 'CARDHOLDER',
+              //       verificationEntity: '01',
+              //       verificationMethod: '02',
+              //       verificationResults: '04',
+              //       verificationTimestamp: '2025-12-05',
+              //     }
+              //   ]
+              // }
             };
           
             // Call checkout
             const checkoutResponse = Vsb.checkout(checkoutParameters);
             
             // Log the checkout response
-            // console.log(checkoutResponse);
+            console.log(checkoutResponse);
   
             checkoutResponse
               .then(function(res) {
@@ -252,6 +288,8 @@
     for (let [index, card] of cardsList.entries()) {
       const ucpCard = document.createElement('div');
       const ucpCardHeader = document.createElement('div');
+      const ucpCardHeaderType = document.createElement('div');
+      const ucpCardHeaderTypeImg = document.createElement('img');
       const ucpCardBody = document.createElement('div');
       const ucpCardBodyTitle = document.createElement('span');
       const ucpCardBodyMask = document.createElement('span');
@@ -262,6 +300,10 @@
       // (index === 0) ? ucpCardsSelect.append(ucpCard) : '';
 
       ucpCardHeader.classList.add('ucp-card__header');
+      ucpCardHeaderType.classList.add('ucp-card__header-type');
+      ucpCardHeaderTypeImg.src = card['digitalCardData']['artUri'];
+      ucpCardHeaderType.append(ucpCardHeaderTypeImg);
+      ucpCardHeader.append(ucpCardHeaderType);
       ucpCard.append(ucpCardHeader);
 
       ucpCardBody.classList.add('ucp-card__body');
