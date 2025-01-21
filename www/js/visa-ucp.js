@@ -2,8 +2,10 @@
 
   const ucpButton = document.getElementById('api-visa-button');
   const ucpPayButton = document.getElementById('ucp-pay-button');
+  const ucpPendingAlert = document.getElementById('ucp-pending-alert');
   const identityEmail = 'svia.rom@gmail.com';
   // const identityEmail = 'svirom@yahoo.com';
+  // const identityEmail = 'svirom@outlook.com';
   const ucpCheckbox = document.getElementById('checkbox-ucp');
   const ucpOtp = document.getElementById('ucp-pending-otp');
   const ucpOtpSubmit = document.getElementById('ucp-otp-submit');
@@ -14,6 +16,9 @@
     "identityType": "EMAIL_ADDRESS",
     "identityValue": identityEmail
   };
+
+  // click-to-pay payment flag
+  let isClickToPayPayment = true;
 
   // ---------------------------------------------------
 
@@ -30,13 +35,9 @@
           transactionAmount: '99.95',
           transactionCurrencyCode: 'UAH'
         },
-        // payloadTypeIndicator: "FULL",
-        // authenticationPreferences: {
-        //   payloadRequested: 'NON_AUTHENTICATED'
-        // },
         dpaShippingPreference: 'NONE',
-        dpaBillingPreference: 'NONE'
-        // merchantOrderId: '8e15ce5c-58a3-4748-acab-71c67432dfa7',
+        dpaBillingPreference: 'NONE',
+        payloadTypeIndicatorCheckout: 'FULL',
       };
   
       // Initialize the Visa Checkout SDK with your DpaTransactionOptions
@@ -46,10 +47,7 @@
         });
   
         //Invoke getCards and other apis here onwards
-        
         const cards = await Vsb.getCards({ consumerIdentity });
-  
-        // console.log('Init cards:', cards);
   
         return {Vsb, cards};
   
@@ -62,6 +60,8 @@
       .then(function({Vsb, cards}) {
         const { actionCode } = cards;
 
+        console.log(Vsb);
+
         console.log('Init cards:', cards);
 
         switch (actionCode) {
@@ -69,10 +69,13 @@
           case 'SUCCESS':
             //handle getCards response in UI
             console.log('Handle getCards response in the UI ', cards);
+            renderCards(cards);
             break;
 
           // If cards status is "PENDING_CONSUMER_IDV", call getCards again with validationData
           case 'PENDING_CONSUMER_IDV':
+            ucpPendingAlert.classList.remove('d-none');
+            
             ucpOtpSubmit.addEventListener('click', function(event) {
               event.preventDefault();
               const validationDataInput = { 
@@ -91,53 +94,10 @@
 
               cards
                 .then(function(result) {
+                  ucpPendingAlert.classList.add('d-none');
                   console.log(result);
+
                   renderCards(result);
-
-                  ucpPayButton.addEventListener('click', function(event) {
-                    event.preventDefault();
-
-                    const ucpCardActiveId = document.getElementById('cardform-ucp_id');
-                    srcDigitalCardId = ucpCardActiveId.value;
-
-                    const checkoutParameters = {
-                      // srcDigitalCardId: srcDigitalCardId,
-                      srcDigitalCardId: 'T8-t-UxQQQ-gDsmqZaXIMQ000000000000US',
-                      // consumer: {
-                      //   consumerIdentity: {
-                      //     identityValue: identityEmail,
-                      //     identityType: "EMAIL_ADDRESS"
-                      //   },
-                      //   fullName: 'SVIATOSLAV ROMANIUK',
-                      //   mobileNumber: {
-                      //     countryCode: '+380',
-                      //     phoneNumber: '677593208'
-                      //   }
-                      // },
-                      windowRef: "",
-                      // windowRef: window.open('/', 'example', 'width=480,height=700'),
-                      dpaTransactionOptions: {
-                        dpaBillingPreference: 'NONE',
-                      }
-                    };
-
-                    console.log('checkoutParameters:', checkoutParameters);
-                  
-                    // Call checkout
-                    const checkoutResponse = Vsb.checkout(checkoutParameters);
-                    
-                    // Log the checkout response
-                    console.log(checkoutResponse);
-          
-                    checkoutResponse
-                      .then(function(res) {
-                        console.log('result', res);
-                      })
-                      .catch(function(err) {
-                        console.log('error', err);
-                      })
-                  }) 
-
                 })
                 .catch(function(err) {
                   console.log(err);
@@ -156,105 +116,151 @@
             break;
         }
 
+        // check whether payment is click-to-pay or not
+        ucpCheckbox.addEventListener('click', function() {
+          if (ucpCheckbox.checked === true) {
+            isClickToPayPayment = false;
+          } else {
+            isClickToPayPayment = true;
+          }
+          console.log('isClickToPayPayment', isClickToPayPayment);
+        });
+
         ucpPayButton.addEventListener('click', function(event) {
           event.preventDefault();
 
-          // const encryptedCard = 'eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIiwiaWF0IjoxNzM0NDMyNzE3NTQzLCJraWQiOiJZU0taQlQxQTNDSkxaSFYyUEhQUTEzeW9fRGxIWHozYVFENlBKM2lheGtQQm5zYldVIn0.kMc96VwMmSiowQDkCBe-Kd2dlljoY7JSInid2YePI6Aryor6USFGw5iG_SxNrdcggY8SGF4uPvbJcXChho5QR_fAkQ2morp28Z3ir-cRnxsIW0q3tjvT-LB2eUpIHfQ1bWk1n9rNxjTMafTSpRpUzpBAwbyLjzTh4gUr5BTPX9w66J4JMU6G7vXUcSwQ4WV6hhH0DJXXTStsN_bls7qoZcIfJhAO-VJ98F4coHGBTUZHpkvZm0II84m5tgL3RjtyaBHG17mFxASlTeaBAWf5PIS0iYNyNm8eEYodUJdZ0fEmRW8J7ZiyVmGpXDxAbXdtl-iLgjca9mB5bkeOFzqORA.unYxT65Fzb2eR8Fa.PaEESQbvk0tLkV7TKqS9CAfrwpI7mA_SYHZjOIYHVDJxJPS9j9kHPENlODAYyLhWomqIcQRkUwgoVXYv2ec5V5Bhf1Vh7oy6ZoEFimxRPauJqH6kanJa_vrPdNlqY7CfjOCyTRUxv8cSet_xoiufpAR2cktmmE59FQZxK0Tu2B4p5p8vfvMThXLM6bFLdX8U3m-ERFXZdj_uIcMeRSo3ib-jEG-2P_tXXjIAL2I.4YaqV9kkb0Iv_uAmS9nOhQ';
-
-          const encryptedCard = 'eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIiwiaWF0IjoxNzM1OTAwNTY4NDA0LCJraWQiOiJZU0taQlQxQTNDSkxaSFYyUEhQUTEzeW9fRGxIWHozYVFENlBKM2lheGtQQm5zYldVIn0.VoHbRohJ5XF_VURlVUuPq_zaS1ZodxW9l3mGOJF01wIAkiU4W4PHQXKHYcVAbxEWtS3Xn0B0ommPtH4daCmEEUrJFEdxojnsafm9-CYrt_ATxYqISetKw5KLSj6Nastb9wBgoJI-JiMcWEyPLKVbltCVd5HFxHFfg_cqjw9y2a156vCJL4CG0yigNIboYxwPYN2LupT45vnmYQo8yk-VH3KAPPG9UyHKHs_EfpqYWS9lmVk9vRFPV8yBOOgXshTddpU1vAxIjfxVxL4t4nhAylPEigd903v8556dOWAhmub4vkGhgVHmWrb4S2ytb3lvu6lIBqy1XBzWY7COWf6bPA.agg1d4enf3zK2Udz.Z-vWgytHuYdexOFrxwhLhjlMdoA-anPWsx2mSP_DSAoWNPRo9hzA3_tod-j7Ffwz3xK6ux11oGhSjXOY3AjLQNkdNPu55_OYUs41tCeA0tZk2VZ8Q7kfyrNiBjrl0MIwDtKeNraCE8Yw3xQrHH3M9LAiwqc-UeGEqmiPpS6-9PQLS0uIQTJg5EhfZQrotnxUvPu_qYa07tuhBtawMfMrdlN8VmBPnw2ebC_d7om0YD3oO62Apuh1-jD51gPwd9tNViyIGCRt05pGLoI0sM3QnLO8fFP1v3Ze7v1MKYLcmGfy1LtoveIuIIQyc8yJ4y8fh4mpUc4ee7Gkn_EQImbJzra13toetp7NCivvqNzLWPl1Ype6TEld7Td3C9zGbINj8lOY96CS1-UN.v8dcHONr3Qztday-lKPQ6A';
-
-          if (ucpCheckbox.checked === true) {
-            const checkoutParameters = {
-              // srcDigitalCardId: 'nE5xhI3jQcSis6Vf7IAH-A000000000000US',
-              // srcDigitalCardId: "",
-              encryptedCard: encryptedCard,
-              consumer: {
-                consumerIdentity: {
-                  identityValue: identityEmail,
-                  identityType: "EMAIL_ADDRESS"
-                },
-                fullName: 'SVIATOSLAV ROMANIUK',
-                mobileNumber: {
-                  countryCode: '+380',
-                  phoneNumber: '677593208'
-                }
-              },
-              complianceSettings: {
-                complianceResources: [
-                  {
-                    complianceType: 'REMEMBER_ME',
-                    uri: 'www.ipay.ua/media/files/Privacy-policy.pdf'
-                  },
-                  {
-                    complianceType: 'TERMS_AND_CONDITIONS',
-                    uri: 'www.ipay.ua/media/files/public-offer.pdf'
-                  },
-                  {
-                    complianceType: 'PRIVACY_POLICY',
-                    uri: 'www.ipay.ua/media/files/Privacy-policy.pdf'
-                  } 
-                ]
-              },
-              // windowRef: "",
-              // windowRef: window.open('/', 'example', 'width=480,height=700'),
-              // payloadTypeIndicatorCheckout: 'FULL',
-              // dpaTransactionOptions: {
-              //   dpaBillingPreference: 'NONE',
-              //   consumerNationalIdentifierRequested: false,
-              //   paymentOptions: [
-              //     {
-              //       dpaDynamicDataTtlMinutes: 2,
-              //       dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
-              //     }
-              //   ]
-              // },
-              // authenticationReasons: [
-              //   'TRANSACTION_AUTHENTICATION'
-              // ],
-              // authenticationMethod: {
-              //   authenticationMethodType: 'SMS_OTP',
-              //   authenticationSubject: 'CARDHOLDER',
-              // },
-              // assuranceData: {
-              //   verificationData: [
-              //     {
-              //       verificationType: 'CARDHOLDER',
-              //       verificationEntity: '01',
-              //       verificationMethod: '02',
-              //       verificationResults: '04',
-              //       verificationTimestamp: '2025-12-05',
-              //     }
-              //   ]
-              // }
-            };
-          
-            // Call checkout
-            const checkoutResponse = Vsb.checkout(checkoutParameters);
-            
-            // Log the checkout response
-            console.log(checkoutResponse);
-  
-            checkoutResponse
-              .then(function(res) {
-                console.log('result', res);
-              })
-              .catch(function(err) {
-                console.log('error', err);
-              })
-          }
-
+          submitCheckout(Vsb);
         })
-
-        if (actionCode === 'ADD_CARD') {
-
-        }
       })
       .catch((err) => {
         console.log(err);
       });;
   });
 
-  // ---------------------------------------------------------------
+
+  // ------------------------submit button--------------------------------------
+  function submitCheckout(Vsb) {
+
+    // add new card to click to pay account
+    if (ucpCheckbox.checked === true) {
+
+      const encryptedCard = 'eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIiwiaWF0IjoxNzM2OTU0MzI5OTUyLCJraWQiOiJZU0taQlQxQTNDSkxaSFYyUEhQUTEzeW9fRGxIWHozYVFENlBKM2lheGtQQm5zYldVIn0.fNcRC8gF9j_jOVbzI7n4L_LjB3K52oOZmxJ36-_5v2ObyLpKy70guLLvJpLb1dU-FG97Ug0j4u6hc5EvPQp9Li0IOxWLiAsSrq2268k29V1aFsJOChjNqY0Vyhvnoui25ZcrvEWdraSaBHeEXsdIUCU222wIA90zE23Gw5W_IQ_CMtEGS-Dglsoy7sFEU-M8BnQ8Tv9o6VXNxH8t_7GjL0uXkbbGgUXVjsvHeX9qIK2hCbdPfaaiIktmP2CI8DoJj-u_l1UyYcWj6Vb8XLO8qnZRH0E4kZ-e63ACjJjL93mDBdiN27JgtfayHQGOvm8-moB2Ut_-B_1hZWnP6nJgbQ.pbknpmtyud9_BU2l.x0RSaKOCzu3662rNS-FdMAbPQhXldQqG1vHhfijPmQ-sjaLGz-RbCEwnKN6g2PdsbH5xfzNt_wa0eWEWMMwpTlBtxFW03HjgdHXhdU34fX_4EFNYzX_cRkubm2RsbrYQYxyN4C8-y2g0PshH3KhUNVsXLBmxfEjT-VYFJX19ovUnwCWQjdXSJiP2-XZkxyOWM5OpMJpJDMG95dwnGGEi845CPeYySvlFW1bYNVHfeGPVrvdwSqTzeTr9JbUuZ1vORtPZE3QRJNSzFV0kr119r2J9rn51B4HJvfVtTUFVZ8KufDLrok7zCjvQ_v3klAnQvT38jLEHn6yngeMP7VVDj_tAlpRc6Z8cOhCYo_4PvdyF6dlWoZ8Shvk5VUrzijlrQes2vyBrwyoL.Cnd83Twbervmg_OxYg5OtQ';
+      
+      const checkoutParameters = {
+        // srcDigitalCardId: "",
+        encryptedCard: encryptedCard,
+        consumer: {
+          consumerIdentity: {
+            identityValue: identityEmail,
+            identityType: "EMAIL_ADDRESS"
+          },
+          fullName: 'SVIATOSLAV ROMANIUK',
+          mobileNumber: {
+            countryCode: '380',
+            phoneNumber: '677593208'
+          }
+        },
+        complianceSettings: {
+          complianceResources: [
+            {
+              complianceType: 'REMEMBER_ME',
+              uri: 'www.ipay.ua/media/files/Privacy-policy.pdf'
+            },
+            {
+              complianceType: 'TERMS_AND_CONDITIONS',
+              uri: 'www.ipay.ua/media/files/public-offer.pdf'
+            },
+            {
+              complianceType: 'PRIVACY_POLICY',
+              uri: 'www.ipay.ua/media/files/Privacy-policy.pdf'
+            } 
+          ]
+        },
+        // windowRef: "",
+        // windowRef: window.open('/', 'example', 'width=480,height=700'),
+        // payloadTypeIndicatorCheckout: 'FULL',
+        // dpaTransactionOptions: {
+        //   dpaBillingPreference: 'NONE',
+        //   consumerNationalIdentifierRequested: false,
+        //   paymentOptions: [
+        //     {
+        //       dpaDynamicDataTtlMinutes: 2,
+        //       dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
+        //     }
+        //   ]
+        // },
+        // authenticationReasons: [
+        //   'TRANSACTION_AUTHENTICATION'
+        // ],
+        // authenticationMethod: {
+        //   authenticationMethodType: 'SMS_OTP',
+        //   authenticationSubject: 'CARDHOLDER',
+        // },
+        // assuranceData: {
+        //   verificationData: [
+        //     {
+        //       verificationType: 'CARDHOLDER',
+        //       verificationEntity: '01',
+        //       verificationMethod: '02',
+        //       verificationResults: '04',
+        //       verificationTimestamp: '2025-12-05',
+        //     }
+        //   ]
+        // }
+      };
+    
+      // Call checkout
+      const checkoutResponse = Vsb.checkout(checkoutParameters);
+      
+      // Log the checkout response
+      console.log(checkoutResponse);
+
+      checkoutResponse
+        .then(function(res) {
+          console.log('result', res);
+        })
+        .catch(function(err) {
+          console.log('error', err);
+        })
+
+    } else {
+
+      // pay with click to pay existing card
+      if (isClickToPayPayment) {
+        const ucpCardActiveId = document.getElementById('cardform-ucp_id');
+        const srcDigitalCardId = ucpCardActiveId.value;
+  
+        const checkoutParameters = {
+          srcDigitalCardId: srcDigitalCardId,
+          windowRef: "",
+          // windowRef: window.open('/', 'example', 'width=480,height=700'),
+          dpaTransactionOptions: {
+            dpaBillingPreference: 'NONE',
+          },
+          payloadTypeIndicatorCheckout: 'FULL',
+        };
+  
+        console.log('checkoutParameters (existing card):', checkoutParameters);
+  
+        // Call checkout
+        const checkoutResponse = Vsb.checkout(checkoutParameters);
+            
+        // Log the checkout response
+        console.log(checkoutResponse);
+  
+        checkoutResponse
+          .then(function(res) {
+            console.log('result', res);
+          })
+          .catch(function(err) {
+            console.log('error', err);
+          })
+      }
+    }
+
+  }
+
+  // ------------------------render cards---------------------------------------
 
   function renderCards(result) {
 
@@ -309,7 +315,7 @@
 
       ucpCardBody.classList.add('ucp-card__body');
       ucpCardBodyTitle.classList.add('ucp-card__body-title');
-      ucpCardBodyTitle.textContent = card['dcf']['name'];
+      // ucpCardBodyTitle.textContent = card['dcf']['name'];
       ucpCardBodyMask.classList.add('ucp-card__body-mask');
       ucpCardBodyMask.textContent = '**** ' + card['panLastFour'];
       ucpCardBody.append(ucpCardBodyTitle);
@@ -332,7 +338,5 @@
 
 
   // ---------------------------------------------------------------
-
-
 
 // });
