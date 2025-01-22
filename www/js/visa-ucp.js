@@ -3,9 +3,9 @@
   const ucpButton = document.getElementById('api-visa-button');
   const ucpPayButton = document.getElementById('ucp-pay-button');
   const ucpPendingAlert = document.getElementById('ucp-pending-alert');
-  const identityEmail = 'svia.rom@gmail.com';
+  // const identityEmail = 'svia.rom@gmail.com';
   // const identityEmail = 'svirom@yahoo.com';
-  // const identityEmail = 'svirom@outlook.com';
+  const identityEmail = 'svirom@outlook.com';
   const ucpCheckbox = document.getElementById('checkbox-ucp');
   const ucpOtp = document.getElementById('ucp-pending-otp');
   const ucpOtpSubmit = document.getElementById('ucp-otp-submit');
@@ -78,16 +78,29 @@
             
             ucpOtpSubmit.addEventListener('click', function(event) {
               event.preventDefault();
-              const validationDataInput = { 
-                consumerIdentity, 
-                "validationData": ucpOtp.value 
-              }; // Replace with your actual validation data
+
               cards = Vsb.getCards({
                 "consumerIdentity": {
                   "identityType": "EMAIL_ADDRESS",
                   "identityValue": identityEmail
                 },
-                "validationData": ucpOtp.value
+                "validationData": ucpOtp.value,
+                "complianceSettings": {
+                  "complianceResources": [
+                    {
+                      "complianceType": 'REMEMBER_ME',
+                      "uri": 'www.ipay.ua/media/files/Privacy-policy.pdf'
+                    },
+                    {
+                      "complianceType": 'TERMS_AND_CONDITIONS',
+                      "uri": 'www.ipay.ua/media/files/public-offer.pdf'
+                    },
+                    {
+                      "complianceType": 'PRIVACY_POLICY',
+                      "uri": 'www.ipay.ua/media/files/Privacy-policy.pdf'
+                    } 
+                  ]
+                },
               });
 
               ucpOtpSubmit.setAttribute('disabled', true);
