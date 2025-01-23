@@ -4,8 +4,8 @@
   const ucpPayButton = document.getElementById('ucp-pay-button');
   const ucpPendingAlert = document.getElementById('ucp-pending-alert');
   // const identityEmail = 'svia.rom@gmail.com';
-  // const identityEmail = 'svirom@yahoo.com';
-  const identityEmail = 'svirom@outlook.com';
+  const identityEmail = 'svirom@yahoo.com';
+  // const identityEmail = 'svirom@outlook.com';
   const ucpCheckbox = document.getElementById('checkbox-ucp');
   const ucpOtp = document.getElementById('ucp-pending-otp');
   const ucpOtpSubmit = document.getElementById('ucp-otp-submit');
@@ -144,6 +144,22 @@
 
           submitCheckout(Vsb);
         })
+
+        const otpSendButton = document.getElementById('otp-send');
+
+        otpSendButton.addEventListener('click', function() {
+          const otpSend = Vsb.initiateIdentityValidation({});
+
+          otpSend
+          .then(function(result) {
+            console.log('result otpSendButton', result);
+            // renderCards(cards);
+          })
+          .catch(function(err) {
+            console.log('error', err);
+          })
+        });
+
       })
       .catch((err) => {
         console.log(err);
