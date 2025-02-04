@@ -1,19 +1,65 @@
-.yapomoga-payment .yapomoga-payment__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 700;
+.yapomoga-payment {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #F0F8FF;
+}
+.yapomoga-payment .checkbox-switch {
+  margin-bottom: 0.625rem;
+  padding-left: 0;
+}
+.yapomoga-payment .checkbox-switch .checkbox-label {
+  padding-right: 3.125rem;
+  font-size: 0.875rem;
+  line-height: 1.4285714;
   color: #172A3A;
+}
+.yapomoga-payment .checkbox-switch .checkbox-label::before {
+  top: 0;
+  left: auto;
+  right: 0;
+  width: 2.4375rem;
+  height: 1.25rem;
+  border-radius: 0.9375rem;
+}
+.yapomoga-payment .checkbox-switch .checkbox-label::after {
+  top: 3px;
+  left: auto;
+  right: calc(1.5625rem - 3px);
+  width: calc(1.25rem - 6px);
+  height: calc(1.25rem - 6px);
+}
+.yapomoga-payment .checkbox-switch .checkbox-input {
+  width: 0;
+  height: 0;
+}
+.yapomoga-payment .checkbox-switch .checkbox-input:checked ~ .checkbox-label::after {
+  -webkit-transform: translateX(1.1875rem);
+          transform: translateX(1.1875rem);
+}
+.yapomoga-payment__form .form-group {
+  margin-bottom: 0;
 }
 .yapomoga-payment__form .form-input {
   padding-right: 1.5rem;
 }
+.yapomoga-payment__form .form-input:disabled {
+  color: #DEE7F3;
+  border-color: #DEE7F3;
+}
+.yapomoga-payment__form .form-input:disabled ~ .form-label {
+  color: #DEE7F3;
+}
 .yapomoga-payment .yapomoga-payment__btn {
   display: block;
-  width: 6.4375rem;
+  width: 5.5625rem;
   height: 3.5rem;
-  padding: 0.875rem 0.5rem;
-  color: #fff;
+  padding: 0.875rem 0.25rem;
+  color: #ffffff;
   background-color: #64B3F7;
+}
+.yapomoga-payment .yapomoga-payment__btn:disabled {
+  pointer-events: none;
+  background-color: #DEE7F3;
 }
 .yapomoga-payment .row.col-pad6 {
   margin-left: -6px;
@@ -31,21 +77,53 @@
   padding-left: 4px;
   padding-right: 4px;
 }
-.yapomoga-payment__logos img {
-  display: block;
+.yapomoga-payment .modal-yapomoga-payment .modal-content {
+  border: 0;
+  border-radius: 0.5rem;
+}
+.yapomoga-payment .modal-yapomoga-payment .close {
+  position: absolute;
+  right: 0.4375rem;
+  top: 0.4375rem;
+  opacity: 0.9;
+}
+.yapomoga-payment .modal-yapomoga-payment__content {
+  padding: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.yapomoga-payment .modal-yapomoga-payment__text {
+  padding: 1rem 1.5rem 1.5rem;
+}
+.yapomoga-payment .modal-yapomoga-payment__text-title {
+  font-size: 1rem;
+}
+.yapomoga-payment .modal-yapomoga-payment__img {
+  position: relative;
+}
+.yapomoga-payment .modal-yapomoga-payment__img-pet {
+  min-width: 450px;
+}
+.yapomoga-payment .modal-yapomoga-payment__img-logo {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
 }
 @media screen and (min-width: 576px) {
-  .yapomoga-payment .row.col-sm-pad6 {
-    margin-left: -6px;
-    margin-right: -6px;
-  }
-  .yapomoga-payment .row.col-sm-pad6 > [class^=col] {
-    padding-left: 6px;
-    padding-right: 6px;
+  .yapomoga-payment .modal-yapomoga-payment .modal-dialog {
+    max-width: 630px;
+    margin-top: 5rem;
   }
 }
 @media screen and (max-width: 575px) {
   .yapomoga-payment .yapomoga-payment__btn {
-    width: 6.3125rem;
+    width: 4.9375rem;
+  }
+  .yapomoga-payment .modal-yapomoga-payment__img-logo {
+    right: auto;
+    left: 1.25rem;
+    bottom: 0.75rem;
   }
 }/*# sourceMappingURL=yapomoga-payment.css.map */

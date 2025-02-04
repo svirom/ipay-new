@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/archive-bill.css">
     <link rel="stylesheet" href="/css/header-notifications.css">
     <link rel="stylesheet" href="/css/sticky-footer.css">
+    <link rel="stylesheet" href="/css/yapomoga-payment.css">
 
     <title>Yapomoga Payment Secure</title>
   </head>
@@ -507,53 +508,50 @@
 
                       <div class="row">
                         <div class="col-12">
-                          <!-- archive bill widget -->
-                          <div class="archive-bill" id="archive-bill-widget">
-                            <div class="archive-bill__row">
-                              <div class="archive-bill__title">К оплате</div>
-                              <div class="archive-bill__amount">20.00 грн.</div>
-                              <div class="archive-bill__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Детали платежа</div>
-                            </div>
-                            <div id="archive-1" class="collapse">
-                              <div class="archive-bill__collapse">
-                                <div class="table-responsive">
-                                  <table class="table">
-                                    <tbody>
-                                      <tr>
-                                        <td>Назначение</td>
-                                        <td>Оплата коммунальной услуги</td>
-                                      </tr>
-                                      <tr>
-                                        <td>Сумма пополнения</td>
-                                        <td>75.00 грн.</td>
-                                      </tr>
-                                      <tr class="yapomoga-payment-row">
-                                        <td>
-                                          <div class="yapomoga-payment-row__content">
-                                            <span>Я допомогаю</span>
-                                            <a role="button" tabindex="-1" class="question-popover" data-toggle="popover" data-content="Увійдіть або зареєструйтесь, щоб не вводити дані ПІБ при кожній оплаті та мати можливість зберегти картку до гаманця та платити в один клік." data-placement="right" data-container=".yapomoga-payment-row__content"></a>
-                                          </div>
-                                        </td>
-                                        <td>+100.00 грн</td>
-                                      </tr>
-                                      <tr class="yapomoga-payment-row-border"></tr>
-                                      <tr>
-                                        <td>Комиссия</td>
-                                        <td>2.00 грн.</td>
-                                      </tr>
-                                      <tr class="table-summary">
-                                        <td>К оплате</td>
-                                        <td>77.00 грн.</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>                          
+                          
+                          <div class="secure-table" id="secure-table-widget">
+                            
+                            <div id="secure-table-1" class="collapse">
+                              <div class="secure-table__collapse">
+                                <div class="secure-table__collapse-title">
+                                  <div class="font-weight-bold mb-1">Призначення</div>
+                                  <div>Поповнення номеру +38066ХХХХХХХ</div>
+                                </div>
+                                <div class="secure-table__collapse-yapomoga">
+                                  <div class="secure-table__yapomoga-icon">
+                                    <img src="img/yapomoga/yapomoga-icon.svg" alt="Icon">
+                                  </div>
+                                  <div class="secure-table__yapomoga-text">
+                                    <div class="font-weight-bold mb-1">Допомога притулкам тварин</div>
+                                    <div>БФ “Япомога”</div>
+                                  </div>
+                                  <div class="secure-table__yapomoga-amount">
+                                    <div class="font-weight-bold text-right">100.00</div>
+                                    <div class="text-right">грн</div>
+                                  </div>
+                                </div>
+                                <div class="secure-table__collapse-rows mt-2">
+                                  <div class="secure-table__collapse-row">
+                                    <div>Сума платежу</div>
+                                    <div class="font-weight-bold">500.00 грн.</div>
+                                  </div>
+                                  <div class="secure-table__collapse-row">
+                                    <div>Комісія</div>
+                                    <div class="font-weight-bold">0.50 грн.</div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                            <div class="archive-bill__mobile">
-                              <div class="archive-bill__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Детали платежа</div>
+                            <div class="secure-table__row">
+                              <div class="secure-table__row-details secure-table__row-details--closed" role="button" data-toggle="collapse" data-target="#secure-table-1" aria-expanded="false">Деталі платежу</div>
+                              <div class="secure-table__row-title">До оплати</div>
+                              <div class="secure-table__row-amount">20.00 грн.</div>
                             </div>
-                          </div><!-- archive bill widget -->
+                            <div class="secure-table__row-opened" role="button" data-toggle="collapse" data-target="#secure-table-1" aria-expanded="false">
+                              <span class="secure-table__link-close">Скрити деталі</span>
+                              <span class="secure-table__link-open d-sm-none">Деталі платежу</span>
+                            </div>
+                          </div><!-- /.secure-table -->
                         </div>
                       </div>
 

@@ -10,14 +10,19 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
-    <link rel="stylesheet" href="/css/yapomoga-payment.css">
+    <link rel="stylesheet" href="/css/search-form.css">
+    <link rel="stylesheet" href="/css/progressbar.css">
+    <link rel="stylesheet" href="/css/service-provider.css">
+    <link rel="stylesheet" href="/css/mobile-buttons.css">
     <link rel="stylesheet" href="/css/header-notifications.css">
     <link rel="stylesheet" href="/css/sticky-footer.css">
+    <link rel="stylesheet" href="/css/yapomoga-payment.css">
 
-    <title>Yapomoga payment</title>
+    <title>Bill Mobile Unregistered 1-2</title>
   </head>
   <body>
 
+    <!-- header -->
     <header class="main-header">
       <div class="container">
         <div class="row">
@@ -27,9 +32,23 @@
             </div>
             <nav class="">
               <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"><span>Пошук</span></a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__link main-nav__p2p" role="button" id="header-dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перекази</span></a>
+                  <div class="dropdown-menu" aria-labelledby="header-dropdown-p2p">
+                    <a class="dropdown-item" href="#">Перекази з картки на картку</a>
+                    <a class="dropdown-item" href="#">Перекази з-за кордону в Україну</a>
+                    <a class="dropdown-item" href="#">Перекази за реквізитами</a>
+                  </div>
+                </li>
+                <li class="main-nav__item main-nav__item--mobile">
+                  <a href="#" class="main-nav__link"><span>Поповнення мобільного</span></a>
+                </li>
                 <li class="main-nav__item">
                   <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
-                    <span>Безпека</span>
+                    <span>Безпека </span>
                     <span>платників</span>
                   </a>
                 </li>
@@ -71,22 +90,17 @@
                 <li class="main-nav__item main-nav__item--lang dropdown">
                   <a href="#" class="main-nav__lang item-lang-ua" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">УКР</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
-                    <a class="dropdown-item item-lang-ua active" href="#">УКР</a>
-                    <a class="dropdown-item" href="#">РУС</a>
+                    <a class="dropdown-item item-lang-ua" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
                     <a class="dropdown-item" href="#">ENG</a>
                   </div>
                 </li>
                 <li class="main-nav__item dropdown">
-                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
-                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
                     <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
-                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
-                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
-                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
-                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
-                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
-                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
                   </div>
                 </li>
               </ul>
@@ -95,8 +109,7 @@
                   <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"></a>
                 </li>
                 <li class="main-nav__item-account">
-                  <span class="main-nav__item-account--registered">Мой кабинет</span>
-                  <span>Альберт</span>
+                  <a href="#" class="btn btn-red">Увійти</a>
                 </li>
                 <li class="main-nav__item main-nav__item-mobile">
                   <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,23 +118,15 @@
                   <div class="navbar-collapse collapse" id="dropdown-account-mobile">
                     <div class="navbar-collapse__menu">
                       <a href="#" class="btn btn-green main-nav__mobile-next">Каталог</a>
-                      <ul>
-                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
+                      <!-- <ul>
                         <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
-                        <li><a class="dropdown-item dropdown-templates" href="#">Шаблоны платежей</a></li>
-                        <li><a class="dropdown-item dropdown-getpayment" href="#">Збір коштів на картку</a></li>
-                        <li><a class="dropdown-item dropdown-recurrent" href="#">Автоплатежі</a></li>
-                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
-                        <li><a class="dropdown-item dropdown-notifications dropdown-item--empty" href="#">Оповещения</a></li>
-                        <!-- <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li> -->
-                        <!-- <li><a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a></li> -->
-                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
                         <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
-                      </ul>
-                      <!-- <div class="mobile-login text-center">
+                      </ul> -->
+                      <div class="mobile-login text-center">
                         <p class="heading-color">Увійдіть, щоб зберігати історію ваших платежів та зберігати рахунки</p>
                         <a href="#" class="btn btn-green btn-block">Увійти або зареєструватись</a>
-                      </div> -->
+                      </div>
                       <p class="main-nav__mobile-title heading-color mt-4">Підтримка</p>
                       <ul class="mobile-nav-support">
                         <li>
@@ -175,9 +180,6 @@
                         <li><a href="#"><img src="img/icons/icon-viber-grey.svg" alt="Viber"></a></li>
                         <li><a href="#"><img src="img/icons/icon-instagram-grey.svg" alt="Instagram"></a></li>
                         <li><a href="#"><img src="img/icons/icon-linkedin-grey.svg" alt="LinkedIn"></a></li>
-                      </ul>
-                      <ul>
-                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
                       </ul>
                     </div>
                     <div class="catalogue-mobile">
@@ -387,6 +389,17 @@
     <!-- main wrapper -->
     <div class="main-wrapper">
 
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="#" class="form-search__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- breadcrumb widget -->
       <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
         <div class="container">
@@ -400,16 +413,16 @@
                 </li>
                 <li>
                   <a href="#">
-                    <span>Каталог послуг</span>
+                    <span>Услуги</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span>Категорія</span>
+                    <span>Пополнение телефона</span>
                   </a>
                 </li>
                 <li class="active" aria-current="page">
-                  <span>Назва послуги</span>
+                  <span>Пополнение счета "Киевстар"</span>
                 </li>
               </ul>
             </div>
@@ -419,54 +432,314 @@
 
       <!-- main content -->
       <div class="container main-content">
-        <div class="row justify-content-center">
-
+        <div class="row">
           <!-- main area -->
-          <main class="col-sm-9 col-md-7 col-lg-5 col-xl-4">
+          <main class="col-lg-8">
 
-            <div class="yapomoga-payment">
-              <img src="img/yapomoga/yapomoga-payment-img.svg" alt="Yapomoga">
-              <p class="yapomoga-payment__title mt-3">Додати кілька гривень на допомогу притулкам для тварин?</p>
+            <div class="row">
 
-              <form action="" class="yapomoga-payment__form">                
-                <div class="row col-pad6">
-                  <div class="col">
-                    <div class="form-group">
-                      <input type="tel" class="form-control form-input yapomoga-payment__input-amount" id="yapomoga-amount" name="name" autocomplete="off" placeholder="0" aria-required="true">
-                      <label class="control-label form-label" for="yapomoga-amount">Сума</label>
+              <div class="col-12">
+                <!-- bill main widget -->
+                <div class="bill-main" id="bill-main-widget">
+                  <div class="row">
+
+                    <div class="col-12 mt-lg-2 mb-3 d-lg-none">
+                      <a href="#" class="btn btn-link btn-back">Пополнение телефона</a>
                     </div>
-                  </div>
-                  <div class="col-auto">
-                    <div class="row col-pad4 col-sm-pad6">
-                      <div class="col-auto">
-                        <button type="button" class="btn yapomoga-payment__btn" data-price="50">50 грн</button>
-                      </div>
-                      <div class="col-auto">
-                        <button type="button" class="btn yapomoga-payment__btn" data-price="100">100 грн</button>
+      
+                    <div class="col-12 mb-3">
+                      <div class="bill-title">
+                        <div class="row col-pad8">
+                          <h1 class="col text-break">Пополнение счета "Киевстар"</h1>
+                          <div class="col-auto mb-2 d-lg-none">
+                            <div class="provider-title">
+                              <img src="img/providers/kyivgaz-img.png" alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <p>Пополнить счет Киевстар можно с помощью кредитной или дебетовой карты (Visa, MasterCard или ПРОСТІР).</p>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-green btn-block mb-2">Додати допомогу</button>
-                  <a href="#" class="btn btn-outline btn-block mb-3">Ні, пропустити</a>
-                </div>
-              </form>
+      
+                    <div class="col-12">
+                      <div class="alert alert-success alert-people alert-dismissible fade show" role="alert">
+                        <strong>11 человек</strong> оплачивают услугу прямо сейчас
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                    </div>
 
-              <p class="mb-2">Кошти будуть додані до загального чеку та відправлені до благодійного фонду “Япомога”, який опікується притулками Києва та області та допомагає з закупкою кормів, ліків та облаштуванням будиночків для тварин. </p>
-              <a href="https://yapomoga.com/" target="_blank">Сторінка проекту</a>
-              <div class="yapomoga-payment__logos row col-pad8 align-items-center mt-3 mb-5">
-                <div class="col-auto">
-                  <img src="img/yapomoga/ipay-logo.svg" class="pt-1" alt="iPay">
-                </div>
-                <div class="col-auto">
-                  <img src="img/yapomoga/yapomoga-logo.svg" alt="Yapomoga">
-                </div>
+                    <div class="col-12">
+                      <!-- progressbar widget -->
+                      <div id="progressbar-widget">
+                        <div class="row">
+
+                          <div class="col-12 mt-3 mb-5 d-none d-sm-block">
+                            <div class="progress-payment progress-payment--three">
+                              <div class="progress">
+                                <div class="progress-textline">
+                                  <span class="progress-text active">Ввод данных плательщика</span>
+                                  <span class="progress-text">Ввод данных карты</span>
+                                  <span class="progress-text">Подтверждение платежа</span>
+                                </div>
+                                <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-steps">
+                                  <span class="progress-step active"></span>
+                                  <span class="progress-step"></span>
+                                  <span class="progress-step"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 my-3 d-sm-none">
+                            <div class="progress-mobile progress-mobile--one-third">
+                              <div class="progress-mobile__circle">
+                                <div class="progress-mobile__value">
+                                  <div>1/3</div>
+                                </div>
+                              </div>
+                              <div class="progress-mobile__text">
+                                <span class="progress-mobile__current">Ввод данных плательщика</span>
+                                <span class="progress-mobile__next">Далее: Ввод данных карты</span>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div><!-- progressbar widget -->
+                    </div>
+      
+                    <div class="col-12 mt-1 mb-5 mt-lg-3 text-center">
+                      <div class="row">
+                        <div class="col-12 pb-3 d-none d-lg-block">
+                          <h2>Ввод данных плательщика</h2>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="col-md-6">
+                          <form action="/" id="utility-form">
+                            <div class="form-group has-success">
+                              <input type="tel" class="form-control form-input" id="bill-phone" name="name" autocomplete="off" placeholder="+380 00 000 00 00" aria-required="true" value="+380(67)759-32-08">
+                              <label class="control-label form-label" for="bill-phone">Номер телефона</label>
+                            </div>
+
+                            <div class="mobile-buttons">
+                              <p class="mb-2 heading-color">Сумма</p>
+                              <div class="row">
+                                <div class="col">
+                                  <button type="button" class="btn mobile-buttons__btn" data-price="100">100 грн</button>
+                                </div>
+                                <div class="col">
+                                  <button type="button" class="btn mobile-buttons__btn" data-price="150">150 грн</button>
+                                </div>
+                                <div class="col">
+                                  <button type="button" class="btn mobile-buttons__btn" data-price="200">200 грн</button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group has-success">
+                              <input type="tel" class="form-control form-input input-icon-right" id="bill-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true" value="100.00">
+                              <label class="control-label form-label" for="bill-amount">Другая сумма</label>
+                              <label class="label-icon-right label-currency">грн</label>
+                            </div>
+
+                            <!-- .yapomoga-payment -->
+                            <div class="yapomoga-payment text-left mb-3">
+                              <div class="checkbox-control checkbox-switch" id="checkbox-collapse" role="button" data-toggle="collapse" data-target="#yapomoga-payment-1" aria-expanded="false">
+                                <input class="checkbox-input" type="checkbox" id="checkbox-switch-yapomoga">
+                                <label class="checkbox-label" for="checkbox-switch-yapomoga">Додати на допомогу притулку для тваринок <a href="#" role="button" class="red-link yapomoga-switch__button" data-toggle="modal" data-target="#yapomogaDescriptionModal"><u>На що збираємо?</u></a></label>
+                              </div>
+
+                              <div id="yapomoga-payment-1" class="collapse">
+                                <div class="row col-pad6 yapomoga-payment__form">
+                                  <div class="col">
+                                    <div class="form-group">
+                                      <input type="tel" class="form-control form-input yapomoga-payment__input-amount" id="yapomoga-amount" name="name" autocomplete="off" placeholder="0" aria-required="true">
+                                      <label class="control-label form-label" for="yapomoga-amount">Сума</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-auto">
+                                    <div class="row col-pad4">
+                                      <div class="col-auto">
+                                        <button type="button" class="btn yapomoga-payment__btn" data-price="50">50 грн</button>
+                                      </div>
+                                      <div class="col-auto">
+                                        <button type="button" class="btn yapomoga-payment__btn" data-price="100">100 грн</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <!-- modal yapomoga description -->
+                              <div class="modal-yapomoga-payment modal fade" id="yapomogaDescriptionModal" tabindex="-1" role="dialog" aria-labelledby="yapomogaDescriptionModalTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-body modal-yapomoga-payment__content">
+                                      <div class="modal-yapomoga-payment__img">
+                                        <img class="img-fluid" src="img/yapomoga/yapomoga-modal-img.jpg" srcset="img/yapomoga/yapomoga-modal-img.jpg 1x, img/yapomoga/yapomoga-modal-img@2x.jpg 2x" class="modal-yapomoga-payment__img-pet" alt="img">
+                                        <img src="img/yapomoga/yapomoga-logo-short.svg" srcset="img/yapomoga/yapomoga-logo-short.svg 82w" sizes="(max-width: 575px) 53px, 82px" class="modal-yapomoga-payment__img-logo" alt="Япомога">
+                                      </div>
+                                      <div class="modal-yapomoga-payment__text text-left">
+                                        <h4 class="modal-yapomoga-payment__text-title mb-3">На що збираємо?</h4>
+                                        <p class="heading-color">iPay.ua у співпраці з БФ "Япомога" збирає кошти на обслуговування притулків для бездомних тварин. Кожна гривня, надіслана вами, спрямовується на закупівлю кормів, ліків та обслуговування будиночків для чотирьохлапих друзів. Долучайтесь до ініціативи і разом ми зможемо змінити їхню долю на краще!</p>
+                                        <div class="row justify-content-between align-items-center">
+                                          <div class="col-sm-auto">
+                                            <a href="https://yapomoga.com/" target="_blank" rel="nofollow"><u>Офіційна сторінка проєкту</u></a>
+                                          </div>
+                                          <div class="col-sm-auto mt-3 mt-sm-0">
+                                            <img src="img/yapomoga/yapomoga-logo.svg" alt="Япомога">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M8.896 9.06177L23.1043 22.8118" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M23.1043 9.06177L8.896 22.8118" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>
+                                        </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> <!-- /modal yapomoga description -->
+
+                            </div> <!-- /.yapomoga-payment -->
+
+                            <button type="submit" class="btn btn-block btn-green btn-next">Далее</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div><!-- bill main widget -->
               </div>
 
             </div>
 
+            <!-- aside mobile area -->
+            <div class="row d-lg-none">
+
+              <div class="col-12 mb-3">
+                <!-- service provider widget -->
+                <h4 class="mb-3">Поставщик услуги</h4>
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__tel">+380(342)50-62-01</div>
+                          <div class="provider-card__tel">+380(342)50-62-02</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                  <div class="service-provider__rating">
+                    <h4 class="service-provider__title">Рейтинг услуги</h4>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result">4.4</span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                </div><!-- service provider widget -->
+              </div>
+
+            </div><!-- aside mobile area -->
+
+            <div class="row">
+              <div class="col-12 mt-4 mt-lg-5">
+                <!-- category text widget -->
+                <div class="category-text" id="category-text-widget">
+                  <p>В современном мире без мобильного телефона не обойтись. Но бывает так, что деньги на счету заканчиваются в самый неподходящий момент. Для решения такой проблемы идеально подойдет сервис iPay.ua – с нашей помощью пополнение мобильного отнимет всего пару минут!</p>
+                  <h3>Как пополнить мобильный с карты?</h3>
+                  <p>Для выполнения такой операции необходимо обладать кредитной или дебетовой банковской карточкой Visa или MasterCard – при этом неважно, кем она была выдана. Все можно выполнить с помощью мобильного телефона или компьютера, требуется только доступ к интернету.</p>                
+                  <p>Никогда еще оплата мобильной связи не была столь простой, пользователям iPay.ua нужно лишь:</p>
+                  <ul class="list list--circle">
+                    <li>выбрать оператора мобильной связи из списка;</li>
+                    <li>ввести номер телефона и сумму;</li>
+                    <li>указать данные с карточки (номер, срок действия и CVV-код).</li>
+                  </ul>
+                  <p>После этого нужно нажать на кнопку «оплатить». Вся операция длится не более нескольких минут, а оперативность зачисления средств – главное достоинство нашего ресурса. Наш ресурс отлично подойдет для тех ситуаций, когда деньги на телефоне нужны уже сейчас.</p>
+                  <h3>Какие операторы доступны к оплате?</h3>
+                  <p>Наш интернет-ресурс дает возможность пополнить счет через карту для пользователей всех популярных в Украине мобильных операторов, включая:</p>
+                  <ul class="list list--circle">
+                    <li>полное и своевременное зачисление средств;</li>
+                    <li>мгновенное выполнение транзакций;</li>
+                    <li>максимальную защиту персональных данных.</li>
+                  </ul>
+                  <p>iPay.ua – ваш лучший выбор, когда нужно пополнить счет на мобильном телефоне!</p>
+                </div><!-- category text widget -->
+              </div>
+            </div>
+
           </main><!-- main area -->
+
+          <!-- aside area -->
+          <aside class="col-lg-4 d-none d-lg-block">
+            <div class="row">
+
+              <div class="col-12 mb-3">
+                <!-- service provider widget -->
+                <h4 class="mb-3">Поставщик услуги</h4>
+                <div class="service-provider" id="service-provider-widget">
+                  <div class="service-provider__card">
+                    <div class="provider-card">
+                      <div class="provider-card__body">
+                        <div class="provider-card__img">
+                          <img src="img/providers/kyivgaz-img.png" alt="">
+                        </div>
+                        <div class="provider-card__content">
+                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
+                          <div class="provider-card__tel">+380(342)50-62-00</div>
+                          <div class="provider-card__tel">+380(342)50-62-01</div>
+                          <div class="provider-card__tel">+380(342)50-62-02</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-provider__payments">
+                    <p class="service-provider__title">Успешных оплат</p>
+                    <span class="service-provider__number">2 334 721</span>
+                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
+                  </div>
+                  <div class="service-provider__rating">
+                    <h4 class="service-provider__title">Рейтинг услуги</h4>
+                    <div class="rating-input">
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active"></span>
+                      <span class="rating-input__star active-half"></span>
+                      <span class="rating-input__result">4.4</span>
+                    </div>
+                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
+                  </div>
+                </div><!-- service provider widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
+              </div>
+
+            </div>
+          </aside><!-- aside area -->
         </div>
       </div><!-- main content -->
 
@@ -608,13 +881,37 @@
       </div>
     </div> <!-- /.sticky-footer -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__cancel"></a>
+              </div>
+              <div class="form-search__list"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="/js/custom.js"></script>.
+    <script src="/js/custom.js"></script>
+    <script src="/js/search-form.js"></script>
     <script src="/js/yapomoga-payment.js"></script>
   </body>
 </html>
+                            

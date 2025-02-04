@@ -4,8 +4,9 @@
   const ucpPayButton = document.getElementById('ucp-pay-button');
   const ucpPendingAlert = document.getElementById('ucp-pending-alert');
   // const identityEmail = 'svia.rom@gmail.com';
-  const identityEmail = 'svirom@yahoo.com';
+  // const identityEmail = 'svirom@yahoo.com';
   // const identityEmail = 'svirom@outlook.com';
+  const identityEmail = 'lufyibumle@gufum.com';
   const ucpCheckbox = document.getElementById('checkbox-ucp');
   const ucpOtp = document.getElementById('ucp-pending-otp');
   const ucpOtpSubmit = document.getElementById('ucp-otp-submit');
@@ -38,6 +39,12 @@
         dpaShippingPreference: 'NONE',
         dpaBillingPreference: 'NONE',
         payloadTypeIndicatorCheckout: 'FULL',
+        paymentOptions: [
+          {
+            dpaDynamicDataTtlMinutes: 2,
+            dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
+          }
+        ]
       };
   
       // Initialize the Visa Checkout SDK with your DpaTransactionOptions
@@ -173,7 +180,7 @@
     // add new card to click to pay account
     if (ucpCheckbox.checked === true) {
 
-      const encryptedCard = 'eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIiwiaWF0IjoxNzM2OTU0MzI5OTUyLCJraWQiOiJZU0taQlQxQTNDSkxaSFYyUEhQUTEzeW9fRGxIWHozYVFENlBKM2lheGtQQm5zYldVIn0.fNcRC8gF9j_jOVbzI7n4L_LjB3K52oOZmxJ36-_5v2ObyLpKy70guLLvJpLb1dU-FG97Ug0j4u6hc5EvPQp9Li0IOxWLiAsSrq2268k29V1aFsJOChjNqY0Vyhvnoui25ZcrvEWdraSaBHeEXsdIUCU222wIA90zE23Gw5W_IQ_CMtEGS-Dglsoy7sFEU-M8BnQ8Tv9o6VXNxH8t_7GjL0uXkbbGgUXVjsvHeX9qIK2hCbdPfaaiIktmP2CI8DoJj-u_l1UyYcWj6Vb8XLO8qnZRH0E4kZ-e63ACjJjL93mDBdiN27JgtfayHQGOvm8-moB2Ut_-B_1hZWnP6nJgbQ.pbknpmtyud9_BU2l.x0RSaKOCzu3662rNS-FdMAbPQhXldQqG1vHhfijPmQ-sjaLGz-RbCEwnKN6g2PdsbH5xfzNt_wa0eWEWMMwpTlBtxFW03HjgdHXhdU34fX_4EFNYzX_cRkubm2RsbrYQYxyN4C8-y2g0PshH3KhUNVsXLBmxfEjT-VYFJX19ovUnwCWQjdXSJiP2-XZkxyOWM5OpMJpJDMG95dwnGGEi845CPeYySvlFW1bYNVHfeGPVrvdwSqTzeTr9JbUuZ1vORtPZE3QRJNSzFV0kr119r2J9rn51B4HJvfVtTUFVZ8KufDLrok7zCjvQ_v3klAnQvT38jLEHn6yngeMP7VVDj_tAlpRc6Z8cOhCYo_4PvdyF6dlWoZ8Shvk5VUrzijlrQes2vyBrwyoL.Cnd83Twbervmg_OxYg5OtQ';
+      const encryptedCard = 'eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIiwiaWF0IjoxNzM4NTk1OTA2NzU0LCJraWQiOiJZU0taQlQxQTNDSkxaSFYyUEhQUTEzeW9fRGxIWHozYVFENlBKM2lheGtQQm5zYldVIn0.cBMyPXy03GllnmhWBuWoMx7lRbpDbtMJJ-ucD29Yv30d7SnKioWsCfFYuMQwcsXhdNuuC7Po9oKNA5K_wajMoHDd0bhho1WjmOmdZ5ho-8T1dehO5_M2UHK8_bNEfK9VU66IZ-aar3VtkkawZO1v7zu3yaf6Wt0ENNVL_qfgfjp9rlfcwMu1YFV2S7jvrl47cMOxljUXlvO8oMnpw6Fy3gdlJaNy5_TxuS59-zKNh248bPCtDug5t8eOGhoty6xrUwLRiGi0A3Hl7RSNPZyLFWvgCjsHCsselaSx476XMdQHHqm24SwUxt2ugRvWNJGObZAqGja13B5ORQY0jEqSCQ.Hlfr_iYJsLrZ2PvP.buUYovopH87yqxFJk_nQioel1Bm-MBqBEbDe4o1zp6qvcvHsjPM_PGPuF4eEQP_esR9qq0YVJRb_4OZrLIzSgLIiM3yG0a9OxcHVEuvHqGypxjqDlj_57_bw8W2nVf9w_ywpjiVN91-t9pvA2g-dIVFHsOlDJprtEs43ge-wnqn8SG9bOQUzyMOET1Da8OVUctt5-QoiPZpzivGzGqzvbqfKU_O3YriEuHCA8YhGQ1YUAZIyCwNaxmtDIYFaWPuedMK_D0MA-zp0X9QJrg4_HxzxCPoHqHA4mNvzCmhVoPg_7xeFcp50hFVgoYR_WP4aCy8HHt75P8j150HOjskQfuY58mX0qLT7GhY_E8fb3ZnUNl5B75lyFOImjmKbyBLpkOixjH_5xh6c.3zVhM-4VgDdc0uray8nQCw';
       
       const checkoutParameters = {
         // srcDigitalCardId: "",
@@ -205,6 +212,12 @@
             } 
           ]
         },
+        // paymentOptions: [
+        //   {
+        //     dpaDynamicDataTtlMinutes: 2,
+        //     dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
+        //   }
+        // ],
         // windowRef: "",
         // windowRef: window.open('/', 'example', 'width=480,height=700'),
         // payloadTypeIndicatorCheckout: 'FULL',
@@ -265,6 +278,12 @@
           // windowRef: window.open('/', 'example', 'width=480,height=700'),
           dpaTransactionOptions: {
             dpaBillingPreference: 'NONE',
+            paymentOptions: [
+              {
+                dpaDynamicDataTtlMinutes: 2,
+                dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
+              }
+            ]
           },
           payloadTypeIndicatorCheckout: 'FULL',
         };
