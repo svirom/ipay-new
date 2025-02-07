@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  const yapomogaHiddenInput = $('#yapomoga-hidden-input');
   
   // payment buttons
   $('.yapomoga-payment__btn').on('click', function() {
@@ -6,6 +8,12 @@ $(document).ready(function () {
     const buttonAmount = $(this).data('price');
 
     yapomogaAmount.val(buttonAmount).addClass('filled');
+    yapomogaHiddenInput.val(buttonAmount);
+  })
+
+  // yapomoga input val to hidden input
+  $('#yapomoga-amount').on('input', function() {
+    yapomogaHiddenInput.val($(this).val());
   })
 
   // enable/disable input and buttons

@@ -5,11 +5,12 @@
   const ucpPendingAlert = document.getElementById('ucp-pending-alert');
   // const identityEmail = 'svia.rom@gmail.com';
   // const identityEmail = 'svirom@yahoo.com';
-  // const identityEmail = 'svirom@outlook.com';
-  const identityEmail = 'lufyibumle@gufum.com';
+  const identityEmail = 'svirom@outlook.com';
   const ucpCheckbox = document.getElementById('checkbox-ucp');
   const ucpOtp = document.getElementById('ucp-pending-otp');
   const ucpOtpSubmit = document.getElementById('ucp-otp-submit');
+
+  const ucpTransactionAmount = '95.95';
 
   const consumerIdentity = {
     // identityProvider: "iPayDPA-iPaySRC",
@@ -33,7 +34,7 @@
       const dpaTransactionOptions = {
         // Fill in your specific options here
         transactionAmount: {
-          transactionAmount: '99.95',
+          transactionAmount: ucpTransactionAmount,
           transactionCurrencyCode: 'UAH'
         },
         dpaShippingPreference: 'NONE',
@@ -44,7 +45,8 @@
             dpaDynamicDataTtlMinutes: 2,
             dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
           }
-        ]
+        ],
+        dpaLocale: 'uk_UA'
       };
   
       // Initialize the Visa Checkout SDK with your DpaTransactionOptions
@@ -180,10 +182,9 @@
     // add new card to click to pay account
     if (ucpCheckbox.checked === true) {
 
-      const encryptedCard = 'eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIiwiaWF0IjoxNzM4NTk1OTA2NzU0LCJraWQiOiJZU0taQlQxQTNDSkxaSFYyUEhQUTEzeW9fRGxIWHozYVFENlBKM2lheGtQQm5zYldVIn0.cBMyPXy03GllnmhWBuWoMx7lRbpDbtMJJ-ucD29Yv30d7SnKioWsCfFYuMQwcsXhdNuuC7Po9oKNA5K_wajMoHDd0bhho1WjmOmdZ5ho-8T1dehO5_M2UHK8_bNEfK9VU66IZ-aar3VtkkawZO1v7zu3yaf6Wt0ENNVL_qfgfjp9rlfcwMu1YFV2S7jvrl47cMOxljUXlvO8oMnpw6Fy3gdlJaNy5_TxuS59-zKNh248bPCtDug5t8eOGhoty6xrUwLRiGi0A3Hl7RSNPZyLFWvgCjsHCsselaSx476XMdQHHqm24SwUxt2ugRvWNJGObZAqGja13B5ORQY0jEqSCQ.Hlfr_iYJsLrZ2PvP.buUYovopH87yqxFJk_nQioel1Bm-MBqBEbDe4o1zp6qvcvHsjPM_PGPuF4eEQP_esR9qq0YVJRb_4OZrLIzSgLIiM3yG0a9OxcHVEuvHqGypxjqDlj_57_bw8W2nVf9w_ywpjiVN91-t9pvA2g-dIVFHsOlDJprtEs43ge-wnqn8SG9bOQUzyMOET1Da8OVUctt5-QoiPZpzivGzGqzvbqfKU_O3YriEuHCA8YhGQ1YUAZIyCwNaxmtDIYFaWPuedMK_D0MA-zp0X9QJrg4_HxzxCPoHqHA4mNvzCmhVoPg_7xeFcp50hFVgoYR_WP4aCy8HHt75P8j150HOjskQfuY58mX0qLT7GhY_E8fb3ZnUNl5B75lyFOImjmKbyBLpkOixjH_5xh6c.3zVhM-4VgDdc0uray8nQCw';
+      const encryptedCard = 'eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMTI4R0NNIiwiaWF0IjoxNzM4ODQ5OTg1MjAwLCJraWQiOiJZU0taQlQxQTNDSkxaSFYyUEhQUTEzeW9fRGxIWHozYVFENlBKM2lheGtQQm5zYldVIn0.gsnUbasLb-5SHbl1emAxcNuza_GeTsAVQBtkO55NnbIZ2T6mNLTJceI3a-CIpe1YFm2K2mIQfOkPfM6O0E_zHoZETFWMQ35579EuXIrfwQTe-xfdq68X9dP8ZXRHV1GgeslHnZ6BVJahuFbpIMRTvZUsLDB1bTdim11DqSo1FjmlxUlyabD7i56DG600NseuSu-p_3NFdkZZW5JjiUMS97SzGhPazjRyKQc2eYCs9gL8jGVJ38tcyDzjZazeusk7TGXPMoQDPkYphwoGV_Y4RQpP7IL2hCvIoim4gBL4iXOhMPF4IYEo7RTnYw0DXYmgSnxiytpyFvLe3kmrLljc-w.VcMO0h8Nh649j2aF.HvVCWt16C_rmXc0McOXsxirQm6kXAC_eS4Ljy9OyQwCab8CUZC9VmwisHog4gvdW3oJ8sV8C-_ZDoBeW8Vk1qAgX71okL28R8gHF65EXMDamG-lZmk4-Jah9QLcTk6mLKDWIT3o5oI-5IZ4eDEKZ75h1aI0cKGi5Ee-gaIZidbyg7NPpmmqvGylsIiWzuG7aJYutdauUdXAs0Tq_yy_edl3v7seS-tSbbYxwTswWuo5G7JVqbMjF8KtZ5amJG7HRhFR6DBp3E_li6nuDiulHbXDCfGE_4IcPZgn6CpnZIlmXM-YSLJ7N9ZEGOBsYxMbzdBaBn2xfyg5r_-eUp94xLsawU4T7w27j3BLEVrqij6wg_jJmZqOq4m-uCv9_c6B3P8K45zruhW9g.4yA9mZJbFpXXoZiuc99fhg';
       
       const checkoutParameters = {
-        // srcDigitalCardId: "",
         encryptedCard: encryptedCard,
         consumer: {
           consumerIdentity: {
@@ -212,43 +213,24 @@
             } 
           ]
         },
-        // paymentOptions: [
-        //   {
-        //     dpaDynamicDataTtlMinutes: 2,
-        //     dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
-        //   }
-        // ],
-        // windowRef: "",
-        // windowRef: window.open('/', 'example', 'width=480,height=700'),
-        // payloadTypeIndicatorCheckout: 'FULL',
-        // dpaTransactionOptions: {
-        //   dpaBillingPreference: 'NONE',
-        //   consumerNationalIdentifierRequested: false,
-        //   paymentOptions: [
-        //     {
-        //       dpaDynamicDataTtlMinutes: 2,
-        //       dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
-        //     }
-        //   ]
-        // },
-        // authenticationReasons: [
-        //   'TRANSACTION_AUTHENTICATION'
-        // ],
-        // authenticationMethod: {
-        //   authenticationMethodType: 'SMS_OTP',
-        //   authenticationSubject: 'CARDHOLDER',
-        // },
-        // assuranceData: {
-        //   verificationData: [
-        //     {
-        //       verificationType: 'CARDHOLDER',
-        //       verificationEntity: '01',
-        //       verificationMethod: '02',
-        //       verificationResults: '04',
-        //       verificationTimestamp: '2025-12-05',
-        //     }
-        //   ]
-        // }
+        dpaTransactionOptions: {
+          paymentOptions: [
+            {
+              dpaDynamicDataTtlMinutes: 2,
+              dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
+            }
+          ],
+          dpaLocale: 'uk_UA',
+          acquirerBIN: '455555',
+          merchantName: 'iPay',
+          acquirerMerchantId: '123456789',
+          transactionAmount: {
+            transactionAmount: ucpTransactionAmount,
+            transactionCurrencyCode: 'UAH'
+          }
+        },
+        authenticationMethodType: '3DS',
+        payloadRequested: 'AUTHENTICATED'
       };
     
       // Call checkout
@@ -283,9 +265,19 @@
                 dpaDynamicDataTtlMinutes: 2,
                 dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_LONG_FORM'
               }
-            ]
+            ],
+            dpaLocale: 'uk_UA',
+            acquirerBIN: '455555',
+            merchantName: 'iPay',
+            acquirerMerchantId: '123456789',
+            transactionAmount: {
+              transactionAmount: ucpTransactionAmount,
+              transactionCurrencyCode: '980'
+            }
           },
           payloadTypeIndicatorCheckout: 'FULL',
+          authenticationMethodType: '3DS',
+          payloadRequested: 'AUTHENTICATED'
         };
   
         console.log('checkoutParameters (existing card):', checkoutParameters);
