@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="/css/breadcrumb.css">
     <link rel="stylesheet" href="/css/catalogue.css">
     <link rel="stylesheet" href="/css/search-form.css">
-    <link rel="stylesheet" href="/css/payment-progress.css">
-    <link rel="stylesheet" href="/css/service-provider.css">
-    <link rel="stylesheet" href="/css/archive-bill.css">
-    <link rel="stylesheet" href="/css/payment-method.css">
+    <link rel="stylesheet" href="/css/bill-result.css">
+    <link rel="stylesheet" href="/css/bill-message.css">
+    <link rel="stylesheet" href="/css/service-rate.css">
+    <link rel="stylesheet" href="/css/header-notifications.css">
+    <link rel="stylesheet" href="/css/sticky-footer.css">
     <link rel="stylesheet" href="/css/visa-ucp.css">
 
-    <title>Visa Unified Click to Pay Payment</title>
+    <title>Visa Unified Clicktopay Success</title>
   </head>
   <body>
 
@@ -430,11 +431,30 @@
       </nav><!-- breadcrumb widget -->
 
       <!-- main content -->
-      <div class="container main-content">
+      <div class="container main-content position-relative">
+
+
+        <div class="ucp-adding-modal" id="ucp-adding-modal">
+          <div class="ucp-checking text-center mx-auto px-4">
+              <p class="font-weight-bold mb-2">Payment successful</p>
+              <p class="small mb-0">We’re now adding your card to Click to Pay and will display payment details in a few seconds.</p>
+              <img src="img/ucp-payment/ucp-loader.gif" alt="Checking...">
+              <p class="small mb px-4">we’ll send you a confirmation email</p>
+          </div>
+        </div>
+        <!-- <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+              document.getElementById('ucp-adding-modal').classList.add('d-none');
+            }, 5000);
+            document.cookie = 'addNewCardClicktopay=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+          })
+        </script> -->
+
+
         <div class="row">
           <!-- main area -->
           <main class="col-lg-8">
-
             <div class="row">
 
               <div class="col-12">
@@ -445,77 +465,40 @@
                     <div class="col-12 mt-lg-2 mb-3 d-lg-none">
                       <a href="#" class="btn btn-link btn-back">Коммунальные услуги</a>
                     </div>
-
+      
                     <div class="col-12 mb-3">
                       <div class="bill-title">
-                        <div class="row col-pad8">
-                          <h1 class="col text-break">Оплата Коммунальной услуги по всем городам Украины</h1>
-                          <div class="col-auto mb-2 d-lg-none">
-                            <div class="provider-title">
-                              <img src="img/providers/kyivgaz-img.png" alt="">
-                            </div>
-                          </div>
-                        </div>
-                        <p>Оплата газа через интернет осуществляется банковской картой Visa, MasterCard или ПРОСТІР.</p>
+                        <h1>Оплата Коммунальной услуги по всем городам Украины </h1>
                       </div>
                     </div>
-
-                    <div class="col-12">
-                      <!-- payment progress widget -->
-                      <div id="payment-progress-widget">
-                        <div class="payment-progress">
-                          <div class="row align-items-center">
-                            <div class="col-sm-4">
-                              <a href="#" class="payment-step done">
-                                <div class="payment-step__icon">1</div>
-                                <span>Данные плательщика</span>
-                              </a>
-                            </div>
-                            <div class="col-sm-4">
-                              <a href="#" class="payment-step done">
-                                <div class="payment-step__icon">2</div>
-                                <span>Данные платежа</span>
-                              </a>
-                            </div>
-                            <div class="col-sm-4">
-                              <a href="#" class="payment-step active">
-                                <div class="payment-step__icon">3</div>
-                                <span>Оплата</span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="payment-progress-mobile dropdown">
-                          <span>Оплата</span>
-                          <a href="#" class="payment-progress-mobile__icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <svg width="32" height="32" viewBox="0 0 32 32">
-                              <circle class="circle-full" cx="16" cy="16" r="14" fill="none" stroke-width="4"></circle>
-                              <circle class="percent" cx="16" cy="16" r="14" fill="none" stroke-width="4" pathLength="100"></circle>
-                            </svg>
-                            <span>3/3</span>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item dropdown-progress-payer done" href="#">Данные плательщика</a>
-                            <a class="dropdown-item dropdown-progress-data done" href="#">Данные платежа</a>
-                            <a class="dropdown-item dropdown-progress-payment active" href="#">Оплата</a>
-                          </div>
-                        </div>
-                      </div><!-- payment progress widget -->
-                    </div>
-
-                    <div class="col-12 mb-4 mb-lg-5">
-
+      
+                    <div class="col-12 mt-1 mt-lg-3">
+      
                       <div class="row">
-                        <div class="col-12">
-                          <!-- archive bill widget -->
-                          <div class="archive-bill" id="archive-bill-widget">
-                            <div class="archive-bill__row">
-                              <div class="archive-bill__title">К оплате</div>
-                              <div class="archive-bill__amount">20.00 грн.</div>
-                              <div class="archive-bill__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Детали платежа</div>
+                        <div class="col-12 mt-4">
+                          <!-- bill result widget -->
+                          <div class="bill-result icon-success" id="bill-result-widget">
+                            <div class="bill-result__row">
+                              <div class="bill-result__header">
+                                <h3>Платеж успешен!</h3>
+                                <p>Платеж №37473537</p>
+                              </div>
+                              <div class="bill-result__footer">
+                                <h4 class="text-center mt-3">Квитанция</h4>
+                                <div class="bill-result__buttons">
+                                  <a href="/img/logo-red.svg" class="btn btn-outline btn-download" download="">Скачать</a>
+                                  <form>
+                                    <div class="form-group">
+                                      <input type="email" class="form-control form-input" id="form-name" name="name" autocomplete="off" placeholder="qwerty@email.com" aria-required="true">
+                                      <label class="control-label form-label" for="form-name">Отправить на e-mail</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-green btn-mail btn-empty"></button>
+                                  </form>
+                                </div>
+                              </div>
                             </div>
                             <div id="archive-1" class="collapse">
-                              <div class="archive-bill__collapse">
+                              <div class="bill-result__collapse">
                                 <div class="table-responsive">
                                   <table class="table">
                                     <tbody>
@@ -540,276 +523,150 @@
                                 </div>                          
                               </div>
                             </div>
-                            <div class="archive-bill__mobile">
-                              <div class="archive-bill__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">Детали платежа</div>
+                            <div class="bill-result__details" role="button" data-toggle="collapse" data-target="#archive-1" aria-expanded="false">
+                              <span class="bill-result__info-show">Информация о платеже</span>
+                              <span class="bill-result__info-hide">Скрыть информацию о платеже</span>
                             </div>
-                          </div><!-- archive bill widget -->
+                          </div><!-- bill result widget -->
                         </div>
                       </div>
-
-                      <div class="row">
-
-                        <div class="col-12 mt-4 mt-sm-4">
-
-                          <form action="/" class="row" id="utility-form">
-                            <div class="col-12 col-md-7 mx-auto">
-
-                              <p class="d-flex mb-4 ucp-header">
-                                <span class="pr-3 ucp-header__text">Pay by card</span>
-                                <span class="ml-auto pl-3 ucp-header__imgs" role="button" tabindex="0" id="clicktopay-popover" data-toggle="popover" data-title="What is Click to Pay?" data-content="Click to Pay is a secure and convenient way to make online payments without the need to enter your card details every time. It uses tokenization to protect your payment information, making the checkout process faster and safer. When you see the Click to Pay icon at checkout, you can simply click it to complete your purchase quickly and securely.">
-                                  <img src="img/ucp-payment/click-to-pay-icon.svg" class="ucp-header__img ucp-header__img--clicktopay" alt="Click to Pay">
-                                  <img src="img/ucp-payment/visa-icon.svg" class="ucp-header__img ucp-header__img--visa" alt="Visa">
-                                  <img src="img/ucp-payment/mastercard-icon.svg" class="ucp-header__img ucp-header__img--mastercard" alt="Mastercard">
-                                </span>
-                              </p>
-
-                              <div class="ucp-empty-email mb-4">
-                                <p>Add an email to your account to access the Click to Pay payment method.</p>
-                                <p><a href="#" role="button" class="" data-toggle="modal" data-target="#modal-ucp-empty-email"><u>What is Click to Pay?</u></a></p>
-                                <a href="#" class="" target="_blank"><u>Add email to account</u></a>
-                              </div>
-
-                              <div class="modal fade modal-ucp-empty-email" id="modal-ucp-empty-email" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                          
-                                    <div class="modal-header pb-0">
-                                      <img src="img/ucp-payment/modal-empty-email.jpg" srcset="img/ucp-payment/modal-empty-email.jpg 1x, img/ucp-payment/modal-empty-email@2x.jpg 2x" class="d-none d-sm-inline" alt="">
-                                      <img src="img/ucp-payment/modal-empty-email-sm.jpg" srcset="img/ucp-payment/modal-empty-email-sm.jpg 1x, img/ucp-payment/modal-empty-email-sm@2x.jpg 2x" class="d-sm-none" alt="">
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                      </button>
-                                    </div>
-                          
-                                    <div class="modal-body">
-                                      <h4 class="mb-3">What is Click to Pay?</h4>
-                                      <p>Click to Pay is a secure and convenient way to make online payments without the need to enter your card details every time.</p>
-                                      <p>It uses tokenization to protect your payment information, making the checkout process faster and safer.</p>
-                                      <p>When you see the Click to Pay icon at checkout, you can simply click it to complete your purchase quickly and securely.</p>
-                                      <img src="img/ucp-payment/click-to-pay-icon.svg" alt="Click to Pay">
-                                    </div>
-                          
-                                  </div>
-                                </div>
-                              </div>
-            
-                              <div class="form-group mb-0 pt-2">
-                                <!-- payment method widget -->
-                                <div class="payment-method" id="payment-method-widget">
-            
-                                  <div class="payment-method__radio pb-4 payment-method-clicktopay" id="payment-method-clicktopay" data-user-email="svia.rom@gmail.com" data-user-phone="380677593208" data-payment-amount="64.45" data-payment-guid="<?= Guid::checkGuid(); ?>">
-                                    <div id="payment-choose-clicktopay" class="checkbox-control radio-control mb-2">
-                                      <input type="radio" id="customRadioClickToPay" name="customRadio" class="checkbox-input" checked>
-                                      <label class="checkbox-label" for="customRadioClickToPay" data-toggle="collapse" data-target="#radio-clicktopay" aria-expanded="true" role="button"><img src="img/ucp-payment/click-to-pay-icon.svg" class="mb-1 mr-1" alt="Click to Pay">Click to Pay</label>
-                                    </div>
-                                    <div id="radio-clicktopay" class="collapse show" data-parent="#payment-method-widget">
-        
-                                      <!-- .ucp-payment -->
-                                      <div class="ucp-payment" id="ucp-payment">
-                                        <input type="hidden" id="clicktopayform-encryptedpayload" name="ClickToPayForm[encryptedPayload]" value="">
-                                        <input type="hidden" id="clicktopayform-eci" name="ClickToPayForm[eci]" value="">
-
-                                        <div class="ucp-checking text-center" id="ucp-checking">
-                                            <img src="img/ucp-payment/ucp-loader.gif" alt="Checking...">
-                                            <p class="small mb px-4">We are checking with Click to Pay to see if you have any saved cards...</p>
-                                        </div>
-
-                                        <div class="ucp-cards dropdown">
-                                            <div class="ucp-cards-select" id="ucp-cards-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <input type="hidden" id="cardform-ucp_id" name="CardForm[ucp_uid]" value="">
-                                            </div>
-
-                                            <!-- <div class="ucp-cards-select" id="ucp-cards-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <div class="ucp-card ucp-card--active">
-                                              <div class="ucp-card__header"></div>
-                                              <div class="ucp-card__body">
-                                                <span class="ucp-card__body-title">Mastercard **** 1234</span>
-                                                <span class="ucp-card__body-mask">**** 1234</span>
-                                              </div>
-                                            </div>
-                                            <input type="hidden" id="cardform-ucp_id" name="CardForm[ucp_uid]" value="783A51C681997">
-                                          </div>
-
-                                          <div id="ucp-cards-menu" class="dropdown-menu" aria-labelledby="ucp-cards-select">
-                                            <div class="ucp-card ucp-card--active">
-                                              <div class="ucp-card__header"></div>
-                                              <div class="ucp-card__body">
-                                                <span class="ucp-card__body-title">Mastercard **** 1234</span>
-                                                <span class="ucp-card__body-mask">**** 1234</span>
-                                                <input class="ucp-card__id" type="hidden" value="783A51C681997187697A292920A609">
-                                              </div>
-                                            </div>
-
-                                            <div class="ucp-card">
-                                              <div class="ucp-card__header"></div>
-                                              <div class="ucp-card__body">
-                                                <span class="ucp-card__body-title">Visa NEW</span>
-                                                <span class="ucp-card__body-mask">**** 7890</span>
-                                                <input class="ucp-card__uid" type="hidden" value="783A51C681997187697A292920A609">
-                                              </div>
-                                            </div>
-                                          </div>  -->
-
-                                        </div> <!-- /.ucp-cards -->
-
-                                        <div class="ucp-pending-alert d-none" id="ucp-pending-alert">
-                                            <div class="d-flex align-items-center mb-3">
-                                                <img src="img/ucp-payment/click-to-pay-icon.svg" srcset="img/ucp-payment/click-to-pay-icon.svg 21w" sizes="21px" alt="Icon">
-                                                <p class="heading-color small font-weight-bold ml-1 mb-0" style="padding-top:2px">Click to Pay</p>
-                                            </div>
-                                            <p class="mb-2">На номер +38067***3208 відправлено SMS з кодом підтвердження для доступа до карток</p>
-                                            <div class="row col-pad8">
-                                                <div class="col form-group mb-0">
-                                                    <input type="tel" class="form-control form-input" id="ucp-pending-otp" name="name" autocomplete="off" placeholder="000000" aria-required="true">
-                                                    <label class="control-label form-label" for="ucp-pending-otp">Код з SMS</label>
-                                                    <p class="help-block mb-0">Code expired or wrong. Try again</p>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <button type="button" class="btn btn-green btn-next btn-empty" id="ucp-otp-submit"></button>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="ucp-pending-send d-none" id="ucp-pending-send"><u>Send again</u></a>
-                                        </div>
-
-                                      </div><!-- /.ucp-payment -->
-        
-                                    </div>
-                                  </div>
-                                    
-                                  <div class="payment-method__radio">
-                                    <div id="payment-choose-card" class="checkbox-control radio-control mb-2">
-                                      <input type="radio" id="customRadioCard" name="customRadio" class="checkbox-input">
-                                      <label class="checkbox-label collapsed" for="customRadioCard" data-toggle="collapse" data-target="#radio-customcard" aria-expanded="false" role="button">Другая карта</label>
-                                    </div>
-                                    <div id="radio-customcard" class="collapse" data-parent="#payment-method-widget">
-        
-                                      <div class="form-group method-card-field method-card-number">
-                                        <input type="tel" class="form-control form-input" id="cardform-pan" name="name" autocomplete="off" placeholder="0000 0000 0000 0000" aria-required="true">
-                                        <label class="control-label form-label" for="cardform-pan">Номер картки</label>
-                                        <span class="method-card-type method-card-type--card"></span>
-                                        <div class="help-block"></div>
-                                      </div>
-                                      <div class="method-card-data">
-                                        <div class="form-group method-card-field method-card-expires">
-                                          <input type="text" class="form-control form-input" id="cardform-exp" name="name" autocomplete="off" placeholder="ММ / ГГ" aria-required="true">
-                                          <label class="control-label form-label" for="cardform-exp">Термін дії</label>
-                                          <div class="help-block"></div>
-                                        </div>
-                                        <div class="form-group method-card-field method-card-cvv">
-                                          <input type="tel" class="form-control form-input input-cvv" id="cardform-cvv" name="name" autocomplete="off" placeholder="***" aria-required="true">
-                                          <label class="control-label form-label" for="cardform-cvv">CVV</label>
-                                          <a role="button" tabindex="0" class="bank-card__cvv-button" id="cvv-popover" data-toggle="popover" data-title="CVV" data-content="Трехзначный код на оборотной стороне банковской карты"></a>
-                                          <div class="help-block"></div>
-                                        </div>
-                                      </div>
-        
-                                      <div class="ucp-add-card mb-3 d-none" id="ucp-add-card">
-                                        <div class="checkbox-control">
-                                          <input class="checkbox-input" type="checkbox" id="ucp-checkbox">
-                                          <label class="checkbox-label" for="ucp-checkbox">Skip manual card entry next time with Click to Pay</label>
-                                        </div>
       
-                                        <div class="ucp-add-card__fields d-none" id="ucp-add-card-fields">
-                                          <p class="ucp-add-card__fields-header small">Review your details...</p>
-                                          <div class="form-group">
-                                            <input type="email" class="form-control form-input" id="ucp-add-card-email" name="ucp-add-card-email" autocomplete="off" placeholder="Enter email" aria-required="true" value="<?= Yii::$app->user->identity->email; ?>">
-                                            <label class="control-label form-label" for="ucp-add-card-email">email</label>
-                                          </div>
-                                          <div class="form-group">
-                                            <input type="tel" class="form-control form-input" id="ucp-add-card-phone" name="ucp-add-card-phone" autocomplete="off" placeholder="Enter phone" aria-required="true" value="<?= Yii::$app->user->identity->phone; ?>">
-                                            <label class="control-label form-label" for="ucp-add-card-phone">phone</label>
-                                          </div>
-                                          <div class="row">
-                                            <div class="col-sm">
-                                              <div class="form-group">
-                                                <input type="text" class="form-control form-input" id="ucp-add-card-name" name="ucp-add-card-name" autocomplete="off" placeholder="" aria-required="true" value="<?= Yii::$app->user->identity->first_name; ?>" data-value="<?= Yii::$app->user->identity->first_name; ?>">
-                                                <label class="control-label form-label" for="ucp-add-card-name">Name</label>
-                                                <div class="help-block">Field shouldn't be empty and contain only Latin charachers and space, hyphen</div>
-                                              </div>
-                                            </div>
-                                            <div class="col-sm">
-                                              <div class="form-group">
-                                                <input type="text" class="form-control form-input" id="ucp-add-card-surname" name="ucp-add-card-surname" autocomplete="off" placeholder="" aria-required="true" value="<?= Yii::$app->user->identity->last_name; ?>" data-value="<?= Yii::$app->user->identity->last_name; ?>">
-                                                <label class="control-label form-label" for="ucp-add-card-surname">Surname</label>
-                                                <div class="help-block">Field shouldn't be empty and contain only Latin charachers and space, hyphen</div>
-                                              </div>
-                                            </div>
-                                          </div>
+                    </div>
+      
+                    <div class="col-12 mt-4">
+                      <!-- bill message widget -->
+                      <div class="bonus-message" id="bill-message-widget">
+                        <div class="row align-items-center">
+                          <div class="col-md-3 bonus-message__left">
+                            <p>За этот платеж Вам начислено</p>
+                          </div>
+                          <div class="col-md-4 bonus-message__center">
+                            <p>12 бонусов Добра</p>
+                          </div>
+                          <div class="col-md-5 bonus-message__button">
+                            <a href="#" class="btn btn-default btn-block">Получить бонусы</a>
+                          </div>
+                        </div>
+                      </div><!-- bill message widget -->
+                    </div>
+      
+                    <div class="col-12 mt-4 mb-4 mb-lg-5 text-center">
+                      <a href="#" class="btn btn-green btn-again">Оплатить еще эту услугу</a>
+                    </div>
 
-                                          <p class="ucp-add-card__fields-footer extra-small">By continuing, you agree to the <a href="#"><u>Terms</u></a> for Click to Pay and understand your data will be processed according to the <a href="#"><u>Privacy Notice</u></a>.</p>
-                                          <p class="ucp-add-card__fields-footer extra-small mb-0">We’ll send you a confirmation email.</p>
-                                        </div>
-                                      </div>
-        
-                                    </div>
-                                  </div>
-            
-                                </div><!-- payment method widget -->
-                              </div>
+                    <div class="col-12 mb-5 mb-lg-3">
+                      <!-- service rate widget -->
+                      <div class="service-rate" id="service-rate-widget">
 
-                              <div class="col-12 mt-1">
-                                <button type="submit" class="btn btn-green btn-block" id="ucp-pay-button">Сплатити карткою</button>
-                                <p class="mt-3 text-center small">Оплачуючи, ви погоджуєтеся з умовами <a href="/media/files/public-offer.pdf" class="red-link" data-pjax="false" target="_blank"><u>публічного договору</u></a> та <a href="/media/files/Privacy-policy.pdf" class="red-link" data-pjax="false" target="_blank"><u>політикою конфіденційності</u></a></p>
-                              </div>
+                        <h3 class="mb-3 text-center text-sm-left">Оцените качество услуги</h3>
+                        <div class="service-rate__form service-rate__form--success">
+                          <p class="heading-color text-center text-sm-left">Пожалуйста укажите вашу оценку качеству услуги</p>
+                          <div class="form-group service-rate__rating">
+                            <div class="rating-input">
+                              <input id="star-5" type="radio" name="rating-input" data-vote="5">
+                              <label for="star-5"></label>
+                      
+                              <input id="star-4" type="radio" name="rating-input" data-vote="4">
+                              <label for="star-4"></label>
+                          
+                              <input id="star-3" type="radio" name="rating-input" data-vote="3">
+                              <label for="star-3"></label>
+                          
+                              <input id="star-2" type="radio" name="rating-input" data-vote="2">
+                              <label for="star-2"></label>
+                          
+                              <input id="star-1" type="radio" name="rating-input" data-vote="1">
+                              <label for="star-1" class="ml-0"></label>
+                            </div>
+                            <span class="rating-result no-rating" data-rating-1="Очень плохо" data-rating-2="Плохо" data-rating-3="Нормально" data-rating-4="Хорошо" data-rating-5="Отлично!">Укажите оценку</span>
+                          </div>
+                          <form action="/">
+                            <div class="form-group service-rate__textarea">
+                              <textarea class="form-control form-textarea" id="form-textarea" rows="3" placeholder="Оставьте ваш отзыв или пожелание по сервису. Мы внимательно изучаем все ваши обращения, чтобы сделать сервис лучше."></textarea>
+                              <label class="control-label form-label" for="form-textarea">Введите ваш комментарий</label>
+                            </div>
+                            <div class="form-group">
+                              <input type="tel" class="form-control form-input" id="rate-sender_phone" name="rate-sender_phone" maxlength="19" tabindex="5" minlength="12" autocomplete="section-sender tel" required="required" pattern="\+380\s\((67|96|97|98|39|68|50|63|66|70|90|73|91|92|93|94|95|99)\)\s[\d]{3}\s[\d]{2}\s[\d]{2}" aria-required="true" aria-invalid="false" placeholder="+380 (00) 000 00 00">
+                              <label class="control-label form-label" for="rate-sender_phone">Номер телефона</label>
+                              <div class="help-block">Введите номер телефона</div>
+                            </div>
+                            <div class="service-rate__submit">
+                              <button type="submit" class="btn btn-green btn-block" disabled>Отправить</button>
                             </div>
                           </form>
-
-                          
                         </div>
 
-                      </div>
+                        <!-- <div class="service-rate__rated service-rate__rated--success">
+                          <div class="service-rate__rated-text text-center">
+                            <h4>Благодарим за ваш отзыв!</h4>
+                            <p>Он очень важен для нас</p>
+                          </div>
+                          <div class="service-rate__rating">
+                            <div class="rating-input">
+                              <span class="rating-input__star active"></span>
+                              <span class="rating-input__star active"></span>
+                              <span class="rating-input__star active"></span>
+                              <span class="rating-input__star active"></span>
+                              <span class="rating-input__star active"></span>
+                            </div>
+                            <span class="rating-result rating-result--rated">5/5</span>
+                          </div>
+                        </div> -->
 
+                      </div><!-- service rate widget -->
                     </div>
 
                   </div>
                 </div><!-- bill main widget -->
               </div>
-
+            
             </div>
+
 
             <!-- aside mobile area -->
             <div class="row d-lg-none">
 
               <div class="col-12 mb-3">
-                <!-- service provider widget -->
-                <h4 class="mb-3">Поставщик услуги</h4>
-                <div class="service-provider" id="service-provider-widget">
-                  <div class="service-provider__card">
-                    <div class="provider-card">
-                      <div class="provider-card__body">
-                        <div class="provider-card__img">
-                          <img src="img/providers/kyivgaz-img.png" alt="">
-                        </div>
-                        <div class="provider-card__content">
-                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
-                          <div class="provider-card__tel">+380(342)50-62-00</div>
-                          <div class="provider-card__tel">+380(342)50-62-01</div>
-                          <div class="provider-card__tel">+380(342)50-62-02</div>
-                        </div>
-                      </div>
-                    </div>
+                <!-- success message-widget -->
+                <div id="success-message-widget">
+                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
+                    Загляните в меню!<br>
+                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
                   </div>
-                  <div class="service-provider__payments">
-                    <p class="service-provider__title">Успешных оплат</p>
-                    <span class="service-provider__number">2 334 721</span>
-                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
-                  </div>
-                  <div class="service-provider__rating">
-                    <h4 class="service-provider__title">Рейтинг услуги</h4>
-                    <div class="rating-input">
-                      <span class="rating-input__star active"></span>
-                      <span class="rating-input__star active"></span>
-                      <span class="rating-input__star active"></span>
-                      <span class="rating-input__star active"></span>
-                      <span class="rating-input__star active-half"></span>
-                      <span class="rating-input__result">4.4</span>
-                    </div>
-                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
-                  </div>
-                </div><!-- service provider widget -->
+                </div><!-- success message-widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <!-- services more widget -->
+                <div id="services-more-widget">
+                  <h4 class="mb-3">Также могут заинтересовать</h4>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Перевод с карты на карту</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київводоканал</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київгаз</span>
+                  </a>
+                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                </div><!-- services more widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
               </div>
 
             </div><!-- aside mobile area -->
@@ -821,42 +678,46 @@
             <div class="row">
 
               <div class="col-12 mb-3">
-                <!-- service provider widget -->
-                <h4 class="mb-3">Поставщик услуги</h4>
-                <div class="service-provider" id="service-provider-widget">
-                  <div class="service-provider__card">
-                    <div class="provider-card">
-                      <div class="provider-card__body">
-                        <div class="provider-card__img">
-                          <img src="img/providers/kyivgaz-img.png" alt="">
-                        </div>
-                        <div class="provider-card__content">
-                          <div class="provider-card__name">ДМП "Ивано-Франковск-теплокоммунэнерго"</div>
-                          <div class="provider-card__tel">+380(342)50-62-00</div>
-                          <div class="provider-card__tel">+380(342)50-62-01</div>
-                          <div class="provider-card__tel">+380(342)50-62-02</div>
-                        </div>
-                      </div>
-                    </div>
+                <!-- success message-widget -->
+                <div id="success-message-widget">
+                  <div class="alert alert-success alert-save alert-dismissible fade show" role="alert">
+                    Загляните в меню!<br>
+                    Мы сохранили ваш платеж! <a href="#">Войдите</a> или <a href="">зарегистрируйтесь</a> и сохраняйте квитанции по всем платежам в личном кабинете
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
                   </div>
-                  <div class="service-provider__payments">
-                    <p class="service-provider__title">Успешных оплат</p>
-                    <span class="service-provider__number">2 334 721</span>
-                    <p class="service-provider__last">Последняя  оплата <span>22 минуты</span> назад </p>
-                  </div>
-                  <div class="service-provider__rating">
-                    <h4 class="service-provider__title">Рейтинг услуги</h4>
-                    <div class="rating-input">
-                      <span class="rating-input__star active"></span>
-                      <span class="rating-input__star active"></span>
-                      <span class="rating-input__star active"></span>
-                      <span class="rating-input__star active"></span>
-                      <span class="rating-input__star active-half"></span>
-                      <span class="rating-input__result">4.4</span>
-                    </div>
-                    <p class="service-provider__rated">Оценили <span>49398</span> пользователей</p>
-                  </div>
-                </div><!-- service provider widget -->
+                </div><!-- success message-widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <!-- services more widget -->
+                <div id="services-more-widget">
+                  <h4 class="mb-3">Также могут заинтересовать</h4>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/yasno.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Перевод с карты на карту</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgasenergy.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київводоканал</span>
+                  </a>
+                  <a href="#" class="bill-card mb-2">
+                    <span class="bill-card__img">
+                      <img src="img/providers/kyivgas.png" alt="">
+                    </span>
+                    <span class="bill-card__content">Київгаз</span>
+                  </a>
+                  <a href="#" class="btn btn-green btn-block">Все услуги</a>
+                </div><!-- services more widget -->
+              </div>
+
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
               </div>
 
             </div>
@@ -1024,7 +885,6 @@
       </div>
     </div>
 
-    <script src="https://sandbox.secure.checkout.visa.com/checkout-widget/resources/js/integration/v2/sdk.js?dpaId=NVO6X4OFN753KN4H06N221RdcTKAxb6MtsOqSyphSa36Dwn5E&cardBrands=visa,mastercard&dpaClientId=iPayDPA-iPaySRC"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -1032,8 +892,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
+    <script src="/js/service-rate.js"></script>
     <script src="/js/search-form.js"></script>
-    <script src="/js/visa-ucp.js"></script>
-    <!-- <script src="/js/visa-ucp-empty.js"></script> -->
   </body>
 </html>

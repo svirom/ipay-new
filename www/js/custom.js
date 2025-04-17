@@ -73,6 +73,7 @@ $(document).ready(function() {
     title: 'CVV',
     content: 'Трехзначный код на оборотной стороне банковской карты',
     trigger: 'toggle',
+    trigger: 'click',
     placement: 'right',
     template: '<div class="popover popover-cvv" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
   }

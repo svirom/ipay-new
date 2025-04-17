@@ -7,38 +7,166 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
+/*-----------------------------------
+UCP Header Text
+-----------------------------------*/
+.ucp-header {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #F0F5FA;
+  }
+
+  &__text,
+  &__imgs {
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  &__text {
+    color: #172A3A;
+  }
+
+  &__img--mastercard {
+    margin-left: 0.375rem;
+  }
+}
+
+/*-----------------------------------
+UCP Checking
+-----------------------------------*/
+.ucp-checking {
+  & > p {
+    color: #00112C;
+  }
+}
+
+.payment-method-clicktopay:disabled {
+  pointer-events: none;
+}
+
+/*-----------------------------------
+UCP Checkbox Add Card
+-----------------------------------*/
 .ucp-add-card {
+  padding: calc(1rem - 2px) calc(1.5rem - 2px);
+  border: 2px solid #64B3F7;
+  border-radius: 0.5rem;
+  background-color: #F9FCFF;
+
   .checkbox-control {
-    padding-left: 1.25rem;
+    padding-left: 0;
+    line-height: 0;
 
     &::before {
       position: absolute;
       content: '';
       top: 1px;
-      left: 0.5rem;
-      height: calc(100% - 2px);
+      left: 4.125rem;
+      height: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
       width: 0;
-      border-left: 1px solid #DEE7F3;
+      border-left: 1px solid #CDCDCD;
     }
   }
 
   .checkbox-label {
-    padding-left: 1.5rem;
+    padding-left: 4.625rem;
     font-size: 0.875rem;
-    line-height: 1;
+    line-height: 1.4285714;
+    background: url("../img/ucp-payment/click-to-pay-icon.svg") left 1.75rem center no-repeat;
+    background-size: 31px;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       left: 0;
+      top: 50%;
+      transform: translateY(-50%);
       width: 1rem;
       height: 1rem;
     }
   }
+
+  &__fields {
+    padding-top: 0.625rem;
+
+    &  > .row {
+      margin-left: -5px;
+      margin-right: -5px;
+
+      & > [class^=col] {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 0.75rem;
+
+      &.has-error {
+        margin-bottom: 0.75rem;
+
+        .help-block {
+          position: static;
+        }
+
+        .form-input:not([type="password"]):not(.input-icon-right):not(.input-cvv) {
+          padding-right: 2.25rem;
+        }
+      }
+    }
+
+    .form-input {
+      padding-left: 1.0625rem;
+      padding-right: 2.25rem;
+    }
+
+    &-header {
+      margin-bottom: 0.75rem;
+    }
+
+    &-footer {
+      a {
+        color: #4D90E2;
+      }
+    }
+  }
 }
 
+/*-----------------------------------
+UCP PENDING_CONSUMER_IDV
+-----------------------------------*/
 .ucp-pending-alert {
-  padding: 1rem;
+  padding: 1rem;;
   border-radius: 0.5rem;
   background-color: #F0F5FA;
+
+  .form-input {
+    padding: 2.1875rem 3rem 0.9375rem 0.875rem;
+  }
+
+  .form-label {
+    left: 1.5rem;
+  }
+
+  .help-block {
+    &.visible {
+      display: block;
+      color: #E84F35;
+    }
+  }
+
+  .ucp-pending-send {
+    display: inline-block;
+    margin-top: 0.625rem;
+  }
 }
 
 .ucp-card {
@@ -51,15 +179,29 @@
   box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
   cursor: pointer;
 
+  &--active {
+    background: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.875 12.6211L8.7 16.4461C9.2775 17.0236 10.2225 17.0236 10.8 16.4461L19.125 8.12106' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 0.625rem center no-repeat;
+  }
+
   &__header {
     flex: 0 0 4.9375rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 0.25rem;
     border-radius: 0.1875rem;
     background-color: #27A379;
+    overflow: hidden;
+
+    &:not(.ucp-card__header--visa) {
+      padding: 0.25rem;
+    }
+
+    &--visa {
+      & > img {
+        max-width: 100%;
+      }
+    }
 
     &-type {
       height: 0.75rem;
@@ -77,27 +219,40 @@
   &__body {
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     padding-left: 1rem;
 
-    .ucp-card__body-title {
-      margin-bottom: 0.625rem;
-      font-size: 1.125rem;
-      line-height: 1.172;
-      color: #172A3A;
+    .ucp-card__body-network {
+      flex: 0 0 4rem;
+      height: 1.25rem;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &--visa {
+        background-image: url(../img/ucp-payment/visa-icon.svg);
+        background-size: 3.75rem;
+      }
+
+      &--mastercard {
+        background-image: url(../img/ucp-payment/mastercard-icon.svg);
+        background-size: 2rem;
+      }
     }
 
     .ucp-card__body-mask {
-      font-size: 0.875rem;
-      line-height: 1.172;
-      color: rgba(23, 42, 58, 0.6);
+      padding-left: 1rem;
+      font-size: 1rem;
+      line-height: 1.0625;;
+      letter-spacing: 1px;
+      color: #374053;
     }
   }
 }
 
 .ucp-cards-select {
   .ucp-card {
+    padding-right: 4.875em;
+
     &::after {
       position: absolute;
       display: block;
@@ -106,13 +261,14 @@
       height: 100%;
       top: 0;
       right: 0.625rem;
-      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.14661 8.02222L10.0054 12.8836' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.0054 12.8837L14.8641 8.02233' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.14648 8.52237L10.0052 13.3837' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.0054 13.3838L14.8641 8.52242' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-position: center;
       background-repeat: no-repeat;
       transition: all 0.3s ease;
       z-index: 10;
     }
   }
+
   &[aria-expanded=true] {
     .ucp-card {
       &::after {
@@ -120,39 +276,127 @@
       }
     }
   }
-}
+} 
 
 .ucp-cards {
   .dropdown-menu {
-    width: 100%;
-    top: auto !important;
-    transform: none !important;
-    padding: 0;
-    border: 0;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
-
     .ucp-card {
-      border-bottom: 1px solid #DEE7F3;
-      border-radius: 0;
       box-shadow: none;
 
-      &:first-of-type {
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #F0F5FA;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
       }
 
-      &:last-of-type {
-        border-bottom: 0;
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-      }
-
-      &--active {
-        &::after {
-          background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.3427 4.1359C14.5438 4.32516 14.5534 4.6416 14.3641 4.84268L6.3641 13.3427C6.27141 13.4412 6.14279 13.4979 6.00757 13.4999C5.87235 13.502 5.74207 13.4492 5.64645 13.3536L2.14645 9.85355C1.95118 9.65829 1.95118 9.34171 2.14645 9.14645C2.34171 8.95119 2.65829 8.95119 2.85355 9.14645L5.98912 12.282L13.6359 4.15732C13.8252 3.95623 14.1416 3.94664 14.3427 4.1359Z' fill='%2309BC8A'/%3E%3C/svg%3E");
-        }
+      &:not(:first-of-type) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
       }
     }
-  } 
+  }
+}
+
+
+/*-----------------------------------
+Click to Pay Adding Success
+-----------------------------------*/
+.ucp-adding-modal {
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: #ffffff; 
+  z-index: 100;
+
+  .ucp-checking {
+    max-width: 460px;
+    padding-top: 5rem;
+  }
+}
+
+/*-----------------------------------
+Click to Pay Empty Email
+-----------------------------------*/
+.ucp-empty-email {
+  position: relative;
+  padding: calc(1rem - 1px);
+  padding-right: calc(5rem - 1px);
+  border: 1px solid #FFD578;
+  border-radius: 0.5rem;
+  background-color: #FEF7E0;
+
+  p {
+    color: #172A3A;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    right: 0.9375rem;
+    top: 0.9375rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgba(232, 79, 53, 0.2) url("data:image/svg+xml,%3Csvg width='37' height='30' viewBox='0 0 37 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_377_8724)'%3E%3Crect x='3.60547' y='3.50024' width='27.6316' height='21' rx='2' fill='white'/%3E%3Cpath d='M5.81592 22.8423L17.4212 12.3423L29.0264 22.8423' stroke='%23DEE7F3' stroke-linecap='round'/%3E%3Cpath d='M29.7119 3.50024H5.1302C4.21068 3.50024 3.77858 4.63676 4.46584 5.24765L16.7567 16.1729C17.1356 16.5096 17.7065 16.5096 18.0854 16.1729L30.3763 5.24765C31.0635 4.63676 30.6314 3.50024 29.7119 3.50024Z' fill='white'/%3E%3Cpath d='M5.26318 6.81606L16.7878 16.2453C17.1562 16.5467 17.686 16.5467 18.0543 16.2453L29.579 6.81606' stroke='%23DEE7F3' stroke-linecap='round'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_377_8724' x='0.605469' y='0.500244' width='35.6313' height='29' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='1' dy='1'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_377_8724'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_377_8724' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") center no-repeat;
+  }
+}
+
+.modal-ucp-empty-email {
+  .modal-content {
+    border-width: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+  }
+
+  .modal-header {
+    padding: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-width: 0;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+
+    .close {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      opacity: 1;
+    }
+  }
+
+  .modal-body {
+    padding: 1rem 1.5rem 1.5rem;
+
+    p {
+      font-size: 0.875rem;
+      color: #172A3A;
+    }
+  }
+
+  @include at-least($sm) {
+    .modal-dialog {
+      max-width: 630px;
+    }
+  }
+
+  @include until($md) {
+    .modal-dialog {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include until($sm) {
+    .modal-dialog {
+      max-width: none;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
 }
