@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/utility-main.css">
     <link rel="stylesheet" href="/css/category-text.css">
     <link rel="stylesheet" href="/css/mobile-charge.css">
+    <link rel="stylesheet" href="/css/mobile-charge-yapomoga.css">
     <link rel="stylesheet" href="/css/header-notifications.css">
     <link rel="stylesheet" href="/css/sticky-footer.css">
 
@@ -639,7 +640,7 @@
                       <!-- mobile charge widget -->
                       <div class="mobile-charge-widget" id="mobile-charge-widget">
 
-                        <div class="row align-items-center mb-3">
+                        <div class="row col-pad8 align-items-center mb-3">
                           <div class="col col-md-auto">
                             <h3 class="mb-0">Быстрое пополнение мобильного</h3>
                           </div>
@@ -679,9 +680,8 @@
                             </div>
                             <div class="form-group mobile-charge__amount">
                               <div class="mobile-charge__number">
-                                <input type="tel" class="form-control form-input input-icon-right" id="mobile-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
+                                <input type="tel" class="form-control form-input" id="mobile-amount" name="name" autocomplete="off" placeholder="0.00" aria-required="true">
                                 <label class="control-label form-label" for="mobile-amount">Сумма</label>
-                                <label class="label-icon-right label-currency">грн</label>
                               </div>
                               <div class="mobile-charge__buttons">
                                 <button type="button" class="btn btn-mobile-amount">75</button>
@@ -691,8 +691,63 @@
                             </div>
                           </div>
 
+                          <!-- Yapomoga OneClick Charge Mobile Widget -->
+                          <div class="mobile-charge__yapomoga mobile-charge-yapomoga mb-3">
+
+                            <div class="checkbox-control">
+                              <input class="checkbox-input" type="checkbox" id="checkbox-yapomoga-inp">
+                              <label class="checkbox-label" for="checkbox-yapomoga-inp">Додати на допомогу притулку для тваринок <a href="#" role="button" class="red-link mobile-charge-yapomoga__button" data-toggle="modal" data-target="#yapomogaDescriptionModal"><u>На що збираємо?</u></a></label>
+                            </div>
+
+                            <div class="mobile-charge-yapomoga__form d-none">
+                              <div class="form-group">
+                                <input type="tel" class="form-control form-input mobile-charge-yapomoga__input-amount" id="yapomoga-oneclick-amount" name="name" autocomplete="off" placeholder="0" aria-required="true">
+                                <label class="control-label form-label" for="yapomoga-oneclick-amount">Сума</label>
+                              </div>
+                              <div class="mobile-charge-yapomoga__buttons">
+                                <button type="button" class="btn mobile-charge-yapomoga__btn" data-price="50">50 грн</button>
+                                <button type="button" class="btn mobile-charge-yapomoga__btn" data-price="100">100 грн</button>
+                              </div>
+                            </div>
+
+                            <input type="hidden" id="yapomoga-oneclick-input">
+
+                            <div class="modal-yapomoga-charge modal fade" id="yapomogaDescriptionModal" tabindex="-1" role="dialog" aria-labelledby="yapomogaDescriptionModalTitle" style="display: none;" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-body modal-yapomoga-charge__content">
+                                    <div class="modal-yapomoga-charge__img">
+                                      <img class="img-fluid" src="img/yapomoga/yapomoga-modal-img.jpg" srcset="img/yapomoga/yapomoga-modal-img.jpg 1x, img/yapomoga/yapomoga-modal-img@2x.jpg 2x" alt="img">
+                                      <img src="img/yapomoga/yapomoga-logo-short.svg" srcset="img/yapomoga/yapomoga-logo-short.svg 82w" sizes="(max-width: 575px) 53px, 82px" class="modal-yapomoga-charge__img-logo" alt="Япомога">
+                                    </div>
+                                    <div class="modal-yapomoga-charge__text text-left">
+                                      <h4 class="modal-yapomoga-charge__text-title mb-3">На що збираємо?</h4>
+                                      <p class="heading-color">iPay.ua у співпраці з БФ "Япомога" збирає кошти на обслуговування притулків для бездомних тварин. Кожна гривня, надіслана вами, спрямовується на закупівлю кормів, ліків та обслуговування будиночків для чотирьохлапих друзів. Долучайтесь до ініціативи і разом ми зможемо змінити їхню долю на краще!</p>
+                                      <div class="row justify-content-between align-items-center">
+                                        <div class="col-sm-auto">
+                                          <a href="https://yapomoga.com/" target="_blank" rel="nofollow"><u>Офіційна сторінка проєкту</u></a>
+                                        </div>
+                                        <div class="col-sm-auto mt-3 mt-sm-0">
+                                          <img src="img/yapomoga/yapomoga-logo.svg" alt="Япомога">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.896 9.06177L23.1043 22.8118" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M23.1043 9.06177L8.896 22.8118" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                      </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div> <!-- /Yapomoga OneClick Charge Mobile Widget -->
+
+
                           <div class="mobile-charge__continue">
-                            <span class="mobile-charge__safety">Безопасное соединение</span>
+                            <span class="mobile-charge__safety d-none">Безопасное соединение</span>
                             <button type="button" class="btn btn-green mobile-charge__btn-continue btn-block mt-3 mt-md-0" disabled>Продолжить</button>
                           </div>
 
@@ -1139,5 +1194,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
     <script src="/js/search-form.js"></script>
+    <script src="/js/mobile-charge-yapomoga.js"></script>
   </body>
 </html>

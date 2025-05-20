@@ -7,6 +7,13 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixins';
 
+.mobile-charge-widget {
+  @include at-least($md) {
+    padding: 1rem;
+    border: 1px solid #DEE7F3;
+    border-radius: 0.5rem;
+  }
+}
 
 .mobile-charge {
   position: relative;
@@ -74,7 +81,7 @@
   }
 
   &__btn-continue {
-    max-width: 16.25rem;
+    max-width: 26.75rem;
   }
 
   &__payment {
@@ -103,6 +110,10 @@
   }
 
   @include until($xl) {
+    &__btn-continue {
+      max-width: 22.25rem;
+    }
+
     &__phone {
       min-width: 10rem;
       max-width: 12.5rem;
@@ -127,6 +138,10 @@
   }
 
   @include until($lg) {
+    &__btn-continue {
+      max-width: 24.25rem;
+    }
+
     &__phone {
       min-width: 17.625rem;
       max-width: none;

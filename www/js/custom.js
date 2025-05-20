@@ -95,7 +95,7 @@ $(document).ready(function() {
   $(".question-popover").popover(popoverRegularOptions);
 
   // national cashback label prevent click on bill (category) card
-  $('.category-card .category-card__cashback').on('click', function(e) {
+  $('.category-card .category-card__label').on('click', function(e) {
     e.preventDefault();
   });
 
