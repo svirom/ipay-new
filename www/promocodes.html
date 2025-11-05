@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/category-icons.min.css">
+    <link rel="stylesheet" href="/css/lightslider.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/search-form.css">
+    <link rel="stylesheet" href="/css/sticky-footer.css">
+    <link rel="stylesheet" href="/css/promocodes.css">
+
+    <title>Promocodes</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"><span>Пошук</span></a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__link main-nav__p2p" role="button" id="header-dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перекази</span></a>
+                  <div class="dropdown-menu" aria-labelledby="header-dropdown-p2p">
+                    <a class="dropdown-item" href="#">Перекази з картки на картку</a>
+                    <a class="dropdown-item" href="#">Перекази з-за кордону в Україну</a>
+                    <a class="dropdown-item" href="#">Перекази за реквізитами</a>
+                  </div>
+                </li>
+                <li class="main-nav__item main-nav__item--mobile">
+                  <a href="#" class="main-nav__link"><span>Поповнення мобільного</span></a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безпека </span>
+                    <span>платників</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--notifications dropdown header-notifications">
+                  <a href="#" class="header-notifications__link" role="button" id="header-dropdown-notif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="header-dropdown-notif">
+                    <a href="#" class="header-notifications__card">
+                      <div class="header-notifications__card-icon">
+                        <img src="img/icons/ad-megaphone.svg" alt="Icon">
+                      </div>
+                      <div class="header-notifications__card-content">
+                        <p class="font-weight-bold mb-0">Нова послуга!</p>
+                        <p class="mb-1">Здійснюйте перекази з-за кордону на iPay.ua</p>
+                        <p class="red-color mb-0">Спробувати</p>
+                      </div>
+                    </a>
+                    <a href="#" class="header-notifications__card">
+                      <div class="header-notifications__card-icon">
+                        <img src="img/icons/ad-megaphone.svg" alt="Icon">
+                      </div>
+                      <div class="header-notifications__card-content">
+                        <p class="font-weight-bold mb-0">Нова послуга!</p>
+                        <p class="mb-1">Здійснюйте перекази з-за кордону на iPay.ua</p>
+                        <p class="red-color mb-0">Спробувати</p>
+                      </div>
+                    </a>
+                    <a href="#" class="header-notifications__card header-notifications__card--all">
+                      <span class="text-center small">Усі сповіщення</span>
+                    </a>
+                  </div>
+                  <!-- <a href="#" class="header-notifications__link header-notifications__link--empty" role="button" id="header-dropdown-notif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="header-dropdown-notif">
+                    <span class="header-notifications__empty">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><g clip-path="url(#A)"><path d="M17.576 35.461l7.852 1.525a4 4 0 0 1-1.673 2.602 4 4 0 0 1-3.029.63 4 4 0 0 1-2.572-1.718 4 4 0 0 1-.578-3.039zm20.658-1.09l-.381 1.96-31.378-6.095.381-1.96 2.003-.972c1.371-.664 2.664-2.092 2.873-3.169l2.097-10.785c.632-3.095 2.46-5.816 5.087-7.571s5.841-2.401 8.942-1.798 5.839 2.405 7.618 5.015 2.456 5.818 1.883 8.925l-2.095 10.787c-.209 1.077.455 2.885 1.478 4.014l1.492 1.65z" fill="#ffd578"/><circle cx="38.151" cy="31.491" r="7.353" fill="#e84f35"/><path d="M40.476 30.688v1.083c0 .582-.052 1.073-.156 1.473s-.254.722-.449.966a1.71 1.71 0 0 1-.707.532c-.273.107-.582.161-.927.161-.273 0-.525-.034-.756-.102s-.439-.177-.624-.327a1.98 1.98 0 0 1-.468-.595c-.13-.244-.229-.54-.297-.888s-.102-.754-.102-1.219v-1.083c0-.582.052-1.07.156-1.463s.258-.709.454-.946a1.65 1.65 0 0 1 .702-.517c.276-.104.585-.156.927-.156.276 0 .53.034.761.102a1.72 1.72 0 0 1 .624.317c.182.143.337.335.463.575a3.05 3.05 0 0 1 .297.873c.068.345.102.75.102 1.215zm-.907 1.229v-1.38c0-.319-.02-.598-.059-.839s-.089-.452-.161-.624-.163-.312-.273-.419-.233-.185-.376-.234a1.35 1.35 0 0 0-.473-.078 1.28 1.28 0 0 0-.571.122c-.166.078-.306.203-.419.375s-.195.398-.254.678-.088.619-.088 1.019v1.38c0 .319.018.6.054.844a2.79 2.79 0 0 0 .171.634 1.46 1.46 0 0 0 .273.434 1.02 1.02 0 0 0 .371.254c.143.052.301.078.473.078.221 0 .415-.042.58-.127s.304-.216.414-.395.198-.415.254-.697.083-.627.083-1.024z" fill="#fff"/></g><defs><clipPath id="A"><path fill="#fff" d="M0 0h48v48H0z"/></clipPath></defs></svg>
+                      <span class="heading-color ml-3">Нема сповіщень</span>
+                    </span>
+                  </div> -->
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang item-lang-ua" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">УКР</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item item-lang-ua active" href="#">УКР</a>
+                    <a class="dropdown-item" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Альберт</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-account" href="#">Мой кабинет</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-templates" href="#">Мои шаблоны</a>
+                    <a class="dropdown-item dropdown-cards" href="#">Мои карты</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a>
+                    <a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a>
+                    <a class="dropdown-item dropdown-profile" href="#">Мой профиль</a>
+                    <a class="dropdown-item dropdown-logout" href="#">Выйти</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"></a>
+                </li>
+                <li class="main-nav__item-account">
+                  <span class="main-nav__item-account--registered">Мой кабинет</span>
+                  <span>Альберт</span>
+                </li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <a href="#" class="btn btn-green main-nav__mobile-next">Каталог</a>
+                      <ul>
+                        <li><a class="dropdown-item dropdown-account" href="#">Мой кабинет</a></li>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-templates" href="#">Шаблоны платежей</a></li>
+                        <li><a class="dropdown-item dropdown-getpayment" href="#">Збір коштів на картку</a></li>
+                        <li><a class="dropdown-item dropdown-recurrent" href="#">Автоплатежі</a></li>
+                        <li><a class="dropdown-item dropdown-cards" href="#">Мои карты</a></li>
+                        <li><a class="dropdown-item dropdown-notifications dropdown-item--empty" href="#">Оповещения</a></li>
+                        <!-- <li><a class="dropdown-item dropdown-bonus" href="#">Мои бонусы</a></li> -->
+                        <!-- <li><a class="dropdown-item dropdown-ipayplus" href="#">iPay+</a></li> -->
+                        <li><a class="dropdown-item dropdown-profile" href="#">Мой профиль</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul>
+                      <!-- <div class="mobile-login text-center">
+                        <p class="heading-color">Увійдіть, щоб зберігати історію ваших платежів та зберігати рахунки</p>
+                        <a href="#" class="btn btn-green btn-block">Увійти або зареєструватись</a>
+                      </div> -->
+                      <p class="main-nav__mobile-title heading-color mt-4">Підтримка</p>
+                      <ul class="mobile-nav-support">
+                        <li>
+                          <a href="#" class="mobile-nav-support__item mobile-nav-support__item--viber">Техпідтримка у Viber</a>
+                        </li>
+                        <li>
+                          <a href="#" class="mobile-nav-support__item mobile-nav-support__item--telegram">Техпідтримка у Telegram</a>
+                        </li>
+                      </ul>
+                      <p class="main-nav__mobile-title heading-color mt-4">Корисні матеріали</p>
+                      <ul class="mobile-nav-list">
+                        <li>
+                          <a href="#">Питання та відповіді</a>
+                        </li>
+                        <li>
+                          <a href="#">Новини та Акцій</a>
+                        </li>
+                        <li>
+                          <a href="#">Знайти квитанцію</a>
+                        </li>
+                        <li>
+                          <a href="#">Платіжний чат-бот</a>
+                        </li>
+                        <li>
+                          <a href="#">Безпека платежів</a>
+                        </li>
+                      </ul>
+                      <p class="main-nav__mobile-title heading-color mt-4">Для бізнесу</p>
+                      <ul class="mobile-nav-list">
+                        <li>
+                          <a href="#">Про компанію</a>
+                        </li>
+                        <li>
+                          <a href="#">Підключення оплат</a>
+                        </li>
+                        <li>
+                          <a href="#">Контакти</a>
+                        </li>
+                      </ul>
+                      <div class="mobile-lang">
+                        <span>Мова:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">УКР</a></li>
+                          <li><a href="#">РУС</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                      <p class="main-nav__mobile-title heading-color mt-3">Ми в соцмережах</p>
+                      <ul class="mobile-nav-social mb-4">
+                        <li><a href="#"><img src="img/icons/icon-facebook-grey.svg" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-viber-grey.svg" alt="Viber"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-instagram-grey.svg" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-linkedin-grey.svg" alt="LinkedIn"></a></li>
+                      </ul>
+                      <ul>
+                        <li><a class="dropdown-item dropdown-logout" href="#">Выйти</a></li>
+                      </ul>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue catalogue--icons">
+                        <ul class="catalogue__list">
+                          <li class="catalogue__list-title">Грошові перекази</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-p2p"></i>
+                              </span>
+                              <span>Перекази з картки на картку</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-p2r"></i>
+                              </span>
+                              <span>Переказ за реквізитами</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-sbor"></i>
+                              </span>
+                              <span>Створити збір грошей</span>
+                            </a>
+                          </li>
+                          <li class="catalogue__list-title">Платежі</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <!-- <i class="category-icon-army"></i> -->
+                                <img src="img/icons/icon-army.svg">
+                              </span>
+                              <span>Підтримай армію</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-mobile"></i>
+                              </span>
+                              <span>Мобільний зв'язок</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item active">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-utility"></i>
+                              </span>
+                              <span>Комунальні послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-podatku"></i>
+                              </span>
+                              <span>Податки та платежі в бюджет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-kinders"></i>
+                              </span>
+                              <span>Дитячі садки</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-internet"></i>
+                              </span>
+                              <span>Інтернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-tv"></i>
+                              </span>
+                              <span>Телебачення</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-phone"></i>
+                              </span>
+                              <span>Телефонний зв'язок</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-security"></i>
+                              </span>
+                              <span>Охорона</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-transport"></i>
+                              </span>
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-fees"></i>
+                              </span>
+                              <span>Оплата штрафів</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-tourism"></i>
+                              </span>
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-insurance"></i>
+                              </span>
+                              <span>Страхування</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-refresh"></i>
+                              </span>
+                              <span>Погашення кредитів</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-online"></i>
+                              </span>
+                              <span>Кредити онлайн</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-by-cash"></i>
+                              </span>
+                              <span>Кредити готівкою</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-education"></i>
+                              </span>
+                              <span>Освіта</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-business"></i>
+                              </span>
+                              <span>Бізнес-послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-charity"></i>
+                              </span>
+                              <span>Благодійність</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__item--online-payment my-3">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-business"></i>
+                              </span>
+                              <span>Підключити онлайн оплати</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <div class="promocodes" style="background-color:#F7FBFF; background-image:url(/img/promocodes/promocodes-bkgr.png); background-position:top center; background-repeat:no-repeat; background-size:cover;">
+        <!-- breadcrumb widget -->
+        <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <ul class="breadcrumb">
+                  <li>
+                    <a class="breadcrumb__home" href="/">
+                      <span class="d-none">Головна</span>
+                    </a>
+                  </li>
+                  <li class="active" aria-current="page">
+                    <span>Каталог услуг</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> 
+        </nav><!-- breadcrumb widget -->
+
+        <!-- main content -->
+        <main class="container promocodes-container">
+  
+          <div class="d-lg-none mb-3">
+            <a href="#" class="btn btn-link btn-back">Главная</a> 
+          </div>
+  
+          
+          <h1>Знижки та Промокоди</h1>
+
+          <p class="heading-color">Промокоди та знижки від провідних магазинів та сервісів країни</p>
+  
+          <div class="promocodes-slider-wrapper my-4">
+            <ul id="promocodes-slider" class="promocodes-slider">
+              <li>
+                <div class="promocodes-slider-item">
+                  <div class="row">
+                    <div class="col">
+                      <div class="promocodes-slider-item__content">
+                        <p class="h1">Промокоди на товари для краси</p>
+                        <a href="#" class="btn btn-red">Дивитись пропозиції</a>
+                      </div>
+                    </div>
+                    <div class="col-5"></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="awards-article">
+                  <div class="awards-article__img">
+                    <img src="img/homepage/Mastercard-award-2019-logo-1.png" alt="Image">
+                  </div>
+                  <div class="awards-article__content">
+                    <h3>iPay.ua — лучший партнер Mastercard 2019</h3>
+                    <p>Сервис онлайн-платежей iPay.ua признан лучшим партнером международной платежной системы Mastercard среди провайдеров платежных услуг в Украине в 2019 году.</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="awards-article">
+                  <div class="awards-article__img">
+                    <img src="img/homepage/top-1x1.png" alt="Image">
+                  </div>
+                  <div class="awards-article__content">
+                    <h3>iPay.ua – лучший сервис онлайн платежей по мнению читателей издания PaySpace Magazine и экспертов рынка!</h3>
+                    <p>По результатам ежегодного конкурса среди игроков сферы электронной коммерции и FinTech Украины PaySpace Magazine Awards компания iPay.ua стала серебряным призёром в номинации «Лучший сервис онлайн платежей» в 2018 году.</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div> <!-- /.promocodes-slider-wrapper -->
+
+          <div class="promocodes-hot">
+            <div class="container">
+
+              <div class="row justify-content-between align-items-center mb-3">
+                <div class="col-sm-auto">
+                  <h2 class="promocodes-hot__title mb-0">Скоро закінчиться</h2>
+                </div>
+                <div class="col-sm-auto">
+                  <a href="#" class="promocodes-hot__all">Всі Промокоди</a>
+                </div>
+              </div>
+
+              <div class="row col-pad8">
+                <div class="col-md-4">
+                  <div class="promocodes-card">
+                    <div class="promocodes-card__img">
+                      <img src="" alt="ЛОГО">
+                    </div>
+                    <p class="promocodes-card__title mb-2">{{Назва активності}}</p>
+                    <p class="promocodes-card__date mb-2">Активно до 14 лист. 2025</p>
+                    <p class="promocodes-card__info mb-4">Промокод на знижку 20% знижка за промокодом {{Назва}} на {{Товар}}</p>
+                    <a href="#" class="btn btn-green btn-block" data-toggle="modal" data-target="#promocodes-card-modal">Перейти до пропозиції</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+             
+  
+            
+  
+           
+  
+           
+           
+           
+  
+            
+  
+           
+  
+           
+  
+           
+  
+          
+  
+        </main><!-- main content -->
+      </div><!-- /.promocodes-container -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2020 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <div class="sticky-footer dropdown d-sm-none">
+      <div class="container">
+        <div class="row sticky-footer__menu">
+          <div class="col-3">
+            <a href="#" class="sticky-footer__card" id="sticky-footer-catalog-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" stroke="#3b566e" stroke-width="2"><rect x="2.5" y="2" width="8" height="8" rx="1"/><rect x="14.5" y="2" width="8" height="8" rx="1"/><rect x="2.5" y="14" width="8" height="8" rx="1"/><rect x="14.5" y="14" width="8" height="8" rx="1"/></svg>
+              <p class="mt-1 mb-0 extra-small">Каталог</p>
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="#" class="sticky-footer__card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none"><g clip-path="url(#A)" stroke="#3b566e" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"><path d="M20.5 10.736v10c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2v-13c0-1.1.9-2 2-2h5l5 5z"/><g stroke-linecap="round"><path d="M15.5 3.736c0-1.1-.9-2-2-2h-7c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2m14-8h-4c-.55 0-1-.45-1-1v-4"/></g></g><defs><clipPath id="A"><path fill="#fff" transform="translate(.5)" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+              <p class="mt-1 mb-0 extra-small">Шаблони</p>
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="#" class="sticky-footer__card sticky-footer__card--notif" role="button" id="footer-dropdown-notif" data-display="static" data-position="fixed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" stroke="#3b566e" stroke-width="2"><path d="M12.5 3a.5.5 0 1 0 0-1 .5.5 0 1 0 0 1zm9 16.5h-18c.45 0 2.5-1.773 2.5-4.5S5.3 4.5 12.5 4.5 19 12.273 19 15s1.6 4.5 2.5 4.5z" stroke-linejoin="round"/><path d="M10.5 21c0 .5.667 1.5 2 1.5s2-1 2-1.5" stroke-linecap="round"/></svg>
+              <p class="mt-1 mb-0 extra-small">Сповіщення</p>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="footer-dropdown-notif">
+              <a href="#" class="sticky-footer__notif">
+                <div class="sticky-footer__notif-icon">
+                  <img src="img/icons/ad-megaphone.svg" alt="Icon">
+                </div>
+                <div class="sticky-footer__notif-content">
+                  <p class="font-weight-bold mb-0">Нова послуга!</p>
+                  <p class="mb-1">Здійснюйте перекази з-за кордону на iPay.ua</p>
+                  <p class="red-color mb-0">Спробувати</p>
+                </div>
+              </a>
+              <a href="#" class="sticky-footer__notif">
+                <div class="sticky-footer__notif-icon">
+                  <img src="img/icons/ad-megaphone.svg" alt="Icon">
+                </div>
+                <div class="sticky-footer__notif-content">
+                  <p class="font-weight-bold mb-0">Нова послуга!</p>
+                  <p class="mb-1">Здійснюйте перекази з-за кордону на iPay.ua</p>
+                  <p class="red-color mb-0">Спробувати</p>
+                </div>
+              </a>
+              <a href="#" class="sticky-footer__notif sticky-footer__notif--all">
+                <span class="text-center small">Усі сповіщення</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <a href="#" class="sticky-footer__card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none"><g clip-path="url(#A)" stroke="#3b566e" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"><path d="M21.405 20H3.595C2.443 20 1.5 18.988 1.5 17.75V11h7v1.125C8.5 13.363 9.705 14 10.857 14H14c1.152 0 2.5-.637 2.5-1.875V11h7v6.75c0 1.238-.943 2.25-2.095 2.25z"/><path d="M1.5 11.467l3.583-6.389C5.46 4.405 6.151 4 6.906 4h11.189c.754 0 1.446.405 1.823 1.077l3.583 6.389" stroke-linecap="round"/></g><defs><clipPath id="A"><path fill="#fff" transform="translate(.5)" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+              <p class="mt-1 mb-0 extra-small">Архів</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /.sticky-footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__cancel"></a>
+              </div>
+              <div class="form-search__list"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/search-form.js"></script>
+    <script src="/js/lightslider.min.js"></script>
+    <script src="/js/lightslider-promocodes.js"></script>
+  </body>
+</html>
