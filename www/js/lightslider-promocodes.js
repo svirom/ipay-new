@@ -24,6 +24,7 @@ $(document).ready(function() {
     // auto: true,
     auto: false,
     mode: 'fade',
+    adaptiveHeight: true,
     pauseOnHover: true,
     slideMove: 1,
     slideMargin: 30,
@@ -32,16 +33,16 @@ $(document).ready(function() {
     // controls: false,
 		// pager: false,
     pause: 4000,
-    responsive : [
-      {
-        breakpoint: 991,
-        settings: {
-          item: 1,
-          // slideMove: 1,
-          slideMargin: 30,
-        }
-      }
-    ],
+    // responsive : [
+    //   {
+    //     breakpoint: 991,
+    //     settings: {
+    //       item: 1,
+    //       // slideMove: 1,
+    //       slideMargin: 30,
+    //     }
+    //   }
+    // ],
 
     onSliderLoad: function (el) {
       heightMeasurement();

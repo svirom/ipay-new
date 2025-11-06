@@ -22,28 +22,143 @@
 }
 
 // slider
-.promocodes-slider-wrapper {
-  .lSSlideOuter {
-    .lSPager {
-      &.lSpg {
-        & > li {
-          padding-left: 4px;
-          padding-right: 4px;
+.promocodes-slider {
+  min-height: 362px;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
 
-          a {
-            width: 16px;
-            height: 16px;
-            border: 2px solid $middle-grey;
-            background-color: #fff;
-          }
+  &-wrapper {
+    position: relative;
 
-          &.active, &:hover {
+    .lSSlideOuter {
+      .lSPager {
+        &.lSpg {
+          position: absolute;
+          width: 300px;
+          left: 60px;
+          bottom: 54px;
+
+          & > li {
+            padding-left: 7px;
+            padding-right: 7px;
+
             a {
-              border-color: $btn-red;
-              background-color: $btn-red;
+              width: 8px;
+              height: 8px;
+              background-color: #D8E6ED;
+            }
+
+            &.active, &:hover {
+              a {
+                background-color: #E84F35;
+              }
+            }
+
+            &.active {
+              a {
+                transform: scale(2);
+              }
             }
           }
         }
+      }
+
+      .lSAction {
+        & > a {
+          bottom: 50px;
+          width: 30px;
+          height: 30px;
+          opacity: 1;
+        }
+
+        & > .lSPrev {
+          top: auto;
+          left: 60px;
+          background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.9641 7.70801L10.6721 15' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.6721 15L17.9641 22.292' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+        }
+
+        & > .lSNext {
+          top: auto;
+          right: auto;
+          left: 330px;
+          background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0359 22.292L19.3279 15' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19.3279 14.9999L12.0359 7.70793' stroke='%23DEE7F3' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+        }
+      }
+    }
+  }
+
+  &-item {
+    display: flex;
+    min-height: 362px;
+    
+    &__content {
+      flex-grow: 1;
+      padding: 62px 47px 102px 60px;
+
+      .h1 {
+        color: #172A3A;
+      }
+
+      .promocodes-slider-item__content-link {
+        max-width: 287px;;
+      }
+    }
+
+    &__img {
+      flex: 0 0 auto;
+      width: 32.75rem;
+      aspect-ratio: 524 / 362;
+      border-radius: 1.5rem;
+      background-color: #E84F35;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  @include until($lg) {
+    &-wrapper {
+      .lSSlideOuter {
+        .lSPager {
+          &.lSpg {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+          }
+        }
+
+        .lSAction {
+          & > a {
+            bottom: 26px;
+          }
+
+          & > .lSPrev {
+            left: calc(50% - 150px);
+          }
+
+          & > .lSNext {
+            left: auto;
+            right: calc(50% - 150px);
+          }
+        }
+      }
+    }
+    &-item {
+      flex-direction: column;
+
+      &__img {
+        order: -1;
+        width: 100%;
+      }
+
+      &__content {
+        padding: 1.5rem;
+        padding-bottom: 80px;
       }
     }
   }
