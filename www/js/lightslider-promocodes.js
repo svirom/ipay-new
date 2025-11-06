@@ -23,6 +23,7 @@ $(document).ready(function() {
     loop: true,
     // auto: true,
     auto: false,
+    mode: 'fade',
     pauseOnHover: true,
     slideMove: 1,
     slideMargin: 30,
