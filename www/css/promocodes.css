@@ -131,6 +131,10 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.75rem;
 }
+.promocodes-card__img a {
+  color: #172A3A;
+  text-decoration: none;
+}
 .promocodes-card__img img {
   max-width: 100%;
 }
@@ -236,6 +240,38 @@
   line-height: 1.2857142;
   color: #E84F35;
   background-image: url("data:image/svg+xml,%3Csvg width='22' height='24' viewBox='0 0 22 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.91895 16.5C3.91895 17.3864 4.09354 18.2642 4.43276 19.0831C4.77198 19.9021 5.26918 20.6462 5.89597 21.273C6.52277 21.8998 7.26688 22.397 8.08583 22.7362C8.90478 23.0754 9.78252 23.25 10.6689 23.25C11.5554 23.25 12.4331 23.0754 13.2521 22.7362C14.071 22.397 14.8151 21.8998 15.4419 21.273C16.0687 20.6462 16.5659 19.9021 16.9051 19.0831C17.2444 18.2642 17.4189 17.3864 17.4189 16.5C17.4189 14.7098 16.7078 12.9929 15.4419 11.727C14.176 10.4612 12.4592 9.75 10.6689 9.75C8.87873 9.75 7.16185 10.4612 5.89597 11.727C4.6301 12.9929 3.91895 14.7098 3.91895 16.5Z' stroke='%23E84F35' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.75 12.75V16.5L12.75 18.75' stroke='%23E84F35' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.379 15.764C18.4888 15.4043 19.4548 14.6997 20.1365 13.753C20.8181 12.8062 21.1798 11.6666 21.169 10.5C21.1344 8.52311 20.3266 6.63844 18.919 5.25C18.8764 5.59762 18.7641 5.93307 18.5887 6.2362C18.4133 6.53933 18.1784 6.8039 17.8982 7.01403C17.6181 7.22416 17.2983 7.37552 16.9582 7.45903C16.6181 7.54254 16.2646 7.55648 15.919 7.5C14.9624 6.69578 14.2971 5.59898 14.026 4.37899C13.7549 3.159 13.893 1.88368 14.419 0.75C9.73097 0.75 6.73097 3.516 6.16897 7.5C5.47746 7.57174 4.78435 7.37987 4.22817 6.96273C3.672 6.5456 3.29373 5.93394 3.16897 5.25C-0.595026 8.45 0.315974 14.293 3.95797 15.767' stroke='%23E84F35' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.promocodes-card-modal__promocode {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  padding-right: 1.875rem;
+  border-radius: 0.5rem;
+  background-color: #F0FFF7;
+  transition: background-color 0.4s ease-in-out;
+}
+.promocodes-card-modal__promocode span {
+  font-size: 1.5rem;
+  line-height: 1.166667;
+  font-weight: 700;
+  color: #172A3A;
+}
+.promocodes-card-modal__promocode a {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.25 2.25C7.00736 2.25 6 3.25736 6 4.5V6H4.5C3.25736 6 2.25 7.00736 2.25 8.25V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H15.75C16.9926 21.75 18 20.7426 18 19.5V18H19.5C20.7426 18 21.75 16.9926 21.75 15.75V4.5C21.75 3.25736 20.7426 2.25 19.5 2.25H8.25ZM16.5 18V19.5C16.5 19.9142 16.1642 20.25 15.75 20.25H4.5C4.08579 20.25 3.75 19.9142 3.75 19.5V8.25C3.75 7.83579 4.08579 7.5 4.5 7.5H6V15.75C6 16.9926 7.00736 18 8.25 18H16.5ZM7.5 4.5C7.5 4.08579 7.83579 3.75 8.25 3.75H19.5C19.9142 3.75 20.25 4.08579 20.25 4.5V15.75C20.25 16.1642 19.9142 16.5 19.5 16.5H8.25C7.83579 16.5 7.5 16.1642 7.5 15.75V4.5Z' fill='%230C6858'/%3E%3C/svg%3E") center no-repeat;
+}
+.promocodes-card-modal__promocode a:hover {
+  cursor: pointer;
+}
+.promocodes-card-modal__promocode.copied {
+  background-color: rgb(189, 255, 219.8);
 }
 
 @media screen and (max-width: 991px) {
