@@ -53,26 +53,29 @@ document.addEventListener('DOMContentLoaded', function() {
     heightMeasurement();
   })
 
-  document.querySelector('#promocodes-search-input').addEventListener('keyup', function() {
-    const searchValue = this.value.toLowerCase();
-    const cardsContainer = document.getElementById('promocodes-all');
-    const cards = cardsContainer.querySelectorAll('.promocodes-card');
+  if (document.querySelector('#promocodes-search-input')) {
+    document.querySelector('#promocodes-search-input').addEventListener('keyup', function() {
+      const searchValue = this.value.toLowerCase();
+      const cardsContainer = document.getElementById('promocodes-all');
+      const cards = cardsContainer.querySelectorAll('.promocodes-card');
 
-    cards.forEach(function(card) {
-      const cardValue = card.querySelector('[data-card-title]').textContent.trim();
+      cards.forEach(function(card) {
+        const cardValue = card.querySelector('[data-card-title]').textContent.trim();
 
-      card.parentElement.classList.remove('inactive');
+        card.parentElement.classList.remove('inactive');
 
-      if (!cardValue.toLowerCase().includes(searchValue)) {
-        card.parentElement.classList.add('inactive');
-      }
+        if (!cardValue.toLowerCase().includes(searchValue)) {
+          card.parentElement.classList.add('inactive');
+        }
+      })
     })
-  })
+  }
 
   const modalShowButtons = document.querySelectorAll('[data-target="#promocodes-card-modal"]');
   modalShowButtons.forEach(function(button) {
     button.addEventListener('click', function() {
       const activeCard = button.closest('.promocodes-card');
+      const cardTraderUrl = activeCard.querySelector('.promocodes-card__img a');
       const cardImg = activeCard.querySelector('.promocodes-card__img img');
       const cardTitle = activeCard.querySelector('.promocodes-card__title');
       const cardDate = activeCard.querySelector('.promocodes-card__date');
@@ -80,13 +83,16 @@ document.addEventListener('DOMContentLoaded', function() {
       const cardUrl = activeCard.dataset.cardUrl;
 
       const cardModal = document.getElementById('promocodes-card-modal');
+      let modalTraderUrl = cardModal.querySelector('.promocodes-card-modal__img a');
       let modalImg = cardModal.querySelector('.promocodes-card-modal__img img');
       let modalTitle = cardModal.querySelector('.promocodes-card-modal__title');
       let modalInfo = cardModal.querySelector('.promocodes-card-modal__info');
       let modalUrl = cardModal.querySelector('.promocodes-card-modal__url');
       let modalDate = cardModal.querySelector('.promocodes-card-modal__date');
 
+      modalTraderUrl.href = cardTraderUrl.href;
       modalImg.src = cardImg.src;
+      modalImg.alt = cardImg.alt;
       modalTitle.textContent = cardTitle.textContent.trim();
       modalInfo.textContent = cardInfo.textContent.trim();
       modalUrl.href = cardUrl;
@@ -116,13 +122,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $('#promocodes-card-modal').on('hidden.bs.modal', function() {
     const cardModal = document.getElementById('promocodes-card-modal');
+    let modalTraderUrl = cardModal.querySelector('.promocodes-card-modal__img a');
     let modalImg = cardModal.querySelector('.promocodes-card-modal__img img');
     let modalTitle = cardModal.querySelector('.promocodes-card-modal__title');
     let modalInfo = cardModal.querySelector('.promocodes-card-modal__info');
     let modalUrl = cardModal.querySelector('.promocodes-card-modal__url');
     let modalDate = cardModal.querySelector('.promocodes-card-modal__date');
 
+    modalTraderUrl.href = '';
     modalImg.src = '';
+    modalImg.alt = '';
     modalTitle.textContent = '';
     modalInfo.textContent = '';
     modalUrl.href = '';
@@ -135,23 +144,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
 
-  document.querySelector('.modal-body').addEventListener('click', function(e) {
-    e.preventDefault();
+  if (document.querySelector('#promocodes-card-modal')) {
+    document.querySelector('#promocodes-card-modal .modal-body').addEventListener('click', function(e) {
+      if (e.target.classList.contains('promocodes-card-modal__promocode--copy')) {
+        console.log('good');
+        const promocode = document.querySelector('.promocodes-card-modal__promocode > span').textContent; 
+        if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+          document.querySelector('.promocodes-card-modal__promocode').classList.add('copied');
 
-    if (e.target.classList.contains('promocodes-card-modal__promocode--copy')) {
-      console.log('good');
-      const promocode = document.querySelector('.promocodes-card-modal__promocode > span').textContent; 
-      if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
-        document.querySelector('.promocodes-card-modal__promocode').classList.add('copied');
+          setTimeout(() => {
+            document.querySelector('.promocodes-card-modal__promocode').classList.remove('copied');
+          }, 1000);
 
-        setTimeout(() => {
-          document.querySelector('.promocodes-card-modal__promocode').classList.remove('copied');
-        }, 1000);
-
-        return navigator.clipboard.writeText(promocode);
+          return navigator.clipboard.writeText(promocode);
+        }
+        return Promise.reject('The Clipboard API is not available.');
       }
-      return Promise.reject('The Clipboard API is not available.');
-    }
-  })
+    })
+  }
 
 })

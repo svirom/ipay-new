@@ -12,6 +12,11 @@
 .promocodes {
   display: flex;
   flex-direction: column;
+  background-color: #F7FBFF;
+  background-position:top center; 
+  background-repeat:no-repeat; 
+  background-size:cover; 
+  background-attachment: fixed;
 
   h1, .h1 {
     font-size: 2.875rem;
@@ -202,6 +207,11 @@
     .promocodes-card__info {
       line-height: 1.1875;
       color: #172A3A;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
@@ -261,6 +271,11 @@
     height: 4.5rem;
     font-family: 'Roboto', sans-serif;
     font-size: 1.75rem;
+
+    a {
+      color: #172A3A;
+      text-decoration: none;
+    }
   }
 
   .promocodes-card-modal__title {
