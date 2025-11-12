@@ -361,6 +361,12 @@
       align-items: center;
   width: 12.5rem;
   padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+}
+.trader-card__img a {
+  color: #172A3A;
+  text-decoration: none;
 }
 .trader-card__img img {
   max-width: 100%;
@@ -372,6 +378,12 @@
 }
 .trader-card__content {
   position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start;
   -ms-flex-positive: 1;
       flex-grow: 1;
   padding: 1rem 1rem 1rem 2rem;
@@ -387,4 +399,33 @@
   background-position: top left;
   background-repeat: repeat-y;
   background-size: 1px 12px;
+}
+.trader-card__content .trader-card__title {
+  font-size: 1.375rem;
+  line-height: 1.181819;
+  font-weight: 700;
+  color: #172A3A;
+}
+.trader-card__content .trader-card__date {
+  padding-left: 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.1428571;
+  color: #7C9CAC;
+}
+.trader-card__content .trader-card__date--hot {
+  padding: 0.1875rem 0 0.1875rem 1.625rem;
+  line-height: 1.2857142;
+  color: #E84F35;
+}
+.trader-card__content .trader-card__info {
+  line-height: 1.1875;
+  color: #172A3A;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trader-card__content .trader-card__btn {
+  margin-top: auto;
 }/*# sourceMappingURL=promocodes.css.map */
