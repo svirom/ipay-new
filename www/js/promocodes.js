@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#promocodes-search-input').addEventListener('keyup', function() {
       const searchValue = this.value.toLowerCase();
       const cardsContainer = document.getElementById('promocodes-all');
-      const cards = cardsContainer.querySelectorAll('.promocodes-card');
+      const cards = cardsContainer.querySelectorAll('[data-card]');
 
       cards.forEach(function(card) {
         const cardValue = card.querySelector('[data-card-title]').textContent.trim();
@@ -74,29 +74,35 @@ document.addEventListener('DOMContentLoaded', function() {
   const modalShowButtons = document.querySelectorAll('[data-target="#promocodes-card-modal"]');
   modalShowButtons.forEach(function(button) {
     button.addEventListener('click', function() {
-      const activeCard = button.closest('.promocodes-card');
-      const cardTraderUrl = activeCard.querySelector('.promocodes-card__logo a');
-      const cardImg = activeCard.querySelector('.promocodes-card__logo img');
-      const cardTitle = activeCard.querySelector('.promocodes-card__title');
-      const cardDate = activeCard.querySelector('.promocodes-card__date');
-      const cardInfo = activeCard.querySelector('.promocodes-card__info');
+      const activeCard = button.closest('[data-card]');
+      const cardTraderUrl = activeCard.querySelector('[data-card-logo] a');
+      const cardImg = activeCard.querySelector('[data-card-logo] img');
+      const cardTitle = activeCard.querySelector('[data-card-title]');
+      const cardDate = activeCard.querySelector('[data-card-date]');
+      const cardInfo = activeCard.querySelector('[data-card-info]');
       const cardUrl = activeCard.dataset.cardUrl;
 
       const cardModal = document.getElementById('promocodes-card-modal');
-      let modalTraderUrl = cardModal.querySelector('.promocodes-card-modal__logo a');
-      let modalImg = cardModal.querySelector('.promocodes-card-modal__logo img');
-      let modalTitle = cardModal.querySelector('.promocodes-card-modal__title');
-      let modalInfo = cardModal.querySelector('.promocodes-card-modal__info');
-      let modalUrl = cardModal.querySelector('.promocodes-card-modal__url');
-      let modalDate = cardModal.querySelector('.promocodes-card-modal__date');
+      let modalTraderUrl = cardModal.querySelector('[data-card-modal-logo] a');
+      let modalImg = cardModal.querySelector('[data-card-modal-logo] img');
+      let modalTitle = cardModal.querySelector('[data-card-modal-title]');
+      let modalInfo = cardModal.querySelector('[data-card-modal-info]');
+      let modalUrl = cardModal.querySelector('[data-card-modal-url]');
+      let modalDate = cardModal.querySelector('[data-card-modal-date]');
 
-      modalTraderUrl.href = cardTraderUrl.href;
-      modalImg.src = cardImg.src;
-      modalImg.alt = cardImg.alt;
+      if (cardTraderUrl) {
+        modalTraderUrl.href = cardTraderUrl.href;
+        modalImg.src = cardImg.src;
+        modalImg.alt = cardImg.alt;
+        cardModal.querySelector('[data-card-modal-logo]').classList.remove('promocodes-empty-logo');
+      } else {
+        cardModal.querySelector('[data-card-modal-logo]').classList.add('promocodes-empty-logo');
+      }
+
       modalTitle.textContent = cardTitle.textContent.trim();
       modalInfo.textContent = cardInfo.textContent.trim();
       modalUrl.href = cardUrl;
-      modalDate.textContent = cardDate.textContent.trim();
+      modalDate.textContent = cardDate.textContent.trim(); 
 
       cardDate.classList.contains('promocodes-card__date--hot') ? modalDate.classList.add('promocodes-card-modal__date--hot', 'promocodes-date--hot') : modalDate.classList.remove('promocodes-card-modal__date--hot', 'promocodes-date--hot');
 
@@ -122,12 +128,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $('#promocodes-card-modal').on('hidden.bs.modal', function() {
     const cardModal = document.getElementById('promocodes-card-modal');
-    let modalTraderUrl = cardModal.querySelector('.promocodes-card-modal__logo a');
-    let modalImg = cardModal.querySelector('.promocodes-card-modal__logo img');
-    let modalTitle = cardModal.querySelector('.promocodes-card-modal__title');
-    let modalInfo = cardModal.querySelector('.promocodes-card-modal__info');
-    let modalUrl = cardModal.querySelector('.promocodes-card-modal__url');
-    let modalDate = cardModal.querySelector('.promocodes-card-modal__date');
+    let modalTraderUrl = cardModal.querySelector('[data-card-modal-logo] a');
+    let modalImg = cardModal.querySelector('[data-card-modal-logo] img');
+    let modalTitle = cardModal.querySelector('[data-card-modal-title]');
+    let modalInfo = cardModal.querySelector('[data-card-modal-info]');
+    let modalUrl = cardModal.querySelector('[data-card-modal-url]');
+    let modalDate = cardModal.querySelector('[data-card-modal-date]');
 
     modalTraderUrl.href = '';
     modalImg.src = '';
