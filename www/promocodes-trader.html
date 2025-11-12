@@ -440,12 +440,12 @@
 
           <p class="heading-color">Каталог актуальних пропозицій на {{поточний місяць}} {{рік}}</p>
 
-          <div class="row mt-4">
+          <div class="row mt-4 mb-4">
             <div class="col-lg-8">
               <div class="trader-main">
                 <h2 class="mb-3">Пропозиції {{Назва Торговця}}</h2>
-                <div class="trader-card">
-                  <div class="trader-card__img trader-card__img--current"></div>
+                <div class="trader-card trader-card--current mt-3">
+                  <div class="trader-card__logo"></div>
                   <div class="trader-card__content">
                     <p class="trader-card__title mb-2">{{Назва активності}}</p>
                     <p class="trader-card__date promocodes-date mb-2">Активно до 14 лист. 2025</p>
@@ -453,13 +453,172 @@
                     <a href="#" class="btn btn-green trader-card__btn" data-toggle="modal" data-target="#promocodes-card-modal">Перейти до пропозиції</a>
                   </div>
                 </div>
-              </div>
+                <div class="trader-card trader-card--current mt-3">
+                  <div class="trader-card__logo"></div>
+                  <div class="trader-card__content">
+                    <p class="trader-card__title mb-2">{{Назва активності}}</p>
+                    <p class="trader-card__date promocodes-date mb-2">Активно до 14 лист. 2025</p>
+                    <p class="trader-card__info mb-4">Промокод на знижку<br>20% знижка за промокодом {{Назва}} на {{Товар}} </p>
+                    <a href="#" class="btn btn-green trader-card__btn" data-toggle="modal" data-target="#promocodes-card-modal">Перейти до пропозиції</a>
+                  </div>
+                </div>
+                <div class="trader-card trader-card--current mt-3">
+                  <div class="trader-card__logo"></div>
+                  <div class="trader-card__content">
+                    <p class="trader-card__title mb-2">{{Назва активності}}</p>
+                    <p class="trader-card__date promocodes-date mb-2">Активно до 14 лист. 2025</p>
+                    <p class="trader-card__info mb-4">Промокод на знижку<br>20% знижка за промокодом {{Назва}} на {{Товар}} </p>
+                    <a href="#" class="btn btn-green trader-card__btn" data-toggle="modal" data-target="#promocodes-card-modal">Перейти до пропозиції</a>
+                  </div>
+                </div>
+              </div> <!-- /.trader-main -->
+
+              <div class="trader-shops">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-sm-auto">
+                    <h2 class="mb-0">Пропозиції інших магазинів</h2>
+                  </div>
+                  <div class="col-sm-auto mt-2 mt-sm-0">
+                    <a href="#" class="promocodes-link-all">Всі Промокоди</a>
+                  </div>
+                </div>
+
+                <div class="trader-card mt-3">
+                  <div class="trader-card__logo">
+                    <img src="" alt="ЛОГО">
+                  </div>
+                  <div class="trader-card__content">
+                    <p class="trader-card__title mb-2">{{Назва активності}}</p>
+                    <p class="trader-card__date promocodes-date mb-2">Активно до 14 лист. 2025</p>
+                    <p class="trader-card__info mb-4">Промокод на знижку<br>20% знижка за промокодом {{Назва}} на {{Товар}} </p>
+                    <a href="#" class="btn btn-green trader-card__btn" data-toggle="modal" data-target="#promocodes-card-modal">Перейти до пропозиції</a>
+                  </div>
+                </div>
+                 
+                <div class="trader-card mt-3">
+                  <div class="trader-card__logo">
+                    <img src="" alt="ЛОГО">
+                  </div>
+                  <div class="trader-card__content">
+                    <p class="trader-card__title mb-2">{{Назва активності}}</p>
+                    <p class="trader-card__date promocodes-date mb-2">Активно до 14 лист. 2025</p>
+                    <p class="trader-card__info mb-4">Промокод на знижку<br>20% знижка за промокодом {{Назва}} на {{Товар}} </p>
+                    <a href="#" class="btn btn-green trader-card__btn" data-toggle="modal" data-target="#promocodes-card-modal">Перейти до пропозиції</a>
+                  </div>
+                </div>
+                  
+                <div class="trader-card mt-3">
+                  <div class="trader-card__logo">
+                    <img src="" alt="ЛОГО">
+                  </div>
+                  <div class="trader-card__content">
+                    <p class="trader-card__title mb-2">{{Назва активності}}</p>
+                    <p class="trader-card__date promocodes-date mb-2">Активно до 14 лист. 2025</p>
+                    <p class="trader-card__info mb-4">Промокод на знижку<br>20% знижка за промокодом {{Назва}} на {{Товар}} </p>
+                    <a href="#" class="btn btn-green trader-card__btn" data-toggle="modal" data-target="#promocodes-card-modal">Перейти до пропозиції</a>
+                  </div>
+                </div>
+              </div> <!-- /.trader-shops -->
             </div>
 
-            <div class="col-lg-4">
-              <div class="trader-aside"></div>
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <div class="trader-aside">
+                <div class="shops-card shops-card--main">
+                  <div class="shops-card__logo mb-3">
+                    <img src="#" alt="ЛОГО">
+                  </div>
+                  <p class="shops-card__name mb-0">{{Назва торговця}}</p>
+                </div> <!-- /.shops-card .shops-card--main -->
+
+                <div class="shops-popular mt-4">
+                  <h2>Популярні магазини</h2>
+                  <div class="row col-pad8">
+                    <div class="col-sm-6 col-lg-12 col-xl-6 mt-3">
+                      <div class="shops-card">
+                        <div class="shops-card__logo mb-3">
+                          <a href="#">
+                            <img src="#" alt="ЛОГО">
+                          </a>
+                        </div>
+                        <p class="shops-card__name mb-2">{{Назва Торговця}}</p>
+                        <p class="shops-card__offers mb-0">Пропозицій: 10</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-12 col-xl-6 mt-3">
+                      <div class="shops-card">
+                        <div class="shops-card__logo mb-3">
+                          <a href="#">
+                            <img src="#" alt="ЛОГО">
+                          </a>
+                        </div>
+                        <p class="shops-card__name mb-2">{{Назва Торговця}}</p>
+                        <p class="shops-card__offers mb-0">Пропозицій: 10</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-12 col-xl-6 mt-3">
+                      <div class="shops-card">
+                        <div class="shops-card__logo mb-3">
+                          <a href="#">
+                            <img src="#" alt="ЛОГО">
+                          </a>
+                        </div>
+                        <p class="shops-card__name mb-2">{{Назва Торговця}}</p>
+                        <p class="shops-card__offers mb-0">Пропозицій: 10</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-12 col-xl-6 mt-3">
+                      <div class="shops-card">
+                        <div class="shops-card__logo mb-3">
+                          <a href="#">
+                            <img src="#" alt="ЛОГО">
+                          </a>
+                        </div>
+                        <p class="shops-card__name mb-2">{{Назва Торговця}}</p>
+                        <p class="shops-card__offers mb-0">Пропозицій: 10</p>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- /.shops-popular -->
+
+              </div> <!-- /.trader-aside -->
             </div>
           </div>
+
+          <div class="trader-info">
+            <h2>Заголовок</h2>
+          </div> <!-- /.trader-info -->
+
+          <div class="modal fade promocodes-card-modal" id="promocodes-card-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+      
+                <div class="modal-header">                    
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.96289 1.125L16.1712 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M16.1712 1.125L1.96289 14.875" stroke="#172A3A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+      
+                <div class="modal-body">
+                  <div class="promocodes-card-modal__logo mb-3">
+                    <a href="#">
+                      <img src="" alt="ЛОГО">
+                    </a>
+                  </div>
+
+                  <p class="promocodes-card-modal__title mb-2"></p>
+                  <p class="promocodes-card-modal__info"></p>
+                  <a href="#" class="btn btn-green btn-block promocodes-card-modal__url">Перейти на сайт</a>
+                  <div class="text-center mt-3">
+                    <p class="promocodes-card-modal__date promocodes-date mb-0"></p>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+          </div> <!-- /#promocodes-card-modal -->
 
         </main> <!-- /.promocodes-container -->
       </div><!-- /.promocodes .trader -->

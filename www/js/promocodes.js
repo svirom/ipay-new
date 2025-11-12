@@ -75,16 +75,16 @@ document.addEventListener('DOMContentLoaded', function() {
   modalShowButtons.forEach(function(button) {
     button.addEventListener('click', function() {
       const activeCard = button.closest('.promocodes-card');
-      const cardTraderUrl = activeCard.querySelector('.promocodes-card__img a');
-      const cardImg = activeCard.querySelector('.promocodes-card__img img');
+      const cardTraderUrl = activeCard.querySelector('.promocodes-card__logo a');
+      const cardImg = activeCard.querySelector('.promocodes-card__logo img');
       const cardTitle = activeCard.querySelector('.promocodes-card__title');
       const cardDate = activeCard.querySelector('.promocodes-card__date');
       const cardInfo = activeCard.querySelector('.promocodes-card__info');
       const cardUrl = activeCard.dataset.cardUrl;
 
       const cardModal = document.getElementById('promocodes-card-modal');
-      let modalTraderUrl = cardModal.querySelector('.promocodes-card-modal__img a');
-      let modalImg = cardModal.querySelector('.promocodes-card-modal__img img');
+      let modalTraderUrl = cardModal.querySelector('.promocodes-card-modal__logo a');
+      let modalImg = cardModal.querySelector('.promocodes-card-modal__logo img');
       let modalTitle = cardModal.querySelector('.promocodes-card-modal__title');
       let modalInfo = cardModal.querySelector('.promocodes-card-modal__info');
       let modalUrl = cardModal.querySelector('.promocodes-card-modal__url');
@@ -122,8 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $('#promocodes-card-modal').on('hidden.bs.modal', function() {
     const cardModal = document.getElementById('promocodes-card-modal');
-    let modalTraderUrl = cardModal.querySelector('.promocodes-card-modal__img a');
-    let modalImg = cardModal.querySelector('.promocodes-card-modal__img img');
+    let modalTraderUrl = cardModal.querySelector('.promocodes-card-modal__logo a');
+    let modalImg = cardModal.querySelector('.promocodes-card-modal__logo img');
     let modalTitle = cardModal.querySelector('.promocodes-card-modal__title');
     let modalInfo = cardModal.querySelector('.promocodes-card-modal__info');
     let modalUrl = cardModal.querySelector('.promocodes-card-modal__url');

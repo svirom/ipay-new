@@ -16,6 +16,14 @@
 .promocodes .inactive {
   display: none;
 }
+.promocodes .promocodes-link-all {
+  display: inline-block;
+  padding-right: 2rem;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1663 6.1665L15.9999 12.0001' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.9998 12L10.1661 17.8336' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center no-repeat;
+}
+.promocodes .promocodes-link-all:hover {
+  text-decoration: none;
+}
 
 .promocodes-container {
   padding-top: 2.75rem;
@@ -116,14 +124,6 @@
   padding-left: 2.3125rem;
   background: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.05645 9.22788C7.92731 10.6054 7.83668 13.0432 8.65004 14.0809C8.65004 14.0809 8.26715 11.4029 11.6996 8.04296C13.0816 6.69038 13.4011 4.8507 12.9185 3.47093C12.6443 2.68929 12.1436 2.04359 11.7086 1.59273C11.4549 1.32765 11.6497 0.890383 12.019 0.906242C14.2529 1.00593 17.8734 1.62671 19.4118 5.48734C20.0869 7.18202 20.1368 8.93335 19.815 10.7141C19.6111 11.8515 18.8861 14.3799 20.54 14.6903C21.7204 14.9123 22.2914 13.9744 22.5474 13.2992C22.6539 13.0183 23.0232 12.948 23.2225 13.1723C25.2163 15.4402 25.3862 18.1114 24.9739 20.411C24.1764 24.8562 19.6746 28.0915 15.2022 28.0915C9.6152 28.0915 5.16778 24.8947 4.01457 19.1083C3.55012 16.7724 3.78575 12.1505 7.38809 8.88804C7.65543 8.64335 8.0927 8.86085 8.05645 9.22788Z' fill='url(%23paint0_radial_6_7748)'/%3E%3Cpath d='M17.2436 17.5405C15.1841 14.8897 16.1062 11.8651 16.6115 10.6598C16.6794 10.5012 16.4982 10.3516 16.3555 10.4491C15.4696 11.0517 13.6548 12.47 12.8098 14.466C11.6656 17.1644 11.7472 18.4852 12.4246 20.0984C12.8324 21.0703 12.3589 21.2765 12.121 21.3127C11.8899 21.349 11.6769 21.1949 11.507 21.0341C11.0183 20.5647 10.6699 19.9684 10.5011 19.3122C10.4648 19.1717 10.2813 19.1332 10.1975 19.2488C9.56311 20.1256 9.2346 21.5325 9.21874 22.5271C9.1689 25.6016 11.7087 28.0938 14.7808 28.0938C18.6528 28.0938 21.4735 23.8117 19.2487 20.232C18.603 19.1898 17.9958 18.5079 17.2436 17.5405Z' fill='url(%23paint1_radial_6_7748)'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_6_7748' cx='0' cy='0' r='1' gradientTransform='matrix(-15.9924 -0.0694069 -0.114026 26.2403 14.0956 28.1619)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.314' stop-color='%23FF9800'/%3E%3Cstop offset='0.662' stop-color='%23FF6D00'/%3E%3Cstop offset='0.972' stop-color='%23F44336'/%3E%3C/radialGradient%3E%3CradialGradient id='paint1_radial_6_7748' cx='0' cy='0' r='1' gradientTransform='matrix(-0.169012 16.7322 12.5923 0.127178 14.9938 12.2476)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.214' stop-color='%23FFF176'/%3E%3Cstop offset='0.328' stop-color='%23FFF27D'/%3E%3Cstop offset='0.487' stop-color='%23FFF48F'/%3E%3Cstop offset='0.672' stop-color='%23FFF7AD'/%3E%3Cstop offset='0.793' stop-color='%23FFF9C4'/%3E%3Cstop offset='0.822' stop-color='%23FFF8BD' stop-opacity='0.804'/%3E%3Cstop offset='0.863' stop-color='%23FFF6AB' stop-opacity='0.529'/%3E%3Cstop offset='0.91' stop-color='%23FFF38D' stop-opacity='0.209'/%3E%3Cstop offset='0.941' stop-color='%23FFF176' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E%0A") left center no-repeat;
 }
-.promocodes-hot__all {
-  display: inline-block;
-  padding-right: 2rem;
-  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1663 6.1665L15.9999 12.0001' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.9998 12L10.1661 17.8336' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center no-repeat;
-}
-.promocodes-hot__all:hover {
-  text-decoration: none;
-}
 
 .promocodes-card {
   display: -ms-flexbox;
@@ -136,7 +136,7 @@
   border-radius: 1rem;
   background-color: #ffffff;
 }
-.promocodes-card__img {
+.promocodes-card__logo {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -145,11 +145,11 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.75rem;
 }
-.promocodes-card__img a {
+.promocodes-card__logo a {
   color: #172A3A;
   text-decoration: none;
 }
-.promocodes-card__img img {
+.promocodes-card__logo img {
   max-width: 100%;
 }
 .promocodes-card__content {
@@ -181,6 +181,9 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.promocodes-card > .btn {
+  padding: 0.375rem 1rem;
 }
 
 .promocodes-all {
@@ -220,7 +223,7 @@
 .promocodes-card-modal .modal-body {
   padding: 0 1.5rem 1.5rem;
 }
-.promocodes-card-modal__img {
+.promocodes-card-modal__logo {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -231,7 +234,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.75rem;
 }
-.promocodes-card-modal__img a {
+.promocodes-card-modal__logo a {
   color: #172A3A;
   text-decoration: none;
 }
@@ -352,7 +355,7 @@
   border-radius: 1rem;
   background-color: #ffffff;
 }
-.trader-card__img {
+.trader-card__logo {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   display: -ms-flexbox;
@@ -364,14 +367,14 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.75rem;
 }
-.trader-card__img a {
+.trader-card__logo a {
   color: #172A3A;
   text-decoration: none;
 }
-.trader-card__img img {
+.trader-card__logo img {
   max-width: 100%;
 }
-.trader-card__img--current {
+.trader-card--current .trader-card__logo {
   -ms-flex-pack: center;
       justify-content: center;
   background: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M45.28 6.148C31.808 4.232 24.064 3.884 10.664 6.156C8.04799 6.596 5.64799 7.628 3.87199 9.316C2.94821 10.1911 2.21601 11.2483 1.72167 12.4208C1.22732 13.5933 0.981585 14.8557 0.999985 16.128V20.78C0.999985 21.58 1.47599 22.3 2.20799 22.616C3.28439 23.0799 4.20134 23.849 4.84558 24.8282C5.48982 25.8074 5.83314 26.9539 5.83314 28.126C5.83314 29.2981 5.48982 30.4446 4.84558 31.4238C4.20134 32.403 3.28439 33.1721 2.20799 33.636C1.84873 33.7909 1.54281 34.0478 1.32809 34.3749C1.11338 34.7019 0.999301 35.0848 0.999985 35.476V40.128C0.999985 45.82 5.34799 49.408 10.74 50.108C24.212 51.868 31.812 51.852 45.26 50.108C48.004 49.756 50.44 48.712 52.212 46.976C54.008 45.216 55 42.848 55 40.128V35.472C54.9999 35.0814 54.8854 34.6995 54.6708 34.3732C54.4561 34.0469 54.1506 33.7907 53.792 33.636C52.7156 33.1721 51.7986 32.403 51.1544 31.4238C50.5102 30.4446 50.1668 29.2981 50.1668 28.126C50.1668 26.9539 50.5102 25.8074 51.1544 24.8282C51.7986 23.849 52.7156 23.0799 53.792 22.616C54.1506 22.4613 54.4561 22.2051 54.6708 21.8788C54.8854 21.5525 54.9999 21.1706 55 20.78V16.128C55 10.384 50.312 6.86 45.28 6.148Z' fill='%23FFDBD4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.748 24.044C21.273 24.0608 21.7961 23.9718 22.2861 23.7825C22.7761 23.5932 23.2231 23.3072 23.6004 22.9418C23.9778 22.5763 24.2778 22.1387 24.4827 21.655C24.6876 21.1713 24.7932 20.6513 24.7932 20.126C24.7932 19.6007 24.6876 19.0807 24.4827 18.597C24.2778 18.1133 23.9778 17.6757 23.6004 17.3102C23.2231 16.9447 22.7761 16.6588 22.2861 16.4695C21.7961 16.2801 21.273 16.1912 20.748 16.208C19.7083 16.208 18.7113 16.621 17.9761 17.3561C17.241 18.0913 16.828 19.0883 16.828 20.128C16.828 21.1676 17.241 22.1647 17.9761 22.8999C18.7113 23.635 19.7083 24.044 20.748 24.044ZM35.252 40.124C35.7811 40.1479 36.3096 40.0644 36.8056 39.8783C37.3015 39.6923 37.7547 39.4077 38.1376 39.0418C38.5205 38.6758 38.8252 38.236 39.0335 37.7489C39.2417 37.2619 39.349 36.7377 39.349 36.208C39.349 35.6783 39.2417 35.1541 39.0335 34.6671C38.8252 34.18 38.5205 33.7402 38.1376 33.3742C37.7547 33.0082 37.3015 32.7237 36.8056 32.5376C36.3096 32.3516 35.7811 32.2681 35.252 32.292C34.2345 32.3245 33.2696 32.7515 32.5614 33.4828C31.8532 34.214 31.4572 35.192 31.4572 36.21C31.4572 37.228 31.8532 38.206 32.5614 38.9372C33.2696 39.6684 34.2345 40.0915 35.252 40.124ZM38.292 20.524C38.7089 20.0079 38.9037 19.3473 38.8336 18.6875C38.7634 18.0278 38.4341 17.4229 37.918 17.006C37.4019 16.5891 36.7413 16.3943 36.0815 16.4644C35.4218 16.5345 34.8169 16.8639 34.4 17.38C28.32 24.92 24.392 28.8 16.408 35.372C15.9135 35.7985 15.6055 36.4015 15.5498 37.0521C15.4942 37.7028 15.6953 38.3494 16.1102 38.8536C16.5251 39.3579 17.1208 39.6798 17.77 39.7505C18.4192 39.8212 19.0702 39.6351 19.584 39.232C27.8 32.472 31.972 28.356 38.292 20.524Z' fill='%23FF4141'/%3E%3C/svg%3E%0A") center no-repeat;
@@ -386,7 +389,7 @@
       align-items: flex-start;
   -ms-flex-positive: 1;
       flex-grow: 1;
-  padding: 1rem 1rem 1rem 2rem;
+  padding: 1rem 1.5rem 1rem 2rem;
 }
 .trader-card__content::before {
   position: absolute;
@@ -428,4 +431,94 @@
 }
 .trader-card__content .trader-card__btn {
   margin-top: auto;
+  padding: 0.375rem 1.3125rem;
+}
+
+@media screen and (max-width: 767px) {
+  .trader-main h2, .trader-main .h2 {
+    font-size: 1.25rem;
+  }
+  .trader-card:not(.trader-card--current) {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    padding: 1.5rem;
+  }
+  .trader-card:not(.trader-card--current) .trader-card__logo {
+    width: 100%;
+    height: 4.5rem;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .trader-card:not(.trader-card--current) .trader-card__content {
+    padding: 0;
+  }
+  .trader-card:not(.trader-card--current) .trader-card__content::before {
+    display: none;
+  }
+  .trader-card--current {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .trader-card--current .trader-card__logo {
+    width: 4.75rem;
+    background-size: 2.75rem;
+  }
+  .trader-card--current .trader-card__content {
+    padding: 0.5rem 1rem;
+  }
+  .trader-card--current .trader-card__content .trader-card__title {
+    font-size: 1.25rem;
+  }
+  .trader-card .trader-card__btn {
+    width: 100%;
+  }
+}
+.trader-shops {
+  margin-top: 2.5rem;
+}
+
+.shops-card {
+  padding: 1.125rem 1.5rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+.shops-card__logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 4.375rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+}
+.shops-card__logo a {
+  color: #172A3A;
+  text-decoration: none;
+}
+.shops-card__logo img {
+  max-width: 100%;
+}
+.shops-card .shops-card__name {
+  font-size: 1.125rem;
+  line-height: 1.166667;
+  color: #172A3A;
+}
+.shops-card .shops-card__offers {
+  line-height: 1.1875;
+  color: #7C9CAC;
+}
+.shops-card--main {
+  padding: 1.5rem;
+}
+.shops-card--main .shops-card__logo {
+  height: 4.5rem;
+}
+.shops-card--main .shops-card__name {
+  font-size: 1.375rem;
+  line-height: 1.181819;
+  font-weight: 700;
+}
+
+.trader-info {
+  margin-top: 4.5rem;
 }/*# sourceMappingURL=promocodes.css.map */
