@@ -47,7 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
     },
   };
 
-  $('.promocodes-slider').lightSlider(sliderOptions);
+  if ($('.promocodes-slider').length > 0) {
+    $('.promocodes-slider').lightSlider(sliderOptions);
+  }
 
   $(document).resize(function() {
     heightMeasurement();
