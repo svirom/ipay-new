@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
       modalUrl.href = cardUrl;
       modalDate.textContent = cardDate.textContent.trim(); 
 
-      cardDate.classList.contains('promocodes-card__date--hot') ? modalDate.classList.add('promocodes-card-modal__date--hot', 'promocodes-date--hot') : modalDate.classList.remove('promocodes-card-modal__date--hot', 'promocodes-date--hot');
+      cardDate.classList.contains('promocodes-date--hot') ? modalDate.classList.add('promocodes-card-modal__date--hot', 'promocodes-date--hot') : modalDate.classList.remove('promocodes-card-modal__date--hot', 'promocodes-date--hot');
 
       if (activeCard.dataset.cardPromocode) {
         const div = document.createElement('div');

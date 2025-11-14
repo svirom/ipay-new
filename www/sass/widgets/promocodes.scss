@@ -209,6 +209,7 @@
 
       &--hot {
         padding: 0.1875rem 0 0.1875rem 1.625rem;
+        padding-top: 0.25rem;
         line-height: 1.2857142;
         color: #E84F35;
       }
@@ -312,6 +313,7 @@
 
     &--hot {
       padding: 0.1875rem 0 0.1875rem 1.625rem;
+      padding-top: 0.25rem;
       line-height: 1.2857142;
       color: #E84F35;
     }
@@ -507,6 +509,7 @@
 
       &--hot {
         padding: 0.1875rem 0 0.1875rem 1.625rem;
+        padding-top: 0.25rem;
         line-height: 1.2857142;
         color: #E84F35;
       }
@@ -587,6 +590,8 @@
 }
 
 .shops-card {
+  display: flex;
+  flex-direction: column;
   padding: 1.125rem 1.5rem;
   border-radius: 1rem;
   background-color: #ffffff;
@@ -596,7 +601,7 @@
     align-items: center;
     height: 4.375rem;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.75rem;
+    font-size: 1rem;
 
     a {
       color: #172A3A;
@@ -616,6 +621,7 @@
   }
 
   .shops-card__offers {
+    margin-top: auto;
     line-height: 1.1875;
     color: #7C9CAC;
   }
