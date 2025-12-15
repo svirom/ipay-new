@@ -1,10 +1,11 @@
+@charset "UTF-8";
 .promocodes {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   background-color: #F7FBFF;
-  background-position: top center;
+  background-position: top 4.75rem center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -27,7 +28,7 @@
 
 .promocodes-container {
   padding-top: 2.75rem;
-  padding-bottom: 2.75rem;
+  padding-bottom: 3.75rem;
 }
 
 .promocodes-date {
@@ -150,15 +151,33 @@
   font-size: 1.75rem;
 }
 .promocodes-card__logo a {
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: inherit;
+  max-width: 100%;
+  padding: 0.5rem 0;
   color: #172A3A;
   text-decoration: none;
 }
 .promocodes-card__logo img {
   max-width: 100%;
+  max-height: 100%;
 }
 .promocodes-card__content {
   -ms-flex-positive: 1;
       flex-grow: 1;
+}
+.promocodes-card__content .promocodes-card__name {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.1428571;
+  font-weight: 700;
+  color: #172A3A;
+  text-decoration: none;
 }
 .promocodes-card__content .promocodes-card__title {
   font-size: 1.375rem;
@@ -186,6 +205,16 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.promocodes-card__discount {
+  display: -ms-flexbox;
+  display: flex;
+}
+.promocodes-card__discount .promocodes-card__discount-number {
+  margin-right: auto;
+}
+.promocodes-card__discount .promocodes-card__discount-date {
+  margin-right: auto;
 }
 .promocodes-card > .btn {
   padding: 0.375rem 1rem;
@@ -240,8 +269,24 @@
   font-size: 1.75rem;
 }
 .promocodes-card-modal__logo a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+  height: inherit;
+  max-width: 100%;
+  margin-inline: 0.75rem;
+  padding: 0.5rem 0;
   color: #172A3A;
   text-decoration: none;
+}
+.promocodes-card-modal__logo a img {
+  max-width: 100%;
+  max-height: 100%;
 }
 .promocodes-card-modal .promocodes-card-modal__title {
   font-family: "Montserrat", sans-serif;
@@ -299,6 +344,9 @@
 }
 
 @media screen and (max-width: 991px) {
+  .promocodes {
+    background-position: top 4.125rem center;
+  }
   .promocodes-slider-wrapper .lSSlideOuter .lSPager.lSpg {
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -374,11 +422,21 @@
   font-size: 1.75rem;
 }
 .trader-card__logo a {
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: inherit;
+  max-width: 100%;
+  padding: 0.5rem 0;
   color: #172A3A;
   text-decoration: none;
 }
 .trader-card__logo img {
   max-width: 100%;
+  max-height: 100%;
 }
 .trader-card--current .trader-card__logo {
   -ms-flex-pack: center;
@@ -490,6 +548,7 @@
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  height: 100%;
   padding: 1.125rem 1.5rem;
   border-radius: 1rem;
   background-color: #ffffff;
@@ -504,11 +563,21 @@
   font-size: 1rem;
 }
 .shops-card__logo a {
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: inherit;
+  max-width: 100%;
+  padding: 0.5rem 0;
   color: #172A3A;
   text-decoration: none;
 }
 .shops-card__logo img {
   max-width: 100%;
+  max-height: 100%;
 }
 .shops-card .shops-card__name {
   font-size: 1.125rem;
@@ -525,7 +594,12 @@
   padding: 1.5rem;
 }
 .shops-card--main .shops-card__logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   height: 4.5rem;
+  padding: 0.5rem 0;
 }
 .shops-card--main .shops-card__name {
   font-size: 1.375rem;
@@ -535,4 +609,67 @@
 
 .trader-info {
   margin-top: 4.5rem;
+}
+
+.promocodes .pagination .prev.disabled > span, .promocodes .pagination .next.disabled > span {
+  position: relative;
+  display: block;
+  margin-left: -1px;
+  height: 2.75rem;
+  width: 2.75rem;
+  padding: 0.8125rem 1rem;
+  font-weight: 500;
+  line-height: 1.1875;
+  text-align: center;
+  color: #6c757d;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  pointer-events: none;
+  cursor: auto;
+  opacity: 0.75;
+}
+.promocodes .pagination .page-item:not(.prev):not(.next) .page-link {
+  line-height: initial;
+}
+.promocodes .pagination-wrapper .btn.btn-more::after {
+  margin-top: -13px;
+}
+.promocodes .pagination-wrapper .btn.btn-more.loading::after {
+  -webkit-animation: more-loading infinite 0.75s linear;
+          animation: more-loading infinite 0.75s linear;
+}
+
+@-webkit-keyframes more-loading {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes more-loading {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .promocodes .pagination li:nth-child(n+7):not(.next):not(.prev) {
+    display: none; /* показати тільки перші 4 */
+  }
+  .promocodes .pagination .page-item {
+    margin: 0 3px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .promocodes .pagination li:nth-child(n+8):not(.next):not(.prev) {
+    display: none; /* показати тільки перші 6 */
+  }
 }/*# sourceMappingURL=promocodes.css.map */

@@ -13,9 +13,9 @@
   display: flex;
   flex-direction: column;
   background-color: #F7FBFF;
-  background-position:top center; 
-  background-repeat:no-repeat; 
-  background-size:cover; 
+  background-position: top 4.75rem center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
   background-attachment: fixed;
 
   h1, .h1 {
@@ -40,7 +40,7 @@
 
 .promocodes-container {
   padding-top: 2.75rem;
-  padding-bottom: 2.75rem;
+  padding-bottom: 3.75rem;
 }
 
 .promocodes-date {
@@ -182,17 +182,33 @@
     font-size: 1.75rem;
 
     a {
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
+      height: inherit;
+      max-width: 100%;
+      padding: 0.5rem 0;
       color: #172A3A;
       text-decoration: none;
     }
 
     img {
       max-width: 100%;
+      max-height: 100%;
     }
   }
 
   &__content {
     flex-grow: 1;
+
+    .promocodes-card__name {
+      display: inline-block;
+      font-size: 0.875rem;
+      line-height: 1.1428571;
+      font-weight: 700;
+      color: #172A3A;
+      text-decoration: none;
+    }
 
     .promocodes-card__title {
       font-size: 1.375rem;
@@ -223,6 +239,18 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+  }
+
+  &__discount {
+    display: flex;
+
+    .promocodes-card__discount-number {
+      margin-right: auto;
+    }
+
+    .promocodes-card__discount-date {
+      margin-right: auto;
     }
   }
 
@@ -288,8 +316,21 @@
     font-size: 1.75rem;
 
     a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1 0 auto;
+      height: inherit;
+      max-width: 100%;
+      margin-inline: 0.75rem;
+      padding: 0.5rem 0;
       color: #172A3A;
       text-decoration: none;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 
@@ -355,6 +396,10 @@
 }
 
 @include until($lg) {
+  .promocodes {
+    background-position: top 4.125rem center;
+  }
+
   .promocodes-slider {
     &-wrapper {
       .lSSlideOuter {
@@ -457,12 +502,19 @@
     font-size: 1.75rem;
 
     a {
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
+      height: inherit;
+      max-width: 100%;
+      padding: 0.5rem 0;
       color: #172A3A;
       text-decoration: none;
     }
 
     img {
       max-width: 100%;
+      max-height: 100%;
     }
   }
 
@@ -592,6 +644,7 @@
 .shops-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding: 1.125rem 1.5rem;
   border-radius: 1rem;
   background-color: #ffffff;
@@ -604,12 +657,19 @@
     font-size: 1rem;
 
     a {
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
+      height: inherit;
+      max-width: 100%;
+      padding: 0.5rem 0;
       color: #172A3A;
       text-decoration: none;
     }
 
     img {
       max-width: 100%;
+      max-height: 100%;
     }
   }
 
@@ -630,7 +690,10 @@
     padding: 1.5rem;
 
     .shops-card__logo {
+      display: flex;
+      align-items: center;
       height: 4.5rem;
+      padding: 0.5rem 0;
     }
 
     .shops-card__name {
@@ -643,4 +706,89 @@
 
 .trader-info {
   margin-top: 4.5rem;
+}
+
+
+.promocodes {
+  .pagination {
+    .prev, .next {
+      &.disabled {
+        & > span {
+          position: relative;
+          display: block;
+          margin-left: -1px;
+          height: 2.75rem;
+          width: 2.75rem;
+          padding: 0.8125rem 1rem;
+          font-weight: 500;
+          line-height: 1.1875;
+          text-align: center;
+          color: #6c757d;
+          border-radius: 0.5rem;
+          background-color: #fff;  
+          pointer-events: none;
+          cursor: auto;
+          opacity: 0.75;
+        }
+      }
+    }
+
+    .page-item {
+      &:not(.prev):not(.next) {
+        .page-link {
+          line-height: initial;
+        }
+      }
+    }
+  }
+
+  .pagination-wrapper {
+    .btn.btn-more {
+      &::after {
+        margin-top: -13px;
+      }
+
+      &.loading {
+        &::after {
+          animation: more-loading infinite 0.75s linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes more-loading {
+  from {
+    transform: rotate(0);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+@include until($md) {
+  .promocodes {
+    .pagination {
+      li {
+        &:nth-child(n+7):not(.next):not(.prev) {
+          display: none; /* показати тільки перші 4 */
+        }
+      }
+
+      .page-item {
+        margin: 0 3px;
+      }
+    }
+  }
+}
+
+@include at-least($md) {
+  .promocodes {
+    .pagination {
+      li {
+        &:nth-child(n+8):not(.next):not(.prev) {
+          display: none; /* показати тільки перші 6 */
+        }
+      }
+    }
+  }
 }
