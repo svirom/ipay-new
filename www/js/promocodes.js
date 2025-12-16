@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const cardImg = activeCard.querySelector('[data-card-logo] img');
       const cardName = activeCard.querySelector('[data-card-name]');
       const cardTitle = activeCard.querySelector('[data-card-title]');
-      const cardDiscount = activeCard.querySelector('[data-card-discount]');
       const cardDiscountNumber = activeCard.querySelector('[data-card-discount-number]');
       const cardDiscountDate = activeCard.querySelector('[data-card-discount-date]');
       const cardInfo = activeCard.querySelector('[data-card-info]');
@@ -94,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
       let modalTitle = cardModal.querySelector('[data-card-modal-title]');
       let modalInfo = cardModal.querySelector('[data-card-modal-info]');
       let modalUrl = cardModal.querySelector('[data-card-modal-url]');
-      let modalDiscount = cardModal.querySelector('[data-card-modal-discount]');
       let modalDiscountNumber = cardModal.querySelector('[data-card-modal-discount-number]');
       let modalDiscountDate = cardModal.querySelector('[data-card-modal-discount-date]');
 
@@ -173,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelector('#promocodes-card-modal')) {
     document.querySelector('#promocodes-card-modal .modal-body').addEventListener('click', function(e) {
       if (e.target.classList.contains('promocodes-card-modal__promocode--copy')) {
-        console.log('good');
+        console.log('promocode copied');
         const promocode = document.querySelector('.promocodes-card-modal__promocode > span').textContent; 
         if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
           document.querySelector('.promocodes-card-modal__promocode').classList.add('copied');
