@@ -535,6 +535,14 @@
   background-repeat: repeat-y;
   background-size: 1px 12px;
 }
+.trader-card__content .trader-card__name {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.1428571;
+  font-weight: 700;
+  color: #172A3A;
+  text-decoration: none;
+}
 .trader-card__content .trader-card__title {
   font-size: 1.375rem;
   line-height: 1.181819;
@@ -567,6 +575,54 @@
 .trader-card__content .trader-card__btn {
   margin-top: auto;
   padding: 0.375rem 1.3125rem;
+}
+.trader-card__discount {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 0.75rem;
+}
+.trader-card__discount .promocodes-card__discount-number {
+  position: relative;
+  margin-left: 0.75rem;
+  margin-right: 4rem;
+  padding: 0.1875rem 0.1875rem 0.125rem 0;
+  font-size: 1.3125rem;
+  line-height: 1.1904762;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 0.1875rem;
+  background-color: #64B3F7;
+}
+.trader-card__discount .promocodes-card__discount-number::before {
+  position: absolute;
+  content: "";
+  left: -0.75rem;
+  top: 0;
+  width: 0.75rem;
+  height: 1.875rem;
+  border: 0.875rem solid transparent;
+  border-left-width: 0;
+  border-right-color: #64B3F7;
+  border-radius: 0.1875rem;
+}
+.trader-card__discount .promocodes-card__discount-number--top {
+  background-color: #E84F35;
+}
+.trader-card__discount .promocodes-card__discount-number--top::before {
+  border-right-color: #E84F35;
+}
+.trader-card__discount .promocodes-card__discount-date {
+  margin-right: auto;
+  padding: 0.125rem 0 0.125rem 1.125rem;
+  line-height: 1.1875;
+  color: #E84F35;
+}
+.trader-card__discount .promocodes-card__discount-date--hot {
+  font-weight: 700;
+  margin-right: 0;
+  padding-left: 1.5rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -606,6 +662,15 @@
   }
   .trader-card .trader-card__btn {
     width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .trader-card--current .trader-card__discount {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .trader-card--current .trader-card__discount .promocodes-card__discount-number {
+    margin-right: auto;
   }
 }
 .trader-shops {

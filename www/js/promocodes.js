@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       modalName.textContent = cardName.textContent.trim();
+      modalName.href = cardName.href;
       modalTitle.textContent = cardTitle.textContent.trim();
       modalInfo.textContent = cardInfo.textContent.trim();
       modalUrl.href = cardUrl;
@@ -153,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modalImg.src = '';
     modalImg.alt = '';
     modalName.textContent = '';
+    modalName.href = '';
     modalTitle.textContent = '';
     modalInfo.textContent = '';
     modalUrl.href = '';
