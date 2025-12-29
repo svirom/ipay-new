@@ -806,4 +806,52 @@
   .promocodes .pagination li:nth-child(n+8):not(.next):not(.prev) {
     display: none; /* показати тільки перші 6 */
   }
+}
+.categories-menu {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+}
+.categories-menu > li:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+.categories-menu__link {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 3.125rem;
+  border-radius: 0.5rem;
+}
+.categories-menu__link-icon {
+  -ms-flex: 0 0 3.125rem;
+      flex: 0 0 3.125rem;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.categories-menu__link-title {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding-left: 0.625rem;
+  padding-right: 0.5rem;
+  font-size: 1.125rem;
+  color: #172A3A;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.categories-menu__link:hover {
+  text-decoration: none;
+  background-color: #F0F5FA;
+}
+.categories-menu__link:active, .categories-menu__link.active {
+  background-color: #FFE7E6;
+}
+.categories-menu__link:active .categories-menu__link-title, .categories-menu__link.active .categories-menu__link-title {
+  color: #E84F35;
 }/*# sourceMappingURL=promocodes.css.map */
