@@ -966,6 +966,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 1.5rem;
+      color: #172A3A;
     }
 
     &-title {
@@ -987,9 +989,89 @@
     &:active, &.active {
       background-color: #FFE7E6;
 
+      .categories-menu__link-icon, 
       .categories-menu__link-title {
         color: #E84F35;
       }
     }
+  }
+}
+
+.categories-mobile {
+  .categories-mobile__btn {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgb(39 97 146 / 0.15);
+    background-color: #ffffff;
+
+    &-icon {
+      flex: 0 0 3.125rem;
+      height: 3.125rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #172A3A;
+    }
+
+    &-title {
+      flex-grow: 1;
+      padding-left: 0.5rem;
+      padding-right: 2.5rem;
+      font-size: 1.125rem;
+      color: #172A3A;
+      background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.16602 9.62862L11.9996 15.4622' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 15.4623L17.8336 9.62866' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 1rem center no-repeat;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.promocodes-categories-modal {
+  .modal-dialog {
+    max-width: none;
+    margin: auto;
+  }
+
+  .modal-content {
+    border-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .modal-header {
+    align-items: center;
+    padding: 1.5rem 1.5rem 0.3125rem;
+
+    .close {
+      margin: 0;
+      padding: 0.875rem 0.8125rem;
+      line-height: 0;
+
+      svg {
+        width: 1.375rem;
+        height: 1.25rem;
+
+        path {
+          stroke-width: 1px;
+        }
+      }
+    }
+  }
+
+  .promocodes-categories-modal__title {
+    font-size: 1.125rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #172A3A;
+  }
+
+  .categories-menu {
+    padding: 0;
   }
 }
