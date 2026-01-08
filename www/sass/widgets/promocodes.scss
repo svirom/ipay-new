@@ -986,7 +986,7 @@
       background-color: #F0F5FA;
     }
 
-    &:active, &.active {
+    &.active {
       background-color: #FFE7E6;
 
       .categories-menu__link-icon, 
@@ -1074,4 +1074,33 @@
   .categories-menu {
     padding: 0;
   }
+}
+
+.categories-main {
+  .shops-cards {
+    margin-bottom: 2.5rem;
+  }
+
+  @include until($md) {
+    .shops-cards {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.promocodes-category-card {
+  border-radius: 0.5rem;
+  background-color: #fff;
+
+  span {
+    font-size: 1.125rem;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.categories-main-empty {
+  padding-top: 2.5rem;
 }
