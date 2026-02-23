@@ -1,0 +1,638 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the charger.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+/*-----------------------------------
+UCS Header Text
+-----------------------------------*/
+.ucs-header {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        border-bottom: 1px solid #F0F5FA;
+    }
+
+    &__text,
+    &__imgs {
+        position: relative;
+        background-color: #ffffff;
+    }
+
+    &__text {
+        color: #172A3A;
+    }
+
+    &__img {
+        &--mastercard {
+            margin-left: 0.375rem;
+        }
+    }
+}
+
+/*-----------------------------------
+UCS Checking
+-----------------------------------*/
+.ucs-checking {
+    & > p {
+        color: #00112C;
+    }
+}
+
+.payment-method-clicktopay {
+    &:disabled {
+        pointer-events: none;
+    }
+}
+
+/*-----------------------------------
+UCS Checkbox Add Card
+-----------------------------------*/
+.ucs-add-card {
+    padding: calc(1rem - 2px) calc(1.5rem - 2px);
+    border: 2px solid #64B3F7;
+    border-radius: 0.5rem;
+    background-color: #F9FCFF;
+
+    .checkbox-control {
+        padding-left: 0;
+        line-height: 0;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 1px;
+            left: 4.125rem;
+            height: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            border-left: 1px solid #CDCDCD;
+        }
+    }
+
+    .checkbox-label {
+        padding-left: 4.625rem;
+        font-size: 0.875rem;
+        line-height: 1.4285714;
+        color: #172A3A;
+        background: url("../../img/click-to-pay-m/click-to-pay-icon.svg") left 1.75rem center no-repeat;
+        background-size: 31px;
+
+        &::before,
+        &::after {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &__fields {
+        padding-top: 0.625rem;
+
+        & > .row {
+            margin-left: -5px;
+            margin-right: -5px;
+
+            & > [class^=col] {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 0.75rem;
+
+            &.has-error {
+                margin-bottom: 0.75rem;
+
+                .help-block {
+                    position: static;
+                }
+
+                .form-input:not([type="password"]):not(.input-icon-right):not(.input-cvv) {
+                    padding-right: 2.25rem;
+                }
+            }
+        }
+
+        .form-input {
+            padding-left: 1.0625rem;
+            padding-right: 2.25rem;
+        }
+
+        &-header {
+            margin-bottom: 0.75rem;
+        }
+
+        &-footer {
+            a {
+                color: #4D90E2;
+            }
+        }
+    }
+}
+
+/*-----------------------------------
+UCS PENDING_CONSUMER_IDV
+-----------------------------------*/
+.ucs-pending-alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #F0F5FA;
+
+    .form-input {
+        padding: 2.1875rem 3rem 0.9375rem 0.875rem;
+    }
+
+    &:not(.ucs-logout-alert) {
+        .form-label {
+            left: 1.5rem;
+        }
+    }
+
+    .help-block {
+        &.visible {
+            display: block;
+            color: #E84F35;
+        }
+    }
+
+    .ucs-pending-send {
+        display: inline-block;
+        margin-top: 0.625rem;
+    }
+
+    .checkbox-control {
+        padding-left: 0;
+    }
+
+    .checkbox-label {
+        padding-left: 1.5rem;
+        font-size: 0.875rem;
+        color: #00112C;
+    }
+
+    &.ucs-logout-alert {
+        .form-label {
+            left: 1.125rem;
+        }
+    }
+}
+
+.payment-method-clicktopay {
+    .ucs-pending-alert {
+        .checkbox-label {
+            &::before, &::after {
+                top: 0;
+                left: 0;
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+}
+
+/*-----------------------------------
+UCS Card
+-----------------------------------*/
+.ucs-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4.375rem;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 10px rgba(23, 42, 58, 0.1);
+    cursor: pointer;
+
+    &--active {
+        background: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.875 12.6211L8.7 16.4461C9.2775 17.0236 10.2225 17.0236 10.8 16.4461L19.125 8.12106' stroke='%2309BC8A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 0.625rem center no-repeat;
+    }
+
+    &__header {
+        flex: 0 0 4.9375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        border-radius: 0.1875rem;
+        background-color: #27A379;
+        overflow: hidden;
+
+        & > img {
+            max-width: 100%;
+        }
+    }
+
+    &__header-type {
+        height: 0.75rem;
+        margin-top: auto;
+        text-align: right;
+        font-size: 0;
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__body {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+
+        .ucs-card__body-network {
+            flex: 0 0 4rem;
+            height: 1.25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &--visa {
+                background-image: url(../../img/click-to-pay-m/visa-icon.svg);
+                background-size: 3.75rem;
+            }
+
+            &--mastercard {
+                background-image: url(../../img/click-to-pay-m/mastercard-icon.svg);
+                background-size: 2rem;
+            }
+        }
+
+        .ucs-card__body-mask {
+            padding-left: 1rem;
+            font-size: 1rem;
+            line-height: 1.0625;;
+            letter-spacing: 1px;
+            color: #374053;
+        }
+    }
+}
+
+.ucs-cards-select {
+    .ucs-card {
+        padding-right: 4.875em;
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 20px;
+            height: 100%;
+            top: 0;
+            right: 0.625rem;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.14648 8.52237L10.0052 13.3837' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.0054 13.3838L14.8641 8.52242' stroke='%23172A3A' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+    }
+
+    &[aria-expanded=true] {
+        .ucs-card {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.ucs-cards {
+    .dropdown-menu {
+        width: 100%;
+        top: auto !important;
+        transform: none !important;
+        padding: 0;
+        border: 0;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+
+        .ucs-card {
+            box-shadow: none;
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #F0F5FA;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &:not(:first-of-type) {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+}
+
+/*-----------------------------------
+Click to Pay Empty Email
+-----------------------------------*/
+.ucs-empty-email {
+    position: relative;
+    padding: calc(1rem - 1px);
+    padding-right: calc(5rem - 1px);
+    border: 1px solid #FFD578;
+    border-radius: 0.5rem;
+    background-color: #FEF7E0;
+
+    p {
+        color: #172A3A;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        right: 0.9375rem;
+        top: 0.9375rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: rgba(232, 79, 53, 0.2) url("data:image/svg+xml,%3Csvg width='37' height='30' viewBox='0 0 37 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_377_8724)'%3E%3Crect x='3.60547' y='3.50024' width='27.6316' height='21' rx='2' fill='white'/%3E%3Cpath d='M5.81592 22.8423L17.4212 12.3423L29.0264 22.8423' stroke='%23DEE7F3' stroke-linecap='round'/%3E%3Cpath d='M29.7119 3.50024H5.1302C4.21068 3.50024 3.77858 4.63676 4.46584 5.24765L16.7567 16.1729C17.1356 16.5096 17.7065 16.5096 18.0854 16.1729L30.3763 5.24765C31.0635 4.63676 30.6314 3.50024 29.7119 3.50024Z' fill='white'/%3E%3Cpath d='M5.26318 6.81606L16.7878 16.2453C17.1562 16.5467 17.686 16.5467 18.0543 16.2453L29.579 6.81606' stroke='%23DEE7F3' stroke-linecap='round'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_377_8724' x='0.605469' y='0.500244' width='35.6313' height='29' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='1' dy='1'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_377_8724'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_377_8724' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") center no-repeat;
+    }
+}
+
+.modal-ucs-empty-email {
+    .modal-content {
+        border-width: 0;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+    }
+
+    .modal-header {
+        padding: 0;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-width: 0;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            opacity: 1;
+        }
+    }
+
+    .modal-body {
+        padding: 1rem 1.5rem 1.5rem;
+
+        p {
+            font-size: 0.875rem;
+            color: #172A3A;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .modal-ucs-empty-email {
+        .modal-dialog {
+            max-width: 630px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modal-ucs-empty-email {
+        .modal-dialog {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .modal-ucs-empty-email {
+        .modal-dialog {
+            max-width: none;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+/*-----------------------------------
+Click to Pay badge New
+-----------------------------------*/
+.payment-method-clicktopay,
+.payment-method-card,
+.payment-method-masterpass {
+    & > .checkbox-control {
+        padding-left: 0;
+
+        & > .checkbox-label {
+            display: flex;
+            align-items: center;
+            padding-left: 2.25rem;
+
+            &::before, &::after {
+                top: 1px;
+                left: 0;
+            }
+
+            & > span:not(.badge-new) {
+                line-height: 1;
+                color: #172A3A;
+            }
+        }
+    }
+}
+
+.payment-method-clicktopay {
+    & > .checkbox-control {
+        & > .checkbox-input {
+            &:checked {
+                & ~ .checkbox-label {
+                    & > .payment-choose-clicktopay__svg > path {
+                        fill: #1434CB;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.payment-method-card {
+    & > .checkbox-control {
+        & > .checkbox-input {
+            &:checked {
+                & ~ .checkbox-label {
+                    & > .payment-choose-card__svg {
+                        display: none;
+                    }
+                }
+            }
+
+            &:not(:checked) {
+                & ~ .checkbox-label {
+                    & > .payment-choose-card__svg-active {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.payment-method-masterpass {
+    & > .checkbox-control {
+        & > .checkbox-input {
+            &:checked {
+                & ~ .checkbox-label {
+                    & > .payment-choose-masterpass__svg > g > path {
+                        fill: #E84F35;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.payment-method {
+    .badge-new {
+        display: inline-block;
+        padding: 0.3125rem;
+        font-size: 0.75rem;
+        line-height: 1;
+        color: #ffffff;
+        border-radius: 0.25rem;
+        background-color: #E84F35;
+    }
+}
+
+.checkbox-input {
+    &:disabled {
+        & ~ .checkbox-label {
+            [data-target="#modal-ucs-empty-email"] {
+                pointer-events: initial;
+            }
+        }
+    }
+}
+
+// .payment-method-clicktopay .popover {
+//     max-width: 330px;
+// }
+// .payment-method-clicktopay .popover.popover-main .popover-header {
+//     position: relative;
+//     padding-left: 3.125rem;
+//     padding-right: 3rem;
+//     font-weight: 500;
+// }
+// .payment-method-clicktopay .popover.popover-main .popover-header::before {
+//     position: absolute;
+//     content: '';
+//     left: 1rem;
+//     top: 1rem;
+//     width: 1.5rem;
+//     height: 1.5rem;
+//     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.5715 0.857126C14.5714 0.674257 14.5128 0.496216 14.4043 0.349021C14.2957 0.201825 14.143 0.0931921 13.9684 0.038996C13.7937 -0.0152001 13.6063 -0.012118 13.4335 0.0477919C13.2607 0.107702 13.1116 0.221299 13.008 0.371983L3.57947 14.0863C3.49111 14.215 3.43958 14.3653 3.43043 14.5212C3.42128 14.677 3.45486 14.8324 3.52755 14.9705C3.60025 15.1087 3.70928 15.2244 3.8429 15.3051C3.97652 15.3858 4.12965 15.4285 4.28575 15.4286H9.42861V23.1428C9.42872 23.3257 9.48731 23.5037 9.59582 23.6509C9.70433 23.7981 9.85707 23.9068 10.0317 23.961C10.2064 24.0152 10.3938 24.0121 10.5666 23.9522C10.7393 23.8923 10.8884 23.7787 10.992 23.628L20.4206 9.9137C20.509 9.785 20.5605 9.63462 20.5697 9.47879C20.5788 9.32295 20.5452 9.16757 20.4725 9.02942C20.3998 8.89127 20.2908 8.7756 20.1572 8.69488C20.0236 8.61417 19.8704 8.57148 19.7143 8.57141H14.5715V0.857126Z' fill='%23FFBE30'/%3E%3C/svg%3E");
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
+// .payment-method-clicktopay .popover.popover-main .popover-body {
+//     padding-bottom: 1rem;
+// }
+// .payment-method-clicktopay .popover.popover-main p {
+//     color: #ffffff;
+// }
+// .payment-method-clicktopay .popover.popover-main img {
+//     max-width: 100%;
+// }
+// .payment-method-clicktopay .popover .arrow {
+//     height: 0.75rem;
+//     width: 1.5rem;
+// }
+// .payment-method-clicktopay .bs-popover-top > .arrow, 
+// .payment-method-clicktopay .bs-popover-auto[x-placement^="top"] > .arrow {
+//     left: 5rem !important;
+//     bottom: calc(-0.75rem - 1px);
+// }
+// .payment-method-clicktopay .bs-popover-top > .arrow::before, 
+// .payment-method-clicktopay .bs-popover-auto[x-placement^="top"] > .arrow::before,
+// .payment-method-clicktopay .bs-popover-top > .arrow::after, 
+// .payment-method-clicktopay .bs-popover-auto[x-placement^="top"] > .arrow::after {
+//     border-width: 0.75rem 0.75rem 0;
+// }
+// .payment-method-clicktopay .bs-popover-bottom > .arrow, 
+// .payment-method-clicktopay .bs-popover-auto[x-placement^="bottom"] > .arrow {
+//     left: 5rem !important;
+//     top: calc(-0.75rem - 1px);
+// }
+// .payment-method-clicktopay .bs-popover-bottom > .arrow::before, 
+// .payment-method-clicktopay .bs-popover-auto[x-placement^="bottom"] > .arrow::before,
+// .payment-method-clicktopay .bs-popover-bottom > .arrow::after, 
+// .payment-method-clicktopay .bs-popover-auto[x-placement^="bottom"] > .arrow::after {
+//     border-width: 0 0.75rem 0.75rem;
+// }
+// .payment-method-clicktopay .popover.popover-main.bs-popover-auto[x-placement^=bottom], 
+// .payment-method-clicktopay .popover.popover-main.bs-popover-bottom {
+//     margin-top: 2.25rem;
+// }
+
+/*-----------------------------------
+Click to Pay Empty Card
+-----------------------------------*/
+.ucs-empty-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #F0F8FF;
+}
+
+.ucs-empty-card__text {
+    display: inline-block;
+    position: relative;
+    padding-left: 2.875rem;
+    font-size: 0.875rem;
+    line-height: 1.4285714;
+    color: #172A3A;
+    background: url("../../img/click-to-pay-m/click-to-pay-icon.svg") left 0 center no-repeat;
+    background-size: 31px;
+}
+
+.ucs-empty-card__text::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 2.375rem;
+    height: 1.25rem;
+    transform: translateY(-50%);
+    width: 0;
+    border-left: 1px solid #CDCDCD;
+}
+
+/*-----------------------------------
+Click to Pay Change Email
+-----------------------------------*/
+.ucs-change-alert {
+    & > span {
+        margin-right: 0.625rem;
+        color: #7C9CAC;
+    }
+
+    & > a {
+        color: #1E98FF;
+
+        &:hover {
+            color: #1E98FF;
+        }
+    }
+}
