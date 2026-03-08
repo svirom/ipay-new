@@ -1,3 +1,18 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+
+  "liveSassCompile.settings.autoprefix": [
+		// "> 1%",
+		// "last 2 versions"
+		">= 1%",
+		"last 1 major versions",
+		"Chrome >= 45",
+		"Firefox >= 38",
+		"Firefox ESR",
+		"Opera >= 30",
+		"iOS >= 9",
+		"Safari >= 9",
+		"Explorer >= 10"
+	],
+
 }
