@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const MCCHECKOUTSERVICE = new MastercardCheckoutServices();
 
   // const ucsUserEmail = document.getElementById('payment-method-clicktopay').dataset.userEmail;
-  const ucsUserEmail = 'sssfdwscsczc@gmail.com';
+  const ucsUserEmail = 'svirom@yahoo.com';
   const ucsPayButton = document.querySelector('.ucs-pay-button');
 
   const ucsAuthenticateSubmitBtn = document.getElementById('ucs-authenticate-submit');
@@ -111,9 +111,10 @@ document.addEventListener("DOMContentLoaded", function() {
       if (error.name === 'click2PayError' && error.message === 'Not you clicked') {
         try {} catch (deleteTokenError) {}
       }
-      if (windowRef && !windowRef.closed) {
-        windowRef.close();
-      }
+      // if (windowRef && !windowRef.closed) {
+      //   windowRef.close();
+      // }
+      windowRef?.close();
       disableClickToPayRadio();
     }
   }
@@ -257,60 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // -----------------------------------------------------------
 
-  // -----------------------------------------------------------
-
-  // show loader
-  function showLoader() {
-    const loader = document.getElementById('ucs-checking');
-
-    loader.classList.remove('d-none');
-  }
-
-  // hide loader
-  function hideLoader() {
-    const loader = document.getElementById('ucs-checking');
-
-    loader.classList.add('d-none');
-  }
-
-  // -----------------------------------------------------------------
-
-  // show authenticate alert
-  function showAuthenticateAlert() {
-    document.getElementById('ucs-authenticate-alert').classList.remove('d-none');
-  }
-
-  // hide authenticate alert
-  function hideAuthenticateAlert() {
-    document.getElementById('ucs-authenticate-alert').classList.add('d-none');
-  }
-
-  // -----------------------------------------------------------------
-
-  // show empty card alert
-  function showEmptyCardAlert() {
-    document.getElementById('ucs-empty-card').classList.remove('d-none');
-  }
-
-  // hide empty card alert
-  function hideEmptyCardAlert() {
-    document.getElementById('ucs-empty-card').classList.add('d-none');
-  }
-
-  // -----------------------------------------------------------------
-
-  // show change email alert
-  function showChangeEmailAlert(email) {
-    emailChangeEmail.textContent = email;
-    document.getElementById('ucs-change-alert').classList.remove('d-none');
-    document.getElementById('ucs-change-alert').classList.add('d-flex');
-  }
-
-  // hide change email alert
-  function hideChangeEmailAlert() {
-    document.getElementById('ucs-change-alert').classList.add('d-none');
-    document.getElementById('ucs-change-alert').classList.remove('d-flex');
-  }
+  
 
   // ------------------------render cards--------------------------------------
   function renderCards(cards) {
@@ -427,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // ----------------------------------------------
-  // ucsButton.addEventListener('click', async function() {
+
   window.addEventListener('load', async function() {
     if (!serviceInitiated) {
       await initHandler();
@@ -439,10 +387,66 @@ document.addEventListener("DOMContentLoaded", function() {
     // console.log('getCards script called');
   });
 
-  if (ucsAuthenticateSubmitBtn) {
-    ucsAuthenticateSubmitBtn.addEventListener('click', async function() {
-      await authenticateHandler();
-    });
+  ucsAuthenticateSubmitBtn?.addEventListener('click', async function() {
+    await authenticateHandler();
+  });
+
+
+
+
+  // -----------------------------------------------------------
+
+  // show loader
+  function showLoader() {
+    const loader = document.getElementById('ucs-checking');
+
+    loader.classList.remove('d-none');
+  }
+
+  // hide loader
+  function hideLoader() {
+    const loader = document.getElementById('ucs-checking');
+
+    loader.classList.add('d-none');
+  }
+
+  // -----------------------------------------------------------------
+
+  // show authenticate alert
+  function showAuthenticateAlert() {
+    document.getElementById('ucs-authenticate-alert').classList.remove('d-none');
+  }
+
+  // hide authenticate alert
+  function hideAuthenticateAlert() {
+    document.getElementById('ucs-authenticate-alert').classList.add('d-none');
+  }
+
+  // -----------------------------------------------------------------
+
+  // show empty card alert
+  function showEmptyCardAlert() {
+    document.getElementById('ucs-empty-card').classList.remove('d-none');
+  }
+
+  // hide empty card alert
+  function hideEmptyCardAlert() {
+    document.getElementById('ucs-empty-card').classList.add('d-none');
+  }
+
+  // -----------------------------------------------------------------
+
+  // show change email alert
+  function showChangeEmailAlert(email) {
+    emailChangeEmail.textContent = email;
+    document.getElementById('ucs-change-alert').classList.remove('d-none');
+    document.getElementById('ucs-change-alert').classList.add('d-flex');
+  }
+
+  // hide change email alert
+  function hideChangeEmailAlert() {
+    document.getElementById('ucs-change-alert').classList.add('d-none');
+    document.getElementById('ucs-change-alert').classList.remove('d-flex');
   }
 
 });
