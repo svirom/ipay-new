@@ -1,23 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
   
   const params = {
-    srcDpaId: "6bc8ee6a-Ebd5-417c-8117-377ece9bce77_dpa0", // required DPA Identifier, generated during registration.
-    dpaData: {
-     dpaName: "Testdpa0" ,      //required
+    'srcDpaId': "6bc8ee6a-Ebd5-417c-8117-377ece9bce77_dpa0", // required DPA Identifier, generated during registration.
+    'dpaData': {
+     'dpaName': "Testdpa0" ,      //required
     },
-    dpaTransactionOptions: {
+    'dpaTransactionOptions': {
     //  dpaLocale: "en_US",      // required
-     dpaLocale: "uk_UA",      // required
+     'dpaLocale': "uk_UA",      // required
     },
-    cardBrands: ["mastercard", "visa"],  // required. Array of card brands supported.
-    checkoutExperience: 'PAYMENT_SETTINGS',
-    recognitionToken: "eyJpdCI6MTc3MTQwOTc4MCwidXQiOjE3NzE0MDk3ODAsImV4IjoxNzg2OTYxNzgwLCJqaSI6InNRU1VvMEpraXZzNi1hZGNWTGxwIiwibGEiOnsibG0iOiJzdioqKioqKkBnbWFpbC5jb20ifSwiZm8iOltdfQ"
+    'cardBrands': ["mastercard", "visa"],  // required. Array of card brands supported.
+    'checkoutExperience': 'PAYMENT_SETTINGS',
+    'recognitionToken': undefined
+    // 'recognitionToken': "eyJpdCI6MTc3MTQwOTc4MCwidXQiOjE3NzE0MDk3ODAsImV4IjoxNzg2OTYxNzgwLCJqaSI6InNRU1VvMEpraXZzNi1hZGNWTGxwIiwibGEiOnsibG0iOiJzdioqKioqKkBnbWFpbC5jb20ifSwiZm8iOltdfQ"
   };
 
   const MCCHECKOUTSERVICE = new MastercardCheckoutServices();
 
   // const ucsUserEmail = document.getElementById('payment-method-clicktopay').dataset.userEmail;
-  const ucsUserEmail = 'svirom@yahoo.com';
+  // const ucsUserEmail = 'svirom@yahoo.com';
+  // const ucsUserEmail = 'svia.rom@gmail.com';
+  const ucsUserEmail = 'svirom@outlook.com';
   const ucsPayButton = document.querySelector('.ucs-pay-button');
 
   const ucsAuthenticateSubmitBtn = document.getElementById('ucs-authenticate-submit');
@@ -50,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
   async function getCardsHandler() {
     try {
       const cardsArray = await MCCHECKOUTSERVICE.getCards();
-      console.log(`Get cards: ${cardsArray}`);
 
       if (cardsArray.length === 0) {
         showAuthenticateAlert();
@@ -74,14 +76,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const top = Number((screen.height / 2) - (700 / 2));
     const windowRef = window.open('', 'mastercardWindow', 'width=480,height=700,top=' + top + ',left=' + left);
     const requestParameters = {
-      windowRef: windowRef,
-      accountReference: {
+      'windowRef': windowRef,
+      'accountReference': {
         "consumerIdentity": {
           "identityType": "EMAIL_ADDRESS",
           "identityValue": ucsUserEmail,
         }
       },
-      requestRecognitionToken: true,
+      'requestRecognitionToken': true,
     }
 
     try {
@@ -145,14 +147,20 @@ document.addEventListener("DOMContentLoaded", function() {
   // ---------------------------------------------------------------
 
   // encrypt consumer's card
-  const buttonCardSubmit = document.getElementById('ucs-card-submit');
+  const buttonCardSubmit = document.getElementById('ucs-pay-button');
 
-  // buttonCardSubmit.addEventListener('click', encryptCardHandler);
+  buttonCardSubmit?.addEventListener('click', function(event) {
+    event.preventDefault();
 
-  function encryptCardHandler() {
-    // const buttonCardNumberInput = document.getElementById('ucs-card-number');
-    // const buttonCardNumberInput = '5186001700008785';
-    const buttonCardNumberInput = '4622943123113624';
+    console.log(event.target);
+
+    encryptCardHandler();
+  });
+
+
+  async function encryptCardHandler() { // this method will return a promise
+    // const buttonCardNumberInput = '4622943123113624';
+    const buttonCardNumberInput = '5120350100064537';
     const buttonCardExpInput = document.getElementById('ucs-card-exp');
     // const buttonCardMonthInput = buttonCardExpInput.value.replace(/\D/g,'').slice(0, 2);
     const buttonCardMonthInput = '12';
@@ -172,89 +180,200 @@ document.addEventListener("DOMContentLoaded", function() {
       cardholderLastName: 'Romaniuk',
     }
 
-    // const encryptCardPromise = mcCheckoutService.encryptCard(encryptCardParams);
-    const encryptCardPromise = MCCHECKOUTSERVICE.encryptCard(encryptCardParams);
-
-    encryptCardPromise
-      .then(function(cardData) {
-        console.log('cardData: ', cardData);
-        const card = document.createElement('src-card');
-        // card.setAttribute('dark', true);
-        card.setAttribute('descriptor-name', 'Citi');
-        card.setAttribute('account-number-suffix', '1234');
-        document.getElementById('ucs-payment-card').appendChild(card);
-
-        const checkoutButton = document.createElement('button');
-        checkoutButton.setAttribute('type', 'button');
-        checkoutButton.id = 'ucs-new-card-checkout'
-        checkoutButton.classList.add('btn', 'btn-green');
-        checkoutButton.textContent = 'Оплатити методом';
-
-        document.getElementById('ucs-payment-card').appendChild(card);
-        document.getElementById('ucs-payment-card').appendChild(checkoutButton);
-
-        $('#modal-ucs-card').modal('hide');
-
-        console.log('cardData.encryptedCard: ', cardData.encryptedCard);
-        console.log('cardData.cardBrand: ', cardData.cardBrand);
-
-        const left = Number((screen.width / 2) - (480 / 2));
-        const top = Number((screen.height / 2) - (700 / 2));
-        const windowRef = window.open('', 'mastercardWindow', 'width=480,height=700,top=' + top + ',left=' + left);
-
-        const checkoutWithNewCardParams = {
-          windowRef: windowRef, // required.
-          encryptedCard: cardData.encryptedCard, // required
-          cardBrand: cardData.cardBrand, // required
-          consumer: {
-            emailAddress: 'svia.rom@gmail.com',
-            mobileNumber: {
-              countryCode: '380',
-              phoneNumber: 677593208
-            },
-            firstName: 'Sviatoslav',
-            lastName: 'Romaniuk',
-          }, // optional
-          dpaTransactionOptions: {
-            paymentOptions: [
-              {
-                dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_SHORT_FORM'
-              }
-            ],
-            dpaLocale: 'uk_UA', // optional
-            merchantCountryCode: "UA",
-            transactionAmount: {
-              transactionAmount: 100.00, // optional
-              transactionCurrencyCode: 'UAH' // optional
-            }
-          },
-          rememberMe: true, // optional, default is false
-          recognitionTokenRequested: true, // optional, default is false
-        };
-
-        console.log('checkoutWithNewCardParams: ', checkoutWithNewCardParams);
-
-        // const checkoutWithNewCardPromise = mcCheckoutService.checkoutWithNewCard(checkoutWithNewCardParams);
-        const checkoutWithNewCardPromise = MCCHECKOUTSERVICE.checkoutWithNewCard(checkoutWithNewCardParams);
-        checkoutWithNewCardPromise
-          .then(function(data) {
-            console.log('CheckoutWithNewCard: ', data);
-          })
-          .catch(function(error) {
-            console.log('Name checkout: ', error.name);
-            console.log('Reason: ', error.reason);
-            console.log('Details: ', error.details);
-            console.log('Message: ', error.message);
-          })
-      })
-      .catch(function(error) {
-        console.log('Name: ', error.name);
-        console.log('Reason: ', error.reason);
-        console.log('Details: ', error.details);
-        console.log('Message: ', error.message);
-      }
-    )
+    try {
+      const encryptedCard = await MCCHECKOUTSERVICE.encryptCard(encryptCardParams);
+      console.log(encryptedCard);
+      checkoutWithNewCardHandler(encryptedCard);
+    } catch (promiseRejectedPayload) {
+      console.log(promiseRejectedPayload);
+    }
   }
+
+  async function checkoutWithNewCardHandler(cardData) {
+    const left = Number((screen.width / 2) - (480 / 2));
+    const top = Number((screen.height / 2) - (700 / 2));
+    const windowRef = window.open('', 'mastercardWindow', 'width=480,height=700,top=' + top + ',left=' + left);
+
+    const checkoutWithNewCardParams = {
+      'windowRef': windowRef,
+      'encryptedCard': cardData.encryptedCard,
+      'cardBrand': cardData.cardBrand,
+      'consumer': {
+        'emailAddress': 'svia.rom@gmail.com',
+        'mobileNumber': {
+          'countryCode': '380',
+          'phoneNumber': 677593208,
+        },
+        'firstName': 'Sviatoslav',
+        'lastName': 'Romaniuk',
+      },
+      'dpaTransactionOptions': {
+        // 'acquirerBIN': '414950',
+        // 'acquirerMerchantId': 'SRC3DS',
+        'merchantCategoryCode': '7399',
+        // 'merchantCountryCode': 'UA',
+        'dpaLocale': 'uk_UA',
+        'threeDsPreference': 'NONE',
+        'authenticationPreferences': {
+          'payloadRequested': 'AUTHENTICATED',
+        },
+        'paymentOptions': [
+          {
+            'dynamicDataType': 'CARD_APPLICATION_CRYPTOGRAM_SHORT_FORM',
+          }
+        ],
+        'transactionAmount': {
+          'transactionAmount': 10.00,
+          'transactionCurrencyCode': 'UAH'
+        },
+        "acquirerData": [
+          {
+            "cardBrand" : "mastercard",
+            "acquirerMerchantId" : "SRC3DS",
+            "acquirerBIN": "545301"
+          },
+          {
+          "cardBrand": "visa",
+          "acquirerMerchantId": "33334444",
+          "acquirerBIN": "432104"
+          }
+        ],
+      },
+      'rememberMe': true,
+      'recognitionTokenRequested': true,
+      'complianceSettings': {
+        "privacy": {
+          "acceptedVersion": "LATEST",
+          "latestVersion": "LATEST",
+          "latestVersionUri": "https://www.mastercard.com/global/click-to-pay/country-listing/privacy.html"
+        },
+        "tnc": {
+          "acceptedVersion": "LATEST",
+          "latestVersion": "LATEST",
+          "latestVersionUri": "https://www.mastercard.com/global/click-to-pay/country-listing/terms.html"
+        }
+      },
+    }
+
+    try {
+      console.log('checkoutWithNewCardParams: ', checkoutWithNewCardParams);
+
+      const promiseResolvedPayload = await MCCHECKOUTSERVICE.checkoutWithNewCard(checkoutWithNewCardParams);
+
+      console.log('resultCheckoutWithNewCardParams: ', promiseResolvedPayload);
+    } catch (promiseRejectedPayload) {
+      windowRef?.close();
+      console.log(promiseRejectedPayload);
+    }
+  }
+
+
+  // function encryptCardHandler() {
+  //   // const buttonCardNumberInput = document.getElementById('ucs-card-number');
+  //   // const buttonCardNumberInput = '5186001700008785';
+  //   const buttonCardNumberInput = '4622943123113624';
+  //   const buttonCardExpInput = document.getElementById('ucs-card-exp');
+  //   // const buttonCardMonthInput = buttonCardExpInput.value.replace(/\D/g,'').slice(0, 2);
+  //   const buttonCardMonthInput = '12';
+  //   // const buttonCardYearInput = '20' + buttonCardExpInput.value.replace(/\D/g,'').slice(-2);
+  //   const buttonCardYearInput = '27';
+  //   // const buttonCardCvvInput = document.getElementById('ucs-card-cvv');
+  //   const buttonCardCvvInput = '218';
+
+  //   const encryptCardParams = {
+  //     // primaryAccountNumber: buttonCardNumberInput.value,
+  //     primaryAccountNumber: buttonCardNumberInput,
+  //     panExpirationMonth: buttonCardMonthInput,
+  //     panExpirationYear: buttonCardYearInput,
+  //     // cardSecurityCode: buttonCardCvvInput.value
+  //     cardSecurityCode: buttonCardCvvInput,
+  //     cardholderFirstName: 'Sviatoslav',
+  //     cardholderLastName: 'Romaniuk',
+  //   }
+
+  //   // const encryptCardPromise = mcCheckoutService.encryptCard(encryptCardParams);
+  //   const encryptCardPromise = MCCHECKOUTSERVICE.encryptCard(encryptCardParams);
+
+  //   encryptCardPromise
+  //     .then(function(cardData) {
+  //       console.log('cardData: ', cardData);
+  //       const card = document.createElement('src-card');
+  //       // card.setAttribute('dark', true);
+  //       card.setAttribute('descriptor-name', 'Citi');
+  //       card.setAttribute('account-number-suffix', '1234');
+  //       document.getElementById('ucs-payment-card').appendChild(card);
+
+  //       const checkoutButton = document.createElement('button');
+  //       checkoutButton.setAttribute('type', 'button');
+  //       checkoutButton.id = 'ucs-new-card-checkout'
+  //       checkoutButton.classList.add('btn', 'btn-green');
+  //       checkoutButton.textContent = 'Оплатити методом';
+
+  //       document.getElementById('ucs-payment-card').appendChild(card);
+  //       document.getElementById('ucs-payment-card').appendChild(checkoutButton);
+
+  //       $('#modal-ucs-card').modal('hide');
+
+  //       console.log('cardData.encryptedCard: ', cardData.encryptedCard);
+  //       console.log('cardData.cardBrand: ', cardData.cardBrand);
+
+  //       const left = Number((screen.width / 2) - (480 / 2));
+  //       const top = Number((screen.height / 2) - (700 / 2));
+  //       const windowRef = window.open('', 'mastercardWindow', 'width=480,height=700,top=' + top + ',left=' + left);
+
+  //       const checkoutWithNewCardParams = {
+  //         windowRef: windowRef, // required.
+  //         encryptedCard: cardData.encryptedCard, // required
+  //         cardBrand: cardData.cardBrand, // required
+  //         consumer: {
+  //           emailAddress: 'svia.rom@gmail.com',
+  //           mobileNumber: {
+  //             countryCode: '380',
+  //             phoneNumber: 677593208
+  //           },
+  //           firstName: 'Sviatoslav',
+  //           lastName: 'Romaniuk',
+  //         }, // optional
+  //         dpaTransactionOptions: {
+  //           paymentOptions: [
+  //             {
+  //               dynamicDataType: 'CARD_APPLICATION_CRYPTOGRAM_SHORT_FORM'
+  //             }
+  //           ],
+  //           dpaLocale: 'uk_UA', // optional
+  //           merchantCountryCode: "UA",
+  //           transactionAmount: {
+  //             transactionAmount: 100.00, // optional
+  //             transactionCurrencyCode: 'UAH' // optional
+  //           }
+  //         },
+  //         rememberMe: true, // optional, default is false
+  //         recognitionTokenRequested: true, // optional, default is false
+  //       };
+
+  //       console.log('checkoutWithNewCardParams: ', checkoutWithNewCardParams);
+
+  //       // const checkoutWithNewCardPromise = mcCheckoutService.checkoutWithNewCard(checkoutWithNewCardParams);
+  //       const checkoutWithNewCardPromise = MCCHECKOUTSERVICE.checkoutWithNewCard(checkoutWithNewCardParams);
+  //       checkoutWithNewCardPromise
+  //         .then(function(data) {
+  //           console.log('CheckoutWithNewCard: ', data);
+  //         })
+  //         .catch(function(error) {
+  //           console.log('Name checkout: ', error.name);
+  //           console.log('Reason: ', error.reason);
+  //           console.log('Details: ', error.details);
+  //           console.log('Message: ', error.message);
+  //         })
+  //     })
+  //     .catch(function(error) {
+  //       console.log('Name: ', error.name);
+  //       console.log('Reason: ', error.reason);
+  //       console.log('Details: ', error.details);
+  //       console.log('Message: ', error.message);
+  //     }
+  //   )
+  // }
 
   // -----------------------------------------------------------
 
