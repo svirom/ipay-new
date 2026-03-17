@@ -1,15 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
   
   const params = {
-    'srcDpaId': "6bc8ee6a-Ebd5-417c-8117-377ece9bce77_dpa0", // required DPA Identifier, generated during registration.
+    'srcDpaId': '6bc8ee6a-Ebd5-417c-8117-377ece9bce77_dpa0', // required DPA Identifier, generated during registration.
     'dpaData': {
-     'dpaName': "Testdpa0" ,      //required
+     'dpaName': 'Testdpa0',      //required
     },
     'dpaTransactionOptions': {
-    //  dpaLocale: "en_US",      // required
-     'dpaLocale': "uk_UA",      // required
+      //  dpaLocale: "en_US",      // required
+      'dpaLocale': 'uk_UA',      // required
+      'transactionAmount': {
+        'transactionAmount': 10.00,
+        'transactionCurrencyCode': 'UAH'
+      },
+     'acquirerData': [
+        {
+          'cardBrand': 'mastercard',
+          'acquirerMerchantId': 'SRC3DS',
+          'acquirerBIN': '545301',
+        },
+        {
+          'cardBrand': 'visa',
+          'acquirerMerchantId': '33334444',
+          'acquirerBIN': '432104',
+        }
+      ],
     },
-    'cardBrands': ["mastercard", "visa"],  // required. Array of card brands supported.
+    'cardBrands': ['mastercard', 'visa'],  // required. Array of card brands supported.
     'checkoutExperience': 'PAYMENT_SETTINGS',
     'recognitionToken': undefined
     // 'recognitionToken': "eyJpdCI6MTc3MTQwOTc4MCwidXQiOjE3NzE0MDk3ODAsImV4IjoxNzg2OTYxNzgwLCJqaSI6InNRU1VvMEpraXZzNi1hZGNWTGxwIiwibGEiOnsibG0iOiJzdioqKioqKkBnbWFpbC5jb20ifSwiZm8iOltdfQ"
@@ -19,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // const ucsUserEmail = document.getElementById('payment-method-clicktopay').dataset.userEmail;
   // const ucsUserEmail = 'svirom@yahoo.com';
-  // const ucsUserEmail = 'svia.rom@gmail.com';
-  const ucsUserEmail = 'svirom@outlook.com';
+  const ucsUserEmail = 'svia.rom@gmail.com';
+  // const ucsUserEmail = 'svirom@outlook.com';
   const ucsPayButton = document.querySelector('.ucs-pay-button');
 
   const ucsAuthenticateSubmitBtn = document.getElementById('ucs-authenticate-submit');
@@ -78,9 +94,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const requestParameters = {
       'windowRef': windowRef,
       'accountReference': {
-        "consumerIdentity": {
-          "identityType": "EMAIL_ADDRESS",
-          "identityValue": ucsUserEmail,
+        'consumerIdentity': {
+          'identityType': 'EMAIL_ADDRESS',
+          'identityValue': ucsUserEmail,
         }
       },
       'requestRecognitionToken': true,
@@ -155,19 +171,121 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(event.target);
 
     encryptCardHandler();
+    // checkoutWithCardHandler();
   });
+
+  async function checkoutWithCardHandler(cardData) {
+    const left = Number((screen.width / 2) - (480 / 2));
+    const top = Number((screen.height / 2) - (700 / 2));
+    const windowRef = window.open('', 'mastercardWindow', 'width=480,height=700,top=' + top + ',left=' + left);
+
+    const cardId = document.getElementById('cardform-ucs_id').value;
+
+    const checkoutWithCardParams = {
+      'windowRef': windowRef,
+      'srcDigitalCardId': cardId,
+
+      // 'consumer': {
+      //   'emailAddress': 'svia.rom@gmail.com',
+      //   'mobileNumber': {
+      //     'countryCode': '380',
+      //     'phoneNumber': 677593208,
+      //   },
+      //   'firstName': 'Sviatoslav',
+      //   'lastName': 'Romaniuk',
+      // },
+
+      'dpaTransactionOptions': {
+        // 'acquirerMerchantId': 'SRC3DS',
+        // acquirerBIN: '414950',
+        // acquirerMerchantId: '6645672',
+        'merchantCategoryCode': '7399',
+        'merchantCountryCode': 'UA',
+        'dpaLocale': 'uk_UA',
+        'threeDsPreference': 'NONE',
+        'authenticationPreferences': {
+          'payloadRequested': 'AUTHENTICATED',
+        },
+        'paymentOptions': [
+          {
+            'dynamicDataType': 'CARD_APPLICATION_CRYPTOGRAM_SHORT_FORM',
+          }
+        ],
+        'transactionAmount': {
+          'transactionAmount': 10.00,
+          'transactionCurrencyCode': 'UAH'
+        },
+        'acquirerData': [
+          {
+            'cardBrand': 'mastercard',
+            'acquirerMerchantId': 'SRC3DS',
+            'acquirerBIN': '545301',
+          },
+          {
+            'cardBrand': 'visa',
+            'acquirerMerchantId': '33334444',
+            'acquirerBIN': '432104',
+          }
+        ],
+      },
+
+      'rememberMe': true,
+     
+      'complianceSettings': {
+        'privacy': {
+          'acceptedVersion': 'LATEST',
+          'latestVersion': 'LATEST',
+          'latestVersionUri': 'https://www.mastercard.com/global/click-to-pay/country-listing/privacy.html',
+        },
+        'tnc': {
+          'acceptedVersion': 'LATEST',
+          'latestVersion': 'LATEST',
+          'latestVersionUri': 'https://www.mastercard.com/global/click-to-pay/country-listing/terms.html',
+        }
+      },
+
+
+      
+      // "dpaTransactionOptions": {
+        
+      //   "dpaBillingPreference": "FULL",
+      //   "dpaAcceptedBillingCountries": [],
+      //   "consumerEmailAddressRequested": true,
+      //   "consumerPhoneNumberRequested": true,
+      //   "merchantCountryCode": "US",
+      //   "merchantOrderId": "506610rt-6858-4147-9ec2-b030f1337a7d",
+       
+      //   "acquirerMerchantId": "SRC3DS", //deprecated - use acquirerData
+      //   "acquirerBIN": "545301", //deprecated - use acquirerData
+        
+      // }
+
+    }
+
+    try {
+      console.log('checkoutWithCardParams: ', checkoutWithCardParams);
+
+      const promiseResolvedPayload = await MCCHECKOUTSERVICE.checkoutWithCard(checkoutWithCardParams);
+
+      console.log('resultCheckoutWithCardParams: ', promiseResolvedPayload);
+    } catch (promiseRejectedPayload) {
+      windowRef?.close();
+      console.log(promiseRejectedPayload);
+    }
+  }
 
 
   async function encryptCardHandler() { // this method will return a promise
     // const buttonCardNumberInput = '4622943123113624';
-    const buttonCardNumberInput = '5120350100064537';
+    const buttonCardNumberInput = '5185600630000142';
+    // const buttonCardNumberInput = '4622943123113848';
     const buttonCardExpInput = document.getElementById('ucs-card-exp');
     // const buttonCardMonthInput = buttonCardExpInput.value.replace(/\D/g,'').slice(0, 2);
     const buttonCardMonthInput = '12';
     // const buttonCardYearInput = '20' + buttonCardExpInput.value.replace(/\D/g,'').slice(-2);
     const buttonCardYearInput = '27';
     // const buttonCardCvvInput = document.getElementById('ucs-card-cvv');
-    const buttonCardCvvInput = '218';
+    const buttonCardCvvInput = '766';
 
     const encryptCardParams = {
       // primaryAccountNumber: buttonCardNumberInput.value,
@@ -202,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
         'emailAddress': 'svia.rom@gmail.com',
         'mobileNumber': {
           'countryCode': '380',
-          'phoneNumber': 677593208,
+          'phoneNumber': '677593208',
         },
         'firstName': 'Sviatoslav',
         'lastName': 'Romaniuk',
@@ -211,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // 'acquirerBIN': '414950',
         // 'acquirerMerchantId': 'SRC3DS',
         'merchantCategoryCode': '7399',
-        // 'merchantCountryCode': 'UA',
+        'merchantCountryCode': 'UA',
         'dpaLocale': 'uk_UA',
         'threeDsPreference': 'NONE',
         'authenticationPreferences': {
