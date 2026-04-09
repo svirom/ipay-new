@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const banks = document.querySelectorAll('.qr-bank');
 
     banks.forEach(function(bank) {
-      const bankAttr = bank.getAttribute('data-bank');
-      const bankValue = bankAttr ? bankAttr.toLowerCase() : '';
+      const nameAttr = bank.getAttribute('data-bank-name');
+      const bankValue = nameAttr ? nameAttr.toLowerCase() : '';
 
       bank.parentElement.classList.remove('inactive');
 

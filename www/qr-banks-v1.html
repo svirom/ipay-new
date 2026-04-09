@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/qr-banks-v1.css">
+
+    <title>Оплата за QR кодом</title>
+  </head>
+  <body>
+
+    <header class="qr-header">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-auto">
+            <span class="qr-logo">Мій Банк</span>
+          </div>
+          <div class="col-auto">
+            <div class="qr-product-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="63" height="18" fill="none"><path d="M.966 4.336h3.01v9.323H.966V4.336zm3.111-2.592c0 .8-.634 1.449-1.626 1.449-.95 0-1.584-.648-1.564-1.449C.868.906 1.502.276 2.471.276s1.584.629 1.606 1.468zm32.868 10.364c0-1.033.735-1.78 1.79-1.78s1.77.729 1.77 1.781c0 1.016-.717 1.761-1.79 1.761a1.7 1.7 0 0 1-1.77-1.761z" fill="#e84f35"/><path d="M9.357 6.784c.259.057.577.078 1.013.078 1.612 0 2.606-.786 2.606-2.106 0-1.187-.855-1.895-2.367-1.895-.616 0-1.033.057-1.253.114v3.808zM6.354.925C7.289.771 8.603.657 10.452.657c1.869 0 3.203.344 4.098 1.035.856.651 1.432 1.723 1.432 2.989s-.439 2.336-1.233 3.065c-1.035.938-2.564 1.36-4.357 1.36a8.01 8.01 0 0 1-1.035-.057v4.615H6.354V.925zm16.27 8.311c-1.59-.019-2.823.344-2.823 1.474 0 .746.518 1.111 1.193 1.111.755 0 1.373-.477 1.571-1.071a2.02 2.02 0 0 0 .059-.498V9.236zm.358 4.423l-.18-.938h-.059c-.636.748-1.632 1.149-2.784 1.149-1.97 0-3.143-1.377-3.143-2.872 0-2.431 2.268-3.599 5.708-3.58v-.133c0-.498-.279-1.206-1.77-1.206-.994 0-2.049.325-2.685.71l-.557-1.876c.676-.365 2.009-.824 3.78-.824 3.242 0 4.275 1.84 4.275 4.04v3.257c0 .9.04 1.761.138 2.279h-2.722v-.006zm7.002-9.363l1.452 4.596.476 1.742h.059l.437-1.742 1.193-4.596h3.242l-2.266 6.165c-1.393 3.715-2.328 5.208-3.422 6.146a5.69 5.69 0 0 1-2.924 1.284l-.636-2.469c.377-.057.856-.23 1.312-.498.456-.23.954-.688 1.253-1.168a.74.74 0 0 0 .158-.42 1.02 1.02 0 0 0-.14-.479l-3.56-8.56h3.367zm21.519 6.357l.079 3.005h-2.626l-.138-1.32h-.059c-.377.574-1.292 1.531-3.045 1.531-1.968 0-3.42-1.187-3.42-4.078V4.296h3.043v5.037c0 1.36.458 2.182 1.511 2.182.836 0 1.312-.555 1.511-1.014.079-.173.099-.401.099-.632V4.296h3.043v6.357h.002zM59.1 9.236c-1.593-.019-2.825.344-2.825 1.474 0 .746.518 1.111 1.193 1.111.757 0 1.373-.477 1.571-1.071a2.02 2.02 0 0 0 .062-.498V9.236zm.36 4.423l-.18-.938h-.059c-.636.748-1.63 1.149-2.784 1.149-1.97 0-3.141-1.377-3.141-2.872 0-2.431 2.266-3.599 5.708-3.58v-.133c0-.498-.279-1.206-1.77-1.206-.994 0-2.049.325-2.685.71l-.557-1.876c.676-.365 2.009-.824 3.777-.824 3.242 0 4.275 1.84 4.275 4.04v3.257c0 .9.04 1.761.138 2.279H59.46v-.006z" fill="#7c9cac"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" fill="none"><path fill="#ffd232" d="M.5 6h18v6H.5z"/><path fill="#4a8ecc" d="M.5 0h18v6H.5z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="flex-shrink-0 flex-grow-1 qr-main" role="main">
+
+      <div class="container pt-3 pb-5">
+        <!-- <?php if (!$isProcess): ?> -->
+          <div class="row alert-limit">
+            <div class="col-12">
+              <p class="qr-main__title fw-bold mb-2">Оберіть свій банк</p>
+              <div class="d-flex justify-content-between qr-header-alert mb-2">
+                <p class="mb-0">Сплачуючи через Мій Банк, ви наближаєте Україну до європейських стандартів.</p>
+                <span class="qr-logo">Мій Банк</span>
+              </div>
+              <p class="alert-limit__desc">Оберіть банк зі списку і підтвердьте оплату в застосунку банку. </p>
+            </div>
+          </div>
+        <!-- <?php endif; ?> -->
+
+        <div class="row alert-timer d-none">
+          <div class="col-12">
+            <p class="qr-main__title fw-bold mb-2"><?= Yii::t('bank', 'Очікуємо оплату') ?></p>
+            <p><?= Yii::t('bank', 'У вас залишилось <b>{0} секунд</b> для оплати.', ['<span class="timer-count">' . $process->count . '</span>']) ?></p>
+          </div>
+        </div>
+
+        <div class="qr-main__search mb-3">
+          <input type="text" class="form-control" placeholder="Знайти по назві" id="qr-bank-search">
+        </div>
+
+        <div class="row qr-banks">
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <a href="#" class="qr-bank qr-link" data-qr="{$link->qr}" data-bank="{$link->qrBankId}" data-logo="{$link->logo}" data-bank-name="Приватбанк, Privatbank">
+              <div class="qr-bank__logo">
+                <img src="/img/qr-banks/banks/privatbank.svg" alt="Приватбанк">
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <a href="#" class="qr-bank qr-link" data-bank-name="Монобанк">
+              <div class="qr-bank__logo">
+                <img src="/img/qr-banks/banks/monobank.svg" alt="Монобанк">
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <a href="#" class="qr-bank qr-link" data-bank-name="ПУМБ">
+              <div class="qr-bank__logo">
+                <img src="/img/qr-banks/banks/pumb.svg" alt="ПУМБ">
+              </div>
+              <span class="qr-bank__badge-commission">0% комісія</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <a href="#" class="qr-bank qr-link" data-bank-name="А-Банк">
+              <div class="qr-bank__logo">
+                <img src="/img/qr-banks/banks/a-bank.svg" alt="А-Банк">
+              </div>
+              <span class="qr-bank__badge-text">Можлива комісія банку</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <a href="#" class="qr-bank qr-link" data-bank-name="Сенс Банк">
+              <div class="qr-bank__logo">
+                <img src="/img/qr-banks/banks/sense-bank.svg" alt="Сенс Банк">
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <a href="#" class="qr-bank qr-link" data-bank-name="Укргазбанк">
+              <div class="qr-bank__logo">
+                <img src="/img/qr-banks/banks/ukrgasbank.svg" alt="Укргазбанк">
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <a href="#" class="qr-bank qr-link" data-bank-name="Кредит Дніпро">
+              <div class="qr-bank__logo">
+                <img src="/img/qr-banks/banks/kredyt-dnipro.svg" alt="Кредит Дніпро">
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3 qr-banks--future">
+            <div class="qr-bank" data-bank-name="Асвіо Банк">
+              <div class="qr-bank__logo">
+                <img src="/img/qr-banks/banks/asvio.svg" alt="Асвіо Банк">
+              </div>
+              <span class="qr-bank__badge-text">Банк не підтримує оплату</span>
+            </div>
+          </div>
+        </div>
+         
+      <div>
+
+      <div class="modal fade" id="qr-code-modal">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h1 class="modal-title fs-5"><?= Yii::t('bank', 'Відскануйте QR код') ?></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="alert alert-info d-none alert-timer">
+                          <?= Yii::t('bank', 'У вас залишилось <b>{0} секунд</b> для оплати.', ['<span class="timer-count">' . $process->limit . '</span>']) ?>
+                      </div>
+                      <img src="" alt="" id="qr-code-image" class="img-fluid">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade qr-process-modal" id="qr-code-mobile-modal" aria-hidden="true" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <div class="qr-process-modal__body text-center">
+                          <p class="qr-process-modal__title"><?= Yii::t('bank', 'Закінчіть оплату<br>в застосунку банку') ?></p>
+                          <p class="small"><?= Yii::t('bank', 'Ви обрали') ?></p>
+                          <div class="qr-process-modal__bank">
+                              <img src="" alt="" id="qr-chosen-bank-logo">
+                          </div>
+                          <p class="qr-process-modal__timer" id="qrcode-payment-timer"></p>
+                          <p class="qr-process-modal__text1 mb-4"><?= Yii::t('bank', 'Таймер показує лише час виділений на проведення платежу.') ?></p>
+                          <p class="qr-process-modal__text2 mb-4"><?= Yii::t('bank', 'Після оплати сторінка оновиться автоматично.') ?></p>
+                          <button type="button" class="qr-process-modal__close" data-bs-dismiss="modal" aria-label="Close"><?= Yii::t('bank', 'Обрати інший банк') ?></button>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <div class="qr-process-modal__secured mx-auto">
+                          <span><?= Yii::t('main', 'Платежі забезпечені') ?></span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="63" height="18" fill="none"><path d="M.966 4.336h3.01v9.323H.966V4.336zm3.111-2.592c0 .8-.634 1.449-1.626 1.449-.95 0-1.584-.648-1.564-1.449C.868.906 1.502.276 2.471.276s1.584.629 1.606 1.468zm32.868 10.364c0-1.033.735-1.78 1.79-1.78s1.77.729 1.77 1.78c0 1.016-.717 1.761-1.79 1.761a1.7 1.7 0 0 1-1.77-1.761z" fill="#e84f35"/><path d="M9.357 6.784c.259.057.577.078 1.013.078 1.612 0 2.606-.786 2.606-2.106 0-1.187-.856-1.895-2.367-1.895-.616 0-1.033.057-1.253.114v3.808zM6.354.925C7.289.771 8.603.657 10.452.657c1.869 0 3.203.344 4.098 1.035.856.651 1.432 1.723 1.432 2.989s-.439 2.336-1.233 3.065c-1.035.938-2.564 1.36-4.357 1.36a8.01 8.01 0 0 1-1.035-.057v4.615H6.354V.925zm16.27 8.311c-1.59-.019-2.823.344-2.823 1.474 0 .746.518 1.111 1.193 1.111.755 0 1.373-.477 1.571-1.071a2.04 2.04 0 0 0 .059-.498V9.236zm.358 4.423l-.18-.938h-.059c-.636.748-1.632 1.149-2.784 1.149-1.97 0-3.143-1.377-3.143-2.872 0-2.431 2.268-3.599 5.708-3.58v-.133c0-.498-.279-1.206-1.77-1.206-.994 0-2.049.325-2.685.71l-.557-1.876c.676-.365 2.009-.824 3.78-.824 3.242 0 4.275 1.84 4.275 4.04v3.257c0 .9.04 1.761.138 2.279h-2.722v-.006zm7.002-9.363l1.452 4.596.476 1.742h.059l.436-1.742L33.6 4.296h3.242l-2.266 6.165c-1.393 3.715-2.328 5.208-3.422 6.146a5.69 5.69 0 0 1-2.924 1.284l-.636-2.469c.377-.057.855-.23 1.312-.498.456-.23.954-.688 1.253-1.168a.74.74 0 0 0 .158-.42 1.02 1.02 0 0 0-.14-.479l-3.56-8.56h3.367zm21.519 6.357l.079 3.005h-2.626l-.138-1.32h-.059c-.377.575-1.292 1.531-3.045 1.531-1.968 0-3.42-1.187-3.42-4.078V4.296h3.043v5.037c0 1.36.458 2.182 1.511 2.182.836 0 1.312-.555 1.511-1.014.079-.173.099-.401.099-.631V4.296h3.043v6.357h.002zM59.1 9.236c-1.593-.019-2.825.344-2.825 1.474 0 .746.518 1.111 1.193 1.111.757 0 1.373-.477 1.571-1.071a2.02 2.02 0 0 0 .061-.498V9.236zm.36 4.423l-.18-.938h-.059c-.636.748-1.63 1.149-2.784 1.149-1.97 0-3.141-1.377-3.141-2.872 0-2.431 2.266-3.599 5.708-3.58v-.133c0-.498-.279-1.206-1.77-1.206-.994 0-2.049.325-2.685.71l-.557-1.876c.676-.365 2.009-.824 3.778-.824 3.242 0 4.275 1.84 4.275 4.04v3.257c0 .9.039 1.761.138 2.279H59.46v-.006z" fill="#7c9cac"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="12" fill="none"><path fill="#ffd232" d="M.5 6h18v6H.5z"/><path fill="#4a8ecc" d="M.5 0h18v6H.5z"/></svg>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/js/qr-banks-v1.js"></script>
+  </body>
+</html>
