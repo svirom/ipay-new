@@ -1,0 +1,1230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/splide-core.min.css">
+    <link rel="stylesheet" href="/css/category-icons.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/breadcrumb.css">
+    <link rel="stylesheet" href="/css/catalogue.css">
+    <link rel="stylesheet" href="/css/search-form.css">
+    <link rel="stylesheet" href="/css/category-mybank.css">
+    <link rel="stylesheet" href="/css/category-text.css">
+    <link rel="stylesheet" href="/css/header-notifications.css">
+    <link rel="stylesheet" href="/css/sticky-footer.css">
+
+    <title>Category Mybank</title>
+  </head>
+  <body>
+
+    <!-- header -->
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 main-nav">
+            <div class="main-nav__logo logo-color">
+              <a href="#"></a>
+            </div>
+            <nav class="">
+              <ul class="main-nav__nav">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"><span>Пошук</span></a>
+                </li>
+                <li class="main-nav__item main-nav__item--p2p dropdown">
+                  <a href="#" class="main-nav__link main-nav__p2p" role="button" id="header-dropdown-p2p" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Перекази</span></a>
+                  <div class="dropdown-menu" aria-labelledby="header-dropdown-p2p">
+                    <a class="dropdown-item" href="#">Перекази з картки на картку</a>
+                    <a class="dropdown-item" href="#">Перекази з-за кордону в Україну</a>
+                    <a class="dropdown-item" href="#">Перекази за реквізитами</a>
+                  </div>
+                </li>
+                <li class="main-nav__item main-nav__item--mobile">
+                  <a href="#" class="main-nav__link"><span>Поповнення мобільного</span></a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="extra-small main-nav__icon main-nav__icon--safety">
+                    <span>Безпека </span>
+                    <span>платників</span>
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--notifications dropdown header-notifications">
+                  <a href="#" class="header-notifications__link" role="button" id="header-dropdown-notif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="header-dropdown-notif">
+                    <a href="#" class="header-notifications__card">
+                      <div class="header-notifications__card-icon">
+                        <img src="img/icons/ad-megaphone.svg" alt="Icon">
+                      </div>
+                      <div class="header-notifications__card-content">
+                        <p class="font-weight-bold mb-0">Нова послуга!</p>
+                        <p class="mb-1">Здійснюйте перекази з-за кордону на iPay.ua</p>
+                        <p class="red-color mb-0">Спробувати</p>
+                      </div>
+                    </a>
+                    <a href="#" class="header-notifications__card">
+                      <div class="header-notifications__card-icon">
+                        <img src="img/icons/ad-megaphone.svg" alt="Icon">
+                      </div>
+                      <div class="header-notifications__card-content">
+                        <p class="font-weight-bold mb-0">Нова послуга!</p>
+                        <p class="mb-1">Здійснюйте перекази з-за кордону на iPay.ua</p>
+                        <p class="red-color mb-0">Спробувати</p>
+                      </div>
+                    </a>
+                    <a href="#" class="header-notifications__card header-notifications__card--all">
+                      <span class="text-center small">Усі сповіщення</span>
+                    </a>
+                  </div>
+                  <!-- <a href="#" class="header-notifications__link header-notifications__link--empty" role="button" id="header-dropdown-notif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="header-dropdown-notif">
+                    <span class="header-notifications__empty">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><g clip-path="url(#A)"><path d="M17.576 35.461l7.852 1.525a4 4 0 0 1-1.673 2.602 4 4 0 0 1-3.029.63 4 4 0 0 1-2.572-1.718 4 4 0 0 1-.578-3.039zm20.658-1.09l-.381 1.96-31.378-6.095.381-1.96 2.003-.972c1.371-.664 2.664-2.092 2.873-3.169l2.097-10.785c.632-3.095 2.46-5.816 5.087-7.571s5.841-2.401 8.942-1.798 5.839 2.405 7.618 5.015 2.456 5.818 1.883 8.925l-2.095 10.787c-.209 1.077.455 2.885 1.478 4.014l1.492 1.65z" fill="#ffd578"/><circle cx="38.151" cy="31.491" r="7.353" fill="#e84f35"/><path d="M40.476 30.688v1.083c0 .582-.052 1.073-.156 1.473s-.254.722-.449.966a1.71 1.71 0 0 1-.707.532c-.273.107-.582.161-.927.161-.273 0-.525-.034-.756-.102s-.439-.177-.624-.327a1.98 1.98 0 0 1-.468-.595c-.13-.244-.229-.54-.297-.888s-.102-.754-.102-1.219v-1.083c0-.582.052-1.07.156-1.463s.258-.709.454-.946a1.65 1.65 0 0 1 .702-.517c.276-.104.585-.156.927-.156.276 0 .53.034.761.102a1.72 1.72 0 0 1 .624.317c.182.143.337.335.463.575a3.05 3.05 0 0 1 .297.873c.068.345.102.75.102 1.215zm-.907 1.229v-1.38c0-.319-.02-.598-.059-.839s-.089-.452-.161-.624-.163-.312-.273-.419-.233-.185-.376-.234a1.35 1.35 0 0 0-.473-.078 1.28 1.28 0 0 0-.571.122c-.166.078-.306.203-.419.375s-.195.398-.254.678-.088.619-.088 1.019v1.38c0 .319.018.6.054.844a2.79 2.79 0 0 0 .171.634 1.46 1.46 0 0 0 .273.434 1.02 1.02 0 0 0 .371.254c.143.052.301.078.473.078.221 0 .415-.042.58-.127s.304-.216.414-.395.198-.415.254-.697.083-.627.083-1.024z" fill="#fff"/></g><defs><clipPath id="A"><path fill="#fff" d="M0 0h48v48H0z"/></clipPath></defs></svg>
+                      <span class="heading-color ml-3">Нема сповіщень</span>
+                    </span>
+                  </div> -->
+                </li>
+                <li class="main-nav__item main-nav__item--lang dropdown">
+                  <a href="#" class="main-nav__lang item-lang-ua" role="button" id="dropdown-lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">УКР</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-lang">
+                    <a class="dropdown-item item-lang-ua" href="#">УКР</a>
+                    <a class="dropdown-item active" href="#">РУС</a>
+                    <a class="dropdown-item" href="#">ENG</a>
+                  </div>
+                </li>
+                <li class="main-nav__item dropdown">
+                  <a href="#" class="btn btn-account" role="button" id="dropdown-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Мой кабинет</a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-account">
+                    <a class="dropdown-item dropdown-login" href="#">Войти или Зарегистрироваться</a>
+                    <a class="dropdown-item dropdown-archive" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-archive dropdown-archive--new" href="#">Архив платежей</a>
+                    <a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="main-nav__nav-mobile">
+                <li class="main-nav__item main-nav__item--search">
+                  <a href="#" class="main-nav__search main-nav__link" data-toggle="modal" data-target="#searchModal"></a>
+                </li>
+                <li class="main-nav__item-account">
+                  <a href="#" class="btn btn-red">Увійти</a>
+                </li>
+                <li class="main-nav__item main-nav__item-mobile">
+                  <button class="navbar-toggler collapsed main-nav__opener" type="button" data-toggle="collapse" data-target="#dropdown-account-mobile" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-opener"><span></span></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="dropdown-account-mobile">
+                    <div class="navbar-collapse__menu">
+                      <a href="#" class="btn btn-green main-nav__mobile-next">Каталог</a>
+                      <!-- <ul>
+                        <li><a class="dropdown-item dropdown-archive" href="#">Архив платежей</a></li>
+                        <li><a class="dropdown-item dropdown-bonus" href="#">Бонусная программа</a></li>
+                        <li><a class="dropdown-item dropdown-safety" href="#">Безопасность плательщиков</a></li>
+                      </ul> -->
+                      <div class="mobile-login text-center">
+                        <p class="heading-color">Увійдіть, щоб зберігати історію ваших платежів та зберігати рахунки</p>
+                        <a href="#" class="btn btn-green btn-block">Увійти або зареєструватись</a>
+                      </div>
+                      <p class="main-nav__mobile-title heading-color mt-4">Підтримка</p>
+                      <ul class="mobile-nav-support">
+                        <li>
+                          <a href="#" class="mobile-nav-support__item mobile-nav-support__item--viber">Техпідтримка у Viber</a>
+                        </li>
+                        <li>
+                          <a href="#" class="mobile-nav-support__item mobile-nav-support__item--telegram">Техпідтримка у Telegram</a>
+                        </li>
+                      </ul>
+                      <p class="main-nav__mobile-title heading-color mt-4">Корисні матеріали</p>
+                      <ul class="mobile-nav-list">
+                        <li>
+                          <a href="#">Питання та відповіді</a>
+                        </li>
+                        <li>
+                          <a href="#">Новини та Акцій</a>
+                        </li>
+                        <li>
+                          <a href="#">Знайти квитанцію</a>
+                        </li>
+                        <li>
+                          <a href="#">Платіжний чат-бот</a>
+                        </li>
+                        <li>
+                          <a href="#">Безпека платежів</a>
+                        </li>
+                      </ul>
+                      <p class="main-nav__mobile-title heading-color mt-4">Для бізнесу</p>
+                      <ul class="mobile-nav-list">
+                        <li>
+                          <a href="#">Про компанію</a>
+                        </li>
+                        <li>
+                          <a href="#">Підключення оплат</a>
+                        </li>
+                        <li>
+                          <a href="#">Контакти</a>
+                        </li>
+                      </ul>
+                      <div class="mobile-lang">
+                        <span>Мова:</span>
+                        <ul class="mobile-lang__list">
+                          <li class="active"><a href="#">УКР</a></li>
+                          <li><a href="#">РУС</a></li>
+                          <li><a href="#">ENG</a></li>
+                        </ul>
+                      </div>
+                      <p class="main-nav__mobile-title heading-color mt-3">Ми в соцмережах</p>
+                      <ul class="mobile-nav-social mb-4">
+                        <li><a href="#"><img src="img/icons/icon-facebook-grey.svg" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-viber-grey.svg" alt="Viber"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-instagram-grey.svg" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="img/icons/icon-linkedin-grey.svg" alt="LinkedIn"></a></li>
+                      </ul>
+                    </div>
+                    <div class="catalogue-mobile">
+                      <a class="catalogue-mobile__back" href="#">Назад</a>
+                      <!-- catalogue widget -->
+                      <div class="catalogue catalogue--icons">
+                        <ul class="catalogue__list">
+                          <li class="catalogue__list-title">Грошові перекази</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-p2p"></i>
+                              </span>
+                              <span>Перекази з картки на картку</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-p2r"></i>
+                              </span>
+                              <span>Переказ за реквізитами</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-sbor"></i>
+                              </span>
+                              <span>Створити збір грошей</span>
+                            </a>
+                          </li>
+                          <li class="catalogue__list-title">Платежі</li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <!-- <i class="category-icon-army"></i> -->
+                                <img src="img/icons/icon-drones.svg">
+                              </span>
+                              <span>Підтримай армію</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-mobile"></i>
+                              </span>
+                              <span>Мобільний зв'язок</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item active">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-utility"></i>
+                              </span>
+                              <span>Комунальні послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-podatku"></i>
+                              </span>
+                              <span>Податки та платежі в бюджет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-kinders"></i>
+                              </span>
+                              <span>Дитячі садки</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-internet"></i>
+                              </span>
+                              <span>Інтернет</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-tv"></i>
+                              </span>
+                              <span>Телебачення</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-phone"></i>
+                              </span>
+                              <span>Телефонний зв'язок</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-security"></i>
+                              </span>
+                              <span>Охорона</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-transport"></i>
+                              </span>
+                              <span>Транспорт</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-fees"></i>
+                              </span>
+                              <span>Оплата штрафів</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-tourism"></i>
+                              </span>
+                              <span>Туризм</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-insurance"></i>
+                              </span>
+                              <span>Страхування</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-refresh"></i>
+                              </span>
+                              <span>Погашення кредитів</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-online"></i>
+                              </span>
+                              <span>Кредити онлайн</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="№" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-credits-by-cash"></i>
+                              </span>
+                              <span>Кредити готівкою</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-education"></i>
+                              </span>
+                              <span>Освіта</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-business"></i>
+                              </span>
+                              <span>Бізнес-послуги</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-charity"></i>
+                              </span>
+                              <span>Благодійність</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="catalogue__item catalogue__item--online-payment my-3">
+                              <span class="catalogue__item-icon">
+                                <i class="category-icon-business"></i>
+                              </span>
+                              <span>Підключити онлайн оплати</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div><!-- catalogue widget -->
+                    </div>
+                  </div>      
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header -->
+
+    <!-- main wrapper -->
+    <div class="main-wrapper">
+
+      <!-- search form mobile -->
+      <div class="d-lg-none form-search-mobile">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="#" class="form-search__search" data-toggle="modal" data-target="#searchModal">Поиск услуги</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- breadcrumb widget -->
+      <nav aria-label="breadcrumb" class="breadcrumb-wrapper" id="breadcrumb-widget">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a class="breadcrumb__home" href="/">
+                    <span class="d-none">Головна</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Каталог</span>
+                  </a>
+                </li>
+                <li class="active" aria-current="page">
+                  <span>Мій Банк</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </nav><!-- breadcrumb widget -->
+
+      <!-- main content -->
+      <div class="container main-content category-mybank">
+        <div class="row">
+          <!-- aside area -->
+          <aside class="col-lg-4 d-none d-lg-block">
+            <!-- catalogue widget -->
+            <div class="catalogue catalogue--icons" id="catalogue-widget">
+              <ul class="catalogue__list">
+                <li>
+                  <a href="#" class="catalogue__item catalogue__item--mybank">
+                    <span class="catalogue__item-icon">
+                      <img src="img/icons/mybank-logo.svg">
+                    </span>
+                    <span>Оплатити з «Мій банк»</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <!-- <i class="category-icon-army"></i> -->
+                      <img src="img/icons/icon-drones.svg">
+                    </span>
+                    <span>Підтримай армію</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-p2p"></i>
+                    </span>
+                    <span>Грошові перекази</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-mobile"></i>
+                    </span>
+                    <span>Мобільний зв'язок</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-sbor"></i>
+                    </span>
+                    <span>Створити збір грошей</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-utility"></i>
+                    </span>
+                    <span>Комунальні послуги</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-p2r"></i>
+                    </span>
+                    <span>Переказ за реквізитами</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-podatku"></i>
+                    </span>
+                    <span>Податки та платежі в бюджет</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-kinders"></i>
+                    </span>
+                    <span>Дитячі садки</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-internet"></i>
+                    </span>
+                    <span>Інтернет</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-tv"></i>
+                    </span>
+                    <span>Телебачення</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-phone"></i>
+                    </span>
+                    <span>Телефонний зв'язок</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-security"></i>
+                    </span>
+                    <span>Охорона</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-transport"></i>
+                    </span>
+                    <span>Транспорт</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-fees"></i>
+                    </span>
+                    <span>Оплата штрафів</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-tourism"></i>
+                    </span>
+                    <span>Туризм</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-insurance"></i>
+                    </span>
+                    <span>Страхування</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-credits-refresh"></i>
+                    </span>
+                    <span>Погашення кредитів</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="№" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-credits-online"></i>
+                    </span>
+                    <span>Кредити онлайн</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="№" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-credits-by-cash"></i>
+                    </span>
+                    <span>Кредити готівкою</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-education"></i>
+                    </span>
+                    <span>Освіта</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-business"></i>
+                    </span>
+                    <span>Бізнес-послуги</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__item">
+                    <span class="catalogue__item-icon">
+                      <i class="category-icon-charity"></i>
+                    </span>
+                    <span>Благодійність</span>
+                  </a>
+                </li>
+                <li>
+                <a href="#" class="catalogue__item catalogue__item--online-payment" target="_blank">
+                  <span class="catalogue__item-icon">
+                    <i class="category-icon-business"></i>
+                  </span>
+                  <span>iPay.ua для бізнесу</span>
+                </a>
+            </li>
+              </ul>
+            </div><!-- catalogue widget -->
+          </aside><!-- aside area -->
+          <!-- main area -->
+          <main class="col-lg-8">
+
+            <div class="d-lg-none mb-3 mb-lg-0">
+              <a href="#" class="btn btn-link btn-back">Головна</a>
+            </div>
+
+            <div class="category-title mb-3 mb-md-4">
+              <h1>Оплатити з «Мій банк»</h1>
+            </div>
+
+            <div class="category-mybank__header mb-3">
+              <div class="category-mybank__header-left">
+                <img src="img/icons/mybank-logo-dark.svg" alt="МійБанк">
+                <p class="category-mybank__title">Проста оплата з вашого IBAN на IBAN підприємства</p>
+                <p class="category-mybank__subtitle">без карток і зайвих даних</p>
+                <button class="btn btn-green">Увійти та спробувати</button>
+              </div>
+              <div class="category-mybank__header-right">
+                <picture>
+                  <source 
+                    srcset="img/mybank/mybank-header-m@2x.png 2x" 
+                    media="(max-width: 575px)" 
+                    type="image/png">
+
+                  <img 
+                    src="img/mybank/mybank-header@1x.png" 
+                    srcset="img/mybank/mybank-header@2x.png 2x" 
+                    alt="Hand with Phone">
+                </picture>
+              </div>
+            </div> <!-- /.category-mybank__header -->
+
+            <div class="category-mybank__promo mb-4 mb-md-3">
+              <div class="row col-pad8">
+                <div class="col-md-4">
+                  <div class="category-mybank__card">
+                    <p class="category-mybank__card-header">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><g clip-path="url(#A)" stroke="#172a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.286 15v-2.572C22.286 6.069 17.657.857 12 .857S1.714 6 1.714 12.429v10.714m5.143-3.857v3.857m10.286 0v-9.429c0-3.531-2.314-6.429-5.143-6.429s-5.143 2.897-5.143 6.429V15M12 20.571v2.571m0-10.713v3.857m10.286 6.857v-3.429"/></g><defs><clipPath id="A"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                      <span class="heading-color ml-3">Безпечно</span>
+                    </p>
+                    <p class="category-mybank__card-text small heading-color mb-0">Платіж захищений системами безпеки банку</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0">
+                  <div class="category-mybank__card">
+                    <p class="category-mybank__card-header">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none"><g clip-path="url(#A)" stroke="#172a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.643 9.375c.139-1.245.568-2.44 1.251-3.49a8.03 8.03 0 0 1 2.685-2.557 8.05 8.05 0 0 1 3.547-1.08 8.02 8.02 0 0 1 3.654.628c1.152.492 2.174 1.245 2.983 2.201s1.384 2.089 1.678 3.306.299 2.487.015 3.708a8.03 8.03 0 0 1-1.651 3.319m-6.18-8.714v3.571h2.679M1.339 13.839h7.143a4.47 4.47 0 0 1 1.708.34 4.45 4.45 0 0 1 1.448.968c.414.415.743.907.968 1.448a4.45 4.45 0 0 1 .34 1.708h0m-5.357.001h8.929a3.57 3.57 0 0 1 3.572 3.571.89.89 0 0 1-.262.631c-.168.167-.395.262-.631.262H1.339"/></g><defs><clipPath id="A"><path fill="#fff" d="M0 0h25v25H0z"/></clipPath></defs></svg>
+                      <span class="heading-color ml-3">Швидко</span>
+                    </p>
+                    <p class="category-mybank__card-text small heading-color mb-0">Без введення даних картки — лише підтвердження в застосунку</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-3 mt-md-0">
+                  <div class="category-mybank__card">
+                    <p class="category-mybank__card-header">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><g clip-path="url(#A)" stroke="#172a3a" stroke-width="2" stroke-linejoin="round"><path d="M12 16.286c2.367 0 4.286-1.919 4.286-4.286S14.367 7.714 12 7.714 7.714 9.633 7.714 12 9.633 16.286 12 16.286z"/><path d="M4.68 22.971A8.57 8.57 0 0 1 12 18.859a8.57 8.57 0 0 1 7.32 4.112" stroke-linecap="round"/><path d="M23.143 11.897c.002-.238-.046-.474-.141-.692s-.233-.415-.408-.577L12 .857 1.406 10.629c-.174.162-.313.358-.408.577s-.142.454-.141.692v9.531c0 .455.181.891.502 1.212s.758.502 1.212.502h18.857c.455 0 .891-.181 1.212-.502s.502-.758.502-1.212v-9.531z"/></g><defs><clipPath id="A"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                      <span class="heading-color ml-3">Своїм банком</span>
+                    </p>
+                    <p class="category-mybank__card-text small heading-color mb-0">Оплата у звичному застосунку вашого банку з вибором рахунку</p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- /.category-mybank__promo -->
+
+            <div class="category-mybank__slider mybank-logo-slider mb-4">
+
+              <h2 class="mb-3">Доступні банки</h2>
+              
+              <div id="mybank-logo-slider" class="splide">
+                <div class="splide__arrows">
+                  <button class="splide__arrow splide__arrow--prev">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.49927 14.0799H21.7506" stroke="#172A3A" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.7493 7.8299L8.24927 14.0799L15.7493 20.3299" stroke="#172A3A" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button class="splide__arrow splide__arrow--next">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.4058 15L7.90576 15" stroke="#172A3A" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.1558 21.25L21.6558 15L14.1558 8.75" stroke="#172A3A" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/credit-dnipro.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/ideabank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/abank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/sense.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/radabank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/pumb.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/vostok.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/privatbank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/otp.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/praveks.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/unexbank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/mtb.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/acordbank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/pivdennyibank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/concordbank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/grant.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/ukrgasbank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/monobank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/izibank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/globus.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/credit-agricole.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/pireus.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/altbank.svg" alt="Image">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="img/mybank/bank/ukrsibbank.svg" alt="Image">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+            </div> <!-- /.category-mybank__slider -->
+
+            <div class="category-mybank__filter my-4">
+              <a href="#" class="category-mybank__filter-button" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Всі категорії</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" role="button">Комунальні</a>
+                <a class="dropdown-item" href="#" role="button">Інтернет, телефон, ТБ</a>
+                <a class="dropdown-item" href="#" role="button">За реквізитами</a>
+                <a class="dropdown-item" href="#" role="button">Поповнення мобільного</a>
+                <a class="dropdown-item" href="#" role="button">Інше</a>
+                </div>
+            </div>
+
+            <div class="row col-pad8">
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/yasno.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київські енергетичні послуги Yasno</span>
+                  </span>
+                  <div class="category-card__labels">
+                    <span class="category-card__label category-card__label--commission">0%</span>
+                    <span class="category-card__label category-card__label--yapomoga question-popover" role="button" tabindex="-1" data-toggle="popover" data-placement="right" data-content="Додавайте допомогу при оплаті на облаштування притулків для тварин"></span>
+                    <span class="category-card__label category-card__label--cashback question-popover" role="button" tabindex="-1" data-toggle="popover" data-placement="right" data-content="Цю послугу можна сплатити карткою програми “Національний кешбек”"></span>
+                    <span class="category-card__label category-card__label--mybank question-popover" role="button" tabindex="-1" data-toggle="popover" data-placement="right" data-content="Послуга підртимує оплату<br>«Мій банк» - новий сервіс оплати IBAN to IBAN"></span>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/kyivgasenergy.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київводоканал</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/yasno.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">ООО "Станиславская теплоэнергетическая компания"</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/kyivgas.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київгаз</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/kyivgas.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київгаз</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/yasno.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">ООО "Станиславская теплоэнергетическая компания"</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/kyivgas.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київгаз</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/yasno.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">ООО "Станиславская теплоэнергетическая компания"</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/yasno.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київські енергетичні послуги Yasno</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/kyivgasenergy.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київводоканал</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/yasno.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">ООО "Станиславская теплоэнергетическая компания"</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/kyivgas.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київгаз</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-12 mb-3">
+                <div class="banner banner-w100"></div>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/kyivgas.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київгаз</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/yasno.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">ООО "Станиславская теплоэнергетическая компания"</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/kyivgas.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">Київгаз</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 mb-3">
+                <a href="#" class="category-card">
+                  <span class="category-card__img">
+                    <img src="img/providers/yasno.png" alt="">
+                  </span>
+                  <span class="category-card__content">
+                    <span class="category-card__title">ООО "Станиславская теплоэнергетическая компания"</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+                    
+            <div class="text-center mt-2 mb-5">
+              <div class="pages-more mb-3">
+                <a href="#" class="btn btn-more">Показать еще</a>
+              </div>
+              <div class="pagination-wrapper">
+                <ul class="pagination justify-content-center d-none d-lg-flex">
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                  <li class="page-item"><a class="page-link next-link" href="#">»</a></li>
+                </ul>
+                <ul class="pagination justify-content-center d-flex d-lg-none">
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item"><a class="page-link" href="#">9</a></li>
+                  <li class="page-item">
+                    <a class="page-link next-link" href="#">»</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- category text widget -->
+            <div class="category-text mt-5" id="category-text-widget">
+              <h2>Коммунальные услуги</h2>
+              <p>Оплата коммунальных услуг – это ежемесячная обязанность каждого жителя нашей страны. При этом, согласно нововведенным нормативно-правовым требованиям, наказания за несвоевременное или неполное перечисление средств еще более ужесточились. Именно поэтому очень важно знать, как проходит оплата коммунальных услуг в Украине, и как ее лучше осуществить.</p>
+              <h3>Как оплатить коммунальные услуги на iPay.ua?</h3>
+              <p>Конечно, можно отправиться на почту или в банк, но такое решение требует затрат времени и сил. Не все имеют возможность стоять несколько десятков минут (или, даже, парочку часов) в очередях. Таким образом, более оптимальным решением будет использование специального онлайн-ресурса iPay.ua, который позволяет погасить задолженность в пару кликов.</p>
+              <h3>Какие коммунальных услуги можно оплатить онлайн?</h3>
+              <p>При помощи сервиса iPay.ua можно оплатить коммуналку с максимальным комфортом. Для пользователя потребуется лишь:</p>
+              <ul class="list list--circle">
+                <li>банковская карточка Visa или MasterCard (подойдет карточка любого финансового учреждения);</li>
+                <li>компьютер или смартфон с доступом к интернету.</li>
+              </ul>
+              <p>Оплатить можно любые коммунальные услуги, независимо от вашего места жительства.</p>
+              <h4>Газ</h4>
+              <p>Чтобы перевести деньги за газ, необходимо выбрать соответствующее коммунальное предприятие, на счет которого будут зачислены средства. Это можно сделать с помощью наименования или реквизитов компании (вся необходимая информация находится на квитанции). Для самой транзакции нужно просто ввести:</p>
+              <ul class="list list--circle">
+                <li>номер лицевого счета;</li>
+                <li>сумму;</li>
+                <li>данные карты.</li>
+              </ul>
+              <p>Оплата счетов за другие коммунальные услуги осуществляется аналогично.</p>
+              <h4>Вода</h4>
+              <p>Стоит отметить, что деньги будут зачислены практически мгновенно. Если вы решите рассчитаться за воду онлайн, то вся операция практически не отнимет времени, а средства будут на указанном счету в течение 1-2 минут.</p>
+              <h4>Электроэнергия</h4>
+              <p>Очень важно своевременно перевести деньги на счет коммунального предприятия, ведь после 20 числа могут начисляться штрафные санкции. Чтобы не пропустить платеж и выполнить все с максимальным удобством, можно создать соответствующий шаблон. Так транзакция будет проведена в один клик.</p>
+              <h4>Отопление</h4>
+              <p>С наступлением отопительного сезона такие платежи больше всего беспокоят жителей Украины. Чтобы не переплачивать на и так огромных счетах, следует воспользоваться iPay – интернет-ресурс никакие дополнительные комиссии не взимаются, что поможет несколько сэкономить.</p>
+              <h4>Оплата всех коммунальных услуг за раз</h4>
+              <p>Стоит отметить, что если вы не знаете, как оплатить коммунальные услуги через интернет, то при помощи сервиса iPay все будет выполнено максимально просто и удобно. Для транзакции клиенту требуется минимум сведений (все необходимое есть на карточке и квитанции). При этом можно оплатить все коммунальные услуги за один раз – нужно лишь зарегистрироваться в личном кабинете и составить соответствующий шаблон. Так вы еще более сэкономите свое свободное время!</p>
+              <h3>В каких регионах можно оплатить за квартиру на iPay?</h3>
+              <p>На данный момент наш ресурс дает возможность оплатить коммунальные платежи для жителей всей Украины. Деньги будут зачислены на счет коммунальных служб в течение нескольких минут, независимо от того, в каком регионе вы проживаете.</p>
+              <h3>Можно ли оплатить коммуналку без комиссии?</h3>
+              <p>Но оперативность – не единственное преимущество iPay. Кроме того, следует также выделить и отсутствие дополнительных издержек на такие операции. Размер комиссии зависит исключительно от компании, которой вы перечисляете средства, в большинстве случаев она составляет 0 %. Таким образом, вы еще и экономите.</p>
+              <h3>Могу ли я получить квитанция после оплаты?</h3>
+              <p>После завершения операции на вашу электронную почту придет письмо с квитанцией. Она служит подтверждением тому, что транзакция была проведена. Документ можно хранить в электронном варианте, кроме того, при необходимости, его всегда можно будет распечатать. В личном кабинете можно получить доступ ко всем платежам, которые пользователь совершил через iPay.</p>
+              <p>Кроме того, используются новейшие технологии защиты конфиденциальной информации пользователей. Применение современных протоколов – это гарантия сохранности конфиденциальной информации. Как результат, можно выполнять платежи без страха перед злоумышленниками.</p>
+              <h3>iPay – лучший сервис для оплаты коммунальных услуг</h3>
+              <p>Если вы не знаете, где оплатить коммунальные услуги, интернет-ресурс iPay станет лучшим решением данной проблемы. Прежде всего, пользователи могут выполнить все необходимые транзакции в любом удобном месте, никуда идти не нужно. Кроме того, есть также и ряд других преимуществ:</p>
+              <ul class="list list--circle">
+                <li>минимальные комиссии или их полное отсутствие;</li>
+                <li>мгновенное зачисление средств;</li>
+                <li>максимальная простота выполнения транзакций.</li>
+              </ul>
+              <p>Не тратьте свое время – выполняйте оплату коммунальных услуг с iPay.ua!</p>
+            </div><!-- category text widget -->
+
+          </main><!-- main area -->
+        </div>
+      </div><!-- main content -->
+
+    </div><!-- main wrapper -->
+
+    <!-- footer -->
+    <div class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row no-gutters">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                  <p>0 800 60-11-60</p>
+                  <p class="small">Бесплатно с мобильного</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-md-0">
+                <div class="footer-widget">
+                  <p>+38 044 502 11 60</p>
+                  <p class="small">Для звонков из-за границы</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 pl-0 pl-lg-4 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p><a href="mailto:help@ipay.ua">help@ipay.ua</a></p>
+                  <p class="small">Пишите на e-mail</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                <div class="footer-widget">
+                  <p>График работы</p>
+                  <p class="small mt-0 mt-lg-4">Пн - Пт 8:00 - 22:00</p>
+                  <p class="small">Сб - Нд 9:00 - 21:00</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-lang">
+                  <a href="#" class="footer-lang__fb"></a>
+                  <span class="small">Язык:</span>
+                  <ul class="footer-lang__list">
+                    <li class="footer-lang__item footer-lang__item--current"><a href="#" class="footer-lang__link">РУС</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">УКР</a></li>
+                    <li class="footer-lang__item"><a href="#" class="footer-lang__link">ENG</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">О Компании</a></li>
+                    <li><a href="#">Новости и Акции</a></li>
+                    <li><a href="#">Найти платеж</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 mt-5 mt-lg-0">
+                <div class="footer-widget">
+                  <ul class="footer-widget__list">
+                    <li><a href="#">Безопасность</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 footer-hr"><hr></div>
+        <div class="row">
+          <div class="col-12">
+            <p class="footer-copyright extra-small">&copy; 2008—2026 іPay.ua</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна небанківська платіжна система «Фінансовий світ» , 04080, м. Київ, вулиця Межигірська, буд. 82 А, корпус Б, офіс 309</p>
+            <p class="footer-copyright extra-small">Товариство з обмеженою відповідальністю «Універсальні платіжні рішення» Внутрішньодержавна платіжна система «FLASHPAY», 03039, м. Київ, проспект Голосіївський, буд. 26-А</p>
+            <p class="footer-copyright extra-small">Внутрішньодержавна платіжна система «City24» , 01042, м. Київ, провулок Новопечерський, будинок 5</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- footer -->
+
+    <div class="sticky-footer dropdown d-sm-none">
+      <div class="container">
+        <div class="row sticky-footer__menu">
+          <div class="col-3">
+            <a href="#" class="sticky-footer__card" id="sticky-footer-catalog-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" stroke="#3b566e" stroke-width="2"><rect x="2.5" y="2" width="8" height="8" rx="1"/><rect x="14.5" y="2" width="8" height="8" rx="1"/><rect x="2.5" y="14" width="8" height="8" rx="1"/><rect x="14.5" y="14" width="8" height="8" rx="1"/></svg>
+              <p class="mt-1 mb-0 extra-small">Каталог</p>
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="#" class="sticky-footer__card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none"><g clip-path="url(#A)" stroke="#3b566e" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"><path d="M20.5 10.736v10c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2v-13c0-1.1.9-2 2-2h5l5 5z"/><g stroke-linecap="round"><path d="M15.5 3.736c0-1.1-.9-2-2-2h-7c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2m14-8h-4c-.55 0-1-.45-1-1v-4"/></g></g><defs><clipPath id="A"><path fill="#fff" transform="translate(.5)" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+              <p class="mt-1 mb-0 extra-small">Шаблони</p>
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="#" class="sticky-footer__card sticky-footer__card--notif" role="button" id="footer-dropdown-notif" data-display="static" data-position="fixed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" stroke="#3b566e" stroke-width="2"><path d="M12.5 3a.5.5 0 1 0 0-1 .5.5 0 1 0 0 1zm9 16.5h-18c.45 0 2.5-1.773 2.5-4.5S5.3 4.5 12.5 4.5 19 12.273 19 15s1.6 4.5 2.5 4.5z" stroke-linejoin="round"/><path d="M10.5 21c0 .5.667 1.5 2 1.5s2-1 2-1.5" stroke-linecap="round"/></svg>
+              <p class="mt-1 mb-0 extra-small">Сповіщення</p>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="footer-dropdown-notif">
+              <a href="#" class="sticky-footer__notif">
+                <div class="sticky-footer__notif-icon">
+                  <img src="img/icons/ad-megaphone.svg" alt="Icon">
+                </div>
+                <div class="sticky-footer__notif-content">
+                  <p class="font-weight-bold mb-0">Нова послуга!</p>
+                  <p class="mb-1">Здійснюйте перекази з-за кордону на iPay.ua</p>
+                  <p class="red-color mb-0">Спробувати</p>
+                </div>
+              </a>
+              <a href="#" class="sticky-footer__notif">
+                <div class="sticky-footer__notif-icon">
+                  <img src="img/icons/ad-megaphone.svg" alt="Icon">
+                </div>
+                <div class="sticky-footer__notif-content">
+                  <p class="font-weight-bold mb-0">Нова послуга!</p>
+                  <p class="mb-1">Здійснюйте перекази з-за кордону на iPay.ua</p>
+                  <p class="red-color mb-0">Спробувати</p>
+                </div>
+              </a>
+              <a href="#" class="sticky-footer__notif sticky-footer__notif--all">
+                <span class="text-center small">Усі сповіщення</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <a href="#" class="sticky-footer__card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none"><g clip-path="url(#A)" stroke="#3b566e" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"><path d="M21.405 20H3.595C2.443 20 1.5 18.988 1.5 17.75V11h7v1.125C8.5 13.363 9.705 14 10.857 14H14c1.152 0 2.5-.637 2.5-1.875V11h7v6.75c0 1.238-.943 2.25-2.095 2.25z"/><path d="M1.5 11.467l3.583-6.389C5.46 4.405 6.151 4 6.906 4h11.189c.754 0 1.446.405 1.823 1.077l3.583 6.389" stroke-linecap="round"/></g><defs><clipPath id="A"><path fill="#fff" transform="translate(.5)" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+              <p class="mt-1 mb-0 extra-small">Архів</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /.sticky-footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-search">
+            <form action="">
+              <div class="form-group">
+                <input type="text" class="form-control form-input input-search" id="search-icon-modal" name="name" autocomplete="off" placeholder="Начните вводить название" aria-required="true">
+                <label class="control-label form-label" for="search-icon-modal">Найдите сервис по названию</label>
+                <a href="#" class="form-search__cancel"></a>
+              </div>
+              <div class="form-search__list"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="/js/splide.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/search-form.js"></script>
+    <script src="/js/select2-style.js"></script>
+    <script src="/js/select2-style.js"></script>
+    <script src="/js/category-mybank.js"></script>
+  </body>
+</html>

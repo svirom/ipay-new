@@ -706,12 +706,6 @@ hr {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.667;
-  transition: all 0.3s ease;
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .form-input::-webkit-input-placeholder {
   font-weight: 400;
@@ -733,8 +727,13 @@ hr {
   font-weight: 400;
   color: rgba(148, 173, 187, 0);
 }
-.form-input:focus, .form-input.filled {
+.form-input {
   transition: all 0.3s ease;
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .form-input:focus::-webkit-input-placeholder, .form-input.filled::-webkit-input-placeholder {
   color: #94adbb;
@@ -750,6 +749,9 @@ hr {
 }
 .form-input:focus::placeholder, .form-input.filled::placeholder {
   color: #94adbb;
+}
+.form-input:focus, .form-input.filled {
+  transition: all 0.3s ease;
 }
 .form-input:focus ~ .form-label, .form-input.filled ~ .form-label {
   top: 0.45rem;
@@ -2369,10 +2371,15 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   font-size: 0.75rem;
   color: #E84F35;
 }
-.category-card__label {
+.category-card__labels {
   position: absolute;
   top: 0.375rem;
   left: 0.375rem;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 0.125rem;
+}
+.category-card__label {
   min-width: 1.75rem;
   height: 1.375rem;
   padding: 0.25rem 0.375rem;
@@ -2392,11 +2399,9 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
 .category-card__label--yapomoga {
   background: #63BBFE url("../img/card/yapomoga-icon.svg") center no-repeat;
 }
-.category-card__label + .category-card__label {
-  left: 2.3125rem;
-}
-.category-card__label + .category-card__label + .category-card__label {
-  left: 4.25rem;
+.category-card__label--mybank {
+  min-width: 1.375rem;
+  background: #000000 url("../img/card/mybank-icon.svg") center no-repeat;
 }
 .template-card {
   -ms-flex-pack: justify;
@@ -2494,10 +2499,12 @@ input[autocomplete="section-sender cc-csc"]::-webkit-credentials-auto-fill-butto
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   color: #3B566E;
-  background-size: 20px;
 }
 .template-card-wrapper .dropdown-menu .dropdown-item:last-of-type::before {
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='22' viewBox='0 0 20 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.63477 4.42676H18.6348' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.6348 9.42664V15.4266M10.1348 9.30664V15.4266V9.30664ZM6.63477 9.42664V15.4266V9.42664Z' stroke='%23E84F35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.6348 4.42676H7.63477V2.42676C7.63477 1.87676 8.08477 1.42676 8.63477 1.42676H11.6348C12.1848 1.42676 12.6348 1.87676 12.6348 2.42676V4.42676Z' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.6348 4.42676V18.4268C16.6348 19.5268 15.7348 20.4268 14.6348 20.4268H5.63477C4.53477 20.4268 3.63477 19.5268 3.63477 18.4268V4.42676' stroke='%23E84F35' stroke-width='1.4' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.template-card-wrapper .dropdown-menu .dropdown-item:last-of-type {
+  background-size: 20px;
 }
 .template-card-wrapper .dropdown-menu .dropdown-item:not(:last-of-type) {
   border-bottom: 1px solid #DEE7F3;

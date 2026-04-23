@@ -306,6 +306,34 @@
 .catalogue--icons .catalogue__item--online-payment:active:not(.active) span:not(.badge) {
   color: #ffffff;
 }
+.catalogue--icons .catalogue__item--mybank {
+  padding-inline: 1rem;
+  font-size: 1rem;
+  background-color: #090909;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.12814 12.1219C6.95729 11.951 6.95729 11.674 7.12814 11.5031L11.1938 7.4375L1.75 7.4375C1.50838 7.4375 1.3125 7.24162 1.3125 7C1.3125 6.75837 1.50838 6.5625 1.75 6.5625L11.1938 6.5625L7.12814 2.49686C6.95729 2.326 6.95729 2.049 7.12814 1.87814C7.299 1.70729 7.57601 1.70729 7.74686 1.87814L12.5594 6.69064C12.7302 6.8615 12.7302 7.13851 12.5594 7.30936L7.74686 12.1219C7.576 12.2927 7.29899 12.2927 7.12814 12.1219Z' fill='white'/%3E%3C/svg%3E");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+}
+.catalogue--icons .catalogue__item--mybank span {
+  line-height: initial;
+}
+.catalogue--icons .catalogue__item--mybank span:not(.badge) {
+  color: #ffffff;
+}
+.catalogue--icons .catalogue__item--mybank:hover {
+  background-color: #172A3A;
+}
+.catalogue--icons .catalogue__item--mybank:active:not(.active) {
+  background-color: #000000;
+}
+.catalogue--icons .catalogue__item--mybank:active:not(.active) span:not(.badge) {
+  color: #ffffff;
+}
+.catalogue--icons .catalogue__item--mybank .catalogue__item-icon {
+  -ms-flex-preferred-size: 5.0625rem;
+      flex-basis: 5.0625rem;
+  max-width: 5.0625rem;
+}
 .catalogue--icons .catalogue__item-icon {
   display: -ms-flexbox;
   display: flex;
@@ -319,6 +347,11 @@
   height: 100%;
   margin-right: 1rem;
   font-size: 1.5rem;
+}
+@media screen and (max-width: 1199px) {
+  .catalogue--icons .catalogue__item--mybank {
+    background-image: none;
+  }
 }
 
 /* catalogue mobile */

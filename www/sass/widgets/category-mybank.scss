@@ -1,0 +1,197 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the category mybank page of the site.
+// -----------------------------------------------------------------------------
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.category-mybank {
+  &__header {
+    display: flex;
+    position: relative;
+    border-radius: 0.5rem;
+    background-color: #F0F5FA;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: calc(100% + 20px);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 684px;
+      height: 684px;
+      border-radius: 50%;
+      background-color: #FFF2BE;
+      filter: blur(120px);
+    }
+
+    .category-mybank__title {
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-right: 1.875rem;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      font-weight: 500;
+      color: #000000;
+    }
+
+    .category-mybank__subtitle {
+      font-size: 1.4375rem;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #3772FF;
+    }
+
+    .btn {
+      height: 3.5rem;
+      padding-inline: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+  }
+
+  &__header-left,
+  &__header-right {
+    position: relative;
+  }
+
+  &__header-left {
+    flex-grow: 1;
+    padding-block: 2.5rem;
+    padding-left: 3.3125rem;
+  }
+
+  &__header-right {
+    align-self: flex-end;
+  }
+
+  &__card {
+    height: 100%;
+    padding: 1.125rem 1.5rem;
+    border-radius: 1rem;
+    background-color: #FFE685;
+
+    &-header {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__filter {
+    display: inline-block;
+    position: relative;
+
+    .category-mybank__filter-button {
+      padding-right: 1.75rem;
+      font-size: 0.875rem;
+      color: #7C9CAC;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.13867 8.52393L10 13.3853' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 13.3853L14.8613 8.52391' stroke='%237C9CAC' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-position: right center;
+      background-repeat: no-repeat;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      & ~ .dropdown-menu {
+        width: 100%;
+        min-width: 15.625rem;
+        margin-top: 0.375rem;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+
+        .dropdown-item {
+          padding: 0.75rem 0.5rem;
+          color: #172A3A;
+          border-radius: 0.5rem;
+          background-repeat: no-repeat;
+
+          &:hover, &:active {
+            background-color: #F0F5FA;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mybank-logo-slider {
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    padding: 0.25rem;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .splide__arrows {
+    position: absolute;
+    display: inline-flex;
+    gap: 1rem;
+    top: -46px;
+    right: 0;
+  }
+
+  .splide__arrow {
+    border: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F0F5FA;
+  }
+}
+
+@include until($md) {
+  .category-mybank {
+    &__header {
+      &::before {
+        left: calc(100% - 30px);
+        top: auto;
+        bottom: 0;
+        transform: translate(-50%, 25%);
+        width: 294px;
+        height: 294px;
+        filter: blur(70px);
+      }
+
+      .category-mybank__title {
+        margin-top: 2rem;
+        padding-right: 0;
+        font-size: 1.125rem;
+      }
+
+      .category-mybank__subtitle {
+        font-size: 0.875rem;
+      }
+    }
+
+    &__header-left {
+      padding-block: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    &__card {
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+}
