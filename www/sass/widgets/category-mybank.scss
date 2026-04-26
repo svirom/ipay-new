@@ -51,6 +51,15 @@
       font-size: 1rem;
       line-height: 1.5;
       white-space: nowrap;
+
+      &.btn-mybank-header {
+        background-color: #172A3A;
+        color: #FFFFFF;
+
+        &:hover {
+          background-color: lighten(#172A3A, 5%);
+        }
+      }
     }
   }
 
