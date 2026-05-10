@@ -169,6 +169,47 @@
   }
 }
 
+.category-mybank {
+  &__seo {
+    .category-mybank__seo-header {
+      font-size: 1.25rem;
+    }
+
+    .accordion-card {
+      margin-bottom: 1rem;
+      border: 1px solid #E0E0E0;
+      border-radius: 0.5rem;
+
+      &__title {
+        position: relative;
+        padding: 1.0625rem 3.125rem 1.0625rem 1rem;
+        border-radius: 0.5rem;
+        background-color: #FFFFFF;
+        cursor: pointer;
+      }
+
+      &__body {
+        padding: 0.5rem 1.5rem 1.5rem;
+      }
+    }
+  }
+}
+
+.mybank-seo-card {
+  height: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+
+  .mybank-seo-card__title {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+}
+
 @include until($md) {
   .category-mybank {
     &__header {
@@ -201,6 +242,14 @@
     &__card {
       padding: 1rem;
       border-radius: 0.5rem;
+    }
+  }
+
+  .category-mybank {
+    &__seo {
+      h3 {
+        font-size: 1.25rem;
+      }
     }
   }
 }

@@ -148,6 +148,39 @@
   background-color: #F0F5FA;
 }
 
+.category-mybank__seo .category-mybank__seo-header {
+  font-size: 1.25rem;
+}
+.category-mybank__seo .accordion-card {
+  margin-bottom: 1rem;
+  border: 1px solid #E0E0E0;
+  border-radius: 0.5rem;
+}
+.category-mybank__seo .accordion-card__title {
+  position: relative;
+  padding: 1.0625rem 3.125rem 1.0625rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.category-mybank__seo .accordion-card__body {
+  padding: 1rem;
+}
+
+.mybank-seo-card {
+  height: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(39, 97, 146, 0.15);
+}
+.mybank-seo-card .mybank-seo-card__title {
+  margin-bottom: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 767px) {
   .category-mybank__header::before {
     left: calc(100% - 30px);
@@ -175,5 +208,8 @@
   .category-mybank__card {
     padding: 1rem;
     border-radius: 0.5rem;
+  }
+  .category-mybank__seo h3 {
+    font-size: 1.25rem;
   }
 }/*# sourceMappingURL=category-mybank.css.map */
