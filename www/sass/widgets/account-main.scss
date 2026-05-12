@@ -527,6 +527,23 @@
       border-radius: 0.5rem;
       background-color: #E0F0F6;
 
+      &--empty {
+        background: linear-gradient(to right, #EDF5FF, #DEE7F3);
+      }
+
+      &--first {
+        background: linear-gradient(to right, #E4F2E0, #CAEAE4);
+      }
+
+      &--current {
+        padding: 2rem;
+        background: linear-gradient(to right, #FFF1D1, #FFC7AE);
+      }
+
+      &--success {
+        background: linear-gradient(to right, #CAF6D2, #95D0A2);
+      }
+
       p {
         color: #172A3A;
       }
@@ -578,31 +595,6 @@
         margin-right: 0;
       }
     }
-
-    &--empty {
-      .account-main__bills-alert {
-        background: linear-gradient(to right, #EDF5FF, #DEE7F3);
-      }
-    }
-
-    &--first {
-      .account-main__bills-alert {
-        background: linear-gradient(to right, #E4F2E0, #CAEAE4);
-      }
-    }
-
-    &--current {
-      .account-main__bills-alert {
-        padding: 2rem;
-        background: linear-gradient(to right, #FFF1D1, #FFC7AE);
-      }
-    }
-
-    &--success {
-      .account-main__bills-alert {
-        background: linear-gradient(to right, #CAF6D2, #95D0A2);
-      }
-    }
   }
 
   &__bills-icons {
@@ -617,7 +609,7 @@
       left: 0;
       width: 100%;
       opacity: 0;
-      animation: bills-icons-fade 10s infinite;
+      animation: bills-icons-fade 10s infinite forwards;
 
       &:nth-child(1) { 
         animation-delay: 0s; 
@@ -714,6 +706,9 @@
     }
 
     &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex: 0 0 2.625rem;
       height: 2.625rem;
       padding: 0.25rem;
@@ -799,6 +794,10 @@
       margin-top: 1px;
       border-radius: 50%;
       background-color: #ffa727;
+
+      &--recent {
+        background-color: #09BC8A;
+      }
     }
 
     &-payment {
@@ -907,7 +906,8 @@
           background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.14556 13.6179L17.2634 1.5L22.2132 6.44975L10.0953 18.5676L3.47485 20.2383L5.14556 13.6179Z' stroke='%23172A3A' stroke-linejoin='round'/%3E%3Cpath d='M5.24268 13.5208L10.1924 18.4705' stroke='%23172A3A' stroke-linecap='round'/%3E%3C/svg%3E");
         }
 
-        &--delete {
+        &--delete,
+        &--delete-template {
           background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_3936_17664)'%3E%3Cpath d='M3.5 5.5H20.5' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.5 10.4999V16.4999M12 10.3799V16.4999V10.3799ZM8.5 10.4999V16.4999V10.4999Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.5 5.5H9.5V3.5C9.5 2.95 9.95 2.5 10.5 2.5H13.5C14.05 2.5 14.5 2.95 14.5 3.5V5.5Z' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.5 5.5V19.5C18.5 20.6 17.6 21.5 16.5 21.5H7.5C6.4 21.5 5.5 20.6 5.5 19.5V5.5' stroke='%23172A3A' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3936_17664'%3E%3Crect width='24' height='24' rx='8' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
         }
 

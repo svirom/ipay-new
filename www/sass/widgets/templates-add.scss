@@ -516,6 +516,8 @@
           &::before {
             left: auto;
             right: 0.6875rem;
+            border-color: #FFD578;
+            background-color: #FFD578;
           }
   
           &::after {
@@ -700,6 +702,44 @@
     }
   }
 
+  &__container {
+    padding: 1.5rem 1.5rem 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(#276192, 15%);
+  }
+
+  &__waves {
+    position: relative;
+    top: -10px;
+    overflow: hidden;
+  }
+
+  &__header {
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5rem;
+      height: 5rem;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border: 2px solid #F0F5FA;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .templates-add__header-title {
+      max-width: 20rem;
+      font-weight: 500;
+      color: #172A3A;
+    }
+  }
+
   @include until($lg) {
     .form-search {
       &.focused {
@@ -712,6 +752,14 @@
 
       &__item-title {
         font-size: 1rem;
+      }
+    }
+  }
+
+  @include until($md) {
+    .templates-add {
+      &__container {
+        padding-inline: 1rem;
       }
     }
   }
