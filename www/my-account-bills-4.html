@@ -504,195 +504,48 @@
                 <div class="account-main" id="account-main-widget">
                   <ul class="account-main__nav mb-3">
                     <li class="account-main__nav-item">
-                      <a href="#" class="account-main__nav-link account-main__nav-link--empty text-truncate active">Без об'єкта</a>
+                      <a href="#" class="account-main__nav-link account-main__nav-link--empty text-truncate">Без об'єкта</a>
                     </li>
-                    <!-- <li class="account-main__nav-item">
-                      <a href="#" class="account-main__nav-link text-truncate">м.Київ, Дегтярівська, 45, кв.45</a>
-                    </li> -->
+                    <li class="account-main__nav-item">
+                      <a href="#" class="account-main__nav-link text-truncate active">м.Київ, Дегтярівська, 45, кв.45</a>
+                    </li>
                     <li class="account-main__nav-item">
                       <a href="#" class="account-main__nav-link account-main__nav-link--add text-truncate">Додати об'єкт</a>
                     </li>
                   </ul>
                   <div class="account-main__bills">
-                    <p class="account-main__bills-text-title">Мої рахунки</p>
-                    <div class="account-main__bills-alert account-main__bills-alert--success">
-                      <div class="account-main__bills-alert-content">
-                        <p class="account-main__bills-alert-title mb-1">Всі обов’язкові рахунки сплачено</p>
-                        <p class="mb-0">Наступний рекомендований рахунок через 6 днів</p>
+                    
+                    <div class="row justify-content-between align-items-center col-pad8 account-main__object-edit">
+                      <div class="col">
+                        <p class="account-main__bills-text-title mb-0">Мої рахунки</p>
                       </div>
-                      <div class="account-main__bills-alert-icon">
-                        <img src="/img/account/template-icons/checked-mark@80.png" srcset="/img/account/template-icons/checked-mark@80.png 80w" sizes="40px" alt="Icon">
+                      <div class="col-auto">
+                        <div class="dropdown" data-toggle="dropdown" aria-expanded="false">
+                          <button class="account-main__object-button" type="button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5053 8.42105H18.9474C19.5263 8.42105 20 8.89474 20 9.47368V10.5263C20 11.1053 19.5263 11.5789 18.9474 11.5789H18.5053C18.0526 11.5789 17.6842 11.8842 17.5474 12.3158C17.4 12.8 17.2 13.2632 16.9684 13.7053C16.7474 14.1158 16.8526 14.6211 17.1789 14.9474L17.4421 15.2105C17.8526 15.6211 17.8526 16.2842 17.4421 16.6947L16.6947 17.4421C16.2842 17.8526 15.6211 17.8526 15.2105 17.4421L14.9474 17.1789C14.6211 16.8526 14.1158 16.7474 13.7053 16.9684C13.2632 17.2 12.8 17.4 12.3158 17.5474C11.8947 17.6842 11.5789 18.0526 11.5789 18.5053V18.9474C11.5789 19.5263 11.1053 20 10.5263 20H9.47368C8.89474 20 8.42105 19.5263 8.42105 18.9474V18.5053C8.42105 18.0526 8.11579 17.6842 7.68421 17.5474C7.2 17.4 6.73684 17.2 6.29474 16.9684C5.88421 16.7474 5.37895 16.8526 5.05263 17.1789L4.78947 17.4421C4.37895 17.8526 3.71579 17.8526 3.30526 17.4421L2.55789 16.6947C2.14737 16.2842 2.14737 15.6211 2.55789 15.2105L2.82105 14.9474C3.14737 14.6211 3.25263 14.1158 3.03158 13.7053C2.8 13.2632 2.6 12.8 2.45263 12.3158C2.31579 11.8947 1.94737 11.5789 1.49474 11.5789H1.05263C0.473684 11.5789 0 11.1053 0 10.5263V9.47368C0 8.89474 0.473684 8.42105 1.05263 8.42105H1.49474C1.94737 8.42105 2.31579 8.11579 2.45263 7.68421C2.6 7.18947 2.8 6.72632 3.03158 6.29474C3.25263 5.88421 3.14737 5.37895 2.82105 5.05263L2.55789 4.78947C2.14737 4.37895 2.14737 3.71579 2.55789 3.30526L3.30526 2.55789C3.71579 2.14737 4.37895 2.14737 4.78947 2.55789L5.05263 2.82105C5.37895 3.14737 5.88421 3.25263 6.29474 3.03158C6.73684 2.8 7.2 2.6 7.68421 2.45263C8.10526 2.31579 8.42105 1.94737 8.42105 1.49474V1.05263C8.42105 0.473684 8.89474 0 9.47368 0H10.5263C11.1053 0 11.5789 0.473684 11.5789 1.05263V1.49474C11.5789 1.94737 11.8842 2.31579 12.3158 2.45263C12.8 2.6 13.2632 2.8 13.7053 3.03158C14.1158 3.25263 14.6211 3.14737 14.9474 2.82105L15.2105 2.55789C15.6211 2.14737 16.2842 2.14737 16.6947 2.55789L17.4421 3.30526C17.8526 3.71579 17.8526 4.37895 17.4421 4.78947L17.1789 5.05263C16.8526 5.37895 16.7474 5.88421 16.9684 6.29474C17.2 6.73684 17.4 7.2 17.5474 7.68421C17.6842 8.10526 18.0526 8.42105 18.5053 8.42105ZM13.6843 9.99998C13.6843 12.0347 12.0349 13.6842 10.0001 13.6842C7.96539 13.6842 6.31592 12.0347 6.31592 9.99998C6.31592 7.96524 7.96539 6.31577 10.0001 6.31577C12.0349 6.31577 13.6843 7.96524 13.6843 9.99998Z" fill="#7C9CAC"></path>
+                            </svg>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <form id="edit-form" action="templates" method="post">
+                              <button type="submit" id="" class="dropdown-item dropdown-item--edit">Редагувати групу</button>
+                            </form>                            
+                            <!-- <form id="delete-form" action="templates" method="post"> -->
+                              <button type="button" id="" class="dropdown-item dropdown-item--delete" data-toggle="modal" data-target="#modal-group-delete">Видалити групу</button>
+                            <!-- </form>  -->
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="account-main__bills-cards">
 
-                      <div class="account-main__template">
-                        <div class="account-main__template-body">
-                          <div class="account-main__template-icon">
-                            <img src="img/providers/yasno.png" alt="">
-                          </div>
-                          <div class="account-main__template-content">
-                            <span class="account-main__template-badge account-main__template-badge--warning mb-2">Перший рахунок</span>
-                            <p class="account-main__template-title mb-1">Оплата комунальних послуг Київ (ЦКС, колишній ГІОЦ)</p>
-                            <p class="account-main__template-data mb-0">
-                              <span>о/р: 35645675</span> 
-                              <span class="account-main__template-date">
-                                <span>Остання оплата:</span> 
-                                <span class="account-main__template-check"></span> 
-                                <span>12.03.24</span>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="account-main__template-footer">
-                          <div class="account-main__template-payment">
-                            <p class="account-main__template-amount mb-0">До оплати: <span>100.00 грн</span></p>
-                            <p class="account-main__template-commission mb-0 mb-md-3">Комісія: 1 грн.</p>
-                          </div>
-                          <div class="account-main__template-buttons">
-                            <div class="dropdown mr-md-2">
-                              <button class="account-main__template-actions" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                              <div class="dropdown-menu">
-                                <form id="" action="templates" method="post">
-                                  <button type="submit" id="" class="dropdown-item dropdown-item--edit">Редагувати</button>
-                                </form>                            
-                                <form id="" action="templates" method="post">
-                                  <button type="submit" id="" class="dropdown-item dropdown-item--delete">Видалити</button>
-                                </form>                        
-                              </div>
-                            </div>
-                            <a href="#" class="btn btn-green account-main__template-paybutton" target="_blank">До оплати</a>
-                          </div>
-                        </div>
-                      </div>
+                    <p class="account-main__object-title">м.Київ, Дегтярівська, 45, кв.45</p>
 
-                      <div class="account-main__template">
-                        <div class="account-main__template-body">
-                          <div class="account-main__template-icon">
-                            <img src="img/providers/yasno.png" alt="">
-                          </div>
-                          <div class="account-main__template-content">
-                            <span class="account-main__template-badge account-main__template-badge--warning mb-2">Перший рахунок</span>
-                            <p class="account-main__template-title mb-1">Оплата комунальних послуг Київ (ЦКС, колишній ГІОЦ)</p>
-                            <p class="account-main__template-data mb-0">
-                              <span>о/р: 35645675</span> 
-                              <span class="account-main__template-date">
-                                <span>Остання оплата:</span> 
-                                <span class="account-main__template-check"></span> 
-                                <span>12.03.24</span>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="account-main__template-footer">
-                          <div class="account-main__template-payment">
-                            <p class="account-main__template-amount mb-0">До оплати: <span>100.00 грн</span></p>
-                            <p class="account-main__template-commission mb-0 mb-md-3">Комісія: 1 грн.</p>
-                          </div>
-                          <div class="account-main__template-buttons">
-                            <div class="dropdown mr-md-2">
-                              <button class="account-main__template-actions" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                              <div class="dropdown-menu">
-                                <form id="" action="templates" method="post">
-                                  <button type="submit" id="" class="dropdown-item dropdown-item--edit">Редагувати</button>
-                                </form>                            
-                                <form id="" action="templates" method="post">
-                                  <button type="submit" id="" class="dropdown-item dropdown-item--delete">Видалити</button>
-                                </form>                        
-                              </div>
-                            </div>
-                            <a href="#" class="btn btn-green account-main__template-paybutton" target="_blank">Сплатити зараз</a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="collapse" id="account-main-collapse">
-                        <div class="account-main__template">
-                          <div class="account-main__template-body">
-                            <div class="account-main__template-icon">
-                              <img src="img/providers/yasno.png" alt="">
-                            </div>
-                            <div class="account-main__template-content">
-                              <span class="account-main__template-badge account-main__template-badge--warning mb-2">Перший рахунок</span>
-                              <p class="account-main__template-title mb-1">Оплата комунальних послуг Київ (ЦКС, колишній ГІОЦ)</p>
-                              <p class="account-main__template-data mb-0">
-                                <span>о/р: 35645675</span> 
-                                <span class="account-main__template-date">
-                                  <span>Остання оплата:</span> 
-                                  <span class="account-main__template-check"></span> 
-                                  <span>12.03.24</span>
-                                </span>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="account-main__template-footer">
-                            <div class="account-main__template-payment">
-                              <p class="account-main__template-amount mb-0">До оплати: <span>100.00 грн</span></p>
-                              <p class="account-main__template-commission mb-0 mb-md-3">Комісія: 1 грн.</p>
-                            </div>
-                            <div class="account-main__template-buttons">
-                              <div class="dropdown mr-md-2">
-                                <button class="account-main__template-actions" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                                <div class="dropdown-menu">
-                                  <form id="" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item dropdown-item--edit">Редагувати</button>
-                                  </form>                            
-                                  <form id="" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item dropdown-item--delete">Видалити</button>
-                                  </form>                        
-                                </div>
-                              </div>
-                              <a href="#" class="btn btn-green account-main__template-paybutton" target="_blank">До оплати</a>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="account-main__template">
-                          <div class="account-main__template-body">
-                            <div class="account-main__template-icon">
-                              <img src="img/providers/yasno.png" alt="">
-                            </div>
-                            <div class="account-main__template-content">
-                              <span class="account-main__template-badge account-main__template-badge--warning mb-2">Перший рахунок</span>
-                              <p class="account-main__template-title mb-1">Оплата комунальних послуг Київ (ЦКС, колишній ГІОЦ)</p>
-                              <p class="account-main__template-data mb-0">
-                                <span>о/р: 35645675</span> 
-                                <span class="account-main__template-date">
-                                  <span>Остання оплата:</span> 
-                                  <span class="account-main__template-check"></span> 
-                                  <span>12.03.24</span>
-                                </span>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="account-main__template-footer">
-                            <div class="account-main__template-payment">
-                              <p class="account-main__template-amount mb-0">До оплати: <span>100.00 грн</span></p>
-                              <p class="account-main__template-commission mb-0 mb-md-3">Комісія: 1 грн.</p>
-                            </div>
-                            <div class="account-main__template-buttons">
-                              <div class="dropdown mr-md-2">
-                                <button class="account-main__template-actions" type="button" data-toggle="dropdown" aria-expanded="false"></button>
-                                <div class="dropdown-menu">
-                                  <form id="" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item dropdown-item--edit">Редагувати</button>
-                                  </form>                            
-                                  <form id="" action="templates" method="post">
-                                    <button type="submit" id="" class="dropdown-item dropdown-item--delete">Видалити</button>
-                                  </form>                        
-                                </div>
-                              </div>
-                              <a href="#" class="btn btn-green account-main__template-paybutton" target="_blank">До оплати</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="account-main__cards-additional text-center">
-                        <a href="#account-main-collapse" class="account-main__additional-link" data-toggle="collapse" aria-expanded="false" aria-controls="account-main-collapse">Показати ще 2 рахунки</a>
-                      </div>
-
+                    <div class="account-main__bills-alert account-main__bills-alert--group-empty text-center">
+                      <img src="/img/account/template-icons/icon-cards@308.png" srcset="/img/account/template-icons/icon-cards@308.png 308w" sizes="154px" alt="Icon">
+                      <p class="small">Тут будуть відсортовані ваші рахунки по вказанній адресі</p>
+                      <button type="submit" class="btn btn-green" data-toggle="modal" data-target="#modal-search-template">Додати рахунок</button>
                     </div>
+                    <div class="account-main__bills-cards"></div>
                   </div>
                   <div class="account-main__waves">
                     <svg width="826" height="18" viewBox="0 0 826 18" fill="none" xmlns="http://www.w3.org/2000/svg">

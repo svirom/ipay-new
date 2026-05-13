@@ -482,8 +482,9 @@
 
   .account-main__object-title {
     position: relative;
+    margin-bottom: 0.75rem;
     padding-left: 1.75rem;
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: #172A3A;
 
@@ -491,7 +492,7 @@
       position: absolute;
       content: '';
       left: 0;
-      top: 1px;
+      top: -1px;
       width: 1.25rem;
       height: 1.25rem;
       border-radius: 50%;
@@ -527,6 +528,10 @@
       border-radius: 0.5rem;
       background-color: #E0F0F6;
 
+      p {
+        color: #172A3A;
+      }
+
       &--empty {
         background: linear-gradient(to right, #EDF5FF, #DEE7F3);
       }
@@ -544,8 +549,18 @@
         background: linear-gradient(to right, #CAF6D2, #95D0A2);
       }
 
-      p {
-        color: #172A3A;
+      &--group-empty {
+        flex-direction: column;
+        background-color: #F0F5FA;
+
+        p {
+          margin-bottom: 0.75rem;
+          color: #3B566E;
+        }
+
+        .btn {
+          width: 15.875rem;
+        }
       }
 
       .account-main__bills-alert-content {
@@ -846,13 +861,7 @@
   }
 
   &__object-edit {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-
-    span {
-      color: #E84F35;
-    }
+    margin-bottom: 0.75rem;
 
     .account-main__object-button {
       display: flex;
@@ -864,16 +873,19 @@
       padding: 0;
       border: 0;
       border-radius: 50%;
-      background-color: #FFE7E6;
+      background-color: #F0F8FF;
+      cursor: pointer;
 
       svg {
         transition: transform 0.3s ease-in-out;
       }
     }
 
-    &[aria-expanded=true] {
-      .account-main__object-button svg {
-        transform: rotate(180deg);
+    .dropdown {
+      &[aria-expanded=true] {
+        .account-main__object-button svg {
+          transform: rotate(180deg);
+        }
       }
     }
 
@@ -1087,11 +1099,6 @@
         .account-main__bills-alert-title {
           font-size: 1rem;
         }
-      }
-
-      .account-main__object-title {
-        padding-top: 2px;
-        font-size: 0.875rem;
       }
 
       &--new {
