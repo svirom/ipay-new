@@ -10,11 +10,11 @@
 .contacts {
   font-family: 'Inter', sans-serif;
 
-  p, span, li, a {
+  p, span, li, a, button, input, textarea, label {
     font-family: 'Inter', sans-serif;
   }
 
-  p {
+  p, label {
     font-weight: 500;
     color: #324F64;
   }
@@ -144,7 +144,7 @@
       padding-left: 1.25rem;
     }
 
-    .contracts-card__title {
+    .contacts-card__title {
       margin-bottom: 0.5rem;
       font-size: 1.25rem;
       font-weight: 600;
@@ -339,6 +339,149 @@
     border-radius: 1.125rem;
     background-color: #ffffff;
   }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-input, .form-textarea {
+    padding: 1.625rem 2.5rem 1.5625rem 2rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: 500;
+    border: 1px solid #DFE8F8;
+    border-radius: 0.875rem;
+  }
+
+  .form-input {
+    &:focus {
+      border-color: #DEE7F3;
+    }
+
+    @include placeholder {
+      font-weight: 500;
+      color: #ABBECB;
+    }
+  }
+
+  .form-textarea {
+    @include placeholder {
+      color: #ABBECB !important;
+    }
+  }
+
+  .select2-container {
+    .select2-selection {
+      padding: 1rem 2.5rem 0.9375rem 2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 1px solid #DFE8F8;
+      border-radius: 0.875rem;
+    }
+
+    &.select2-container--open .select2-selection {
+      border-color: #DFE8F8;
+    }
+
+    .select2-selection__placeholder {
+      line-height: 1.25;
+      font-weight: 500;
+      color: #ABBECB;
+
+      &::after {
+        content: ' *';
+        color: #E84F35;
+      }
+    }
+
+    .select2-selection__rendered {
+      font-size: 1rem;
+       line-height: 1.25;
+      font-weight: 500;
+      color: #172A3A;
+    }
+
+    .select2-selection__arrow {
+      right: 1.5rem;
+    }
+
+    .select2-selection__clear {
+      margin-top: -0.1875rem;
+      line-height: 1.25;
+    }
+
+    &.select2-container--default .select2-results__option {
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      line-height: 1.25;
+    }
+  }
+
+  .checkbox-control {
+    padding-left: 0;
+    line-height: 1.25;
+  }
+
+  .checkbox-label {
+    padding-left: 1.75rem;
+    font-size: 0.875rem;
+
+    &::before {
+      left: 0;
+      border: 1px solid #DFE8F8;
+      border-radius: 0.25rem;
+    }
+
+    &::after {
+      left: 0;
+    }
+  }
+
+  .checkbox-input {
+    &:checked {
+      & ~ .checkbox-label {
+        &::before {
+          border-color: #CBFFF0;
+          background-color: #CBFFF0;
+        }
+
+        &::after {
+          background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%2309BC8A' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+
+  [type=file] {
+    display: none;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+
+    & > * {
+      max-width: 14.375rem;
+    }
+
+    .btn-block {
+      & + .btn-block {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .contacts-form__file-text {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    font-size: 0.875rem;
+
+    &.error {
+      color: #E84F35;
+    }
+  }
 }
 
 .contacts-law {
@@ -369,7 +512,7 @@
   }
 }
 
-@media (max-width: 992px) and (min-width: 768px) {
+@media (max-width: 991px) and (min-width: 768px) {
   .contacts-card {
     &--mixed {
       flex-direction: row;
@@ -418,6 +561,19 @@
       }
     }
   }
+
+  .contacts-form {
+    padding-block: 3.125rem;
+
+    &__wrapper {
+      margin-top: 1.5rem;
+      padding: 1.5rem 1.5rem 2.5rem;
+    }
+
+    .form-textarea {
+      height: 12.5rem;
+    }
+  }
 }
 
 @include until($sm) {
@@ -439,6 +595,16 @@
 
     &__buttons {
       flex-wrap: wrap;
+    }
+  }
+
+  .contacts-form {
+    &__buttons {
+      flex-direction: column;
+
+      & > * {
+        max-width: none;
+      }
     }
   }
 
